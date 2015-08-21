@@ -25,19 +25,6 @@ public class CharacterScript : MonoBehaviour
 		_input = 0;
 
 		_body = gameObject.GetComponent<Rigidbody>();
-		_fireScript = gameObject.GetComponentInChildren<FireScript>();
-		_laserScript = gameObject.GetComponentInChildren<LaserScript>();
-		_missileScript = gameObject.GetComponentInChildren<MissileScript>();
-		_trajectoryScript = gameObject.GetComponentInChildren<TrajectoryScript>();
-		
-		_missileScript.enabled = false;
-		_laserScript.enabled = false;
-		_trajectoryScript.enabled = false;
-	}
-
-	void FixedUpdate()
-	{
-
 	}
 
 	// Update is called once per frame
@@ -97,28 +84,6 @@ public class CharacterScript : MonoBehaviour
 		if (_input == 0)
 		{
 			_body.velocity = Vector3.zero;
-		}
-		
-		if (Input.GetKeyUp(KeyCode.Alpha1))
-		{
-			_fireScript.enabled = true;
-			_laserScript.enabled = false;
-			_missileScript.enabled = false;
-			_trajectoryScript.enabled = false;
-		}
-		else if (Input.GetKeyUp(KeyCode.Alpha2))
-		{
-			_fireScript.enabled = false;
-			_laserScript.enabled = true;
-			_missileScript.enabled = false;
-			_trajectoryScript.enabled = false;
-		}
-		else if (Input.GetKeyUp(KeyCode.Alpha3))
-		{
-			_fireScript.enabled = false;
-			_laserScript.enabled = false;
-			_missileScript.enabled = true;
-			_trajectoryScript.enabled = true;
 		}
 	}
 }

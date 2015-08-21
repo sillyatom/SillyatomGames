@@ -103,17 +103,6 @@ public class MapGenerator : MonoBehaviour
 		GetComponent<MeshGenerator>().GenerateNavMesh(walkableMap, 1f);
 		
 		NavMeshBuilder.BuildNavMesh();
-		
-		//init pooling
-		ObjectPoolingScript.instance.StartPooling();
-		
-		//spawn enemies
-		Invoke("SpawnEnemies", 3);
-	}
-	
-	void SpawnEnemies()
-	{
-		SpawnEnemy.instance.canUpdate = true;
 	}
 	
 	void SmoothMap()
