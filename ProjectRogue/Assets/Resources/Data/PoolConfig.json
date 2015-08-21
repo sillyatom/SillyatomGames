@@ -1,0 +1,17 @@
+[
+    {
+        "type": "enemy1",
+        "path": "prefabs/enemy",
+        "amount": 20
+    },
+    {
+        "type": "bullet1",
+        "path": "prefabs/bullet",
+        "amount": 20
+    },
+    {
+        "type": "missile",
+        "path": "prefabs/missile",
+        "amount": 20
+    }
+]
