@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Camera\CameraShakeScript.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraSmoothFollow.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterScript.cs" />
      <Compile Include="Assets\Scripts\Character\FireScript.cs" />
@@ -55,12 +56,15 @@
      <Compile Include="Assets\Scripts\Character\TrajectoryScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\DestroyEnemyScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\FollowScript.cs" />
+     <Compile Include="Assets\Scripts\Events\CameraEvent.cs" />
+     <Compile Include="Assets\Scripts\Events\Events.cs" />
      <Compile Include="Assets\Scripts\Manager\MapGenerator.cs" />
      <Compile Include="Assets\Scripts\Manager\MeshGenerator.cs" />
      <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
      <Compile Include="Assets\Scripts\Manager\SpawnEnemy.cs" />
      <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponSwitchScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

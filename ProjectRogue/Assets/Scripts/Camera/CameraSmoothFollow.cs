@@ -9,12 +9,10 @@ public class CameraSmoothFollow : MonoBehaviour
 	public Transform target;
 
 	private Camera _camera;
-	float _shakeDecay;
 			
 	void Start()
 	{
 		_camera = GetComponent<Camera> ();
-		_shakeDecay = 0f;
 	}
 
 	// Update is called once per frame
@@ -27,25 +25,6 @@ public class CameraSmoothFollow : MonoBehaviour
 			Vector3 destination = transform.position + delta;
 			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
 		}
-	}
-	
-	public void Shake()
-	{
-		_shakeDecay = 0f;
-		StopCoroutine("CameraShake");
-		StartCoroutine("CameraShake");
-	}
-	
-	IEnumerator CameraShake()
-	{
-		while (_shakeDecay < 1f)
-		{
-			_shakeDecay += Time.deltaTime;
-			transform.position = transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f));
- 			yield return null;
-		}
-		
-		yield return null;
 	}
 }
 

@@ -11,7 +11,6 @@ public class FireScript : MonoBehaviour
 	
 	Rigidbody _body;
 	ObjectPoolingScript _pool;
-	CameraSmoothFollow _cameraScript;
 	
 	protected string POOL_KEY;
 	protected bool _useTrajectory;
@@ -24,9 +23,8 @@ public class FireScript : MonoBehaviour
 	public virtual void Init()
 	{
 		_lastFireTime = 0.0f;
-		_cameraScript = Camera.main.GetComponent<CameraSmoothFollow>();
 		_pool = ObjectPoolingScript.instance;
-		POOL_KEY = "bullet1";
+		POOL_KEY = "Bullet";
 		_useTrajectory = false;
 	}
 	
@@ -53,8 +51,7 @@ public class FireScript : MonoBehaviour
 			bullet.transform.Rotate(new Vector3(0, MouseFacingDirScript.angle, 0));
 			
 			AddBulletVelocity(bullet);
-			
-			_cameraScript.Shake();	
+			Events.instance.Raise(new CameraEvent(CameraEvent.SHAKE));
 		}
 		else
 		{

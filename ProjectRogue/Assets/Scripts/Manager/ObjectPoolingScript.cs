@@ -34,9 +34,10 @@ public class ObjectPoolingScript : MonoBehaviour
 		}
 		
 		_pooledObjects = new Dictionary<string, List<GameObject>>();
+		StartPooling();
 	}
 	
-	public void StartPooling()
+	private void StartPooling()
 	{
 		int len = _poolingData.Count;
 		
