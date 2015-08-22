@@ -96,7 +96,6 @@
     <Compile Include="Assets\test\MeshScript.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Resources\NewShader.shader" />
     <None Include="Assets\Resources\Shader\TexBlending.shader" />
     <None Include="Assets\Resources\Shader\VertexAlphaFow.shader" />
   </ItemGroup>
