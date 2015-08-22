@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.1.2f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -91,9 +89,16 @@
     <Compile Include="Assets\Scripts\Manager\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
     <Compile Include="Assets\Scripts\Manager\SpawnEnemy.cs" />
+    <Compile Include="Assets\Scripts\Misc\FogOfWar.cs" />
     <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponSwitchScript.cs" />
+    <Compile Include="Assets\test\MeshScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Resources\NewShader.shader" />
+    <None Include="Assets\Resources\Shader\TexBlending.shader" />
+    <None Include="Assets\Resources\Shader\VertexAlphaFow.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
