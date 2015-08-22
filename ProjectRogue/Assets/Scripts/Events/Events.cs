@@ -2,10 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameEvent
-{
-}
-
 public class Events
 {
 	static Events instanceInternal = null;

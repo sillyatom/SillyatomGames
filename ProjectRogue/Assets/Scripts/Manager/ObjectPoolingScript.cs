@@ -15,47 +15,54 @@ public class ObjectPoolingScript : MonoBehaviour
 {
 	public static ObjectPoolingScript instance;
 	
-	int _amount;
 	Dictionary<string, List<GameObject>> _pooledObjects;
 	List<PoolItem> _poolingData;
 	
 	void Awake()
 	{
-		instance = this;	
-	}
+        instance = this;
+
+        using (StreamReader file = File.OpenText(@"Assets/Resources/data/PoolConfig.json"))
+        {
+            string jsonString = file.ReadToEnd();
+            _poolingData = Newtonsoft.Json.JsonConvert.DeserializeObject<List<PoolItem>>(jsonString);
+        }
+
+        _pooledObjects = new Dictionary<string, List<GameObject>>();
+    }
 	
-	// Use this for initialization
-	void Start () 
+    void OnEnable()
+    {
+        Events.instance.AddListener<GameEvent>(StartPooling);
+    }
+
+    void OnDisable()
+    {
+        Events.instance.RemoveListener<GameEvent>(StartPooling);
+    }
+
+    private void StartPooling(GameEvent e)
 	{
-		using (StreamReader file = File.OpenText(@"Assets/Resources/data/PoolConfig.json"))
-		{
-			string jsonString = file.ReadToEnd();
-			_poolingData = Newtonsoft.Json.JsonConvert.DeserializeObject<List<PoolItem>>(jsonString);
-		}
-		
-		_pooledObjects = new Dictionary<string, List<GameObject>>();
-		StartPooling();
-	}
-	
-	private void StartPooling()
-	{
-		int len = _poolingData.Count;
-		
-		for (int i = 0; i < len; i++)
-		{
-			int amount = _poolingData[i].amount;
-			string path = _poolingData[i].path;
-			string key = _poolingData[i].type;
-			
-			_pooledObjects[key] = new List<GameObject>();
-			
-			for (int j = 0; j < amount; j++)
-			{
-				GameObject newObject = (GameObject)Instantiate(Resources.Load(path));
-				newObject.SetActive(false);
-				_pooledObjects[key].Add(newObject);
-			}
-		}
+        if (e.type == GameEvent.START_POOLING)
+        {
+            int len = _poolingData.Count;
+
+            for (int i = 0; i < len; i++)
+            {
+                int amount = _poolingData[i].amount;
+                string path = _poolingData[i].path;
+                string key = _poolingData[i].type;
+
+                _pooledObjects[key] = new List<GameObject>();
+
+                for (int j = 0; j < amount; j++)
+                {
+                    GameObject newObject = (GameObject)Instantiate(Resources.Load(path));
+                    newObject.SetActive(false);
+                    _pooledObjects[key].Add(newObject);
+                }
+            }
+        }
 	}
 	
 	public GameObject getGameObject(string type)

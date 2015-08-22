@@ -32,10 +32,28 @@ public class MapGenerator : MonoBehaviour
 	
 	void Start ()
 	{	
-		GenerateMap ();
+		
 	}
+
+    void OnEnable()
+    {
+        Events.instance.AddListener<GameEvent>(OnGenerateMap);
+    }
 	
-	void GenerateMap ()
+    void OnDisable()
+    {
+        Events.instance.RemoveListener<GameEvent>(OnGenerateMap);
+    }
+
+    private void OnGenerateMap(GameEvent e)
+    {
+        if (e.type == GameEvent.GENERATE_MAP)
+        {
+            GenerateMap();
+        }
+    }
+
+    void GenerateMap ()
 	{
 		map = new int[_width, _height];
 		
@@ -103,6 +121,8 @@ public class MapGenerator : MonoBehaviour
 		GetComponent<MeshGenerator>().GenerateNavMesh(walkableMap, 1f);
 		
 		NavMeshBuilder.BuildNavMesh();
+
+        Events.instance.Raise(new GameEvent(GameEvent.BUILD_NAVMESH_COMPLETE));
 	}
 	
 	void SmoothMap()
