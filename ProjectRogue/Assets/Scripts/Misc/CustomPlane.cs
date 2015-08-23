@@ -4,12 +4,28 @@ using System.Collections.Generic;
 public class Vertex
 {
     public Vector3 position;
+    private Color32 _color;
+    public Color32 color
+    {
+        get
+        {
+            return _color;
+        }
+        set
+        {
+            _color.r = value.r;
+            _color.g = value.g;
+            _color.b = value.b;
+            _color.a = value.a;
+        }
+    }
     public int index;
 
     public Vertex(Vector3 pos, int nodeIndex = -1)
     {
         position = pos;
         index = nodeIndex;
+        _color = new Color32(255, 255, 255, 255);
     }
 }
 public class Polygon
@@ -25,6 +41,14 @@ public class Polygon
         bottomRight = br;
         topLeft = tl;
         topRight = tr;
+    }
+
+    public void UpdateColor(Color32 color)
+    {
+        bottomLeft.color = color;
+        bottomRight.color = color;
+        topLeft.color = color;
+        topRight.color = color;
     }
 
     public static Vertex getNode(string node, int x, int y, int quadSize, int index = -1)
@@ -61,7 +85,15 @@ public class Polygon
 
 public class CustomPlane
 {
-    public Polygon[,] quads;
+    private Polygon[,] _polygons;
+
+    public Polygon this[int x, int y]
+    {
+        get
+        {
+            return _polygons[x, y];
+        }
+    }
 
     private int _quadSize;
     public int quadSize
@@ -118,7 +150,7 @@ public class CustomPlane
 
         int row = Mathf.CeilToInt(_width / _quadSize);
         int col = Mathf.CeilToInt(_height / _quadSize);
-        quads = new Polygon[row, col];
+        _polygons = new Polygon[row, col];
 
         int runningIndex = -1;
 
@@ -127,14 +159,14 @@ public class CustomPlane
             for (int y = 0; y < col; y++)
             {
                 int lastRunningIndex = runningIndex;
-                Vertex bottomLeft = (x - 1 > -1) ? quads[x - 1, y].bottomRight : (y - 1 > -1) ? quads[x, y - 1].topLeft : Polygon.getNode("bl", x, y, quadSize, ++runningIndex);
+                Vertex bottomLeft = (x - 1 > -1) ? _polygons[x - 1, y].bottomRight : (y - 1 > -1) ? _polygons[x, y - 1].topLeft : Polygon.getNode("bl", x, y, quadSize, ++runningIndex);
                 if (lastRunningIndex != runningIndex)
                 {
                     _vertices.Add(bottomLeft.position);
                 }
 
                 lastRunningIndex = runningIndex;
-                Vertex topLeft = (x - 1 > -1) ? quads[x - 1, y].topRight : Polygon.getNode("tl", x, y, quadSize, ++runningIndex);
+                Vertex topLeft = (x - 1 > -1) ? _polygons[x - 1, y].topRight : Polygon.getNode("tl", x, y, quadSize, ++runningIndex);
                 if (lastRunningIndex != runningIndex)
                 {
                     _vertices.Add(topLeft.position);
@@ -148,13 +180,13 @@ public class CustomPlane
                 }
 
                 lastRunningIndex = runningIndex;
-                Vertex bottomRight = (y - 1 > -1) ? quads[x, y - 1].topRight : Polygon.getNode("br", x, y, quadSize, ++runningIndex);
+                Vertex bottomRight = (y - 1 > -1) ? _polygons[x, y - 1].topRight : Polygon.getNode("br", x, y, quadSize, ++runningIndex);
                 if (lastRunningIndex != runningIndex)
                 {
                     _vertices.Add(bottomRight.position);
                 }
 
-                quads[x, y] = new Polygon(bottomLeft, topLeft, topRight, bottomRight);
+                _polygons[x, y] = new Polygon(bottomLeft, topLeft, topRight, bottomRight);
 
                 _triangles.Add(bottomLeft.index);
                 _triangles.Add(topLeft.index);
@@ -201,4 +233,39 @@ public class CustomPlane
         return _colors.ToArray();
     }
 
+    public Vector2 GetPolygonIndexFromTexCoord(Vector2 texCoord)
+    {
+        int xIndex, yIndex = 0;
+
+        xIndex = Mathf.CeilToInt((texCoord.x * _width) / _quadSize);
+        yIndex = Mathf.CeilToInt((texCoord.y * _height) / _quadSize);
+
+        return new Vector2(xIndex, yIndex);
+    }
+
+    private void UpdateColorAt(int vertexIndex, Color32 color)
+    {
+        _colors[vertexIndex] = color;
+    }
+
+    private bool isWithinRange(int x, int y)
+    {
+        return (x >= 0 && x < _width) && (y >= 0 && y < _height);
+    }
+
+    public void UpdatePolygonColorAtIndex(int x, int y, Color32 color)
+    {
+        if (!isWithinRange(x, y)) return;
+
+        Polygon poly = _polygons[x, y];
+
+        //update polygon data
+        poly.UpdateColor(color);
+
+        //update render data from updated polygon
+        UpdateColorAt(poly.bottomLeft.index, color);
+        UpdateColorAt(poly.topLeft.index, color);
+        UpdateColorAt(poly.topRight.index, color);
+        UpdateColorAt(poly.bottomRight.index, color);
+    }
 }
