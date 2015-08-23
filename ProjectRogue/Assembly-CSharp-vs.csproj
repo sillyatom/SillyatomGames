@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Manager\MeshGenerator.cs" />
      <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
      <Compile Include="Assets\Scripts\Manager\SpawnEnemy.cs" />
+     <Compile Include="Assets\Scripts\Misc\CustomPlane.cs" />
      <Compile Include="Assets\Scripts\Misc\FogOfWar.cs" />
      <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />

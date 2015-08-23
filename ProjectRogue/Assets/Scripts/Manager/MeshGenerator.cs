@@ -481,7 +481,6 @@ public class MeshGenerator : MonoBehaviour {
 		{
 			FollowOutline(nextOutlineVertex, outlineGroupIndex);
 		}
-		
 	}
 	
 	/*void OnDrawGizmos()

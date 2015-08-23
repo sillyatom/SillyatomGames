@@ -2,6 +2,8 @@
 {
 	Properties
 	{
+		_Color("Color", Color) = (1,1,1,1)
+		_MainTex("Base Albedo (RGB)", 2D) = "white" {}
 	}
 	SubShader
 	{
@@ -16,6 +18,8 @@
 			#include "UnityCG.cginc"
 
 			#pragma target 3.0
+
+			uniform sampler2D _MainTex;
 
 			struct Vertex
 			{
@@ -42,7 +46,7 @@
 
 			half4 frag(Fragment i) : COLOR
 			{
-				return half4(i.color.r, i.color.g, i.color.b, i.color.a);
+				return half4(tex2D(_MainTex, i.uv).rgb, i.color.a);
 			}
 
 			ENDCG
