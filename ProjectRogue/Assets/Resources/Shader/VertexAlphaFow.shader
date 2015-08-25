@@ -46,7 +46,11 @@
 
 			half4 frag(Fragment i) : COLOR
 			{
-				return half4(tex2D(_MainTex, i.uv).rgb, i.color.a);
+				//in case want a tex
+				//return half4(tex2D(_MainTex, i.uv).rgb, i.color.a);
+
+				//use vertex color
+				return i.color;
 			}
 
 			ENDCG

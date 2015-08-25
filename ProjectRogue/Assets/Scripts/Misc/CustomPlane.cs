@@ -34,21 +34,26 @@ public class Polygon
     public Vertex bottomRight;
     public Vertex topLeft;
     public Vertex topRight;
+    public Color32 color;
 
-    public Polygon(Vertex bl, Vertex tl, Vertex tr, Vertex br)
+    public Polygon(Vertex bl, Vertex tl, Vertex tr, Vertex br, Color32 clr)
     {
         bottomLeft = bl;
         bottomRight = br;
         topLeft = tl;
         topRight = tr;
+        color = clr;
     }
 
-    public void UpdateColor(Color32 color)
+    public byte getAlpha() { return color.a;  }
+
+    public void UpdateColor(Color32 clr)
     {
-        bottomLeft.color = color;
-        bottomRight.color = color;
-        topLeft.color = color;
-        topRight.color = color;
+        bottomLeft.color = clr;
+        bottomRight.color = clr;
+        topLeft.color = clr;
+        topRight.color = clr;
+        color = clr; 
     }
 
     public static Vertex getNode(string node, int x, int y, int quadSize, int index = -1)
@@ -186,7 +191,7 @@ public class CustomPlane
                     _vertices.Add(bottomRight.position);
                 }
 
-                _polygons[x, y] = new Polygon(bottomLeft, topLeft, topRight, bottomRight);
+                _polygons[x, y] = new Polygon(bottomLeft, topLeft, topRight, bottomRight, new Color32(0, 0, 0, 255));
 
                 _triangles.Add(bottomLeft.index);
                 _triangles.Add(topLeft.index);
@@ -243,20 +248,28 @@ public class CustomPlane
         return new Vector2(xIndex, yIndex);
     }
 
+    public Vector2 GetPolygonIndexFromPosition(Vector3 position)
+    {
+        int xIndex, yIndex = 0;
+
+        xIndex = Mathf.FloorToInt(position.x / _quadSize);
+        yIndex = Mathf.FloorToInt(position.z / _quadSize);
+
+        return new Vector2(xIndex, yIndex);
+    }
+
     private void UpdateColorAt(int vertexIndex, Color32 color)
     {
         _colors[vertexIndex] = color;
     }
 
-    private bool isWithinRange(int x, int y)
+    public bool isWithinRange(int x, int y)
     {
-        return (x >= 0 && x < _width) && (y >= 0 && y < _height);
+        return ((x >= 0 && x < _polygons.GetLength(0)) && (y >= 0 && y < _polygons.GetLength(1)));
     }
 
     public void UpdatePolygonColorAtIndex(int x, int y, Color32 color)
     {
-        if (!isWithinRange(x, y)) return;
-
         Polygon poly = _polygons[x, y];
 
         //update polygon data

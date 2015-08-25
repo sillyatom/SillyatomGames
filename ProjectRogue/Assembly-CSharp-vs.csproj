@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Character\MissileScript.cs" />
      <Compile Include="Assets\Scripts\Character\MouseFacingDirScript.cs" />
      <Compile Include="Assets\Scripts\Character\TrajectoryScript.cs" />
+     <Compile Include="Assets\Scripts\Effects\FogOfWar.cs" />
      <Compile Include="Assets\Scripts\Enemy\DestroyEnemyScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\FollowScript.cs" />
      <Compile Include="Assets\Scripts\Events\CameraEvent.cs" />
@@ -65,7 +66,7 @@
      <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
      <Compile Include="Assets\Scripts\Manager\SpawnEnemy.cs" />
      <Compile Include="Assets\Scripts\Misc\CustomPlane.cs" />
-     <Compile Include="Assets\Scripts\Misc\FogOfWar.cs" />
+     <Compile Include="Assets\Scripts\Utility\TVec2.cs" />
      <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\WeaponSwitchScript.cs" />
