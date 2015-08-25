@@ -31,7 +31,16 @@ public class EventFlowManager : MonoBehaviour
         switch (e.type)
         {
             case GameEvent.BUILD_NAVMESH_COMPLETE:
+                //Start Pooling
                 _eventDispatcher.Raise(new GameEvent(GameEvent.START_POOLING));
+
+                //start FOW
+                GameEvent fowEvent = new GameEvent(GameEvent.GENERATE_FOW);
+                fowEvent.width = e.width;
+                fowEvent.height = e.height;
+                fowEvent.gridSize = e.gridSize;
+                _eventDispatcher.Raise(fowEvent);
+
                 break;
         }
     }

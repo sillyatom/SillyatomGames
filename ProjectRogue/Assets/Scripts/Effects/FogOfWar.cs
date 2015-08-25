@@ -13,30 +13,39 @@ public class FogOfWar : MonoBehaviour
 
     TVec2<int> _lastExploredIndex;
 
-    void Start()
+    void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
 
         _mesh = GetComponent<MeshFilter>().mesh;
         _mesh.Clear();
 
-        _plane = new CustomPlane(256, 256, 8);
-        _mesh.vertices = _plane.getVertices();
-        _mesh.triangles = _plane.getTriangles();
-        _mesh.uv = _plane.getUVs();
-        _mesh.colors32 = _plane.getColors();
+        Events.instance.AddListener<GameEvent>(GenerateFogOfWar);
+    }
 
-        gameObject.transform.Translate(new Vector3(-_plane.width/2, 0, -_plane.height/2));
-        MeshCollider collider = gameObject.AddComponent<MeshCollider>();
-        collider.sharedMesh = _mesh;
+    void GenerateFogOfWar(GameEvent e)
+    {
+        if (e.type == GameEvent.GENERATE_FOW)
+        {
+            Events.instance.RemoveListener<GameEvent>(GenerateFogOfWar);
 
-        _lastExploredIndex = new TVec2<int>(-1, -1);
+            _plane = new CustomPlane(e.width * e.gridSize, e.height * e.gridSize, 8);
+            _mesh.vertices = _plane.getVertices();
+            _mesh.triangles = _plane.getTriangles();
+            _mesh.uv = _plane.getUVs();
+            _mesh.colors32 = _plane.getColors();
+
+            gameObject.transform.Translate(new Vector3(-_plane.width / 2, 0, -_plane.height / 2));
+            MeshCollider collider = gameObject.AddComponent<MeshCollider>();
+            collider.sharedMesh = _mesh;
+
+            _lastExploredIndex = new TVec2<int>(-1, -1);
+        }
     }
 
     void OnRenderObject()
     {
         Ray ray = new Ray(_player.position + Vector3.up * 20.0f, Vector3.down);
-        Debug.DrawRay(_player.position + Vector3.up * 20.0f, Vector3.down * 5.0f, Color.white);
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, 5.0f))
         {

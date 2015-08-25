@@ -21,7 +21,8 @@ public class MapGenerator : MonoBehaviour
 	
 	public int _width;
 	public int _height;
-	public bool _useRandomSeed;
+	public int _gridSize;
+    public bool _useRandomSeed;
 	private string _seed;
 	
 	[Range(0, 100)]
@@ -106,7 +107,7 @@ public class MapGenerator : MonoBehaviour
 			}
 		}
 		
-		GetComponent<MeshGenerator>().GenerateMesh(borderedMap, 1f);
+		GetComponent<MeshGenerator>().GenerateMesh(borderedMap, _gridSize);
 		
 		//for testing
 		int [,] walkableMap = new int[borderedMap.GetLength(0), borderedMap.GetLength(1)];
@@ -118,11 +119,11 @@ public class MapGenerator : MonoBehaviour
 				walkableMap[x, y] = (borderedMap[x, y] == 1) ? 0 : 1;
 			}
 		}
-		GetComponent<MeshGenerator>().GenerateNavMesh(walkableMap, 1f);
+		GetComponent<MeshGenerator>().GenerateNavMesh(walkableMap, _gridSize);
 		
 		NavMeshBuilder.BuildNavMesh();
 
-        Events.instance.Raise(new GameEvent(GameEvent.BUILD_NAVMESH_COMPLETE));
+        Events.instance.Raise(new GameEvent(GameEvent.BUILD_NAVMESH_COMPLETE, borderedMap.GetLength(0), borderedMap.GetLength(1), _gridSize));
 	}
 	
 	void SmoothMap()
