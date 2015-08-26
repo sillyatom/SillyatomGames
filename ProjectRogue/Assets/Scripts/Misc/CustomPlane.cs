@@ -214,7 +214,7 @@ public class CustomPlane
                             )
                 );
 
-            _colors.Add(new Color32(0, 0, 0, 255));
+            _colors.Add(new Color32(0, 0, 0, 128));
         }
     }
 
