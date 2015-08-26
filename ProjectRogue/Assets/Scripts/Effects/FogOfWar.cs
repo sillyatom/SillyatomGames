@@ -29,7 +29,7 @@ public class FogOfWar : MonoBehaviour
         {
             Events.instance.RemoveListener<GameEvent>(GenerateFogOfWar);
 
-            _plane = new CustomPlane(e.width * e.gridSize, e.height * e.gridSize, 8);
+            _plane = new CustomPlane(e.width * e.gridSize, e.height * e.gridSize, (e.width * 8 / 512));
             _mesh.vertices = _plane.getVertices();
             _mesh.triangles = _plane.getTriangles();
             _mesh.uv = _plane.getUVs();
@@ -89,8 +89,15 @@ public class FogOfWar : MonoBehaviour
         }
         else
         {
-            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX, explorerRangeY, 0);
-            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX+1, explorerRangeY+1, 64, true);
+            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX + 1, explorerRangeY + 1, 64, true);
+            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX, explorerRangeY, 0, false);
+
+            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX + 3, explorerRangeY, 64, true);
+            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX + 2, explorerRangeY - 1, 0, false);
+
+            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX, explorerRangeY + 2, 64, true);
+            UpdatePolygonColorAtIndex(indexX, indexY, explorerRangeX - 1, explorerRangeY + 1, 0, false);
+
             _mesh.colors32 = _plane.getColors();
 
             _lastExploredIndex.Set(indexX, indexY);
