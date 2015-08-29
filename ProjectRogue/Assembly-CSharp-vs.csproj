@@ -60,11 +60,12 @@
      <Compile Include="Assets\Scripts\Events\CameraEvent.cs" />
      <Compile Include="Assets\Scripts\Events\Events.cs" />
      <Compile Include="Assets\Scripts\Events\GameEvent.cs" />
+     <Compile Include="Assets\Scripts\Handlers\EnemySpawnHandler.cs" />
+     <Compile Include="Assets\Scripts\Handlers\SpawnHandler.cs" />
      <Compile Include="Assets\Scripts\Manager\EventFlowManager.cs" />
      <Compile Include="Assets\Scripts\Manager\MapGenerator.cs" />
      <Compile Include="Assets\Scripts\Manager\MeshGenerator.cs" />
      <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
-     <Compile Include="Assets\Scripts\Manager\SpawnEnemy.cs" />
      <Compile Include="Assets\Scripts\Misc\CustomPlane.cs" />
      <Compile Include="Assets\Scripts\Utility\TVec2.cs" />
      <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />

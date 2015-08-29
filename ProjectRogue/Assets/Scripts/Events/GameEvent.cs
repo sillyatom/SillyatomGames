@@ -26,6 +26,7 @@ public class GameEvent
     public const string START_POOLING= "StartPooling";
     public const string BUILD_NAVMESH_COMPLETE = "NavMeshGenerated";
     public const string GENERATE_FOW = "GenerateFOW";
+    public const string POOLING_COMPLETED = "PoolingCompleted";
 
     public GameEvent(string type)
     {

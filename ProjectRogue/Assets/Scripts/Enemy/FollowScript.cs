@@ -3,16 +3,13 @@ using System.Collections;
 
 public class FollowScript : MonoBehaviour {
 
-	public Transform _followTransform;
-	
+	Transform _followTransform;
 	NavMeshAgent agent;
-	Rigidbody _body;
 	
-	void Start()
-	{
-		_body = gameObject.GetComponent<Rigidbody>();
-	}
-	
+    void Awake()
+    {
+        _followTransform = (GameObject.FindGameObjectWithTag("Player") as GameObject).transform;
+    }
 	// Use this for initialization
 	void OnEnable () 
 	{

@@ -40,7 +40,12 @@ public class EventFlowManager : MonoBehaviour
                 fowEvent.height = e.height;
                 fowEvent.gridSize = e.gridSize;
                 _eventDispatcher.Raise(fowEvent);
+                break;
 
+            case GameEvent.POOLING_COMPLETED:
+                //for testing
+                GameObject handler = (GameObject)Instantiate(Resources.Load("Prefabs/EnemySpawnHandler"));
+                handler.transform.position = Vector3.back * 5.0f;
                 break;
         }
     }

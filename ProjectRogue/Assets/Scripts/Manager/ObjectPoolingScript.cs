@@ -62,8 +62,10 @@ public class ObjectPoolingScript : MonoBehaviour
                     _pooledObjects[key].Add(newObject);
                 }
             }
+            Events.instance.Raise(new GameEvent(GameEvent.POOLING_COMPLETED));
         }
-	}
+
+    }
 	
 	public GameObject getGameObject(string type)
 	{
