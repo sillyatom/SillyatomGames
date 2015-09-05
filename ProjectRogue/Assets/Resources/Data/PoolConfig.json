@@ -1,10 +1,5 @@
 [
     {
-        "type": "Enemy",
-        "path": "Prefabs/Enemy",
-        "amount": 20
-    },
-    {
         "type": "Bullet",
         "path": "Prefabs/Bullet",
         "amount": 20

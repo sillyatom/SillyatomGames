@@ -32,7 +32,11 @@ public class EventFlowManager : MonoBehaviour
         {
             case GameEvent.BUILD_NAVMESH_COMPLETE:
                 //Start Pooling
-                _eventDispatcher.Raise(new GameEvent(GameEvent.START_POOLING));
+                GameEvent poolEvent = new GameEvent(GameEvent.START_POOLING);
+                poolEvent.width = e.width;
+                poolEvent.height = e.height;
+                poolEvent.gridSize = e.gridSize;
+                _eventDispatcher.Raise(poolEvent);
 
                 //start FOW
                 GameEvent fowEvent = new GameEvent(GameEvent.GENERATE_FOW);
@@ -44,8 +48,10 @@ public class EventFlowManager : MonoBehaviour
 
             case GameEvent.POOLING_COMPLETED:
                 //for testing
-                GameObject handler = (GameObject)Instantiate(Resources.Load("Prefabs/EnemySpawnHandler"));
-                handler.transform.position = Vector3.back * 5.0f;
+                //GameObject handler = (GameObject)Instantiate(Resources.Load("Prefabs/EnemySpawnHandler"));
+                //handler.transform.position = Vector3.back * 5.0f;
+
+                _eventDispatcher.Raise(new GameEvent(GameEvent.START_LEVEL_OBJECTS_GENERATOR));
                 break;
         }
     }

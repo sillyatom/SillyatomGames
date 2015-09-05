@@ -23,15 +23,19 @@ public class MapGenerator : MonoBehaviour
 	public int _height;
 	public int _gridSize;
     public bool _useRandomSeed;
-	private string _seed;
+    public int walkThreshold;
+    public int wallThreshold;
+
+    private string _seed;
 	
 	[Range(0, 100)]
 	public int _randomPercentage;
 	float _randomOffset = 0;
 	
 	int [,] map;
-	
-	void Start ()
+    public static int[,] borderedMap;
+
+    void Start ()
 	{	
 		
 	}
@@ -57,7 +61,7 @@ public class MapGenerator : MonoBehaviour
     void GenerateMap ()
 	{
 		map = new int[_width, _height];
-		
+        _randomOffset += UnityEngine.Random.Range(0, 1000);
 		if (_useRandomSeed)
 		{
 			_randomOffset = UnityEngine.Random.Range(_randomOffset, _randomOffset + 100);
@@ -90,7 +94,7 @@ public class MapGenerator : MonoBehaviour
 		ProcessMap();
 		
 		int borderSize = 1;
-		int [,] borderedMap = new int[_width + borderSize * 2, _height + borderSize * 2];
+		borderedMap = new int[_width + borderSize * 2, _height + borderSize * 2];
 		
 		for (int x = 0; x < borderedMap.GetLength(0); x++) 
 		{
@@ -163,7 +167,6 @@ public class MapGenerator : MonoBehaviour
 	
 	void ProcessMap()
 	{
-		int wallThreshold = 25;
 		List<List<Coord>> wallRegions = GetRegions(1);
 		
 		foreach(List<Coord>wallRegion in wallRegions)
@@ -177,7 +180,6 @@ public class MapGenerator : MonoBehaviour
 			}
 		}
 		
-		int walkThreshold = 25;
 		List<List<Coord>> walkRegions = GetRegions(0);
 		List<Room> survivedRooms = new List<Room>();
 		
