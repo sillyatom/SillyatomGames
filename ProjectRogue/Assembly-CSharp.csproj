@@ -58,9 +58,12 @@
      <Compile Include="Assets\Scripts\CustomMesh\BorderMesh.cs" />
      <Compile Include="Assets\Scripts\CustomMesh\CustomPlane.cs" />
      <Compile Include="Assets\Scripts\CustomMesh\Polygon.cs" />
+     <Compile Include="Assets\Scripts\CustomMesh\RoomBorderMesh.cs" />
+     <Compile Include="Assets\Scripts\CustomMesh\Triangle.cs" />
      <Compile Include="Assets\Scripts\CustomMesh\Vertex.cs" />
      <Compile Include="Assets\Scripts\Dungeon\DungeonMapGenerator.cs" />
      <Compile Include="Assets\Scripts\Dungeon\Room.cs" />
+     <Compile Include="Assets\Scripts\Dungeon\RoomScript.cs" />
      <Compile Include="Assets\Scripts\Effects\FogOfWar.cs" />
      <Compile Include="Assets\Scripts\Enemy\DestroyEnemyScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />

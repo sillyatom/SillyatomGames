@@ -11,6 +11,13 @@ public class Polygon
     public Color32 color;
     public List<int> triangles;
     private int _config;
+    public int config
+    {
+        get
+        {
+            return _config;
+        }
+    }
     public Polygon(Vertex bl, Vertex tl, Vertex tr, Vertex br, Color32 clr)
     {
         bottomLeft = bl;
