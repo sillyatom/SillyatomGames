@@ -1,6 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#define DEBUG_PACKING
+
 using System.Collections.Generic;
+using UnityEngine;
 
 public class DungeonMapGenerator : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class DungeonMapGenerator : MonoBehaviour
     public int maxNumRooms;
 
     private List<Room> _rooms;
+    private RoomPacker _packer;
 
-    void Start ()
+    void Start()
     {
         _rooms = new List<Room>();
 
@@ -30,12 +32,24 @@ public class DungeonMapGenerator : MonoBehaviour
                 _rooms.Add(room);
             }
         }
+
+        _packer = new RoomPacker();
+        List<PackingObject> testObjects = new List<PackingObject>();
+        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        _packer.StartPacking(testObjects);
+        _packer.Pack();
     }
 
+    //To Draw Vertices
     void OnDrawGizmos()
     {
+#if (DRAW_VERTICES)
         if (_rooms == null) return;
-        foreach(Room room in _rooms)
+        foreach (Room room in _rooms)
         {
             Vector3[] vertices = room.meshData.getVertices();
             foreach (List<int> outline in room.meshData._outlineVertices)
@@ -46,5 +60,16 @@ public class DungeonMapGenerator : MonoBehaviour
                 }
             }
         }
+#endif
+#if (DEBUG_PACKING)
+        if (_packer != null)
+        {
+            foreach (BinNode node in _packer.packedNodes)
+            {
+                Gizmos.color = node.obj.color;
+                Gizmos.DrawCube(new Vector3(node.rect.x + node.obj.rect.width / 2, 1, node.rect.y + node.obj.rect.height / 2), new Vector3(node.obj.rect.width, 1, node.obj.rect.height));
+            }
+        }
+#endif
     }
 }

@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\CustomMesh\Vertex.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DungeonMapGenerator.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Room.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\RoomPacker.cs" />
     <Compile Include="Assets\Scripts\Dungeon\RoomScript.cs" />
     <Compile Include="Assets\Scripts\Effects\FogOfWar.cs" />
     <Compile Include="Assets\Scripts\Enemy\DestroyEnemyScript.cs" />
