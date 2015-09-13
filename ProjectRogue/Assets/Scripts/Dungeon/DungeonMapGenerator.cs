@@ -1,4 +1,4 @@
-﻿#define DEBUG_PACKING
+﻿#define xDEBUG_PACKING
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +11,7 @@ public class DungeonMapGenerator : MonoBehaviour
     public int borderSize;
     public int maxNumFloors;
     public int maxNumRooms;
+    public int wallHeight;
 
     private List<Room> _rooms;
     private RoomPacker _packer;
@@ -18,20 +19,6 @@ public class DungeonMapGenerator : MonoBehaviour
     void Start()
     {
         _rooms = new List<Room>();
-
-        for (int floorIndex = 0; floorIndex < maxNumFloors; floorIndex++)
-        {
-            int numRooms = UnityEngine.Random.Range(maxNumRooms - 1, maxNumRooms);
-            for (int roomIndex = 0; roomIndex < numRooms; roomIndex++)
-            {
-                Room room = new Room("Prefabs/Room", roomWidth, roomHeight, quadSize, borderSize);
-                room.floorIndex = floorIndex;
-                room.roomIndex = roomIndex;
-                room.generateMesh();
-                room.gameObject.transform.position = new Vector3(roomIndex * roomWidth, 0, floorIndex * roomHeight);
-                _rooms.Add(room);
-            }
-        }
 
         _packer = new RoomPacker();
         List<PackingObject> testObjects = new List<PackingObject>();
@@ -42,6 +29,14 @@ public class DungeonMapGenerator : MonoBehaviour
         testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
         _packer.StartPacking(testObjects);
         _packer.Pack();
+
+        foreach (BinNode node in _packer.packedNodes)
+        {
+            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(node.obj.rect.width), Mathf.CeilToInt(node.obj.rect.height), quadSize, borderSize, wallHeight);
+            room.generateMesh();
+            room.gameObject.transform.position = new Vector3(node.rect.x, 1, node.rect.y);
+            _rooms.Add(room);
+        }
     }
 
     //To Draw Vertices

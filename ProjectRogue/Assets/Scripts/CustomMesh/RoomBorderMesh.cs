@@ -2,7 +2,7 @@
 
 public class RoomBorderMesh : BorderMesh
 {
-    public RoomBorderMesh(int width, int height, int quadSize, int borderSize) : base(width, height, quadSize, borderSize)
+    public RoomBorderMesh(int width, int height, int quadSize, int borderSize, int wallHeight) : base(width, height, quadSize, borderSize, wallHeight)
     {
 
     }

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class BorderMesh : CustomMesh
 {
+    protected int wallHeight;
+
     private List<Vector3> _wallVertices;
     private List<int> _wallTriangles;
     private Vector2[] _wallUVs;
@@ -36,8 +38,9 @@ public class BorderMesh : CustomMesh
         _trianglesWithSharedVertex = new Dictionary<int, List<Triangle>>();
     }
 
-    public BorderMesh(int width, int height, int quadSize, int borderSize) : base(width, height, quadSize, borderSize)
+    public BorderMesh(int width, int height, int quadSize, int borderSize, int wallHeight) : base(width, height, quadSize, borderSize)
     {
+        this.wallHeight = wallHeight;
     }
 
     public override void Generate()
@@ -71,8 +74,6 @@ public class BorderMesh : CustomMesh
 
     private void CreateWallFromOutline(int gridSize)
     {
-        float wallHeight = 15;
-
         foreach (List<int> outline in _outlineVertices)
         {
             for (int i = 0; i < outline.Count - 1; i++)

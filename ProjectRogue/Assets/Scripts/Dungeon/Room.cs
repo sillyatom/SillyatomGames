@@ -9,36 +9,46 @@ class Room
     public int height { get; set; }
     public int quadSize { get; set; }
     public int borderSize { get; set; }
+    public int wallHeight { get; set; }
 
     private Mesh _ceilingMesh;
+    private Mesh _floorMesh;
     private Mesh _wallMesh;
 
     private GameObject _ceiling;
+    private GameObject _floor;
     private GameObject _wall;
 
     public RoomMesh meshData { get; set; }
 
-    public Room(string prefab, int width, int height, int quadSize, int borderSize)
+    public Room(string prefab, int width, int height, int quadSize, int borderSize, int wallHeight)
     {
         this.width = width;
         this.height = height;
         this.borderSize = borderSize;
         this.quadSize = quadSize;
+        this.wallHeight = wallHeight;
 
         gameObject = GameObject.Instantiate(Resources.Load(prefab) as GameObject);
 
         _ceiling = gameObject.GetComponent<RoomScript>().border;
+        _ceiling.transform.Translate(new Vector3(0.0f, wallHeight, 0.0f));
         _ceilingMesh = gameObject.GetComponent<RoomScript>().border.GetComponent<MeshFilter>().mesh;
         _ceilingMesh.Clear();
 
         _wall = gameObject.GetComponent<RoomScript>().wall;
+        _wall.transform.Translate(new Vector3(0.0f, wallHeight, 0.0f));
         _wallMesh = gameObject.GetComponent<RoomScript>().wall.GetComponent<MeshFilter>().mesh;
         _wallMesh.Clear();
+
+        _floor = gameObject.GetComponent<RoomScript>().floor;
+        _floorMesh = gameObject.GetComponent<RoomScript>().floor.GetComponent<MeshFilter>().mesh;
+        _floorMesh.Clear();
     }
 
     protected virtual RoomMesh getRoomData()
     {
-        return new RoomMesh(width, height, quadSize, borderSize);
+        return new RoomMesh(width, height, quadSize, borderSize, wallHeight);
     }
 
     public void generateMesh()
@@ -58,5 +68,13 @@ class Room
 
         MeshCollider wallCollider = _wall.AddComponent<MeshCollider>();
         wallCollider.sharedMesh = _wallMesh;
+
+        _floorMesh.vertices = meshData.floorMesh.getVertices();
+        _floorMesh.triangles = meshData.floorMesh.getTriangles();
+        _floorMesh.uv = meshData.floorMesh.getUVs();
+
+        MeshCollider floorCollider = _floor.AddComponent<MeshCollider>();
+        floorCollider.sharedMesh = _floorMesh;
+
     }
 }

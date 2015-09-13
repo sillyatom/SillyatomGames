@@ -16,9 +16,9 @@
         set { _floorMesh = value; }
     }
 
-    public RoomMesh(int width, int height, int quadSize, int borderSize)
+    public RoomMesh(int width, int height, int quadSize, int borderSize, int wallHeight)
     {
-        _borderMesh = new RoomBorderMesh(width, height, quadSize, borderSize);
+        _borderMesh = new RoomBorderMesh(width, height, quadSize, borderSize, wallHeight);
         _borderMesh.Generate();
         _floorMesh = new FloorMesh(width, height, quadSize, borderSize, _borderMesh.getMap());
         _floorMesh.Generate();
