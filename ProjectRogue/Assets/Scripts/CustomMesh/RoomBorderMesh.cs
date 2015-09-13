@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class RoomBorderMesh : BorderMesh
 {
-    public RoomBorderMesh(int width, int height, int quadSize, int borderSize = 5):base(width, height,quadSize, borderSize)
+    public RoomBorderMesh(int width, int height, int quadSize, int borderSize) : base(width, height, quadSize, borderSize)
     {
 
     }
@@ -28,7 +26,7 @@ public class RoomBorderMesh : BorderMesh
         }
         {
             //center right
-            int indexX = row - borderSize -1;
+            int indexX = row - borderSize - 1;
             int indexY = Mathf.CeilToInt(col / 2);
             for (int x = indexX; x <= indexX + borderSize; x++)
             {

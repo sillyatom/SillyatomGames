@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
 
 class Room
 {
@@ -15,9 +10,13 @@ class Room
     public int quadSize { get; set; }
     public int borderSize { get; set; }
 
-    private Mesh _mesh;
+    private Mesh _ceilingMesh;
     private Mesh _wallMesh;
-    public BorderMesh meshData { get; set; }
+
+    private GameObject _ceiling;
+    private GameObject _wall;
+
+    public RoomMesh meshData { get; set; }
 
     public Room(string prefab, int width, int height, int quadSize, int borderSize)
     {
@@ -28,34 +27,36 @@ class Room
 
         gameObject = GameObject.Instantiate(Resources.Load(prefab) as GameObject);
 
-        _mesh = gameObject.GetComponent<RoomScript>().roomMesh.mesh;
-        _mesh.Clear();
+        _ceiling = gameObject.GetComponent<RoomScript>().border;
+        _ceilingMesh = gameObject.GetComponent<RoomScript>().border.GetComponent<MeshFilter>().mesh;
+        _ceilingMesh.Clear();
 
-        _wallMesh = gameObject.GetComponent<RoomScript>().wallMesh.mesh;
+        _wall = gameObject.GetComponent<RoomScript>().wall;
+        _wallMesh = gameObject.GetComponent<RoomScript>().wall.GetComponent<MeshFilter>().mesh;
         _wallMesh.Clear();
     }
 
-    protected virtual BorderMesh getRoomData()
+    protected virtual RoomMesh getRoomData()
     {
-        return new RoomBorderMesh(width, height, quadSize, borderSize);
+        return new RoomMesh(width, height, quadSize, borderSize);
     }
 
     public void generateMesh()
     {
         meshData = getRoomData();
-        _mesh.vertices = meshData.getVertices();
-        _mesh.triangles = meshData.getTriangles();
-        _mesh.uv = meshData.getUVs();
-        _mesh.colors32 = meshData.getColors();
+        _ceilingMesh.vertices = meshData.roomBorderMesh.getVertices();
+        _ceilingMesh.triangles = meshData.roomBorderMesh.getTriangles();
+        _ceilingMesh.uv = meshData.roomBorderMesh.getUVs();
+        _ceilingMesh.colors32 = meshData.roomBorderMesh.getColors();
 
-        MeshCollider collider = gameObject.AddComponent<MeshCollider>();
-        collider.sharedMesh = _mesh;
+        MeshCollider collider = _ceiling.AddComponent<MeshCollider>();
+        collider.sharedMesh = _ceilingMesh;
 
-        _wallMesh.vertices = meshData.getWallVertices();
-        _wallMesh.triangles = meshData.getWallTriangles();
-        _wallMesh.uv = meshData.getWallUVs();
+        _wallMesh.vertices = meshData.roomBorderMesh.getWallVertices();
+        _wallMesh.triangles = meshData.roomBorderMesh.getWallTriangles();
+        _wallMesh.uv = meshData.roomBorderMesh.getWallUVs();
 
-        MeshCollider wallCollider = gameObject.AddComponent<MeshCollider>();
+        MeshCollider wallCollider = _wall.AddComponent<MeshCollider>();
         wallCollider.sharedMesh = _wallMesh;
     }
 }

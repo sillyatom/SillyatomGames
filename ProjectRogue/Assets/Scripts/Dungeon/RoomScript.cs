@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class RoomScript : MonoBehaviour
 {
-    public MeshFilter roomMesh;
-    public MeshFilter wallMesh;
+    public GameObject border;
+    public GameObject wall;
 }

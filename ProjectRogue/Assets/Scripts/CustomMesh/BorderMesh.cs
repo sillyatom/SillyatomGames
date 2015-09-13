@@ -1,36 +1,19 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class BorderMesh
+public class BorderMesh : CustomMesh
 {
-    private List<Polygon> _polygons;
-    private List<Vector3> _vertices;
-    private List<Vector2> _uvs;
-    private List<int> _triangles;
-    private List<Color32> _colors;
     private List<Vector3> _wallVertices;
     private List<int> _wallTriangles;
     private Vector2[] _wallUVs;
-    protected int[,] map;
 
     private Dictionary<int, List<Triangle>> _trianglesWithSharedVertex;
     public List<List<int>> _outlineVertices;
     private HashSet<int> _checkedVertices;
 
-    public Vector3[] getVertices()
-    {
-        return _vertices.ToArray();
-    }
-
     public Vector3[] getWallVertices()
     {
         return _wallVertices.ToArray();
-    }
-
-    public int[] getTriangles()
-    {
-        return _triangles.ToArray();
     }
 
     public int[] getWallTriangles()
@@ -43,100 +26,47 @@ public class BorderMesh
         return _wallUVs;
     }
 
-    public Vector2[] getUVs()
+    protected override void OnInit()
     {
-        return _uvs.ToArray();
-    }
-
-    public Color32[] getColors()
-    {
-        return _colors.ToArray();
-    }
-
-    public BorderMesh(int width, int height, int quadSize, int borderSize = 5)
-    {
-        _vertices = new List<Vector3>();
-        _triangles = new List<int>();
-        _uvs = new List<Vector2>();
-        _colors = new List<Color32>();
+        base.OnInit();
         _checkedVertices = new HashSet<int>();
         _outlineVertices = new List<List<int>>();
-        _wallVertices    = new List<Vector3>();
-        _wallTriangles   = new List<int>();
+        _wallVertices = new List<Vector3>();
+        _wallTriangles = new List<int>();
         _trianglesWithSharedVertex = new Dictionary<int, List<Triangle>>();
+    }
 
-        int row = Mathf.CeilToInt(width / quadSize) + 1;
-        int col = Mathf.CeilToInt(height / quadSize) + 1;
-        _polygons = new List<Polygon>();
+    public BorderMesh(int width, int height, int quadSize, int borderSize) : base(width, height, quadSize, borderSize)
+    {
+    }
 
-        map = new int[row, col];
-
-        //generate map
-        generateMap(row, col, borderSize);
-
-        //generate vertices
-        Vertex[,] vertices = new Vertex[row, col];
-        int runningIndex = 0;
-        for (int x = 0; x < row; x++)
-        {
-            for (int y = 0; y < col; y++)
-            {
-                vertices[x, y] = (new Vertex(new Vector3(x * quadSize, 0, y * quadSize), runningIndex++, map[x, y]));
-                _vertices.Add(vertices[x, y].position);
-            }
-        }
-
-        //generate polygons
-        for (int x = 0; x < row - 1; x++)
-        {
-            for (int y = 0; y < col - 1; y++)
-            {
-                if (map[x, y] == 1)
-                {
-                    Polygon polygon = new Polygon(vertices[x, y], vertices[x, y + 1], vertices[x + 1, y + 1], vertices[x + 1, y], new Color32(255, 0, 0, 0));
-                    _polygons.Add(polygon);
-
-                    //triangles to draw
-                    _triangles.InsertRange(_triangles.Count, polygon.triangles);
-
-                    //triangles with shared vertex
-                    if (polygon.config >= 3)
-                    {
-                        Triangle triangle = new Triangle(polygon.triangles[0], polygon.triangles[1], polygon.triangles[2]);
-                        AddTriangle(polygon.triangles[0], triangle);
-                        AddTriangle(polygon.triangles[1], triangle);
-                        AddTriangle(polygon.triangles[2], triangle);
-                    }
-                    if (polygon.config == 4)
-                    {
-                        Triangle triangle = new Triangle(polygon.triangles[3], polygon.triangles[4], polygon.triangles[5]);
-                        AddTriangle(polygon.triangles[3], triangle);
-                        AddTriangle(polygon.triangles[4], triangle);
-                        AddTriangle(polygon.triangles[5], triangle);
-                    }
-                }
-            }
-        }
-
-        //generate uv's & color
-        int length = _vertices.Count;
-        for (int index = 0; index < length; index++)
-        {
-            _uvs.Add(
-                        new Vector2(
-                                Mathf.InverseLerp(0, width, _vertices[index].x),
-                                Mathf.InverseLerp(0, height, _vertices[index].z)
-                            )
-                );
-
-            _colors.Add(new Color32(0, 0, 0, 128));
-        }
-
+    public override void Generate()
+    {
+        base.Generate();
         //calculate mesh outlines
         CalculateMeshOutlines();
 
         //create walls from outline
         CreateWallFromOutline(quadSize);
+    }
+
+    protected override void OnCreatePolygon(Polygon polygon)
+    {
+        base.OnCreatePolygon(polygon);
+        if (polygon.config >= 3)
+        {
+            Triangle triangle = new Triangle(polygon.triangles[0], polygon.triangles[1], polygon.triangles[2]);
+            AddTriangle(polygon.triangles[0], triangle);
+            AddTriangle(polygon.triangles[1], triangle);
+            AddTriangle(polygon.triangles[2], triangle);
+        }
+        if (polygon.config == 4)
+        {
+            Triangle triangle = new Triangle(polygon.triangles[3], polygon.triangles[4], polygon.triangles[5]);
+            AddTriangle(polygon.triangles[3], triangle);
+            AddTriangle(polygon.triangles[4], triangle);
+            AddTriangle(polygon.triangles[5], triangle);
+        }
     }
 
     private void CreateWallFromOutline(int gridSize)
@@ -261,7 +191,7 @@ public class BorderMesh
         }
     }
 
-    protected virtual void generateMap(int row, int col, int borderSize)
+    protected override void generateMap(int row, int col, int borderSize)
     {
         //generate map 
         for (int x = 0; x < row; x++)

@@ -134,7 +134,7 @@ public class RoomPacker
         {
             PackNode(currNode.nodes[0]);
         }
-        Debug.Log("Printing Node id : " + currNode.obj.id + " --- x : " + currNode.rect.x + " --- y : " + currNode.rect.y);
+        //Debug.Log("Printing Node id : " + currNode.obj.id + " --- x : " + currNode.rect.x + " --- y : " + currNode.rect.y);
         _packedNodes.Add(currNode);
         if (currNode.nodes[1].obj != null)
         {
