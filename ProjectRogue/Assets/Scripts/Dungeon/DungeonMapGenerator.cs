@@ -5,31 +5,33 @@ using UnityEngine;
 
 public class DungeonMapGenerator : MonoBehaviour
 {
-    public int roomWidth;
-    public int roomHeight;
     public int quadSize;
     public int borderSize;
-    public int maxNumFloors;
-    public int maxNumRooms;
     public int wallHeight;
+
+    public int minRoomWidth = 50;
+    public int minRoomHeight = 50;
+    public int maxRoomWidth = 200;
+    public int maxRoomHeight = 200;
+
+    public int numRooms = 8;
 
     private List<Room> _rooms;
     private RoomPacker _packer;
 
     void Start()
     {
-        _rooms = new List<Room>();
-
-        _packer = new RoomPacker();
         List<PackingObject> testObjects = new List<PackingObject>();
-        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
-        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
-        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
-        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
-        testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 50), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        for (int index = 0; index < numRooms; index++)
+        {
+            testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, Random.Range(minRoomWidth, maxRoomWidth), Random.Range(minRoomHeight, maxRoomHeight)), new Color(Random.Range(minRoomHeight, maxRoomHeight) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        }
+
+        _packer = new RoomPacker(numRooms * maxRoomWidth / 2, numRooms * maxRoomHeight / 2);
         _packer.StartPacking(testObjects);
         _packer.Pack();
 
+        _rooms = new List<Room>();
         foreach (BinNode node in _packer.packedNodes)
         {
             Room room = new Room("Prefabs/Room", Mathf.CeilToInt(node.obj.rect.width), Mathf.CeilToInt(node.obj.rect.height), quadSize, borderSize, wallHeight);

@@ -74,10 +74,8 @@ public class RoomPacker
     public float width { get; set; }
     public float height { get; set; }
 
-    public RoomPacker()
+    public RoomPacker(int width, int height)
     {
-        width = 100;
-        height = 100;
         packedNodes = new List<BinNode>();
         _root = CreateNode(null, new Rect(0, 0, width, height));
     }
