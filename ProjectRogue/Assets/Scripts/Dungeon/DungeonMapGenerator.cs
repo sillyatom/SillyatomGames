@@ -25,10 +25,10 @@ public class DungeonMapGenerator : MonoBehaviour
         List<PackingObject> testObjects = new List<PackingObject>();
         for (int index = 0; index < numRooms; index++)
         {
-            testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, Random.Range(minRoomWidth, maxRoomWidth), Random.Range(minRoomHeight, maxRoomHeight)), new Color(Random.Range(minRoomHeight, maxRoomHeight) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+            testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, Random.Range(minRoomWidth, maxRoomWidth), Random.Range(101, 101)), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
         }
 
-        _packer = new RoomPacker(numRooms * maxRoomWidth / 2, numRooms * maxRoomHeight / 2);
+        _packer = new RoomPacker(Mathf.CeilToInt(Mathf.Sqrt(numRooms / 2 * maxRoomWidth / 2 + numRooms / 2 * maxRoomHeight / 2)), Mathf.CeilToInt(Mathf.Sqrt(numRooms / 2 * maxRoomWidth / 2 + numRooms / 2 * maxRoomHeight / 2)));
         _packer.StartPacking(testObjects);
         _packer.Pack();
 

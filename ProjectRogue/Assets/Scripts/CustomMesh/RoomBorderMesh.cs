@@ -1,4 +1,6 @@
-﻿public class RoomBorderMesh : BorderMesh
+﻿using UnityEngine;
+
+public class RoomBorderMesh : BorderMesh
 {
     public RoomBorderMesh(int width, int height, int quadSize, int borderSize, int wallHeight) : base(width, height, quadSize, borderSize, wallHeight)
     {
@@ -9,7 +11,7 @@
     {
         base.generateMap(row, col, borderSize);
 
-        /*int exitSize = 1;
+        int exitSize = 1;
 
         {
             //center left
@@ -58,6 +60,6 @@
                     map[x, y] = 0;
                 }
             }
-        }*/
+        }
     }
 }

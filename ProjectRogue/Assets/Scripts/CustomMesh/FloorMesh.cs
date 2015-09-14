@@ -12,7 +12,16 @@
         {
             for (int y = 0; y < col; y++)
             {
-                map[x, y] = (mapRef[x, y] == 1) ? 0 : 1;
+                map[x, y] = (mapRef[x, y] == 0) ? 1 : 0;
+
+                if (x == borderSize || y == borderSize || x == row - borderSize - 1 || y == col - borderSize - 1)
+                {
+                    map[x, y] = 1;
+                }
+                if (x == borderSize - 1 || y == borderSize - 1 || x == row - borderSize || y == col - borderSize)
+                {
+                    map[x, y] = 1;
+                }
             }
         }
     }
