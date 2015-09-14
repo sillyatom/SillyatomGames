@@ -37,6 +37,11 @@ public class CustomMesh
         return _colors.ToArray();
     }
 
+    public Vertex[,] getCustomVertexData()
+    {
+        return customVertexData;
+    }
+
     public int width { get; set; }
     public int height { get; set; }
     public int row { get; set; }
@@ -65,6 +70,11 @@ public class CustomMesh
 
         //init
         OnInit();
+    }
+
+    public bool isWithinRange(int x, int y)
+    {
+        return ((x >= 0 && x < row) && (y >= 0 && y < col));
     }
 
     public virtual void Generate()

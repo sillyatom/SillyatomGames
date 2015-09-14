@@ -1,4 +1,5 @@
 ﻿#define xDEBUG_PACKING
+#define DRAW_VERTICES
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,12 +49,25 @@ public class DungeonMapGenerator : MonoBehaviour
         if (_rooms == null) return;
         foreach (Room room in _rooms)
         {
-            Vector3[] vertices = room.meshData.getVertices();
-            foreach (List<int> outline in room.meshData._outlineVertices)
+            int[,] map = room.meshData.roomBorderMesh.getMap();
+            Vertex[,] vertices = room.meshData.roomBorderMesh.getCustomVertexData();
+            int row = map.GetLength(0);
+            int col = map.GetLength(1);
+
+            for (int x = 0; x < row; x++)
             {
-                for (int i = 0; i < outline.Count - 1; i++)
+                for (int y = 0; y < col; y++)
                 {
-                    Gizmos.DrawCube(vertices[outline[i]], Vector3.one * 0.5f);
+                    if (map[x, y] == 1)
+                    {
+                        Gizmos.color = Color.red;
+                    }
+                    else
+                    {
+                        Gizmos.color = Color.green;
+                    }
+
+                    Gizmos.DrawCube(room.gameObject.transform.position + vertices[x, y].position, Vector3.one * 0.5f);
                 }
             }
         }
