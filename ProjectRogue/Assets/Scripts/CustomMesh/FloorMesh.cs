@@ -14,6 +14,8 @@
             {
                 map[x, y] = (mapRef[x, y] == 0) ? 1 : 0;
 
+                //[ TO DO ]
+                //Need to work around this 
                 if (x == borderSize || y == borderSize || x == row - borderSize - 1 || y == col - borderSize - 1)
                 {
                     map[x, y] = 1;
