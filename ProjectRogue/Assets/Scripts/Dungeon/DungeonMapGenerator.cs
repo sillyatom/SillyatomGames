@@ -1,5 +1,5 @@
-﻿#define xDEBUG_PACKING
-#define DRAW_VERTICES
+﻿#define DEBUG_PACKING
+#define xDRAW_ROOMS
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,10 +28,11 @@ public class DungeonMapGenerator : MonoBehaviour
             testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, Random.Range(minRoomWidth, maxRoomWidth), Random.Range(101, 101)), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
         }
 
-        _packer = new RoomPacker(Mathf.CeilToInt(Mathf.Sqrt(numRooms / 2 * maxRoomWidth / 2 + numRooms / 2 * maxRoomHeight / 2)), Mathf.CeilToInt(Mathf.Sqrt(numRooms / 2 * maxRoomWidth / 2 + numRooms / 2 * maxRoomHeight / 2)));
+        _packer = new RoomPacker(maxRoomWidth, maxRoomHeight);
         _packer.StartPacking(testObjects);
         _packer.Pack();
 
+#if (DRAW_ROOMS)
         _rooms = new List<Room>();
         foreach (BinNode node in _packer.packedNodes)
         {
@@ -40,12 +41,13 @@ public class DungeonMapGenerator : MonoBehaviour
             room.gameObject.transform.position = new Vector3(node.rect.x, 1, node.rect.y);
             _rooms.Add(room);
         }
+#endif
     }
 
     //To Draw Vertices
     void OnDrawGizmos()
     {
-#if (DRAW_VERTICES)
+#if (DRAW_ROOMS)
         if (_rooms == null) return;
         foreach (Room room in _rooms)
         {
@@ -66,7 +68,6 @@ public class DungeonMapGenerator : MonoBehaviour
                     {
                         Gizmos.color = Color.green;
                     }
-
                     Gizmos.DrawCube(room.gameObject.transform.position + vertices[x, y].position, Vector3.one * 0.5f);
                 }
             }

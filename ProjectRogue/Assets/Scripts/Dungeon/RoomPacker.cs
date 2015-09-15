@@ -19,12 +19,14 @@ public class BinNode
     public BinNode[] nodes;
     public Rect rect;
     public PackingObject obj;
+    public bool isPackedRight;
 
-    public BinNode(PackingObject obj, Rect rect)
+    public BinNode(PackingObject obj, Rect rect, bool isRightNode)
     {
         this.nodes = new BinNode[2];
         this.obj = obj;
         this.rect = rect;
+        this.isPackedRight = isRightNode;
     }
 
     public bool Grow(Rect rect)
@@ -44,13 +46,13 @@ public class BinNode
                                                        , rect.y
                                                        , rect.width - obj.rect.width
                                                        , obj.rect.height
-                                                        ));
+                                                        ), true);
         this.nodes[1] = new BinNode(null, new Rect(
                                                      rect.x
                                                    , rect.y + this.obj.rect.height
                                                    , rect.width
                                                    , rect.height - obj.rect.height
-                                                    ));
+                                                    ), false);
         return true;
     }
 
@@ -64,6 +66,7 @@ public class RoomPacker
 {
     private BinNode _root;
     private List<BinNode> _packedNodes;
+    private bool _canPackRight;
 
     public List<BinNode> packedNodes
     {
@@ -77,7 +80,8 @@ public class RoomPacker
     public RoomPacker(int width, int height)
     {
         packedNodes = new List<BinNode>();
-        _root = CreateNode(null, new Rect(0, 0, width, height));
+        _root = CreateNode(null, new Rect(0, 0, width, height), false);
+        _canPackRight = true;
     }
 
     private bool Add(PackingObject obj, BinNode currNode)
@@ -105,11 +109,11 @@ public class RoomPacker
     {
         if (currNode.obj != null)
         {
-            if (Grow(currNode.nodes[0], rect))
+            if (_canPackRight && Grow(currNode.nodes[0], rect))
             {
                 return true;
             }
-            else if (Grow(currNode.nodes[1], rect))
+            else if (!_canPackRight && Grow(currNode.nodes[1], rect))
             {
                 return true;
             }
@@ -121,9 +125,9 @@ public class RoomPacker
         return false;
     }
 
-    private BinNode CreateNode(PackingObject obj, Rect rect)
+    private BinNode CreateNode(PackingObject obj, Rect rect, bool isRightNode)
     {
-        return new BinNode(obj, rect);
+        return new BinNode(obj, rect, isRightNode);
     }
 
     private void PackNode(BinNode currNode)
@@ -163,6 +167,7 @@ public class RoomPacker
                 do
                 {
                     Grow(_root, obj.rect);
+                    _canPackRight = !_canPackRight;
                 }
                 while (!Add(obj, _root));
             }
