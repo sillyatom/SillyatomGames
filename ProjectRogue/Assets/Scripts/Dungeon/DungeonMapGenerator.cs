@@ -19,18 +19,19 @@ public class DungeonMapGenerator : MonoBehaviour
 
     private List<Room> _rooms;
     private RoomPacker _packer;
+    private List<PackingObject> testObjects;
 
     void Start()
     {
-        List<PackingObject> testObjects = new List<PackingObject>();
+        testObjects = new List<PackingObject>();
         for (int index = 0; index < numRooms; index++)
         {
             testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, Random.Range(minRoomWidth, maxRoomWidth), Random.Range(101, 101)), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
         }
 
         _packer = new RoomPacker(maxRoomWidth, maxRoomHeight);
-        _packer.StartPacking(testObjects);
-        _packer.Pack();
+        //_packer.StartPacking(testObjects);
+        //_packer.Pack();
 
 #if (DRAW_ROOMS)
         _rooms = new List<Room>();
@@ -43,6 +44,20 @@ public class DungeonMapGenerator : MonoBehaviour
         }
 #endif
     }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (testObjects.Count > 0)
+            {
+                _packer.StepPacking(testObjects[0]);
+                _packer.Pack();
+                testObjects.RemoveAt(0);
+            }
+        }
+    }
+
 
     //To Draw Vertices
     void OnDrawGizmos()
@@ -80,8 +95,21 @@ public class DungeonMapGenerator : MonoBehaviour
             {
                 Gizmos.color = node.obj.color;
                 Gizmos.DrawCube(new Vector3(node.rect.x + node.obj.rect.width / 2, 1, node.rect.y + node.obj.rect.height / 2), new Vector3(node.obj.rect.width, 1, node.obj.rect.height));
+                if (node.nodes[0].obj == null)
+                    DrawNodeRect(node.nodes[0].rect, node.obj.color);
+                if (node.nodes[1].obj == null)
+                    DrawNodeRect(node.nodes[1].rect, node.obj.color);
             }
         }
 #endif
+    }
+
+    void DrawNodeRect(Rect rect, Color color)
+    {
+        Debug.DrawLine(new Vector3(rect.x, 0, rect.y), new Vector3(rect.x, 0, rect.y + rect.height), color);
+        Debug.DrawLine(new Vector3(rect.x, 0, rect.y + rect.height), new Vector3(rect.x + rect.width, 0, rect.y + rect.height), color);
+        Debug.DrawLine(new Vector3(rect.x, 0, rect.y), new Vector3(rect.x + rect.width, 0, rect.y), color);
+        Debug.DrawLine(new Vector3(rect.x + rect.width, 0, rect.y), new Vector3(rect.x + rect.width, 0, rect.y + rect.height), color);
+
     }
 }

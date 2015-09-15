@@ -173,4 +173,23 @@ public class RoomPacker
             }
         }
     }
+
+    public void StepPacking(PackingObject obj)
+    {
+        //pack object
+        if (Add(obj, _root))
+        {
+
+        }
+        else
+        {
+            //if not able to pack, grow the bin until it can pack the obj
+            do
+            {
+                Grow(_root, obj.rect);
+                _canPackRight = !_canPackRight;
+            }
+            while (!Add(obj, _root));
+        }
+    }
 }
