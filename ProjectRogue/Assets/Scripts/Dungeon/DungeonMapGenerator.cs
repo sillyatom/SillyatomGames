@@ -1,5 +1,7 @@
 ﻿#define DEBUG_PACKING
-#define xDRAW_ROOMS
+
+#define DRAW_ROOMS
+#undef DRAW_ROOMS
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +16,8 @@ public class DungeonMapGenerator : MonoBehaviour
     public int minRoomHeight = 50;
     public int maxRoomWidth = 200;
     public int maxRoomHeight = 200;
+    public int maxMapWidth = 200;
+    public int maxMapHeight = 200;
 
     public int numRooms = 8;
 
@@ -28,8 +32,12 @@ public class DungeonMapGenerator : MonoBehaviour
         {
             testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, Random.Range(minRoomWidth, maxRoomWidth), Random.Range(101, 101)), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
         }
-
-        _packer = new RoomPacker(maxRoomWidth, maxRoomHeight);
+        //testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 63, 101), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        //testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 72, 101), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        //testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 84, 101), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        //testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 103, 101), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        //testObjects.Add(new PackingObject(testObjects.Count, new Rect(0, 0, 50, 101), new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f)));
+        _packer = new RoomPacker(maxRoomWidth, maxRoomHeight, maxMapWidth, maxMapHeight);
         //_packer.StartPacking(testObjects);
         //_packer.Pack();
 
@@ -53,6 +61,7 @@ public class DungeonMapGenerator : MonoBehaviour
             {
                 _packer.StepPacking(testObjects[0]);
                 _packer.Pack();
+                //Debug.Log(testObjects[0].rect);
                 testObjects.RemoveAt(0);
             }
         }
@@ -93,12 +102,12 @@ public class DungeonMapGenerator : MonoBehaviour
         {
             foreach (BinNode node in _packer.packedNodes)
             {
-                Gizmos.color = node.obj.color;
-                Gizmos.DrawCube(new Vector3(node.rect.x + node.obj.rect.width / 2, 1, node.rect.y + node.obj.rect.height / 2), new Vector3(node.obj.rect.width, 1, node.obj.rect.height));
                 if (node.nodes[0].obj == null)
                     DrawNodeRect(node.nodes[0].rect, node.obj.color);
                 if (node.nodes[1].obj == null)
                     DrawNodeRect(node.nodes[1].rect, node.obj.color);
+                Gizmos.color = node.obj.color;
+                Gizmos.DrawCube(new Vector3(node.rect.x + node.obj.rect.width / 2, 1, node.rect.y + node.obj.rect.height / 2), new Vector3(node.obj.rect.width, 1, node.obj.rect.height));
             }
         }
 #endif
@@ -110,6 +119,5 @@ public class DungeonMapGenerator : MonoBehaviour
         Debug.DrawLine(new Vector3(rect.x, 0, rect.y + rect.height), new Vector3(rect.x + rect.width, 0, rect.y + rect.height), color);
         Debug.DrawLine(new Vector3(rect.x, 0, rect.y), new Vector3(rect.x + rect.width, 0, rect.y), color);
         Debug.DrawLine(new Vector3(rect.x + rect.width, 0, rect.y), new Vector3(rect.x + rect.width, 0, rect.y + rect.height), color);
-
     }
 }
