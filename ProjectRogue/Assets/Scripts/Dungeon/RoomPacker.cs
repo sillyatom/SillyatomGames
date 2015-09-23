@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public enum PackType : int { LEFT_ALIGN, RIGHT_ALIGN, TOP_ALIGN, BOTTOM_ALIGN }
+
 public class PackingObject
 {
     public int id;
@@ -20,48 +22,57 @@ public class BinNode
     public BinNode parent;
     public Rect rect;
     public PackingObject obj;
-    public bool isPackedRight;
 
-    public BinNode(PackingObject obj, BinNode parent, Rect rect, bool isRightNode)
+    public BinNode(PackingObject obj, BinNode parent, Rect rect)
     {
         this.nodes = new BinNode[2];
         this.parent = parent;
         this.obj = obj;
         this.rect = rect;
-        this.isPackedRight = isRightNode;
     }
 
-    public bool Grow(Rect rect)
+    public bool CanGrow(Rect rect, int maxPackerWidth, int maxPackerHeight)
     {
-        this.rect.width += rect.width;
-        this.rect.height += rect.height;
-        return true;
+        return (this.rect.x + rect.width <= maxPackerWidth && this.rect.y + rect.height <= maxPackerHeight);
     }
 
-    public bool CanGrow(Rect rect, int maxPackWidth, int maxPackHeight)
+    public bool SetObject(PackingObject obj, PackType packType)
     {
-        return (this.rect.x + rect.width <= maxPackWidth && this.rect.y + rect.height <= maxPackHeight);
-    }
-
-    public bool SetObject(PackingObject obj)
-    {
-        Debug.Assert((this.nodes[0] == null && this.nodes[1] == null));
-
         this.obj = obj;
-        this.nodes[0] = new BinNode(null, this, new Rect(
-                                                         rect.x + this.obj.rect.width
-                                                       , rect.y
-                                                       , rect.width - obj.rect.width
-                                                       , obj.rect.height
-                                                        ), true);
-        this.nodes[1] = new BinNode(null, this, new Rect(
-                                                     rect.x
-                                                   , rect.y + this.obj.rect.height
-                                                   , rect.width
-                                                   , rect.height - obj.rect.height
-                                                    ), false);
-        rect.width = obj.rect.width;
-        rect.height = obj.rect.height;
+
+        if (packType == PackType.LEFT_ALIGN)
+        {
+
+            this.nodes[0] = new BinNode(null, this, new Rect(
+                                                             rect.x + this.obj.rect.width
+                                                           , rect.y
+                                                           , rect.width - obj.rect.width
+                                                           , obj.rect.height
+                                                            ));
+            this.nodes[1] = new BinNode(null, this, new Rect(
+                                                         rect.x
+                                                       , rect.y + this.obj.rect.height
+                                                       , rect.width
+                                                       , rect.height - obj.rect.height
+                                                        ));
+        }
+        else if (packType == PackType.RIGHT_ALIGN)
+        {
+
+            this.nodes[0] = new BinNode(null, this, new Rect(
+                                                             rect.x
+                                                           , rect.y
+                                                           , rect.width - obj.rect.width
+                                                           , obj.rect.height
+                                                            ));
+            this.nodes[1] = new BinNode(null, this, new Rect(
+                                                         rect.x
+                                                       , rect.y + this.obj.rect.height
+                                                       , rect.width
+                                                       , rect.height - obj.rect.height
+                                                        ));
+            this.rect.x = this.rect.x + this.rect.width - obj.rect.width;
+        }
 
         return true;
     }
@@ -79,6 +90,7 @@ public class RoomPacker
 
     public int maxPackWidth { get; set; }
     public int maxPackHeight { get; set; }
+    public PackType packType { get; set; }
 
     public List<BinNode> packedNodes
     {
@@ -86,109 +98,13 @@ public class RoomPacker
         set { _packedNodes = value; }
     }
 
-    public float width { get; set; }
-    public float height { get; set; }
-
-    public RoomPacker(int width, int height, int maxWidth, int maxHeight)
+    public RoomPacker(int x, int y, int maxWidth, int maxHeight, PackType type = PackType.LEFT_ALIGN)
     {
         maxPackWidth = maxWidth;
         maxPackHeight = maxHeight;
-
+        packType = type;
         packedNodes = new List<BinNode>();
-        _root = CreateNode(null, new Rect(0, 0, width, height), false);
-    }
-
-    private void UpdateOverlappingRect(BinNode currNode, ref Rect rect)
-    {
-        if (currNode.obj != null)
-        {
-            UpdateOverlappingRect(currNode.nodes[0], ref rect);
-        }
-
-        adjustRectToAvoidIntersection(ref currNode.rect, ref rect, (currNode.obj != null));
-
-        if (currNode.obj != null)
-        {
-            UpdateOverlappingRect(currNode.nodes[1], ref rect);
-        }
-    }
-
-    private void UpdateOverlappingRect(ref Rect rect)
-    {
-        UpdateOverlappingRect(_root, ref rect);
-    }
-
-    private int CheckRectPosition(Rect rect1, Rect rect2)
-    {
-        if ((!rect2.Contains(new Vector2(rect1.x, rect1.y)) || !rect2.Contains(new Vector2(rect1.width, rect1.y))))
-        {
-            if (rect1.x <= rect2.x)
-            {
-                return 1;
-            }
-            else if (rect1.x > rect2.x)
-            {
-                return 2;
-            }
-        }
-        if (rect1.y <= rect2.y)
-        {
-            return 3;
-        }
-        else if (rect1.y > rect2.y)
-        {
-            return 4;
-        }
-        return 0;
-    }
-
-    private void adjustRectToAvoidIntersection(ref Rect otherRect, ref Rect currentRect, bool hasObject = false)
-    {
-        float delWidth = 0;
-        float delHeight = 0;
-
-        if (otherRect.GetHashCode() != currentRect.GetHashCode() && otherRect.Overlaps(currentRect))
-        {
-            // if overlapping other objects
-            if (hasObject)
-            {
-                currentRect.width = currentRect.height = 0;
-            }
-            //if overlapping other rects
-            else
-            {
-                switch (CheckRectPosition(otherRect, currentRect))
-                {
-                    case 0:
-                        break;
-
-                    case 1:
-                        delWidth = (otherRect.x + otherRect.width - currentRect.x);
-                        otherRect.width -= delWidth;
-                        break;
-
-                    case 2:
-                        delWidth = (currentRect.x + currentRect.width - otherRect.x);
-                        otherRect.x += delWidth;
-                        otherRect.width -= delWidth;
-                        break;
-
-                    case 3:
-                        delHeight = (otherRect.y + otherRect.height - currentRect.y);
-                        otherRect.height -= delHeight;
-                        break;
-
-                    case 4:
-                        otherRect.height = 0;
-                        break;
-                }
-            }
-
-            if (otherRect.width < 0)
-                otherRect.width = 0;
-            if (otherRect.height < 0)
-                otherRect.height = 0;
-        }
+        _root = CreateNode(null, new Rect(x, y, maxPackWidth, maxPackHeight));
     }
 
     private bool Add(PackingObject obj, BinNode currNode)
@@ -202,33 +118,15 @@ public class RoomPacker
         }
         else if (currNode.obj == null && currNode.CanPack(obj.rect))
         {
-            currNode.SetObject(obj);
-            UpdateOverlappingRect(ref currNode.nodes[1].rect);
-            return true;
+            return currNode.SetObject(obj, packType);
         }
 
         return false;
     }
 
-    private bool Grow(BinNode currNode, Rect rect)
+    private BinNode CreateNode(PackingObject obj, Rect rect)
     {
-        if (currNode.obj != null)
-        {
-            if (Grow(currNode.nodes[0], rect) || Grow(currNode.nodes[1], rect))
-            {
-                return true;
-            }
-        }
-        else if (currNode.obj == null && currNode.CanGrow(rect, maxPackWidth, maxPackHeight))
-        {
-            return currNode.Grow(rect);
-        }
-        return false;
-    }
-
-    private BinNode CreateNode(PackingObject obj, Rect rect, bool isRightNode)
-    {
-        return new BinNode(obj, null, rect, isRightNode);
+        return new BinNode(obj, null, rect);
     }
 
     private void PackNode(BinNode currNode)
@@ -263,40 +161,6 @@ public class RoomPacker
             {
 
             }
-            else
-            {
-                //if not able to pack, grow the bin until it can pack the obj
-                do
-                {
-                    if (Grow(_root, obj.rect))
-                    {
-
-                    }
-                    else
-                    {
-                        Debug.Log("Failed To Grow");
-                    }
-                }
-                while (!Add(obj, _root));
-            }
-        }
-    }
-
-    public void StepPacking(PackingObject obj)
-    {
-        //pack object
-        if (Add(obj, _root))
-        {
-
-        }
-        else
-        {
-            //if not able to pack, grow the bin until it can pack the obj
-            do
-            {
-                Grow(_root, obj.rect);
-            }
-            while (!Add(obj, _root));
         }
     }
 }

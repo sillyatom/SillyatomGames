@@ -3,18 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pack
-{
-    public Rect rect { get; set; }
-    public Color color { get; set; }
-    public Pack(Rect rect, Color color)
-    {
-        this.rect = rect;
-        this.color = color;
-    }
-}
-
-public class DungeonMapGenerator : MonoBehaviour
+public class TestPacking : MonoBehaviour
 {
     private List<Pack> _packs;
 
@@ -30,12 +19,9 @@ public class DungeonMapGenerator : MonoBehaviour
 
     public int numOfPacks = 8;
 
-    private GameObject _floor;
-
     void Start()
     {
         _packs = new List<Pack>();
-        _floor = gameObject.transform.FindChild("Floor").gameObject;
 
         for (int i = 0; i < numOfPacks; i++)
         {
@@ -56,46 +42,6 @@ public class DungeonMapGenerator : MonoBehaviour
             room.generateMesh();
             room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
         }
-
-        Mesh floorMesh = _floor.GetComponent<MeshFilter>().mesh;
-        floorMesh.Clear();
-
-        Rect mapRect = GetMapRect();
-        CustomMesh floorMeshData = new CustomMesh(Mathf.CeilToInt(mapRect.width), Mathf.CeilToInt(mapRect.height), 50, borderSize);
-        floorMeshData.Generate();
-        floorMesh.vertices = floorMeshData.getVertices();
-        floorMesh.triangles = floorMeshData.getTriangles();
-        floorMesh.uv = floorMeshData.getUVs();
-
-        MeshCollider floorCollider = _floor.AddComponent<MeshCollider>();
-        floorCollider.sharedMesh = floorMesh;
-
-        _floor.transform.position = new Vector3(mapRect.x, 0, mapRect.y);
-    }
-
-    Rect GetMapRect()
-    {
-        Rect rect = new Rect(1000, 1000, 0, 0);
-        foreach (var pack in _packs)
-        {
-            if (pack.rect.x < rect.x)
-            {
-                rect.x = pack.rect.x;
-            }
-            if (pack.rect.y < rect.y)
-            {
-                rect.y = pack.rect.y;
-            }
-            if (pack.rect.x + pack.rect.width > rect.width)
-            {
-                rect.width = pack.rect.x + pack.rect.width;
-            }
-            if (pack.rect.y + pack.rect.height > rect.height)
-            {
-                rect.height = pack.rect.y + pack.rect.height;
-            }
-        }
-        return rect;
     }
 
     bool SteerSeparation()

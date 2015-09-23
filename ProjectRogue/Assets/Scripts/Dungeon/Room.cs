@@ -11,13 +11,15 @@ class Room
     public int borderSize { get; set; }
     public int wallHeight { get; set; }
 
+    private GameObject _ceiling;
     private Mesh _ceilingMesh;
+
+    private GameObject _floor;
     private Mesh _floorMesh;
+
+    private GameObject _wall;
     private Mesh _wallMesh;
 
-    private GameObject _ceiling;
-    private GameObject _floor;
-    private GameObject _wall;
 
     public RoomMesh meshData { get; set; }
 
@@ -75,6 +77,5 @@ class Room
 
         MeshCollider floorCollider = _floor.AddComponent<MeshCollider>();
         floorCollider.sharedMesh = _floorMesh;
-
     }
 }

@@ -20,7 +20,7 @@
     {
         _borderMesh = new RoomBorderMesh(width, height, quadSize, borderSize, wallHeight);
         _borderMesh.Generate();
-        _floorMesh = new FloorMesh(width, height, quadSize, borderSize, _borderMesh.getMap());
+        _floorMesh = new FloorMesh(width, height, 4, borderSize, _borderMesh.getMap());
         _floorMesh.Generate();
     }
 }
