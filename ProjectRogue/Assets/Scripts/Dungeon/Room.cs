@@ -60,6 +60,7 @@ class Room
         _ceilingMesh.triangles = meshData.roomBorderMesh.getTriangles();
         _ceilingMesh.uv = meshData.roomBorderMesh.getUVs();
         _ceilingMesh.colors32 = meshData.roomBorderMesh.getColors();
+        _ceilingMesh.RecalculateNormals();
 
         MeshCollider collider = _ceiling.AddComponent<MeshCollider>();
         collider.sharedMesh = _ceilingMesh;
@@ -67,6 +68,7 @@ class Room
         _wallMesh.vertices = meshData.roomBorderMesh.getWallVertices();
         _wallMesh.triangles = meshData.roomBorderMesh.getWallTriangles();
         _wallMesh.uv = meshData.roomBorderMesh.getWallUVs();
+        _wallMesh.RecalculateNormals();
 
         MeshCollider wallCollider = _wall.AddComponent<MeshCollider>();
         wallCollider.sharedMesh = _wallMesh;
@@ -74,6 +76,7 @@ class Room
         _floorMesh.vertices = meshData.floorMesh.getVertices();
         _floorMesh.triangles = meshData.floorMesh.getTriangles();
         _floorMesh.uv = meshData.floorMesh.getUVs();
+        _floorMesh.RecalculateNormals();
 
         MeshCollider floorCollider = _floor.AddComponent<MeshCollider>();
         floorCollider.sharedMesh = _floorMesh;

@@ -1,27 +1,40 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class TestPacking : MonoBehaviour
+public class Pack
+{
+    public Rect rect { get; set; }
+    public Color color { get; set; }
+    public Pack connectedPack { get; set; }
+    public float connectedDistance { get; set; }
+    public int regionId { get; set; }
+    public bool canDrawDebug { get; set; }
+
+    public Pack(Rect rect, Color color)
+    {
+        this.regionId = -1;
+        this.rect = rect;
+        this.color = color;
+        this.connectedPack = null;
+        this.connectedDistance = 0.0f;
+        this.canDrawDebug = false;
+    }
+}
+
+public class SteerRoomPacker
 {
     private List<Pack> _packs;
 
-    public int minPackWidth = 30;
-    public int maxPackWidth = 200;
+    public List<Pack> packs
+    {
+        get { return _packs; }
+    }
 
-    public int minPackHeight = 30;
-    public int maxPackHeight = 200;
-
-    public int quadSize;
-    public int borderSize;
-    public int wallHeight;
-
-    public int numOfPacks = 8;
-
-    void Start()
+    public SteerRoomPacker(int numPacks, int minPackWidth, int minPackHeight, int maxPackWidth, int maxPackHeight)
     {
         _packs = new List<Pack>();
 
-        for (int i = 0; i < numOfPacks; i++)
+        for (int i = 0; i < numPacks; i++)
         {
             _packs.Add(new Pack(new Rect(0, 0,
                 Random.Range(minPackWidth, maxPackWidth),
@@ -33,53 +46,35 @@ public class TestPacking : MonoBehaviour
         }
 
         while (!SteerSeparation()) { }
+    }
 
+    public void ConnectRooms()
+    {
+    }
+
+    public Rect GetMapRect()
+    {
+        Rect rect = new Rect(1000, 1000, 0, 0);
         foreach (var pack in _packs)
         {
-            foreach (var item in _packs)
+            if (pack.rect.x < rect.x)
             {
-                if (pack.GetHashCode() != item.GetHashCode())
-                {
-                    float distance = Vector2.Distance(pack.rect.center, item.rect.center);
-
-                    if (pack.connectedPack == null || pack.connectedDistance > distance)
-                    {
-                        if (item.connectedPack == null || pack.GetHashCode() != item.connectedPack.GetHashCode())
-                        {
-                            pack.connectedDistance = distance;
-                            pack.connectedPack = item;
-                        }
-                    }
-                }
+                rect.x = pack.rect.x;
+            }
+            if (pack.rect.y < rect.y)
+            {
+                rect.y = pack.rect.y;
+            }
+            if (pack.rect.x + pack.rect.width > rect.width)
+            {
+                rect.width = pack.rect.x + pack.rect.width;
+            }
+            if (pack.rect.y + pack.rect.height > rect.height)
+            {
+                rect.height = pack.rect.y + pack.rect.height;
             }
         }
-
-        List<List<Pack>> _regions = new List<List<Pack>>();
-        List<Pack> checkedPacks = new List<Pack>();
-        int runningIndex = 0;
-        foreach (var pack in _packs)
-        {
-            if (pack.regionId == -1)
-            {
-                List<Pack> currentRegion = new List<Pack>();
-                Color color = new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f);
-                Pack iter = pack;
-
-                while (!checkedPacks.Contains(iter))
-                {
-                    currentRegion.Add(iter.connectedPack);
-                    currentRegion.Add(iter);
-
-                    checkedPacks.Add(iter);
-
-                    iter.regionId = runningIndex;
-                    iter.color = color;
-                    iter = iter.connectedPack;
-                }
-
-                _regions.Add(currentRegion);
-            }
-        }
+        return rect;
     }
 
     bool SteerSeparation()
@@ -97,9 +92,6 @@ public class TestPacking : MonoBehaviour
                         Rect rect2 = item.rect;
 
                         Rect geometricCenter = GetGeometricCenter(rect1, rect2);
-#if (DEBUG_DRAW)
-                        DrawNodeRect(geometricCenter, Color.red);
-#endif
                         pack.rect = Steer(rect1, geometricCenter);
                         item.rect = Steer(rect2, geometricCenter);
 
@@ -116,25 +108,6 @@ public class TestPacking : MonoBehaviour
         Vector2 dir = new Vector2(rect.center.x - geometricCenter.center.x, rect.center.y - geometricCenter.center.y);
         rect.center += dir * Time.deltaTime * 0.1f;
         return rect;
-    }
-
-    void OnDrawGizmos()
-    {
-        if (_packs == null) return;
-
-        foreach (var pack in _packs)
-        {
-            Gizmos.color = pack.color;
-            Gizmos.DrawCube(new Vector3(pack.rect.x + pack.rect.width / 2, 1, pack.rect.y + pack.rect.height / 2), new Vector3(pack.rect.width, 1, pack.rect.height));
-        }
-
-        foreach (var pack in _packs)
-        {
-            if (pack.connectedPack != null)
-            {
-                Debug.DrawLine(new Vector3(pack.rect.center.x, 1, pack.rect.center.y), new Vector3(pack.connectedPack.rect.center.x, 1, pack.connectedPack.rect.center.y), pack.color);
-            }
-        }
     }
 
     private Rect GetGeometricCenter(Rect rect1, Rect rect2)
@@ -199,13 +172,5 @@ public class TestPacking : MonoBehaviour
         }
 
         return rect;
-    }
-
-    void DrawNodeRect(Rect rect, Color color)
-    {
-        Debug.DrawLine(new Vector3(rect.x, 0, rect.y), new Vector3(rect.x, 0, rect.y + rect.height), color);
-        Debug.DrawLine(new Vector3(rect.x, 0, rect.y + rect.height), new Vector3(rect.x + rect.width, 0, rect.y + rect.height), color);
-        Debug.DrawLine(new Vector3(rect.x, 0, rect.y), new Vector3(rect.x + rect.width, 0, rect.y), color);
-        Debug.DrawLine(new Vector3(rect.x + rect.width, 0, rect.y), new Vector3(rect.x + rect.width, 0, rect.y + rect.height), color);
     }
 }
