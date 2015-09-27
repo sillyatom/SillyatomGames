@@ -9,6 +9,7 @@ public class Pack
     public float connectedDistance { get; set; }
     public int regionId { get; set; }
     public bool canDrawDebug { get; set; }
+    public bool isConnectedToMain { get; set; }
 
     public Pack(Rect rect, Color color)
     {
@@ -17,6 +18,7 @@ public class Pack
         this.color = color;
         this.connectedPack = null;
         this.connectedDistance = 0.0f;
+        this.isConnectedToMain = false;
         this.canDrawDebug = false;
     }
 }
@@ -46,6 +48,7 @@ public class SteerRoomPacker
         }
 
         while (!SteerSeparation()) { }
+
     }
 
     public void ConnectRooms()

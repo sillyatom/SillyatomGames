@@ -16,10 +16,19 @@ public class TestPacking : MonoBehaviour
     public int wallHeight;
 
     public int numOfPacks = 8;
+    Dictionary<int, List<Pack>> _regions;
+    Dictionary<int, List<Pack>> _connectedRegions;
+    Dictionary<int, List<int>> _connectedIds;
+    Dictionary<int, List<int>> _groupIds;
 
     void Start()
     {
         _packs = new List<Pack>();
+        _regions = new Dictionary<int, List<Pack>>();
+        _connectedRegions = new Dictionary<int, List<Pack>>();
+        _connectedIds = new Dictionary<int, List<int>>();
+        _groupIds = new Dictionary<int, List<int>>();
+
 
         for (int i = 0; i < numOfPacks; i++)
         {
@@ -32,6 +41,7 @@ public class TestPacking : MonoBehaviour
                 )));
         }
 
+        //Steer Separation for overlapping rect
         while (!SteerSeparation()) { }
 
         foreach (var pack in _packs)
@@ -44,7 +54,7 @@ public class TestPacking : MonoBehaviour
 
                     if (pack.connectedPack == null || pack.connectedDistance > distance)
                     {
-                        if (item.connectedPack == null || pack.GetHashCode() != item.connectedPack.GetHashCode())
+                        //if (item.connectedPack == null || pack.GetHashCode() != item.connectedPack.GetHashCode())
                         {
                             pack.connectedDistance = distance;
                             pack.connectedPack = item;
@@ -54,31 +64,161 @@ public class TestPacking : MonoBehaviour
             }
         }
 
-        List<List<Pack>> _regions = new List<List<Pack>>();
+        //Separate out into different regions, assign id
         List<Pack> checkedPacks = new List<Pack>();
         int runningIndex = 0;
         foreach (var pack in _packs)
         {
             if (pack.regionId == -1)
             {
-                List<Pack> currentRegion = new List<Pack>();
                 Color color = new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f);
                 Pack iter = pack;
 
-                while (!checkedPacks.Contains(iter))
+                _regions[runningIndex] = new List<Pack>();
+                while (iter != null && !checkedPacks.Contains(iter))
                 {
-                    currentRegion.Add(iter.connectedPack);
-                    currentRegion.Add(iter);
-
+                    _regions[runningIndex].Add(iter);
                     checkedPacks.Add(iter);
 
                     iter.regionId = runningIndex;
                     iter.color = color;
                     iter = iter.connectedPack;
                 }
-
-                _regions.Add(currentRegion);
+                ++runningIndex;
             }
+        }
+
+        //for each region
+        foreach (KeyValuePair<int, List<Pack>> iter in _regions)
+        {
+            List<Pack> region = _regions[iter.Key];
+            _connectedIds[region[0].regionId] = new List<int>();
+
+            //for each pack in every region
+            foreach (var pack in region)
+            {
+                foreach (KeyValuePair<int, List<Pack>> iter1 in _regions)
+                {
+                    List<Pack> regionToCheck = _regions[iter1.Key];
+                    if (regionToCheck != region)
+                    {
+                        //if connected pack is in another region
+                        if (regionToCheck.Contains(pack.connectedPack))
+                        {
+                            if (!_connectedIds[pack.regionId].Contains(regionToCheck[0].regionId))
+                            {
+                                _connectedIds[pack.regionId].Add(regionToCheck[0].regionId);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
+        //{
+        //    foreach (var id in iter.Value)
+        //    {
+        //        Debug.Log(" Region " + iter.Key + " Connected to " + id);
+        //    }
+        //}
+
+        foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
+        {
+            foreach (var id in iter.Value)
+            {
+                //Debug.Log(" Region " + iter.Key + " Connected to " + id);
+
+                //before adding
+                //is id exists?
+                //add iter.key to that id
+                //is id in any other index?
+                //if iter.key != containing index && !contains
+                //add iter.key to that id
+                //Create index
+
+                if (_groupIds.ContainsKey(id))
+                {
+                    if (!_groupIds[id].Contains(iter.Key))
+                    {
+                        _groupIds[id].Add(iter.Key);
+                    }
+                }
+                else if (GetContainingId(id) != -1)
+                {
+                    if (iter.Key != GetContainingId(id) && !_groupIds[GetContainingId(id)].Contains(iter.Key))
+                    {
+                        _groupIds[GetContainingId(id)].Add(iter.Key);
+                    }
+                }
+                else
+                {
+                    if (!_groupIds.ContainsKey(iter.Key))
+                    {
+                        _groupIds[iter.Key] = new List<int>();
+                        _groupIds[iter.Key].Add(id);
+                    }
+                }
+            }
+        }
+
+        //Copy Regions
+        foreach (KeyValuePair<int, List<int>> iter in _groupIds)
+        {
+            foreach (var id in iter.Value)
+            {
+                CopyRegions(id, iter.Key);
+            }
+        }
+
+        Debug.Log("Region Count : " + _regions.Count);
+    }
+
+    private void CopyRegions(int from, int to)
+    {
+        foreach (var pack in _regions[from])
+        {
+            if (!_regions[to].Contains(pack))
+            {
+                _regions[to].Add(pack);
+                pack.color = _regions[to][0].color;
+                pack.regionId = _regions[to][0].regionId;
+            }
+        }
+        _regions.Remove(from);
+    }
+
+    private int GetContainingId(int id)
+    {
+        foreach (KeyValuePair<int, List<int>> iter in _groupIds)
+        {
+            if (iter.Value.Contains(id))
+            {
+                return iter.Key;
+            }
+        }
+        return -1;
+    }
+
+    private List<int> GetConnectedIdsForKey(int key)
+    {
+        List<int> ids = new List<int>();
+        foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
+        {
+            if (iter.Value.Contains(key))
+            {
+                ids.Add(iter.Key);
+            }
+        }
+        return ids;
+    }
+
+    private void ConnectToMain(List<Pack> region)
+    {
+        foreach (var pack in region)
+        {
+            pack.isConnectedToMain = true;
         }
     }
 
@@ -121,13 +261,19 @@ public class TestPacking : MonoBehaviour
     void OnDrawGizmos()
     {
         if (_packs == null) return;
-
+        foreach (var pack in _packs)
+        {
+            UnityEditor.Handles.BeginGUI();
+            UnityEditor.Handles.color = Color.black;
+            UnityEditor.Handles.Label(new Vector3(pack.rect.center.x, 50, pack.rect.center.y), pack.regionId.ToString());
+            UnityEditor.Handles.EndGUI();
+        }
         foreach (var pack in _packs)
         {
             Gizmos.color = pack.color;
             Gizmos.DrawCube(new Vector3(pack.rect.x + pack.rect.width / 2, 1, pack.rect.y + pack.rect.height / 2), new Vector3(pack.rect.width, 1, pack.rect.height));
+            DrawNodeRect(pack.rect, Color.black);
         }
-
         foreach (var pack in _packs)
         {
             if (pack.connectedPack != null)
