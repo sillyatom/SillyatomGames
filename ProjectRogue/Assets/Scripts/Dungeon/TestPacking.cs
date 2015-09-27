@@ -17,17 +17,18 @@ public class TestPacking : MonoBehaviour
 
     public int numOfPacks = 8;
     Dictionary<int, List<Pack>> _regions;
-    Dictionary<int, List<Pack>> _connectedRegions;
-    Dictionary<int, List<int>> _connectedIds;
     Dictionary<int, List<int>> _groupIds;
+    List<RegionConnector> _connectionData;
 
     void Start()
     {
         _packs = new List<Pack>();
         _regions = new Dictionary<int, List<Pack>>();
-        _connectedRegions = new Dictionary<int, List<Pack>>();
-        _connectedIds = new Dictionary<int, List<int>>();
         _groupIds = new Dictionary<int, List<int>>();
+        _connectionData = new List<RegionConnector>();
+
+        Dictionary<int, List<Pack>> _connectedRegions = new Dictionary<int, List<Pack>>();
+        Dictionary<int, List<int>> _connectedIds = new Dictionary<int, List<int>>();
 
 
         for (int i = 0; i < numOfPacks; i++)
@@ -116,20 +117,10 @@ public class TestPacking : MonoBehaviour
             }
         }
 
-        //foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
-        //{
-        //    foreach (var id in iter.Value)
-        //    {
-        //        Debug.Log(" Region " + iter.Key + " Connected to " + id);
-        //    }
-        //}
-
         foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
         {
             foreach (var id in iter.Value)
             {
-                //Debug.Log(" Region " + iter.Key + " Connected to " + id);
-
                 //before adding
                 //is id exists?
                 //add iter.key to that id
@@ -138,6 +129,8 @@ public class TestPacking : MonoBehaviour
                 //add iter.key to that id
                 //Create index
 
+                int connectedId = GetContainingId(id);
+
                 if (_groupIds.ContainsKey(id))
                 {
                     if (!_groupIds[id].Contains(iter.Key))
@@ -145,11 +138,11 @@ public class TestPacking : MonoBehaviour
                         _groupIds[id].Add(iter.Key);
                     }
                 }
-                else if (GetContainingId(id) != -1)
+                else if (connectedId != -1)
                 {
-                    if (iter.Key != GetContainingId(id) && !_groupIds[GetContainingId(id)].Contains(iter.Key))
+                    if (iter.Key != connectedId && !_groupIds[connectedId].Contains(iter.Key))
                     {
-                        _groupIds[GetContainingId(id)].Add(iter.Key);
+                        _groupIds[connectedId].Add(iter.Key);
                     }
                 }
                 else
@@ -172,7 +165,58 @@ public class TestPacking : MonoBehaviour
             }
         }
 
+        //Connect Regions
+        foreach (KeyValuePair<int, List<Pack>> iter in _regions)
+        {
+            float runningDistance = -1.0f;
+            Pack packA = null; Pack packB = null;
+
+            foreach (KeyValuePair<int, List<Pack>> iiter in _regions)
+            {
+                if (iter.Key != iiter.Key)
+                {
+                    foreach (var pack in iter.Value)
+                    {
+                        foreach (var iPack in iiter.Value)
+                        {
+                            float distance = Vector2.Distance(pack.rect.center, iPack.rect.center);
+                            if (runningDistance == -1 || distance < runningDistance)
+                            {
+                                runningDistance = distance;
+                                packA = pack;
+                                packB = iPack;
+                            }
+                        }
+                    }
+
+                }
+            }
+            if (!IsRegionConnected(packA.regionId, packB.regionId))
+            {
+                _connectionData.Add(new RegionConnector(packA, packB));
+            }
+        }
         Debug.Log("Region Count : " + _regions.Count);
+
+        foreach (var connector in _connectionData)
+        {
+            Debug.Log("Connecting Region " + connector.packA.regionId + " with " + connector.packB.regionId);
+        }
+    }
+
+    private bool IsRegionConnected(int id1, int id2)
+    {
+        foreach (var connector in _connectionData)
+        {
+            if (
+                (connector.packA.regionId == id1 && connector.packB.regionId == id2)
+                || (connector.packA.regionId == id2 && connector.packB.regionId == id1)
+                )
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void CopyRegions(int from, int to)
@@ -199,27 +243,6 @@ public class TestPacking : MonoBehaviour
             }
         }
         return -1;
-    }
-
-    private List<int> GetConnectedIdsForKey(int key)
-    {
-        List<int> ids = new List<int>();
-        foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
-        {
-            if (iter.Value.Contains(key))
-            {
-                ids.Add(iter.Key);
-            }
-        }
-        return ids;
-    }
-
-    private void ConnectToMain(List<Pack> region)
-    {
-        foreach (var pack in region)
-        {
-            pack.isConnectedToMain = true;
-        }
     }
 
     bool SteerSeparation()
@@ -280,6 +303,10 @@ public class TestPacking : MonoBehaviour
             {
                 Debug.DrawLine(new Vector3(pack.rect.center.x, 1, pack.rect.center.y), new Vector3(pack.connectedPack.rect.center.x, 1, pack.connectedPack.rect.center.y), pack.color);
             }
+        }
+        foreach (var connector in _connectionData)
+        {
+            Debug.DrawLine(new Vector3(connector.packA.rect.center.x, 1, connector.packA.rect.center.y), new Vector3(connector.packB.rect.center.x, 1, connector.packB.rect.center.y), Color.red);
         }
     }
 
