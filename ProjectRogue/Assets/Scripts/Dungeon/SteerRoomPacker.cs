@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Pack
 {
+    public static int runningId = 0;
     public Rect rect { get; set; }
     public Color color { get; set; }
     public Pack connectedPack { get; set; }
     public float connectedDistance { get; set; }
     public int regionId { get; set; }
     public bool canDrawDebug { get; set; }
+    public int uniqueId { get; set; }
 
     public Pack(Rect rect, Color color)
     {
@@ -18,6 +20,7 @@ public class Pack
         this.connectedPack = null;
         this.connectedDistance = 0.0f;
         this.canDrawDebug = false;
+        this.uniqueId = runningId++;
     }
 }
 

@@ -16,19 +16,17 @@ public class TestPacking : MonoBehaviour
     public int wallHeight;
 
     public int numOfPacks = 8;
+
     Dictionary<int, List<Pack>> _regions;
-    Dictionary<int, List<int>> _groupIds;
-    List<RegionConnector> _connectionData;
+
+    List<RegionConnector> _connectionData = new List<RegionConnector>();
 
     void Start()
     {
         _packs = new List<Pack>();
         _regions = new Dictionary<int, List<Pack>>();
-        _groupIds = new Dictionary<int, List<int>>();
-        _connectionData = new List<RegionConnector>();
 
-        Dictionary<int, List<Pack>> _connectedRegions = new Dictionary<int, List<Pack>>();
-        Dictionary<int, List<int>> _connectedIds = new Dictionary<int, List<int>>();
+        Dictionary<int, List<int>> connectedIds = new Dictionary<int, List<int>>();
 
 
         for (int i = 0; i < numOfPacks; i++)
@@ -93,7 +91,7 @@ public class TestPacking : MonoBehaviour
         foreach (KeyValuePair<int, List<Pack>> iter in _regions)
         {
             List<Pack> region = _regions[iter.Key];
-            _connectedIds[region[0].regionId] = new List<int>();
+            connectedIds[region[0].regionId] = new List<int>();
 
             //for each pack in every region
             foreach (var pack in region)
@@ -106,9 +104,9 @@ public class TestPacking : MonoBehaviour
                         //if connected pack is in another region
                         if (regionToCheck.Contains(pack.connectedPack))
                         {
-                            if (!_connectedIds[pack.regionId].Contains(regionToCheck[0].regionId))
+                            if (!connectedIds[pack.regionId].Contains(regionToCheck[0].regionId))
                             {
-                                _connectedIds[pack.regionId].Add(regionToCheck[0].regionId);
+                                connectedIds[pack.regionId].Add(regionToCheck[0].regionId);
                                 break;
                             }
                         }
@@ -117,51 +115,24 @@ public class TestPacking : MonoBehaviour
             }
         }
 
-        foreach (KeyValuePair<int, List<int>> iter in _connectedIds)
+        List<BinaryTree> regionConnectingTree = new List<BinaryTree>();
+
+        foreach (KeyValuePair<int, List<int>> iter in connectedIds)
         {
             foreach (var id in iter.Value)
             {
-                //before adding
-                //is id exists?
-                //add iter.key to that id
-                //is id in any other index?
-                //if iter.key != containing index && !contains
-                //add iter.key to that id
-                //Create index
-
-                int connectedId = GetContainingId(id);
-
-                if (_groupIds.ContainsKey(id))
-                {
-                    if (!_groupIds[id].Contains(iter.Key))
-                    {
-                        _groupIds[id].Add(iter.Key);
-                    }
-                }
-                else if (connectedId != -1)
-                {
-                    if (iter.Key != connectedId && !_groupIds[connectedId].Contains(iter.Key))
-                    {
-                        _groupIds[connectedId].Add(iter.Key);
-                    }
-                }
-                else
-                {
-                    if (!_groupIds.ContainsKey(iter.Key))
-                    {
-                        _groupIds[iter.Key] = new List<int>();
-                        _groupIds[iter.Key].Add(id);
-                    }
-                }
+                AddToTree(iter.Key, id, ref regionConnectingTree);
             }
         }
 
-        //Copy Regions
-        foreach (KeyValuePair<int, List<int>> iter in _groupIds)
+        foreach (var tree in regionConnectingTree)
         {
-            foreach (var id in iter.Value)
+            tree.PrintTree();
+
+            int length = tree.data.Count;
+            for (int index = 1; index < length; index++)
             {
-                CopyRegions(id, iter.Key);
+                CopyRegions(tree.data[index], tree.data[0]);
             }
         }
 
@@ -196,11 +167,34 @@ public class TestPacking : MonoBehaviour
                 _connectionData.Add(new RegionConnector(packA, packB));
             }
         }
-        Debug.Log("Region Count : " + _regions.Count);
+        //Debug.Log("Region Count : " + _regions.Count);
 
-        foreach (var connector in _connectionData)
+        //foreach (var connector in _connectionData)
+        //{
+        //    Debug.Log("Connecting Region " + connector.packA.regionId + " with " + connector.packB.regionId);
+        //}
+
+        List<BinaryTree> _packTrees = new List<BinaryTree>();
+        foreach (KeyValuePair<int, List<Pack>> iter in _regions)
         {
-            Debug.Log("Connecting Region " + connector.packA.regionId + " with " + connector.packB.regionId);
+            foreach (var pack in iter.Value)
+            {
+                //if (!IsConnectionExists(pack.uniqueId, pack.connectedPack.uniqueId, _packTrees))
+                {
+                    AddToTree(pack.uniqueId, pack.connectedPack.uniqueId, ref _packTrees);
+                }
+            }
+        }
+
+        foreach (var tree in _packTrees)
+        {
+            tree.PrintTree();
+            Debug.Log("------------------ Printing Tree -------------------");
+            int length = tree.data.Count;
+            for (int index = 0; index < length; index++)
+            {
+                Debug.Log(" Pack Id : " + tree.data[index]);
+            }
         }
     }
 
@@ -219,6 +213,38 @@ public class TestPacking : MonoBehaviour
         return false;
     }
 
+    private bool IsConnectionExists(int connectingIndex, int connectedTo, List<BinaryTree> trees)
+    {
+        foreach (var tree in trees)
+        {
+            if (tree.IsConnectionExists(connectingIndex, connectedTo))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void AddToTree(int connectingIndex, int connectedTo, ref List<BinaryTree> trees)
+    {
+        bool added = false;
+        foreach (var tree in trees)
+        {
+            added = tree.Connect(connectingIndex, connectedTo);
+
+            if (added)
+            {
+                break;
+            }
+        }
+        if (!added)
+        {
+            BinaryTree tree = new BinaryTree(4);
+            tree.Connect(connectingIndex, connectedTo);
+            trees.Add(tree);
+        }
+    }
+
     private void CopyRegions(int from, int to)
     {
         foreach (var pack in _regions[from])
@@ -231,18 +257,6 @@ public class TestPacking : MonoBehaviour
             }
         }
         _regions.Remove(from);
-    }
-
-    private int GetContainingId(int id)
-    {
-        foreach (KeyValuePair<int, List<int>> iter in _groupIds)
-        {
-            if (iter.Value.Contains(id))
-            {
-                return iter.Key;
-            }
-        }
-        return -1;
     }
 
     bool SteerSeparation()
@@ -288,7 +302,7 @@ public class TestPacking : MonoBehaviour
         {
             UnityEditor.Handles.BeginGUI();
             UnityEditor.Handles.color = Color.black;
-            UnityEditor.Handles.Label(new Vector3(pack.rect.center.x, 50, pack.rect.center.y), pack.regionId.ToString());
+            UnityEditor.Handles.Label(new Vector3(pack.rect.center.x, 50, pack.rect.center.y), pack.regionId.ToString() + "-" + pack.uniqueId);
             UnityEditor.Handles.EndGUI();
         }
         foreach (var pack in _packs)

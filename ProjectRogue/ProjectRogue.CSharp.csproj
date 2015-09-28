@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\Manager\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Manager\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
+    <Compile Include="Assets\Scripts\Utility\BinaryTree.cs" />
     <Compile Include="Assets\Scripts\Utility\TVec2.cs" />
     <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />
