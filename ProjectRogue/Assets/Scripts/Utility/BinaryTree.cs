@@ -32,7 +32,7 @@ public class BinaryTree
     }
 
 
-    public BinaryTree(int numOfSiblings = 2)
+    public BinaryTree(int numOfSiblings)
     {
         _root = null;
         _data = new List<int>();
