@@ -115,13 +115,13 @@ public class TestPacking : MonoBehaviour
             }
         }
 
-        List<BinaryTree> regionConnectingTree = new List<BinaryTree>();
+        List<BinaryTree<int>> regionConnectingTree = new List<BinaryTree<int>>();
 
         foreach (KeyValuePair<int, List<int>> iter in connectedIds)
         {
             foreach (var id in iter.Value)
             {
-                AddToTree(iter.Key, id, ref regionConnectingTree);
+                AddToTree<int>(iter.Key, id, ref regionConnectingTree);
             }
         }
 
@@ -167,35 +167,8 @@ public class TestPacking : MonoBehaviour
                 _connectionData.Add(new RegionConnector(packA, packB));
             }
         }
-        //Debug.Log("Region Count : " + _regions.Count);
 
-        //foreach (var connector in _connectionData)
-        //{
-        //    Debug.Log("Connecting Region " + connector.packA.regionId + " with " + connector.packB.regionId);
-        //}
-
-        List<BinaryTree> _packTrees = new List<BinaryTree>();
-        foreach (KeyValuePair<int, List<Pack>> iter in _regions)
-        {
-            foreach (var pack in iter.Value)
-            {
-                //if (!IsConnectionExists(pack.uniqueId, pack.connectedPack.uniqueId, _packTrees))
-                {
-                    AddToTree(pack.uniqueId, pack.connectedPack.uniqueId, ref _packTrees);
-                }
-            }
-        }
-
-        foreach (var tree in _packTrees)
-        {
-            tree.PrintTree();
-            Debug.Log("------------------ Printing Tree -------------------");
-            int length = tree.data.Count;
-            for (int index = 0; index < length; index++)
-            {
-                Debug.Log(" Pack Id : " + tree.data[index]);
-            }
-        }
+        Debug.Log("Region Count : " + _regions.Count);
     }
 
     private bool IsRegionConnected(int id1, int id2)
@@ -213,7 +186,7 @@ public class TestPacking : MonoBehaviour
         return false;
     }
 
-    private bool IsConnectionExists(int connectingIndex, int connectedTo, List<BinaryTree> trees)
+    private bool IsConnectionExists<T>(T connectingIndex, T connectedTo, List<BinaryTree<T>> trees)
     {
         foreach (var tree in trees)
         {
@@ -225,7 +198,7 @@ public class TestPacking : MonoBehaviour
         return false;
     }
 
-    private void AddToTree(int connectingIndex, int connectedTo, ref List<BinaryTree> trees)
+    private void AddToTree<T>(T connectingIndex, T connectedTo, ref List<BinaryTree<T>> trees)
     {
         bool added = false;
         foreach (var tree in trees)
@@ -239,7 +212,7 @@ public class TestPacking : MonoBehaviour
         }
         if (!added)
         {
-            BinaryTree tree = new BinaryTree(4);
+            BinaryTree<T> tree = new BinaryTree<T>(4);
             tree.Connect(connectingIndex, connectedTo);
             trees.Add(tree);
         }

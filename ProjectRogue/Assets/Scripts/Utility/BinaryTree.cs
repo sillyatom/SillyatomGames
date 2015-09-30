@@ -1,54 +1,64 @@
 ﻿using System.Collections.Generic;
 
-public class BinaryTreeNode
+public class BinaryTreeNode<T>
 {
-    public BinaryTreeNode[] nodes;
-    private int _data;
+    public BinaryTreeNode<T>[] nodes;
+    private T _data;
 
-    public int data
+    public T data
     {
         get { return _data; }
         set { _data = value; }
     }
 
-    public BinaryTreeNode(int data, int numNodes)
+    public BinaryTreeNode(T data, int numNodes)
     {
         this.data = data;
-        this.nodes = new BinaryTreeNode[numNodes];
+        this.nodes = new BinaryTreeNode<T>[numNodes];
     }
 }
 
-public class BinaryTree
+public class BinaryTree<T> : IEqualityComparer<T>
 {
     public int numOfSiblings { get; set; }
 
-    private BinaryTreeNode _root;
-    private List<int> _data;
+    private BinaryTreeNode<T> _root;
+    private List<T> _data;
 
-    public List<int> data
+    public List<T> data
     {
         get { return _data; }
         set { _data = value; }
+    }
+
+    public bool Equals(T data1, T data2)
+    {
+        return data1.GetHashCode() == data2.GetHashCode();
+    }
+
+    public int GetHashCode(T obj)
+    {
+        return obj.GetHashCode();
     }
 
 
     public BinaryTree(int numOfSiblings)
     {
         _root = null;
-        _data = new List<int>();
+        _data = new List<T>();
         this.numOfSiblings = numOfSiblings;
     }
 
-    private bool Connect(int connectingIndex, int connectTo, BinaryTreeNode node)
+    private bool Connect(T connectingIndex, T connectTo, BinaryTreeNode<T> node)
     {
-        if (node != null && node.data == connectTo)
+        if (node != null && Equals(node.data, connectTo))
         {
             var length = node.nodes.Length;
             for (int index = 0; index < length; index++)
             {
                 if (node.nodes[index] == null)
                 {
-                    node.nodes[index] = new BinaryTreeNode(connectingIndex, numOfSiblings);
+                    node.nodes[index] = new BinaryTreeNode<T>(connectingIndex, numOfSiblings);
                     break;
                 }
 
@@ -75,17 +85,17 @@ public class BinaryTree
         return false;
     }
 
-    public bool Connect(int connectingIndex, int connectTo)
+    public bool Connect(T connectingIndex, T connectTo)
     {
         if (_root == null)
         {
-            _root = new BinaryTreeNode(connectTo, numOfSiblings);
+            _root = new BinaryTreeNode<T>(connectTo, numOfSiblings);
         }
 
         return Connect(connectingIndex, connectTo, _root);
     }
 
-    private void Print(BinaryTreeNode node)
+    private void Print(BinaryTreeNode<T> node)
     {
         if (node != null)
         {
@@ -109,15 +119,15 @@ public class BinaryTree
         if (_root != null)
         {
             _data.Clear();
-            _data = new List<int>();
+            _data = new List<T>();
             Print(_root);
         }
 
     }
 
-    private BinaryTreeNode Find(int data, BinaryTreeNode node)
+    private BinaryTreeNode<T> Find(T data, BinaryTreeNode<T> node)
     {
-        if (node != null && node.data == data)
+        if (node != null && Equals(node.data, data))
         {
             return node;
         }
@@ -128,7 +138,7 @@ public class BinaryTree
             {
                 if (node.nodes[index] != null)
                 {
-                    BinaryTreeNode retNode = Find(data, node.nodes[index]);
+                    BinaryTreeNode<T> retNode = Find(data, node.nodes[index]);
                     if (retNode != null)
                     {
                         return retNode;
@@ -139,7 +149,7 @@ public class BinaryTree
         return null;
     }
 
-    private BinaryTreeNode Find(int data)
+    private BinaryTreeNode<T> Find(T data)
     {
         if (_root == null)
         {
@@ -151,9 +161,9 @@ public class BinaryTree
         }
     }
 
-    public bool IsConnectionExists(int connectingIndex, int connectedTo)
+    public bool IsConnectionExists(T connectingIndex, T connectedTo)
     {
-        BinaryTreeNode node = Find(connectingIndex);
+        BinaryTreeNode<T> node = Find(connectingIndex);
         if (node != null && Find(connectedTo, node) != null)
         {
             return true;
