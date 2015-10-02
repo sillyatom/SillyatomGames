@@ -47,6 +47,7 @@ public class TestPacking : MonoBehaviour
         //Steer Separation for overlapping rect
         while (!SteerSeparation()) { }
 
+        //connect nearby rooms
         foreach (var pack in _packs)
         {
             foreach (var item in _packs)
@@ -91,7 +92,8 @@ public class TestPacking : MonoBehaviour
             }
         }
 
-        //for each region
+        //for each region, check for room that connects with room in other region and
+        //add it to that region
         foreach (KeyValuePair<int, List<Pack>> iter in _regions)
         {
             List<Pack> region = _regions[iter.Key];
@@ -119,6 +121,7 @@ public class TestPacking : MonoBehaviour
             }
         }
 
+        //remove cyclic connections
         List<BinaryTree<int>> regionConnectingTree = new List<BinaryTree<int>>();
 
         foreach (KeyValuePair<int, List<int>> iter in connectedIds)
@@ -129,6 +132,7 @@ public class TestPacking : MonoBehaviour
             }
         }
 
+        //move room from other region
         foreach (var tree in regionConnectingTree)
         {
             tree.PrintTree();
@@ -146,10 +150,12 @@ public class TestPacking : MonoBehaviour
             break;
         }
 
-        //Connect Regions
+        //Connect disconnected regions
         ConnectRegions(_regions);
+        //Connect disconnected regions to main region
         ConnectRegionsToMainRoom();
 
+        //connect missing regions, till no missing regions found
         while (_noConnectionRegions.Count > 1)
         {
             Dictionary<int, List<Pack>> connectedRegions = new Dictionary<int, List<Pack>>();
@@ -164,7 +170,10 @@ public class TestPacking : MonoBehaviour
                 noConnectionRegions[id] = _regions[id];
             }
 
+            //Connect disconnected regions
             ConnectRegions(connectedRegions, noConnectionRegions);
+
+            //Connect disconnected regions to main region
             ConnectRegionsToMainRoom();
         }
     }
