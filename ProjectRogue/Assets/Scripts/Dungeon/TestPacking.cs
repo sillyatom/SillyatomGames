@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class TestPacking : MonoBehaviour
 {
-    private List<Pack> _packs;
 
     public int minPackWidth = 30;
     public int maxPackWidth = 200;
@@ -19,19 +18,20 @@ public class TestPacking : MonoBehaviour
 
     Dictionary<int, List<Pack>> _regions;
 
-    List<RegionConnector> _connectionData;
     List<int> _connectedRegions;
     List<int> _noConnectionRegions;
+    List<RegionConnector> _connectionData;
+    List<Pack> _packs;
 
     void Start()
     {
-        _packs = new List<Pack>();
         _connectedRegions = new List<int>();
         _noConnectionRegions = new List<int>();
         _regions = new Dictionary<int, List<Pack>>();
         _connectionData = new List<RegionConnector>();
 
         Dictionary<int, List<int>> connectedIds = new Dictionary<int, List<int>>();
+        _packs = new List<Pack>();
 
         for (int i = 0; i < numOfPacks; i++)
         {
@@ -176,26 +176,6 @@ public class TestPacking : MonoBehaviour
             //Connect disconnected regions to main region
             ConnectRegionsToMainRoom();
         }
-    }
-    void Update()
-    {
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    Dictionary<int, List<Pack>> connectedRegions = new Dictionary<int, List<Pack>>();
-        //    Dictionary<int, List<Pack>> noConnectionRegions = new Dictionary<int, List<Pack>>();
-
-        //    foreach (var id in _connectedRegions)
-        //    {
-        //        connectedRegions[id] = _regions[id];
-        //    }
-        //    foreach (var id in _noConnectionRegions)
-        //    {
-        //        noConnectionRegions[id] = _regions[id];
-        //    }
-
-        //    ConnectRegions(connectedRegions, noConnectionRegions);
-        //    ConnectRegionsToMainRoom();
-        //}
     }
 
     private void ConnectRegionsToMainRoom()
@@ -429,19 +409,14 @@ public class TestPacking : MonoBehaviour
             UnityEditor.Handles.color = Color.black;
             UnityEditor.Handles.Label(new Vector3(pack.rect.center.x, 50, pack.rect.center.y), pack.regionId.ToString() + "-" + pack.uniqueId);
             UnityEditor.Handles.EndGUI();
-        }
-        foreach (var pack in _packs)
-        {
+
+
             Gizmos.color = pack.color;
             Gizmos.DrawCube(new Vector3(pack.rect.x + pack.rect.width / 2, 1, pack.rect.y + pack.rect.height / 2), new Vector3(pack.rect.width, 1, pack.rect.height));
             DrawNodeRect(pack.rect, Color.black);
-        }
-        foreach (var pack in _packs)
-        {
-            if (pack.connectedPack != null)
-            {
-                Debug.DrawLine(new Vector3(pack.rect.center.x, 1, pack.rect.center.y), new Vector3(pack.connectedPack.rect.center.x, 1, pack.connectedPack.rect.center.y), pack.color);
-            }
+
+
+            Debug.DrawLine(new Vector3(pack.rect.center.x, 1, pack.rect.center.y), new Vector3(pack.connectedPack.rect.center.x, 1, pack.connectedPack.rect.center.y), pack.color);
         }
         foreach (var connector in _connectionData)
         {

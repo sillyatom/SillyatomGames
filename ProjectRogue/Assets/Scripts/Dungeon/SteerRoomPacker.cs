@@ -49,6 +49,11 @@ public class RegionConnector
 public class SteerRoomPacker
 {
     private List<Pack> _packs;
+    Dictionary<int, List<Pack>> _regions;
+
+    List<int> _connectedRegions;
+    List<int> _noConnectionRegions;
+    List<RegionConnector> _connectionData;
 
     public List<Pack> packs
     {
@@ -57,6 +62,12 @@ public class SteerRoomPacker
 
     public SteerRoomPacker(int numPacks, int minPackWidth, int minPackHeight, int maxPackWidth, int maxPackHeight)
     {
+        _connectedRegions = new List<int>();
+        _noConnectionRegions = new List<int>();
+        _regions = new Dictionary<int, List<Pack>>();
+        _connectionData = new List<RegionConnector>();
+
+        Dictionary<int, List<int>> connectedIds = new Dictionary<int, List<int>>();
         _packs = new List<Pack>();
 
         for (int i = 0; i < numPacks; i++)
@@ -70,12 +81,305 @@ public class SteerRoomPacker
                 )));
         }
 
+        //Steer Separation for overlapping rect
         while (!SteerSeparation()) { }
 
+        //connect nearby rooms
+        foreach (var pack in _packs)
+        {
+            foreach (var item in _packs)
+            {
+                if (pack.GetHashCode() != item.GetHashCode())
+                {
+                    float distance = Vector2.Distance(pack.rect.center, item.rect.center);
+
+                    if (pack.connectedPack == null || pack.connectedDistance > distance)
+                    {
+                        //if (item.connectedPack == null || pack.GetHashCode() != item.connectedPack.GetHashCode())
+                        {
+                            pack.connectedDistance = distance;
+                            pack.connectedPack = item;
+                        }
+                    }
+                }
+            }
+        }
+
+        //Separate out into different regions, assign id
+        List<Pack> checkedPacks = new List<Pack>();
+        int runningIndex = 0;
+        foreach (var pack in _packs)
+        {
+            if (pack.regionId == -1)
+            {
+                Color color = new Color(Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f, Random.Range(0, 255) / 255.0f);
+                Pack iter = pack;
+
+                _regions[runningIndex] = new List<Pack>();
+                while (iter != null && !checkedPacks.Contains(iter))
+                {
+                    _regions[runningIndex].Add(iter);
+                    checkedPacks.Add(iter);
+
+                    iter.regionId = runningIndex;
+                    iter.color = color;
+                    iter = iter.connectedPack;
+                }
+                ++runningIndex;
+            }
+        }
+
+        //for each region, check for room that connects with room in other region and
+        //add it to that region
+        foreach (KeyValuePair<int, List<Pack>> iter in _regions)
+        {
+            List<Pack> region = _regions[iter.Key];
+            connectedIds[region[0].regionId] = new List<int>();
+
+            //for each pack in every region
+            foreach (var pack in region)
+            {
+                foreach (KeyValuePair<int, List<Pack>> iter1 in _regions)
+                {
+                    List<Pack> regionToCheck = _regions[iter1.Key];
+                    if (regionToCheck != region)
+                    {
+                        //if connected pack is in another region
+                        if (regionToCheck.Contains(pack.connectedPack))
+                        {
+                            if (!connectedIds[pack.regionId].Contains(regionToCheck[0].regionId))
+                            {
+                                connectedIds[pack.regionId].Add(regionToCheck[0].regionId);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //remove cyclic connections
+        List<BinaryTree<int>> regionConnectingTree = new List<BinaryTree<int>>();
+
+        foreach (KeyValuePair<int, List<int>> iter in connectedIds)
+        {
+            foreach (var id in iter.Value)
+            {
+                AddToTree<int>(iter.Key, id, ref regionConnectingTree);
+            }
+        }
+
+        //move room from other region
+        foreach (var tree in regionConnectingTree)
+        {
+            tree.PrintTree();
+
+            int length = tree.data.Count;
+            for (int index = 1; index < length; index++)
+            {
+                CopyRegions(tree.data[index], tree.data[0]);
+            }
+        }
+
+        foreach (KeyValuePair<int, List<Pack>> iter in _regions)
+        {
+            ConnectToMainRoom(iter.Key);
+            break;
+        }
+
+        //Connect disconnected regions
+        ConnectRegions(_regions);
+        //Connect disconnected regions to main region
+        ConnectRegionsToMainRoom();
+
+        //connect missing regions, till no missing regions found
+        while (_noConnectionRegions.Count > 1)
+        {
+            Dictionary<int, List<Pack>> connectedRegions = new Dictionary<int, List<Pack>>();
+            Dictionary<int, List<Pack>> noConnectionRegions = new Dictionary<int, List<Pack>>();
+
+            foreach (var id in _connectedRegions)
+            {
+                connectedRegions[id] = _regions[id];
+            }
+            foreach (var id in _noConnectionRegions)
+            {
+                noConnectionRegions[id] = _regions[id];
+            }
+
+            //Connect disconnected regions
+            ConnectRegions(connectedRegions, noConnectionRegions);
+
+            //Connect disconnected regions to main region
+            ConnectRegionsToMainRoom();
+        }
     }
 
-    public void ConnectRooms()
+    private void ConnectRegionsToMainRoom()
     {
+        _connectedRegions.Clear();
+        _noConnectionRegions.Clear();
+
+        int count = _connectionData.Count;
+        for (int index = 0; index < count; index++)
+        {
+            foreach (var connector in _connectionData)
+            {
+                if (connector.packA.isConnectedToMainRoom)
+                {
+                    ConnectToMainRoom(connector.packB.regionId);
+                }
+                else if (connector.packB.isConnectedToMainRoom)
+                {
+                    ConnectToMainRoom(connector.packA.regionId);
+                }
+            }
+        }
+        foreach (KeyValuePair<int, List<Pack>> region in _regions)
+        {
+            if (region.Value[0].isConnectedToMainRoom)
+            {
+                _connectedRegions.Add(region.Value[0].regionId);
+            }
+            else
+            {
+                _noConnectionRegions.Add(region.Value[0].regionId);
+            }
+        }
+    }
+
+    private void ConnectRegions(Dictionary<int, List<Pack>> regions1, Dictionary<int, List<Pack>> regions2)
+    {
+        float runningDistance = -1.0f;
+        Pack packA = null; Pack packB = null;
+        foreach (KeyValuePair<int, List<Pack>> iter in regions1)
+        {
+            foreach (KeyValuePair<int, List<Pack>> iiter in regions2)
+            {
+                if (iter.Key != iiter.Key)
+                {
+                    foreach (var pack in iter.Value)
+                    {
+                        foreach (var iPack in iiter.Value)
+                        {
+                            float distance = Vector2.Distance(pack.rect.center, iPack.rect.center);
+                            if (runningDistance == -1 || distance < runningDistance)
+                            {
+                                runningDistance = distance;
+                                packA = pack;
+                                packB = iPack;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (packA != null && packB != null && !IsRegionConnected(packA.regionId, packB.regionId))
+        {
+            _connectionData.Add(new RegionConnector(packA, packB));
+        }
+    }
+
+    private void ConnectRegions(Dictionary<int, List<Pack>> regions)
+    {
+        foreach (KeyValuePair<int, List<Pack>> iter in regions)
+        {
+            float runningDistance = -1.0f;
+            Pack packA = null; Pack packB = null;
+
+            foreach (KeyValuePair<int, List<Pack>> iiter in regions)
+            {
+                if (iter.Key != iiter.Key)
+                {
+                    foreach (var pack in iter.Value)
+                    {
+                        foreach (var iPack in iiter.Value)
+                        {
+                            float distance = Vector2.Distance(pack.rect.center, iPack.rect.center);
+                            if (runningDistance == -1 || distance < runningDistance)
+                            {
+                                runningDistance = distance;
+                                packA = pack;
+                                packB = iPack;
+                            }
+                        }
+                    }
+                }
+            }
+            if (!IsRegionConnected(packA.regionId, packB.regionId))
+            {
+                _connectionData.Add(new RegionConnector(packA, packB));
+            }
+        }
+    }
+
+    private void ConnectToMainRoom(int regionId)
+    {
+        foreach (var pack in _regions[regionId])
+        {
+            pack.isConnectedToMainRoom = true;
+        }
+    }
+
+    private bool IsRegionConnected(int id1, int id2)
+    {
+        foreach (var connector in _connectionData)
+        {
+            if (
+                (connector.packA.regionId == id1 && connector.packB.regionId == id2)
+                || (connector.packA.regionId == id2 && connector.packB.regionId == id1)
+                )
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool IsConnectionExists<T>(T connectingIndex, T connectedTo, List<BinaryTree<T>> trees)
+    {
+        foreach (var tree in trees)
+        {
+            if (tree.IsConnectionExists(connectingIndex, connectedTo))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void AddToTree<T>(T connectingIndex, T connectedTo, ref List<BinaryTree<T>> trees)
+    {
+        bool added = false;
+        foreach (var tree in trees)
+        {
+            added = tree.ConnectWith(connectingIndex, connectedTo);
+
+            if (added)
+            {
+                break;
+            }
+        }
+        if (!added)
+        {
+            BinaryTree<T> tree = new BinaryTree<T>(4);
+            tree.ConnectWith(connectingIndex, connectedTo);
+            trees.Add(tree);
+        }
+    }
+
+    private void CopyRegions(int from, int to)
+    {
+        foreach (var pack in _regions[from])
+        {
+            if (!_regions[to].Contains(pack))
+            {
+                _regions[to].Add(pack);
+                pack.color = _regions[to][0].color;
+                pack.regionId = _regions[to][0].regionId;
+            }
+        }
+        _regions.Remove(from);
     }
 
     public Rect GetMapRect()

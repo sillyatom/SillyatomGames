@@ -29,6 +29,14 @@ public class BinaryTree<T> : IEqualityComparer<T>
 
     private BinaryTreeNode<T> _root;
     private List<T> _data;
+    private List<BinaryTreeNode<T>> _nodes;
+
+    public List<BinaryTreeNode<T>> nodes
+    {
+        get { return _nodes; }
+        set { _nodes = value; }
+    }
+
 
     public List<T> data
     {
@@ -57,6 +65,7 @@ public class BinaryTree<T> : IEqualityComparer<T>
     {
         _root = null;
         _data = new List<T>();
+        _nodes = new List<BinaryTreeNode<T>>();
         this.numOfSiblings = numOfSiblings;
     }
 
@@ -157,13 +166,30 @@ public class BinaryTree<T> : IEqualityComparer<T>
         }
     }
 
-    public void PrintNode(BinaryTreeNode<T> node)
+    private void PrintNode(BinaryTreeNode<T> node)
     {
         if (node != null)
         {
-            _data.Clear();
-            _data = new List<T>();
-            Print(node);
+            _nodes.Add(node);
+
+            int length = node.nodes.Length;
+
+            for (int index = 0; index < length; index++)
+            {
+                if (node.nodes[index] != null)
+                {
+                    Print(node.nodes[index]);
+                }
+            }
+        }
+    }
+
+    public void PrintNodes()
+    {
+        if (_root != null)
+        {
+            _nodes.Clear();
+            PrintNode(_root);
         }
 
     }
@@ -173,7 +199,6 @@ public class BinaryTree<T> : IEqualityComparer<T>
         if (_root != null)
         {
             _data.Clear();
-            _data = new List<T>();
             Print(_root);
         }
 
