@@ -11,16 +11,23 @@ public class Pack
     public int regionId { get; set; }
     public bool canDrawDebug { get; set; }
     public int uniqueId { get; set; }
+    public bool isConnectedToMainRoom { get; set; }
 
     public Pack(Rect rect, Color color)
     {
         this.regionId = -1;
         this.rect = rect;
         this.color = color;
+        this.isConnectedToMainRoom = false;
         this.connectedPack = null;
         this.connectedDistance = 0.0f;
         this.canDrawDebug = false;
         this.uniqueId = runningId++;
+    }
+
+    public override string ToString()
+    {
+        return uniqueId.ToString();
     }
 }
 

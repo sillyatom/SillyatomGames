@@ -16,6 +16,11 @@ public class BinaryTreeNode<T>
         this.data = data;
         this.nodes = new BinaryTreeNode<T>[numNodes];
     }
+
+    public override string ToString()
+    {
+        return _data.ToString();
+    }
 }
 
 public class BinaryTree<T> : IEqualityComparer<T>
@@ -29,6 +34,12 @@ public class BinaryTree<T> : IEqualityComparer<T>
     {
         get { return _data; }
         set { _data = value; }
+    }
+
+    public BinaryTreeNode<T> root
+    {
+        get { return _root; }
+        set { _root = value; }
     }
 
     public bool Equals(T data1, T data2)
@@ -49,9 +60,28 @@ public class BinaryTree<T> : IEqualityComparer<T>
         this.numOfSiblings = numOfSiblings;
     }
 
-    private bool Connect(T connectingIndex, T connectTo, BinaryTreeNode<T> node)
+    public bool InsertNode(BinaryTreeNode<T> node, BinaryTreeNode<T> parent)
     {
-        if (node != null && Equals(node.data, connectTo))
+        var length = node.nodes.Length;
+        for (int index = 0; index < length; index++)
+        {
+            if (node.nodes[index] == null)
+            {
+                node.nodes[index] = node;
+                break;
+            }
+
+            if (index == length - 1)
+            {
+                throw (new System.Exception(" Cannot Insert Node - Node length exceeding "));
+            }
+        }
+        return true;
+    }
+
+    private bool ConnectWith(T connectingIndex, T connectTo, BinaryTreeNode<T> node)
+    {
+        if (node != null && (Equals(node.data, connectTo) || Equals(node.data, connectingIndex)))
         {
             var length = node.nodes.Length;
             for (int index = 0; index < length; index++)
@@ -75,7 +105,7 @@ public class BinaryTree<T> : IEqualityComparer<T>
             var length = node.nodes.Length;
             for (int index = 0; index < length; index++)
             {
-                if (node.nodes[index] != null && Connect(connectingIndex, connectTo, node.nodes[index]))
+                if (node.nodes[index] != null && ConnectWith(connectingIndex, connectTo, node.nodes[index]))
                 {
                     return true;
                 }
@@ -85,21 +115,34 @@ public class BinaryTree<T> : IEqualityComparer<T>
         return false;
     }
 
-    public bool Connect(T connectingIndex, T connectTo)
+    public bool ConnectWith(T connectingIndex, T connectTo)
     {
         if (_root == null)
         {
-            _root = new BinaryTreeNode<T>(connectTo, numOfSiblings);
+            _root = new BinaryTreeNode<T>(connectingIndex, numOfSiblings);
+        }
+        if (IsConnectionExists(connectingIndex, connectTo) || Equals(connectingIndex, connectTo))
+        {
+            return true;
+        }
+        BinaryTreeNode<T> iter = Find(connectingIndex);
+        if (iter != null)
+        {
+            return ConnectWith(connectTo, connectingIndex, iter);
+        }
+        iter = Find(connectTo);
+        if (iter != null)
+        {
+            return ConnectWith(connectingIndex, connectTo, iter);
         }
 
-        return Connect(connectingIndex, connectTo, _root);
+        return false;
     }
 
     private void Print(BinaryTreeNode<T> node)
     {
         if (node != null)
         {
-            //Debug.Log(" Value at node : " + node.data);
             _data.Add(node.data);
 
             int length = node.nodes.Length;
@@ -112,6 +155,17 @@ public class BinaryTree<T> : IEqualityComparer<T>
                 }
             }
         }
+    }
+
+    public void PrintNode(BinaryTreeNode<T> node)
+    {
+        if (node != null)
+        {
+            _data.Clear();
+            _data = new List<T>();
+            Print(node);
+        }
+
     }
 
     public void PrintTree()
@@ -149,7 +203,7 @@ public class BinaryTree<T> : IEqualityComparer<T>
         return null;
     }
 
-    private BinaryTreeNode<T> Find(T data)
+    public BinaryTreeNode<T> Find(T data)
     {
         if (_root == null)
         {
@@ -158,6 +212,38 @@ public class BinaryTree<T> : IEqualityComparer<T>
         else
         {
             return Find(data, _root);
+        }
+    }
+
+    private BinaryTreeNode<T> GetParent(T data, BinaryTreeNode<T> node)
+    {
+        if (node != null)
+        {
+            var length = node.nodes.Length;
+            for (int index = 0; index < length; index++)
+            {
+                if (node.nodes[index] != null && Equals(data, node.nodes[index].data))
+                {
+                    return node;
+                }
+                else
+                {
+                    GetParent(data, node.nodes[index]);
+                }
+            }
+        }
+        return null;
+    }
+
+    public BinaryTreeNode<T> GetParent(T data)
+    {
+        if (_root == null)
+        {
+            return null;
+        }
+        else
+        {
+            return GetParent(data, _root);
         }
     }
 

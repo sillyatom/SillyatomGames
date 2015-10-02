@@ -19,15 +19,19 @@ public class TestPacking : MonoBehaviour
 
     Dictionary<int, List<Pack>> _regions;
 
-    List<RegionConnector> _connectionData = new List<RegionConnector>();
+    List<RegionConnector> _connectionData;
+    List<int> _connectedRegions;
+    List<int> _noConnectionRegions;
 
     void Start()
     {
         _packs = new List<Pack>();
+        _connectedRegions = new List<int>();
+        _noConnectionRegions = new List<int>();
         _regions = new Dictionary<int, List<Pack>>();
+        _connectionData = new List<RegionConnector>();
 
         Dictionary<int, List<int>> connectedIds = new Dictionary<int, List<int>>();
-
 
         for (int i = 0; i < numOfPacks; i++)
         {
@@ -136,13 +140,112 @@ public class TestPacking : MonoBehaviour
             }
         }
 
-        //Connect Regions
         foreach (KeyValuePair<int, List<Pack>> iter in _regions)
         {
-            float runningDistance = -1.0f;
-            Pack packA = null; Pack packB = null;
+            ConnectToMainRoom(iter.Key);
+            break;
+        }
 
-            foreach (KeyValuePair<int, List<Pack>> iiter in _regions)
+        //Connect Regions
+        ConnectRegions(_regions);
+        ConnectRegionsToMainRoom();
+
+        while (_noConnectionRegions.Count > 1)
+        {
+            Dictionary<int, List<Pack>> connectedRegions = new Dictionary<int, List<Pack>>();
+            Dictionary<int, List<Pack>> noConnectionRegions = new Dictionary<int, List<Pack>>();
+
+            foreach (var id in _connectedRegions)
+            {
+                connectedRegions[id] = _regions[id];
+            }
+            foreach (var id in _noConnectionRegions)
+            {
+                noConnectionRegions[id] = _regions[id];
+            }
+
+            ConnectRegions(connectedRegions, noConnectionRegions);
+            ConnectRegionsToMainRoom();
+        }
+    }
+    void Update()
+    {
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    Dictionary<int, List<Pack>> connectedRegions = new Dictionary<int, List<Pack>>();
+        //    Dictionary<int, List<Pack>> noConnectionRegions = new Dictionary<int, List<Pack>>();
+
+        //    foreach (var id in _connectedRegions)
+        //    {
+        //        connectedRegions[id] = _regions[id];
+        //    }
+        //    foreach (var id in _noConnectionRegions)
+        //    {
+        //        noConnectionRegions[id] = _regions[id];
+        //    }
+
+        //    ConnectRegions(connectedRegions, noConnectionRegions);
+        //    ConnectRegionsToMainRoom();
+        //}
+    }
+
+    private void ConnectRegionsToMainRoom()
+    {
+        _connectedRegions.Clear();
+        _noConnectionRegions.Clear();
+
+        int count = _connectionData.Count;
+        for (int index = 0; index < count; index++)
+        {
+            foreach (var connector in _connectionData)
+            {
+                if (connector.packA.isConnectedToMainRoom)
+                {
+                    ConnectToMainRoom(connector.packB.regionId);
+                }
+                else if (connector.packB.isConnectedToMainRoom)
+                {
+                    ConnectToMainRoom(connector.packA.regionId);
+                }
+            }
+        }
+        foreach (KeyValuePair<int, List<Pack>> region in _regions)
+        {
+            if (region.Value[0].isConnectedToMainRoom)
+            {
+                _connectedRegions.Add(region.Value[0].regionId);
+            }
+            else
+            {
+                _noConnectionRegions.Add(region.Value[0].regionId);
+            }
+        }
+        Debug.Log("-------------------------------------------------------------");
+        Debug.Log(" Num Of Regions : " + _regions.Count);
+        Debug.Log(" Num Of Connected Regions : " + _connectedRegions.Count);
+        Debug.Log(" Num Of NonConnected Regions : " + _noConnectionRegions.Count);
+
+        //Debug.Log("-------------------------------------------------------------");
+
+        //foreach (var id in _connectedRegions)
+        //{
+        //    Debug.Log(" Connected Region : " + id);
+        //}
+        //Debug.Log("-------------------------------------------------------------");
+
+        //foreach (var id in _noConnectionRegions)
+        //{
+        //    Debug.Log(" No Connection Region : " + id);
+        //}
+    }
+
+    private void ConnectRegions(Dictionary<int, List<Pack>> regions1, Dictionary<int, List<Pack>> regions2)
+    {
+        float runningDistance = -1.0f;
+        Pack packA = null; Pack packB = null;
+        foreach (KeyValuePair<int, List<Pack>> iter in regions1)
+        {
+            foreach (KeyValuePair<int, List<Pack>> iiter in regions2)
             {
                 if (iter.Key != iiter.Key)
                 {
@@ -159,16 +262,56 @@ public class TestPacking : MonoBehaviour
                             }
                         }
                     }
+                }
+            }
+        }
+        if (packA != null && packB != null && !IsRegionConnected(packA.regionId, packB.regionId))
+        {
+            //Debug.Log(" Connecting Single " + packA.regionId + " with " + packB.regionId);
+            _connectionData.Add(new RegionConnector(packA, packB));
+        }
+    }
 
+    private void ConnectRegions(Dictionary<int, List<Pack>> regions)
+    {
+        foreach (KeyValuePair<int, List<Pack>> iter in regions)
+        {
+            float runningDistance = -1.0f;
+            Pack packA = null; Pack packB = null;
+
+            foreach (KeyValuePair<int, List<Pack>> iiter in regions)
+            {
+                if (iter.Key != iiter.Key)
+                {
+                    foreach (var pack in iter.Value)
+                    {
+                        foreach (var iPack in iiter.Value)
+                        {
+                            float distance = Vector2.Distance(pack.rect.center, iPack.rect.center);
+                            if (runningDistance == -1 || distance < runningDistance)
+                            {
+                                runningDistance = distance;
+                                packA = pack;
+                                packB = iPack;
+                            }
+                        }
+                    }
                 }
             }
             if (!IsRegionConnected(packA.regionId, packB.regionId))
             {
+                //Debug.Log(" Connecting " + packA.regionId + " with " + packB.regionId);
                 _connectionData.Add(new RegionConnector(packA, packB));
             }
         }
+    }
 
-        Debug.Log("Region Count : " + _regions.Count);
+    private void ConnectToMainRoom(int regionId)
+    {
+        foreach (var pack in _regions[regionId])
+        {
+            pack.isConnectedToMainRoom = true;
+        }
     }
 
     private bool IsRegionConnected(int id1, int id2)
@@ -203,7 +346,7 @@ public class TestPacking : MonoBehaviour
         bool added = false;
         foreach (var tree in trees)
         {
-            added = tree.Connect(connectingIndex, connectedTo);
+            added = tree.ConnectWith(connectingIndex, connectedTo);
 
             if (added)
             {
@@ -213,7 +356,7 @@ public class TestPacking : MonoBehaviour
         if (!added)
         {
             BinaryTree<T> tree = new BinaryTree<T>(4);
-            tree.Connect(connectingIndex, connectedTo);
+            tree.ConnectWith(connectingIndex, connectedTo);
             trees.Add(tree);
         }
     }

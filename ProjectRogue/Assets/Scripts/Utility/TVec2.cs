@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-public class TVec2<T>
+﻿public class TVec2<T>
 {
     private T _x;
     private T _y;
