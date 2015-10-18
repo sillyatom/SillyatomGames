@@ -21,7 +21,7 @@ public class DungeonMapGenerator : MonoBehaviour
     void Start()
     {
         _floor = gameObject.transform.FindChild("Floor").gameObject;
-        _packer = new SteerRoomPacker(numOfPacks, minPackWidth, minPackHeight, maxPackWidth, maxPackHeight);
+        _packer = new SteerRoomPacker(numOfPacks, minPackWidth, minPackHeight, maxPackWidth, maxPackHeight, quadSize);
 
         foreach (var pack in _packer.packs)
         {
@@ -50,9 +50,15 @@ public class DungeonMapGenerator : MonoBehaviour
         _floor.transform.position = new Vector3(mapRect.center.x - floorMeshData.width / 2, 0, mapRect.center.y - floorMeshData.height / 2);
     }
 
-    void OnGUI()
+    void OnDrawGizmos()
     {
-        GUI.Label(new Rect(10, 10, 100, 20), "Hello World!");
+        if (_packer != null)
+        {
+            foreach (var pack in _packer.packs)
+            {
+                DrawNodeRect(pack.rect, Color.green);
+            }
+        }
     }
 
     void DrawNodeRect(Rect rect, Color color)

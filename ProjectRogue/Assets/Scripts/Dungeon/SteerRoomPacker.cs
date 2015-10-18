@@ -60,7 +60,7 @@ public class SteerRoomPacker
         get { return _packs; }
     }
 
-    public SteerRoomPacker(int numPacks, int minPackWidth, int minPackHeight, int maxPackWidth, int maxPackHeight)
+    public SteerRoomPacker(int numPacks, int minPackWidth, int minPackHeight, int maxPackWidth, int maxPackHeight, int quadSize)
     {
         _connectedRegions = new List<int>();
         _noConnectionRegions = new List<int>();
@@ -72,9 +72,15 @@ public class SteerRoomPacker
 
         for (int i = 0; i < numPacks; i++)
         {
+            float width = Random.Range(minPackWidth, maxPackWidth);
+            float height = Random.Range(minPackHeight, maxPackHeight);
+
+            width -= (width % quadSize);
+            height -= (height % quadSize);
+
             _packs.Add(new Pack(new Rect(0, 0,
-                Random.Range(minPackWidth, maxPackWidth),
-                Random.Range(minPackHeight, maxPackHeight)
+                width,
+                height
                 ), new Color(Random.Range(0, 255) / 255.0f,
                              Random.Range(0, 255) / 255.0f,
                              Random.Range(0, 255) / 255.0f

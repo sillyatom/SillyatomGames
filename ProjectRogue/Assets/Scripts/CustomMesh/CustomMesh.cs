@@ -62,8 +62,8 @@ public class CustomMesh
         this.quadSize = quadSize;
         this.borderSize = borderSize;
 
-        this.row = Mathf.CeilToInt(width / quadSize);
-        this.col = Mathf.CeilToInt(height / quadSize);
+        this.row = Mathf.CeilToInt(width / quadSize) + 1;
+        this.col = Mathf.CeilToInt(height / quadSize) + 1;
 
         map = new int[row, col];
         customVertexData = new Vertex[row, col];
