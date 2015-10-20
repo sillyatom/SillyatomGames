@@ -110,11 +110,14 @@
     <Compile Include="Assets\Scripts\Manager\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Manager\ObjectPoolingScript.cs" />
     <Compile Include="Assets\Scripts\Utility\BinaryTree.cs" />
+    <Compile Include="Assets\Scripts\Utility\CustomRect.cs" />
     <Compile Include="Assets\Scripts\Utility\TVec2.cs" />
     <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponSwitchScript.cs" />
+    <Compile Include="Assets\test\BSPTree.cs" />
     <Compile Include="Assets\test\MeshScript.cs" />
+    <Compile Include="Assets\test\TestDSPDungeon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Shader\TexBlending.shader" />
