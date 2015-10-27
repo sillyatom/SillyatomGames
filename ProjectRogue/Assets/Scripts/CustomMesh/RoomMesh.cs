@@ -24,7 +24,7 @@ public class RoomMesh
         set { _floorMesh = value; }
     }
 
-    public RoomMesh(int width, int height, int quadSize, int borderSize, int wallHeight, BSPNode data)
+    public RoomMesh(int width, int height, int quadSize, int borderSize, int wallHeight, IRoomInterface data)
     {
         _borderMesh = new RoomBorderMesh(width, height, quadSize, borderSize, wallHeight, data);
         _borderMesh.Generate();

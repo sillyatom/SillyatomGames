@@ -1,31 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BSPNode
+public class BSPNode : IRoomInterface
 {
-    private List<BSPNode> _connectedNodes;
-    public List<BSPNode> connectedNodes
-    {
-        get { return _connectedNodes; }
-        set { _connectedNodes = value; }
-    }
-    private List<ExitConfig> _exitConfig;
-
-    public List<ExitConfig> exitConfig
-    {
-        get { return _exitConfig; }
-        set { _exitConfig = value; }
-    }
-
-    public CustomRect rect { get; set; }
-    public bool hasSingleExit = false;
-    public bool isBlocked = false;
-    public BSPNode[] childNodes;
-    public CustomRect roomRect;
-    public Color color;
-    public int regionId;
-    public int id;
-
     static int runningIndex = 0;
 
     public BSPNode()
@@ -34,8 +11,8 @@ public class BSPNode
         regionId = -1;
         roomRect = null;
         childNodes = null;
-        _exitConfig = new List<ExitConfig>();
-        _connectedNodes = new List<BSPNode>();
+        exitConfig = new List<ExitConfig>();
+        connectedNodes = new List<BSPNode>();
         color = new Color(UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f);
     }
 
@@ -46,21 +23,21 @@ public class BSPNode
         this.roomRect = null;
         childNodes = null;
         id = runningIndex++;
-        _exitConfig = new List<ExitConfig>();
-        _connectedNodes = new List<BSPNode>();
+        exitConfig = new List<ExitConfig>();
+        connectedNodes = new List<BSPNode>();
         color = new Color(UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f);
     }
 
     public void AddConnection(BSPNode node)
     {
-        foreach (var connection in _connectedNodes)
+        foreach (var connection in connectedNodes)
         {
             if (connection.id == node.id)
             {
                 return;
             }
         }
-        _connectedNodes.Add(node);
+        connectedNodes.Add(node);
     }
     public float Area
     {

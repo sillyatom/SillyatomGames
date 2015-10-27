@@ -20,11 +20,13 @@ class Room
     private GameObject _wall;
     private Mesh _wallMesh;
 
+    private IRoomInterface _roomData;
 
     public RoomMesh meshData { get; set; }
 
-    public Room(string prefab, int width, int height, int quadSize, int borderSize, int wallHeight)
+    public Room(string prefab, int width, int height, int quadSize, int borderSize, int wallHeight, IRoomInterface data)
     {
+        this._roomData = data;
         this.width = width;
         this.height = height;
         this.borderSize = borderSize;
@@ -50,7 +52,7 @@ class Room
 
     protected virtual RoomMesh getRoomData()
     {
-        return new RoomMesh(width, height, quadSize, borderSize, wallHeight);
+        return new RoomMesh(width, height, quadSize, borderSize, wallHeight, this._roomData);
     }
 
     public void generateMesh()

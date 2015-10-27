@@ -3,9 +3,9 @@
 public class RoomBorderMesh : BorderMesh
 {
     int exitSize = 1;
-    private BSPNode _roomData;
+    private IRoomInterface _roomData;
 
-    public RoomBorderMesh(int width, int height, int quadSize, int borderSize, int wallHeight, BSPNode roomData = null) : base(width, height, quadSize, borderSize, wallHeight)
+    public RoomBorderMesh(int width, int height, int quadSize, int borderSize, int wallHeight, IRoomInterface roomData) : base(width, height, quadSize, borderSize, wallHeight)
     {
         this._roomData = roomData;
     }

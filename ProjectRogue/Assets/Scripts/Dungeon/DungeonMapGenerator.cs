@@ -25,7 +25,7 @@ public class DungeonMapGenerator : MonoBehaviour
 
         foreach (var pack in _packer.packs)
         {
-            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight);
+            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, null);
             room.generateMesh();
             room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
         }
