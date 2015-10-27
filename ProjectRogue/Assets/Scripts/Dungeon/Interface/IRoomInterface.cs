@@ -11,4 +11,5 @@ public interface IRoomInterface
     bool hasSingleExit { get; set; }
     CustomRect roomRect { get; set; }
     List<ExitConfig> exitConfig { get; set; }
+    List<Vector3> exitPositions { get; set; }
 }

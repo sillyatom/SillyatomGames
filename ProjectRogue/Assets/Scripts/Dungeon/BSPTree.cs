@@ -17,6 +17,22 @@ public class BSPNode : IRoomInterface
         set { _exitConfig = value; }
     }
 
+    private List<Vector3> _connectingPositions;
+
+    public List<Vector3> connectingPositions
+    {
+        get { return _connectingPositions; }
+        set { _connectingPositions = value; }
+    }
+
+    private List<Vector3> _exitPositions;
+
+    public List<Vector3> exitPositions
+    {
+        get { return _exitPositions; }
+        set { _exitPositions = value; }
+    }
+
     public CustomRect rect { get; set; }
     public bool hasSingleExit { get; set; }
     public bool isBlocked { get; set; }
@@ -35,7 +51,9 @@ public class BSPNode : IRoomInterface
         roomRect = null;
         childNodes = null;
         exitConfig = new List<ExitConfig>();
+        exitPositions = new List<Vector3>();
         connectedNodes = new List<BSPNode>();
+        _connectingPositions = new List<Vector3>();
         color = new Color(UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f);
     }
 
@@ -47,7 +65,9 @@ public class BSPNode : IRoomInterface
         childNodes = null;
         id = runningIndex++;
         exitConfig = new List<ExitConfig>();
+        exitPositions = new List<Vector3>();
         connectedNodes = new List<BSPNode>();
+        _connectingPositions = new List<Vector3>();
         color = new Color(UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f);
     }
 
@@ -131,7 +151,10 @@ public class BSPTree
         _maxHeight = maxHeight;
 
         // To-Do update the seed each run
-        _randomGen = new System.Random("sillyatom".GetHashCode() + UnityEngine.Random.Range(0, 10000));
+        int seed = "sillyatom".GetHashCode() + UnityEngine.Random.Range(0, 10000);
+        seed = 1180484270;
+        _randomGen = new System.Random(seed);
+        Debug.Log(" Seed " + seed);
 
         _root = new BSPNode(new CustomRect(x, y, width, height));
     }

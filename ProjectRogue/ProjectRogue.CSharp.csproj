@@ -51,11 +51,17 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -89,13 +95,15 @@
     <Compile Include="Assets\Scripts\CustomMesh\RoomMesh.cs" />
     <Compile Include="Assets\Scripts\CustomMesh\Triangle.cs" />
     <Compile Include="Assets\Scripts\CustomMesh\Vertex.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\BSPPathGenerator.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\BSPTree.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DungeonMapGenerator.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\Interface\IPathGenerator.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Interface\IRoomInterface.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Room.cs" />
     <Compile Include="Assets\Scripts\Dungeon\RoomPacker.cs" />
     <Compile Include="Assets\Scripts\Dungeon\RoomScript.cs" />
     <Compile Include="Assets\Scripts\Dungeon\SteerRoomPacker.cs" />
-    <Compile Include="Assets\Scripts\Dungeon\TestPacking.cs" />
     <Compile Include="Assets\Scripts\Effects\FogOfWar.cs" />
     <Compile Include="Assets\Scripts\Enemy\DestroyEnemyScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
@@ -116,9 +124,9 @@
     <Compile Include="Assets\Scripts\Weapons\BulletDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\MissileDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponSwitchScript.cs" />
-    <Compile Include="Assets\test\BSPTree.cs" />
     <Compile Include="Assets\test\MeshScript.cs" />
     <Compile Include="Assets\test\TestDSPDungeon.cs" />
+    <Compile Include="Assets\test\TestPacking.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Shader\TexBlending.shader" />

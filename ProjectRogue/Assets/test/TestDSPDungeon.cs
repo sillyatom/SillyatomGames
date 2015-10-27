@@ -112,40 +112,16 @@ public class TestDSPDungeon : MonoBehaviour
         }
 
         //create exit config
-        foreach (var item in _tree.data)
-        {
-            foreach (var connection in item.connectedNodes)
-            {
-                if (item.rect.center.x > connection.rect.center.x)
-                {
-                    connection.exitConfig.Add(ExitConfig.RIGHT);
-                    item.exitConfig.Add(ExitConfig.LEFT);
-                }
-                else if (item.rect.center.x < connection.rect.center.x)
-                {
-                    connection.exitConfig.Add(ExitConfig.LEFT);
-                    item.exitConfig.Add(ExitConfig.RIGHT);
-                }
-                else if (item.rect.center.y > connection.rect.center.y)
-                {
-                    connection.exitConfig.Add(ExitConfig.TOP);
-                    item.exitConfig.Add(ExitConfig.BOTTOM);
-                }
-                else if (item.rect.center.y < connection.rect.center.y)
-                {
-                    connection.exitConfig.Add(ExitConfig.BOTTOM);
-                    item.exitConfig.Add(ExitConfig.TOP);
-                }
-            }
-        }
+        BSPPathGenerator pathGenerator = new BSPPathGenerator();
+        pathGenerator.UpdatePathData(_tree.data);
 
         //create room mesh
-        foreach (var pack in _tree.data)
-        {
-            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, pack);
-            room.generateMesh();
-            room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
-        }
+        //foreach (var pack in _tree.data)
+        //{
+        //    Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, pack);
+        //    room.generateMesh();
+        //    room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
+        //}
     }
 
     BSPNode FindRoomWithId(int id)
@@ -250,16 +226,27 @@ public class TestDSPDungeon : MonoBehaviour
                     Gizmos.DrawCube(new Vector3(item.roomRect.center.x, 1, item.roomRect.center.y), new Vector3(item.roomRect.width, 1, item.roomRect.height));
 
                     //draw connections
-                    foreach (var connection in item.connectedNodes)
+                    for (int index = 0; index < item.connectingPositions.Count - 1; index += 2)
                     {
-                        Debug.DrawLine(new Vector3(item.rect.center.x, 5, item.rect.center.y), new Vector3(connection.rect.center.x, 5, connection.rect.center.y));
+                        Debug.DrawLine(item.connectingPositions[index], item.connectingPositions[index + 1]);
                     }
+                    //foreach (var connection in item.connectedNodes)
+                    //{
+                    //    Debug.DrawLine(new Vector3(item.rect.center.x, 5, item.rect.center.y), new Vector3(connection.rect.center.x, 5, connection.rect.center.y), Color.red);
+                    //}
 
                     //draw single exit node
                     if (item.hasSingleExit)
                     {
                         Gizmos.color = Color.white;
                         Gizmos.DrawCube(new Vector3(item.roomRect.center.x, 5, item.roomRect.center.y), new Vector3(item.roomRect.width * 0.25f, 5, item.roomRect.height * 0.25f));
+                    }
+
+                    //draw exit position
+                    foreach (var point in item.exitPositions)
+                    {
+                        Gizmos.color = Color.red;
+                        Gizmos.DrawCube(point, new Vector3(25.0f, 25.0f, 25.0f));
                     }
                 }
 
