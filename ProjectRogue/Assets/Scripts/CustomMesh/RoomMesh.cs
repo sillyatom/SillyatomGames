@@ -1,4 +1,12 @@
-﻿public class RoomMesh
+﻿public enum ExitConfig
+{
+    LEFT = 1,
+    RIGHT = 2,
+    TOP = 3,
+    BOTTOM = 4
+}
+
+public class RoomMesh
 {
     private RoomBorderMesh _borderMesh;
 
@@ -16,9 +24,9 @@
         set { _floorMesh = value; }
     }
 
-    public RoomMesh(int width, int height, int quadSize, int borderSize, int wallHeight)
+    public RoomMesh(int width, int height, int quadSize, int borderSize, int wallHeight, BSPNode data)
     {
-        _borderMesh = new RoomBorderMesh(width, height, quadSize, borderSize, wallHeight);
+        _borderMesh = new RoomBorderMesh(width, height, quadSize, borderSize, wallHeight, data);
         _borderMesh.Generate();
         _floorMesh = new FloorMesh(width, height, 4, borderSize, _borderMesh.getMap());
         _floorMesh.Generate();

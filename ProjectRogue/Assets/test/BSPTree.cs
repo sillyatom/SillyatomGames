@@ -3,25 +3,65 @@ using UnityEngine;
 
 public class BSPNode
 {
+    private List<BSPNode> _connectedNodes;
+    public List<BSPNode> connectedNodes
+    {
+        get { return _connectedNodes; }
+        set { _connectedNodes = value; }
+    }
+    private List<ExitConfig> _exitConfig;
+
+    public List<ExitConfig> exitConfig
+    {
+        get { return _exitConfig; }
+        set { _exitConfig = value; }
+    }
+
     public CustomRect rect { get; set; }
-    public BSPNode[] childNodes;
-    static int runningIndex = 0;
+    public bool hasSingleExit = false;
     public bool isBlocked = false;
+    public BSPNode[] childNodes;
+    public CustomRect roomRect;
+    public Color color;
+    public int regionId;
     public int id;
+
+    static int runningIndex = 0;
 
     public BSPNode()
     {
         rect = null;
+        regionId = -1;
+        roomRect = null;
         childNodes = null;
+        _exitConfig = new List<ExitConfig>();
+        _connectedNodes = new List<BSPNode>();
+        color = new Color(UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f);
     }
 
     public BSPNode(CustomRect rect)
     {
+        regionId = -1;
         this.rect = rect;
+        this.roomRect = null;
         childNodes = null;
         id = runningIndex++;
+        _exitConfig = new List<ExitConfig>();
+        _connectedNodes = new List<BSPNode>();
+        color = new Color(UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f, UnityEngine.Random.Range(0, 255) / 255.0f);
     }
 
+    public void AddConnection(BSPNode node)
+    {
+        foreach (var connection in _connectedNodes)
+        {
+            if (connection.id == node.id)
+            {
+                return;
+            }
+        }
+        _connectedNodes.Add(node);
+    }
     public float Area
     {
         get
@@ -160,6 +200,32 @@ public class BSPTree
         return false;
     }
 
+    private int FindNodeAtLevel(BSPNode node, CustomRect rect, ref int level)
+    {
+        if (node == null)
+        {
+            return 0;
+        }
+        if (rect.GetHashCode() == node.rect.GetHashCode())
+        {
+            return level;
+        }
+        level++;
+        int downLevel = FindNodeAtLevel(node.childNodes[0], rect, ref level);
+        if (downLevel != 0)
+        {
+            return downLevel;
+        }
+        level++;
+        downLevel = FindNodeAtLevel(node.childNodes[1], rect, ref level);
+        return downLevel;
+    }
+
+    public int FindNodeAtLevel(int level)
+    {
+        return FindNodeAtLevel(_root, _data[0].rect, ref level);
+    }
+
     private BSPNode FindNodeWithMoreArea(BSPNode node, ref BSPNode maxAreaNode)
     {
         if (node != null)
@@ -207,9 +273,76 @@ public class BSPTree
         }
     }
 
+    void GetNearbyNode(BSPNode from, BSPNode to, ref BSPNode selectedNode, ref float distance)
+    {
+        if (from.Area != 0)
+        {
+            float newDistance = (Vector2.Distance(from.rect.center, to.rect.center));
+            if (distance < 0 || newDistance < distance)
+            {
+                selectedNode = from;
+                distance = newDistance;
+            }
+        }
+        if (from.childNodes != null)
+        {
+            GetNearbyNode(from.childNodes[0], to, ref selectedNode, ref distance);
+            GetNearbyNode(from.childNodes[1], to, ref selectedNode, ref distance);
+        }
+    }
+
+    private void PrintConnections(BSPNode node)
+    {
+        if (node != null)
+        {
+            if (node.Area == 0)
+            {
+                if (node.childNodes != null)
+                {
+                    if (node.childNodes[0].Area != 0 && node.childNodes[1].Area != 0)
+                    {
+                        node.childNodes[0].AddConnection(node.childNodes[1]);
+                        //_connectionsData.Add(new Vector3(node.childNodes[0].rect.center.x, 5, node.childNodes[0].rect.center.y));
+                        //_connectionsData.Add(new Vector3(node.childNodes[1].rect.center.x, 5, node.childNodes[1].rect.center.y));
+                    }
+                    else if (node.childNodes[0].Area == 0 && node.childNodes[1].Area != 0)
+                    {
+                        BSPNode refNode = null;
+                        float refDistance = -1;
+                        GetNearbyNode(node.childNodes[0], node.childNodes[1], ref refNode, ref refDistance);
+                        refNode.AddConnection(node.childNodes[1]);
+                        //_connectionsData.Add(new Vector3(refNode.rect.center.x, 5, refNode.rect.center.y));
+                        //_connectionsData.Add(new Vector3(node.childNodes[1].rect.center.x, 5, node.childNodes[1].rect.center.y));
+                    }
+                    else if (node.childNodes[1].Area == 0 && node.childNodes[0].Area != 0)
+                    {
+                        BSPNode refNode = null;
+                        float refDistance = -1;
+                        GetNearbyNode(node.childNodes[1], node.childNodes[0], ref refNode, ref refDistance);
+                        refNode.AddConnection(node.childNodes[0]);
+                        //_connectionsData.Add(new Vector3(refNode.rect.center.x, 5, refNode.rect.center.y));
+                        //_connectionsData.Add(new Vector3(node.childNodes[0].rect.center.x, 5, node.childNodes[0].rect.center.y));
+                    }
+                    int length = node.childNodes.Length;
+
+                    for (int index = 0; index < length; index++)
+                    {
+                        PrintConnections(node.childNodes[index]);
+                    }
+                }
+            }
+        }
+    }
+
+    private void PrintLevelConnections(BSPNode node, ref int level)
+    {
+    }
+
     public void PrintTree()
     {
         _data.Clear();
+
         Print(_root);
+        PrintConnections(_root);
     }
 }

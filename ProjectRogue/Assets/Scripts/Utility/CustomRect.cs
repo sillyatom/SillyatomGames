@@ -57,4 +57,9 @@ public class CustomRect
             return new CustomRect();
         }
     }
+
+    public static CustomRect operator *(CustomRect rect, float multiplier)
+    {
+        return new CustomRect(rect.x + (rect.width * (1.0f - multiplier) * 0.5f), rect.y + (rect.height * (1.0f - multiplier) * 0.5f), rect.width * multiplier, rect.height * multiplier);
+    }
 }
