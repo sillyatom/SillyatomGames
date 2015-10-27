@@ -3,6 +3,29 @@ using UnityEngine;
 
 public class BSPNode : IRoomInterface
 {
+    private List<BSPNode> _connectedNodes;
+    public List<BSPNode> connectedNodes
+    {
+        get { return _connectedNodes; }
+        set { _connectedNodes = value; }
+    }
+    private List<ExitConfig> _exitConfig;
+
+    public List<ExitConfig> exitConfig
+    {
+        get { return _exitConfig; }
+        set { _exitConfig = value; }
+    }
+
+    public CustomRect rect { get; set; }
+    public bool hasSingleExit { get; set; }
+    public bool isBlocked { get; set; }
+    public BSPNode[] childNodes { get; set; }
+    public CustomRect roomRect { get; set; }
+    public Color color { get; set; }
+    public int regionId { get; set; }
+    public int id { get; set; }
+
     static int runningIndex = 0;
 
     public BSPNode()

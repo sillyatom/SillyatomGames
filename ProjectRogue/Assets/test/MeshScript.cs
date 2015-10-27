@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class MeshScript : MonoBehaviour
 {
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         gameObject.AddComponent<MeshFilter>();
         gameObject.AddComponent<MeshRenderer>();
@@ -25,8 +23,8 @@ public class MeshScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
-	
-	}
+
+    }
 }

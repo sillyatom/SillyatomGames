@@ -1,16 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class IRoomInterface
+public interface IRoomInterface
 {
-    public List<BSPNode> connectedNodes;
-    public List<ExitConfig> exitConfig;
-    public CustomRect rect { get; set; }
-    public bool hasSingleExit = false;
-    public bool isBlocked = false;
-    public BSPNode[] childNodes;
-    public CustomRect roomRect;
-    public Color color;
-    public int regionId;
-    public int id;
+    int id { get; set; }
+    Color color { get; set; }
+    int regionId { get; set; }
+    bool isBlocked { get; set; }
+    CustomRect rect { get; set; }
+    bool hasSingleExit { get; set; }
+    CustomRect roomRect { get; set; }
+    List<ExitConfig> exitConfig { get; set; }
 }
