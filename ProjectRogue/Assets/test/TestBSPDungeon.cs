@@ -279,7 +279,7 @@ public class TestBSPDungeon : MonoBehaviour
                     {
                     	for (int col = 0; col < map.GetLength(1); col++)
                     	{
-                    		Gizmos.DrawWireCube(new Vector3(room.packData.rect.x + row * room.quadSize, 5, room.packData.rect.y + col * room.quadSize), new Vector3(room.quadSize, 1, room.quadSize));
+							Gizmos.DrawWireCube(new Vector3(room.packData.rect.x + row * room.quadSize + room.quadSize/2, 5, room.packData.rect.y + col * room.quadSize + room.quadSize/2), new Vector3(room.quadSize, 1, room.quadSize));
                     	}
                     }
                 }
