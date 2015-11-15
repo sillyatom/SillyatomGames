@@ -156,7 +156,6 @@ public class BSPTree
 
         // To-Do update the seed each run
         int seed = "sillyatom".GetHashCode() + UnityEngine.Random.Range(0, 10000);
-        seed = 1180484270;
         _randomGen = new System.Random(seed);
         Debug.Log(" Seed " + seed);
 

@@ -23,10 +23,27 @@ public class TestBSPDungeon : MonoBehaviour
 	public bool showSingleExit = false;
 	public bool showConnection = false;
 	public bool showDebugRoom = false;
+	public bool generateMesh = false;
     
     BSPTree _tree;
     List<Room> _rooms;
     Dictionary<int, List<BSPNode>> regions;
+    
+    void Update()
+    {
+    	if (Input.GetMouseButtonUp(0))
+    	{
+    		if (_rooms != null)
+    		{
+    			foreach (var room in _rooms) 
+    			{
+    				Destroy(room.gameObject);
+    			}
+    			_rooms.Clear();
+    		}
+    		Start();
+    	}
+    }
     
     void Start()
     {
@@ -123,13 +140,16 @@ public class TestBSPDungeon : MonoBehaviour
         pathGenerator.UpdatePathData(_tree.data);
 
         //create room mesh
-        _rooms = new List<Room>();
-        foreach (var pack in _tree.data)
+        if (generateMesh)
         {
-            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, pack);
-            room.generateMesh();
-            room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
-            _rooms.Add(room);
+	        _rooms = new List<Room>();
+	        foreach (var pack in _tree.data)
+	        {
+	            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, pack);
+	            room.generateMesh();
+	            room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
+	            _rooms.Add(room);
+	        }
         }
     }
 
@@ -261,13 +281,12 @@ public class TestBSPDungeon : MonoBehaviour
 						{
 							Gizmos.color = Color.red;
 							Gizmos.DrawCube(point, new Vector3(25.0f, 25.0f, 25.0f));
-							Debug.Log(point);
 						}
                     }
                 }
             }
             
-            if (drawGirds && _rooms.Count > 1)
+            if (drawGirds && _rooms != null)
             {
                 foreach (Room room in _rooms)
                 {
