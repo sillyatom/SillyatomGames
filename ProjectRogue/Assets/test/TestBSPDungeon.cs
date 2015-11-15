@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class TestDSPDungeon : MonoBehaviour
+public class TestBSPDungeon : MonoBehaviour
 {
     public int width = 2000;
     public int height = 2000;
@@ -18,12 +18,19 @@ public class TestDSPDungeon : MonoBehaviour
 
     public int numOfPacks = 8;
 
+	public bool drawGirds = false;
+	public bool showExitPositions = false;
+	public bool showSingleExit = false;
+	public bool showConnection = false;
+	public bool showDebugRoom = false;
+    
     BSPTree _tree;
+    List<Room> _rooms;
     Dictionary<int, List<BSPNode>> regions;
-
+    
     void Start()
     {
-        _tree = new BSPTree(0, 0, width, height, minWidth, minHeight, maxWidth, maxHeight);
+        _tree = new BSPTree(0, 0, width, height, minWidth, minHeight, maxWidth, maxHeight, quadSize);
 
         int roomsCreated = 0;
         while (roomsCreated != numOfPacks)
@@ -116,12 +123,14 @@ public class TestDSPDungeon : MonoBehaviour
         pathGenerator.UpdatePathData(_tree.data);
 
         //create room mesh
-        //foreach (var pack in _tree.data)
-        //{
-        //    Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, pack);
-        //    room.generateMesh();
-        //    room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
-        //}
+        _rooms = new List<Room>();
+        foreach (var pack in _tree.data)
+        {
+            Room room = new Room("Prefabs/Room", Mathf.CeilToInt(pack.rect.width), Mathf.CeilToInt(pack.rect.height), quadSize, borderSize, wallHeight, pack);
+            room.generateMesh();
+            room.gameObject.transform.position = new Vector3(pack.rect.x, 1, pack.rect.y);
+            _rooms.Add(room);
+        }
     }
 
     BSPNode FindRoomWithId(int id)
@@ -215,41 +224,65 @@ public class TestDSPDungeon : MonoBehaviour
             {
                 foreach (var item in _tree.data)
                 {
-                    DrawNodeRect(item.rect, Color.red);
-
-                    UnityEditor.Handles.BeginGUI();
-                    UnityEditor.Handles.color = Color.black;
-                    UnityEditor.Handles.Label(new Vector3(item.rect.center.x, 1, item.rect.center.y), item.id.ToString());
-                    UnityEditor.Handles.EndGUI();
-
-                    Gizmos.color = item.color;
-                    Gizmos.DrawCube(new Vector3(item.roomRect.center.x, 1, item.roomRect.center.y), new Vector3(item.roomRect.width, 1, item.roomRect.height));
-
+                	//draw debug room
+                	if (showDebugRoom)
+                	{
+	                    DrawNodeRect(item.rect, Color.red);
+	
+	                    UnityEditor.Handles.BeginGUI();
+	                    UnityEditor.Handles.color = Color.black;
+	                    UnityEditor.Handles.Label(new Vector3(item.rect.center.x, 1, item.rect.center.y), item.id.ToString());
+	                    UnityEditor.Handles.EndGUI();
+	
+	                    Gizmos.color = item.color;
+	                    Gizmos.DrawCube(new Vector3(item.roomRect.center.x, 1, item.roomRect.center.y), new Vector3(item.roomRect.width, 1, item.roomRect.height));
+					}
+					
                     //draw connections
-                    for (int index = 0; index < item.connectingPositions.Count - 1; index += 2)
+                    if (showConnection)
                     {
-                        Debug.DrawLine(item.connectingPositions[index], item.connectingPositions[index + 1]);
+	                    for (int index = 0; index < item.connectingPositions.Count - 1; index += 2)
+	                    {
+	                        Debug.DrawLine(item.connectingPositions[index], item.connectingPositions[index + 1]);
+	                    }
                     }
-                    //foreach (var connection in item.connectedNodes)
-                    //{
-                    //    Debug.DrawLine(new Vector3(item.rect.center.x, 5, item.rect.center.y), new Vector3(connection.rect.center.x, 5, connection.rect.center.y), Color.red);
-                    //}
-
+                    
                     //draw single exit node
-                    if (item.hasSingleExit)
+					if (showSingleExit && item.hasSingleExit)
                     {
                         Gizmos.color = Color.white;
                         Gizmos.DrawCube(new Vector3(item.roomRect.center.x, 5, item.roomRect.center.y), new Vector3(item.roomRect.width * 0.25f, 5, item.roomRect.height * 0.25f));
                     }
 
                     //draw exit position
-                    foreach (var point in item.exitPositions)
+                    if (showExitPositions)
                     {
-                        Gizmos.color = Color.red;
-                        Gizmos.DrawCube(point, new Vector3(25.0f, 25.0f, 25.0f));
+						foreach (var point in item.exitPositions)
+						{
+							Gizmos.color = Color.red;
+							Gizmos.DrawCube(point, new Vector3(25.0f, 25.0f, 25.0f));
+							Debug.Log(point);
+						}
                     }
                 }
-
+            }
+            
+            if (drawGirds && _rooms.Count > 1)
+            {
+                foreach (Room room in _rooms)
+                {
+                    Gizmos.color = Color.white;
+                    
+                    int[,] map = room.meshData.roomBorderMesh.getMap();
+                    
+                    for (int row = 0; row < map.GetLength(0); row++)
+                    {
+                    	for (int col = 0; col < map.GetLength(1); col++)
+                    	{
+                    		Gizmos.DrawWireCube(new Vector3(room.packData.rect.x + row * room.quadSize, 5, room.packData.rect.y + col * room.quadSize), new Vector3(room.quadSize, 1, room.quadSize));
+                    	}
+                    }
+                }
             }
         }
     }

@@ -22,6 +22,9 @@ class Room
 
     private IRoomInterface _roomData;
 
+	public IRoomInterface packData {get{
+		return _roomData;
+	}}
     public RoomMesh meshData { get; set; }
 
     public Room(string prefab, int width, int height, int quadSize, int borderSize, int wallHeight, IRoomInterface data)

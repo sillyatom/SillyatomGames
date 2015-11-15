@@ -28,6 +28,7 @@ public class BSPPathGenerator : IPathGenerator
         room.connectingPositions.Add(vec1);
         room.connectingPositions.Add(vec2);
         room.exitPositions.Add(intersectionPt);
+        connection.exitPositions.Add(intersectionPt);
     }
 
     void ConnectHorizontally(BSPNode connection, BSPNode room, ExitConfig config)
@@ -49,6 +50,7 @@ public class BSPPathGenerator : IPathGenerator
         Vector3 intersectionPt = GetLineIntersection(config, room.rect, vec1, vec2);
         room.connectingPositions.Add(vec1);
         room.connectingPositions.Add(vec2);
+        connection.exitPositions.Add(intersectionPt);
         room.exitPositions.Add(intersectionPt);
     }
 
@@ -72,6 +74,7 @@ public class BSPPathGenerator : IPathGenerator
                         Vector3 intersectionPt = GetLineIntersection(ExitConfig.LEFT, connection.rect, room.rect);
                         room.connectingPositions.Add(new Vector3(connection.rect.center.x, 5, connection.rect.center.y));
                         room.connectingPositions.Add(new Vector3(room.rect.center.x, 5, room.rect.center.y));
+        				connection.exitPositions.Add(intersectionPt);
                         room.exitPositions.Add(intersectionPt);
                     }
                 }
@@ -89,6 +92,7 @@ public class BSPPathGenerator : IPathGenerator
                         Vector3 intersectionPt = GetLineIntersection(ExitConfig.RIGHT, connection.rect, room.rect);
                         room.connectingPositions.Add(new Vector3(connection.rect.center.x, 5, connection.rect.center.y));
                         room.connectingPositions.Add(new Vector3(room.rect.center.x, 5, room.rect.center.y));
+        				connection.exitPositions.Add(intersectionPt);
                         room.exitPositions.Add(intersectionPt);
                     }
                 }
@@ -105,7 +109,8 @@ public class BSPPathGenerator : IPathGenerator
                         Vector3 intersectionPt = GetLineIntersection(ExitConfig.TOP, connection.rect, room.rect);
                         room.connectingPositions.Add(new Vector3(connection.rect.center.x, 5, connection.rect.center.y));
                         room.connectingPositions.Add(new Vector3(room.rect.center.x, 5, room.rect.center.y));
-                        room.exitPositions.Add(intersectionPt);
+						room.exitPositions.Add(intersectionPt);
+						connection.exitPositions.Add(intersectionPt);
                     }
                 }
                 else if (IsConnectionOnBottom(connection.rect, room.rect))
@@ -122,6 +127,7 @@ public class BSPPathGenerator : IPathGenerator
                         room.connectingPositions.Add(new Vector3(connection.rect.center.x, 5, connection.rect.center.y));
                         room.connectingPositions.Add(new Vector3(room.rect.center.x, 5, room.rect.center.y));
                         room.exitPositions.Add(intersectionPt);
+						connection.exitPositions.Add(intersectionPt);
                     }
                 }
             }

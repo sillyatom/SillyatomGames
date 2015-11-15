@@ -132,11 +132,13 @@ public class BSPTree
 
     private float _maxWidth;
     private float _maxHeight;
+    
+    private int _quadSize;
 
     private System.Random _randomGen;
     private List<BSPNode> _data;
 
-    public BSPTree(float x, float y, float width, float height, float minWidth, float minHeight, float maxWidth, float maxHeight)
+    public BSPTree(float x, float y, float width, float height, float minWidth, float minHeight, float maxWidth, float maxHeight, int quadSize)
     {
         _root = null;
         _data = new List<BSPNode>();
@@ -149,6 +151,8 @@ public class BSPTree
 
         _minHeight = minHeight;
         _maxHeight = maxHeight;
+        
+        _quadSize = quadSize;
 
         // To-Do update the seed each run
         int seed = "sillyatom".GetHashCode() + UnityEngine.Random.Range(0, 10000);
@@ -196,6 +200,8 @@ public class BSPTree
             return false;
         }
         selectedValue = _randomGen.Next(minValue, maxValue);
+        selectedValue -= selectedValue % _quadSize;
+        
         if (!node.SplitAt(selectedValue, randDir, _minWidth, _minHeight))
         {
             return false;
