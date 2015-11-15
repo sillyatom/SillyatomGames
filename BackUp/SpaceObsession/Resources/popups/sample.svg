@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="480px" height="320px" viewBox="0 0 480 320" enable-background="new 0 0 480 320" xml:space="preserve">
+<g>
+	<text transform="matrix(1 0 0 1 231.8477 270.0002)" font-family="'MyriadPro-Regular'" font-size="12">type:img</text>
+	<text transform="matrix(1 0 0 1 231.8477 280.9788)" font-family="'MyriadPro-Regular'" font-size="12">ui</text>
+	<text transform="matrix(1 0 0 1 231.8477 259.2395)" font-family="'MyriadPro-Regular'" font-size="12">zOrder:1</text>
+	
+		<image overflow="visible" width="480" height="320" xlink:href="leveloutro_bg.png"  transform="matrix(0.7377 0 0 0.5634 62.9561 69.8538)">
+	</image>
+</g>
+<g>
+	<rect x="102.957" y="207.803" fill="none" stroke="#000000" stroke-miterlimit="10" width="37.5" height="26.087"/>
+	<text transform="matrix(1 0 0 1 106.5444 224.6497)" font-family="'MyriadPro-Regular'" font-size="12">tag:1</text>
+	<text transform="matrix(1 0 0 1 105.6528 206.7375)" font-family="'MyriadPro-Regular'" font-size="12">type:btn</text>
+	<text transform="matrix(1 0 0 1 105.6528 217.718)" font-family="'MyriadPro-Regular'" font-size="12">ui</text>
+	<text transform="matrix(1 0 0 1 105.6528 195.9778)" font-family="'MyriadPro-Regular'" font-size="12">zOrder:2</text>
+</g>
+<g>
+	<rect x="338.818" y="207.587" fill="none" stroke="#000000" stroke-miterlimit="10" width="37.5" height="26.087"/>
+	<text transform="matrix(1 0 0 1 346.4053 224.4338)" font-family="'MyriadPro-Regular'" font-size="12">tag:2</text>
+	<text transform="matrix(1 0 0 1 345.5137 206.5217)" font-family="'MyriadPro-Regular'" font-size="12">type:btn</text>
+	<text transform="matrix(1 0 0 1 345.5137 217.5022)" font-family="'MyriadPro-Regular'" font-size="12">ui</text>
+	<text transform="matrix(1 0 0 1 345.5137 195.762)" font-family="'MyriadPro-Regular'" font-size="12">zOrder:3</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 207.834 133.8333)" font-family="'MyriadPro-Regular'" font-size="8">val:Score  </text>
+	<text transform="matrix(1 0 0 1 213.167 144.5002)" font-family="'MyriadPro-Regular'" font-size="8">ui</text>
+	<text transform="matrix(1 0 0 1 226.5005 143.1672)" font-family="'MyriadPro-Regular'" font-size="12">zOrder</text>
+	<text transform="matrix(1 0 0 1 260.5332 143.1672)" font-family="'MyriadPro-Regular'" font-size="8">:4</text>
+	<text transform="matrix(1 0 0 1 215.834 153.1672)" font-family="'MyriadPro-Regular'" font-size="8">type:txt</text>
+	<rect x="132" y="93.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="96.834" height="24.39"/>
+	<text transform="matrix(1 0 0 1 220.2539 169.1672)" font-family="'MyriadPro-Regular'" font-size="8">fontSize:10</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 277.834 133.8333)" font-family="'MyriadPro-Regular'" font-size="8">val:Score  </text>
+	<text transform="matrix(1 0 0 1 283.167 144.5002)" font-family="'MyriadPro-Regular'" font-size="8">ui</text>
+	<text transform="matrix(1 0 0 1 296.5 143.1672)" font-family="'MyriadPro-Regular'" font-size="12">zOrder</text>
+	<text transform="matrix(1 0 0 1 330.5313 143.1672)" font-family="'MyriadPro-Regular'" font-size="8">:5</text>
+	<text transform="matrix(1 0 0 1 285.834 153.1672)" font-family="'MyriadPro-Regular'" font-size="8">type:dyntxt</text>
+	<rect x="236.957" y="93.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="104.043" height="24.39"/>
+	<text transform="matrix(1 0 0 1 285.834 166.6672)" font-family="'MyriadPro-Regular'" font-size="8">fontSize:10</text>
+</g>
+</svg>

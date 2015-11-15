@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="480px" height="320px" viewBox="0 0 480 320" enable-background="new 0 0 480 320" xml:space="preserve">
+<g>
+	<rect x="63.363" y="89.308" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="354.087" height="180.292"/>
+	<text transform="matrix(1 0 0 1 232.2539 289.4543)" font-family="'MyriadPro-Regular'" font-size="12">type:img</text>
+	<text transform="matrix(1 0 0 1 232.2539 300.4329)" font-family="'MyriadPro-Regular'" font-size="12">ui</text>
+	<text transform="matrix(1 0 0 1 232.2539 278.6936)" font-family="'MyriadPro-Regular'" font-size="12">zOrder:1</text>
+</g>
+<g>
+	<rect x="181.602" y="224.261" fill="none" stroke="#000000" stroke-miterlimit="10" width="109.898" height="26.087"/>
+	<text transform="matrix(1 0 0 1 221.3882 241.1077)" font-family="'MyriadPro-Regular'" font-size="12">tag:1</text>
+	<text transform="matrix(1 0 0 1 220.4966 223.1956)" font-family="'MyriadPro-Regular'" font-size="12">type:btn</text>
+	<text transform="matrix(1 0 0 1 220.4966 234.176)" font-family="'MyriadPro-Regular'" font-size="12">ui</text>
+	<text transform="matrix(1 0 0 1 220.4966 212.4358)" font-family="'MyriadPro-Regular'" font-size="12">zOrder:2</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 228.334 172.8333)" font-family="'MyriadPro-Regular'" font-size="8">val:Remove all the green balls, avoid red balls</text>
+	<text transform="matrix(1 0 0 1 218.5 172.8333)" font-family="'MyriadPro-Regular'" font-size="8">ui</text>
+	<text transform="matrix(1 0 0 1 212.2544 182.1672)" enable-background="new    "><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="12">zOrder</tspan><tspan x="34.032" y="0" font-family="'MyriadPro-Regular'" font-size="8">:3</tspan></text>
+	<text transform="matrix(1 0 0 1 232.2539 192.1672)" font-family="'MyriadPro-Regular'" font-size="8">type:txt</text>
+	<rect x="91" y="109.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="303.5" height="54.39"/>
+	<text transform="matrix(1 0 0 1 257.2539 182.1672)" font-family="'MyriadPro-Regular'" font-size="8">fontSize:10</text>
+</g>
+</svg>
