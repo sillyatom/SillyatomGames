@@ -29,21 +29,21 @@ public class TestBSPDungeon : MonoBehaviour
     List<Room> _rooms;
     Dictionary<int, List<BSPNode>> regions;
     
-    void Update()
-    {
-    	if (Input.GetMouseButtonUp(0))
-    	{
-    		if (_rooms != null)
-    		{
-    			foreach (var room in _rooms) 
-    			{
-    				Destroy(room.gameObject);
-    			}
-    			_rooms.Clear();
-    		}
-    		Start();
-    	}
-    }
+    //void Update()
+    //{
+    //	if (Input.GetMouseButtonUp(0))
+    //	{
+    //		if (_rooms != null)
+    //		{
+    //			foreach (var room in _rooms) 
+    //			{
+    //				Destroy(room.gameObject);
+    //			}
+    //			_rooms.Clear();
+    //		}
+    //		Start();
+    //	}
+    //}
     
     void Start()
     {
