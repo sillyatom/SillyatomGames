@@ -42,7 +42,7 @@ public class PlayerIOManager : MonoBehaviour
 		client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
 		
 		//Create or Join Room
-		client.Multiplayer.CreateJoinRoom(null, "TestRoomType", true, null, null, OnCreateJoinRoomSuccess, OnCreateJoinRoomFail);
+		client.Multiplayer.CreateJoinRoom(null, "bounce", true, null, null, OnCreateJoinRoomSuccess, OnCreateJoinRoomFail);
 	}
 	
 	void OnCreateJoinRoomSuccess(Connection connection)
