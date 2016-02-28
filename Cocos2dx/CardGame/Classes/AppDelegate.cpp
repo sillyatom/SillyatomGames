@@ -1,8 +1,8 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "Scenes/MainScreen.h"
 
 USING_NS_CC;
-
+#define COCOS2D_DEBUG 1
 AppDelegate::AppDelegate() {
 
 }
@@ -41,8 +41,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     FileUtils::getInstance()->addSearchPath("res");
 
+	//cache sprite frames
+	std::string filename = std::string("spritesheets/atlas1");
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(filename + (".plist"));
+	SpriteBatchNode * batchNode = SpriteBatchNode::create(filename + (".png"));
+	
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = MainScreen::createScene();
 
     // run
     director->runWithScene(scene);
