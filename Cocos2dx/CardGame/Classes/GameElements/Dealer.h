@@ -13,7 +13,10 @@ private:
 	std::vector<Card*> _deck;
 	void initDeck();
 public:
-	CREATE_FUNC(Dealer);
+    CREATE_FUNC(Dealer);
+    
+    int getDeckSize(){ return _deck.size(); }
+    Card * getCard();
 	virtual bool init();
 	void resetDeck();
 	void shuffleDeck();

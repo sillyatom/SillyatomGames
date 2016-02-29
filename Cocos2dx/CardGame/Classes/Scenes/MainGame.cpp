@@ -16,16 +16,96 @@ bool MainGame::init()
 		return false;
 	}
 
-    auto rootNode = CSLoader::createNode("MainGame.csb");
-	addChild(rootNode);
+    _rootNode = CSLoader::createNode("MainGame.csb");
+	addChild(_rootNode);
 
-	_dealer = Dealer::create();
-	addChild(_dealer);
-	_dealer->retain();
-	_dealer->resetDeck();
-	_dealer->shuffleDeck();
-
+    numPlayers = 4;
+    
+    createDealer();
+    createPlayers();
+    
+    hideWidgets();
+    
+    startGameCountDownTimer();
+    
 	return true;
+}
+
+void MainGame::hideWidgets()
+{
+    for (auto player : _players)
+    {
+        int playerIndex = player->getPlayerIndex() + 1;
+        std::ostringstream oss;
+        oss << "refCardPos_player" << playerIndex;
+        ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
+        refPos->setVisible(false);
+    }
+}
+
+void MainGame::startGame(float dt)
+{
+    distributeCards();
+}
+
+void MainGame::startGameCountDownTimer()
+{
+    scheduleOnce(schedule_selector(MainGame::startGame), 1.0f);
+}
+
+void MainGame::createPlayers()
+{
+    for (int index = 0; index < numPlayers; index++)
+    {
+        Player * player = Player::create();
+        addChild(player);
+        player->setPlayerIndex(index);
+        _players.push_back(player);
+    }
+}
+
+void MainGame::distributeCards()
+{
+    int len = _dealer->getDeckSize();
+    for (int index = 0; index < len; index++)
+    {
+        _players.at((index%numPlayers))->addCard(_dealer->getCard());
+    }
+    
+    for (auto player : _players)
+    {
+        int playerIndex = player->getPlayerIndex() + 1;
+        std::ostringstream oss;
+        oss << "refCardPos_player" << playerIndex;
+        ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
+        refPos->setVisible(false);
+        Vec2 refPosition = refPos->getPosition();
+        float delayTime = 0.0f;
+        for (auto card : player->getCards())
+        {
+            card->moveToPosition(refPosition, delayTime);
+            card->setLocalZOrder(playerIndex);
+            if (playerIndex == 1 || playerIndex == 4)
+            {
+                refPosition.x += GameConstants::SPACE_BETWEEN_CARDS;
+            }
+            else
+            {
+                refPosition.x -= GameConstants::SPACE_BETWEEN_CARDS;
+            }
+            delayTime += 1.0f;
+        }
+    }
+}
+
+void MainGame::createDealer()
+{
+    _dealer = Dealer::create();
+    addChild(_dealer);
+    
+    _dealer->retain();
+    _dealer->resetDeck();
+    _dealer->shuffleDeck();
 }
 
 void MainGame::testFn()

@@ -31,6 +31,17 @@ void Dealer::initDeck()
 	}
 }
 
+Card * Dealer::getCard()
+{
+    Card * card = nullptr;
+    if (_deck.size() > 0)
+    {
+        card = _deck.back();
+        _deck.pop_back();
+    }
+    return card;
+}
+
 void Dealer::resetDeck()
 {
 	initDeck();
@@ -42,9 +53,5 @@ void Dealer::shuffleDeck()
 	for (int i = 0; i < GameConstants::CARD_TYPES.size()*GameConstants::CARD_VALUES.size(); i++)
 	{
 		std::shuffle(std::begin(_deck), std::end(_deck), engine);
-	}
-	for (std::vector<Card*>::iterator iter = _deck.begin(); iter != _deck.end(); iter++)
-	{
-		CCLOG(" val : %s type : %s ", (*iter)->getCardValue().c_str(), (*iter)->getCardType().c_str());
 	}
 }

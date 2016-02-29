@@ -3,8 +3,23 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Image Name="HelloWorld.png" />
-        <Project Name="MainScene.csd" Type="Scene" />
+        <Folder Name="btns">
+          <Image Name="cancelbtn.png" />
+          <Image Name="creditsbtn.png" />
+          <Image Name="leaderboardbtn.png" />
+          <Image Name="mainplaybtn.png" />
+          <Image Name="menubtn.png" />
+          <Image Name="noadsbtn.png" />
+          <Image Name="okbtn.png" />
+          <Image Name="restorebtn.png" />
+          <Image Name="retrybtn.png" />
+        </Folder>
+        <Folder Name="images">
+          <Image Name="defaultDp.png" />
+        </Folder>
+        <Project Name="MainGame.csd" Type="Scene" />
+        <Project Name="MainScreen.csd" Type="Scene" />
+        <Project Name="MenuScreen.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

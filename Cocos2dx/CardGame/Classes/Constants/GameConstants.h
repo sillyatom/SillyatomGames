@@ -26,5 +26,7 @@ public:
 
 	static const std::vector<std::string> CARD_VALUES;
 	static const std::vector<std::string> CARD_TYPES;
+    
+    static const float SPACE_BETWEEN_CARDS;
 };
 #endif // !_GAME_CONSTANTS_H_

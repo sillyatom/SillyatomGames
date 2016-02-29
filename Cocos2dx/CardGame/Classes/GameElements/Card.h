@@ -23,6 +23,8 @@ public:
 		_assetName = val + "-"+type+".png";
 		addBackFace();
 	}
+    
+    void moveToPosition(Vec2 position, float delayTime = 0.0f);
 
 	std::string getCardType() { return _cardType; }
 	std::string getCardValue() { return _cardValue; }

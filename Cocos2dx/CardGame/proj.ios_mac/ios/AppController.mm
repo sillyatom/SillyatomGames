@@ -92,8 +92,7 @@ static AppDelegate s_sharedApplication;
      name:PRESENT_AUTHENTICATION_VIEW_CONTROLLER
      object:nil];
     
-    [[GameKitHelper sharedGameKitHelper]
-     authenticateLocalPlayer];
+    //[[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
 
     app->run();
 
