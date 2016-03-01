@@ -1,28 +1,26 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
-#include "cocos2d.h"
-#include "cocosGUI.h"
-
 #include "../GameElements/Card.h"
 #include "../GameElements/Player.h"
 #include "../GameElements/Dealer.h"
-
-#include "cocostudio/CocoStudio.h"
+#include "../Ext/ExtLayer.h"
+#include "../Handlers/CardSelectionHandler.h"
 
 USING_NS_CC;
 
-class MainGame : public cocos2d::Layer
+class MainGame : public ExtLayer
 {
 private:
     int numPlayers;
-
+    
+    CardSelectionHandler * _cardSelectionHandler;
+    
     Node * _rootNode;
+    Dealer * _dealer;
     
     std::vector<Card*> _cards;
 	std::vector<Player*> _players;
-
-	Dealer * _dealer;
 
     void startGameCountDownTimer();
     void createPlayers();
@@ -30,8 +28,14 @@ private:
     void distributeCards();
     void startGame(float dt);
     void hideWidgets();
+    void updateCardConfigFromCSB();
+//    void testFn();
+protected:
+    virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
+    virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
+    virtual void onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event);
+    virtual void onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event);
     
-    void testFn();
 public:
 	CREATE_FUNC(MainGame);
 	static Scene * createScene();

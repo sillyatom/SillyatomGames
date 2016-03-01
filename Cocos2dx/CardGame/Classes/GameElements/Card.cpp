@@ -20,8 +20,30 @@ void Card::addBackFace()
 
 void Card::moveToPosition(cocos2d::Vec2 position, float delayTime)
 {
+    _startPosition = position;
+    
     FiniteTimeAction * delay = DelayTime::create(delayTime);
     FiniteTimeAction * move = MoveTo::create(1.0f, position);
     
     runAction(Sequence::create(delay, move, NULL));
+}
+
+bool Card::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+    return false;
+}
+
+void Card::onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+    
+}
+
+void Card::onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+    
+}
+
+void Card::onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event)
+{
+    
 }

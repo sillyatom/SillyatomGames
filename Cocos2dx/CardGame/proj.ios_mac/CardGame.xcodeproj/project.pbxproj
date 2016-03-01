@@ -58,6 +58,9 @@
 		830668E11C834DFD00FF05D8 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668DE1C834DFD00FF05D8 /* Player.cpp */; };
 		830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E21C834E0600FF05D8 /* GameConstants.cpp */; };
 		830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E51C834E1000FF05D8 /* ExtSprite.cpp */; };
+		83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */; };
+		83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.cpp */; };
+		83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */; };
 		83E48B111C78CE1C005D13EE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E48B101C78CE1C005D13EE /* GameKit.framework */; };
 		83E48B1B1C78DB9F005D13EE /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E48B1A1C78DB9F005D13EE /* GameKitHelper.m */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -134,6 +137,12 @@
 		830668E31C834E0600FF05D8 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameConstants.h; path = Constants/GameConstants.h; sourceTree = "<group>"; };
 		830668E51C834E1000FF05D8 /* ExtSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExtSprite.cpp; path = Ext/ExtSprite.cpp; sourceTree = "<group>"; };
 		830668E61C834E1000FF05D8 /* ExtSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtSprite.h; path = Ext/ExtSprite.h; sourceTree = "<group>"; };
+		83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CardConfig.cpp; path = Config/CardConfig.cpp; sourceTree = "<group>"; };
+		83C9BC891C85D92A00E4AFC7 /* CardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardConfig.h; path = Config/CardConfig.h; sourceTree = "<group>"; };
+		83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExtLayer.cpp; path = Ext/ExtLayer.cpp; sourceTree = "<group>"; };
+		83C9BC8C1C85F37F00E4AFC7 /* ExtLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtLayer.h; path = Ext/ExtLayer.h; sourceTree = "<group>"; };
+		83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CardSelectionHandler.cpp; path = Handlers/CardSelectionHandler.cpp; sourceTree = "<group>"; };
+		83C9BC901C85FC0400E4AFC7 /* CardSelectionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardSelectionHandler.h; path = Handlers/CardSelectionHandler.h; sourceTree = "<group>"; };
 		83E48B101C78CE1C005D13EE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		83E48B191C78DB9F005D13EE /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameKitHelper.h; path = GameKitHelper/GameKitHelper.h; sourceTree = SOURCE_ROOT; };
 		83E48B1A1C78DB9F005D13EE /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameKitHelper.m; path = GameKitHelper/GameKitHelper.m; sourceTree = SOURCE_ROOT; };
@@ -271,6 +280,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				83C9BC8E1C85FBE800E4AFC7 /* Handlers */,
 				830668CF1C834DD900FF05D8 /* Scenes */,
 				830668CE1C834DCD00FF05D8 /* GameElements */,
 				830668CD1C834DB200FF05D8 /* Constants */,
@@ -335,6 +345,8 @@
 			children = (
 				830668E51C834E1000FF05D8 /* ExtSprite.cpp */,
 				830668E61C834E1000FF05D8 /* ExtSprite.h */,
+				83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.cpp */,
+				83C9BC8C1C85F37F00E4AFC7 /* ExtLayer.h */,
 			);
 			name = Ext;
 			sourceTree = "<group>";
@@ -351,6 +363,8 @@
 			children = (
 				830668E21C834E0600FF05D8 /* GameConstants.cpp */,
 				830668E31C834E0600FF05D8 /* GameConstants.h */,
+				83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */,
+				83C9BC891C85D92A00E4AFC7 /* CardConfig.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -379,6 +393,15 @@
 				830668D51C834DF300FF05D8 /* MenuScreen.h */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		83C9BC8E1C85FBE800E4AFC7 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */,
+				83C9BC901C85FC0400E4AFC7 /* CardSelectionHandler.h */,
+			);
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 		83E48B181C78DB86005D13EE /* GameKitHelper */ = {
@@ -529,10 +552,13 @@
 				830668E01C834DFD00FF05D8 /* Dealer.cpp in Sources */,
 				830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */,
 				83E48B1B1C78DB9F005D13EE /* GameKitHelper.m in Sources */,
+				83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */,
 				830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */,
 				830668E11C834DFD00FF05D8 /* Player.cpp in Sources */,
 				830668D71C834DF300FF05D8 /* MainScreen.cpp in Sources */,
+				83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.cpp in Sources */,
 				830668D81C834DF300FF05D8 /* MenuScreen.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,

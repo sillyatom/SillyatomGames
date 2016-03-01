@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <random>
+#include "../Config/CardConfig.h"
 
 bool Dealer::init()
 {
@@ -24,6 +25,7 @@ void Dealer::initDeck()
 			card->initData(GameConstants::CARD_VALUES[j], GameConstants::CARD_TYPES[i]);
 			card->initWithSpriteFrameName(card->getAssetName());
 			getParent()->addChild(card);
+            card->setScale(CardConfig::CARD_WIDTH / card->getContentSize().width, CardConfig::CARD_HEIGHT / card->getContentSize().height);
 			Size size = Director::getInstance()->getVisibleSize();
 			card->setPosition(size.width/2, size.height/2);
 			_deck.push_back(card);
@@ -54,4 +56,9 @@ void Dealer::shuffleDeck()
 	{
 		std::shuffle(std::begin(_deck), std::end(_deck), engine);
 	}
+}
+
+void Dealer::addDealtCardToDeck(Card *card)
+{
+    _deck.push_back(card);
 }

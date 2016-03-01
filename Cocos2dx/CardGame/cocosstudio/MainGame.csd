@@ -95,44 +95,44 @@
             <PrePosition X="0.9458" Y="0.0336" />
             <PreSize X="0.0875" Y="0.0359" />
           </AbstractNodeData>
-          <AbstractNodeData Name="refCardPos_player1" ActionTag="-1944453891" Tag="11" IconVisible="False" LeftMargin="98.5000" RightMargin="801.5000" TopMargin="117.9165" BottomMargin="422.0835" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="60.0000" Y="100.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="128.5000" Y="472.0835" />
+          <AbstractNodeData Name="refCardPos_player1" ActionTag="-1944453891" Tag="11" IconVisible="False" LeftMargin="93.5000" RightMargin="796.5000" TopMargin="117.9165" BottomMargin="422.0835" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="70.0000" Y="100.0000" />
+            <AnchorPoint ScaleX="0.5000" />
+            <Position X="128.5000" Y="422.0835" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1339" Y="0.7376" />
-            <PreSize X="0.0625" Y="0.1563" />
+            <PrePosition X="0.1339" Y="0.6595" />
+            <PreSize X="0.0729" Y="0.1563" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="refCardPos_player2" ActionTag="229169641" Tag="14" IconVisible="False" LeftMargin="802.5000" RightMargin="97.5000" TopMargin="113.5000" BottomMargin="426.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="60.0000" Y="100.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="832.5000" Y="476.5000" />
+          <AbstractNodeData Name="refCardPos_player2" ActionTag="229169641" Tag="14" IconVisible="False" LeftMargin="797.5000" RightMargin="92.5000" TopMargin="113.5000" BottomMargin="426.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="70.0000" Y="100.0000" />
+            <AnchorPoint ScaleX="0.5000" />
+            <Position X="832.5000" Y="426.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8672" Y="0.7445" />
-            <PreSize X="0.0625" Y="0.1563" />
+            <PrePosition X="0.8672" Y="0.6664" />
+            <PreSize X="0.0729" Y="0.1563" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="refCardPos_player3" ActionTag="1157071040" Tag="15" IconVisible="False" LeftMargin="802.5000" RightMargin="97.5000" TopMargin="502.5000" BottomMargin="37.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="60.0000" Y="100.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="832.5000" Y="87.5000" />
+          <AbstractNodeData Name="refCardPos_player3" ActionTag="1157071040" Tag="15" IconVisible="False" LeftMargin="797.5000" RightMargin="92.5000" TopMargin="502.5000" BottomMargin="37.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="70.0000" Y="100.0000" />
+            <AnchorPoint ScaleX="0.5000" />
+            <Position X="832.5000" Y="37.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8672" Y="0.1367" />
-            <PreSize X="0.0625" Y="0.1563" />
+            <PrePosition X="0.8672" Y="0.0586" />
+            <PreSize X="0.0729" Y="0.1563" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="refCardPos_player4" ActionTag="-101449767" Tag="16" IconVisible="False" LeftMargin="98.5000" RightMargin="801.5000" TopMargin="501.5000" BottomMargin="38.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="60.0000" Y="100.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="128.5000" Y="88.5000" />
+          <AbstractNodeData Name="refCardPos_player4" ActionTag="-101449767" Tag="16" IconVisible="False" LeftMargin="93.5000" RightMargin="796.5000" TopMargin="501.5000" BottomMargin="38.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="70.0000" Y="100.0000" />
+            <AnchorPoint ScaleX="0.4929" />
+            <Position X="128.0000" Y="38.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1339" Y="0.1383" />
-            <PreSize X="0.0625" Y="0.1563" />
+            <PrePosition X="0.1333" Y="0.0602" />
+            <PreSize X="0.0729" Y="0.1563" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
         </Children>

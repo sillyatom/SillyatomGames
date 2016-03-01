@@ -15,9 +15,12 @@ private:
 public:
     CREATE_FUNC(Dealer);
     
+    void addDealtCardToDeck(Card * card);
+    
     int getDeckSize(){ return _deck.size(); }
     Card * getCard();
-	virtual bool init();
+
+    virtual bool init();
 	void resetDeck();
 	void shuffleDeck();
 };

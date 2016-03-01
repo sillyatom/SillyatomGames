@@ -12,7 +12,16 @@ private:
 	std::string _assetName;
 	Sprite * backFace;
 
-	void addBackFace();
+    Vec2 _startPosition;
+    
+    void addBackFace();
+
+protected:
+    virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
+    virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
+    virtual void onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event);
+    virtual void onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event);
+
 public:
 	CREATE_FUNC(Card);
 	virtual bool init();
@@ -25,7 +34,7 @@ public:
 	}
     
     void moveToPosition(Vec2 position, float delayTime = 0.0f);
-
+    Vec2 getStartPosition() { return _startPosition; }
 	std::string getCardType() { return _cardType; }
 	std::string getCardValue() { return _cardValue; }
 	std::string getAssetName() { return _assetName; }
