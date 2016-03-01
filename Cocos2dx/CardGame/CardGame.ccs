@@ -20,6 +20,7 @@
         <Project Name="MainGame.csd" Type="Scene" />
         <Project Name="MainScreen.csd" Type="Scene" />
         <Project Name="MenuScreen.csd" Type="Scene" />
+        <Project Name="testScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
