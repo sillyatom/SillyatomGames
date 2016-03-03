@@ -26,6 +26,7 @@
 #import "RootViewController.h"
 #import "cocos2d.h"
 #import "platform/ios/CCEAGLView-ios.h"
+#import "../../Classes/Network/NetworkConstants.h"
 
 @implementation RootViewController
 
@@ -111,11 +112,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerAuthenticated)
-                                                 name:LOCAL_PLAYER_IS_AUTHENTICATED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(findMatches)
+                                                 name:FIND_MATCHES object:nil];
 }
 
-- (void)playerAuthenticated
+- (void)findMatches
 {
     [[GameKitHelper sharedGameKitHelper] findMatchWithMinPlayers:MIN_PLAYERS maxPlayers:MAX_PLAYERS viewController:self delegate:self];
 }
@@ -130,17 +131,39 @@
 
 - (void)matchStarted
 {
-    NSLog(@"Match started");
+    NSLog(@"RootView : Match started");
 }
 
 - (void)matchEnded
 {
-    NSLog(@"Match ended");
+    NSLog(@"RootView : Match ended");
 }
 
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID
 {
-    NSLog(@"Received data");
+    NSLog(@"RootView : Received data");
+    /*
+     When data is received, didReceiveData:fromPeer is called on a background thread and if you post a notification from that method, that will not be on the UI thread.
+     
+     dispatch_async(dispatch_get_main_queue(), {
+     NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleReceivedDataWithNotification:", name: "MPC_DidReceiveDataNotification", object: nil)
+     })
+     */
+    NSError * error;
+    NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    int api = [[response objectForKey:@"api"] intValue];
+
+    switch (api)
+    {
+        case (SELECTED_HOST):
+        {
+            [[GameKitHelper sharedGameKitHelper] setHostID:(NSString*)[response objectForKey:@"playerId"]];
+            NSLog(@" Host id %@",[[GameKitHelper sharedGameKitHelper]hostID]);
+        }
+        break;
+            
+        default:break;
+    }
 }
 
 

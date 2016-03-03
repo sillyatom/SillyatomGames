@@ -92,11 +92,16 @@ static AppDelegate s_sharedApplication;
      name:PRESENT_AUTHENTICATION_VIEW_CONTROLLER
      object:nil];
     
-    //[[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
-
-    app->run();
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onPlayerAuthenticated) name:LOCAL_PLAYER_IS_AUTHENTICATED object:nil];
+    [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
 
     return YES;
+}
+
+- (void)onPlayerAuthenticated
+{
+    NSLog(@" Local Player : alias - %@ id - %@",[[GKLocalPlayer localPlayer]alias], [[GKLocalPlayer localPlayer]playerID] );
+    cocos2d::Application::getInstance()->run();
 }
 
 - (void)showAuthenticationViewController

@@ -58,6 +58,9 @@
 		830668E11C834DFD00FF05D8 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668DE1C834DFD00FF05D8 /* Player.cpp */; };
 		830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E21C834E0600FF05D8 /* GameConstants.cpp */; };
 		830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E51C834E1000FF05D8 /* ExtSprite.cpp */; };
+		831BE38A1C8877C80089241E /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831BE3881C8877C80089241E /* Network.cpp */; };
+		831BE38C1C8878C70089241E /* Bridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 831BE38B1C8878C70089241E /* Bridge.mm */; };
+		831BE3901C88B7E30089241E /* NetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 831BE38F1C88B7E30089241E /* NetworkConstants.m */; };
 		83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */; };
 		83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.cpp */; };
 		83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */; };
@@ -137,6 +140,11 @@
 		830668E31C834E0600FF05D8 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameConstants.h; path = Constants/GameConstants.h; sourceTree = "<group>"; };
 		830668E51C834E1000FF05D8 /* ExtSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExtSprite.cpp; path = Ext/ExtSprite.cpp; sourceTree = "<group>"; };
 		830668E61C834E1000FF05D8 /* ExtSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtSprite.h; path = Ext/ExtSprite.h; sourceTree = "<group>"; };
+		831BE3881C8877C80089241E /* Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Network.cpp; path = Network/Network.cpp; sourceTree = "<group>"; };
+		831BE3891C8877C80089241E /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Network.h; path = Network/Network.h; sourceTree = "<group>"; };
+		831BE38B1C8878C70089241E /* Bridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Bridge.mm; path = ios/Bridge.mm; sourceTree = SOURCE_ROOT; };
+		831BE38E1C88B7D40089241E /* NetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkConstants.h; path = Network/NetworkConstants.h; sourceTree = "<group>"; };
+		831BE38F1C88B7E30089241E /* NetworkConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkConstants.m; path = Network/NetworkConstants.m; sourceTree = "<group>"; };
 		83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CardConfig.cpp; path = Config/CardConfig.cpp; sourceTree = "<group>"; };
 		83C9BC891C85D92A00E4AFC7 /* CardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardConfig.h; path = Config/CardConfig.h; sourceTree = "<group>"; };
 		83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExtLayer.cpp; path = Ext/ExtLayer.cpp; sourceTree = "<group>"; };
@@ -212,6 +220,7 @@
 				503AE0FD17EB989F00D1A890 /* Prefix.pch */,
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
+				831BE38B1C8878C70089241E /* Bridge.mm */,
 			);
 			name = ios;
 			path = Classes;
@@ -280,6 +289,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				831BE3871C8877A10089241E /* Network */,
 				83C9BC8E1C85FBE800E4AFC7 /* Handlers */,
 				830668CF1C834DD900FF05D8 /* Scenes */,
 				830668CE1C834DCD00FF05D8 /* GameElements */,
@@ -393,6 +403,17 @@
 				830668D51C834DF300FF05D8 /* MenuScreen.h */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		831BE3871C8877A10089241E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				831BE3881C8877C80089241E /* Network.cpp */,
+				831BE3891C8877C80089241E /* Network.h */,
+				831BE38E1C88B7D40089241E /* NetworkConstants.h */,
+				831BE38F1C88B7E30089241E /* NetworkConstants.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		83C9BC8E1C85FBE800E4AFC7 /* Handlers */ = {
@@ -550,12 +571,14 @@
 				830668DF1C834DFD00FF05D8 /* Card.cpp in Sources */,
 				830668D61C834DF300FF05D8 /* MainGame.cpp in Sources */,
 				830668E01C834DFD00FF05D8 /* Dealer.cpp in Sources */,
+				831BE38A1C8877C80089241E /* Network.cpp in Sources */,
 				830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */,
 				83E48B1B1C78DB9F005D13EE /* GameKitHelper.m in Sources */,
 				83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */,
 				830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */,
+				831BE38C1C8878C70089241E /* Bridge.mm in Sources */,
 				830668E11C834DFD00FF05D8 /* Player.cpp in Sources */,
 				830668D71C834DF300FF05D8 /* MainScreen.cpp in Sources */,
 				83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.cpp in Sources */,
@@ -563,6 +586,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				831BE3901C88B7E30089241E /* NetworkConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

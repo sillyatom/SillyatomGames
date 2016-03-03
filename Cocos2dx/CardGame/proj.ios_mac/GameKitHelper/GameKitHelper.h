@@ -18,6 +18,7 @@
 //for notifications
 extern NSString * const PRESENT_AUTHENTICATION_VIEW_CONTROLLER;
 extern NSString * const LOCAL_PLAYER_IS_AUTHENTICATED;
+extern NSString * const FIND_MATCHES;
 
 //constants for players
 extern int const MIN_PLAYERS;
@@ -26,6 +27,7 @@ extern int const MAX_PLAYERS;
 @interface GameKitHelper : NSObject <GKMatchmakerViewControllerDelegate, GKMatchDelegate>
 
 @property (nonatomic, strong) GKMatch * match;
+@property (nonatomic, strong) NSString * hostID;
 @property (nonatomic, assign) id<GameKitHelperDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary * playersDict;
 

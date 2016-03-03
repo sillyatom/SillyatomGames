@@ -1,5 +1,6 @@
 #include "MenuScreen.h"
 #include "MainGame.h"
+#include "../Network/Network.h"
 
 cocos2d::Scene * MenuScreen::createScene()
 {
@@ -32,6 +33,7 @@ void MenuScreen::loadFriendsMatchScreen(cocos2d::Ref * sender, ui::Widget::Touch
 {
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
+        Network::findMatches();
 		auto scene = MainGame::createScene();
 		Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
 	}
@@ -39,6 +41,7 @@ void MenuScreen::loadFriendsMatchScreen(cocos2d::Ref * sender, ui::Widget::Touch
 
 void MenuScreen::loadAutoMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
 {
+    Network::findMatches();
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
 		auto scene = MainGame::createScene();

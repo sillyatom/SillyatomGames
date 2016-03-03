@@ -105,14 +105,7 @@ void MainGame::distributeCards()
             card->moveToPosition(refPosition, delayTime);
             card->setLocalZOrder(runningZOrder++);
             card->addTouchListeners(_listener);
-            if (playerIndex == 1 || playerIndex == 4)
-            {
-                refPosition.x += GameConstants::SPACE_BETWEEN_CARDS;
-            }
-            else
-            {
-                refPosition.x -= GameConstants::SPACE_BETWEEN_CARDS;
-            }
+            
             delayTime += 0.1f;
         }
     }

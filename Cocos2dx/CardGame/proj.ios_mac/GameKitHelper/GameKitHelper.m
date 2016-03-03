@@ -6,28 +6,16 @@
 //
 //
 #import "GameKitHelper.h"
+#import "../../Classes/Network/NetworkConstants.h"
 
-typedef enum
-{
-    IS_HOST,
-    DEFAULT
-}SAGNetworkMsgType;
-
-typedef struct
-{
-    SAGNetworkMsgType type;
-}SAGNetworkMsg;
-
-typedef struct
-{
-    SAGNetworkMsg msg;
-    NSString * hostPlayerId;
-}SAGHostMsg;
 
 @implementation GameKitHelper
 
+@synthesize hostID;
+
 NSString * const PRESENT_AUTHENTICATION_VIEW_CONTROLLER = @"PRESENT_AUTHENTICATION_VIEW_CONTROLLER";
 NSString * const LOCAL_PLAYER_IS_AUTHENTICATED = @"LOCAL_PLAYER_IS_AUTHENTICATED";
+NSString * const FIND_MATCHES = @"FIND_MATCHES";
 
 int const MIN_PLAYERS = 2;
 int const MAX_PLAYERS = 4;
@@ -133,22 +121,21 @@ BOOL _isHost;
 {
     if (!_matchStarted && self.match.expectedPlayerCount == 0)
     {
-        NSLog(@"Ready to start match!");
+        NSLog(@"GameKitHelper : Ready to start match!");
         [self lookUpPlayers];
         [self.match chooseBestHostPlayerWithCompletionHandler:^(NSString * _Nullable playerID)
         {
             _isHost = (playerID == [GKLocalPlayer localPlayer].playerID);
-                        NSLog(@" Chosen Host id %@ - isHost %d", playerID, _isHost);
+            NSLog(@"[ Chosen Host id ] %@ - isHost %d", playerID, _isHost);
             _matchStarted = YES;
             
             //test code
             if (_isHost)
             {
-                SAGHostMsg hostMsg;
-                hostMsg.msg.type = IS_HOST;
-                hostMsg.hostPlayerId = (_isHost) ? [GKLocalPlayer localPlayer].playerID : NULL;
-                
-                NSData * data = [[NSData alloc]initWithBytes:&hostMsg length:sizeof(SAGHostMsg)];
+                NSError * error;
+                NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[@"api", SELECTED_HOST,[GKLocalPlayer localPlayer]playerID], @"playerId", nil];
+                NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+                //NSData * data = [[[GKLocalPlayer localPlayer]playerID] dataUsingEncoding:NSUTF8StringEncoding];
                 [self sendData:data];
             }
             
@@ -197,14 +184,7 @@ BOOL _isHost;
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID
 {
     if (_match != match) return;
-    
     [_delegate match:match didReceiveData:data fromPlayer:playerID];
-    SAGNetworkMsg * msg = (SAGNetworkMsg*)([data bytes]);
-    if (msg->type == IS_HOST)
-    {
-        SAGHostMsg *hMsg = (SAGHostMsg*)([data bytes]);
-        NSLog(@" Host is %@",hMsg->hostPlayerId);
-    }
 }
 
 // The player state changed (eg. connected or disconnected)
