@@ -27,6 +27,7 @@
 #import "cocos2d.h"
 #import "platform/ios/CCEAGLView-ios.h"
 #import "../../Classes/Network/NetworkConstants.h"
+#import "../../Classes/Events/NetworkEvents.h"
 
 @implementation RootViewController
 
@@ -149,6 +150,12 @@
      NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleReceivedDataWithNotification:", name: "MPC_DidReceiveDataNotification", object: nil)
      })
      */
+    dispatch_async(dispatch_get_main_queue(),
+    ^{
+        NetworkEvents event(NetworkEvents::RECEIVE_DATA, [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding].UTF8String);
+        cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
+    });
+    /*
     NSError * error;
     NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     int api = [[response objectForKey:@"api"] intValue];
@@ -164,6 +171,7 @@
             
         default:break;
     }
+     */
 }
 
 

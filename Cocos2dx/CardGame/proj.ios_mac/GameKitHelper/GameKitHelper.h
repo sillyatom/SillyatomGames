@@ -38,5 +38,4 @@ extern int const MAX_PLAYERS;
 
 + (instancetype) sharedGameKitHelper;
 - (void)authenticateLocalPlayer;
-
 @end

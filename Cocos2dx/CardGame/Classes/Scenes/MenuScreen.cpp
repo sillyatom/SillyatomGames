@@ -12,7 +12,7 @@ cocos2d::Scene * MenuScreen::createScene()
 
 bool MenuScreen::init()
 {
-	if (!Layer::init())
+	if (!ExtLayer::init())
 	{
 		return false;
 	}
@@ -25,8 +25,26 @@ bool MenuScreen::init()
 
 	auto friendsMatchBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "friendsMatchBtn"));
 	friendsMatchBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadFriendsMatchScreen, this));
-
+    
+    addCustomListeners();
+    
 	return true;
+}
+
+void MenuScreen::onReceiveNetworkData(int type, rapidjson::Document &data)
+{
+    switch (type)
+    {
+        case SELECTED_HOST:
+        {
+            auto scene = MainGame::createScene();
+            Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
+        }
+        break;
+            
+        default:
+            break;
+    }
 }
 
 void MenuScreen::loadFriendsMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
@@ -34,17 +52,13 @@ void MenuScreen::loadFriendsMatchScreen(cocos2d::Ref * sender, ui::Widget::Touch
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
         Network::findMatches();
-		auto scene = MainGame::createScene();
-		Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
 	}
 }
 
 void MenuScreen::loadAutoMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
 {
-    Network::findMatches();
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
-		auto scene = MainGame::createScene();
-		Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
+        Network::findMatches();
 	}
 }

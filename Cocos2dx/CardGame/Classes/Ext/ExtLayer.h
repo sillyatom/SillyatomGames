@@ -14,14 +14,22 @@
 #include "ExtSprite.h"
 #include "cocos2d.h"
 #include "cocosGUI.h"
+#include "../Network/NetworkConstants.h"
 
 class ExtLayer : public cocos2d::Layer
 {
+private:
+    void onNetworkEvent(cocos2d::EventCustom * event);
+
 protected:
     cocos2d::EventListenerTouchOneByOne * _listener;
     ExtSprite * _gameContainer;
     
     void addTouchListeners();
+    void addCustomListeners();
+    
+    virtual void onReceiveNetworkData(int type, rapidjson::Document & data);
+    
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event);

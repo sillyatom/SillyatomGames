@@ -133,9 +133,8 @@ BOOL _isHost;
             if (_isHost)
             {
                 NSError * error;
-                NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[@"api", SELECTED_HOST,[GKLocalPlayer localPlayer]playerID], @"playerId", nil];
+                NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:SELECTED_HOST], @"api", [[GKLocalPlayer localPlayer]playerID], @"hostId", nil];
                 NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-                //NSData * data = [[[GKLocalPlayer localPlayer]playerID] dataUsingEncoding:NSUTF8StringEncoding];
                 [self sendData:data];
             }
             

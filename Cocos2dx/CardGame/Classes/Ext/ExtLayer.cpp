@@ -7,6 +7,7 @@
 //
 
 #include "ExtLayer.h"
+#include "../Events/NetworkEvents.h"
 
 cocos2d::Scene * ExtLayer::createScene()
 {
@@ -27,6 +28,25 @@ bool ExtLayer::init()
     addChild(_gameContainer);
     
     return true;
+}
+
+void ExtLayer::addCustomListeners()
+{
+    cocos2d::Director::getInstance()->getEventDispatcher()->addCustomEventListener(NetworkEvents::NETWORKEVENT_TYPES, CC_CALLBACK_1(ExtLayer::onNetworkEvent, this));
+}
+
+void ExtLayer::onNetworkEvent(cocos2d::EventCustom * event)
+{
+    NetworkEvents * nwEvent = (NetworkEvents*)event;
+    rapidjson::Document document;
+    document.Parse<0>(nwEvent->data.c_str());
+    int type = document["api"].GetInt();
+    onReceiveNetworkData(type, document);
+}
+
+void ExtLayer::onReceiveNetworkData(int type, rapidjson::Document &data)
+{
+    
 }
 
 void ExtLayer::addTouchListeners()
