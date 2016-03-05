@@ -12,7 +12,8 @@
 typedef enum
 {
     SELECTED_HOST = 0,
-    INIT_CARDS_DATA = 1
+    MATCH_STARTED = 1,
+    INIT_CARDS_DATA = 2
 } NetworkAPI;
 
 #endif /* NetworkConstants_h */

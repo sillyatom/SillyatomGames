@@ -7,7 +7,6 @@
 //
 
 #include "ExtLayer.h"
-#include "../Events/NetworkEvents.h"
 
 cocos2d::Scene * ExtLayer::createScene()
 {
@@ -24,20 +23,32 @@ bool ExtLayer::init()
         return false;
     }
     
+    _timeElapsed = 0.0f;
+    _queueTime = 0.5f;
+    
     _gameContainer = ExtSprite::create();
     addChild(_gameContainer);
+    
+    _network = Network::getInstance();
     
     return true;
 }
 
 void ExtLayer::addCustomListeners()
 {
-    cocos2d::Director::getInstance()->getEventDispatcher()->addCustomEventListener(NetworkEvents::NETWORKEVENT_TYPES, CC_CALLBACK_1(ExtLayer::onNetworkEvent, this));
+    _customListener = EventListenerCustom::create(NetworkEvent::NETWORKEVENT_TYPES, CC_CALLBACK_1(ExtLayer::onNetworkEvent, this));
+    cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(_customListener, 1);
+}
+
+void ExtLayer::removeCustomListeners()
+{
+    cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(_customListener);
+    _customListener->release();
 }
 
 void ExtLayer::onNetworkEvent(cocos2d::EventCustom * event)
 {
-    NetworkEvents * nwEvent = (NetworkEvents*)event;
+    NetworkEvent * nwEvent = (NetworkEvent*)event;
     rapidjson::Document document;
     document.Parse<0>(nwEvent->data.c_str());
     int type = document["api"].GetInt();
@@ -78,4 +89,31 @@ void ExtLayer::onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event)
 void ExtLayer::onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event)
 {
     
+}
+
+void ExtLayer::startUpdate()
+{
+    scheduleUpdate();
+}
+
+void ExtLayer::update(float dt)
+{
+    _timeElapsed += dt;
+    
+    if (_timeElapsed >= _queueTime)
+    {
+        EventCustom * event = _network->popEvent();
+        if (event != nullptr)
+        {
+            onNetworkEvent(event);
+        }
+        _timeElapsed = 0.0f;
+    }
+}
+
+void ExtLayer::replaceScene(cocos2d::Scene *scene)
+{
+    unscheduleUpdate();
+    removeCustomListeners();
+    Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
 }

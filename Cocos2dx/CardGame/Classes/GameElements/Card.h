@@ -9,6 +9,7 @@ class Card : public ExtSprite
 private:
 	std::string _cardType;
 	std::string _cardValue;
+    std::string _value;
 	std::string _assetName;
 	Sprite * backFace;
 
@@ -29,6 +30,7 @@ public:
 	{
 		_cardType = type;
 		_cardValue = val;
+        _value = _cardValue + _cardType;
 		_assetName = val + "-"+type+".png";
 		addBackFace();
 	}
@@ -38,5 +40,6 @@ public:
 	std::string getCardType() { return _cardType; }
 	std::string getCardValue() { return _cardValue; }
 	std::string getAssetName() { return _assetName; }
+    std::string getValue(){ return _value; }
 };
 #endif // !_CARD_H_

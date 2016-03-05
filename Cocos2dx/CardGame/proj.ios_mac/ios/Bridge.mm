@@ -10,6 +10,8 @@
 #import "Network.h"
 #import "GameKitHelper.h"
 
+bool Network::isHost = false;
+
 void Network::findMatches()
 {
     [[NSNotificationCenter defaultCenter]postNotificationName:FIND_MATCHES object:nil];

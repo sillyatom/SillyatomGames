@@ -35,10 +35,10 @@ void MenuScreen::onReceiveNetworkData(int type, rapidjson::Document &data)
 {
     switch (type)
     {
-        case SELECTED_HOST:
+        case MATCH_STARTED:
         {
             auto scene = MainGame::createScene();
-            Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
+            replaceScene(scene);
         }
         break;
             

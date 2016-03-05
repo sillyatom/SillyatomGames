@@ -82,7 +82,7 @@
             <PrePosition X="0.9219" Y="0.9812" />
             <PreSize X="0.0875" Y="0.0359" />
           </AbstractNodeData>
-          <AbstractNodeData Name="refCardPos_player1" ActionTag="-1944453891" Tag="11" IconVisible="False" LeftMargin="96.0000" RightMargin="799.0000" TopMargin="47.9165" BottomMargin="502.0835" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="refCardPos_player4" ActionTag="-1944453891" Tag="11" IconVisible="False" LeftMargin="96.0000" RightMargin="799.0000" TopMargin="47.9165" BottomMargin="502.0835" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="65.0000" Y="90.0000" />
             <AnchorPoint ScaleX="0.5000" />
             <Position X="128.5000" Y="502.0835" />
@@ -112,7 +112,7 @@
             <PreSize X="0.0677" Y="0.1406" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="refCardPos_player4" ActionTag="794877500" Tag="188" IconVisible="False" LeftMargin="457.9615" RightMargin="437.0385" TopMargin="490.5000" BottomMargin="59.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="refCardPos_player1" ActionTag="794877500" Tag="188" IconVisible="False" LeftMargin="457.9615" RightMargin="437.0385" TopMargin="490.5000" BottomMargin="59.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="65.0000" Y="90.0000" />
             <AnchorPoint ScaleX="0.4929" />
             <Position X="490.0000" Y="59.5000" />

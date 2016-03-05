@@ -12,6 +12,7 @@ private:
     std::vector<Card*> _cards;
     int _playerIndex;
     std::string _playerName;
+    std::string _playerId;
     
 public:
     std::vector<Card*> getCards(){ return _cards; }
@@ -21,6 +22,9 @@ public:
     
     std::string getPlayerName(){ return _playerName; }
     void setPlayerName(std::string name){ _playerName = name; }
+    
+    std::string getPlayerId(){return _playerId;}
+    void setPlayerId(std::string playerId){ _playerId = playerId;}
     
     void setCards(std::vector<Card*> cards){ _cards = cards; }
     void addCard(Card* card){ _cards.push_back(card);}

@@ -28,10 +28,14 @@ extern int const MAX_PLAYERS;
 
 @property (nonatomic, strong) GKMatch * match;
 @property (nonatomic, strong) NSString * hostID;
+@property (nonatomic, assign) BOOL isHost;
 @property (nonatomic, assign) id<GameKitHelperDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary * playersDict;
 
 -(void) findMatchWithMinPlayers : (int) minPlayers maxPlayers:(int)maxPlayers viewController:(UIViewController*)viewController delegate:(id<GameKitHelperDelegate>)delegate;
+
+-(void) sendDataToPlayer:(NSString*)playerId data:(NSData*)data;
+- (void) sendDataToAll:(NSData*)data;
 
 @property (nonatomic, readonly) UIViewController * authenticationViewController;
 @property (nonatomic, readonly) NSError * lastError;

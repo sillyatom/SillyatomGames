@@ -12,6 +12,7 @@
 @implementation GameKitHelper
 
 @synthesize hostID;
+@synthesize isHost;
 
 NSString * const PRESENT_AUTHENTICATION_VIEW_CONTROLLER = @"PRESENT_AUTHENTICATION_VIEW_CONTROLLER";
 NSString * const LOCAL_PLAYER_IS_AUTHENTICATED = @"LOCAL_PLAYER_IS_AUTHENTICATED";
@@ -22,7 +23,6 @@ int const MAX_PLAYERS = 4;
 
 BOOL _enableGameCenter;
 BOOL _matchStarted;
-BOOL _isHost;
 
 + (instancetype) sharedGameKitHelper
 {
@@ -39,17 +39,27 @@ BOOL _isHost;
     self = [super init];
     _enableGameCenter = (self) ? YES : NO;
     _matchStarted = false;
-    _isHost = false;
+    isHost = false;
     return self;
 }
 
-- (void) sendData:(NSData*)data
+- (void) sendDataToAll:(NSData*)data
 {
     NSError * error;
     BOOL success = [_match sendDataToAllPlayers:data withDataMode:GKMatchSendDataReliable error:&error];
     if (!success)
     {
         NSLog(@"[Send Data : error : %@ ] ", error.localizedDescription);
+    }
+}
+
+-(void) sendDataToPlayer:(NSString*)playerId data:(NSData*)data
+{
+    NSError * error;
+    BOOL success = [_match sendData:data toPlayers:[NSArray arrayWithObject:[_playersDict objectForKey:playerId]] dataMode:GKMatchSendDataReliable error:&error];
+    if (!success)
+    {
+        NSLog(@"Send data to player %@ failed. Error : %@ ", playerId, error.localizedDescription);
     }
 }
 
@@ -125,19 +135,18 @@ BOOL _isHost;
         [self lookUpPlayers];
         [self.match chooseBestHostPlayerWithCompletionHandler:^(NSString * _Nullable playerID)
         {
-            _isHost = (playerID == [GKLocalPlayer localPlayer].playerID);
-            NSLog(@"[ Chosen Host id ] %@ - isHost %d", playerID, _isHost);
+            isHost = (playerID == [GKLocalPlayer localPlayer].playerID);
+            NSLog(@"[ Chosen Host id ] %@ - isHost %d", playerID, isHost);
             _matchStarted = YES;
             
             //test code
-            if (_isHost)
+            if (isHost)
             {
                 NSError * error;
                 NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:SELECTED_HOST], @"api", [[GKLocalPlayer localPlayer]playerID], @"hostId", nil];
                 NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-                [self sendData:data];
+                [self sendDataToAll:data];
             }
-            
             [_delegate matchStarted];
         }];
     }
@@ -154,7 +163,7 @@ BOOL _isHost;
 
 - (void) lookUpPlayers
 {
-    NSLog(@" Looking up %lu Players .... ", (unsigned long)self.match.playerIDs.count);
+    NSLog(@"Looking up %lu Players .... ", (unsigned long)self.match.playerIDs.count);
     [GKPlayer loadPlayersForIdentifiers:self.match.playerIDs withCompletionHandler:^(NSArray * players, NSError * error)
      {
          if (error != nil)
@@ -165,15 +174,16 @@ BOOL _isHost;
          }
          else
          {
-             _playersDict = [NSMutableDictionary dictionaryWithCapacity:players.count];
+             _playersDict = [[NSMutableDictionary alloc]init];
+             //add local player
+             [_playersDict setObject:[GKLocalPlayer localPlayer] forKey:[GKLocalPlayer localPlayer].playerID];
+
              for (GKPlayer * player in players)
              {
                  NSLog(@"Found Player %@", player.alias);
                  [_playersDict setObject:player forKey:player.playerID];
              }
-             //add local player
-             [_playersDict setObject:[GKLocalPlayer localPlayer] forKey:[GKLocalPlayer localPlayer].playerID];
-         }
+          }
      }];
 }
 

@@ -33,6 +33,22 @@ void Dealer::initDeck()
 	}
 }
 
+Card * Dealer::getCardWithValue(std::string val)
+{
+    Card * retCard = nullptr;
+    for (std::vector<Card*>::iterator iter = _deck.begin(); iter != _deck.end();)
+    {
+      if ((*iter)->getValue() == val)
+      {
+          retCard = (*iter);
+          _deck.erase(iter);
+          break;
+      }
+        iter++;
+    }
+    return retCard;
+}
+
 Card * Dealer::getCard()
 {
     Card * card = nullptr;

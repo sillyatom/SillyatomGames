@@ -27,7 +27,8 @@
 #import "cocos2d.h"
 #import "platform/ios/CCEAGLView-ios.h"
 #import "../../Classes/Network/NetworkConstants.h"
-#import "../../Classes/Events/NetworkEvents.h"
+#import "../../Classes/Network/Network.h"
+#import "../../Classes/Events/NetworkEvent.h"
 
 @implementation RootViewController
 
@@ -133,6 +134,18 @@
 - (void)matchStarted
 {
     NSLog(@"RootView : Match started");
+    if ([[GameKitHelper sharedGameKitHelper]isHost])
+    {
+        Network::isHost = true;
+    }
+    else
+    {
+        Network::isHost = false;
+    }
+    
+    NSError * error;
+    NSData * data = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:MATCH_STARTED], @"api", nil] options:NSJSONWritingPrettyPrinted error:&error];
+    [self sendGameEvent:data api:MATCH_STARTED];
 }
 
 - (void)matchEnded
@@ -142,37 +155,44 @@
 
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID
 {
-    NSLog(@"RootView : Received data");
-    /*
-     When data is received, didReceiveData:fromPeer is called on a background thread and if you post a notification from that method, that will not be on the UI thread.
-     
-     dispatch_async(dispatch_get_main_queue(), {
-     NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleReceivedDataWithNotification:", name: "MPC_DidReceiveDataNotification", object: nil)
-     })
-     */
-    dispatch_async(dispatch_get_main_queue(),
-    ^{
-        NetworkEvents event(NetworkEvents::RECEIVE_DATA, [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding].UTF8String);
-        cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
-    });
-    /*
+#if COCOS2D_DEBUG
     NSError * error;
     NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     int api = [[response objectForKey:@"api"] intValue];
-
-    switch (api)
-    {
-        case (SELECTED_HOST):
+    NSLog(@"[ RootView : Received data ] api type %d",api);
+#endif
+    
+    dispatch_async(dispatch_get_main_queue(),
+    ^{
+        //.mm callback
+        NSError * error;
+        NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        int api = [[response objectForKey:@"api"] intValue];
+        
+        switch (api)
         {
-            [[GameKitHelper sharedGameKitHelper] setHostID:(NSString*)[response objectForKey:@"playerId"]];
-            NSLog(@" Host id %@",[[GameKitHelper sharedGameKitHelper]hostID]);
+            case (SELECTED_HOST):
+            {
+                [[GameKitHelper sharedGameKitHelper] setHostID:(NSString*)[response objectForKey:@"hostId"]];
+            }
+                break;
+                
+            default:break;
         }
-        break;
-            
-        default:break;
-    }
-     */
+
+        [self sendGameEvent:data api:api];
+        
+    });
 }
 
+- (void) sendGameEvent:(NSData *)data api:(int)api
+{
+    dispatch_async(dispatch_get_main_queue(),
+   ^{
+        NSLog(@"[ RootView : Dispatching Received data ] api type %d",api);
+        NetworkEvent event(NetworkEvent::RECEIVE_DATA, [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding].UTF8String);
+        cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
+   });
+}
 
 @end

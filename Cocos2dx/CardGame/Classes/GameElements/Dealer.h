@@ -17,9 +17,10 @@ public:
     
     void addDealtCardToDeck(Card * card);
     
-    int getDeckSize(){ return _deck.size(); }
+    int getDeckSize(){ return (int)_deck.size(); }
     Card * getCard();
-
+    Card * getCardWithValue(std::string value);
+    
     virtual bool init();
 	void resetDeck();
 	void shuffleDeck();

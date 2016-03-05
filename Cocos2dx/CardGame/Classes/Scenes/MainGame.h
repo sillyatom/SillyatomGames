@@ -6,6 +6,7 @@
 #include "../GameElements/Dealer.h"
 #include "../Ext/ExtLayer.h"
 #include "../Handlers/CardSelectionHandler.h"
+#include "../Network/Network.h"
 
 USING_NS_CC;
 
@@ -25,17 +26,19 @@ private:
     void startGameCountDownTimer();
     void createPlayers();
     void createDealer();
-    void distributeCards();
-    void startGame(float dt);
+    void playDistributeCards();
+    void distributeCardsData();
     void hideWidgets();
     void updateCardConfigFromCSB();
-//    void testFn();
+    void updateCardsData(rapidjson::Document &data);
+    
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event);
-    
+
+    virtual void onReceiveNetworkData(int type, rapidjson::Document & data);
 public:
 	CREATE_FUNC(MainGame);
 	static Scene * createScene();

@@ -1,6 +1,9 @@
 #include "MainGame.h"
 #include "../Constants/GameConstants.h"
 #include "../Config/CardConfig.h"
+#include "../../proj.ios_mac/GameKitHelper/GameKitHelper.h"
+
+using namespace rapidjson;
 
 Scene * MainGame::createScene()
 {
@@ -20,7 +23,6 @@ bool MainGame::init()
     _rootNode = CSLoader::createNode("MainGame.csb");
 	addChild(_rootNode);
 
-    numPlayers = 4;
     _cardSelectionHandler = CardSelectionHandler::getInstance();
     
     updateCardConfigFromCSB();
@@ -29,10 +31,17 @@ bool MainGame::init()
     createPlayers();
     
     hideWidgets();
-    addTouchListeners();
     
-    startGameCountDownTimer();
-
+    addTouchListeners();
+    addCustomListeners();
+    
+    if (Network::isHost)
+    {
+        distributeCardsData();
+    }
+    
+    CCLOG("[ Main Game Initialized ]");
+    
 	return true;
 }
 
@@ -57,35 +66,64 @@ void MainGame::hideWidgets()
     }
 }
 
-void MainGame::startGame(float dt)
-{
-    distributeCards();
-}
-
 void MainGame::startGameCountDownTimer()
 {
-    scheduleOnce(schedule_selector(MainGame::startGame), 1.0f);
+//    scheduleOnce(schedule_selector(MainGame::startGame), 1.0f);
 }
 
 void MainGame::createPlayers()
 {
-    for (int index = 0; index < numPlayers; index++)
+    numPlayers = 0;
+    NSMutableDictionary * players = [[GameKitHelper sharedGameKitHelper]playersDict];
+    for(id key in players)
     {
+        GKPlayer * gkPlayer = [players objectForKey:key];
         Player * player = Player::create();
         _gameContainer->addChild(player);
-        player->setPlayerIndex(index);
+        
+        player->setPlayerIndex(numPlayers);
+        player->setPlayerName([gkPlayer alias].UTF8String);
+        player->setPlayerId([gkPlayer playerID].UTF8String);
         _players.push_back(player);
+        numPlayers++;
     }
 }
 
-void MainGame::distributeCards()
+void MainGame::distributeCardsData()
 {
+    //create json data and send to respective players
+    
     int len = _dealer->getDeckSize();
     for (int index = 0; index < len; index++)
     {
         _players.at((index%numPlayers))->addCard(_dealer->getCard());
     }
     
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    [dict setValue:[NSNumber numberWithInt:INIT_CARDS_DATA] forKey:@"api"];
+    for (auto player : _players)
+    {
+        NSString * playerId = [NSString stringWithUTF8String:player->getPlayerId().c_str()];
+        NSMutableArray * cards = [[NSMutableArray alloc]init];
+        
+        for (auto card : player->getCards())
+        {
+            std::string cardNumber = (card->getCardValue() + card->getCardType());
+            [cards addObject:[NSString stringWithUTF8String:cardNumber.c_str()]];
+        }
+        
+        [dict setValue:cards forKey:playerId];
+    }
+    
+    NSError * error;
+    NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    [[GameKitHelper sharedGameKitHelper]sendDataToAll:data];
+    
+    playDistributeCards();
+}
+
+void MainGame::playDistributeCards()
+{
     for (auto player : _players)
     {
         int playerIndex = player->getPlayerIndex() + 1;
@@ -106,7 +144,7 @@ void MainGame::distributeCards()
             card->setLocalZOrder(runningZOrder++);
             card->addTouchListeners(_listener);
             
-            delayTime += 0.1f;
+            delayTime += 0.5f;
         }
     }
 }
@@ -118,7 +156,12 @@ void MainGame::createDealer()
     
     _dealer->retain();
     _dealer->resetDeck();
-    _dealer->shuffleDeck();
+    
+    //if is host, generate cards and shuffle
+    if (Network::isHost)
+    {
+        _dealer->shuffleDeck();
+    }
 }
 
 bool MainGame::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
@@ -126,9 +169,9 @@ bool MainGame::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
     Card* card = dynamic_cast<Card*>(event->getCurrentTarget());
     if (card != nullptr)
     {
-        Point locationInNode = card->convertToNodeSpace(touch->getLocation());
-        Size s = card->getContentSize();
-        Rect rect = Rect(0, 0, s.width, s.height);
+        cocos2d::Point locationInNode = card->convertToNodeSpace(touch->getLocation());
+        cocos2d::Size s = card->getContentSize();
+        cocos2d::Rect rect = cocos2d::Rect(0, 0, s.width, s.height);
         
         if (rect.containsPoint(locationInNode))
         {
@@ -160,33 +203,34 @@ void MainGame::onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event)
     
 }
 
-//void MainGame::testFn()
-//{
-//	std::vector<std::string> types = {"D","S", "H", "C"};
-//	float delAngle = (180.0) / (types.size() * (GameConstants::CARD_VALUE_END - GameConstants::CARD_VALUE_START));
-//	float angle = 180.0f;
-//
-//	Vec2 rotationCenter;
-//	rotationCenter.x = Director::getInstance()->getVisibleSize().width / 2.0f;
-//	rotationCenter.y = Director::getInstance()->getVisibleSize().height / 2.0f;
-//
-//	for (int i = 0; i < types.size(); i++)
-//	{
-//		for (int j = GameConstants::CARD_VALUE_START; j < GameConstants::CARD_VALUE_END; j++)
-//		{
-//			Card * card = Card::create();
-//			card->initData(GameConstants::CARD_VALUES[j], types[i]);
-//			card->initWithSpriteFrameName(card->getAssetName());
-//			addChild(card);
-//            card->setScale(CardConfig::CARD_WIDTH / card->getContentSize().width, CardConfig::CARD_HEIGHT / card->getContentSize().height);
-//			_cards.push_back(card);
-//		
-//			float radians = -CC_DEGREES_TO_RADIANS(angle);
-//			float x = rotationCenter.x + (150.0f * cos(radians));
-//			float y = rotationCenter.y + (150.0f * sin(radians));
-//			card->setPosition(x, y);
-//			card->setRotation(radians);
-//			angle += delAngle;
-//		}
-//	}
-//}
+void MainGame::updateCardsData(rapidjson::Document &data)
+{
+    for (auto player : _players)
+    {
+        const rapidjson::Value& cards = data[player->getPlayerId().c_str()];
+        
+        int length = (int)cards.Size();
+        for (int i = 0; i < length; i++)
+        {
+            std::string card = cards[i].GetString();
+            player->addCard(_dealer->getCardWithValue(card));
+        }
+    }
+    
+    playDistributeCards();
+}
+
+void MainGame::onReceiveNetworkData(int type, rapidjson::Document &data)
+{
+    switch (type)
+    {
+        case INIT_CARDS_DATA:
+        {
+            updateCardsData(data);
+        }
+        break;
+            
+        default:
+            break;
+    }
+}

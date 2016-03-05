@@ -14,7 +14,7 @@
 
 USING_NS_CC;
 
-class NetworkEvents : public cocos2d::EventCustom
+class NetworkEvent : public cocos2d::EventCustom
 {
 public:
     static const std::string NETWORKEVENT_TYPES;
@@ -23,7 +23,7 @@ public:
     std::string type;
     std::string data;
     
-    NetworkEvents(const std::string& eventType, const std::string& eventData):cocos2d::EventCustom(NETWORKEVENT_TYPES)
+    NetworkEvent(const std::string& eventType, const std::string& eventData):cocos2d::EventCustom(NETWORKEVENT_TYPES)
     {
         type = eventType;
         data = eventData;

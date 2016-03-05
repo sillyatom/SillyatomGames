@@ -31,5 +31,5 @@
 
 }
 - (BOOL) prefersStatusBarHidden;
-
+- (void) sendGameEvent : (NSData*)data api:(int)api;
 @end
