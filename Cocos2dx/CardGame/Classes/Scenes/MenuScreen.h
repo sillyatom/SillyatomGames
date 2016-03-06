@@ -1,9 +1,6 @@
 #ifndef _MENU_SCREEN_H_
 #define _MENU_SCREEN_H_
 
-#include "cocos2d.h"
-#include "cocostudio/CocoStudio.h"
-#include "ui/CocosGUI.h"
 #include "../Ext/ExtLayer.h"
 
 USING_NS_CC;

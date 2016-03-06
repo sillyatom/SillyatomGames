@@ -4,6 +4,7 @@
 #define _GAME_CONSTANTS_H_
 #include<string>
 #include <vector>
+#include "../Network/NetworkConstants.h"
 
 class GameConstants
 {
@@ -28,5 +29,8 @@ public:
 	static const std::vector<std::string> CARD_TYPES;
     
     static const float SPACE_BETWEEN_CARDS;
+    
+    static std::vector<std::string> layerNameMap;
+    static std::map<APILayer, std::vector<NetworkAPI>> layerApiMap;
 };
 #endif // !_GAME_CONSTANTS_H_

@@ -15,7 +15,7 @@ Scene * MainGame::createScene()
 
 bool MainGame::init()
 {
-	if (!ExtLayer::init())
+	if (!ExtLayer::initWithData(MAIN_GAME))
 	{
 		return false;
 	}
@@ -33,14 +33,11 @@ bool MainGame::init()
     hideWidgets();
     
     addTouchListeners();
-    addCustomListeners();
-    
+
     if (Network::isHost)
     {
         distributeCardsData();
     }
-    
-    NSLog(@"[ Main Game Initialized ]");
     
 	return true;
 }

@@ -20,3 +20,10 @@ const std::vector<std::string> GameConstants::CARD_VALUES = { "2", "3", "4", "5"
 const std::vector<std::string> GameConstants::CARD_TYPES = { "D", "C", "H", "S" };
 
 const float GameConstants::SPACE_BETWEEN_CARDS = 20.0f;
+
+std::vector<std::string> GameConstants::layerNameMap = {"MainScreen", "MenuScreen", "MainGame"};
+std::map<APILayer, std::vector<NetworkAPI>> GameConstants::layerApiMap = {
+    {MAIN_SCREEN, {}},
+    {MENU_SCREEN, {SELECTED_HOST, MATCH_STARTED}},
+    {MAIN_GAME, {INIT_CARDS_DATA}}
+};

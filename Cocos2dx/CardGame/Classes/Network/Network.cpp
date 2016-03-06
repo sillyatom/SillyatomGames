@@ -9,28 +9,43 @@
 #include "Network.h"
 
 static Network instance;
-std::mutex mutex;
 
 void Network::pushEvent(NetworkEvent* event)
 {
-    mutex.lock();
-        _events.push_back(event);
-    mutex.unlock();
+    _events.push_back(event);
 }
 
-NetworkEvent* Network::popEvent()
+NetworkEvent* Network::popEvent(int layer)
 {
     NetworkEvent * event = NULL;
     
-    mutex.lock();
-    if (_events.size() > 0)
+    for (std::vector<NetworkEvent*>::iterator iter = _events.begin(); iter != _events.end();)
     {
-        event = _events.front();
-        _events.erase(_events.begin());
-        return event;
+        if (canPop(layer, (*iter)->api))
+        {
+            event = (*iter);
+            iter = _events.erase(iter);
+            break;
+        }
+        else
+        {
+            iter++;
+        }
     }
-    mutex.unlock();
     return event;
+}
+
+bool Network::canPop(int layer, int apiType)
+{
+    std::vector<NetworkAPI> layerApi = GameConstants::layerApiMap[(APILayer)layer];
+    for (auto api : layerApi)
+    {
+        if (apiType == api)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 Network * Network::getInstance()

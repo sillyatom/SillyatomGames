@@ -1,6 +1,5 @@
 #include "MenuScreen.h"
 #include "MainGame.h"
-#include "../Network/Network.h"
 
 cocos2d::Scene * MenuScreen::createScene()
 {
@@ -12,7 +11,7 @@ cocos2d::Scene * MenuScreen::createScene()
 
 bool MenuScreen::init()
 {
-	if (!ExtLayer::init())
+	if (!ExtLayer::initWithData(MENU_SCREEN))
 	{
 		return false;
 	}
@@ -27,8 +26,6 @@ bool MenuScreen::init()
 	auto friendsMatchBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "friendsMatchBtn"));
 	friendsMatchBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadFriendsMatchScreen, this));
     _btns.push_back(friendsMatchBtn);
-    
-    addCustomListeners();
     
 	return true;
 }

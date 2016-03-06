@@ -6,7 +6,6 @@
 #include "../GameElements/Dealer.h"
 #include "../Ext/ExtLayer.h"
 #include "../Handlers/CardSelectionHandler.h"
-#include "../Network/Network.h"
 
 USING_NS_CC;
 

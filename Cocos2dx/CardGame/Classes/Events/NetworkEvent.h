@@ -21,13 +21,10 @@ public:
     static const std::string RECEIVE_DATA;
     
     std::string type;
-    std::string data;
+    int api;
+    char* data;
     
-    NetworkEvent(const std::string& eventType, const std::string& eventData):cocos2d::EventCustom(NETWORKEVENT_TYPES)
-    {
-        type = eventType;
-        data = eventData;
-    }
+    NetworkEvent(int api, const std::string& eventType, const char* eventData);
 };
 
 #endif /* NetworkEvents_hpp */

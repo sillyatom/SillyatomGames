@@ -44,8 +44,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	//cache sprite frames
 	std::string filename = std::string("spritesheets/atlas1");
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(filename + (".plist"));
-	SpriteBatchNode * batchNode = SpriteBatchNode::create(filename + (".png"));
-	
+	SpriteBatchNode::create(filename + (".png"));
+    
     // create a scene. it's an autorelease object
     auto scene = MainScreen::createScene();
 

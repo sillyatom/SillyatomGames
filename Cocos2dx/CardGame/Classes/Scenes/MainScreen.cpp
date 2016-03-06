@@ -11,11 +11,11 @@ cocos2d::Scene * MainScreen::createScene()
 
 bool MainScreen::init()
 {
-	if (!Layer::init())
+	if (!ExtLayer::initWithData(MAIN_SCREEN))
 	{
 		return false;
 	}
-
+    
 	auto rootNode = CSLoader::createNode("MainScreen.csb");
 	addChild(rootNode);
 	auto playBtn = static_cast<ui::Button*>(rootNode->getChildByName("playBtn"));
@@ -28,6 +28,6 @@ void MainScreen::loadMenuScreen(cocos2d::Ref * sender, ui::Widget::TouchEventTyp
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
 		auto scene = MenuScreen::createScene();
-		Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
+        replaceScene(scene);
 	}
 }

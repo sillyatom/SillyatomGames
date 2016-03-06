@@ -7,6 +7,8 @@
 //
 
 #include "ExtLayer.h"
+#include "../Constants/GameConstants.h"
+#include <typeinfo>
 
 cocos2d::Scene * ExtLayer::createScene()
 {
@@ -16,12 +18,14 @@ cocos2d::Scene * ExtLayer::createScene()
     return scene;
 }
 
-bool ExtLayer::init()
+bool ExtLayer::initWithData(APILayer layer)
 {
     if (!Layer::init())
     {
         return false;
     }
+
+    _layer = layer;
     
     _timeElapsed = 0.0f;
     _queueTime = 0.5f;
@@ -30,28 +34,10 @@ bool ExtLayer::init()
     addChild(_gameContainer);
     
     _network = Network::getInstance();
+
+    startUpdate();
     
     return true;
-}
-
-void ExtLayer::addCustomListeners()
-{
-    _customListener = EventListenerCustom::create(NetworkEvent::NETWORKEVENT_TYPES, CC_CALLBACK_1(ExtLayer::onNetworkEvent, this));
-    cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(_customListener, 1);
-}
-
-void ExtLayer::removeCustomListeners()
-{
-    cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(_customListener);
-}
-
-void ExtLayer::onNetworkEvent(cocos2d::EventCustom * event)
-{
-    NetworkEvent * nwEvent = (NetworkEvent*)event;
-    rapidjson::Document document;
-    document.Parse<0>(nwEvent->data.c_str());
-    int type = document["api"].GetInt();
-    onReceiveNetworkData(type, document);
 }
 
 void ExtLayer::onReceiveNetworkData(int type, rapidjson::Document &data)
@@ -101,10 +87,14 @@ void ExtLayer::update(float dt)
     
     if (_timeElapsed >= _queueTime)
     {
-        EventCustom * event = _network->popEvent();
+        NetworkEvent * event = _network->popEvent(_layer);
         if (event != nullptr)
         {
-            onNetworkEvent(event);
+            rapidjson::Document document;
+            document.Parse<0>(event->data);
+            int type = document["api"].GetInt();
+            onReceiveNetworkData(type, document);
+            delete event;
         }
         _timeElapsed = 0.0f;
     }
@@ -113,11 +103,9 @@ void ExtLayer::update(float dt)
 void ExtLayer::replaceScene(cocos2d::Scene *scene)
 {
     unscheduleUpdate();
-    removeCustomListeners();
     Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
 }
 
 void ExtLayer::onExit()
 {
-    
 }

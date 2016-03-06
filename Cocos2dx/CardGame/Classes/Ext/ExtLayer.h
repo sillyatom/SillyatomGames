@@ -25,20 +25,16 @@
 class ExtLayer : public cocos2d::Layer
 {
 private:
+    APILayer _layer;
     float _timeElapsed;
     float _queueTime;
     Network * _network;
-    EventListenerCustom * _customListener;
     
-    void onNetworkEvent(cocos2d::EventCustom * event);
-
 protected:
     cocos2d::EventListenerTouchOneByOne * _listener;
     ExtSprite * _gameContainer;
     
     void addTouchListeners();
-    void addCustomListeners();
-    void removeCustomListeners();
     
     void startUpdate();
     virtual void update(float dt);
@@ -51,10 +47,10 @@ protected:
     virtual void onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event);
     
     void replaceScene(cocos2d::Scene * scene);
+    virtual bool initWithData(APILayer layer);
+
 public:
-    CREATE_FUNC(ExtLayer);
     static cocos2d::Scene * createScene();
-    virtual bool init();
     virtual void onExit();
 };
 #endif /* ExtLayer_hpp */

@@ -8,6 +8,14 @@
 
 #ifndef NetworkConstants_h
 #define NetworkConstants_h
+#include <stdio.h>
+
+typedef enum
+{
+    MAIN_SCREEN = 0,
+    MENU_SCREEN = 1,
+    MAIN_GAME = 2
+}APILayer;
 
 typedef enum
 {
@@ -16,4 +24,5 @@ typedef enum
     INIT_CARDS_DATA = 2
 } NetworkAPI;
 
+//
 #endif /* NetworkConstants_h */

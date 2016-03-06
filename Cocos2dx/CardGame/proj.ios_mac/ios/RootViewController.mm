@@ -190,8 +190,8 @@
     dispatch_async(dispatch_get_main_queue(),
    ^{
         NSLog(@"[ RootView : Dispatching Received data ] api type %d",api);
-        NetworkEvent event(NetworkEvent::RECEIVE_DATA, [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding].UTF8String);
-        cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
+        NetworkEvent * event = new NetworkEvent(api, NetworkEvent::RECEIVE_DATA, [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding].UTF8String);
+       Network::getInstance()->pushEvent(event);
    });
 }
 
