@@ -40,7 +40,7 @@ bool MainGame::init()
         distributeCardsData();
     }
     
-    CCLOG("[ Main Game Initialized ]");
+    NSLog(@"[ Main Game Initialized ]");
     
 	return true;
 }
@@ -56,23 +56,19 @@ void MainGame::updateCardConfigFromCSB()
 
 void MainGame::hideWidgets()
 {
-    for (auto player : _players)
+    for (int index = 1; index <= MAX_PLAYERS; index++)
     {
-        int playerIndex = player->getPlayerIndex() + 1;
         std::ostringstream oss;
-        oss << "refCardPos_player" << playerIndex;
+        oss << "refCardPos_player" << index;
         ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
         refPos->setVisible(false);
     }
 }
 
-void MainGame::startGameCountDownTimer()
-{
-//    scheduleOnce(schedule_selector(MainGame::startGame), 1.0f);
-}
-
 void MainGame::createPlayers()
 {
+    NSLog(@" [ Creating Players ] ");
+    
     numPlayers = 0;
     NSMutableDictionary * players = [[GameKitHelper sharedGameKitHelper]playersDict];
     for(id key in players)
@@ -86,6 +82,27 @@ void MainGame::createPlayers()
         player->setPlayerId([gkPlayer playerID].UTF8String);
         _players.push_back(player);
         numPlayers++;
+        
+        std::ostringstream oss;
+        oss<<"name_player"<<numPlayers;
+        ui::TextField *name = static_cast<ui::TextField*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, oss.str()));
+        name->setString(player->getPlayerName());
+    }
+    for(int index = numPlayers+1; index <= MAX_PLAYERS; index++)
+    {
+        {
+            std::ostringstream oss;
+            oss<<"name_player"<<index;
+            ui::TextField *name = static_cast<ui::TextField*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, oss.str()));
+            name->setVisible(false);
+        }
+        {
+            std::ostringstream oss;
+            oss << "dp_player" << index;
+            ui::ImageView * dp = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
+            dp->setVisible(false);
+        }
+        
     }
 }
 
@@ -176,7 +193,6 @@ bool MainGame::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
         if (rect.containsPoint(locationInNode))
         {
             _cardSelectionHandler->setActiveCard(card);
-            CCLOG("%d onTouchBegan ",card->getLocalZOrder());
             event->stopPropagation();
             return true;
         }
@@ -222,6 +238,8 @@ void MainGame::updateCardsData(rapidjson::Document &data)
 
 void MainGame::onReceiveNetworkData(int type, rapidjson::Document &data)
 {
+    NSLog(@"[ MainGame OnReceiveNetworkData ] Type : %d",type);
+
     switch (type)
     {
         case INIT_CARDS_DATA:

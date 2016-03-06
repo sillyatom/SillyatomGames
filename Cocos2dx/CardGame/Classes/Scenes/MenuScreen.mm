@@ -22,9 +22,11 @@ bool MenuScreen::init()
 
 	auto autoMatchBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "autoMatchBtn"));
 	autoMatchBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadAutoMatchScreen, this));
-
+    _btns.push_back(autoMatchBtn);
+    
 	auto friendsMatchBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "friendsMatchBtn"));
 	friendsMatchBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadFriendsMatchScreen, this));
+    _btns.push_back(friendsMatchBtn);
     
     addCustomListeners();
     
@@ -33,6 +35,7 @@ bool MenuScreen::init()
 
 void MenuScreen::onReceiveNetworkData(int type, rapidjson::Document &data)
 {
+    NSLog(@"[ MenuScreen OnReceiveNetworkData ] Type : %d",type);
     switch (type)
     {
         case MATCH_STARTED:
@@ -51,7 +54,7 @@ void MenuScreen::loadFriendsMatchScreen(cocos2d::Ref * sender, ui::Widget::Touch
 {
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
-        Network::findMatches();
+        findMatches();
 	}
 }
 
@@ -59,6 +62,20 @@ void MenuScreen::loadAutoMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEve
 {
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
-        Network::findMatches();
+        findMatches();
 	}
+}
+
+void MenuScreen::findMatches()
+{
+    for (auto btn : _btns)
+    {
+        btn->setEnabled(false);
+    }
+    Network::findMatches();
+}
+
+void MenuScreen::onExit()
+{
+    _btns.clear();
 }

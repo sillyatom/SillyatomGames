@@ -52,7 +52,7 @@
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		830668D61C834DF300FF05D8 /* MainGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 830668D01C834DF300FF05D8 /* MainGame.mm */; };
 		830668D71C834DF300FF05D8 /* MainScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668D21C834DF300FF05D8 /* MainScreen.cpp */; };
-		830668D81C834DF300FF05D8 /* MenuScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668D41C834DF300FF05D8 /* MenuScreen.cpp */; };
+		830668D81C834DF300FF05D8 /* MenuScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 830668D41C834DF300FF05D8 /* MenuScreen.mm */; };
 		830668DF1C834DFD00FF05D8 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668D91C834DFD00FF05D8 /* Card.cpp */; };
 		830668E01C834DFD00FF05D8 /* Dealer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668DB1C834DFD00FF05D8 /* Dealer.cpp */; };
 		830668E11C834DFD00FF05D8 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668DE1C834DFD00FF05D8 /* Player.cpp */; };
@@ -129,7 +129,7 @@
 		830668D11C834DF300FF05D8 /* MainGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainGame.h; path = Scenes/MainGame.h; sourceTree = "<group>"; };
 		830668D21C834DF300FF05D8 /* MainScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScreen.cpp; path = Scenes/MainScreen.cpp; sourceTree = "<group>"; };
 		830668D31C834DF300FF05D8 /* MainScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScreen.h; path = Scenes/MainScreen.h; sourceTree = "<group>"; };
-		830668D41C834DF300FF05D8 /* MenuScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScreen.cpp; path = Scenes/MenuScreen.cpp; sourceTree = "<group>"; };
+		830668D41C834DF300FF05D8 /* MenuScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MenuScreen.mm; path = Scenes/MenuScreen.mm; sourceTree = "<group>"; };
 		830668D51C834DF300FF05D8 /* MenuScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScreen.h; path = Scenes/MenuScreen.h; sourceTree = "<group>"; };
 		830668D91C834DFD00FF05D8 /* Card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Card.cpp; path = GameElements/Card.cpp; sourceTree = "<group>"; };
 		830668DA1C834DFD00FF05D8 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = GameElements/Card.h; sourceTree = "<group>"; };
@@ -404,7 +404,7 @@
 				830668D11C834DF300FF05D8 /* MainGame.h */,
 				830668D21C834DF300FF05D8 /* MainScreen.cpp */,
 				830668D31C834DF300FF05D8 /* MainScreen.h */,
-				830668D41C834DF300FF05D8 /* MenuScreen.cpp */,
+				830668D41C834DF300FF05D8 /* MenuScreen.mm */,
 				830668D51C834DF300FF05D8 /* MenuScreen.h */,
 			);
 			name = Scenes;
@@ -586,7 +586,7 @@
 				830668E11C834DFD00FF05D8 /* Player.cpp in Sources */,
 				830668D71C834DF300FF05D8 /* MainScreen.cpp in Sources */,
 				83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.mm in Sources */,
-				830668D81C834DF300FF05D8 /* MenuScreen.cpp in Sources */,
+				830668D81C834DF300FF05D8 /* MenuScreen.mm in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				83D92EE61C89C2880044EE19 /* NetworkEvent.cpp in Sources */,

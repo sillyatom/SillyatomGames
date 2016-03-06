@@ -23,7 +23,6 @@ private:
     std::vector<Card*> _cards;
 	std::vector<Player*> _players;
 
-    void startGameCountDownTimer();
     void createPlayers();
     void createDealer();
     void playDistributeCards();

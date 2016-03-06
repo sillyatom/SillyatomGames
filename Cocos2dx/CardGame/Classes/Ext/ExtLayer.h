@@ -55,5 +55,6 @@ public:
     CREATE_FUNC(ExtLayer);
     static cocos2d::Scene * createScene();
     virtual bool init();
+    virtual void onExit();
 };
 #endif /* ExtLayer_hpp */

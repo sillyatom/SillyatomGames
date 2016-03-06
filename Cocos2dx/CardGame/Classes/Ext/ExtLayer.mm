@@ -43,7 +43,6 @@ void ExtLayer::addCustomListeners()
 void ExtLayer::removeCustomListeners()
 {
     cocos2d::Director::getInstance()->getEventDispatcher()->removeEventListener(_customListener);
-    _customListener->release();
 }
 
 void ExtLayer::onNetworkEvent(cocos2d::EventCustom * event)
@@ -116,4 +115,9 @@ void ExtLayer::replaceScene(cocos2d::Scene *scene)
     unscheduleUpdate();
     removeCustomListeners();
     Director::getInstance()->replaceScene(TransitionFade::create(1.0f, scene));
+}
+
+void ExtLayer::onExit()
+{
+    
 }

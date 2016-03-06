@@ -155,12 +155,12 @@
 
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID
 {
-#if COCOS2D_DEBUG
-    NSError * error;
-    NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    int api = [[response objectForKey:@"api"] intValue];
-    NSLog(@"[ RootView : Received data ] api type %d",api);
-#endif
+//#if COCOS2D_DEBUG
+//    NSError * error;
+//    NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//    int api = [[response objectForKey:@"api"] intValue];
+//    NSLog(@"[ RootView : Received data ] api type %d",api);
+//#endif
     
     dispatch_async(dispatch_get_main_queue(),
     ^{

@@ -175,14 +175,13 @@ BOOL _matchStarted;
          else
          {
              _playersDict = [[NSMutableDictionary alloc]init];
-             //add local player
-             [_playersDict setObject:[GKLocalPlayer localPlayer] forKey:[GKLocalPlayer localPlayer].playerID];
-
              for (GKPlayer * player in players)
              {
                  NSLog(@"Found Player %@", player.alias);
                  [_playersDict setObject:player forKey:player.playerID];
              }
+             //add local player
+             [_playersDict setObject:[GKLocalPlayer localPlayer] forKey:[GKLocalPlayer localPlayer].playerID];
           }
      }];
 }
