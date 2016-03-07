@@ -330,6 +330,7 @@ void MainGame::onRoundComplete(int roundNumber, RoundStatus status)
     {
         //add animation here
         card = _players.front()->getCard();
+        _dealer->addDealtCardToDeck(card);
     }
     
     NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
