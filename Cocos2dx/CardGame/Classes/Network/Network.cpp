@@ -8,6 +8,13 @@
 
 #include "Network.h"
 
+
+const std::string NetworkKey::API = "api";
+const std::string NetworkKey::PLAYER_ID = "playerId";
+const std::string NetworkKey::CARD_VALUE = "cardValue";
+const std::string NetworkKey::CARD_TYPE = "cardType";
+const std::string NetworkKey::CARD_VALUE_TYPE = "cardValueType";
+
 static Network instance;
 
 void Network::pushEvent(NetworkEvent* event)

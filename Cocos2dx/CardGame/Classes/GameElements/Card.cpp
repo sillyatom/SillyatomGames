@@ -1,4 +1,5 @@
 #include "Card.h"
+#include "../Constants/GameConstants.h"
 
 bool Card::init()
 {
@@ -23,7 +24,7 @@ void Card::moveToPosition(cocos2d::Vec2 position, float delayTime)
     _startPosition = position;
     
     FiniteTimeAction * delay = DelayTime::create(delayTime);
-    FiniteTimeAction * move = MoveTo::create(1.0f, position);
+    FiniteTimeAction * move = MoveTo::create(GameConstants::DEAL_ANIM_TIME, position);
     
     runAction(Sequence::create(delay, move, NULL));
 }

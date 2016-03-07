@@ -6,15 +6,19 @@
 #include "../GameElements/Dealer.h"
 #include "../Ext/ExtLayer.h"
 #include "../Handlers/CardSelectionHandler.h"
+#include "../Handlers/RoundHandler.h"
 
 USING_NS_CC;
 
 class MainGame : public ExtLayer
 {
 private:
-    int numPlayers;
+    int _numPlayers;
+    int _numPlayersExcludingThis;
+    int _readyCounter;
     
     CardSelectionHandler * _cardSelectionHandler;
+    RoundHandler * _roundHandler;
     
     Node * _rootNode;
     Dealer * _dealer;
@@ -23,12 +27,20 @@ private:
 	std::vector<Player*> _players;
 
     void createPlayers();
+    Player* getPlayerById(std::string playerId);
+    
     void createDealer();
-    void playDistributeCards();
+    float playDistributeCards();
     void distributeCardsData();
+    
     void hideWidgets();
     void updateCardConfigFromCSB();
+    
+    void onPlayerReady();
+    void onPlayerReadyResult();
+    void onRoundResult(rapidjson::Document &data);
     void updateCardsData(rapidjson::Document &data);
+    void onRoundComplete(int roundNumber, RoundStatus status);
     
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
@@ -41,6 +53,7 @@ public:
 	CREATE_FUNC(MainGame);
 	static Scene * createScene();
 	virtual bool init();
+    
 };
 
 #endif

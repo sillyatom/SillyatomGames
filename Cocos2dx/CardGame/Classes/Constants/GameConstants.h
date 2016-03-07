@@ -30,6 +30,10 @@ public:
     
     static const float SPACE_BETWEEN_CARDS;
     
+    //TIME CONSTANTS
+    static const float ROUND_TIME;
+    static const float DEAL_ANIM_TIME;
+    
     static std::vector<std::string> layerNameMap;
     static std::map<APILayer, std::vector<NetworkAPI>> layerApiMap;
 };

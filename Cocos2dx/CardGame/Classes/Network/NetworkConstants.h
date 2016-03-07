@@ -21,7 +21,10 @@ typedef enum
 {
     SELECTED_HOST = 0,
     MATCH_STARTED = 1,
-    INIT_CARDS_DATA = 2
+    INIT_CARDS_DATA = 2,
+    PLAYER_READY = 3,
+    ROUND_RESULT = 4,
+    PLAY_NEXT_ROUND = 5
 } NetworkAPI;
 
 //

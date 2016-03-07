@@ -29,6 +29,7 @@ public:
     static CardSelectionHandler * getInstance();
     
     void setActiveCard(Card * card);
+    Card* getSelectedCard(){ return _activeCard;}
 };
 
 #endif /* CardSelectionHandler_hpp */

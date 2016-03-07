@@ -77,4 +77,5 @@ void Dealer::shuffleDeck()
 void Dealer::addDealtCardToDeck(Card *card)
 {
     _deck.push_back(card);
+    card->moveToPosition(Vec2(480.0f, 320.0f));
 }

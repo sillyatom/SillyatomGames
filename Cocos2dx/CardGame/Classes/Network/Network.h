@@ -16,7 +16,15 @@
 
 USING_NS_CC;
 
-
+class NetworkKey
+{
+public:
+    static const std::string API;
+    static const std::string PLAYER_ID;
+    static const std::string CARD_VALUE_TYPE;
+    static const std::string CARD_VALUE;
+    static const std::string CARD_TYPE;
+};
 class Network
 {
 private:

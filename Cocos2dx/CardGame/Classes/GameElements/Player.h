@@ -29,6 +29,9 @@ public:
     void setCards(std::vector<Card*> cards){ _cards = cards; }
     void addCard(Card* card){ _cards.push_back(card);}
     
+    Card* getCardWithValue(std::string cardValue);
+    Card* getCard();
+    
     CREATE_FUNC(Player);
     virtual bool init();
 };
