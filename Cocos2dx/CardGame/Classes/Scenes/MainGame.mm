@@ -25,7 +25,7 @@ bool MainGame::init()
 	addChild(_rootNode);
     
     _readyCounter = 0;
-
+    _isActivePlayer = false;
     _cardSelectionHandler = CardSelectionHandler::getInstance();
     
     updateCardConfigFromCSB();
@@ -299,6 +299,7 @@ void MainGame::onPlayerReadyResult()
     if (_readyCounter == _numPlayersExcludingThis)
     {
         _readyCounter = 0;
+        _isActivePlayer = true;
         _roundHandler->startRound(1);
     }
 }
@@ -325,20 +326,24 @@ void MainGame::onRoundResult(rapidjson::Document &data)
 
 void MainGame::onRoundComplete(int roundNumber, RoundStatus status)
 {
-    Card* card = _cardSelectionHandler->getSelectedCard();
-    if (card == NULL)
+    if (_isActivePlayer)
     {
-        //add animation here
-        card = _players.front()->getCard();
-        _dealer->addDealtCardToDeck(card);
+        Card* card = _cardSelectionHandler->getSelectedCard();
+        
+        if (card == NULL)
+        {
+            //add animation here
+            card = _players.front()->getCard();
+            _dealer->addDealtCardToDeck(card);
+        }
+        
+        NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
+        [dict setObject:[NSNumber numberWithInt:ROUND_RESULT] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
+        [dict setObject:[[GKLocalPlayer localPlayer]playerID] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()]];
+        [dict setObject:[[NSString alloc]initWithUTF8String:card->getValue().c_str()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::CARD_VALUE_TYPE.c_str()]];
+        
+        NSError * error;
+        NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+        [[GameKitHelper sharedGameKitHelper]sendDataToAll:data];
     }
-    
-    NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
-    [dict setObject:[NSNumber numberWithInt:ROUND_RESULT] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
-    [dict setObject:[[GKLocalPlayer localPlayer]playerID] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()]];
-    [dict setObject:[[NSString alloc]initWithUTF8String:card->getValue().c_str()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::CARD_VALUE_TYPE.c_str()]];
-    
-    NSError * error;
-    NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-    [[GameKitHelper sharedGameKitHelper]sendDataToAll:data];
 }

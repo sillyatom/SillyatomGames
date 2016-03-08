@@ -62,6 +62,8 @@
 		838CC6D61C8C7285001D20AD /* NetworkConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CC6D51C8C7285001D20AD /* NetworkConstants.cpp */; };
 		838CFD0F1C8DBE750054EAD0 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CFD0D1C8DBE750054EAD0 /* Utility.cpp */; };
 		838CFD121C8DBF180054EAD0 /* RoundHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CFD101C8DBF180054EAD0 /* RoundHandler.cpp */; };
+		83A52D821C8E05B40097FA24 /* APIHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83A52D801C8E05B40097FA24 /* APIHandler.mm */; };
+		83A52D851C8E06040097FA24 /* API.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83A52D831C8E06040097FA24 /* API.mm */; };
 		83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */; };
 		83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.mm */; };
 		83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */; };
@@ -150,6 +152,10 @@
 		838CFD0E1C8DBE750054EAD0 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Helper/Utility.h; sourceTree = "<group>"; };
 		838CFD101C8DBF180054EAD0 /* RoundHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoundHandler.cpp; path = Handlers/RoundHandler.cpp; sourceTree = "<group>"; };
 		838CFD111C8DBF180054EAD0 /* RoundHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundHandler.h; path = Handlers/RoundHandler.h; sourceTree = "<group>"; };
+		83A52D801C8E05B40097FA24 /* APIHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = APIHandler.mm; path = Handlers/APIHandler.mm; sourceTree = "<group>"; };
+		83A52D811C8E05B40097FA24 /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIHandler.h; path = Handlers/APIHandler.h; sourceTree = "<group>"; };
+		83A52D831C8E06040097FA24 /* API.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = API.mm; path = Network/API.mm; sourceTree = "<group>"; };
+		83A52D841C8E06040097FA24 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = API.h; path = Network/API.h; sourceTree = "<group>"; };
 		83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CardConfig.cpp; path = Config/CardConfig.cpp; sourceTree = "<group>"; };
 		83C9BC891C85D92A00E4AFC7 /* CardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardConfig.h; path = Config/CardConfig.h; sourceTree = "<group>"; };
 		83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ExtLayer.mm; path = Ext/ExtLayer.mm; sourceTree = "<group>"; };
@@ -424,6 +430,8 @@
 				83E1C0661C8AD85E00EE13DE /* Network.cpp */,
 				831BE38E1C88B7D40089241E /* NetworkConstants.h */,
 				838CC6D51C8C7285001D20AD /* NetworkConstants.cpp */,
+				83A52D831C8E06040097FA24 /* API.mm */,
+				83A52D841C8E06040097FA24 /* API.h */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -444,6 +452,8 @@
 				83C9BC901C85FC0400E4AFC7 /* CardSelectionHandler.h */,
 				838CFD101C8DBF180054EAD0 /* RoundHandler.cpp */,
 				838CFD111C8DBF180054EAD0 /* RoundHandler.h */,
+				83A52D801C8E05B40097FA24 /* APIHandler.mm */,
+				83A52D811C8E05B40097FA24 /* APIHandler.h */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -593,6 +603,7 @@
 			files = (
 				838CFD0F1C8DBE750054EAD0 /* Utility.cpp in Sources */,
 				830668DF1C834DFD00FF05D8 /* Card.cpp in Sources */,
+				83A52D821C8E05B40097FA24 /* APIHandler.mm in Sources */,
 				830668D61C834DF300FF05D8 /* MainGame.mm in Sources */,
 				830668E01C834DFD00FF05D8 /* Dealer.cpp in Sources */,
 				830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */,
@@ -608,6 +619,7 @@
 				830668D71C834DF300FF05D8 /* MainScreen.cpp in Sources */,
 				83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.mm in Sources */,
 				830668D81C834DF300FF05D8 /* MenuScreen.mm in Sources */,
+				83A52D851C8E06040097FA24 /* API.mm in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				83D92EE61C89C2880044EE19 /* NetworkEvent.cpp in Sources */,

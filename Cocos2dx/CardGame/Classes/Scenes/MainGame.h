@@ -15,6 +15,7 @@ class MainGame : public ExtLayer
 private:
     int _numPlayers;
     int _numPlayersExcludingThis;
+    bool _isActivePlayer;
     int _readyCounter;
     
     CardSelectionHandler * _cardSelectionHandler;
@@ -41,7 +42,6 @@ private:
     void onRoundResult(rapidjson::Document &data);
     void updateCardsData(rapidjson::Document &data);
     void onRoundComplete(int roundNumber, RoundStatus status);
-    
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
