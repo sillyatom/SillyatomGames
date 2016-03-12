@@ -13,15 +13,17 @@
 #include "../GameElements/Player.h"
 class API
 {
-    static int index;
+    static int _runningId;
 public:
     API();
     int apiId;
     int apiType;
-
+    
+    static int getRunningId(){ return _runningId; }
+    static void setRunningId(int val){ _runningId = val; }
+    
     NSData * data;
-
-    std::vector<Player*> activePlayers;
+    std::vector<std::string> activePlayers;
     
     bool isRequestComplete(){ return (activePlayers.size() <= 0);}
     void removePlayer(std::string playerId);

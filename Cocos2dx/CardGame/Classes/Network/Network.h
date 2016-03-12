@@ -20,7 +20,13 @@ class NetworkKey
 {
 public:
     static const std::string API;
+    static const std::string API_ID;
+    static const std::string SENDER;
+    static const std::string HOST;
+    static const std::string ACTIVE_PLAYERS;
+    static const std::string HOST_ID;
     static const std::string PLAYER_ID;
+    static const std::string PLAYERS_ID;
     static const std::string CARD_VALUE_TYPE;
     static const std::string CARD_VALUE;
     static const std::string CARD_TYPE;

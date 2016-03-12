@@ -26,13 +26,19 @@ class ExtLayer : public cocos2d::Layer
 {
 private:
     APILayer _layer;
+    
     float _timeElapsed;
     float _queueTime;
+    bool _paused;
+    
     Network * _network;
     
 protected:
     cocos2d::EventListenerTouchOneByOne * _listener;
     ExtSprite * _gameContainer;
+    
+    void pauseUpdate(){ _paused = true; }
+    void resumeUpdate(){ _paused = false; }
     
     void addTouchListeners();
     

@@ -19,13 +19,20 @@
 class APIHandler
 {
 private:
+    int _runningApiId;
     std::vector<API*> _apiList;
     API* getAPIById(int apiId);
     void removeAPIById(int apiId);
 public:
-    std::function<void(NetworkAPI)> apiSuccessHandler;
+    void setRunningApiId(int index){ _runningApiId = index; }
+    int getRunningApiId(){ return _runningApiId; }
+    
+    std::function<void(int)> apiSuccessHandler;
+    
     static APIHandler* getInstance();
-    void dispatchToAll(API* api);
-    void onReceiveData(int type, rapidjson::Document &data);
+    void reliableDispatchToAll(API* api);
+    void dispatchToPlayer(std::string playerId, API* api);
+    void dispatchToPlayerWithData(std::string playerId, NSData* data);
+    void onReceiveData(rapidjson::Document &data);
 };
 #endif /* APIHandler_hpp */

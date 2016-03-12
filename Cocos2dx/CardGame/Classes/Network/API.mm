@@ -7,18 +7,19 @@
 //
 
 #include "API.h"
-int API::index = 0;
+int API::_runningId = 0;
 
 API::API()
 {
-    apiId = index++;
+    apiId = _runningId++;
+    NSLog(@"Current apiId %d ", apiId);
 }
 
 void API::removePlayer(std::string playerId)
 {
-    for (std::vector<Player*>::iterator iter = activePlayers.begin(); iter != activePlayers.end();)
+    for (std::vector<std::string>::iterator iter = activePlayers.begin(); iter != activePlayers.end();)
     {
-        if((*iter)->getPlayerId() == playerId)
+        if((*iter) == playerId)
         {
             activePlayers.erase(iter);
             return;

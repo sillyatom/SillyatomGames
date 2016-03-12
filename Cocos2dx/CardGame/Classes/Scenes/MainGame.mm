@@ -1,8 +1,4 @@
 #include "MainGame.h"
-#include "../Helper/Utility.h"
-#include "../Config/CardConfig.h"
-#include "../Constants/GameConstants.h"
-#include "../../proj.ios_mac/GameKitHelper/GameKitHelper.h"
 
 using namespace rapidjson;
 
@@ -26,25 +22,29 @@ bool MainGame::init()
     
     _readyCounter = 0;
     _isActivePlayer = false;
+    
     _cardSelectionHandler = CardSelectionHandler::getInstance();
+    _apiHandler = APIHandler::getInstance();
+    
+    _apiHandler->apiSuccessHandler = std::bind(&MainGame::onAPISuccess, this, std::placeholders::_1);
     
     updateCardConfigFromCSB();
     
     createDealer();
-    createPlayers();
     
     hideWidgets();
     
     addTouchListeners();
 
-    if (Network::isHost)
-    {
-        distributeCardsData();
-    }
-    
     _roundHandler = RoundHandler::getInstance();
     _roundHandler->onRoundComplete = std::bind(&MainGame::onRoundComplete, this, std::placeholders::_1, std::placeholders::_2);
     _gameContainer->addChild(_roundHandler);
+    
+    if (Network::isHost)
+    {
+        hostCreatePlayers();
+        dispatchHostId();
+    }
     
 	return true;
 }
@@ -71,7 +71,61 @@ void MainGame::hideWidgets()
 
 void MainGame::createPlayers()
 {
-    NSLog(@" [ Creating Players ] ");
+    NSLog(@" [ Players - Creating Players ] ");
+    
+    _numPlayers = 0;
+    NSMutableDictionary * players = [[GameKitHelper sharedGameKitHelper]playersDict];
+    for (auto ids : _playersId)
+    {
+        GKPlayer * gkPlayer = [players objectForKey:[[NSString alloc]initWithUTF8String:ids.c_str()]];
+        Player * player = Player::create();
+        _gameContainer->addChild(player);
+        
+        player->setPlayerIndex(_numPlayers);
+        player->setPlayerName([gkPlayer alias].UTF8String);
+        player->setPlayerId([gkPlayer playerID].UTF8String);
+        _players.push_back(player);
+        _numPlayers++;
+        
+        std::ostringstream oss;
+        oss<<"name_player"<<_numPlayers;
+        ui::TextField *name = static_cast<ui::TextField*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, oss.str()));
+        name->setString(player->getPlayerName());
+    }
+    for(int index = _numPlayers+1; index <= MAX_PLAYERS; index++)
+    {
+        {
+            std::ostringstream oss;
+            oss<<"name_player"<<index;
+            ui::TextField *name = static_cast<ui::TextField*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, oss.str()));
+            name->setVisible(false);
+        }
+        {
+            std::ostringstream oss;
+            oss << "dp_player" << index;
+            ui::ImageView * dp = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
+            dp->setVisible(false);
+        }
+        
+    }
+    
+    _numPlayersExcludingThis = _numPlayers - 1;
+    
+    _playersExcludingThis = _players;
+    _playersExcludingThis.erase(_playersExcludingThis.begin());
+    
+    for (auto player : _players)
+    {
+        _playersId.push_back(player->getPlayerId());
+        _playersIdExcludingThis.push_back(player->getPlayerId());
+    }
+    
+    _playersIdExcludingThis.erase(_playersIdExcludingThis.begin());
+}
+
+void MainGame::hostCreatePlayers()
+{
+    NSLog(@" [ Host Creating Players ] ");
     
     _numPlayers = 0;
     NSMutableDictionary * players = [[GameKitHelper sharedGameKitHelper]playersDict];
@@ -108,40 +162,25 @@ void MainGame::createPlayers()
         }
         
     }
+    
     _numPlayersExcludingThis = _numPlayers - 1;
-}
-
-void MainGame::distributeCardsData()
-{
-    //create json data and send to respective players
     
-    int len = _dealer->getDeckSize();
-    for (int index = 0; index < len; index++)
-    {
-        _players.at((index%_numPlayers))->addCard(_dealer->getCard());
-    }
+    _playersExcludingThis = _players;
+    _playersExcludingThis.erase(_playersExcludingThis.begin());
     
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    [dict setValue:[NSNumber numberWithInt:INIT_CARDS_DATA] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
     for (auto player : _players)
     {
-        NSString * playerId = [NSString stringWithUTF8String:player->getPlayerId().c_str()];
-        NSMutableArray * cards = [[NSMutableArray alloc]init];
-        
-        for (auto card : player->getCards())
-        {
-            std::string cardNumber = (card->getCardValue() + card->getCardType());
-            [cards addObject:[NSString stringWithUTF8String:cardNumber.c_str()]];
-        }
-        
-        [dict setValue:cards forKey:playerId];
+        _playersId.push_back(player->getPlayerId());
+        _playersIdExcludingThis.push_back(player->getPlayerId());
     }
     
-    NSError * error;
-    NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-    [[GameKitHelper sharedGameKitHelper]sendDataToAll:data];
-    
-    playDistributeCards();
+    _playersIdExcludingThis.erase(_playersIdExcludingThis.begin());
+}
+
+
+void MainGame::onDistributeCards()
+{
+    NSLog(@" Host On Distribute Cards ");
 }
 
 float MainGame::playDistributeCards()
@@ -243,66 +282,10 @@ void MainGame::updateCardsData(rapidjson::Document &data)
     //distribute card animation
     float delay = playDistributeCards();
     
-    //delayed call
-    Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::onPlayerReady, this)), delay);
+    Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::onDistributeCards, this)), delay);
 }
 
-void MainGame::onPlayerReady()
-{
-    {
-        NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
-        [dict setObject:[NSNumber numberWithInt:PLAYER_READY] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
-        [dict setObject:[[GKLocalPlayer localPlayer]playerID] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()]];
-        
-        NSError * error;
-        NSData * nsData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-        [[GameKitHelper sharedGameKitHelper]sendDataToAll:nsData];
-    }
-}
 
-void MainGame::onReceiveNetworkData(int type, rapidjson::Document &data)
-{
-    NSLog(@"[ MainGame OnReceiveNetworkData ] Type : %d",type);
-
-    switch (type)
-    {
-        case INIT_CARDS_DATA:
-        {
-            updateCardsData(data);
-        }
-        break;
-            
-        case PLAYER_READY:
-        {
-            if (Network::isHost)
-            {
-                onPlayerReadyResult();
-            }
-        }
-        break;
-            
-        case ROUND_RESULT:
-        {
-            onRoundResult(data);
-        }
-        break;
-            
-        default:
-            break;
-    }
-}
-
-void MainGame::onPlayerReadyResult()
-{
-    _readyCounter++;
-    
-    if (_readyCounter == _numPlayersExcludingThis)
-    {
-        _readyCounter = 0;
-        _isActivePlayer = true;
-        _roundHandler->startRound(1);
-    }
-}
 
 Player* MainGame::getPlayerById(std::string playerId)
 {
@@ -346,4 +329,18 @@ void MainGame::onRoundComplete(int roundNumber, RoundStatus status)
         NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
         [[GameKitHelper sharedGameKitHelper]sendDataToAll:data];
     }
+}
+
+
+
+NSData* MainGame::getAcknowledgementData(rapidjson::Document &data)
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    [dict setObject:[[GKLocalPlayer localPlayer]playerID] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()]];
+    [dict setObject:[NSNumber numberWithInt:data[NetworkKey::API.c_str()].GetInt()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
+    [dict setObject:[NSNumber numberWithInt:data[NetworkKey::API_ID.c_str()].GetInt()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API_ID.c_str()]];
+    [dict setObject:[[NSString alloc]initWithUTF8String:data[NetworkKey::SENDER.c_str()].GetString()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::SENDER.c_str()]];
+    NSError * error;
+    NSData * nsData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    return nsData;
 }

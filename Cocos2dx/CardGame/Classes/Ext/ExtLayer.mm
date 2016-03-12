@@ -25,6 +25,7 @@ bool ExtLayer::initWithData(APILayer layer)
         return false;
     }
 
+    _paused = false;
     _layer = layer;
     
     _timeElapsed = 0.0f;
@@ -83,20 +84,23 @@ void ExtLayer::startUpdate()
 
 void ExtLayer::update(float dt)
 {
-    _timeElapsed += dt;
-    
-    if (_timeElapsed >= _queueTime)
+    if (!_paused)
     {
-        NetworkEvent * event = _network->popEvent(_layer);
-        if (event != nullptr)
+        _timeElapsed += dt;
+        
+        if (_timeElapsed >= _queueTime)
         {
-            rapidjson::Document document;
-            document.Parse<0>(event->data);
-            int type = document["api"].GetInt();
-            onReceiveNetworkData(type, document);
-            delete event;
+            NetworkEvent * event = _network->popEvent(_layer);
+            if (event != nullptr)
+            {
+                rapidjson::Document document;
+                document.Parse<0>(event->data);
+                int type = document["api"].GetInt();
+                onReceiveNetworkData(type, document);
+                delete event;
+            }
+            _timeElapsed = 0.0f;
         }
-        _timeElapsed = 0.0f;
     }
 }
 

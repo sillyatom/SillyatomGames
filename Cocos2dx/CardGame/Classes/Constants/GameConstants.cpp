@@ -27,6 +27,6 @@ const float GameConstants::DEAL_ANIM_TIME = 0.2f;
 std::vector<std::string> GameConstants::layerNameMap = {"MainScreen", "MenuScreen", "MainGame"};
 std::map<APILayer, std::vector<NetworkAPI>> GameConstants::layerApiMap = {
     {MAIN_SCREEN, {}},
-    {MENU_SCREEN, {SELECTED_HOST, MATCH_STARTED}},
-    {MAIN_GAME, {INIT_CARDS_DATA, PLAYER_READY, ROUND_RESULT}}
+    {MENU_SCREEN, {MATCH_STARTED}},
+    {MAIN_GAME, {SELECTED_HOST, INIT_CARDS_DATA, PLAYER_READY, ROUND_RESULT}}
 };

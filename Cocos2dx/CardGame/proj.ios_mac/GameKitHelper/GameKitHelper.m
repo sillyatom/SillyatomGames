@@ -139,14 +139,6 @@ BOOL _matchStarted;
             NSLog(@"[ Chosen Host id ] %@ - isHost %d", playerID, isHost);
             _matchStarted = YES;
             
-            //test code
-            if (isHost)
-            {
-                NSError * error;
-                NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:SELECTED_HOST], @"api", [[GKLocalPlayer localPlayer]playerID], @"hostId", nil];
-                NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-                [self sendDataToAll:data];
-            }
             [_delegate matchStarted];
         }];
     }

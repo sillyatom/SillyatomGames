@@ -142,9 +142,9 @@
     {
         Network::isHost = false;
     }
-    
     NSError * error;
-    NSData * data = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:MATCH_STARTED], @"api", nil] options:NSJSONWritingPrettyPrinted error:&error];
+    NSData * data = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:MATCH_STARTED], @"api",
+                                                             @"sender", @"game", nil] options:NSJSONWritingPrettyPrinted error:&error];
     [self sendGameEvent:data api:MATCH_STARTED];
 }
 
@@ -164,22 +164,10 @@
     
     dispatch_async(dispatch_get_main_queue(),
     ^{
-        //.mm callback
         NSError * error;
         NSDictionary * response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        int api = [[response objectForKey:@"api"] intValue];
         
-        switch (api)
-        {
-            case (SELECTED_HOST):
-            {
-                [[GameKitHelper sharedGameKitHelper] setHostID:(NSString*)[response objectForKey:@"hostId"]];
-            }
-                break;
-                
-            default:break;
-        }
-
+        int api = [[response objectForKey:@"api"] intValue];
         [self sendGameEvent:data api:api];
         
     });
