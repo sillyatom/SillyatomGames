@@ -38,9 +38,11 @@ private:
     Dealer * _dealer;
     
     std::vector<Card*> _cards;
+    
 	std::vector<Player*> _players;
-    std::vector<Player*> _playersExcludingThis;
+    
     std::vector<std::string> _playersId;
+    std::vector<Player*> _playersExcludingThis;
     std::vector<std::string> _playersIdExcludingThis;
     
     //init
@@ -69,14 +71,24 @@ private:
 
     NSData * getAcknowledgementData(rapidjson::Document &data);
     
-    void onRoundResult(rapidjson::Document &data);
-    void updateCardsData(rapidjson::Document &data);
     void onRoundComplete(int roundNumber, RoundStatus status);
-    
+
+    void updateCardsData(rapidjson::Document &data);
     //from host
     void dispatchHostId();
     //on players
     void onHostSelected(rapidjson::Document &data);
+    void onRoundResult(rapidjson::Document &data);
+    void dispatchRoundComplete();
+    void dispatchNextRound();
+    bool isThisActivePlayer();
+    
+    void dealSelectedCard();
+    void validateDeal(Card* card);
+    
+    void startMatch();
+    void startRound(rapidjson::Document &data);
+
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);

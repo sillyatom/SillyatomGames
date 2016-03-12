@@ -33,7 +33,7 @@ void Dealer::initDeck()
 	}
 }
 
-Card * Dealer::getCardWithValue(std::string val)
+Card * Dealer::removeCardWithValue(std::string val)
 {
     Card * retCard = nullptr;
     for (std::vector<Card*>::iterator iter = _deck.begin(); iter != _deck.end();)
@@ -49,7 +49,7 @@ Card * Dealer::getCardWithValue(std::string val)
     return retCard;
 }
 
-Card * Dealer::getCard()
+Card * Dealer::removeCard()
 {
     Card * card = nullptr;
     if (_deck.size() > 0)
@@ -74,8 +74,23 @@ void Dealer::shuffleDeck()
 	}
 }
 
-void Dealer::addDealtCardToDeck(Card *card)
+void Dealer::dealCard(Card *card)
 {
+    int runningIndex = 0;
+    for (auto card : _deck)
+    {
+        card->moveByPosition(Vec2(-card->getBoundingBox().size.width * 0.4f, 0.0f), 0.0f, CallFunc::create(CC_CALLBACK_0(Dealer::onDealAnimationComplete, this)));
+        card->setLocalZOrder(runningIndex++);
+    }
+    
     _deck.push_back(card);
-    card->moveToPosition(Vec2(480.0f, 320.0f));
+    card->setLocalZOrder(runningIndex++);
+    
+    card->showFrontFace();
+    card->moveToPosition(_deckStartPos, 0.0f, CallFunc::create(CC_CALLBACK_0(Dealer::onDealAnimationComplete, this)));
+}
+
+void Dealer::onDealAnimationComplete()
+{
+    onDealCard(_deck.back());
 }

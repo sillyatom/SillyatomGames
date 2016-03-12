@@ -31,6 +31,7 @@ public:
     
     static APIHandler* getInstance();
     void reliableDispatchToAll(API* api);
+    void reliableDispatchToPlayer(std::string playerId, API* api);
     void dispatchToPlayer(std::string playerId, API* api);
     void dispatchToPlayerWithData(std::string playerId, NSData* data);
     void onReceiveData(rapidjson::Document &data);

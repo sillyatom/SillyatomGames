@@ -37,8 +37,8 @@ protected:
     cocos2d::EventListenerTouchOneByOne * _listener;
     ExtSprite * _gameContainer;
     
-    void pauseUpdate(){ _paused = true; }
-    void resumeUpdate(){ _paused = false; }
+    void pauseProcessEvents(){ _paused = true; }
+    void resumeProcessEvents(){ _paused = false; }
     
     void addTouchListeners();
     

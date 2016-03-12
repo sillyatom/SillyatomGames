@@ -11,10 +11,9 @@ private:
 	std::string _cardValue;
     std::string _value;
 	std::string _assetName;
+    
 	Sprite * backFace;
 
-    Vec2 _startPosition;
-    
     void addBackFace();
 
 protected:
@@ -34,12 +33,17 @@ public:
 		_assetName = val + "-"+type+".png";
 		addBackFace();
 	}
+    void onMoveComplete(Card* card);
+    void moveToPosition(Vec2 position, float delayTime = 0.0f, CallFunc * callback = NULL);
+    void moveByPosition(Vec2 position, float delayTime = 0.0f, CallFunc * callback = NULL);
     
-    void moveToPosition(Vec2 position, float delayTime = 0.0f);
-    Vec2 getStartPosition() { return _startPosition; }
 	std::string getCardType() { return _cardType; }
 	std::string getCardValue() { return _cardValue; }
-	std::string getAssetName() { return _assetName; }
+	
+    std::string getAssetName() { return _assetName; }
+    
     std::string getValue(){ return _value; }
+    
+    void showFrontFace();
 };
 #endif // !_CARD_H_

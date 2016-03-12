@@ -11,10 +11,8 @@
 
 void MainGame::onReceiveNetworkData(int type, rapidjson::Document &data)
 {
-    NSLog(@"[ MainGame OnReceiveNetworkData ] Type : %d",type);
-    
     std::string sender = data[NetworkKey::SENDER.c_str()].GetString();
-    
+
     if (Network::isHost)
     {
         if ( sender == NetworkKey::HOST)
@@ -28,7 +26,14 @@ void MainGame::onReceiveNetworkData(int type, rapidjson::Document &data)
     }
     else
     {
-        processData(type, data);
+        if ( strcmp(sender.c_str(), [[GKLocalPlayer localPlayer]playerID].UTF8String) == 0)
+        {
+            _apiHandler->onReceiveData(data);
+        }
+        else
+        {
+            processData(type, data);
+        }
     }
 }
 

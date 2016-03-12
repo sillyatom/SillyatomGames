@@ -11,19 +11,27 @@ class Dealer : public ExtSprite
 {
 private:
 	std::vector<Card*> _deck;
+    Vec2 _deckStartPos;
+    
 	void initDeck();
 public:
     CREATE_FUNC(Dealer);
     
-    void addDealtCardToDeck(Card * card);
+    void dealCard(Card * card);
+    void onDealAnimationComplete();
     
-    int getDeckSize(){ return (int)_deck.size(); }
-    Card * getCard();
-    Card * getCardWithValue(std::string value);
+    Card * removeCard();
+    Card * removeCardWithValue(std::string value);
     
     virtual bool init();
 	void resetDeck();
 	void shuffleDeck();
+    
+    int getDeckSize(){ return (int)_deck.size(); }
+    Vec2 getDeckStartPos(){ return _deckStartPos; }
+    void setDeckStartPos(Vec2 pos){ _deckStartPos = pos; }
+    std::vector<Card*> getDeck(){ return _deck; }
+    std::function<void(Card*)>onDealCard;
 };
 
 #endif

@@ -21,6 +21,12 @@ void APIHandler::reliableDispatchToAll(API* api)
     [[GameKitHelper sharedGameKitHelper]sendDataToAll:api->data];
 }
 
+void APIHandler::reliableDispatchToPlayer(std::string playerId, API *api)
+{
+    _apiList.push_back(api);
+    dispatchToPlayer(playerId, api);
+}
+
 void APIHandler::dispatchToPlayer(std::string playerId, API *api)
 {
     [[GameKitHelper sharedGameKitHelper] sendDataToPlayer:[[NSString alloc]initWithUTF8String:playerId.c_str()] data:api->data];
@@ -36,17 +42,18 @@ void APIHandler::onReceiveData(rapidjson::Document &data)
     int apiId = data[NetworkKey::API_ID.c_str()].GetInt();
     API* api = getAPIById(apiId);
     int apiType = api->apiType;
-    NSLog(@" [ API HANDLER ] on receive acknowlegement for apiId %d ", apiId);
-
     if (api != NULL)
     {
         api->removePlayer(data[NetworkKey::PLAYER_ID.c_str()].GetString());
         if (api->isRequestComplete())
-            
         {
             removeAPIById(apiId);
             apiSuccessHandler(apiType);
         }
+    }
+    else
+    {
+        NSLog(@" ??? Missing API for id %d ??? ",apiId );
     }
 }
 

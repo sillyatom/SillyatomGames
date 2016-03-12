@@ -39,15 +39,15 @@ bool RoundHandler::init()
     return false;
 }
 
+void RoundHandler::playNextRound()
+{
+    _currentRound++;
+    startRound(_currentRound);
+}
+
 void RoundHandler::startRound(int roundNumber)
 {
     _currentRound = roundNumber;
-    startRoundTimer();
-}
-
-void RoundHandler::playNextRound(int roundNumber)
-{
-    _currentRound++;
     startRoundTimer();
 }
 
@@ -64,7 +64,7 @@ void RoundHandler::onRoundTimerTick(float dt)
     if (tickCount == GameConstants::ROUND_TIME)
     {
         tickCount = 0;
-        stopRoundTimer();
+        stopRound();
     }
 }
 
@@ -72,4 +72,9 @@ void RoundHandler::stopRoundTimer()
 {
     unschedule(schedule_selector(RoundHandler::onRoundTimerTick));
     onRoundComplete(_currentRound, COMPLETED);
+}
+
+void RoundHandler::stopRound()
+{
+    stopRoundTimer();
 }

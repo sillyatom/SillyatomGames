@@ -21,12 +21,12 @@ const std::vector<std::string> GameConstants::CARD_TYPES = { "D", "C", "H", "S" 
 
 const float GameConstants::SPACE_BETWEEN_CARDS = 20.0f;
 
-const float GameConstants::ROUND_TIME = 5.0f;
-const float GameConstants::DEAL_ANIM_TIME = 0.2f;
+const float GameConstants::ROUND_TIME = 15.0f;
+const float GameConstants::DEAL_ANIM_TIME = 0.25f;
 
 std::vector<std::string> GameConstants::layerNameMap = {"MainScreen", "MenuScreen", "MainGame"};
 std::map<APILayer, std::vector<NetworkAPI>> GameConstants::layerApiMap = {
     {MAIN_SCREEN, {}},
     {MENU_SCREEN, {MATCH_STARTED}},
-    {MAIN_GAME, {SELECTED_HOST, INIT_CARDS_DATA, PLAYER_READY, ROUND_RESULT}}
+    {MAIN_GAME, {SELECTED_HOST, INIT_CARDS_DATA, ROUND_START, ROUND_RESULT, NEXT_ROUND}}
 };

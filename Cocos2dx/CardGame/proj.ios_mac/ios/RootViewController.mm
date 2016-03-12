@@ -177,7 +177,6 @@
 {
     dispatch_async(dispatch_get_main_queue(),
    ^{
-        NSLog(@"[ RootView : Dispatching Received data ] api type %d",api);
         NetworkEvent * event = new NetworkEvent(api, NetworkEvent::RECEIVE_DATA, [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding].UTF8String);
        Network::getInstance()->pushEvent(event);
    });

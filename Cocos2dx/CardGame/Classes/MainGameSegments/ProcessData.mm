@@ -26,7 +26,19 @@ void MainGame::processData(int type, rapidjson::Document &data)
         {
             updateCardsData(data);
         }
-            break;
+        break;
+            
+        case ROUND_RESULT:
+        {
+            onRoundResult(data);
+        }
+        break;
+            
+        case NEXT_ROUND:
+        {
+            startRound(data);
+        }
+        break;
             
         default:
             break;
@@ -37,6 +49,5 @@ void MainGame::processData(int type, rapidjson::Document &data)
 
 void MainGame::onProcessDataComplete(int type, rapidjson::Document &data)
 {
-    CCLOG("[ onProcessDataComplete ] for type %d ",type);
     _apiHandler->dispatchToPlayerWithData(_hostId, getAcknowledgementData(data));
 }

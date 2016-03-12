@@ -13,20 +13,29 @@ bool Card::init()
 
 void Card::addBackFace()
 {
-	Sprite * back = Sprite::create();
-	back->initWithSpriteFrameName("back.png");
-	back->setAnchorPoint(Vec2(0.0f, 0.0f));
-	addChild(back);
+	backFace = Sprite::create();
+	backFace->initWithSpriteFrameName("back.png");
+	backFace->setAnchorPoint(Vec2(0.0f, 0.0f));
+	addChild(backFace);
 }
 
-void Card::moveToPosition(cocos2d::Vec2 position, float delayTime)
+void Card::showFrontFace()
 {
-    _startPosition = position;
-    
+    backFace->setVisible(false);
+}
+
+void Card::moveToPosition(cocos2d::Vec2 position, float delayTime, CallFunc * callback)
+{
     FiniteTimeAction * delay = DelayTime::create(delayTime);
     FiniteTimeAction * move = MoveTo::create(GameConstants::DEAL_ANIM_TIME, position);
-    
-    runAction(Sequence::create(delay, move, NULL));
+    runAction(Sequence::create(delay, move, callback, NULL));
+}
+
+void Card::moveByPosition(cocos2d::Vec2 position, float delayTime, CallFunc * callback)
+{
+    FiniteTimeAction * delay = DelayTime::create(delayTime);
+    FiniteTimeAction * move = MoveBy::create(GameConstants::DEAL_ANIM_TIME, position);
+    runAction(Sequence::create(delay, move, callback, NULL));
 }
 
 bool Card::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)

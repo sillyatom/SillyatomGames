@@ -12,6 +12,7 @@
 const std::string NetworkKey::API = "api";
 const std::string NetworkKey::API_ID = "apiId";
 const std::string NetworkKey::HOST = "host";
+const std::string NetworkKey::ROUND_ID = "roundId";
 const std::string NetworkKey::SENDER = "sender";
 const std::string NetworkKey::HOST_ID = "hostId";
 const std::string NetworkKey::PLAYER_ID = "playerId";
@@ -20,6 +21,7 @@ const std::string NetworkKey::ACTIVE_PLAYERS = "activePlayers";
 const std::string NetworkKey::CARD_VALUE = "cardValue";
 const std::string NetworkKey::CARD_TYPE = "cardType";
 const std::string NetworkKey::CARD_VALUE_TYPE = "cardValueType";
+const std::string NetworkKey::NEXT_ROUND_PLAYER = "nextRoundPLayer";
 
 static Network instance;
 

@@ -67,12 +67,18 @@ void MainGame::hideWidgets()
         ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
         refPos->setVisible(false);
     }
+    {
+        std::ostringstream oss;
+        oss << "deck_card_1";
+        ui::ImageView * ref = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
+        ref->setVisible(false);
+        
+        _dealer->setDeckStartPos(ref->getPosition());
+    }
 }
 
 void MainGame::createPlayers()
 {
-    NSLog(@" [ Players - Creating Players ] ");
-    
     _numPlayers = 0;
     NSMutableDictionary * players = [[GameKitHelper sharedGameKitHelper]playersDict];
     for (auto ids : _playersId)
@@ -125,8 +131,6 @@ void MainGame::createPlayers()
 
 void MainGame::hostCreatePlayers()
 {
-    NSLog(@" [ Host Creating Players ] ");
-    
     _numPlayers = 0;
     NSMutableDictionary * players = [[GameKitHelper sharedGameKitHelper]playersDict];
     for(id key in players)
@@ -180,7 +184,7 @@ void MainGame::hostCreatePlayers()
 
 void MainGame::onDistributeCards()
 {
-    NSLog(@" Host On Distribute Cards ");
+    resumeProcessEvents();
 }
 
 float MainGame::playDistributeCards()
@@ -223,6 +227,8 @@ void MainGame::createDealer()
     _dealer->retain();
     _dealer->resetDeck();
     
+    _dealer->onDealCard = std::bind(&MainGame::validateDeal, this, std::placeholders::_1);
+    
     //if is host, generate cards and shuffle
     if (Network::isHost)
     {
@@ -232,20 +238,24 @@ void MainGame::createDealer()
 
 bool MainGame::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
 {
-    Card* card = dynamic_cast<Card*>(event->getCurrentTarget());
-    if (card != nullptr)
+    if (_isActivePlayer)
     {
-        cocos2d::Point locationInNode = card->convertToNodeSpace(touch->getLocation());
-        cocos2d::Size s = card->getContentSize();
-        cocos2d::Rect rect = cocos2d::Rect(0, 0, s.width, s.height);
+        Card* card = dynamic_cast<Card*>(event->getCurrentTarget());
         
-        if (rect.containsPoint(locationInNode))
+        if (card != nullptr)
         {
-            CCLOG("Touched Card : %s ", card->getValue().c_str());
-            _cardSelectionHandler->setActiveCard(card);
-            _roundHandler->stopRoundTimer();
-            event->stopPropagation();
-            return true;
+            cocos2d::Point locationInNode = card->convertToNodeSpace(touch->getLocation());
+            cocos2d::Size s = card->getContentSize();
+            cocos2d::Rect rect = cocos2d::Rect(0, 0, s.width, s.height);
+            
+            if (rect.containsPoint(locationInNode))
+            {
+                CCLOG("Touched Card : %s ", card->getValue().c_str());
+                _cardSelectionHandler->setActiveCard(card);
+                _roundHandler->stopRound();
+                event->stopPropagation();
+                return true;
+            }
         }
     }
     return false;
@@ -275,13 +285,13 @@ void MainGame::updateCardsData(rapidjson::Document &data)
         for (int i = 0; i < length; i++)
         {
             std::string card = cards[i].GetString();
-            player->addCard(_dealer->getCardWithValue(card));
+            player->addCard(_dealer->removeCardWithValue(card));
         }
     }
     
     //distribute card animation
     float delay = playDistributeCards();
-    
+    pauseProcessEvents();
     Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::onDistributeCards, this)), delay);
 }
 
@@ -299,39 +309,20 @@ Player* MainGame::getPlayerById(std::string playerId)
     return NULL;
 }
 
-void MainGame::onRoundResult(rapidjson::Document &data)
+void MainGame::startMatch()
 {
-    std::string playerId = data[NetworkKey::PLAYER_ID.c_str()].GetString();
-    std::string cardValue = data[NetworkKey::CARD_VALUE_TYPE.c_str()].GetString();
-    Player * player = getPlayerById(playerId);
-    _dealer->addDealtCardToDeck(player->getCardWithValue(cardValue));
+    CCLOG("%s starting match", [[GKLocalPlayer localPlayer]playerID].UTF8String);
+    _isActivePlayer = true;
+    _roundHandler->startRound(1);
 }
 
-void MainGame::onRoundComplete(int roundNumber, RoundStatus status)
+void MainGame::startRound(rapidjson::Document &data)
 {
-    if (_isActivePlayer)
-    {
-        Card* card = _cardSelectionHandler->getSelectedCard();
-        
-        if (card == NULL)
-        {
-            //add animation here
-            card = _players.front()->getCard();
-            _dealer->addDealtCardToDeck(card);
-        }
-        
-        NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
-        [dict setObject:[NSNumber numberWithInt:ROUND_RESULT] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
-        [dict setObject:[[GKLocalPlayer localPlayer]playerID] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()]];
-        [dict setObject:[[NSString alloc]initWithUTF8String:card->getValue().c_str()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::CARD_VALUE_TYPE.c_str()]];
-        
-        NSError * error;
-        NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-        [[GameKitHelper sharedGameKitHelper]sendDataToAll:data];
-    }
+    _isActivePlayer = isThisActivePlayer();
+    int roundNumber = data[NetworkKey::ROUND_ID.c_str()].GetInt();
+    _roundHandler->setRoundNumber(roundNumber);
+    _roundHandler->playNextRound();
 }
-
-
 
 NSData* MainGame::getAcknowledgementData(rapidjson::Document &data)
 {
@@ -343,4 +334,40 @@ NSData* MainGame::getAcknowledgementData(rapidjson::Document &data)
     NSError * error;
     NSData * nsData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
     return nsData;
+}
+
+bool MainGame::isThisActivePlayer()
+{
+    return (strcmp(_roundHandler->getNextActivePlayer().c_str(), [[GKLocalPlayer localPlayer]playerID].UTF8String) == 0);
+}
+
+void MainGame::dealSelectedCard()
+{
+    Card * card = _cardSelectionHandler->getSelectedCard();
+    
+    if (card == NULL)
+    {
+        card = _players.front()->getCard();
+    }
+    _dealer->dealCard(card);
+}
+
+void MainGame::validateDeal(Card* dealtCard)
+{
+    std::string cardType = dealtCard->getCardType();
+    std::vector<Card*> earnedCards;
+    bool triggered = false;
+    for (auto card : _dealer->getDeck())
+    {
+        if (card != dealtCard && cardType == card->getCardType())
+        {
+            triggered = true;
+        }
+        if (triggered)
+        {
+            earnedCards.push_back(card);
+        }
+    }
+    CCLOG(" Earned Cards Length %d ", earnedCards.size());
+    dispatchRoundComplete();
 }

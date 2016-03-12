@@ -15,11 +15,12 @@ void MainGame::dispatchCardsData()
     API * api = new API();
     api->apiType = INIT_CARDS_DATA;
     api->activePlayers = _playersIdExcludingThis;
+    api->setExecuteOnReceive(false);
     
     int len = _dealer->getDeckSize();
     for (int index = 0; index < len; index++)
     {
-        _players.at((index%_numPlayers))->addCard(_dealer->getCard());
+        _players.at((index%_numPlayers))->addCard(_dealer->removeCard());
     }
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
@@ -48,5 +49,6 @@ void MainGame::dispatchCardsData()
     _apiHandler->reliableDispatchToAll(api);
     
     float delay = playDistributeCards();
+    pauseProcessEvents();
     Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::onDistributeCards, this)), delay);
 }

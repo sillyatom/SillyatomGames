@@ -26,18 +26,26 @@ class RoundHandler : public ExtSprite
 {
 private:
     int _currentRound;
-        
+    std::string _nextActivePlayer;
+    
     RoundHandler();
     void startRoundTimer();
+    void stopRoundTimer();
+
     void onRoundTimerTick(float dt);
 public:
     std::function<void(int, RoundStatus)> onRoundComplete;
     static RoundHandler * getInstance();
 
     virtual bool init();
-    void stopRoundTimer();
-
+    void stopRound();
     void startRound(int roundNumber);
-    void playNextRound(int roundNumber);
+    void playNextRound();
+    
+    std::string getNextActivePlayer(){ return _nextActivePlayer; }
+    void setNextActivePlayer(std::string playerId){ _nextActivePlayer = playerId; }
+    
+    int getRoundNumber(){ return _currentRound; }
+    void setRoundNumber(int val){ _currentRound = val; }
 };
 #endif /* RoundHandler_hpp */

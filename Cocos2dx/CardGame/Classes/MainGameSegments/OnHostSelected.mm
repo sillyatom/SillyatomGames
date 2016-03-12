@@ -20,13 +20,11 @@ void MainGame::onHostSelected(rapidjson::Document &data)
     int index;
     for (index = 0; index < count; index++)
     {
-        CCLOG("player id [%d] : %s ", index, objects[index].GetString());
         if (objects[index].GetString() == [[GKLocalPlayer localPlayer]playerID].UTF8String)
         {
             break;
         }
     }
-    CCLOG(" last index %d ", index);
     index--;
     size_t i = 0;
     while (i < count)

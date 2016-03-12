@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="MainGame1" Type="Scene" ID="9f413cc1-23a3-4115-b8d9-7b8100d0bf74" Version="3.10.0.0" />
+  <PropertyGroup Name="MainGame" Type="Scene" ID="9f413cc1-23a3-4115-b8d9-7b8100d0bf74" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -121,6 +121,16 @@
             <PrePosition X="0.0562" Y="0.9087" />
             <PreSize X="0.0469" Y="0.0703" />
             <FileData Type="Normal" Path="images/defaultDp.png" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="deck_card_1" ActionTag="-212778900" Tag="14" IconVisible="False" LeftMargin="447.5000" RightMargin="447.5000" TopMargin="275.0000" BottomMargin="275.0000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="65.0000" Y="90.0000" />
+            <AnchorPoint ScaleX="0.5000" />
+            <Position X="480.0000" Y="275.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.4297" />
+            <PreSize X="0.0677" Y="0.1406" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

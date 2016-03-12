@@ -14,11 +14,13 @@ void MainGame::onAPISuccess(int api)
     switch(api)
     {
         case SELECTED_HOST:
-            CCLOG(" ON API SUCCESS : SELECTED HOST");
             dispatchCardsData();
             break;
         case INIT_CARDS_DATA:
-            CCLOG(" ON API SUCCESS : INIT CARDS DONE");
+            startMatch();
+            break;
+        case ROUND_RESULT:
+            dispatchNextRound();
             break;
     }
 }

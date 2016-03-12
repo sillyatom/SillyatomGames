@@ -21,15 +21,22 @@ Card* Player::getCard()
     return card;
 }
 
-Card* Player::getCardWithValue(std::string cardValue)
+Card* Player::removeCardWithValue(std::string cardValue)
 {
-    for (auto card : getCards())
+    Card* card = NULL;
+    for (auto iter = _cards.begin(); iter != _cards.end();)
     {
-        if (card->getValue() == cardValue)
+        card = (*iter);
+        if ((*iter)->getValue() == cardValue)
         {
-            return card;
+            _cards.erase(iter);
+            break;
+        }
+        else
+        {
+            iter++;
         }
     }
     
-    return NULL;
+    return card;
 }

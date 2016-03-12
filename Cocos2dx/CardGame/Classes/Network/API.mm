@@ -12,7 +12,6 @@ int API::_runningId = 0;
 API::API()
 {
     apiId = _runningId++;
-    NSLog(@"Current apiId %d ", apiId);
 }
 
 void API::removePlayer(std::string playerId)

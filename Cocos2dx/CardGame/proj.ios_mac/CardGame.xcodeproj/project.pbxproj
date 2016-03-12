@@ -64,8 +64,12 @@
 		834E870C1C93FBFF00B508BB /* ProcessData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87091C93FBFF00B508BB /* ProcessData.mm */; };
 		834E870E1C93FC1400B508BB /* DispatchHostId.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E870D1C93FC1400B508BB /* DispatchHostId.mm */; };
 		834E87101C93FC2C00B508BB /* DispatchCardsData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E870F1C93FC2C00B508BB /* DispatchCardsData.mm */; };
-		834E87121C93FD9700B508BB /* OnHostSelectedHost.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87111C93FD9700B508BB /* OnHostSelectedHost.mm */; };
+		834E87121C93FD9700B508BB /* OnHostSelected.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87111C93FD9700B508BB /* OnHostSelected.mm */; };
 		834E87141C93FDD600B508BB /* OnAPISuccess.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87131C93FDD600B508BB /* OnAPISuccess.mm */; };
+		834E87161C94038E00B508BB /* OnRoundComplete.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87151C94038E00B508BB /* OnRoundComplete.mm */; };
+		834E87181C9406C500B508BB /* OnRoundResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87171C9406C500B508BB /* OnRoundResult.mm */; };
+		834E871A1C9422BB00B508BB /* DispatchNextRound.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87191C9422BB00B508BB /* DispatchNextRound.mm */; };
+		834E871C1C946BB300B508BB /* DispatchRoundComplete.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */; };
 		838CC6D61C8C7285001D20AD /* NetworkConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CC6D51C8C7285001D20AD /* NetworkConstants.cpp */; };
 		838CFD0F1C8DBE750054EAD0 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CFD0D1C8DBE750054EAD0 /* Utility.cpp */; };
 		838CFD121C8DBF180054EAD0 /* RoundHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CFD101C8DBF180054EAD0 /* RoundHandler.cpp */; };
@@ -159,8 +163,12 @@
 		834E87091C93FBFF00B508BB /* ProcessData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ProcessData.mm; path = MainGameSegments/ProcessData.mm; sourceTree = "<group>"; };
 		834E870D1C93FC1400B508BB /* DispatchHostId.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchHostId.mm; path = MainGameSegments/DispatchHostId.mm; sourceTree = "<group>"; };
 		834E870F1C93FC2C00B508BB /* DispatchCardsData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchCardsData.mm; path = MainGameSegments/DispatchCardsData.mm; sourceTree = "<group>"; };
-		834E87111C93FD9700B508BB /* OnHostSelectedHost.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnHostSelectedHost.mm; path = MainGameSegments/OnHostSelectedHost.mm; sourceTree = "<group>"; };
+		834E87111C93FD9700B508BB /* OnHostSelected.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnHostSelected.mm; path = MainGameSegments/OnHostSelected.mm; sourceTree = "<group>"; };
 		834E87131C93FDD600B508BB /* OnAPISuccess.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnAPISuccess.mm; path = MainGameSegments/OnAPISuccess.mm; sourceTree = "<group>"; };
+		834E87151C94038E00B508BB /* OnRoundComplete.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnRoundComplete.mm; path = MainGameSegments/OnRoundComplete.mm; sourceTree = "<group>"; };
+		834E87171C9406C500B508BB /* OnRoundResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnRoundResult.mm; path = MainGameSegments/OnRoundResult.mm; sourceTree = "<group>"; };
+		834E87191C9422BB00B508BB /* DispatchNextRound.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchNextRound.mm; path = MainGameSegments/DispatchNextRound.mm; sourceTree = "<group>"; };
+		834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchRoundComplete.mm; path = MainGameSegments/DispatchRoundComplete.mm; sourceTree = "<group>"; };
 		838CC6D51C8C7285001D20AD /* NetworkConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NetworkConstants.cpp; path = Network/NetworkConstants.cpp; sourceTree = "<group>"; };
 		838CFD0D1C8DBE750054EAD0 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utility.cpp; path = Helper/Utility.cpp; sourceTree = "<group>"; };
 		838CFD0E1C8DBE750054EAD0 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Helper/Utility.h; sourceTree = "<group>"; };
@@ -459,8 +467,12 @@
 				834E87091C93FBFF00B508BB /* ProcessData.mm */,
 				834E870D1C93FC1400B508BB /* DispatchHostId.mm */,
 				834E870F1C93FC2C00B508BB /* DispatchCardsData.mm */,
-				834E87111C93FD9700B508BB /* OnHostSelectedHost.mm */,
+				834E87111C93FD9700B508BB /* OnHostSelected.mm */,
 				834E87131C93FDD600B508BB /* OnAPISuccess.mm */,
+				834E87151C94038E00B508BB /* OnRoundComplete.mm */,
+				834E87171C9406C500B508BB /* OnRoundResult.mm */,
+				834E87191C9422BB00B508BB /* DispatchNextRound.mm */,
+				834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */,
 			);
 			name = MainGameSegment;
 			sourceTree = "<group>";
@@ -640,8 +652,11 @@
 				838CFD121C8DBF180054EAD0 /* RoundHandler.cpp in Sources */,
 				834E870B1C93FBFF00B508BB /* OnReceiveNetworkData.mm in Sources */,
 				83E48B1B1C78DB9F005D13EE /* GameKitHelper.m in Sources */,
+				834E87161C94038E00B508BB /* OnRoundComplete.mm in Sources */,
 				83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				834E871C1C946BB300B508BB /* DispatchRoundComplete.mm in Sources */,
+				834E87181C9406C500B508BB /* OnRoundResult.mm in Sources */,
 				834E870C1C93FBFF00B508BB /* ProcessData.mm in Sources */,
 				834E870A1C93FBFF00B508BB /* HostProcessData.mm in Sources */,
 				83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */,
@@ -649,9 +664,10 @@
 				830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */,
 				831BE38C1C8878C70089241E /* Bridge.mm in Sources */,
 				830668E11C834DFD00FF05D8 /* Player.cpp in Sources */,
+				834E871A1C9422BB00B508BB /* DispatchNextRound.mm in Sources */,
 				830668D71C834DF300FF05D8 /* MainScreen.cpp in Sources */,
 				83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.mm in Sources */,
-				834E87121C93FD9700B508BB /* OnHostSelectedHost.mm in Sources */,
+				834E87121C93FD9700B508BB /* OnHostSelected.mm in Sources */,
 				834E87141C93FDD600B508BB /* OnAPISuccess.mm in Sources */,
 				830668D81C834DF300FF05D8 /* MenuScreen.mm in Sources */,
 				83A52D851C8E06040097FA24 /* API.mm in Sources */,

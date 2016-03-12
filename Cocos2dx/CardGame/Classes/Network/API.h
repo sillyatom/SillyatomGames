@@ -14,6 +14,7 @@
 class API
 {
     static int _runningId;
+    bool _executeOnReceive;
 public:
     API();
     int apiId;
@@ -21,6 +22,9 @@ public:
     
     static int getRunningId(){ return _runningId; }
     static void setRunningId(int val){ _runningId = val; }
+    
+    bool getExecuteOnReceive(){ return _executeOnReceive; }
+    void setExecuteOnReceive(bool val){ _executeOnReceive = val; }
     
     NSData * data;
     std::vector<std::string> activePlayers;
