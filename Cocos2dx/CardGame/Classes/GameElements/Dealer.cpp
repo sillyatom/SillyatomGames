@@ -11,7 +11,7 @@ bool Dealer::init()
 	{
 		return false;
 	}
-
+    _lastMatchStartIndex = -1;
 	return true;
 }
 
@@ -49,6 +49,11 @@ Card * Dealer::removeCardWithValue(std::string val)
     return retCard;
 }
 
+std::vector<Card *>::iterator Dealer::removeCardAt(std::vector<Card *>::iterator iter)
+{
+    return _deck.erase(iter);
+}
+
 Card * Dealer::removeCard()
 {
     Card * card = nullptr;
@@ -74,23 +79,110 @@ void Dealer::shuffleDeck()
 	}
 }
 
-void Dealer::dealCard(Card *card)
+void Dealer::dealCard(Card *card, CallFunc * callback)
 {
     int runningIndex = 0;
     for (auto card : _deck)
     {
-        card->moveByPosition(Vec2(-card->getBoundingBox().size.width * 0.4f, 0.0f), 0.0f, CallFunc::create(CC_CALLBACK_0(Dealer::onDealAnimationComplete, this)));
+        Vec2 newPos = _deckStartPos;
+        newPos.x += ((_deck.size() - runningIndex) * -card->getBoundingBox().size.width * 0.4f);
+        card->moveToPosition(newPos, 0.0f);
         card->setLocalZOrder(runningIndex++);
     }
     
     _deck.push_back(card);
-    card->setLocalZOrder(runningIndex++);
     
+    card->setLocalZOrder(runningIndex++);
     card->showFrontFace();
-    card->moveToPosition(_deckStartPos, 0.0f, CallFunc::create(CC_CALLBACK_0(Dealer::onDealAnimationComplete, this)));
+
+    if (callback == NULL)
+    {
+        card->moveToPosition(_deckStartPos, 0.0f, CallFunc::create(CC_CALLBACK_0(Dealer::onDealAnimationComplete, this)));
+    }
+    else
+    {
+        card->moveToPosition(_deckStartPos, 0.0f, callback);
+    }
 }
 
 void Dealer::onDealAnimationComplete()
 {
     onDealCard(_deck.back());
+}
+
+bool Dealer::hasMatch()
+{
+    if (_deck.size() > 0)
+    {
+        Card * lastDealt = _deck.back();
+        for (auto card : _deck)
+        {
+            if (card != lastDealt)
+            {
+                if (card->getCardValue() == lastDealt->getCardValue())
+                {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+int Dealer::getMatchingIndex()
+{
+    int index = 0;
+    if (_deck.size() > 0)
+    {
+        Card * lastDealt = _deck.back();
+        for (std::vector<Card*>::iterator iter = _deck.begin(); iter != _deck.end(); iter++)
+        {
+            Card * card = (*iter);
+            
+            if (card != lastDealt)
+            {
+                if (card->getCardValue() == lastDealt->getCardValue())
+                {
+                    return index;
+                }
+            }
+            index++;
+        }
+    }
+    return -1;
+}
+
+std::vector<Card*> Dealer::removeMatches()
+{
+    std::vector<Card*> matches;
+    if (hasMatch())
+    {
+        _lastMatchStartIndex = getMatchingIndex();
+        std::vector<Card*>::iterator iter = _deck.begin() + _lastMatchStartIndex;
+        while(iter != _deck.end())
+        {
+            Card* card = (*iter);
+            matches.push_back(card);
+            iter = removeCardAt(iter);
+        }
+    }
+    else
+    {
+        _lastMatchStartIndex = -1;
+    }
+    return matches;
+}
+
+std::vector<Card*> Dealer::removeMatchesFromIndex(int index)
+{
+    CC_ASSERT((index >= 0));
+    std::vector<Card*> matches;
+    std::vector<Card*>::iterator iter = _deck.begin() + index;
+    while(iter != _deck.end())
+    {
+        Card* card = (*iter);
+        matches.push_back(card);
+        iter = removeCardAt(iter);
+    }
+    return matches;
 }

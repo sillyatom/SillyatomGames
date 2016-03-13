@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #include "../Scenes/MainGame.h"
 
-void MainGame::onHostSelected(rapidjson::Document &data)
+void MainGame::onHostSelected(int type, rapidjson::Document &data)
 {
     _hostId = data[NetworkKey::HOST_ID.c_str()].GetString();
     
@@ -42,5 +42,8 @@ void MainGame::onHostSelected(rapidjson::Document &data)
     
     //create players
     createPlayers();
+    
+    //acknowledge
+    onProcessDataComplete();
 }
 

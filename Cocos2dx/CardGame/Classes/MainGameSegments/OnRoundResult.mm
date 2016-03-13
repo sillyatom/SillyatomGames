@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #include "../Scenes/MainGame.h"
 
-void MainGame::onRoundResult(rapidjson::Document &data)
+void MainGame::onRoundResult(int type, rapidjson::Document &data)
 {
     NSLog(@" [ onRoundResult (%d) ] received by %s ",data[NetworkKey::ROUND_ID.c_str()].GetInt(),[[GKLocalPlayer localPlayer]alias].UTF8String);
     //get the round id
@@ -19,5 +19,29 @@ void MainGame::onRoundResult(rapidjson::Document &data)
     Player * player = getPlayerById(data[NetworkKey::PLAYER_ID.c_str()].GetString());
     std::string cardValue = data[NetworkKey::CARD_VALUE_TYPE.c_str()].GetString();
     Card * card = player->removeCardWithValue(cardValue);
-    _dealer->dealCard(card);
+    _dealer->dealCard(card, CallFunc::create([=]()
+    {
+        int earnedStartIndex = _data[NetworkKey::EARNED_LENGTH_START_INDEX.c_str()].GetInt();
+        if (earnedStartIndex >= 0)
+        {
+            std::vector<Card*> matches = _dealer->removeMatchesFromIndex(earnedStartIndex);
+            float delay = 0.0f;
+            for (auto matchedCard : matches)
+            {
+                player->addEarnedCard(matchedCard, delay);
+                delay += GameConstants::DEAL_ANIM_TIME;
+            }
+        
+            Utility::delayedCall(this, CallFunc::create([=]()
+            {
+                //acknowledge
+                onProcessDataComplete();
+            }), delay);
+        }
+        else
+        {
+            onProcessDataComplete();
+        }
+
+    }));
 }

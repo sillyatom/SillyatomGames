@@ -44,7 +44,7 @@ private:
     std::vector<std::string> _playersId;
     std::vector<Player*> _playersExcludingThis;
     std::vector<std::string> _playersIdExcludingThis;
-    
+        
     //init
     void createDealer();
     void hostCreatePlayers();
@@ -52,9 +52,9 @@ private:
     Player* getPlayerById(std::string playerId);
     
     //cards
-    void onDistributeCards();
     float playDistributeCards();
     void dispatchCardsData();
+    float updateCardsData(int type, rapidjson::Document &data);
     
     //init UI
     void hideWidgets();
@@ -64,31 +64,28 @@ private:
     void onAPISuccess(int api);
 
     void processData(int type, rapidjson::Document &data);
-    void onProcessDataComplete(int type, rapidjson::Document &data);
     
-    void processHostData(int type, rapidjson::Document &data);
-    void onProcessHostDataComplete(int type, rapidjson::Document &data);
-
     NSData * getAcknowledgementData(rapidjson::Document &data);
     
     void onRoundComplete(int roundNumber, RoundStatus status);
 
-    void updateCardsData(rapidjson::Document &data);
     //from host
     void dispatchHostId();
     //on players
-    void onHostSelected(rapidjson::Document &data);
-    void onRoundResult(rapidjson::Document &data);
+    void onHostSelected(int type, rapidjson::Document &data);
+    void onRoundResult(int type, rapidjson::Document &data);
     void dispatchRoundComplete();
     void dispatchNextRound();
     bool isThisActivePlayer();
     
     void dealSelectedCard();
     void validateDeal(Card* card);
+    void onProcessDataComplete();
+    void onDistributeCards();
     
     void startMatch();
-    void startRound(rapidjson::Document &data);
-
+    void startRound(int type, rapidjson::Document &data);
+    
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
@@ -100,7 +97,6 @@ public:
 	CREATE_FUNC(MainGame);
 	static Scene * createScene();
 	virtual bool init();
-    
 };
 
 #endif

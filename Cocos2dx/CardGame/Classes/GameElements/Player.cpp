@@ -40,3 +40,9 @@ Card* Player::removeCardWithValue(std::string cardValue)
     
     return card;
 }
+
+void Player::addEarnedCard(Card *card, float animDelay)
+{
+    _cards.insert(_cards.begin(), card);
+    card->moveToPosition(getCardPosition(), animDelay);
+}

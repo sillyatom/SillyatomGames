@@ -275,7 +275,7 @@ void MainGame::onTouchCancelled(cocos2d::Touch * touch, cocos2d::Event * event)
     
 }
 
-void MainGame::updateCardsData(rapidjson::Document &data)
+float MainGame::updateCardsData(int type, rapidjson::Document &data)
 {
     for (auto player : _players)
     {
@@ -292,10 +292,15 @@ void MainGame::updateCardsData(rapidjson::Document &data)
     //distribute card animation
     float delay = playDistributeCards();
     pauseProcessEvents();
-    Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::onDistributeCards, this)), delay);
+    
+    Utility::delayedCall(this, CallFunc::create([=]()
+                                                {
+                                                    //acknowledge
+                                                    onProcessDataComplete();
+                                                    onDistributeCards();
+                                                }), delay);
+    return delay;
 }
-
-
 
 Player* MainGame::getPlayerById(std::string playerId)
 {
@@ -311,17 +316,26 @@ Player* MainGame::getPlayerById(std::string playerId)
 
 void MainGame::startMatch()
 {
-    CCLOG("%s starting match", [[GKLocalPlayer localPlayer]playerID].UTF8String);
-    _isActivePlayer = true;
-    _roundHandler->startRound(1);
+    if (Network::isHost)
+    {
+        CCLOG("%s starting match", [[GKLocalPlayer localPlayer]playerID].UTF8String);
+        _isActivePlayer = true;
+        _roundHandler->startRound(1);
+    }
+    else
+    {
+        
+    }
 }
 
-void MainGame::startRound(rapidjson::Document &data)
+void MainGame::startRound(int type, rapidjson::Document &data)
 {
     _isActivePlayer = isThisActivePlayer();
     int roundNumber = data[NetworkKey::ROUND_ID.c_str()].GetInt();
     _roundHandler->setRoundNumber(roundNumber);
     _roundHandler->playNextRound();
+    //acknowledge
+    onProcessDataComplete();
 }
 
 NSData* MainGame::getAcknowledgementData(rapidjson::Document &data)
@@ -348,26 +362,29 @@ void MainGame::dealSelectedCard()
     if (card == NULL)
     {
         card = _players.front()->getCard();
+        _cardSelectionHandler->setActiveCard(card);
     }
     _dealer->dealCard(card);
 }
 
 void MainGame::validateDeal(Card* dealtCard)
 {
-    std::string cardType = dealtCard->getCardType();
-    std::vector<Card*> earnedCards;
-    bool triggered = false;
-    for (auto card : _dealer->getDeck())
+    if (_isActivePlayer)
     {
-        if (card != dealtCard && cardType == card->getCardType())
+        std::vector<Card*> matches = _dealer->removeMatches();
+        if (matches.size() > 0)
         {
-            triggered = true;
+            float delay = 0.0f;
+            for (auto card : matches)
+            {
+                _players.front()->addEarnedCard(card, delay);
+                delay += GameConstants::DEAL_ANIM_TIME;
+            }
+            Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::dispatchRoundComplete, this)), delay);
         }
-        if (triggered)
+        else
         {
-            earnedCards.push_back(card);
+            dispatchRoundComplete();
         }
     }
-    CCLOG(" Earned Cards Length %d ", earnedCards.size());
-    dispatchRoundComplete();
 }

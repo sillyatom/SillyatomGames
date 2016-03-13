@@ -28,6 +28,7 @@ void MainGame::dispatchRoundComplete()
                                   [[NSString alloc]initWithUTF8String:nextPlayerId.c_str()], [[NSString alloc]initWithUTF8String:NetworkKey::NEXT_ROUND_PLAYER.c_str()],
                                   [[NSString alloc]initWithString:[[GKLocalPlayer localPlayer]playerID]], [[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()],
                                   [[NSString alloc]initWithUTF8String:card->getValue().c_str()], [[NSString alloc]initWithUTF8String:NetworkKey::CARD_VALUE_TYPE.c_str()],
+                                  [NSNumber numberWithInt:_dealer->getLastMatchIndex()], [[NSString alloc]initWithUTF8String:NetworkKey::EARNED_LENGTH_START_INDEX.c_str()],
                                   nil];
     
     NSError * error;

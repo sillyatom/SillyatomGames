@@ -27,7 +27,8 @@ void MainGame::dispatchCardsData()
     [dict setValue:[NSNumber numberWithInt:INIT_CARDS_DATA] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API.c_str()]];
     [dict setValue:[NSNumber numberWithInt:api->apiId] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::API_ID.c_str()]];
     [dict setValue:[[NSString alloc]initWithUTF8String:NetworkKey::HOST.c_str()] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::SENDER.c_str()]];
-    
+    [dict setValue:[[NSString alloc]initWithString:[[GKLocalPlayer localPlayer]playerID]] forKey:[[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()]];
+
     for (auto player : _players)
     {
         NSString * playerId = [NSString stringWithUTF8String:player->getPlayerId().c_str()];

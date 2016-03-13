@@ -28,14 +28,28 @@ void Card::moveToPosition(cocos2d::Vec2 position, float delayTime, CallFunc * ca
 {
     FiniteTimeAction * delay = DelayTime::create(delayTime);
     FiniteTimeAction * move = MoveTo::create(GameConstants::DEAL_ANIM_TIME, position);
-    runAction(Sequence::create(delay, move, callback, NULL));
+    if (callback == NULL)
+    {
+        runAction(Sequence::create(delay, move, NULL));
+    }
+    else
+    {
+        runAction(Sequence::create(delay, move, callback, NULL));
+    }
 }
 
 void Card::moveByPosition(cocos2d::Vec2 position, float delayTime, CallFunc * callback)
 {
     FiniteTimeAction * delay = DelayTime::create(delayTime);
     FiniteTimeAction * move = MoveBy::create(GameConstants::DEAL_ANIM_TIME, position);
-    runAction(Sequence::create(delay, move, callback, NULL));
+    if (callback == NULL)
+    {
+        runAction(Sequence::create(delay, move, NULL));        
+    }
+    else
+    {
+        runAction(Sequence::create(delay, move, callback, NULL));
+    }
 }
 
 bool Card::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)

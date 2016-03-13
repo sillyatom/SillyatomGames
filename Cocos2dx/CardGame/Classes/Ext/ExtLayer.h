@@ -34,6 +34,9 @@ private:
     Network * _network;
     
 protected:
+    int _type;
+    rapidjson::Document _data;
+    
     cocos2d::EventListenerTouchOneByOne * _listener;
     ExtSprite * _gameContainer;
     

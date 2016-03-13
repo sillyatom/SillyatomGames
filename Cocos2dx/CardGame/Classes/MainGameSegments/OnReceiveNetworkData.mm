@@ -21,7 +21,7 @@ void MainGame::onReceiveNetworkData(int type, rapidjson::Document &data)
         }
         else
         {
-            processHostData(type, data);
+            processData(type, data);
         }
     }
     else

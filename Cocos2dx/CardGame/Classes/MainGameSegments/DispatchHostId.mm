@@ -26,6 +26,8 @@ void MainGame::dispatchHostId()
                                   [NSNumber numberWithInt:api->apiId], [[NSString alloc]initWithUTF8String:NetworkKey::API_ID.c_str()],
                                   [[NSArray alloc]initWithArray:playerIds], [[NSString alloc]initWithUTF8String:NetworkKey::PLAYERS_ID.c_str()],
                                   [[NSString alloc]initWithString:[[GKLocalPlayer localPlayer]playerID]], [[NSString alloc]initWithUTF8String:NetworkKey::HOST_ID.c_str()],
+                                  [[NSString alloc]initWithString:[[GKLocalPlayer localPlayer]playerID]], [[NSString alloc]initWithUTF8String:NetworkKey::PLAYER_ID.c_str()],
+
                                   nil];
     
     NSError * error;

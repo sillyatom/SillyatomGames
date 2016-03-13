@@ -93,10 +93,10 @@ void ExtLayer::update(float dt)
             NetworkEvent * event = _network->popEvent(_layer);
             if (event != nullptr)
             {
-                rapidjson::Document document;
-                document.Parse<0>(event->data);
-                int type = document["api"].GetInt();
-                onReceiveNetworkData(type, document);
+                _data.Parse<0>(event->data);
+                _type = _data["api"].GetInt();
+                
+                onReceiveNetworkData(_type, _data);
                 delete event;
             }
             _timeElapsed = 0.0f;

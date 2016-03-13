@@ -16,6 +16,10 @@ private:
     
 public:
     std::vector<Card*> getCards(){ return _cards; }
+
+    Vec2 getCardPosition(){ return _cards.back()->getPosition(); }
+    
+    void addEarnedCard(Card * card, float animDelay = 0.0f);
     
     int getPlayerIndex(){ return _playerIndex; }
     void setPlayerIndex(int index){ _playerIndex = index; }

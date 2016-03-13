@@ -59,7 +59,6 @@
 		830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E21C834E0600FF05D8 /* GameConstants.cpp */; };
 		830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E51C834E1000FF05D8 /* ExtSprite.cpp */; };
 		831BE38C1C8878C70089241E /* Bridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 831BE38B1C8878C70089241E /* Bridge.mm */; };
-		834E870A1C93FBFF00B508BB /* HostProcessData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87071C93FBFF00B508BB /* HostProcessData.mm */; };
 		834E870B1C93FBFF00B508BB /* OnReceiveNetworkData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87081C93FBFF00B508BB /* OnReceiveNetworkData.mm */; };
 		834E870C1C93FBFF00B508BB /* ProcessData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87091C93FBFF00B508BB /* ProcessData.mm */; };
 		834E870E1C93FC1400B508BB /* DispatchHostId.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E870D1C93FC1400B508BB /* DispatchHostId.mm */; };
@@ -158,7 +157,6 @@
 		830668E61C834E1000FF05D8 /* ExtSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtSprite.h; path = Ext/ExtSprite.h; sourceTree = "<group>"; };
 		831BE38B1C8878C70089241E /* Bridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Bridge.mm; path = ios/Bridge.mm; sourceTree = SOURCE_ROOT; };
 		831BE38E1C88B7D40089241E /* NetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkConstants.h; path = Network/NetworkConstants.h; sourceTree = "<group>"; };
-		834E87071C93FBFF00B508BB /* HostProcessData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HostProcessData.mm; path = MainGameSegments/HostProcessData.mm; sourceTree = "<group>"; };
 		834E87081C93FBFF00B508BB /* OnReceiveNetworkData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnReceiveNetworkData.mm; path = MainGameSegments/OnReceiveNetworkData.mm; sourceTree = "<group>"; };
 		834E87091C93FBFF00B508BB /* ProcessData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ProcessData.mm; path = MainGameSegments/ProcessData.mm; sourceTree = "<group>"; };
 		834E870D1C93FC1400B508BB /* DispatchHostId.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchHostId.mm; path = MainGameSegments/DispatchHostId.mm; sourceTree = "<group>"; };
@@ -462,7 +460,6 @@
 		834E87001C93EFF300B508BB /* MainGameSegment */ = {
 			isa = PBXGroup;
 			children = (
-				834E87071C93FBFF00B508BB /* HostProcessData.mm */,
 				834E87081C93FBFF00B508BB /* OnReceiveNetworkData.mm */,
 				834E87091C93FBFF00B508BB /* ProcessData.mm */,
 				834E870D1C93FC1400B508BB /* DispatchHostId.mm */,
@@ -658,7 +655,6 @@
 				834E871C1C946BB300B508BB /* DispatchRoundComplete.mm in Sources */,
 				834E87181C9406C500B508BB /* OnRoundResult.mm in Sources */,
 				834E870C1C93FBFF00B508BB /* ProcessData.mm in Sources */,
-				834E870A1C93FBFF00B508BB /* HostProcessData.mm in Sources */,
 				83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */,
 				838CC6D61C8C7285001D20AD /* NetworkConstants.cpp in Sources */,
 				830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */,

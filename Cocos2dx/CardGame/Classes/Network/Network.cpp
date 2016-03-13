@@ -22,6 +22,7 @@ const std::string NetworkKey::CARD_VALUE = "cardValue";
 const std::string NetworkKey::CARD_TYPE = "cardType";
 const std::string NetworkKey::CARD_VALUE_TYPE = "cardValueType";
 const std::string NetworkKey::NEXT_ROUND_PLAYER = "nextRoundPLayer";
+const std::string NetworkKey::EARNED_LENGTH_START_INDEX = "earnedLengthStartIndex";
 
 static Network instance;
 

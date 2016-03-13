@@ -32,6 +32,7 @@ public:
     static const std::string CARD_VALUE;
     static const std::string CARD_TYPE;
     static const std::string NEXT_ROUND_PLAYER;
+    static const std::string EARNED_LENGTH_START_INDEX;
 };
 class Network
 {
