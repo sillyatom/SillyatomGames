@@ -13,11 +13,13 @@ private:
     int _playerIndex;
     std::string _playerName;
     std::string _playerId;
+    Vec2 _cardRefPosition;
     
 public:
     std::vector<Card*> getCards(){ return _cards; }
 
-    Vec2 getCardPosition(){ return _cards.back()->getPosition(); }
+    Vec2 getCardPosition(){ return _cardRefPosition; }
+    void setCardPosition(Vec2 position){ _cardRefPosition = position; }
     
     void addEarnedCard(Card * card, float animDelay = 0.0f);
     

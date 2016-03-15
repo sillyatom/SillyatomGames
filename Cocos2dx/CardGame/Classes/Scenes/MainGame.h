@@ -27,6 +27,7 @@ private:
     int _numPlayersExcludingThis;
     
     bool _isActivePlayer;
+    bool _didShout;
     
     int _readyCounter;
     
@@ -69,6 +70,8 @@ private:
     
     void onRoundComplete(int roundNumber, RoundStatus status);
 
+    ui::ImageView* getReferenceByName(std::string name);
+    
     //from host
     void dispatchHostId();
     //on players
@@ -78,14 +81,16 @@ private:
     void dispatchNextRound();
     bool isThisActivePlayer();
     
+    void autoPickCard();
     void dealSelectedCard();
-    void validateDeal(Card* card);
+    void onDealAnimationComplete(Card* card);
     void onProcessDataComplete();
     void onDistributeCards();
     
     void startMatch();
     void startRound(int type, rapidjson::Document &data);
     
+    void onShout(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);

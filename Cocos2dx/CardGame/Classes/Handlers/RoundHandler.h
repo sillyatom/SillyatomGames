@@ -17,9 +17,8 @@ USING_NS_CC;
 typedef enum
 {
     COMPLETED = 0,
-    SUCCESS = 1,
-    FAILED = 2,
-    CANCELLED = 3
+    STARTED = 1,
+    SUCCESS = 2
 }RoundStatus;
 
 class RoundHandler : public ExtSprite
@@ -27,6 +26,7 @@ class RoundHandler : public ExtSprite
 private:
     int _currentRound;
     std::string _nextActivePlayer;
+    RoundStatus _status;
     
     RoundHandler();
     void startRoundTimer();
@@ -47,5 +47,8 @@ public:
     
     int getRoundNumber(){ return _currentRound; }
     void setRoundNumber(int val){ _currentRound = val; }
+    
+    RoundStatus getRoundStatus(){ return _status; }
+    void setRoundStatus(RoundStatus val){ _status = val; }
 };
 #endif /* RoundHandler_hpp */

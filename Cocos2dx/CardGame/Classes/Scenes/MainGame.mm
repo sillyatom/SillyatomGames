@@ -21,6 +21,7 @@ bool MainGame::init()
 	addChild(_rootNode);
     
     _readyCounter = 0;
+    _didShout = false;
     _isActivePlayer = false;
     
     _cardSelectionHandler = CardSelectionHandler::getInstance();
@@ -46,7 +47,21 @@ bool MainGame::init()
         dispatchHostId();
     }
     
+    auto shoutBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, "shout_btn"));
+    shoutBtn->addTouchEventListener(CC_CALLBACK_2(MainGame::onShout, this));
+    
 	return true;
+}
+
+void MainGame::onShout(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
+{
+    if (eventType == ui::Widget::TouchEventType::ENDED)
+    {
+        if (_cardSelectionHandler->getSelectedCard() != NULL)
+        {
+            _didShout = true;
+        }
+    }
 }
 
 void MainGame::updateCardConfigFromCSB()
@@ -56,6 +71,12 @@ void MainGame::updateCardConfigFromCSB()
     ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
     CardConfig::CARD_WIDTH = refPos->getContentSize().width;
     CardConfig::CARD_HEIGHT = refPos->getContentSize().height;
+}
+
+ui::ImageView* MainGame::getReferenceByName(std::string name)
+{
+    ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), name));
+    return refPos;
 }
 
 void MainGame::hideWidgets()
@@ -88,6 +109,10 @@ void MainGame::createPlayers()
         _gameContainer->addChild(player);
         
         player->setPlayerIndex(_numPlayers);
+        
+        std::ostringstream osstream;
+        osstream << "refCardPos_player"<<(_numPlayers+1);
+        player->setCardPosition(getReferenceByName(osstream.str())->getPosition());
         player->setPlayerName([gkPlayer alias].UTF8String);
         player->setPlayerId([gkPlayer playerID].UTF8String);
         _players.push_back(player);
@@ -140,6 +165,10 @@ void MainGame::hostCreatePlayers()
         _gameContainer->addChild(player);
         
         player->setPlayerIndex(_numPlayers);
+        std::ostringstream osstream;
+        osstream << "refCardPos_player"<<(_numPlayers+1);
+        player->setCardPosition(getReferenceByName(osstream.str())->getPosition());
+
         player->setPlayerName([gkPlayer alias].UTF8String);
         player->setPlayerId([gkPlayer playerID].UTF8String);
         _players.push_back(player);
@@ -227,7 +256,7 @@ void MainGame::createDealer()
     _dealer->retain();
     _dealer->resetDeck();
     
-    _dealer->onDealCard = std::bind(&MainGame::validateDeal, this, std::placeholders::_1);
+    _dealer->onDealCard = std::bind(&MainGame::onDealAnimationComplete, this, std::placeholders::_1);
     
     //if is host, generate cards and shuffle
     if (Network::isHost)
@@ -238,7 +267,11 @@ void MainGame::createDealer()
 
 bool MainGame::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
 {
-    if (_isActivePlayer)
+    //if active player && card not selected
+    if (_isActivePlayer
+        && _cardSelectionHandler->getSelectedCard() == NULL
+        && _roundHandler->getRoundStatus() == STARTED
+        )
     {
         Card* card = dynamic_cast<Card*>(event->getCurrentTarget());
         
@@ -252,8 +285,8 @@ bool MainGame::onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event)
             {
                 CCLOG("Touched Card : %s ", card->getValue().c_str());
                 _cardSelectionHandler->setActiveCard(card);
-                _roundHandler->stopRound();
                 event->stopPropagation();
+                dealSelectedCard();
                 return true;
             }
         }
@@ -331,6 +364,7 @@ void MainGame::startMatch()
 void MainGame::startRound(int type, rapidjson::Document &data)
 {
     _isActivePlayer = isThisActivePlayer();
+    _didShout = false;
     int roundNumber = data[NetworkKey::ROUND_ID.c_str()].GetInt();
     _roundHandler->setRoundNumber(roundNumber);
     _roundHandler->playNextRound();
@@ -355,36 +389,45 @@ bool MainGame::isThisActivePlayer()
     return (strcmp(_roundHandler->getNextActivePlayer().c_str(), [[GKLocalPlayer localPlayer]playerID].UTF8String) == 0);
 }
 
-void MainGame::dealSelectedCard()
+void MainGame::autoPickCard()
 {
-    Card * card = _cardSelectionHandler->getSelectedCard();
-    
-    if (card == NULL)
-    {
-        card = _players.front()->getCard();
-        _cardSelectionHandler->setActiveCard(card);
-    }
+    Card * card = _players.front()->getCard();
+    _cardSelectionHandler->setActiveCard(card);
     _dealer->dealCard(card);
 }
 
-void MainGame::validateDeal(Card* dealtCard)
+void MainGame::dealSelectedCard()
 {
-    if (_isActivePlayer)
+    Card * card = _cardSelectionHandler->getSelectedCard();
+    _dealer->dealCard(card);
+}
+
+void MainGame::onDealAnimationComplete(Card* dealtCard)
+{
+    if (_isActivePlayer && _roundHandler->getRoundStatus() == COMPLETED)
     {
-        std::vector<Card*> matches = _dealer->removeMatches();
-        if (matches.size() > 0)
+        //added to avoid triggering on deal animation complete twice
+        //there is a chance that round end timer and dealt animation end time can get called one after the other
+        _roundHandler->setRoundStatus(SUCCESS);
+        
+        float delay = 0.0f;
+        if (_dealer->hasMatch())
         {
-            float delay = 0.0f;
-            for (auto card : matches)
+            if (_didShout)
             {
-                _players.front()->addEarnedCard(card, delay);
-                delay += GameConstants::DEAL_ANIM_TIME;
+                std::vector<Card*> matches = _dealer->removeMatches();
+                for (auto card : matches)
+                {
+                    _players.front()->addEarnedCard(card, delay);
+                    delay += GameConstants::DEAL_ANIM_TIME;
+                }
             }
-            Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::dispatchRoundComplete, this)), delay);
+            else
+            {
+                //failed to shout
+                CCLOG("Failed to SHOUUTTT");
+            }
         }
-        else
-        {
-            dispatchRoundComplete();
-        }
+        Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::dispatchRoundComplete, this)), delay);
     }
 }

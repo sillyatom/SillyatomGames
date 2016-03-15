@@ -13,6 +13,15 @@ void MainGame::onRoundComplete(int roundNumber, RoundStatus status)
 {
     if (_isActivePlayer)
     {
-        dealSelectedCard();
+        //if no card has been selected
+        if (_cardSelectionHandler->getSelectedCard() == NULL)
+        {
+            //trigger auto pick
+            autoPickCard();
+        }
+        else
+        {
+            onDealAnimationComplete(_cardSelectionHandler->getSelectedCard());
+        }
     }
 }

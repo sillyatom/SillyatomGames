@@ -48,6 +48,7 @@ void RoundHandler::playNextRound()
 void RoundHandler::startRound(int roundNumber)
 {
     _currentRound = roundNumber;
+    _status = STARTED;
     startRoundTimer();
 }
 
@@ -71,6 +72,7 @@ void RoundHandler::onRoundTimerTick(float dt)
 void RoundHandler::stopRoundTimer()
 {
     unschedule(schedule_selector(RoundHandler::onRoundTimerTick));
+    _status = COMPLETED;
     onRoundComplete(_currentRound, COMPLETED);
 }
 

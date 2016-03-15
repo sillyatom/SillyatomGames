@@ -18,9 +18,11 @@ bool MainScreen::init()
     
 	auto rootNode = CSLoader::createNode("MainScreen.csb");
 	addChild(rootNode);
+    
 	auto playBtn = static_cast<ui::Button*>(rootNode->getChildByName("playBtn"));
 	playBtn->addTouchEventListener(CC_CALLBACK_2(MainScreen::loadMenuScreen, this));
-	return true;
+	
+    return true;
 }
 
 void MainScreen::loadMenuScreen(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
