@@ -22,6 +22,8 @@ public:
     void onDealAnimationComplete();
     
     bool hasMatch();
+    
+    std::vector<Card*> getMatchedData();
     std::vector<Card*> removeMatches();
     std::vector<Card*> removeMatchesFromIndex(int index);
     

@@ -17,6 +17,52 @@ void MainGame::dispatchRoundComplete()
     api->apiType = ROUND_RESULT;
     api->activePlayers = _playersIdExcludingThis;
     
+    //if failed to shout
+    //distribute cards to players
+    NSMutableDictionary* extraDict = nil;
+    
+    if (_dealer->hasMatch())
+    {
+        if (!_didShout)
+        {
+            extraDict = [[NSMutableDictionary alloc]init];
+            std::vector<Card*> matches = _dealer->getMatchedData();
+            std::map<std::string, std::vector<Card*>> distCards;
+            int numPlayers = (int)_playersExcludingThis.size();
+            int cardCount = (int)matches.size();
+            for (int index = 0; index < cardCount; index++)
+            {
+                std::string playerId = _playersExcludingThis.at(index % numPlayers)->getPlayerId();
+                Card * card = matches.back();
+                matches.pop_back();
+                distCards[playerId].push_back(card);
+            }
+            for (auto iter = distCards.begin(); iter != distCards.end(); iter++)
+            {
+                std::string playerId = iter->first;
+                std::vector<Card*> cards = iter->second;
+                NSMutableArray * nsCards = [[NSMutableArray alloc]init];
+                for (auto card : cards)
+                {
+                    [nsCards addObject:[[NSString alloc]initWithUTF8String:card->getValue().c_str()]];
+                }
+                [extraDict setObject:nsCards forKey:[[NSString alloc]initWithUTF8String:playerId.c_str()]];
+            }
+            
+            for (auto iter = distCards.begin(); iter != distCards.end(); iter++)
+            {
+                std::string playerId = iter->first;
+                Player * player = getPlayerById(playerId);
+                std::vector<Card*> cards = iter->second;
+                for (auto card : cards)
+                {
+                    player->addEarnedCard(_dealer->removeCardWithValue(card->getValue()));
+                    //need to add a delay callback and process data further
+                }
+            }
+
+        }
+    }
     Card* card = _cardSelectionHandler->getSelectedCard();
     
     std::string nextPlayerId = (*_playersIdExcludingThis.begin()).c_str();
@@ -30,6 +76,10 @@ void MainGame::dispatchRoundComplete()
                                   [[NSString alloc]initWithUTF8String:card->getValue().c_str()], [[NSString alloc]initWithUTF8String:NetworkKey::CARD_VALUE_TYPE.c_str()],
                                   [NSNumber numberWithInt:_dealer->getLastMatchIndex()], [[NSString alloc]initWithUTF8String:NetworkKey::EARNED_LENGTH_START_INDEX.c_str()],
                                   nil];
+    if (extraDict != nil)
+    {
+        [dict addEntriesFromDictionary:extraDict];
+    }
     
     NSError * error;
     NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];

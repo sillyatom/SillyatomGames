@@ -40,8 +40,27 @@ void MainGame::onRoundResult(int type, rapidjson::Document &data)
         }
         else
         {
-            onProcessDataComplete();
+            float delay = 0.0f;
+            for (auto player : _players)
+            {
+                const rapidjson::Value& cards = _data[player->getPlayerId().c_str()];
+                if (!cards.IsNull())
+                {
+                    int length = (int)cards.Size();
+                    for (int i = 0; i < length; i++)
+                    {
+                        std::string sCard = cards[i].GetString();
+                        Card * card = _dealer->removeCardWithValue(sCard);
+                        player->addEarnedCard(card, delay);
+                        delay += GameConstants::DEAL_ANIM_TIME;
+                    }
+                }
+            }
+            Utility::delayedCall(this, CallFunc::create([=]()
+                                                        {
+                                                            //acknowledge
+                                                            onProcessDataComplete();
+                                                        }), delay);
         }
-
     }));
 }

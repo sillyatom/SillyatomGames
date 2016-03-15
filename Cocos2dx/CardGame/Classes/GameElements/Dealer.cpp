@@ -152,6 +152,21 @@ int Dealer::getMatchingIndex()
     return -1;
 }
 
+std::vector<Card*> Dealer::getMatchedData()
+{
+    std::vector<Card*> matches;
+    int matchingIndex = getMatchingIndex();
+    std::vector<Card*>::iterator iter = _deck.begin() + matchingIndex;
+    while(iter != _deck.end())
+    {
+        Card* card = (*iter);
+        matches.push_back(card);
+        iter++;
+    }
+
+    return matches;
+}
+
 std::vector<Card*> Dealer::removeMatches()
 {
     std::vector<Card*> matches;

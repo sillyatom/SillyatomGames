@@ -59,6 +59,7 @@
 		830668E41C834E0600FF05D8 /* GameConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E21C834E0600FF05D8 /* GameConstants.cpp */; };
 		830668E71C834E1000FF05D8 /* ExtSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 830668E51C834E1000FF05D8 /* ExtSprite.cpp */; };
 		831BE38C1C8878C70089241E /* Bridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 831BE38B1C8878C70089241E /* Bridge.mm */; };
+		8327F6931C9890A400A6BD9B /* OnReceiveCardsData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8327F6921C9890A400A6BD9B /* OnReceiveCardsData.mm */; };
 		834E870B1C93FBFF00B508BB /* OnReceiveNetworkData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87081C93FBFF00B508BB /* OnReceiveNetworkData.mm */; };
 		834E870C1C93FBFF00B508BB /* ProcessData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87091C93FBFF00B508BB /* ProcessData.mm */; };
 		834E870E1C93FC1400B508BB /* DispatchHostId.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E870D1C93FC1400B508BB /* DispatchHostId.mm */; };
@@ -157,6 +158,7 @@
 		830668E61C834E1000FF05D8 /* ExtSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtSprite.h; path = Ext/ExtSprite.h; sourceTree = "<group>"; };
 		831BE38B1C8878C70089241E /* Bridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Bridge.mm; path = ios/Bridge.mm; sourceTree = SOURCE_ROOT; };
 		831BE38E1C88B7D40089241E /* NetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkConstants.h; path = Network/NetworkConstants.h; sourceTree = "<group>"; };
+		8327F6921C9890A400A6BD9B /* OnReceiveCardsData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnReceiveCardsData.mm; path = MainGameSegments/OnReceiveCardsData.mm; sourceTree = "<group>"; };
 		834E87081C93FBFF00B508BB /* OnReceiveNetworkData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnReceiveNetworkData.mm; path = MainGameSegments/OnReceiveNetworkData.mm; sourceTree = "<group>"; };
 		834E87091C93FBFF00B508BB /* ProcessData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ProcessData.mm; path = MainGameSegments/ProcessData.mm; sourceTree = "<group>"; };
 		834E870D1C93FC1400B508BB /* DispatchHostId.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchHostId.mm; path = MainGameSegments/DispatchHostId.mm; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				834E87171C9406C500B508BB /* OnRoundResult.mm */,
 				834E87191C9422BB00B508BB /* DispatchNextRound.mm */,
 				834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */,
+				8327F6921C9890A400A6BD9B /* OnReceiveCardsData.mm */,
 			);
 			name = MainGameSegment;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				834E87101C93FC2C00B508BB /* DispatchCardsData.mm in Sources */,
 				83D92EE61C89C2880044EE19 /* NetworkEvent.cpp in Sources */,
+				8327F6931C9890A400A6BD9B /* OnReceiveCardsData.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				83E1C0671C8AD85E00EE13DE /* Network.cpp in Sources */,
 			);
