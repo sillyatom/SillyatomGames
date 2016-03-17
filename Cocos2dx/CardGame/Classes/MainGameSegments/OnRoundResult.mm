@@ -40,6 +40,8 @@ void MainGame::onRoundResult(int type, rapidjson::Document &data)
         }
         else
         {
+            //on failed to shout
+            //distributed cards
             float delay = 0.0f;
             for (auto player : _players)
             {

@@ -70,6 +70,7 @@
 		834E87181C9406C500B508BB /* OnRoundResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87171C9406C500B508BB /* OnRoundResult.mm */; };
 		834E871A1C9422BB00B508BB /* DispatchNextRound.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E87191C9422BB00B508BB /* DispatchNextRound.mm */; };
 		834E871C1C946BB300B508BB /* DispatchRoundComplete.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */; };
+		836333D61C9B34730033D54F /* OnStartRound.mm in Sources */ = {isa = PBXBuildFile; fileRef = 836333D51C9B34730033D54F /* OnStartRound.mm */; };
 		838CC6D61C8C7285001D20AD /* NetworkConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CC6D51C8C7285001D20AD /* NetworkConstants.cpp */; };
 		838CFD0F1C8DBE750054EAD0 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CFD0D1C8DBE750054EAD0 /* Utility.cpp */; };
 		838CFD121C8DBF180054EAD0 /* RoundHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 838CFD101C8DBF180054EAD0 /* RoundHandler.cpp */; };
@@ -169,6 +170,7 @@
 		834E87171C9406C500B508BB /* OnRoundResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnRoundResult.mm; path = MainGameSegments/OnRoundResult.mm; sourceTree = "<group>"; };
 		834E87191C9422BB00B508BB /* DispatchNextRound.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchNextRound.mm; path = MainGameSegments/DispatchNextRound.mm; sourceTree = "<group>"; };
 		834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DispatchRoundComplete.mm; path = MainGameSegments/DispatchRoundComplete.mm; sourceTree = "<group>"; };
+		836333D51C9B34730033D54F /* OnStartRound.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OnStartRound.mm; path = MainGameSegments/OnStartRound.mm; sourceTree = "<group>"; };
 		838CC6D51C8C7285001D20AD /* NetworkConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NetworkConstants.cpp; path = Network/NetworkConstants.cpp; sourceTree = "<group>"; };
 		838CFD0D1C8DBE750054EAD0 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utility.cpp; path = Helper/Utility.cpp; sourceTree = "<group>"; };
 		838CFD0E1C8DBE750054EAD0 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Helper/Utility.h; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				834E87191C9422BB00B508BB /* DispatchNextRound.mm */,
 				834E871B1C946BB300B508BB /* DispatchRoundComplete.mm */,
 				8327F6921C9890A400A6BD9B /* OnReceiveCardsData.mm */,
+				836333D51C9B34730033D54F /* OnStartRound.mm */,
 			);
 			name = MainGameSegment;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836333D61C9B34730033D54F /* OnStartRound.mm in Sources */,
 				838CFD0F1C8DBE750054EAD0 /* Utility.cpp in Sources */,
 				830668DF1C834DFD00FF05D8 /* Card.cpp in Sources */,
 				834E870E1C93FC1400B508BB /* DispatchHostId.mm in Sources */,

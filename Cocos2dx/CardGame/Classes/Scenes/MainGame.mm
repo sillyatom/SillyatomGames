@@ -334,17 +334,6 @@ void MainGame::startMatch()
     }
 }
 
-void MainGame::startRound(int type, rapidjson::Document &data)
-{
-    _isActivePlayer = isThisActivePlayer();
-    _didShout = false;
-    int roundNumber = data[NetworkKey::ROUND_ID.c_str()].GetInt();
-    _roundHandler->setRoundNumber(roundNumber);
-    _roundHandler->playNextRound();
-    //acknowledge
-    onProcessDataComplete();
-}
-
 NSData* MainGame::getAcknowledgementData(rapidjson::Document &data)
 {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
