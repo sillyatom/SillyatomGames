@@ -18,5 +18,6 @@ public:
 	CREATE_FUNC(ExtSprite);
 	virtual bool init();
     void addTouchListeners(EventListenerTouchOneByOne * listener);
+    virtual void update(float dt){};
 };
 #endif // !_EXT_SPRITE_H_

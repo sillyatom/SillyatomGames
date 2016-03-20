@@ -77,6 +77,12 @@ BOOL _matchStarted;
     {
         [self setLastError : error];
         
+        if (error != nil)
+        {
+            NSLog(@"GameCenter auth Failed");
+            return;
+        }
+        
         if (viewController != nil)
         {
             [self setAuthenticationViewController : viewController];

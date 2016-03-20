@@ -43,14 +43,29 @@ bool MainGame::init()
     
     if (Network::isHost)
     {
+        _isActivePlayer = true;
         hostCreatePlayers();
         dispatchHostId();
+    }
+    else
+    {
+        _isActivePlayer = false;
     }
     
     auto shoutBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, "shout_btn"));
     shoutBtn->addTouchEventListener(CC_CALLBACK_2(MainGame::onShout, this));
+    auto spinBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)_rootNode, "spin_btn"));
+    spinBtn->addTouchEventListener(CC_CALLBACK_2(MainGame::onSpin, this));
     
 	return true;
+}
+
+void MainGame::onSpin(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
+{
+    if (eventType == ui::Widget::TouchEventType::ENDED)
+    {
+        _players.front()->spinReel();
+    }
 }
 
 void MainGame::onShout(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
@@ -213,6 +228,10 @@ void MainGame::hostCreatePlayers()
 
 void MainGame::onDistributeCards()
 {
+    if (_isActivePlayer)
+    {
+        _players.front()->resetReel();
+    }
     resumeProcessEvents();
 }
 
@@ -220,6 +239,7 @@ float MainGame::playDistributeCards()
 {
     float playerDelay = 0.0f;
     float delayTime = 0.0f;
+    ui::ImageView * cardsReel = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), "CardsReel"));
     
     for (auto player : _players)
     {
@@ -227,21 +247,35 @@ float MainGame::playDistributeCards()
         
         std::ostringstream oss;
         oss << "refCardPos_player" << playerIndex;
+
         ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
         
         Vec2 refPosition = refPos->getPosition();
         
         delayTime = playerDelay;
-        int runningZOrder = 0;
-        
+        int cardIndex = 0;
         for (auto card : player->getCards())
         {
             card->setAnchorPoint(refPos->getAnchorPoint());
-            card->moveToPosition(refPosition, delayTime);
-            card->setLocalZOrder(runningZOrder++);
+            card->moveToPosition(refPosition, delayTime, CallFunc::create([=](){
+                if (playerIndex == 1)
+                {
+                    static int runningOrder = 0;
+                    card->showFrontFace();
+                    card->retain();
+                    card->removeFromParent();
+                    cardsReel->addChild(card, runningOrder++);
+                    card->setPosition(cardsReel->getBoundingBox().size.width*0.5f, cardsReel->getBoundingBox().size.height*0.5f);
+                    if (card != player->getCards().back())
+                    {
+                        card->moveByPosition(Vec2(0.0f, -cardsReel->getBoundingBox().size.height), GameConstants::DEAL_ANIM_TIME);
+                    }
+                }
+            }));
             card->addTouchListeners(_listener);
             
             delayTime += (GameConstants::DEAL_ANIM_TIME * _numPlayers);
+            cardIndex++;
         }
         playerDelay += GameConstants::DEAL_ANIM_TIME;
     }
@@ -254,12 +288,12 @@ void MainGame::createDealer()
     _gameContainer->addChild(_dealer);
     
     _dealer->retain();
-    _dealer->resetDeck();
+    _dealer->initDeck(_gameContainer);
     
     _dealer->onDealCard = std::bind(&MainGame::onDealAnimationComplete, this, std::placeholders::_1);
     
     //if is host, generate cards and shuffle
-    if (Network::isHost)
+    if (_isActivePlayer)
     {
         _dealer->shuffleDeck();
     }
@@ -392,4 +426,13 @@ void MainGame::onDealAnimationComplete(Card* dealtCard)
         }
         Utility::delayedCall(this, CallFunc::create(CC_CALLBACK_0(MainGame::dispatchRoundComplete, this)), delay);
     }
+}
+
+void MainGame::update(float dt)
+{
+    for (auto player : _players)
+    {
+        player->update(dt);
+    }
+    ExtLayer::update(dt);
 }

@@ -15,7 +15,7 @@ bool Dealer::init()
 	return true;
 }
 
-void Dealer::initDeck()
+void Dealer::initDeck(Sprite * container)
 {
 	for (int i = 0; i < GameConstants::CARD_TYPES.size(); i++)
 	{
@@ -24,7 +24,7 @@ void Dealer::initDeck()
 			Card * card = Card::create();
 			card->initData(GameConstants::CARD_VALUES[j], GameConstants::CARD_TYPES[i]);
 			card->initWithSpriteFrameName(card->getAssetName());
-			getParent()->addChild(card);
+			container->addChild(card);
             card->setScale(CardConfig::CARD_WIDTH / card->getContentSize().width, CardConfig::CARD_HEIGHT / card->getContentSize().height);
 			Size size = Director::getInstance()->getVisibleSize();
 			card->setPosition(size.width/2, size.height/2);
@@ -63,11 +63,6 @@ Card * Dealer::removeCard()
         _deck.pop_back();
     }
     return card;
-}
-
-void Dealer::resetDeck()
-{
-	initDeck();
 }
 
 void Dealer::shuffleDeck()

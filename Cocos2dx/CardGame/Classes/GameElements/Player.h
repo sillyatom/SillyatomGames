@@ -2,6 +2,7 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 
+#include "../Handlers/ReelHandler.h"
 #include "ExtSprite.h"
 #include "Card.h"
 
@@ -14,7 +15,7 @@ private:
     std::string _playerName;
     std::string _playerId;
     Vec2 _cardRefPosition;
-    
+    ReelHandler _reelHandler;
 public:
     std::vector<Card*> getCards(){ return _cards; }
 
@@ -35,10 +36,14 @@ public:
     void setCards(std::vector<Card*> cards){ _cards = cards; }
     void addCard(Card* card){ _cards.push_back(card);}
     
+    void resetReel();
+    void spinReel();
+    
     Card* removeCardWithValue(std::string cardValue);
     Card* getCard();
     
     CREATE_FUNC(Player);
     virtual bool init();
+    virtual void update(float dt);
 };
 #endif // !_PLAYER_H_

@@ -91,6 +91,8 @@ private:
     void startRound(int type, rapidjson::Document &data);
     
     void onShout(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
+    void onSpin(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
+    
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
@@ -102,6 +104,7 @@ public:
 	CREATE_FUNC(MainGame);
 	static Scene * createScene();
 	virtual bool init();
+    virtual void update(float dt);
 };
 
 #endif

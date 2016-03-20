@@ -86,6 +86,7 @@
 		83E1C0671C8AD85E00EE13DE /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E1C0661C8AD85E00EE13DE /* Network.cpp */; };
 		83E48B111C78CE1C005D13EE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E48B101C78CE1C005D13EE /* GameKit.framework */; };
 		83E48B1B1C78DB9F005D13EE /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E48B1A1C78DB9F005D13EE /* GameKitHelper.m */; };
+		83F167B41C9EA6E700F3DC43 /* ReelHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83F167B21C9EA6E700F3DC43 /* ReelHandler.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -199,6 +200,8 @@
 		83E48B101C78CE1C005D13EE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		83E48B191C78DB9F005D13EE /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameKitHelper.h; path = GameKitHelper/GameKitHelper.h; sourceTree = SOURCE_ROOT; };
 		83E48B1A1C78DB9F005D13EE /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameKitHelper.m; path = GameKitHelper/GameKitHelper.m; sourceTree = SOURCE_ROOT; };
+		83F167B21C9EA6E700F3DC43 /* ReelHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReelHandler.cpp; path = Handlers/ReelHandler.cpp; sourceTree = "<group>"; };
+		83F167B31C9EA6E700F3DC43 /* ReelHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReelHandler.h; path = Handlers/ReelHandler.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -507,6 +510,8 @@
 				838CFD111C8DBF180054EAD0 /* RoundHandler.h */,
 				83A52D801C8E05B40097FA24 /* APIHandler.mm */,
 				83A52D811C8E05B40097FA24 /* APIHandler.h */,
+				83F167B21C9EA6E700F3DC43 /* ReelHandler.cpp */,
+				83F167B31C9EA6E700F3DC43 /* ReelHandler.h */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				83E48B1B1C78DB9F005D13EE /* GameKitHelper.m in Sources */,
 				834E87161C94038E00B508BB /* OnRoundComplete.mm in Sources */,
 				83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */,
+				83F167B41C9EA6E700F3DC43 /* ReelHandler.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				834E871C1C946BB300B508BB /* DispatchRoundComplete.mm in Sources */,
 				834E87181C9406C500B508BB /* OnRoundResult.mm in Sources */,

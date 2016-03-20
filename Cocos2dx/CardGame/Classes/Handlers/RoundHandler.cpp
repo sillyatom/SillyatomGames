@@ -65,7 +65,7 @@ void RoundHandler::onRoundTimerTick(float dt)
     if (tickCount == GameConstants::ROUND_TIME)
     {
         tickCount = 0;
-        stopRound();
+        //stopRound();
     }
 }
 

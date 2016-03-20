@@ -6,43 +6,33 @@
       <ObjectData Name="Scene" Tag="33" ctype="GameNodeObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="refCardPos_player1" ActionTag="654903443" Tag="34" IconVisible="False" LeftMargin="457.9615" RightMargin="437.0385" TopMargin="490.5000" BottomMargin="59.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="65.0000" Y="90.0000" />
-            <AnchorPoint ScaleX="0.4929" />
-            <Position X="490.0000" Y="59.5000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5104" Y="0.0930" />
-            <PreSize X="0.0677" Y="0.1406" />
-            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
-          </AbstractNodeData>
           <AbstractNodeData Name="refCardPos_player3" ActionTag="1709351917" Tag="35" IconVisible="False" LeftMargin="794.0000" RightMargin="101.0000" TopMargin="44.5000" BottomMargin="505.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="65.0000" Y="90.0000" />
-            <AnchorPoint ScaleX="0.5000" />
-            <Position X="826.5000" Y="505.5000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="826.5000" Y="550.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8609" Y="0.7898" />
+            <PrePosition X="0.8609" Y="0.8602" />
             <PreSize X="0.0677" Y="0.1406" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="refCardPos_player2" ActionTag="-1383522451" Tag="36" IconVisible="False" LeftMargin="483.5000" RightMargin="411.5000" TopMargin="44.5000" BottomMargin="505.5000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="65.0000" Y="90.0000" />
-            <AnchorPoint ScaleX="0.5000" />
-            <Position X="516.0000" Y="505.5000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="516.0000" Y="550.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5375" Y="0.7898" />
+            <PrePosition X="0.5375" Y="0.8602" />
             <PreSize X="0.0677" Y="0.1406" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="refCardPos_player4" ActionTag="-1268693381" Tag="37" IconVisible="False" LeftMargin="96.0000" RightMargin="799.0000" TopMargin="47.9165" BottomMargin="502.0835" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="65.0000" Y="90.0000" />
-            <AnchorPoint ScaleX="0.5000" />
-            <Position X="128.5000" Y="502.0835" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="128.5000" Y="547.0835" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1339" Y="0.7845" />
+            <PrePosition X="0.1339" Y="0.8548" />
             <PreSize X="0.0677" Y="0.1406" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
@@ -124,21 +114,72 @@
           </AbstractNodeData>
           <AbstractNodeData Name="deck_card_1" ActionTag="-212778900" Tag="14" IconVisible="False" LeftMargin="447.5000" RightMargin="447.5000" TopMargin="275.0000" BottomMargin="275.0000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="65.0000" Y="90.0000" />
-            <AnchorPoint ScaleX="0.5000" />
-            <Position X="480.0000" Y="275.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="480.0000" Y="320.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.4297" />
+            <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.0677" Y="0.1406" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="shout_btn" ActionTag="1186118005" Tag="15" IconVisible="False" LeftMargin="797.5000" RightMargin="87.5000" TopMargin="519.5000" BottomMargin="45.5000" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="shout_btn" ActionTag="1186118005" Tag="15" IconVisible="False" LeftMargin="797.5000" RightMargin="87.5000" TopMargin="519.5000" BottomMargin="45.5000" TouchEnable="True" FontSize="14" ButtonText="Shout" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="75.0000" Y="75.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="835.0000" Y="83.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8698" Y="0.1297" />
+            <PreSize X="0.0781" Y="0.1172" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="SlotsBg" ActionTag="-100267215" Tag="16" IconVisible="False" LeftMargin="389.9998" RightMargin="370.0002" TopMargin="429.0000" BottomMargin="11.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <AnchorPoint />
+            <Position X="389.9998" Y="11.0000" />
+            <Scale ScaleX="1.0000" ScaleY="0.8250" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4062" Y="0.0172" />
+            <PreSize X="0.2083" Y="0.3125" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="CardsReel" ActionTag="964798039" Tag="22" IconVisible="False" LeftMargin="455.9960" RightMargin="434.0040" TopMargin="478.5004" BottomMargin="61.4996" ClipAble="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="70.0000" Y="100.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="490.9960" Y="111.4996" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5115" Y="0.1742" />
+            <PreSize X="0.0729" Y="0.1563" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="refCardPos_player1" ActionTag="654903443" Tag="34" IconVisible="False" LeftMargin="458.5000" RightMargin="436.5000" TopMargin="483.0000" BottomMargin="67.0000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="65.0000" Y="90.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="491.0000" Y="112.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5115" Y="0.1750" />
+            <PreSize X="0.0677" Y="0.1406" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="spin_btn" ActionTag="260247483" Tag="40" IconVisible="False" LeftMargin="605.5000" RightMargin="279.5000" TopMargin="526.5000" BottomMargin="38.5000" TouchEnable="True" FontSize="14" ButtonText="Spin" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="75.0000" Y="75.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="643.0000" Y="76.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6698" Y="0.1187" />
             <PreSize X="0.0781" Y="0.1172" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />

@@ -46,3 +46,19 @@ void Player::addEarnedCard(Card *card, float animDelay)
     _cards.insert(_cards.begin(), card);
     card->moveToPosition(getCardPosition(), animDelay);
 }
+
+void Player::resetReel()
+{
+    _reelHandler.initReels(_cards);
+}
+
+void Player::update(float dt)
+{
+    _reelHandler.update(dt);
+    ExtSprite::update(dt);
+}
+
+void Player::spinReel()
+{
+    _reelHandler.spin(2.0f);
+}

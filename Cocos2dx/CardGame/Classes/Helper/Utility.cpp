@@ -7,7 +7,7 @@
 //
 
 #include "Utility.h"
-
+#include <Math.h>
 void Utility::delayedCall(Node * node, CallFunc * callFunc, float delay)
 {
     cocos2d::Vector<FiniteTimeAction*>_actions;
@@ -21,4 +21,25 @@ void Utility::delayedCall(Node * node, CallFunc * callFunc, float delay)
     }
     
     node->runAction(Sequence::create(_actions));
+}
+
+float Utility::InterpolateSlowAcceleration(float timeElapsed, float from, float to, float duration)
+{
+    float v = timeElapsed / duration;
+    v = v * v;
+    return (from * v) + (to * (1 - v));
+}
+
+float Utility::InterpolateDecelleration(float timeElapsed, float from, float to, float duration)
+{
+    float v = timeElapsed / duration;
+    v = 1 - (1 - v) * (1 - v);
+    return (from * v) + (to * (1 - v));
+}
+
+float Utility::SinInterpolate(float timeElapsed, float from, float to, float duration)
+{
+    float v = timeElapsed / duration;
+    v = sin(v * MATH_PIOVER2);
+    return (from * v) + (to * (1 - v));
 }

@@ -14,7 +14,6 @@ private:
     Vec2 _deckStartPos;
     int _lastMatchStartIndex;
 
-	void initDeck();
 public:
     CREATE_FUNC(Dealer);
     
@@ -35,7 +34,7 @@ public:
     
     virtual bool init();
 	
-    void resetDeck();
+    void initDeck(Sprite * container);
 	void shuffleDeck();
     
     int getDeckSize(){ return (int)_deck.size(); }

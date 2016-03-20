@@ -16,7 +16,9 @@ class Utility
 {
 public:
     static void delayedCall(Node * node, CallFunc * callFunc, float delay);
-    
+    static float InterpolateSlowAcceleration(float timeElapsed, float from, float to, float duration);
+    static float InterpolateDecelleration(float timeElapsed, float from, float to, float duration);
+    static float SinInterpolate(float timeElapsed, float from, float to, float duration);
 };
 
 #endif /* Utility_hpp */
