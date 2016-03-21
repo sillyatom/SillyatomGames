@@ -43,7 +43,6 @@ bool MainGame::init()
     
     if (Network::isHost)
     {
-        _isActivePlayer = true;
         hostCreatePlayers();
         dispatchHostId();
     }
@@ -63,6 +62,17 @@ bool MainGame::init()
 void MainGame::onSpin(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType)
 {
     if (eventType == ui::Widget::TouchEventType::ENDED)
+    {
+        if (_isActivePlayer)
+        {
+            doSpin();
+        }
+    }
+}
+
+void MainGame::doSpin()
+{
+    if (!_players.front()->isSpinning())
     {
         _players.front()->spinReel();
     }
@@ -228,10 +238,7 @@ void MainGame::hostCreatePlayers()
 
 void MainGame::onDistributeCards()
 {
-    if (_isActivePlayer)
-    {
-        _players.front()->resetReel();
-    }
+    _players.front()->resetReel();
     resumeProcessEvents();
 }
 
@@ -385,11 +392,9 @@ bool MainGame::isThisActivePlayer()
     return (strcmp(_roundHandler->getNextActivePlayer().c_str(), [[GKLocalPlayer localPlayer]playerID].UTF8String) == 0);
 }
 
-void MainGame::autoPickCard()
+void MainGame::autoSpin()
 {
-    Card * card = _players.front()->getCard();
-    _cardSelectionHandler->setActiveCard(card);
-    _dealer->dealCard(card);
+    doSpin();
 }
 
 void MainGame::dealSelectedCard()

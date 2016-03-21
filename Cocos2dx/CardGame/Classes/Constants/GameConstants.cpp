@@ -21,7 +21,7 @@ const std::vector<std::string> GameConstants::CARD_TYPES = { "D", "C", "H", "S" 
 
 const float GameConstants::SPACE_BETWEEN_CARDS = 20.0f;
 
-const float GameConstants::ROUND_TIME = 5.0f;
+const float GameConstants::ROUND_TIME = 10.0f;
 const float GameConstants::DEAL_ANIM_TIME = 0.25f;
 
 std::vector<std::string> GameConstants::layerNameMap = {"MainScreen", "MenuScreen", "MainGame"};

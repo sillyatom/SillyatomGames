@@ -81,7 +81,7 @@ private:
     void dispatchNextRound();
     bool isThisActivePlayer();
     
-    void autoPickCard();
+    void autoSpin();
     void dealSelectedCard();
     void onDealAnimationComplete(Card* card);
     void onProcessDataComplete();
@@ -92,7 +92,7 @@ private:
     
     void onShout(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
     void onSpin(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
-    
+    void doSpin();
 protected:
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);

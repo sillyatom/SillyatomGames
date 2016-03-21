@@ -25,6 +25,7 @@ class ReelHandler
     float _spinAcceleration;
     
     float _symbolHeight;
+    float _parentHeight;
     float _spinDuration;
     float _spinStopDuration;
     float _timeElapsed;
@@ -32,6 +33,7 @@ class ReelHandler
     float _lastPosY;
     
     bool _isSpinning;
+    bool _canUpdate;
     
     void stopSpin();
 public:
@@ -40,5 +42,6 @@ public:
     void initReels(std::vector<Card*>symbols);
     void resetReel();
     void spin(float duration);
+    bool getIsSpinning(){ return _isSpinning; }
 };
 #endif /* ReelHandler_hpp */

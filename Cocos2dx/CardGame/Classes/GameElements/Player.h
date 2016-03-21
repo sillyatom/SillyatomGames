@@ -45,5 +45,7 @@ public:
     CREATE_FUNC(Player);
     virtual bool init();
     virtual void update(float dt);
+    
+    bool isSpinning(){ return _reelHandler.getIsSpinning(); }
 };
 #endif // !_PLAYER_H_
