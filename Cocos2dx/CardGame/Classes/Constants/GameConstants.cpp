@@ -28,5 +28,6 @@ std::vector<std::string> GameConstants::layerNameMap = {"MainScreen", "MenuScree
 std::map<APILayer, std::vector<NetworkAPI>> GameConstants::layerApiMap = {
     {MAIN_SCREEN, {}},
     {MENU_SCREEN, {MATCH_STARTED}},
-    {MAIN_GAME, {SELECTED_HOST, INIT_CARDS_DATA, ROUND_START, ROUND_RESULT, NEXT_ROUND}}
+    {MAIN_GAME, {SELECTED_HOST, INIT_CARDS_DATA, ROUND_START, ROUND_RESULT, NEXT_ROUND}},
+    {SINGLE_PLAYER, {}}
 };

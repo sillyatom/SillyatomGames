@@ -14,7 +14,8 @@ typedef enum
 {
     MAIN_SCREEN = 0,
     MENU_SCREEN = 1,
-    MAIN_GAME = 2
+    MAIN_GAME = 2,
+    SINGLE_PLAYER = 3
 }APILayer;
 
 typedef enum

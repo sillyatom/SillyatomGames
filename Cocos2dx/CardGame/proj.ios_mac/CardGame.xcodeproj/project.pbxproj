@@ -79,6 +79,7 @@
 		83C9BC8A1C85D92A00E4AFC7 /* CardConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC881C85D92A00E4AFC7 /* CardConfig.cpp */; };
 		83C9BC8D1C85F37F00E4AFC7 /* ExtLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8B1C85F37F00E4AFC7 /* ExtLayer.mm */; };
 		83C9BC911C85FC0400E4AFC7 /* CardSelectionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */; };
+		83D26CA51CA1801100EC7571 /* MainGameSinglePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83D26CA31CA1801100EC7571 /* MainGameSinglePlayer.mm */; };
 		83D6C3031C9E5105006E46F6 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6C3001C9E5105006E46F6 /* Default-Landscape~ipad.png */; };
 		83D6C3041C9E5105006E46F6 /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6C3011C9E5105006E46F6 /* Icon-87.png */; };
 		83D6C3051C9E5105006E46F6 /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6C3021C9E5105006E46F6 /* Icon-180.png */; };
@@ -190,6 +191,8 @@
 		83C9BC8C1C85F37F00E4AFC7 /* ExtLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtLayer.h; path = Ext/ExtLayer.h; sourceTree = "<group>"; };
 		83C9BC8F1C85FC0400E4AFC7 /* CardSelectionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CardSelectionHandler.cpp; path = Handlers/CardSelectionHandler.cpp; sourceTree = "<group>"; };
 		83C9BC901C85FC0400E4AFC7 /* CardSelectionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardSelectionHandler.h; path = Handlers/CardSelectionHandler.h; sourceTree = "<group>"; };
+		83D26CA31CA1801100EC7571 /* MainGameSinglePlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainGameSinglePlayer.mm; path = Scenes/MainGameSinglePlayer.mm; sourceTree = "<group>"; };
+		83D26CA41CA1801100EC7571 /* MainGameSinglePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainGameSinglePlayer.h; path = Scenes/MainGameSinglePlayer.h; sourceTree = "<group>"; };
 		83D6C3001C9E5105006E46F6 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		83D6C3011C9E5105006E46F6 /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-87.png"; sourceTree = "<group>"; };
 		83D6C3021C9E5105006E46F6 /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
@@ -456,6 +459,8 @@
 				830668D31C834DF300FF05D8 /* MainScreen.h */,
 				830668D41C834DF300FF05D8 /* MenuScreen.mm */,
 				830668D51C834DF300FF05D8 /* MenuScreen.h */,
+				83D26CA31CA1801100EC7571 /* MainGameSinglePlayer.mm */,
+				83D26CA41CA1801100EC7571 /* MainGameSinglePlayer.h */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -665,6 +670,7 @@
 				836333D61C9B34730033D54F /* OnStartRound.mm in Sources */,
 				838CFD0F1C8DBE750054EAD0 /* Utility.cpp in Sources */,
 				830668DF1C834DFD00FF05D8 /* Card.cpp in Sources */,
+				83D26CA51CA1801100EC7571 /* MainGameSinglePlayer.mm in Sources */,
 				834E870E1C93FC1400B508BB /* DispatchHostId.mm in Sources */,
 				83A52D821C8E05B40097FA24 /* APIHandler.mm in Sources */,
 				830668D61C834DF300FF05D8 /* MainGame.mm in Sources */,

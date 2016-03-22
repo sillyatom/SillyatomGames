@@ -246,7 +246,6 @@ float MainGame::playDistributeCards()
 {
     float playerDelay = 0.0f;
     float delayTime = 0.0f;
-    ui::ImageView * cardsReel = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), "CardsReel"));
     
     for (auto player : _players)
     {
@@ -254,9 +253,12 @@ float MainGame::playDistributeCards()
         
         std::ostringstream oss;
         oss << "refCardPos_player" << playerIndex;
-
         ui::ImageView * refPos = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), oss.str()));
         
+        std::ostringstream ossCardReel;
+        ossCardReel << "CardsReel" << playerIndex;
+        ui::ImageView * cardsReel = static_cast<ui::ImageView*>(ui::Helper::seekWidgetByName((ui::Widget*)(_rootNode), ossCardReel.str()));
+
         Vec2 refPosition = refPos->getPosition();
         
         delayTime = playerDelay;
@@ -265,22 +267,21 @@ float MainGame::playDistributeCards()
         {
             card->setAnchorPoint(refPos->getAnchorPoint());
             card->moveToPosition(refPosition, delayTime, CallFunc::create([=](){
-                if (playerIndex == 1)
-                {
-                    static int runningOrder = 0;
-                    card->showFrontFace();
-                    card->retain();
-                    card->removeFromParent();
-                    cardsReel->addChild(card, runningOrder++);
-                    card->setPosition(cardsReel->getBoundingBox().size.width*0.5f, cardsReel->getBoundingBox().size.height*0.5f);
-                    if (card != player->getCards().back())
-                    {
-                        card->moveByPosition(Vec2(0.0f, -cardsReel->getBoundingBox().size.height), GameConstants::DEAL_ANIM_TIME);
-                    }
-                }
-            }));
-            card->addTouchListeners(_listener);
             
+            static int runningOrder = 0;
+            card->showFrontFace();
+            
+            //swap parent
+            card->retain();
+            card->removeFromParent();
+            cardsReel->addChild(card, runningOrder++);
+                
+            card->setPosition(cardsReel->getBoundingBox().size.width*0.5f, cardsReel->getBoundingBox().size.height*0.5f);
+            if (card != player->getCards().back())
+            {
+                card->moveByPosition(Vec2(0.0f, -cardsReel->getBoundingBox().size.height), GameConstants::DEAL_ANIM_TIME);
+            }
+            }));
             delayTime += (GameConstants::DEAL_ANIM_TIME * _numPlayers);
             cardIndex++;
         }

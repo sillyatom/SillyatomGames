@@ -1,5 +1,6 @@
 #include "MenuScreen.h"
-#include "MainGame.h"
+#import "MainGame.h"
+#import "MainGameSinglePlayer.h"
 
 cocos2d::Scene * MenuScreen::createScene()
 {
@@ -22,6 +23,11 @@ bool MenuScreen::init()
 	auto autoMatchBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "autoMatchBtn"));
 	autoMatchBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadAutoMatchScreen, this));
     _btns.push_back(autoMatchBtn);
+    
+    auto singlePlayerBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "singlePlayerBtn"));
+    singlePlayerBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadSinglePlayerGame, this));
+    _btns.push_back(singlePlayerBtn);
+    
     
 	auto friendsMatchBtn = static_cast<ui::Button*>(ui::Helper::seekWidgetByName((ui::Widget*)(rootNode), "friendsMatchBtn"));
 	friendsMatchBtn->addTouchEventListener(CC_CALLBACK_2(MenuScreen::loadFriendsMatchScreen, this));
@@ -61,6 +67,12 @@ void MenuScreen::loadAutoMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEve
 	{
         findMatches();
 	}
+}
+
+void MenuScreen::loadSinglePlayerGame(cocos2d::Ref *sender, ui::Widget::TouchEventType eventType)
+{
+    auto scene = MainGameSinglePlayer::createScene();
+    replaceScene(scene);
 }
 
 void MenuScreen::findMatches()

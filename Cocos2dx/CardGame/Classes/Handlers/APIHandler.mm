@@ -7,7 +7,7 @@
 //
 
 #include "APIHandler.h"
-#include "../../proj.ios_mac/GameKitHelper/GameKitHelper.h"
+#import "../../proj.ios_mac/GameKitHelper/GameKitHelper.h"
 
 APIHandler* APIHandler::getInstance()
 {

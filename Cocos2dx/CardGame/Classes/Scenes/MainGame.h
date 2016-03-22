@@ -20,7 +20,7 @@ USING_NS_CC;
 
 class MainGame : public ExtLayer
 {
-private:
+protected:
     std::string _hostId;
     
     int _numPlayers;
@@ -49,7 +49,7 @@ private:
     //init
     void createDealer();
     void hostCreatePlayers();
-    void createPlayers();
+    virtual void createPlayers();
     Player* getPlayerById(std::string playerId);
     
     //cards
@@ -85,7 +85,7 @@ private:
     void dealSelectedCard();
     void onDealAnimationComplete(Card* card);
     void onProcessDataComplete();
-    void onDistributeCards();
+    virtual void onDistributeCards();
     
     void startMatch();
     void startRound(int type, rapidjson::Document &data);
@@ -93,7 +93,7 @@ private:
     void onShout(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
     void onSpin(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
     void doSpin();
-protected:
+
     virtual bool onTouchBegan(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchEnded(cocos2d::Touch * touch, cocos2d::Event * event);
     virtual void onTouchMoved(cocos2d::Touch * touch, cocos2d::Event * event);

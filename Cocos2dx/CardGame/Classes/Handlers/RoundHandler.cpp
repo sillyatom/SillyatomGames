@@ -24,9 +24,13 @@ RoundHandler* RoundHandler::getInstance()
             instance->autorelease();
             return instance;
         }
+        else
+        {
+            CC_SAFE_DELETE(instance);
+            return NULL;
+        }
     }
-    CC_SAFE_DELETE(instance);
-    return NULL;
+    return instance;
 }
 
 bool RoundHandler::init()

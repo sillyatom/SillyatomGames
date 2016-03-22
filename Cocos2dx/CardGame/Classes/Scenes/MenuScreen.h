@@ -11,6 +11,7 @@ class MenuScreen : public ExtLayer
 private:
     std::vector<ui::Button*> _btns;
     void findMatches();
+    void loadSinglePlayerGame(cocos2d::Ref* sender, ui::Widget::TouchEventType eventType);
 	void loadAutoMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
 	void loadFriendsMatchScreen(cocos2d::Ref * sender, ui::Widget::TouchEventType eventType);
 protected:
