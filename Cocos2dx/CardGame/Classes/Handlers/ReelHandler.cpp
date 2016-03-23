@@ -26,7 +26,6 @@ void ReelHandler::initReels(std::vector<Card*>symbols)
     _symbolHeight = symbols.at(0)->getBoundingBox().size.height;
     _thresholdY = _reel.at(symbolCount - 2)->getPositionY();
     _startIndex = symbolCount-1;
-    resetReel();
 }
 
 void ReelHandler::resetReel()
@@ -77,7 +76,9 @@ void ReelHandler::stopSpin()
         Card* symbol = _reel.at(index);
         if (symbol->getPositionY() > 0.0 && symbol->getPositionY() < refHeight)
         {
-            symbol->runAction(MoveTo::create(0.5f, Vec2(symbol->getPositionX(), refHeight * 0.5f)));
+            CCLOG("sym position x : %f, y : %f - MoveTo : %f ", symbol->getPositionX(), symbol->getPositionY(), refHeight * 0.5f);
+            
+            symbol->runAction(MoveTo::create(0.75f, Vec2(symbol->getPositionX(), refHeight * 0.5f)));
             _startIndex = index;
             //if the next symbol is not the end
             if (index+1 != reelSize)
@@ -90,12 +91,13 @@ void ReelHandler::stopSpin()
             }
             //take the next symbol
             symbolBefore = _reel.at(index);
-            symbolBefore->runAction(MoveTo::create(0.5f, Vec2(symbolBefore->getPositionX(), refHeight + (refHeight * 0.5f))));
+            symbolBefore->runAction(MoveTo::create(0.75f, Vec2(symbolBefore->getPositionX(), refHeight + (refHeight * 0.5f))));
+            CCLOG("sym position x : %f, y : %f - MoveTo : %f ", symbolBefore->getPositionX(), symbolBefore->getPositionY(), refHeight + (refHeight * 0.5f));
             Utility::delayedCall(symbol, CallFunc::create([=]()
             {
                 _isSpinning = false;
                 CardSelectionHandler::getInstance()->setActiveCard(_reel.at(_startIndex));
-            }), 0.5f);
+            }), 0.75f);
             
             return;
         }

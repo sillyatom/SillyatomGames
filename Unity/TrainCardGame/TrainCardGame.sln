@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{87DAF504-ABA4-C1BC-B4D4-E924B1C9F62C}") = "TrainCardGame", "Assembly-CSharp.csproj", "{6D2EE338-6709-5DC7-3C78-5E9C95803512}"
+EndProject
+Project("{87DAF504-ABA4-C1BC-B4D4-E924B1C9F62C}") = "TrainCardGame", "Assembly-CSharp-Editor.csproj", "{2CF78BC8-2FF2-6931-26DF-247CC69003F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D2EE338-6709-5DC7-3C78-5E9C95803512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2EE338-6709-5DC7-3C78-5E9C95803512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2EE338-6709-5DC7-3C78-5E9C95803512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2EE338-6709-5DC7-3C78-5E9C95803512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF78BC8-2FF2-6931-26DF-247CC69003F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF78BC8-2FF2-6931-26DF-247CC69003F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF78BC8-2FF2-6931-26DF-247CC69003F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF78BC8-2FF2-6931-26DF-247CC69003F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
