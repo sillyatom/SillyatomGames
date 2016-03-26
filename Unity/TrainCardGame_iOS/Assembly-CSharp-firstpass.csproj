@@ -6,10 +6,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{855E31D5-8695-EB2C-15C9-0AB72354D26C}</ProjectGuid>
+    <ProjectGuid>{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -45,22 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
-     <Compile Include="Assets\Scritps\Constants\NetworkConstants.cs" />
-     <Compile Include="Assets\Scritps\Constants\TagConstants.cs" />
-     <Compile Include="Assets\Scritps\Events\EventManager.cs" />
-     <Compile Include="Assets\Scritps\Events\GameEvent.cs" />
-     <Compile Include="Assets\Scritps\Ext\SceneMonoBehaviour.cs" />
-     <Compile Include="Assets\Scritps\Handlers\BridgeDebugger.cs" />
-     <Compile Include="Assets\Scritps\Handlers\ExecutionOrderManager.cs" />
-     <Compile Include="Assets\Scritps\Handlers\SceneTransitionManager.cs" />
-     <Compile Include="Assets\Scritps\Networking\NetworkResponse.cs" />
-     <Compile Include="Assets\Scritps\Networking\Networking.cs" />
-     <Compile Include="Assets\Scritps\Networking\VO\GameCenterAuthVO.cs" />
-     <Compile Include="Assets\Scritps\Networking\VO\MatchStartedVO.cs" />
-     <Compile Include="Assets\Scritps\Screens\MainScreen.cs" />
-     <Compile Include="Assets\Scritps\Screens\MatchSelectionScreen.cs" />
-     <Compile Include="Assets\Scritps\Screens\MultiplayerMainGame.cs" />
+     <Compile Include="Assets\plugins\SimpleJSON.cs" />
      <None Include="Assets\JSON Tests\TroubleShoot.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
@@ -71,10 +56,6 @@
  <Reference Include="ICSharpCode.SharpZipLib">
  <HintPath>/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
