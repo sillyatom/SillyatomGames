@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ExecutionOrderManager : MonoBehaviour
 {
-    public List<SceneMonobehaviour> _monos;
+    public List<SceneMonoBehaviour> _monos;
 
     void Awake()
     {

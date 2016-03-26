@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SceneTransitionManager : SceneMonobehaviour
+public class SceneTransitionManager : SceneMonoBehaviour
 {
     private RectTransform _activeScreen;
     public RectTransform startScreen;
@@ -13,7 +13,6 @@ public class SceneTransitionManager : SceneMonobehaviour
     public override void Init()
     {
         base.Init();
-
         SetActiveScreen(startScreen);
     }
 

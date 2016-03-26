@@ -11,19 +11,15 @@ public class Login : MonoBehaviour
     {
         MultiPlayerController.Instance.UpdateConfig();
         StartCoroutine(StartSigning());
+        signInBtn.enabled = false;
+        signOffBtn.enabled = false;
     }
 
     IEnumerator StartSigning()
     {
-        yield return new WaitForSeconds(2.0f);
-        if (Social.localUser.authenticated)
-        {
-            activeSignOffBtn();
-        }
-        else
-        {
-            activeSignOffBtn();
-        }
+        yield return new WaitForSeconds(3.0f);
+
+        SignIn();
 
         signInBtn.onClick.AddListener(SignIn);
         signOffBtn.onClick.AddListener(SignOff);
@@ -31,14 +27,14 @@ public class Login : MonoBehaviour
 
     private void activeSignInBtn()
     {
-        signInBtn.gameObject.SetActive(true);
-        signOffBtn.gameObject.SetActive(false);
+        signInBtn.enabled = true;
+        signOffBtn.enabled = false;
     }
 
     private void activeSignOffBtn()
     {
-        signInBtn.gameObject.SetActive(false);
-        signOffBtn.gameObject.SetActive(true);
+        signInBtn.enabled = false;
+        signOffBtn.enabled = true;
 
         MoveToNextScene();
     }
@@ -55,12 +51,12 @@ public class Login : MonoBehaviour
 
     public void MoveToNextScene()
     {
-        GetComponent<SceneMonobehaviour>().MoveToScene(TagConstants.TAG_GAME_SELECTION_SCREEN);
+        GetComponent<SceneMonoBehaviour>().MoveToScene(TagConstants.TAG_GAME_SELECTION_SCREEN);
     }
 
     private void AuthCallback(bool success)
     {
-        Debug.Log("[ Login ] AuthCallback " + success);
+        MultiPlayerController.Instance.DebugMessage("[ Login ] AuthCallback " + success);
         if (success)
         {
             activeSignOffBtn();

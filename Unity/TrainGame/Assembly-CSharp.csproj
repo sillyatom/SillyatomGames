@@ -217,6 +217,7 @@
      <Compile Include="Assets\GooglePlayGames\Platforms\PlayGamesClientFactory.cs" />
      <Compile Include="Assets\GooglePlayGames\Platforms\TokenClient.cs" />
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
+     <Compile Include="Assets\Scripts\Constants\NetworkConstants.cs" />
      <Compile Include="Assets\Scripts\Constants\TagConstants.cs" />
      <Compile Include="Assets\Scripts\Ext\SceneMonoBehaviour.cs" />
      <Compile Include="Assets\Scripts\Handlers\ExecutionOrderManager.cs" />

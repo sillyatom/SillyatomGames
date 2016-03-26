@@ -25,6 +25,7 @@
 public static class GPGConstants
 {
         public const string achievement_classicmatch = "CgkIr5by3sUTEAIQAQ"; // <GPGSID>
+        public const string leaderboard_level = "CgkIr5by3sUTEAIQAg"; // <GPGSID>
 
 }
 

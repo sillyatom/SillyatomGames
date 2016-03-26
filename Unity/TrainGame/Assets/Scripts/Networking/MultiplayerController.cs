@@ -5,9 +5,13 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
 using GooglePlayGames.BasicApi.Multiplayer;
+using System.Runtime.InteropServices;
 
 public class MultiPlayerController : RealTimeMultiplayerListener
 {
+    [DllImport("__Internal")]
+    private static extern void BridgeDebugMessage(string msg);
+
     private static MultiPlayerController _instance = null;
     private MatchDelegate _matchDelegate;
 
@@ -18,37 +22,37 @@ public class MultiPlayerController : RealTimeMultiplayerListener
 
     public void OnRoomSetupProgress(float percent)
     {
-        Debug.Log(" [ Multiplayer Controller ] OnRoomSetupProgress - " + percent);
+        DebugMessage(" [ Multiplayer Controller ] OnRoomSetupProgress - " + percent);
     }
 
     public void OnRoomConnected(bool success)
     {
-        Debug.Log(" [ Multiplayer Controller ] OnRoomConnected - " + success);
+        DebugMessage(" [ Multiplayer Controller ] OnRoomConnected - " + success);
     }
 
     public void OnLeftRoom()
     {
-        Debug.Log(" [ Multiplayer Controller ] OnLeftRoom");
+        DebugMessage(" [ Multiplayer Controller ] OnLeftRoom");
     }
 
     public void OnParticipantLeft(Participant participant)
     {
-        Debug.Log(" [ Multiplayer Controller ] OnParticipantLeft - " + participant.ParticipantId);
+        DebugMessage(" [ Multiplayer Controller ] OnParticipantLeft - " + participant.ParticipantId);
     }
 
     public void OnPeersConnected(string[] participantIds)
     {
-        Debug.Log(" [ Multiplayer Controller ] OnPeersConnected - " + participantIds.Length);
+        DebugMessage(" [ Multiplayer Controller ] OnPeersConnected - " + participantIds.Length);
     }
 
     public void OnPeersDisconnected(string[] participantIds)
     {
-        Debug.Log(" [ Multiplayer Controller ] OnPeersDisconnected - " + participantIds.Length);
+        DebugMessage(" [ Multiplayer Controller ] OnPeersDisconnected - " + participantIds.Length);
     }
 
     public void OnRealTimeMessageReceived(bool isReliable, string senderId, byte[] data)
     {
-        Debug.Log(" [ Multiplayer Controller ] OnRealTimeMessageReceived - " + senderId);
+        DebugMessage(" [ Multiplayer Controller ] OnRealTimeMessageReceived - " + senderId);
     }
 
     public void InvitationReceivedDelegate(Invitation invitation, bool shouldAutoAccept)
@@ -67,20 +71,40 @@ public class MultiPlayerController : RealTimeMultiplayerListener
         PlayGamesPlatform.Activate();
     }
 
+    public ILocalUser LocalPlayer
+    {
+        get
+        {
+            return PlayGamesPlatform.Instance.localUser;
+        }
+    }
+
+    public bool IsLocalPlayerAuthenticated
+    {
+        get
+        {
+            return LocalPlayer.authenticated;
+        }
+    }
+
     public void AuthenticatePlayer(Action<bool> callback)
     {
-        if (Social.localUser.authenticated)
+        if (IsLocalPlayerAuthenticated)
         {
             callback(true);
         }
         else
         {
-            Social.localUser.Authenticate((bool success) =>
+            LocalPlayer.Authenticate((bool success) =>
                 {
-                    Debug.Log("[ Multiplayer Controller ] Authenticate Status - " + success);
                     callback(success);
                 });
         }
+    }
+
+    public void StartchMatchMaking(uint matchType)
+    {
+        PlayGamesPlatform.Instance.RealTime.CreateQuickGame(NetworkConstants.MIN_PLAYERS, NetworkConstants.MAX_PLAYERS, matchType, this);
     }
 
     public void SignOff()
@@ -98,5 +122,10 @@ public class MultiPlayerController : RealTimeMultiplayerListener
             }
             return _instance;
         }
+    }
+
+    public void DebugMessage(string msg)
+    {
+        BridgeDebugMessage(msg);        
     }
 }

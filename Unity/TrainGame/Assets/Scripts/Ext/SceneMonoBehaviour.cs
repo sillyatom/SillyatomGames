@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneMonobehaviour : MonoBehaviour
+public class SceneMonoBehaviour : MonoBehaviour
 {
     public SceneTransitionManager sceneTransitionManager;
 
