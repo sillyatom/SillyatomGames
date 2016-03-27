@@ -8,9 +8,6 @@ public class MatchSelectionScreen : SceneMonoBehaviour
     [DllImport("__Internal")]
     private static extern void findMatches();
 
-    [DllImport("__Internal")]
-    private static extern bool isHost();
-
     public Button autoMatchBtn;
     public Button inviteBtn;
     public Button singlePlayerBtn;
@@ -37,7 +34,11 @@ public class MatchSelectionScreen : SceneMonoBehaviour
     {
         if (btn == autoMatchBtn)
         {
+            #if UNITY_EDITOR
+            MoveToScene(TagConstants.TAG_MAIN_MULTIPLAYER_GAME, true);
+            #else
             findMatches();
+            #endif
         }
         else if (btn == inviteBtn)
         {
@@ -46,7 +47,7 @@ public class MatchSelectionScreen : SceneMonoBehaviour
         else if (btn == singlePlayerBtn)
         {
             #if UNITY_EDITOR
-            MoveToScene(TagConstants.TAG_MAIN_MULTIPLAYER_GAME, true);
+            MoveToScene(TagConstants.TAG_MAIN_SINGLEPLAYER_GAME, true);
             #else 
             #endif
         }

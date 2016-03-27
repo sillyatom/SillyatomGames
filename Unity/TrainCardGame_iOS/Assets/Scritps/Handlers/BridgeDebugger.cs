@@ -9,6 +9,8 @@ public class BridgeDebugger
 
     public static void Log(string msg)
     {
+        #if !UNITY_EDITOR
         debugMessage(msg);
+        #endif
     }
 }

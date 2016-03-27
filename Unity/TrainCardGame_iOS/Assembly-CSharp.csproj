@@ -46,11 +46,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
+     <Compile Include="Assets\Scritps\Constants\CardConstants.cs" />
      <Compile Include="Assets\Scritps\Constants\NetworkConstants.cs" />
      <Compile Include="Assets\Scritps\Constants\TagConstants.cs" />
      <Compile Include="Assets\Scritps\Events\EventManager.cs" />
      <Compile Include="Assets\Scritps\Events\GameEvent.cs" />
      <Compile Include="Assets\Scritps\Ext\SceneMonoBehaviour.cs" />
+     <Compile Include="Assets\Scritps\GameElements\Card.cs" />
+     <Compile Include="Assets\Scritps\GameElements\Dealer.cs" />
+     <Compile Include="Assets\Scritps\GameElements\Player.cs" />
      <Compile Include="Assets\Scritps\Handlers\BridgeDebugger.cs" />
      <Compile Include="Assets\Scritps\Handlers\ExecutionOrderManager.cs" />
      <Compile Include="Assets\Scritps\Handlers\SceneTransitionManager.cs" />
@@ -61,6 +65,7 @@
      <Compile Include="Assets\Scritps\Screens\MainScreen.cs" />
      <Compile Include="Assets\Scritps\Screens\MatchSelectionScreen.cs" />
      <Compile Include="Assets\Scritps\Screens\MultiplayerMainGame.cs" />
+     <Compile Include="Assets\Scritps\Screens\SinglePlayerMainGame.cs" />
      <None Include="Assets\JSON Tests\TroubleShoot.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
