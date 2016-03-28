@@ -213,7 +213,7 @@ public class Networking : SceneMonoBehaviour
 
     public void OnAPISuccess(int api)
     {
-        NetworkConstants.API eAPI = response.api;
+        NetworkConstants.API eAPI = (NetworkConstants.API)api;
         BridgeDebugger.Log("[ ON API SUCCESS ] " + eAPI.ToString());
 
         switch (eAPI)
