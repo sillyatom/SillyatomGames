@@ -46,10 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\PostBuildProcessor.cs" />
-     <None Include="Assets\JSON Tests\TroubleShoot.txt" />
- <Reference Include="Assembly-UnityScript">
- <HintPath>/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
+     <None Include="Assets\JsonDotNet\ReadMe.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
@@ -74,8 +71,8 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
- <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <Reference Include="SampleClassLibrary">
+ <HintPath>/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/JsonDotNet/Examples/Tests/TestModels/SampleClassLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -97,8 +94,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{855E31D5-8695-EB2C-15C9-0AB72354D26C}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
