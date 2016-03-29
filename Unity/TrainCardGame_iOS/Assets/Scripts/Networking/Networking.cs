@@ -243,6 +243,10 @@ public class Networking : SceneMonoBehaviour
             case NetworkConstants.API.HOST_DATA:
                 EventManager.instance.Raise(new GameEvent(GameEvent.DISPATCH_CARDS_DATA));
                 break;
+            case NetworkConstants.API.CARDS_DATA:
+                //TODO start game
+                break;
+                
         }
     }
 

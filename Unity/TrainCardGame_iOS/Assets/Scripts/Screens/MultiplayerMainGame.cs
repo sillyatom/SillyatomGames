@@ -11,7 +11,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     public Dealer dealer;
     public Networking network;
 
-    private List<Player> _players;
+    protected List<Player> _players;
     private NetworkResponse _lastResponse;
 
     override public void Init()
@@ -19,6 +19,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         BridgeDebugger.Log("[ MultiplayerMainGame ] - Init()");
         base.Init();
 
+        InitGame();
+    }
+
+    virtual protected void InitGame()
+    {
         //Init Dealer
         dealer.Init();
 
@@ -62,16 +67,20 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
-    private void DispatchCardsData()
+    virtual protected void UpdatePlayerCards(int numPlayers)
     {
-        int numPlayers = network.numPlayers;
-        Dictionary<string, List<string>> cardsData = new Dictionary<string, List<string>>();
-
         int deckSize = dealer.GetDeckSize();
         for (int index = 0; index < deckSize; index++)
         {
             _players[index % numPlayers].AddCard(dealer.PopBack());
         }
+    }
+
+    private void DispatchCardsData()
+    {
+        UpdatePlayerCards(network.numPlayers);
+
+        Dictionary<string, List<string>> cardsData = new Dictionary<string, List<string>>();
         foreach (var playerId in network.PlayersIds)
         {
             Player player = GetPlayerById(playerId);
@@ -93,7 +102,12 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
-    private void UpdatePlayers()
+    protected bool IsSinglePlayerGame()
+    {
+        return (network == null);
+    }
+
+    virtual protected void UpdatePlayers()
     {
         _players = new List<Player>();
 
@@ -171,7 +185,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }
     }
 
-    private void DistributeCards()
+    protected void DistributeCards()
     {
         foreach (var player in _players)
         {
@@ -182,6 +196,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }        
         //TODO
         //on complete animation
+        OnDistributeAnimationComplete();
+    }
+
+    virtual protected void OnDistributeAnimationComplete()
+    {
         if (!Networking.isHost)
         {
             GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
