@@ -152,14 +152,14 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 {
                     _lastResponse = evt.response;
                     DispatchCardsData();
-                    DistributeCards();
+                    DistributeCards(network.numPlayers);
                 }
                 break;
             case GameEvent.UPDATE_CARDS_DATA:
                 {
                     _lastResponse = evt.response;
                     InitCardsData(evt);
-                    DistributeCards();
+                    DistributeCards(network.numPlayers);
                 }
                 break;
             default:
@@ -185,26 +185,62 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }
     }
 
-    protected void DistributeCards()
+    protected void DistributeCards(int numPlayers)
     {
+        float delay = 0.0f;
+        float playerDelay = 0.0f;
+
         foreach (var player in _players)
         {
+            delay = playerDelay;
             foreach (var card in player.Cards)
             {
-                iTween.MoveTo(card.gameObject, iTween.Hash("x", 0, "y", 0, "delay", 3));
+                Hashtable args = new Hashtable();
+                args.Add("player", player);
+                args.Add("card", card);
+                args.Add("delay", delay + (GameConstants.DEAL_ANIM_TIME * (numPlayers - 1)));
+
+                iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.reel.position.x, "y", player.reel.position.y, "delay", delay,
+                        "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
+                delay += (GameConstants.DEAL_ANIM_TIME * numPlayers);
+                if (card != player.Back())
+                {
+                    RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
+                    iTween.MoveTo(card.gameObject, iTween.Hash("islocal", true, "time", GameConstants.DEAL_ANIM_TIME, "y", rectTransform.rect.y - (rectTransform.rect.height * 0.5f), "delay", delay));
+                }
             }
-        }        
-        //TODO
-        //on complete animation
-        OnDistributeAnimationComplete();
+            playerDelay += GameConstants.DEAL_ANIM_TIME;
+        }            
     }
 
-    virtual protected void OnDistributeAnimationComplete()
+    virtual protected void OnDistributeAnimationComplete(object args)
     {
-        if (!Networking.isHost)
+        Hashtable hash = (Hashtable)(args);
+        if (IsSinglePlayerGame())
         {
-            GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
-            EventManager.instance.Raise(evt);
+            //do nothing
         }
+        else
+        {
+            if (!Networking.isHost)
+            {
+                GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
+                EventManager.instance.Raise(evt);
+            }
+        }
+
+        Player player = (Player)hash["player"];
+        Card card = (Card)hash["card"];
+        float delay = (float)hash["delay"];
+
+        card.ShowFrontFace();
+
+        //swap parent
+        RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
+        rectTransform.SetParent(player.reel);
+        rectTransform.localScale = Vector3.one;
+        rectTransform.position = player.reel.position;
+
+
     }
 }

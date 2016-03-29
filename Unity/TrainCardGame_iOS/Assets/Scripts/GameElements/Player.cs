@@ -79,6 +79,16 @@ public class Player : SceneMonoBehaviour
         return retCard;
     }
 
+    public Card Back()
+    {
+        return _cards[_cards.Count - 1];
+    }
+
+    public Card Front()
+    {
+        return _cards[0];
+    }
+
     private void OnSpin()
     {
         

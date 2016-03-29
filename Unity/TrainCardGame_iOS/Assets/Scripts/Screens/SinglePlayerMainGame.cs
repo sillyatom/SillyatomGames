@@ -16,7 +16,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         UpdatePlayers();
         dealer.ShuffleCards();
         UpdatePlayerCards(GameConstants.MAX_PLAYERS);
-        DistributeCards();
+        DistributeCards(GameConstants.MAX_PLAYERS);
     }
 
     override protected void UpdatePlayers()
@@ -54,7 +54,8 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         }
     }
 
-    protected override void OnDistributeAnimationComplete()
+    protected override void OnDistributeAnimationComplete(object args)
     {
+        base.OnDistributeAnimationComplete(args);
     }
 }

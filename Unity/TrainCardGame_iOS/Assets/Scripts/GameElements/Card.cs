@@ -26,4 +26,16 @@ public class Card : MonoBehaviour
         Front.sprite = Resources.Load<Sprite>("Images/Cards/" + this.ValueType);    
         Back.sprite = Resources.Load<Sprite>("Images/Cards/Back");    
     }
+
+    public void ShowFrontFace()
+    {
+        Front.gameObject.SetActive(true);
+        Back.gameObject.SetActive(false);
+    }
+
+    public void ShowBackFace()
+    {
+        Front.gameObject.SetActive(false);
+        Back.gameObject.SetActive(true);
+    }
 }
