@@ -31,6 +31,24 @@ public class Dealer : SceneMonoBehaviour
         return retCard;
     }
 
+    public Card RemoveCardByValueType(string valueType)
+    {
+        Card retCard = null;
+        int length = _cards.Count;
+        for (int index = 0; index < length; index++)
+        {
+            Card card = _cards[index];
+            if (card.ValueType == valueType)
+            {
+                retCard = card;
+                _cards.RemoveAt(index);
+                break;
+            }
+        }
+
+        return retCard;
+    }
+
     public void ShuffleCards()
     {
         _cards.Shuffle<Card>();

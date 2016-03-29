@@ -25,6 +25,7 @@ public class Networking : SceneMonoBehaviour
 
     public static bool isHost = false;
     public static string hostId = "";
+    public static string localId = "";
 
     private bool _pauseUpdate = false;
 
@@ -73,6 +74,21 @@ public class Networking : SceneMonoBehaviour
         APIHandler.GetInstance().OnAPISuccess = OnAPISuccess;    
     }
 
+    private bool isIdHost(string id)
+    {
+        return (hostId == id);
+    }
+
+    override protected void OnGameEvent(GameEvent evt)
+    {
+        switch (evt.type)
+        {
+            case GameEvent.ACKNOWLEDGE:
+                Acknowledge(evt.response, isIdHost(evt.response.sender));
+                break;
+        }
+    }
+
     public void OnReceiveData(string data)
     {
         BridgeDebugger.Log("[ Networking - OnReceiveData ] " + data);
@@ -107,9 +123,11 @@ public class Networking : SceneMonoBehaviour
         if (response.sender.Length > 0 && response.sender == _players[0].PlayerId)
         {
             APIHandler.GetInstance().OnReceiveAcknowledgement(response.apiId, response.playerId);
+            Acknowledge();
         }
         else
         {
+            //for processing ackowledge should happen after animation
             ProcessData(response);
         }
     }
@@ -140,7 +158,7 @@ public class Networking : SceneMonoBehaviour
                 break;
             case NetworkConstants.API.MATCH_STARTED:
                 {
-                    GameEvent gEvent = new GameEvent(GameEvent.MATCH_STARTED, response.data);
+                    GameEvent gEvent = new GameEvent(GameEvent.MATCH_STARTED, response);
                     JObject json = JObject.Parse(response.data);
 
                     isHost = ((int)json[NetworkConstants.KEY_IS_HOST]) == 1 ? true : false;
@@ -161,8 +179,10 @@ public class Networking : SceneMonoBehaviour
 
                     if (isHost)
                     {
-                        hostId = _players[0].PlayerId;
+                        hostId = string.Copy(_players[0].PlayerId);
                     }
+                    localId = string.Copy(_players[0].PlayerId);
+
                     BridgeDebugger.Log("[ Match Started ] - isHost " + isHost + " hostId " + hostId);
                     EventManager.instance.Raise(gEvent);
                     Acknowledge();
@@ -170,7 +190,7 @@ public class Networking : SceneMonoBehaviour
                 break;
             case NetworkConstants.API.HOST_DATA:
                 {
-                    GameEvent gEvent = new GameEvent(GameEvent.HOST_DATA, response.data);
+                    GameEvent gEvent = new GameEvent(GameEvent.HOST_DATA, response);
 
                     //update host id
                     JObject json = JObject.Parse(response.data);
@@ -182,31 +202,33 @@ public class Networking : SceneMonoBehaviour
                     EventManager.instance.Raise(gEvent);
                 }
                 break;
+            case NetworkConstants.API.CARDS_DATA:
+                {
+                    GameEvent gEvent = new GameEvent(GameEvent.UPDATE_CARDS_DATA, response);
+                    EventManager.instance.Raise(gEvent);
+                }
+                break;
         }
     }
 
-    private void Acknowledge()
+    private void Acknowledge(NetworkResponse response = null, bool isSenderHost = false)
     {
-        _results.RemoveAt(0);
-        _pauseUpdate = false;
-    }
-
-    public void Acknowledge(NetworkResponse response, bool isSenderHost)
-    {
-        AcknowledgeVO vo = new AcknowledgeVO((int)response.api, response.apiId, response.sender);
-        vo.player_id = _players[0].PlayerId;
-        BridgeDebugger.Log("[ Acknowleging API_ID ] - " + response.apiId);
-        string data = JsonConvert.SerializeObject(vo);
-
-        if (isSenderHost)
+        if (response != null && isSenderHost)
         {
-            sendDataToPlayer(hostId, data);
-        }
-        else
-        {
-            //TODO
-        }
+            AcknowledgeVO vo = new AcknowledgeVO((int)response.api, response.apiId, response.sender);
+            vo.player_id = _players[0].PlayerId;
+            BridgeDebugger.Log("[ Acknowleging API_ID ] - " + response.apiId);
+            string data = JsonConvert.SerializeObject(vo);
 
+            if (isSenderHost)
+            {
+                sendDataToPlayer(hostId, data);
+            }
+            else
+            {
+                //TODO
+            }
+        }
         _results.RemoveAt(0);
         _pauseUpdate = false;
     }
@@ -219,7 +241,7 @@ public class Networking : SceneMonoBehaviour
         switch (eAPI)
         {
             case NetworkConstants.API.HOST_DATA:
-                //TODO dispatch cards data
+                EventManager.instance.Raise(new GameEvent(GameEvent.DISPATCH_CARDS_DATA));
                 break;
         }
     }

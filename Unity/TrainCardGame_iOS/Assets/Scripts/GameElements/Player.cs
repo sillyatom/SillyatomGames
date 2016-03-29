@@ -20,6 +20,27 @@ public class Player : SceneMonoBehaviour
 
     private List<Card> _cards;
 
+    public List<Card> Cards
+    {
+        get
+        {
+            return _cards;
+        }
+    }
+
+    public List<string> GetCardsValueType
+    {
+        get
+        {
+            List<string> retList = new List<string>();
+            foreach (var item in _cards)
+            {
+                retList.Add(item.ValueType);
+            }
+            return retList;
+        }
+    }
+
     override public void Init()
     {
         BridgeDebugger.Log("[ Player - Init ]");

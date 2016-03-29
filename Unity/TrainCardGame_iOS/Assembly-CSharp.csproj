@@ -392,7 +392,9 @@
      <Compile Include="Assets\Scripts\Networking\API.cs" />
      <Compile Include="Assets\Scripts\Networking\APIHandler.cs" />
      <Compile Include="Assets\Scripts\Networking\DispatchVO\AcknowledgeVO.cs" />
+     <Compile Include="Assets\Scripts\Networking\DispatchVO\HeaderVO.cs" />
      <Compile Include="Assets\Scripts\Networking\DispatchVO\HostSelectedVO.cs" />
+     <Compile Include="Assets\Scripts\Networking\DispatchVO\InitCardsDataVO.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkResponse.cs" />
      <Compile Include="Assets\Scripts\Networking\Networking.cs" />
@@ -405,6 +407,7 @@
      <Compile Include="Assets\Scripts\TestScripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />
      <None Include="Assets\JsonDotNet\ReadMe.txt" />
+     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
@@ -414,6 +417,10 @@
  <Reference Include="SampleClassLibrary">
  <HintPath>/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/JsonDotNet/Examples/Tests/TestModels/SampleClassLibrary.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

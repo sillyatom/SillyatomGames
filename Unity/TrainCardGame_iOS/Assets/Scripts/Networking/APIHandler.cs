@@ -68,6 +68,18 @@ public class APIHandler
         }
     }
 
+    private void RemoveAPIById(int id)
+    {
+        foreach (var api in _apis)
+        {
+            if (api.id == id)
+            {
+                _apis.Remove(api);
+                break;
+            }
+        }
+    }
+
     private API GetAPIById(int id)
     {
         foreach (var api in _apis)

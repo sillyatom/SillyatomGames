@@ -21,4 +21,5 @@ public class NetworkConstants
     public static string KEY_IS_HOST = "is_host";
     public static string KEY_PLAYER_IDS = "playerids";
     public static string KEY_PLAYER_ID = "player_id";
+    public static string KEY_CARDS_DATA = "cards_data";
 }

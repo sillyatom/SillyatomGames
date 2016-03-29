@@ -12,6 +12,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     public Networking network;
 
     private List<Player> _players;
+    private NetworkResponse _lastResponse;
 
     override public void Init()
     {
@@ -71,7 +72,25 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         {
             _players[index % numPlayers].AddCard(dealer.PopBack());
         }
-        //TODO
+        foreach (var playerId in network.PlayersIds)
+        {
+            Player player = GetPlayerById(playerId);
+            cardsData[playerId] = player.GetCardsValueType;
+        }
+
+        InitCardsDataVO vo = new InitCardsDataVO();
+        vo.api = (int)NetworkConstants.API.CARDS_DATA;
+        vo.api_id = ++APIHandler.GetInstance().runningId;
+        vo.sender = Networking.localId;
+        vo.cards_data = cardsData;
+        string data = JsonConvert.SerializeObject(vo);
+
+        API api = new API();
+        api.api = vo.api;
+        api.id = vo.api_id;
+        api.data = data;
+        api.playerIds = Utility.DeepCopy<string>(network.PlayersIdsExcludingThis);
+        APIHandler.GetInstance().SendDataToAll(api);
     }
 
     private void UpdatePlayers()
@@ -105,6 +124,68 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                     player.gameObject.SetActive(false);       
                 }
             }
+        }
+    }
+
+    override protected void OnGameEvent(GameEvent evt)
+    {
+        base.OnGameEvent(evt);
+
+
+        switch (evt.type)
+        {
+            case GameEvent.DISPATCH_CARDS_DATA:
+                {
+                    _lastResponse = evt.response;
+                    DispatchCardsData();
+                    DistributeCards();
+                }
+                break;
+            case GameEvent.UPDATE_CARDS_DATA:
+                {
+                    _lastResponse = evt.response;
+                    InitCardsData(evt);
+                    DistributeCards();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void InitCardsData(GameEvent evt)
+    {
+        InitCardsDataVO vo = JsonConvert.DeserializeObject<InitCardsDataVO>(evt.response.data);
+        Dictionary<string, List<string>> cardsData = vo.cards_data;
+
+        foreach (KeyValuePair<string, List<string>> iter in cardsData)
+        {
+            string playerId = iter.Key;
+            List<string> cardsValueType = iter.Value;
+            Player player = GetPlayerById(playerId);
+
+            foreach (var valueType in cardsValueType)
+            {
+                player.AddCard(dealer.RemoveCardByValueType(valueType));    
+            }
+        }
+    }
+
+    private void DistributeCards()
+    {
+        foreach (var player in _players)
+        {
+            foreach (var card in player.Cards)
+            {
+                iTween.MoveTo(card.gameObject, iTween.Hash("x", 0, "y", 0, "delay", 3));
+            }
+        }        
+        //TODO
+        //on complete animation
+        if (!Networking.isHost)
+        {
+            GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
+            EventManager.instance.Raise(evt);
         }
     }
 }
