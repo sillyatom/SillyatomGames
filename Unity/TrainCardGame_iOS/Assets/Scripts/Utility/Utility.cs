@@ -6,7 +6,16 @@ using System.Collections.Generic;
 
 public class Utility
 {
-    public static object DeepCopy(object obj)
+    private static readonly System.Random random = new System.Random(
+                                                       "com.sillyatomgames".GetHashCode() + UnityEngine.Random.Range(0, 1000000)
+                                                   );
+
+    public static T DeepCopyList<T>(T obj)
+    {
+        return (T)DeepCopyList(obj);    
+    }
+
+    private static object DeepCopyList(object obj)
     {
         if (obj == null)
             return null;
@@ -28,7 +37,7 @@ public class Utility
             Array copied = Array.CreateInstance(elementType, array.Length);
             for (int i = 0; i < array.Length; i++)
             {
-                copied.SetValue(DeepCopy(array.GetValue(i)), i);
+                copied.SetValue(DeepCopyList(array.GetValue(i)), i);
             }
             return Convert.ChangeType(copied, obj.GetType());
         }
@@ -43,7 +52,7 @@ public class Utility
                 object fieldValue = field.GetValue(obj);
                 if (fieldValue == null)
                     continue;
-                field.SetValue(toret, DeepCopy(fieldValue));
+                field.SetValue(toret, DeepCopyList(fieldValue));
             }
             return toret;
         }
@@ -51,15 +60,27 @@ public class Utility
             throw new ArgumentException("Unknown type");
     }
 
-    public static List<T> DeepCopy<T>(List<T> list)
+    public static List<T> DeepCopyList<T>(List<T> list)
     {
         List<T> retList = new List<T>();
 
         foreach (var item in list)
         {
-            retList.Add((T)DeepCopy(item));    
+            retList.Add((T)DeepCopyList(item));    
         }
 
         return retList;
+    }
+
+    public static float SinInterpolate(float timeElapsed, float from, float to, float duration)
+    {
+        float v = timeElapsed / duration;
+        v = Mathf.Sin(v * Mathf.PI / 2.0f);
+        return (from * v) + (to * (1 - v));
+    }
+
+    public static float GetRandomNumber(double minimum, double maximum)
+    { 
+        return (float)(random.NextDouble() * (maximum - minimum) + minimum);
     }
 }

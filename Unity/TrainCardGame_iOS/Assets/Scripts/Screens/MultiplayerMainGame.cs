@@ -63,7 +63,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         api.api = vo.api;
         api.data = data;
         api.id = vo.api_id;
-        api.playerIds = Utility.DeepCopy<string>(network.PlayersIdsExcludingThis);
+        api.playerIds = Utility.DeepCopyList<string>(network.PlayersIdsExcludingThis);
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
@@ -98,7 +98,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         api.api = vo.api;
         api.id = vo.api_id;
         api.data = data;
-        api.playerIds = Utility.DeepCopy<string>(network.PlayersIdsExcludingThis);
+        api.playerIds = Utility.DeepCopyList<string>(network.PlayersIdsExcludingThis);
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
@@ -198,7 +198,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
-                args.Add("delay", delay + (GameConstants.DEAL_ANIM_TIME * (numPlayers - 1)));
 
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.reel.position.x, "y", player.reel.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
@@ -206,11 +205,26 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 if (card != player.Back())
                 {
                     RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
-                    iTween.MoveTo(card.gameObject, iTween.Hash("islocal", true, "time", GameConstants.DEAL_ANIM_TIME, "y", rectTransform.rect.y - (rectTransform.rect.height * 0.5f), "delay", delay));
+                    iTween.MoveTo(card.gameObject, iTween.Hash("islocal", true, "time", GameConstants.DEAL_ANIM_TIME, "y", rectTransform.rect.y - (rectTransform.rect.height * 0.5f) - GameConstants.SYMBOL_SPACE
+                        , "delay", delay));
                 }
             }
+            {
+                Hashtable args = new Hashtable();
+                args.Add("player", player);
+                iTween.ScaleTo(player.gameObject, iTween.Hash("z", 1.0f, "time", GameConstants.DEAL_ANIM_TIME, "delay", delay,
+                        "oncomplete", "OnDistributeAllCards", "oncompleteparams", args, "oncompletetarget", this.gameObject));
+            }
+
             playerDelay += GameConstants.DEAL_ANIM_TIME;
         }            
+    }
+
+    virtual protected void OnDistributeAllCards(object args)
+    {
+        Hashtable hash = (Hashtable)(args);
+        Player player = (Player)hash["player"];
+        player.InitReel();
     }
 
     virtual protected void OnDistributeAnimationComplete(object args)
@@ -231,7 +245,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         Player player = (Player)hash["player"];
         Card card = (Card)hash["card"];
-        float delay = (float)hash["delay"];
 
         card.ShowFrontFace();
 
@@ -240,7 +253,5 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.SetParent(player.reel);
         rectTransform.localScale = Vector3.one;
         rectTransform.position = player.reel.position;
-
-
     }
 }

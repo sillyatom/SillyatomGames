@@ -18,4 +18,14 @@ public static class ExtensionMethods
             list[n] = value;
         }
     }
+
+    public static T Back<T>(this IList<T> list)
+    {
+        int n = list.Count;
+        if (n > 0)
+        {
+            return list[n - 1];
+        }
+        return default(T);
+    }
 }

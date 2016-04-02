@@ -41,12 +41,16 @@ public class Player : SceneMonoBehaviour
         }
     }
 
+    public SpinHandler spinHandler{ get; set; }
+
     override public void Init()
     {
         BridgeDebugger.Log("[ Player - Init ]");
         base.Init();
 
         _cards = new List<Card>();
+
+        spinHandler = gameObject.AddComponent<SpinHandler>();
 
         if (spinBtn != null)
         {
@@ -91,7 +95,13 @@ public class Player : SceneMonoBehaviour
 
     private void OnSpin()
     {
-        
+        float duration = Utility.GetRandomNumber(3.0f, 6.0f);
+        spinHandler.Spin(duration);
+    }
+
+    public void InitReel()
+    {
+        spinHandler.InitReel(_cards);
     }
 
     private void OnShout()
