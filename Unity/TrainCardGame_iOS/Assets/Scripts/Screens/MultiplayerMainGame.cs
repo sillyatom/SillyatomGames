@@ -66,7 +66,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable args = new Hashtable();
         args.Add("Player", player);
         iTween.MoveTo(card.gameObject, iTween.Hash("x", dealer.transform.position.x,
-                "y", dealer.transform.position.y, "time", GameConstants.DEAL_ANIM_TIME,
+                "y", dealer.transform.position.y, "time", GameConstants.DEAL_ANIM_TIME * 2.0f,
                 "oncomplete", "OnDealAnimationComplete", "oncompletetarget", gameObject,
                 "oncompleteparams", args
             ));

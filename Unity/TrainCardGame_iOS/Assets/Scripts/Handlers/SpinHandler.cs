@@ -47,6 +47,11 @@ public class SpinHandler : SceneMonoBehaviour
     public void OnSelectedCardDealt()
     {
         _startIndex = (_startIndex == 0) ? Reel.Count - 1 : _startIndex - 1;
+
+    }
+
+    private void OnReset()
+    {
         ResetReel();
     }
 
@@ -132,10 +137,8 @@ public class SpinHandler : SceneMonoBehaviour
                 float time = (2.0f / refHeight) * Mathf.Abs(symbol.transform.localPosition.y);
                 iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnSpinAnimComplete", "oncompletetarget", gameObject, "easeType", easeType, "time", time, "islocal", true, "y", 0.0f));
                 _startIndex = index;
-                Debug.Log("Selected Symbol : " + index);
                 index = (_startIndex == reelSize - 1) ? 0 : _startIndex + 1;
                 Debug.Log("Selected Next Symbol : " + index);
-                Debug.Log("--------------------------------");
                 nextSymbol = GetSymbolAtIndex(index);
                 iTween.MoveTo(nextSymbol.gameObject, iTween.Hash("easeType", easeType, "time", time, "islocal", true, "y", _symbolHeight + GameConstants.SYMBOL_SPACE));
                 return;
@@ -146,7 +149,16 @@ public class SpinHandler : SceneMonoBehaviour
 
     private void OnSpinAnimComplete()
     {
+        //add a delay for the below two animations
         OnSpinCompleteCallback(_startIndex, Reel[_startIndex].ValueType);
+
+        int index = (_startIndex == 0) ? Reel.Count - 1 : _startIndex - 1;
+        //the next card will already be at the top at this frame
+        //so move it down and animate
+        Card symbol = GetSymbolAtIndex(index);
+        SetSymbolPosition(-_symbolHeight, symbol);
+        iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnReset", 
+                "oncompletetarget", gameObject, "easeType", "easeOutSine", "time", GameConstants.DEAL_ANIM_TIME * 2.0f, "islocal", true, "y", 0.0f));
     }
 
     bool CanStopSpin()
