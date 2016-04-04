@@ -17,6 +17,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         dealer.ShuffleCards();
         UpdatePlayerCards(GameConstants.MAX_PLAYERS);
         DistributeCards(GameConstants.MAX_PLAYERS);
+        AddListeners();
     }
 
     override protected void UpdatePlayers()

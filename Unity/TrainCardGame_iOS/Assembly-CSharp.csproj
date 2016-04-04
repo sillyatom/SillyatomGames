@@ -381,6 +381,7 @@
      <Compile Include="Assets\Scripts\Constants\TagConstants.cs" />
      <Compile Include="Assets\Scripts\Events\EventManager.cs" />
      <Compile Include="Assets\Scripts\Events\GameEvent.cs" />
+     <Compile Include="Assets\Scripts\Events\InGameEvent.cs" />
      <Compile Include="Assets\Scripts\Ext\SceneMonoBehaviour.cs" />
      <Compile Include="Assets\Scripts\ExtensionMethods\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\GameElements\Card.cs" />

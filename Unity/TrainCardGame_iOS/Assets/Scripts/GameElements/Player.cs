@@ -36,6 +36,22 @@ public class Player : SceneMonoBehaviour
         }
     }
 
+    public Card SelectedCard
+    {
+        get
+        {
+            return _cards[spinHandler.SelectedIndex];
+        }
+    }
+
+    public int SelectedCardIndex
+    {
+        get
+        {
+            return spinHandler.SelectedIndex;
+        }
+    }
+
     public List<string> GetCardsValueType
     {
         get
@@ -53,7 +69,8 @@ public class Player : SceneMonoBehaviour
 
     private void OnSpinComplete(int index, string cardValueType)
     {
-        Debug.Log(" Index : " + index + " CardValType : " + cardValueType);
+        InGameEvent evt = new InGameEvent(InGameEvent.ON_SPIN_COMPLETE, playerId);
+        EventManager.instance.Raise(evt);
     }
 
     override public void Init()
@@ -116,6 +133,12 @@ public class Player : SceneMonoBehaviour
     public void InitReel()
     {
         spinHandler.InitReel(_cards);
+    }
+
+    public void OnSelectedCardDealt()
+    {
+        _cards.RemoveAt(spinHandler.SelectedIndex);
+        spinHandler.OnSelectedCardDealt();
     }
 
     private void OnShout()

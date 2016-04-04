@@ -44,6 +44,12 @@ public class SpinHandler : SceneMonoBehaviour
         base.Init();
     }
 
+    public void OnSelectedCardDealt()
+    {
+        _startIndex = (_startIndex == 0) ? Reel.Count - 1 : _startIndex - 1;
+        ResetReel();
+    }
+
     public void InitReel(List<Card> symbols)
     {
         _spinSpeed = 10.0f;
@@ -57,7 +63,7 @@ public class SpinHandler : SceneMonoBehaviour
         _parentHeight = rectTransform.rect.height;
         rectTransform = symbols[0].gameObject.transform.GetComponent<RectTransform>();
         _symbolHeight = rectTransform.rect.height;
-        _thresholdY = symbols[(symbolCount - 2)].transform.localPosition.y;
+        _thresholdY = -_symbolHeight;
         _startIndex = symbolCount - 1;
 
         ResetReel();
@@ -68,30 +74,34 @@ public class SpinHandler : SceneMonoBehaviour
         return Reel[index];
     }
 
+    private void SetSymbolPosition(float pos, Card symbol)
+    {
+        symbol.transform.localPosition = new Vector3(symbol.transform.localPosition.x,
+            pos, symbol.transform.localPosition.z
+        );
+    }
+
     private void ResetReel()
     {
         int symbolCount = Reel.Count;
-        _endIndex = (_startIndex == 0) ? (symbolCount - 1) : (_startIndex - 1);
-        _thresholdIndex = symbolCount - 1;
-        Transform symTransform = GetSymbolAtIndex(_startIndex).transform;
-        _lastPosY = symTransform.localPosition.y;
 
-        for (int index = _startIndex; index <= _thresholdIndex; index++)
+        _lastPosY = 0.0f;
+    
+        for (int index = _startIndex; index < Reel.Count; index++)
         {
-            Card symbol = GetSymbolAtIndex(index);
-            symbol.transform.localPosition = new Vector3(symbol.transform.localPosition.x, 
-                _lastPosY, symbol.transform.localPosition.z);
-            _lastPosY -= (_symbolHeight + GameConstants.SYMBOL_SPACE);
+            SetSymbolPosition(_lastPosY, GetSymbolAtIndex(index));
+            _lastPosY += _symbolHeight + GameConstants.SYMBOL_SPACE;
         }
 
-        _lastPosY = GetSymbolAtIndex(_startIndex).transform.localPosition.y;
-
-        for (int index = _endIndex; index >= 0; index--)
+        if (_startIndex == 0)
         {
-            _lastPosY += (_symbolHeight + GameConstants.SYMBOL_SPACE);
-            Card symbol = GetSymbolAtIndex(index);
-            symbol.transform.localPosition = new Vector3(symbol.transform.localPosition.x, 
-                _lastPosY, symbol.transform.localPosition.z);
+            return;
+        }
+
+        for (int index = 0; index < _startIndex; index++)
+        {
+            SetSymbolPosition(_lastPosY, GetSymbolAtIndex(index));
+            _lastPosY += _symbolHeight + GameConstants.SYMBOL_SPACE;
         }
     }
 
@@ -122,14 +132,10 @@ public class SpinHandler : SceneMonoBehaviour
                 float time = (2.0f / refHeight) * Mathf.Abs(symbol.transform.localPosition.y);
                 iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnSpinAnimComplete", "oncompletetarget", gameObject, "easeType", easeType, "time", time, "islocal", true, "y", 0.0f));
                 _startIndex = index;
-                if (index - 1 < 0)
-                {
-                    index = reelSize - 1;
-                }
-                else
-                {
-                    index = index - 1;
-                }
+                Debug.Log("Selected Symbol : " + index);
+                index = (_startIndex == reelSize - 1) ? 0 : _startIndex + 1;
+                Debug.Log("Selected Next Symbol : " + index);
+                Debug.Log("--------------------------------");
                 nextSymbol = GetSymbolAtIndex(index);
                 iTween.MoveTo(nextSymbol.gameObject, iTween.Hash("easeType", easeType, "time", time, "islocal", true, "y", _symbolHeight + GameConstants.SYMBOL_SPACE));
                 return;
@@ -186,20 +192,20 @@ public class SpinHandler : SceneMonoBehaviour
             else
             {
                 int symbolCount = Reel.Count;
-                for (int index = symbolCount - 1; index >= 0; index--)
+                foreach (Card symbol in Reel)
                 {
-                    Card symbol = Reel[index];
                     float newPos = symbol.transform.localPosition.y - (_spinAcceleration * dt * _spinSpeed);
                     symbol.transform.localPosition = new Vector3(symbol.transform.localPosition.x, 
                         newPos, symbol.transform.localPosition.z);
 
                     if (newPos <= _thresholdY)
                     {
-                        _lastPosY = GetSymbolAtIndex((index == symbolCount - 1) ? 0 : index + 1).transform.localPosition.y + _symbolHeight + GameConstants.SYMBOL_SPACE;
                         symbol.transform.localPosition = new Vector3(symbol.transform.localPosition.x, 
                             _lastPosY, symbol.transform.localPosition.z);
+                        _lastPosY += _symbolHeight + GameConstants.SYMBOL_SPACE;
                     }
                 }
+                _lastPosY -= (_spinAcceleration * dt * _spinSpeed);
             }
         }
     }

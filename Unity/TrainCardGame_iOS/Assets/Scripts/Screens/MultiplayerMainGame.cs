@@ -36,6 +36,47 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             dealer.ShuffleCards();
             DispatchHostSelected();
         }
+
+        //add event listeners
+        AddListeners();
+    }
+
+    protected void AddListeners()
+    {
+        EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
+    }
+
+    protected void OnInGameEvent(InGameEvent evt)
+    {
+        switch (evt.type)
+        {
+            case InGameEvent.ON_SPIN_COMPLETE:
+                {
+                    Player player = GetPlayerById(evt.playerId);
+                    DealCard(player);
+                }
+                break;
+        }
+    }
+
+    private void DealCard(Player player)
+    {
+        Card card = player.SelectedCard;
+        card.transform.SetParent(dealer.transform);
+        Hashtable args = new Hashtable();
+        args.Add("Player", player);
+        iTween.MoveTo(card.gameObject, iTween.Hash("x", dealer.transform.position.x,
+                "y", dealer.transform.position.y, "time", GameConstants.DEAL_ANIM_TIME,
+                "oncomplete", "OnDealAnimationComplete", "oncompletetarget", gameObject,
+                "oncompleteparams", args
+            ));
+    }
+
+    private void OnDealAnimationComplete(object args)
+    {
+        Hashtable hArgs = (Hashtable)args;
+        Player player = (Player)hArgs["Player"];
+        player.OnSelectedCardDealt();
     }
 
     private Player GetPlayerById(string playerId)
