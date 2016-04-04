@@ -28,6 +28,14 @@ public class Player : SceneMonoBehaviour
         }
     }
 
+    public string SelectedCardValueType
+    {
+        get
+        {
+            return _cards[spinHandler.SelectedIndex].ValueType;
+        }
+    }
+
     public List<string> GetCardsValueType
     {
         get
@@ -43,6 +51,11 @@ public class Player : SceneMonoBehaviour
 
     public SpinHandler spinHandler{ get; set; }
 
+    private void OnSpinComplete(int index, string cardValueType)
+    {
+        Debug.Log(" Index : " + index + " CardValType : " + cardValueType);
+    }
+
     override public void Init()
     {
         BridgeDebugger.Log("[ Player - Init ]");
@@ -51,6 +64,7 @@ public class Player : SceneMonoBehaviour
         _cards = new List<Card>();
 
         spinHandler = gameObject.AddComponent<SpinHandler>();
+        spinHandler.OnSpinCompleteCallback = OnSpinComplete;
 
         if (spinBtn != null)
         {
@@ -95,7 +109,7 @@ public class Player : SceneMonoBehaviour
 
     private void OnSpin()
     {
-        float duration = Utility.GetRandomNumber(3.0f, 6.0f);
+        float duration = Utility.GetRandomNumber(2.0f, 4.0f);
         spinHandler.Spin(duration);
     }
 

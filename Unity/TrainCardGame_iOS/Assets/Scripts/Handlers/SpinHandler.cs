@@ -11,6 +11,14 @@ public class SpinHandler : SceneMonoBehaviour
         set;
     }
 
+    public int SelectedIndex
+    {
+        get
+        {
+            return _startIndex;    
+        }
+    }
+
     private float _symbolHeight;
     private float _parentHeight;
     private float _thresholdY;
@@ -29,6 +37,8 @@ public class SpinHandler : SceneMonoBehaviour
     private int _endIndex;
     private int _thresholdIndex;
 
+    public Action<int, string> OnSpinCompleteCallback;
+
     public override void Init()
     {
         base.Init();
@@ -40,12 +50,7 @@ public class SpinHandler : SceneMonoBehaviour
         _spinAcceleration = 100.0f;
         _spinStopDuration = 0.0f;
 
-        int runningIndex = 0;
         Reel = symbols;
-        foreach (Card symbol in Reel)
-        {
-            symbol.index = runningIndex++;
-        }
 
         int symbolCount = symbols.Count;
         RectTransform rectTransform = symbols[0].gameObject.transform.parent.GetComponent<RectTransform>();
@@ -60,14 +65,7 @@ public class SpinHandler : SceneMonoBehaviour
 
     private Card GetSymbolAtIndex(int index)
     {
-        foreach (var symbol in Reel)
-        {
-            if (symbol.index == index)
-            {
-                return symbol;
-            }
-        }
-        return null;
+        return Reel[index];
     }
 
     private void ResetReel()
@@ -122,7 +120,7 @@ public class SpinHandler : SceneMonoBehaviour
             if (symbol.transform.localPosition.y >= -refHeight && symbol.transform.localPosition.y <= 0)
             {
                 float time = (2.0f / refHeight) * Mathf.Abs(symbol.transform.localPosition.y);
-                iTween.MoveTo(symbol.gameObject, iTween.Hash("easeType", easeType, "time", time, "islocal", true, "y", 0.0f));
+                iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnSpinAnimComplete", "oncompletetarget", gameObject, "easeType", easeType, "time", time, "islocal", true, "y", 0.0f));
                 _startIndex = index;
                 if (index - 1 < 0)
                 {
@@ -134,11 +132,15 @@ public class SpinHandler : SceneMonoBehaviour
                 }
                 nextSymbol = GetSymbolAtIndex(index);
                 iTween.MoveTo(nextSymbol.gameObject, iTween.Hash("easeType", easeType, "time", time, "islocal", true, "y", _symbolHeight + GameConstants.SYMBOL_SPACE));
-
                 return;
             }
 
         }
+    }
+
+    private void OnSpinAnimComplete()
+    {
+        OnSpinCompleteCallback(_startIndex, Reel[_startIndex].ValueType);
     }
 
     bool CanStopSpin()

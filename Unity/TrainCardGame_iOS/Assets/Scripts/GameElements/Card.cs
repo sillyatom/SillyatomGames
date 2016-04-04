@@ -4,9 +4,6 @@ using System.Collections;
 
 public class Card : MonoBehaviour
 {
-    //used only in reels
-    public int index{ get; set; }
-
     public string Value{ get; set; }
 
     public string Type{ get; set; }
