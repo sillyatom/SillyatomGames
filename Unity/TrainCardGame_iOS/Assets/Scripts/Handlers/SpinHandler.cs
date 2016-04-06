@@ -135,16 +135,20 @@ public class SpinHandler : SceneMonoBehaviour
             if (symbol.transform.localPosition.y >= -refHeight && symbol.transform.localPosition.y <= 0)
             {
                 float time = (2.0f / refHeight) * Mathf.Abs(symbol.transform.localPosition.y);
-                iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnSpinAnimComplete", "oncompletetarget", gameObject, "easeType", easeType, "time", time, "islocal", true, "y", 0.0f));
+                iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnSpinAnimCompleteDelay", "oncompletetarget", gameObject, "easeType", easeType, "time", time, "islocal", true, "y", 0.0f));
                 _startIndex = index;
                 index = (_startIndex == reelSize - 1) ? 0 : _startIndex + 1;
-                Debug.Log("Selected Next Symbol : " + index);
                 nextSymbol = GetSymbolAtIndex(index);
                 iTween.MoveTo(nextSymbol.gameObject, iTween.Hash("easeType", easeType, "time", time, "islocal", true, "y", _symbolHeight + GameConstants.SYMBOL_SPACE));
                 return;
             }
 
         }
+    }
+
+    private void OnSpinAnimCompleteDelay()
+    {
+        Utility.DelayedCall(gameObject, gameObject, "OnSpinAnimComplete", 1.5f);
     }
 
     private void OnSpinAnimComplete()

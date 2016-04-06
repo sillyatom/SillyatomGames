@@ -83,4 +83,10 @@ public class Utility
     { 
         return (float)(random.NextDouble() * (maximum - minimum) + minimum);
     }
+
+    public static void DelayedCall(GameObject target, GameObject callbackTarget, string callback, float time, float delay = 0.0f)
+    {
+        iTween.MoveBy(target, iTween.Hash("x", 0, "time", time, "delay", delay,
+                "oncomplete", callback, "oncompletetarget", callbackTarget));
+    }
 }
