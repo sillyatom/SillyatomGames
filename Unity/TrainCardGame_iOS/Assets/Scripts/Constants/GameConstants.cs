@@ -6,6 +6,6 @@ public class GameConstants
     public static int MIN_PLAYERS = 2;
     public static int MAX_PLAYERS = 4;
 
-    public static float DEAL_ANIM_TIME = 0.5f;
+    public static float DEAL_ANIM_TIME = 0.25f;
     public static float SYMBOL_SPACE = 0.0f;
 }

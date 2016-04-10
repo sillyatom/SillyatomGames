@@ -34,8 +34,6 @@ public class SpinHandler : SceneMonoBehaviour
     private bool _canUpdate;
 
     private int _startIndex;
-    private int _endIndex;
-    private int _thresholdIndex;
 
     public Action<int, string> OnSpinCompleteCallback;
 
@@ -47,12 +45,6 @@ public class SpinHandler : SceneMonoBehaviour
     public void OnSelectedCardDealt()
     {
         _startIndex = (_startIndex == 0) ? Reel.Count - 1 : _startIndex - 1;
-
-    }
-
-    private void OnReset()
-    {
-        ResetReel();
     }
 
     public void InitReel(List<Card> symbols)
@@ -88,8 +80,6 @@ public class SpinHandler : SceneMonoBehaviour
 
     private void ResetReel()
     {
-        int symbolCount = Reel.Count;
-
         _lastPosY = 0.0f;
     
         for (int index = _startIndex; index < Reel.Count; index++)
@@ -153,16 +143,16 @@ public class SpinHandler : SceneMonoBehaviour
 
     private void OnSpinAnimComplete()
     {
-        //add a delay for the below two animations
-        OnSpinCompleteCallback(_startIndex, Reel[_startIndex].ValueType);
-
         int index = (_startIndex == 0) ? Reel.Count - 1 : _startIndex - 1;
         //the next card will already be at the top at this frame
         //so move it down and animate
         Card symbol = GetSymbolAtIndex(index);
+        
+        //add a delay for the below two animations
+        OnSpinCompleteCallback(_startIndex, Reel[_startIndex].ValueType);
+
         SetSymbolPosition(-_symbolHeight, symbol);
-        iTween.MoveTo(symbol.gameObject, iTween.Hash("oncomplete", "OnReset", 
-                "oncompletetarget", gameObject, "easeType", "easeOutSine", "time", GameConstants.DEAL_ANIM_TIME * 2.0f, "islocal", true, "y", 0.0f));
+        iTween.MoveTo(symbol.gameObject, iTween.Hash("easeType", "easeOutSine", "time", GameConstants.DEAL_ANIM_TIME * 2.0f, "islocal", true, "y", 0.0f));
     }
 
     bool CanStopSpin()
@@ -207,7 +197,6 @@ public class SpinHandler : SceneMonoBehaviour
             }
             else
             {
-                int symbolCount = Reel.Count;
                 foreach (Card symbol in Reel)
                 {
                     float newPos = symbol.transform.localPosition.y - (_spinAcceleration * dt * _spinSpeed);

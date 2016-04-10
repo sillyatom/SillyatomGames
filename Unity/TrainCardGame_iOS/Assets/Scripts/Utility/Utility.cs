@@ -89,4 +89,10 @@ public class Utility
         iTween.MoveBy(target, iTween.Hash("x", 0, "time", time, "delay", delay,
                 "oncomplete", callback, "oncompletetarget", callbackTarget));
     }
+
+    public static void DelayedCallWithArgs(GameObject target, GameObject callbackTarget, string callback, object args, float time, float delay = 0.0f)
+    {
+        iTween.MoveBy(target, iTween.Hash("x", 0, "time", time, "delay", delay,
+                "oncomplete", callback, "oncompletetarget", callbackTarget, "oncompleteparams", args));
+    }
 }

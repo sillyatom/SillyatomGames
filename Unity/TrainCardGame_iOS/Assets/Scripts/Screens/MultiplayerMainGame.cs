@@ -63,13 +63,13 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         Card card = player.SelectedCard;
         card.transform.SetParent(dealer.transform);
+
         Hashtable args = new Hashtable();
         args.Add("Player", player);
-        iTween.MoveTo(card.gameObject, iTween.Hash("x", dealer.transform.position.x,
-                "y", dealer.transform.position.y, "time", GameConstants.DEAL_ANIM_TIME * 2.0f,
-                "oncomplete", "OnDealAnimationComplete", "oncompletetarget", gameObject,
-                "oncompleteparams", args
-            ));
+
+        dealer.AddCard(card);
+        dealer.ShiftCards();
+        Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDealAnimationComplete", args, dealer.GetDeckSize());
     }
 
     private void OnDealAnimationComplete(object args)
@@ -263,14 +263,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     virtual protected void OnDistributeAllCards(object args)
     {
-        Hashtable hash = (Hashtable)(args);
-        Player player = (Player)hash["player"];
-        player.InitReel();
-    }
-
-    virtual protected void OnDistributeAnimationComplete(object args)
-    {
-        Hashtable hash = (Hashtable)(args);
         if (IsSinglePlayerGame())
         {
             //do nothing
@@ -284,6 +276,14 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             }
         }
 
+        Hashtable hash = (Hashtable)(args);
+        Player player = (Player)hash["player"];
+        player.InitReel();
+    }
+
+    virtual protected void OnDistributeAnimationComplete(object args)
+    {
+        Hashtable hash = (Hashtable)(args);
         Player player = (Player)hash["player"];
         Card card = (Card)hash["card"];
 

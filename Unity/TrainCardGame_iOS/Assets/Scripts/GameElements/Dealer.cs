@@ -6,6 +6,8 @@ public class Dealer : SceneMonoBehaviour
 {
     private List<Card> _cards;
     private RectTransform rectTransform;
+    private const float SPACE = 50;
+    private int _minNumOfCardsReqToMatch = 14;
 
     override public void Init()
     {
@@ -52,6 +54,45 @@ public class Dealer : SceneMonoBehaviour
     public void ShuffleCards()
     {
         _cards.Shuffle<Card>();
+    }
+
+    public void ShiftCards(GameObject onCompleteTarget, string onCompleteCallback, object args)
+    {
+        int count = GetDeckSize();
+        int threshold = _minNumOfCardsReqToMatch / 2;
+    }
+
+    public void ShiftCards()
+    {
+        for (int index = 0; index < GetDeckSize(); index++)
+        {
+            Vector3 pos = GetPositionForIndex(index);
+            MoveCardToPosition(_cards[index], pos, 1.0f);
+        }
+    }
+
+    private Vector3 GetPositionForIndex(int index)
+    {
+        int count = GetDeckSize();
+        int threshold = _minNumOfCardsReqToMatch / 2;
+        if (index > threshold)
+        {
+            return new Vector3(transform.position.x + ((index - threshold +1) * SPACE),
+                                transform.position.y + transform.position.z);
+        }
+        int flag = (count <= threshold) ? count : threshold;
+        return new Vector3(transform.position.x - ((flag - index - 1) * SPACE),
+                            transform.position.y + transform.position.z);
+    }
+
+    private void MoveCardToPosition(Card card, Vector3 pos, float time, float delay = 0.0f)
+    {
+        iTween.MoveTo(card.gameObject, iTween.Hash("x", pos.x, "y", pos.y, "time", time, "delay", delay));
+    }
+
+    public void AddCard(Card card)
+    {
+        _cards.Add(card);
     }
 
     private void CreateCards()

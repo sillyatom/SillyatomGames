@@ -128,6 +128,7 @@ public class Player : SceneMonoBehaviour
     {
         float duration = Utility.GetRandomNumber(2.0f, 4.0f);
         spinHandler.Spin(duration);
+        spinBtn.enabled = false;
     }
 
     public void InitReel()
@@ -139,6 +140,7 @@ public class Player : SceneMonoBehaviour
     {
         _cards.RemoveAt(spinHandler.SelectedIndex);
         spinHandler.OnSelectedCardDealt();
+        spinBtn.enabled = true;
     }
 
     private void OnShout()
