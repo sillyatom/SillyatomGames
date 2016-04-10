@@ -80,6 +80,7 @@ public class Dealer : SceneMonoBehaviour
             return new Vector3(transform.position.x + ((index - threshold +1) * SPACE),
                                 transform.position.y + transform.position.z);
         }
+
         int flag = (count <= threshold) ? count : threshold;
         return new Vector3(transform.position.x - ((flag - index - 1) * SPACE),
                             transform.position.y + transform.position.z);

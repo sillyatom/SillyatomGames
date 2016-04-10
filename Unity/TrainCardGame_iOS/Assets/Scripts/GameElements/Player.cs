@@ -81,6 +81,7 @@ public class Player : SceneMonoBehaviour
         _cards = new List<Card>();
 
         spinHandler = gameObject.AddComponent<SpinHandler>();
+        spinHandler.Init();
         spinHandler.OnSpinCompleteCallback = OnSpinComplete;
 
         if (spinBtn != null)
