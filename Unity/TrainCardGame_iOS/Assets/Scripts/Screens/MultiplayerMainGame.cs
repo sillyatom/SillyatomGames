@@ -8,11 +8,13 @@ using Newtonsoft.Json.Linq;
 
 public class MultiplayerMainGame : SceneMonoBehaviour
 {
+
     public Dealer dealer;
     public Networking network;
-
     protected List<Player> _players;
+
     private NetworkResponse _lastResponse;
+    protected RoundHandler _roundHandler;
 
     override public void Init()
     {
@@ -29,6 +31,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         //update players
         UpdatePlayers();
+
+        //init Round Handler
+        _roundHandler = gameObject.AddComponent<RoundHandler>();
+        _roundHandler.Init();
 
         //if host
         if (Networking.isHost)
@@ -77,6 +83,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable hArgs = (Hashtable)args;
         Player player = (Player)hArgs["Player"];
         player.OnSelectedCardDealt();
+
+        DispatchCardDealt();
     }
 
     private Player GetPlayerById(string playerId)
@@ -89,6 +97,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             }
         }
         return null;
+    }
+
+    private void DispatchCardDealt()
+    {
+        
     }
 
     private void DispatchHostSelected()

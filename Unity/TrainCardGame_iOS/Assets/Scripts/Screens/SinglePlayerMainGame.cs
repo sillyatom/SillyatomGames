@@ -12,6 +12,9 @@ public class SinglePlayerMainGame : MultiplayerMainGame
 
     protected override void InitGame()
     {
+        _roundHandler = gameObject.AddComponent<RoundHandler>();
+        _roundHandler.Init();
+
         dealer.Init();
         UpdatePlayers();
         dealer.ShuffleCards();
