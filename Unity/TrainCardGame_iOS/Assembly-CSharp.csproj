@@ -389,6 +389,7 @@
      <Compile Include="Assets\Scripts\GameElements\Player.cs" />
      <Compile Include="Assets\Scripts\Handlers\BridgeDebugger.cs" />
      <Compile Include="Assets\Scripts\Handlers\ExecutionOrderManager.cs" />
+     <Compile Include="Assets\Scripts\Handlers\RoundHandler.cs" />
      <Compile Include="Assets\Scripts\Handlers\SceneTransitionManager.cs" />
      <Compile Include="Assets\Scripts\Handlers\SpinHandler.cs" />
      <Compile Include="Assets\Scripts\Networking\API.cs" />

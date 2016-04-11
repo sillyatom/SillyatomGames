@@ -8,7 +8,7 @@ public class TestScript : MonoBehaviour
     void Awake()
     {
         List<string> data = new List<string>(new string[]{ "A", "B", "C" });
-        List<string> clone = Utility.DeepCopyList<string>(data);
+        List<string> clone = Utility.DeepCloneList<string>(data);
         Debug.Log("-------CLONING LIST--------'");
         foreach (var item in clone)
         {

@@ -275,19 +275,19 @@ public class Networking : SceneMonoBehaviour
         for (int index = 1; index < _players.Count; index++)
         {
             NetworkPlayer player = _players[index];
-            _playersExcludingThis.Add((NetworkPlayer)Utility.DeepCopyList(player));
+            _playersExcludingThis.Add(player.DeepClone());
         }
 
         //copy to playersIds
         foreach (var player in _players)
         {
-            _playersIds.Add((string)Utility.DeepCopyList(player.PlayerId));
+            _playersIds.Add(player.PlayerId.DeepClone());
         }
 
         //copy to playersIdsExcludingThis
         foreach (var player in _playersExcludingThis)
         {
-            _playersIdsExcludingThis.Add((string)Utility.DeepCopyList(player.PlayerId));
+            _playersIdsExcludingThis.Add(player.PlayerId.DeepClone());
         }
     }
 }

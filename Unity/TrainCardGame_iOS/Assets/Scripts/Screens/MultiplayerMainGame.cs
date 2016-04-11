@@ -104,7 +104,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         api.api = vo.api;
         api.data = data;
         api.id = vo.api_id;
-        api.playerIds = Utility.DeepCopyList<string>(network.PlayersIdsExcludingThis);
+        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
@@ -139,7 +139,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         api.api = vo.api;
         api.id = vo.api_id;
         api.data = data;
-        api.playerIds = Utility.DeepCopyList<string>(network.PlayersIdsExcludingThis);
+        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
@@ -250,18 +250,16 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                         , "delay", delay));
                 }
             }
-            {
-                Hashtable args = new Hashtable();
-                args.Add("player", player);
-                iTween.ScaleTo(player.gameObject, iTween.Hash("z", 1.0f, "time", GameConstants.DEAL_ANIM_TIME, "delay", delay,
-                        "oncomplete", "OnDistributeAllCards", "oncompleteparams", args, "oncompletetarget", this.gameObject));
-            }
 
             playerDelay += GameConstants.DEAL_ANIM_TIME;
         }            
+        {
+            iTween.ScaleTo(this.gameObject, iTween.Hash("z", 1.0f, "time", GameConstants.DEAL_ANIM_TIME, "delay", delay,
+                    "oncomplete", "OnDistributeAllCards", "oncompletetarget", this.gameObject));
+        }
     }
 
-    virtual protected void OnDistributeAllCards(object args)
+    virtual protected void OnDistributeAllCards()
     {
         if (IsSinglePlayerGame())
         {
@@ -276,9 +274,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             }
         }
 
-        Hashtable hash = (Hashtable)(args);
-        Player player = (Player)hash["player"];
-        player.InitReel();
+        foreach (var player in _players)
+        {
+            player.InitReel();
+        }
     }
 
     virtual protected void OnDistributeAnimationComplete(object args)

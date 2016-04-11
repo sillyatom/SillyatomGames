@@ -56,12 +56,6 @@ public class Dealer : SceneMonoBehaviour
         _cards.Shuffle<Card>();
     }
 
-    public void ShiftCards(GameObject onCompleteTarget, string onCompleteCallback, object args)
-    {
-        int count = GetDeckSize();
-        int threshold = _minNumOfCardsReqToMatch / 2;
-    }
-
     public void ShiftCards()
     {
         for (int index = 0; index < GetDeckSize(); index++)
@@ -77,13 +71,13 @@ public class Dealer : SceneMonoBehaviour
         int threshold = _minNumOfCardsReqToMatch / 2;
         if (index > threshold)
         {
-            return new Vector3(transform.position.x + ((index - threshold +1) * SPACE),
-                                transform.position.y + transform.position.z);
+            return new Vector3(transform.position.x + ((index - threshold + 1) * SPACE),
+                transform.position.y + transform.position.z);
         }
 
         int flag = (count <= threshold) ? count : threshold;
         return new Vector3(transform.position.x - ((flag - index - 1) * SPACE),
-                            transform.position.y + transform.position.z);
+            transform.position.y + transform.position.z);
     }
 
     private void MoveCardToPosition(Card card, Vector3 pos, float time, float delay = 0.0f)

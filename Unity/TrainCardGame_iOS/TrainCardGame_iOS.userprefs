@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Handlers/SpinHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/PostBuildProcessor.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="82" Column="36" />
-      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="20" Column="18" />
-      <File FileName="Assets/Scripts/GameElements/Player.cs" Line="141" Column="40" />
-      <File FileName="Assets/Scripts/Handlers/SpinHandler.cs" Line="152" Column="51" />
-      <File FileName="Assets/Scripts/ExtensionMethods/ExtensionMethods.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/Constants/GameConstants.cs" Line="11" Column="2" />
+      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameElements/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Handlers/SpinHandler.cs" Line="149" Column="47" />
+      <File FileName="Assets/Scripts/ExtensionMethods/ExtensionMethods.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Constants/GameConstants.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameElements/Dealer.cs" Line="61" Column="1" />
+      <File FileName="Assets/Editor/PostBuildProcessor.cs" Line="41" Column="1" />
       <File FileName="Assets/Scripts/Networking/Networking.cs" Line="20" Column="42" NotebookId="1" />
       <File FileName="Assets/Scripts/Networking/NetworkPlayer.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/Constants/NetworkConstants.cs" Line="1" Column="1" NotebookId="1" />

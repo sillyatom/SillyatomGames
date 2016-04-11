@@ -1,11 +1,11 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainCardGame_iOS.CSharp.Plugins", "TrainCardGame_iOS.CSharp.Plugins.csproj", "{6C7EA67C-7A3A-FB10-ED64-0599F1D37F2C}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{6D61A420-6922-DEEF-1DB7-E335C7590296}") = "TrainCardGame_iOS", "Assembly-CSharp-firstpass.csproj", "{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainCardGame_iOS.CSharp", "TrainCardGame_iOS.CSharp.csproj", "{4464C30F-F7C8-7DF9-8591-CAC9879D3492}"
+Project("{6D61A420-6922-DEEF-1DB7-E335C7590296}") = "TrainCardGame_iOS", "Assembly-CSharp.csproj", "{855E31D5-8695-EB2C-15C9-0AB72354D26C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainCardGame_iOS.CSharp.Editor", "TrainCardGame_iOS.CSharp.Editor.csproj", "{611DB54E-DF57-2009-CFCC-83A95A36D98A}"
+Project("{6D61A420-6922-DEEF-1DB7-E335C7590296}") = "TrainCardGame_iOS", "Assembly-CSharp-Editor.csproj", "{D9DD087B-2618-5909-F8A6-DE05B1392A43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6C7EA67C-7A3A-FB10-ED64-0599F1D37F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C7EA67C-7A3A-FB10-ED64-0599F1D37F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C7EA67C-7A3A-FB10-ED64-0599F1D37F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C7EA67C-7A3A-FB10-ED64-0599F1D37F2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4464C30F-F7C8-7DF9-8591-CAC9879D3492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4464C30F-F7C8-7DF9-8591-CAC9879D3492}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4464C30F-F7C8-7DF9-8591-CAC9879D3492}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4464C30F-F7C8-7DF9-8591-CAC9879D3492}.Release|Any CPU.Build.0 = Release|Any CPU
-		{611DB54E-DF57-2009-CFCC-83A95A36D98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{611DB54E-DF57-2009-CFCC-83A95A36D98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{611DB54E-DF57-2009-CFCC-83A95A36D98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{611DB54E-DF57-2009-CFCC-83A95A36D98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF7C441-2A0A-5BDD-DE5D-57FA71499D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{855E31D5-8695-EB2C-15C9-0AB72354D26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855E31D5-8695-EB2C-15C9-0AB72354D26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855E31D5-8695-EB2C-15C9-0AB72354D26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855E31D5-8695-EB2C-15C9-0AB72354D26C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DD087B-2618-5909-F8A6-DE05B1392A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DD087B-2618-5909-F8A6-DE05B1392A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DD087B-2618-5909-F8A6-DE05B1392A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DD087B-2618-5909-F8A6-DE05B1392A43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
