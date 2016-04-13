@@ -9,8 +9,8 @@ public class GameEvent
     public const string HOST_DATA = "host_data";
     public const string ACKNOWLEDGE = "acknowledge";
 
-    public const string DISPATCH_CARDS_DATA = "dispatch_cards_data";
     public const string UPDATE_CARDS_DATA = "update_cards_data";
+    public const string ROUND_RESULT = "round_result";
 
     public string type{ get; set; }
 

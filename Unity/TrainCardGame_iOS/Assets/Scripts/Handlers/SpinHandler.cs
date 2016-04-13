@@ -37,6 +37,8 @@ public class SpinHandler : SceneMonoBehaviour
 
     public Action<int, string> OnSpinCompleteCallback;
 
+    public float LastSpinTime{ get; set; }
+
     public override void Init()
     {
         base.Init();
@@ -103,7 +105,7 @@ public class SpinHandler : SceneMonoBehaviour
     public void Spin(float duration)
     {
         ResetReel();
-
+        LastSpinTime = duration;
         _spinDuration = duration;
         _spinStopDuration = 0.0f;
         _timeElapsed = 0.0f;

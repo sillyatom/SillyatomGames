@@ -92,6 +92,8 @@ public class Player : SceneMonoBehaviour
         {
             shoutBtn.onClick.AddListener(OnShout);
         }
+
+        spinBtn.enabled = false;
     }
 
     public void AddCard(Card card)

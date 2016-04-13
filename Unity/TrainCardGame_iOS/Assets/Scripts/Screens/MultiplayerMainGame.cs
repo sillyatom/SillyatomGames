@@ -11,10 +11,13 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     public Dealer dealer;
     public Networking network;
-    protected List<Player> _players;
 
     private NetworkResponse _lastResponse;
+
+    protected List<Player> _players;
     protected RoundHandler _roundHandler;
+
+    public Player GetLocalPlayer{ get { return _players[0]; } }
 
     override public void Init()
     {
@@ -56,10 +59,26 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         switch (evt.type)
         {
+            case InGameEvent.DISPATCH_CARDS_DATA:
+                {
+                    DispatchCardsData();
+                    DistributeCards(network.numPlayers);
+                }
+                break;
             case InGameEvent.ON_SPIN_COMPLETE:
                 {
                     Player player = GetPlayerById(evt.playerId);
                     DealCard(player);
+                }
+                break;
+            case InGameEvent.START_GAME:
+                {
+                    StartGame();
+                }
+                break;
+            default:
+                {
+                    Debug.Log(" [ OnInGameEvent ] - Default Case ");
                 }
                 break;
         }
@@ -80,11 +99,13 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void OnDealAnimationComplete(object args)
     {
+        //send the data before dealing with cleaning up
+        DispatchCardDealt();
+
         Hashtable hArgs = (Hashtable)args;
         Player player = (Player)hArgs["Player"];
         player.OnSelectedCardDealt();
 
-        DispatchCardDealt();
     }
 
     private Player GetPlayerById(string playerId)
@@ -101,7 +122,23 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void DispatchCardDealt()
     {
-        
+        RoundResultVO vo = new RoundResultVO();
+        vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
+        vo.sender = Networking.hostId;
+        vo.api_id = ++APIHandler.GetInstance().runningId;
+        vo.spinTime = GetLocalPlayer.spinHandler.LastSpinTime;
+        vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
+        vo.selectedSymbolIndex = GetLocalPlayer.SelectedCardIndex;
+        vo.roundId = _roundHandler.GetRoundNumber;
+
+        string data = JsonConvert.SerializeObject(vo);
+
+        API api = new API();
+        api.api = vo.api;
+        api.data = data;
+        api.id = vo.api_id;
+        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
+        APIHandler.GetInstance().SendDataToAll(api);
     }
 
     private void DispatchHostSelected()
@@ -199,21 +236,19 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         base.OnGameEvent(evt);
 
+        _lastResponse = evt.response;
 
         switch (evt.type)
         {
-            case GameEvent.DISPATCH_CARDS_DATA:
+            case GameEvent.UPDATE_CARDS_DATA:
                 {
-                    _lastResponse = evt.response;
-                    DispatchCardsData();
+                    InitCardsData(evt);
                     DistributeCards(network.numPlayers);
                 }
                 break;
-            case GameEvent.UPDATE_CARDS_DATA:
+            case GameEvent.ROUND_RESULT:
                 {
-                    _lastResponse = evt.response;
-                    InitCardsData(evt);
-                    DistributeCards(network.numPlayers);
+                    OnRoundResult(evt);
                 }
                 break;
             default:
@@ -306,5 +341,18 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.SetParent(player.reel);
         rectTransform.localScale = Vector3.one;
         rectTransform.position = player.reel.position;
+    }
+
+    private void StartGame()
+    {
+        _roundHandler.StartMatch();
+        GetLocalPlayer.spinBtn.enabled = true;
+    }
+
+    private void OnRoundResult(GameEvent evt)
+    {
+        RoundResultVO vo = JsonConvert.DeserializeObject<RoundResultVO>(evt.response.data);
+        Player player = GetPlayerById(vo.sender);
+        player.spinHandler.Spin(vo.spinTime);
     }
 }

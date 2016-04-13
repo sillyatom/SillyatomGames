@@ -208,6 +208,12 @@ public class Networking : SceneMonoBehaviour
                     EventManager.instance.Raise(gEvent);
                 }
                 break;
+            case NetworkConstants.API.ROUND_RESULT:
+                {
+                    GameEvent gEvent = new GameEvent(GameEvent.ROUND_RESULT, response);
+                    EventManager.instance.Raise(gEvent);
+                }
+                break;
         }
     }
 
@@ -241,10 +247,13 @@ public class Networking : SceneMonoBehaviour
         switch (eAPI)
         {
             case NetworkConstants.API.HOST_DATA:
-                EventManager.instance.Raise(new GameEvent(GameEvent.DISPATCH_CARDS_DATA));
+                EventManager.instance.Raise(new GameEvent(InGameEvent.DISPATCH_CARDS_DATA));
                 break;
             case NetworkConstants.API.CARDS_DATA:
-                //TODO start game
+                if (isHost)
+                {
+                    EventManager.instance.Raise(new GameEvent(InGameEvent.START_GAME));
+                }
                 break;
                 
         }
