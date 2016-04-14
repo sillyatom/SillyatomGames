@@ -96,6 +96,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable hArgs = (Hashtable)args;
         Player player = (Player)hArgs["Player"];
 
+        //clear all round data
         player.OnRoundEnd();
         _roundHandler.OnRoundEnd();
     }
@@ -114,21 +115,32 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void DispatchRoundResult()
     {
-//        RoundResultVO vo = new RoundResultVO();
-//        vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
-//        vo.sender = Networking.hostId;
-//        vo.api_id = ++APIHandler.GetInstance().runningId;
-//        vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
-//        vo.roundId = _roundHandler.GetRoundNumber;
-//
-//        string data = JsonConvert.SerializeObject(vo);
-//
-//        API api = new API();
-//        api.api = vo.api;
-//        api.data = data;
-//        api.id = vo.api_id;
-//        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
-//        APIHandler.GetInstance().SendDataToAll(api);
+        RoundResultVO vo = new RoundResultVO();
+        vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
+        vo.sender = Networking.hostId;
+        vo.api_id = ++APIHandler.GetInstance().runningId;
+        vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
+        vo.roundId = _roundHandler.GetRoundNumber;
+
+        string data = JsonConvert.SerializeObject(vo);
+
+        API api = new API();
+        api.api = vo.api;
+        api.data = data;
+        api.id = vo.api_id;
+
+        //if player is host send to all
+        if (Networking.isHost)
+        {
+            api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
+            APIHandler.GetInstance().SendDataToAll(api);
+        }
+        //send only to host
+        else
+        {
+            api.playerIds = Utility.DeepCloneList<string>(new List<string>(new string[]{ Networking.hostId }));
+            APIHandler.GetInstance().SendDataToPlayer(api);
+        }
     }
 
     private void DispatchHostSelected()
