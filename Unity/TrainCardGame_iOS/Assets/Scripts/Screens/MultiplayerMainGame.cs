@@ -104,7 +104,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         Hashtable hArgs = (Hashtable)args;
         Player player = (Player)hArgs["Player"];
-        player.OnSelectedCardDealt();
 
     }
 
@@ -126,7 +125,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
         vo.sender = Networking.hostId;
         vo.api_id = ++APIHandler.GetInstance().runningId;
-        vo.spinTime = GetLocalPlayer.spinHandler.LastSpinTime;
         vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
         vo.selectedSymbolIndex = GetLocalPlayer.SelectedCardIndex;
         vo.roundId = _roundHandler.GetRoundNumber;
@@ -288,15 +286,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 args.Add("player", player);
                 args.Add("card", card);
 
-                iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.reel.position.x, "y", player.reel.position.y, "delay", delay,
+                iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
                 delay += (GameConstants.DEAL_ANIM_TIME * numPlayers);
-                if (card != player.Back())
-                {
-                    RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
-                    iTween.MoveTo(card.gameObject, iTween.Hash("islocal", true, "time", GameConstants.DEAL_ANIM_TIME, "y", rectTransform.rect.y - (rectTransform.rect.height * 0.5f) - GameConstants.SYMBOL_SPACE
-                        , "delay", delay));
-                }
             }
 
             playerDelay += GameConstants.DEAL_ANIM_TIME;
@@ -322,10 +314,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             }
         }
 
-        foreach (var player in _players)
-        {
-            player.InitReel();
-        }
+        GetLocalPlayer.UpdateCardsPosition();
     }
 
     virtual protected void OnDistributeAnimationComplete(object args)
@@ -338,21 +327,17 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         //swap parent
         RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
-        rectTransform.SetParent(player.reel);
+        rectTransform.SetParent(player.cardsHolder);
         rectTransform.localScale = Vector3.one;
-        rectTransform.position = player.reel.position;
+        rectTransform.position = player.cardsHolder.position;
     }
 
     private void StartGame()
     {
         _roundHandler.StartMatch();
-        GetLocalPlayer.spinBtn.enabled = true;
     }
 
     private void OnRoundResult(GameEvent evt)
     {
-        RoundResultVO vo = JsonConvert.DeserializeObject<RoundResultVO>(evt.response.data);
-        Player player = GetPlayerById(vo.sender);
-        player.spinHandler.Spin(vo.spinTime);
     }
 }

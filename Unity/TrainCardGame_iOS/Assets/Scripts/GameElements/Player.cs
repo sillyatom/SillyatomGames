@@ -7,18 +7,18 @@ public class Player : SceneMonoBehaviour
 {
     [SerializeField]
     public int index;
-
     public string playerId;
-
     public Text playerName;
     public Image playerDP;
-
-    public RectTransform reel;
-
-    public Button spinBtn;
+    public RectTransform cardsHolder;
     public Button shoutBtn;
 
     private List<Card> _cards;
+    private float _delAngle;
+    private float _angle;
+    private Vector3 _rotateAround;
+    private bool _canDrag;
+    private Vector2 _lastMousePosition;
 
     public List<Card> Cards
     {
@@ -32,7 +32,7 @@ public class Player : SceneMonoBehaviour
     {
         get
         {
-            return _cards[spinHandler.SelectedIndex].ValueType;
+            return "";
         }
     }
 
@@ -40,7 +40,7 @@ public class Player : SceneMonoBehaviour
     {
         get
         {
-            return _cards[spinHandler.SelectedIndex];
+            return null;
         }
     }
 
@@ -48,7 +48,7 @@ public class Player : SceneMonoBehaviour
     {
         get
         {
-            return spinHandler.SelectedIndex;
+            return -1;
         }
     }
 
@@ -65,35 +65,18 @@ public class Player : SceneMonoBehaviour
         }
     }
 
-    public SpinHandler spinHandler{ get; set; }
-
-    private void OnSpinComplete(int index, string cardValueType)
-    {
-        InGameEvent evt = new InGameEvent(InGameEvent.ON_SPIN_COMPLETE, playerId);
-        EventManager.instance.Raise(evt);
-    }
-
     override public void Init()
     {
         BridgeDebugger.Log("[ Player - Init ]");
         base.Init();
 
         _cards = new List<Card>();
+        _canDrag = false;
 
-        spinHandler = gameObject.AddComponent<SpinHandler>();
-        spinHandler.Init();
-        spinHandler.OnSpinCompleteCallback = OnSpinComplete;
-
-        if (spinBtn != null)
-        {
-            spinBtn.onClick.AddListener(OnSpin);
-        }    
         if (shoutBtn != null)
         {
             shoutBtn.onClick.AddListener(OnShout);
         }
-
-        spinBtn.enabled = false;
     }
 
     public void AddCard(Card card)
@@ -117,37 +100,80 @@ public class Player : SceneMonoBehaviour
         return retCard;
     }
 
-    public Card Back()
-    {
-        return _cards[_cards.Count - 1];
-    }
-
-    public Card Front()
-    {
-        return _cards[0];
-    }
-
-    private void OnSpin()
-    {
-        float duration = Utility.GetRandomNumber(2.0f, 4.0f);
-        spinHandler.Spin(duration);
-        spinBtn.enabled = false;
-    }
-
-    public void InitReel()
-    {
-        spinHandler.InitReel(_cards);
-    }
-
-    public void OnSelectedCardDealt()
-    {
-        _cards.RemoveAt(spinHandler.SelectedIndex);
-        spinHandler.OnSelectedCardDealt();
-        spinBtn.enabled = true;
-    }
-
     private void OnShout()
     {
         
+    }
+
+    private void UpdateAngle(float startAngle)
+    {
+        _delAngle = startAngle / _cards.Count; 
+        _angle = startAngle / 2.0f - _delAngle;
+    }
+
+    public void UpdateCardsPosition()
+    {
+        float maxRadius = (600.0f / 13.0f) * 26;
+        float radius = (600.0f / 13.0f) * _cards.Count;
+
+        UpdateAngle((radius > maxRadius) ? 180.0f : 135.0f);
+        radius = (radius > maxRadius) ? maxRadius : radius;
+
+        _rotateAround = new Vector3(cardsHolder.transform.position.x, 
+            cardsHolder.transform.position.y - radius, cardsHolder.transform.position.z);
+
+        foreach (Card card in _cards)
+        {
+            card.transform.RotateAround(_rotateAround,
+                new Vector3(0.0f, 0.0f, 1.0f), _angle);
+            _angle -= _delAngle;
+        }
+
+        Vector2 size = CalculateCardsHolderBounds();
+        cardsHolder.sizeDelta = size;
+    }
+
+    private Vector2 CalculateCardsHolderBounds()
+    {
+        float width = _cards[_cards.Count - 1].transform.localPosition.x - _cards[0].transform.localPosition.x;
+        float height = _cards[0].GetComponent<RectTransform>().rect.height;
+        return new Vector2(width, height);
+    }
+
+    void FixedUpdate()
+    {   
+        #if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!_canDrag && RectTransformUtility.RectangleContainsScreenPoint(cardsHolder, Input.mousePosition
+                , Camera.main))
+            {
+                _canDrag = true;
+                _lastMousePosition = Input.mousePosition;
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            _canDrag = false;
+        }
+
+        if (_canDrag)
+        {
+            float distance = Vector2.Distance(_lastMousePosition, Input.mousePosition);
+            distance = (_lastMousePosition.x > Input.mousePosition.x) ? distance : distance * -1;
+            _lastMousePosition = Input.mousePosition;
+
+            if (distance != 0.0f)
+            {
+                cardsHolder.transform.RotateAround(_rotateAround, Vector3.forward, distance);
+            }
+        }
+        #elif UNITY_IPHONE
+        Touch touch = Input.GetTouch(0);
+        if (touch.phase == TouchPhase.Began)
+        {
+            
+        }
+        #endif
     }
 }
