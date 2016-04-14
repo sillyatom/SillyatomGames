@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RoundHandler : SceneMonoBehaviour
+public class RoundHandler : ExtMonoBehaviour
 {
     public static int currentRound = 0;
 
@@ -9,9 +9,13 @@ public class RoundHandler : SceneMonoBehaviour
     private bool _isRoundActive = false;
     private string _activePlayerId = "";
 
-    public string GetActivePlayerId{ get { return _activePlayerId; } }
+    public System.Action OnRoundCompleteCallback{ get; set; }
 
     public int GetRoundNumber{ get { return currentRound; } }
+
+    public string GetActivePlayerId{ get { return _activePlayerId; } }
+
+    public bool IsActivePlayerLocal{ get { return (_activePlayerId == Networking.localId); } }
 
     public override void Init()
     {
@@ -53,12 +57,18 @@ public class RoundHandler : SceneMonoBehaviour
     private void StopRound()
     {
         Debug.Log("--------------STOP ROUND!!!-------------");
+        OnRoundCompleteCallback();
     }
 
     private void StartTimer()
     {
         _elapsedTime = 0.0f;
         _isRoundActive = true;
+    }
+
+    public void OnRoundEnd()
+    {
+        _activePlayerId = "";
     }
 
     void Update()

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Dealer : SceneMonoBehaviour
+public class Dealer : ExtMonoBehaviour
 {
     private List<Card> _cards;
     private RectTransform rectTransform;

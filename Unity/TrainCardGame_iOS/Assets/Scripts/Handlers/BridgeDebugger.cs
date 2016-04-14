@@ -11,6 +11,8 @@ public class BridgeDebugger
     {
         #if DEBUG && !UNITY_EDITOR
         debugMessage(msg);
+        #elif UNITY_EDITOR
+        Debug.Log(msg);
         #endif
     }
 }

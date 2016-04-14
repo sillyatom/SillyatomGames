@@ -8,7 +8,6 @@ using Newtonsoft.Json.Linq;
 
 public class MultiplayerMainGame : SceneMonoBehaviour
 {
-
     public Dealer dealer;
     public Networking network;
 
@@ -36,8 +35,12 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         UpdatePlayers();
 
         //init Round Handler
-        _roundHandler = gameObject.AddComponent<RoundHandler>();
+        _roundHandler = GetComponent<RoundHandler>();
         _roundHandler.Init();
+        _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
+
+        //add card selection handler to local player
+        GetLocalPlayer.GetCardSelectionHandler();
 
         //if host
         if (Networking.isHost)
@@ -45,18 +48,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             dealer.ShuffleCards();
             DispatchHostSelected();
         }
-
-        //add event listeners
-        AddListeners();
     }
 
-    protected void AddListeners()
+    override protected void OnInGameEvent(InGameEvent evt)
     {
-        EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
-    }
-
-    protected void OnInGameEvent(InGameEvent evt)
-    {
+        base.OnInGameEvent(evt);
         switch (evt.type)
         {
             case InGameEvent.DISPATCH_CARDS_DATA:
@@ -76,11 +72,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                     StartGame();
                 }
                 break;
-            default:
-                {
-                    Debug.Log(" [ OnInGameEvent ] - Default Case ");
-                }
-                break;
         }
     }
 
@@ -88,7 +79,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         Card card = player.SelectedCard;
         card.transform.SetParent(dealer.transform);
-
+        card.transform.localEulerAngles = Vector3.zero;
         Hashtable args = new Hashtable();
         args.Add("Player", player);
 
@@ -100,11 +91,13 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     private void OnDealAnimationComplete(object args)
     {
         //send the data before dealing with cleaning up
-        DispatchCardDealt();
+        DispatchRoundResult();
 
         Hashtable hArgs = (Hashtable)args;
         Player player = (Player)hArgs["Player"];
 
+        player.OnRoundEnd();
+        _roundHandler.OnRoundEnd();
     }
 
     private Player GetPlayerById(string playerId)
@@ -119,24 +112,23 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         return null;
     }
 
-    private void DispatchCardDealt()
+    private void DispatchRoundResult()
     {
-        RoundResultVO vo = new RoundResultVO();
-        vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
-        vo.sender = Networking.hostId;
-        vo.api_id = ++APIHandler.GetInstance().runningId;
-        vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
-        vo.selectedSymbolIndex = GetLocalPlayer.SelectedCardIndex;
-        vo.roundId = _roundHandler.GetRoundNumber;
-
-        string data = JsonConvert.SerializeObject(vo);
-
-        API api = new API();
-        api.api = vo.api;
-        api.data = data;
-        api.id = vo.api_id;
-        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
-        APIHandler.GetInstance().SendDataToAll(api);
+//        RoundResultVO vo = new RoundResultVO();
+//        vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
+//        vo.sender = Networking.hostId;
+//        vo.api_id = ++APIHandler.GetInstance().runningId;
+//        vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
+//        vo.roundId = _roundHandler.GetRoundNumber;
+//
+//        string data = JsonConvert.SerializeObject(vo);
+//
+//        API api = new API();
+//        api.api = vo.api;
+//        api.data = data;
+//        api.id = vo.api_id;
+//        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
+//        APIHandler.GetInstance().SendDataToAll(api);
     }
 
     private void DispatchHostSelected()
@@ -301,9 +293,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     virtual protected void OnDistributeAllCards()
     {
+        GetLocalPlayer.UpdateCardsPosition();
+
         if (IsSinglePlayerGame())
         {
-            //do nothing
+            StartGame();
         }
         else
         {
@@ -313,8 +307,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 EventManager.instance.Raise(evt);
             }
         }
-
-        GetLocalPlayer.UpdateCardsPosition();
     }
 
     virtual protected void OnDistributeAnimationComplete(object args)
@@ -334,7 +326,24 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void StartGame()
     {
+        EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, GetLocalPlayer.playerId));
         _roundHandler.StartMatch();
+    }
+
+    protected void OnRoundEnd()
+    {
+        //if current round is played by local player
+        if (_roundHandler.IsActivePlayerLocal)
+        {
+            Card selectedCard = GetLocalPlayer.SelectedCard;
+            //if player has not selected a card
+            if (selectedCard == null)
+            {
+                //do auto deal
+                GetLocalPlayer.AutoDeal();
+            }
+            DealCard(GetLocalPlayer);
+        }
     }
 
     private void OnRoundResult(GameEvent evt)

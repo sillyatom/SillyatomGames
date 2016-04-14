@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Card : MonoBehaviour
+public class Card : ButtonComponent
 {
     public string Value{ get; set; }
 
@@ -37,5 +37,26 @@ public class Card : MonoBehaviour
     {
         Front.gameObject.SetActive(false);
         Back.gameObject.SetActive(true);
+    }
+
+    public override void OnPointerClick(UnityEngine.EventSystems.PointerEventData eventData)
+    {
+        //only allow if active player is local
+        if (SingletonManager.reference.roundHandler.IsActivePlayerLocal)
+        {
+            //allow only if there is no card selected yet
+            if (SingletonManager.reference.cardSelectionHandler.SelectedCard == null)
+            {
+                EventManager.instance.Raise(new InGameEvent(InGameEvent.ON_CARD_SELECTED, this));
+            }
+            else
+            {
+                BridgeDebugger.Log(" [ Card already selected ] ");
+            }
+        }
+        else
+        {
+            BridgeDebugger.Log(" [ Can't select card, its not local player round ] ");    
+        }
     }
 }

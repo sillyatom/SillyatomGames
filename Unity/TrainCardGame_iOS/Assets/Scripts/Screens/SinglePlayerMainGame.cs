@@ -6,21 +6,25 @@ public class SinglePlayerMainGame : MultiplayerMainGame
 {
     override public void Init()
     {
-        base.Init();
         BridgeDebugger.Log("[ SinglePlayerMainGame ] - Init()");
+        base.Init();
     }
 
     protected override void InitGame()
     {
-        _roundHandler = gameObject.AddComponent<RoundHandler>();
+        _roundHandler = gameObject.GetComponent<RoundHandler>();
         _roundHandler.Init();
+        _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
+
+        UpdatePlayers();
+
+        //add card selection handler to local player
+        GetLocalPlayer.GetCardSelectionHandler();
 
         dealer.Init();
-        UpdatePlayers();
         dealer.ShuffleCards();
         UpdatePlayerCards(GameConstants.MAX_PLAYERS);
         DistributeCards(GameConstants.MAX_PLAYERS);
-        AddListeners();
     }
 
     override protected void UpdatePlayers()
@@ -56,10 +60,5 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                 }
             }
         }
-    }
-
-    protected override void OnDistributeAnimationComplete(object args)
-    {
-        base.OnDistributeAnimationComplete(args);
     }
 }

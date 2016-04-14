@@ -3,22 +3,25 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Player : SceneMonoBehaviour
+public class Player : ExtMonoBehaviour
 {
     [SerializeField]
     public int index;
     public string playerId;
     public Text playerName;
     public Image playerDP;
-    public RectTransform cardsHolder;
     public Button shoutBtn;
+    public RectTransform cardsHolder;
 
-    private List<Card> _cards;
+    private CardSelectionHandler _cardSelectionHandler = null;
     private float _delAngle;
     private float _angle;
-    private Vector3 _rotateAround;
     private bool _canDrag;
+    private List<Card> _cards;
+    private Vector3 _rotateAround;
     private Vector2 _lastMousePosition;
+
+    public CardSelectionHandler CardSelectionHandler{ get { return _cardSelectionHandler; } }
 
     public List<Card> Cards
     {
@@ -32,7 +35,7 @@ public class Player : SceneMonoBehaviour
     {
         get
         {
-            return "";
+            return _cardSelectionHandler.SelectedCard.ValueType;
         }
     }
 
@@ -40,15 +43,7 @@ public class Player : SceneMonoBehaviour
     {
         get
         {
-            return null;
-        }
-    }
-
-    public int SelectedCardIndex
-    {
-        get
-        {
-            return -1;
+            return _cardSelectionHandler.SelectedCard;
         }
     }
 
@@ -70,13 +65,19 @@ public class Player : SceneMonoBehaviour
         BridgeDebugger.Log("[ Player - Init ]");
         base.Init();
 
-        _cards = new List<Card>();
         _canDrag = false;
+        _cards = new List<Card>();
 
         if (shoutBtn != null)
         {
             shoutBtn.onClick.AddListener(OnShout);
         }
+    }
+
+    public void GetCardSelectionHandler()
+    {
+        _cardSelectionHandler = gameObject.GetComponent<CardSelectionHandler>();
+        _cardSelectionHandler.Init();
     }
 
     public void AddCard(Card card)
@@ -94,10 +95,23 @@ public class Player : SceneMonoBehaviour
             {
                 retCard = card;
                 _cards.Remove(card);
+                break;
             }
         }
 
         return retCard;
+    }
+
+    public void AutoDeal()
+    {
+        Card card = _cards[0];
+        _cardSelectionHandler.SetSelectedCard(card);
+    }
+
+    public void OnRoundEnd()
+    {
+        RemoveCardWithValue(SelectedCardValueType);
+        _cardSelectionHandler.SetSelectedCard(null);
     }
 
     private void OnShout()
@@ -121,14 +135,12 @@ public class Player : SceneMonoBehaviour
 
         _rotateAround = new Vector3(cardsHolder.transform.position.x, 
             cardsHolder.transform.position.y - radius, cardsHolder.transform.position.z);
-
         foreach (Card card in _cards)
         {
             card.transform.RotateAround(_rotateAround,
                 new Vector3(0.0f, 0.0f, 1.0f), _angle);
             _angle -= _delAngle;
         }
-
         Vector2 size = CalculateCardsHolderBounds();
         cardsHolder.sizeDelta = size;
     }
@@ -137,7 +149,7 @@ public class Player : SceneMonoBehaviour
     {
         float width = _cards[_cards.Count - 1].transform.localPosition.x - _cards[0].transform.localPosition.x;
         float height = _cards[0].GetComponent<RectTransform>().rect.height;
-        return new Vector2(width, height);
+        return new Vector2(width * 1.25f, height);
     }
 
     void FixedUpdate()
@@ -165,7 +177,21 @@ public class Player : SceneMonoBehaviour
 
             if (distance != 0.0f)
             {
-                cardsHolder.transform.RotateAround(_rotateAround, Vector3.forward, distance);
+                int len = _cards.Count;
+                for (int index = 0; index < len; index++)
+                {
+                    if (
+                        _cards[0].transform.localEulerAngles.z + distance < 40.0f
+                        || _cards[len - 1].transform.localEulerAngles.z + distance > 320.0f)
+                    {
+                        distance = 0.0f;
+                    }
+                    Card card = _cards[index];
+                    card.transform.RotateAround(_rotateAround,
+                        new Vector3(0.0f, 0.0f, 1.0f), 
+                        distance
+                    );
+                }
             }
         }
         #elif UNITY_IPHONE

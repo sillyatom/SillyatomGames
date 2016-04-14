@@ -13,10 +13,11 @@ public class SceneMonoBehaviour : MonoBehaviour
             _isInitialized = true;
             sceneTransitionManager = GameObject.FindGameObjectWithTag("SceneTransitionHandler").GetComponent<SceneTransitionManager>();
             EventManager.instance.AddListener<GameEvent>(OnGameEvent);
+            EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
         }
         else
         {
-            throw new UnityException(" View - Initializing Twice");
+            throw new UnityException(" SceneMono - Initializing Twice");
         }
     }
 
@@ -26,6 +27,11 @@ public class SceneMonoBehaviour : MonoBehaviour
     }
 
     virtual protected void OnGameEvent(GameEvent gEvent)
+    {
+        
+    }
+
+    virtual protected void OnInGameEvent(InGameEvent evt)
     {
         
     }

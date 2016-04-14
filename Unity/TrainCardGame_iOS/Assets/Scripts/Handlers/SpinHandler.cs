@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SpinHandler : SceneMonoBehaviour
+public class SpinHandler : ExtMonoBehaviour
 {
     public List<Card> Reel
     {

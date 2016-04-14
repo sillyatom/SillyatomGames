@@ -1,13 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameElements/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Utility/SingletonManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="317" Column="37" />
-      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="21" Column="46" />
-      <File FileName="Assets/Scripts/Screens/MatchSelectionScreen.cs" Line="84" Column="1" />
-      <File FileName="Assets/Scripts/GameElements/Player.cs" Line="141" Column="26" />
-      <File FileName="Assets/Scripts/Constants/GameConstants.cs" Line="7" Column="38" />
-      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="207" Column="81" NotebookId="1" />
+      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="186" Column="28" />
+      <File FileName="Assets/Scripts/Handlers/RoundHandler.cs" Line="4" Column="22" />
+      <File FileName="Assets/Scripts/Events/InGameEvent.cs" Line="10" Column="25" />
+      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="22" Column="37" />
+      <File FileName="Assets/Scripts/GameElements/Player.cs" Line="80" Column="33" />
+      <File FileName="Assets/Scripts/Handlers/CardSelectionHandler.cs" Line="28" Column="49" />
+      <File FileName="Assets/Scripts/GameElements/Card.cs" Line="44" Column="29" />
+      <File FileName="Assets/Scripts/GameElements/Dealer.cs" Line="59" Column="5" />
+      <File FileName="Assets/Scripts/Utility/GameObjectRef.cs" Line="6" Column="39" />
+      <File FileName="Assets/Scripts/Utility/SingletonManager.cs" Line="4" Column="30" />
+      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="26" Column="38" NotebookId="1" />
       <File FileName="Assets/Scripts/Networking/NetworkPlayer.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/Constants/NetworkConstants.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/Networking/NetworkResponse.cs" Line="1" Column="1" NotebookId="1" />

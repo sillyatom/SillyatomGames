@@ -24,8 +24,8 @@ public class Networking : SceneMonoBehaviour
     private float _timeElapsed = 0.0f;
 
     public static bool isHost = false;
-    public static string hostId = "";
-    public static string localId = "";
+    public static string hostId = "0";
+    public static string localId = "0";
 
     private bool _pauseUpdate = false;
 
@@ -255,7 +255,6 @@ public class Networking : SceneMonoBehaviour
                     EventManager.instance.Raise(new GameEvent(InGameEvent.START_GAME));
                 }
                 break;
-                
         }
     }
 
