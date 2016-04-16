@@ -83,6 +83,7 @@ public class Dealer : ExtMonoBehaviour
     private void MoveCardToPosition(Card card, Vector3 pos, float time, float delay = 0.0f)
     {
         iTween.MoveTo(card.gameObject, iTween.Hash("x", pos.x, "y", pos.y, "time", time, "delay", delay));
+        iTween.ScaleTo(card.gameObject, iTween.Hash("x", 1.0f, "y", 1.0f, "time", time, "delay", delay));
     }
 
     public void AddCard(Card card)
