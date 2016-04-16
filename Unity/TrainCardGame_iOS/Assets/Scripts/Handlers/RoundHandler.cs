@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class RoundHandler : ExtMonoBehaviour
@@ -8,6 +9,9 @@ public class RoundHandler : ExtMonoBehaviour
     private float _elapsedTime;
     private bool _isRoundActive = false;
     private string _activePlayerId = "";
+
+    public Image progressBar;
+    public Text currentPlayerName;
 
     public System.Action OnRoundCompleteCallback{ get; set; }
 
@@ -44,7 +48,12 @@ public class RoundHandler : ExtMonoBehaviour
     public void StartRound()
     {
         currentRound++;
-        StartTimer();
+
+        //update player details
+        currentPlayerName.text = SingletonManager.reference.network.GetPlayerById(_activePlayerId).Name;
+        progressBar.fillAmount = 0.0f;
+
+        StartTimer(); 
         Debug.Log("--------------START ROUND!!!-------------");
     }
 
@@ -76,8 +85,10 @@ public class RoundHandler : ExtMonoBehaviour
         if (_isRoundActive)
         {
             _elapsedTime += Time.deltaTime;
+            progressBar.fillAmount = 1.0f / GameConstants.ROUND_TIME * _elapsedTime;
             if (_elapsedTime >= GameConstants.ROUND_TIME)
             {
+                progressBar.fillAmount = 1.0f;
                 StopTimer();
             }
         }

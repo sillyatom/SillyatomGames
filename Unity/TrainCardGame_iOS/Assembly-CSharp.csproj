@@ -403,6 +403,7 @@
      <Compile Include="Assets\Scripts\Networking\DispatchVO\HostSelectedVO.cs" />
      <Compile Include="Assets\Scripts\Networking\DispatchVO\InitCardsDataVO.cs" />
      <Compile Include="Assets\Scripts\Networking\DispatchVO\RoundResultVO.cs" />
+     <Compile Include="Assets\Scripts\Networking\DispatchVO\RoundVO.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkResponse.cs" />
      <Compile Include="Assets\Scripts\Networking\Networking.cs" />

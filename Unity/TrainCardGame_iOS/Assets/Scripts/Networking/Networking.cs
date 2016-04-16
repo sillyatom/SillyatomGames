@@ -69,6 +69,18 @@ public class Networking : ExtMonoBehaviour
         }
     }
 
+    public NetworkPlayer GetPlayerById(string id)
+    {
+        foreach (var player in Players)
+        {
+            if (player.PlayerId == id)
+            {
+                return player;
+            }
+        }
+        return null;
+    }
+
     public override void Init()
     {
         base.Init();
@@ -248,12 +260,24 @@ public class Networking : ExtMonoBehaviour
         switch (eAPI)
         {
             case NetworkConstants.API.HOST_DATA:
-                EventManager.instance.Raise(new GameEvent(InGameEvent.DISPATCH_CARDS_DATA));
+                EventManager.instance.Raise(new InGameEvent(InGameEvent.DISPATCH_CARDS_DATA));
                 break;
             case NetworkConstants.API.CARDS_DATA:
                 if (isHost)
                 {
-                    EventManager.instance.Raise(new GameEvent(InGameEvent.START_GAME));
+                    EventManager.instance.Raise(new InGameEvent(InGameEvent.START_GAME));
+                }
+                break;
+            case NetworkConstants.API.ROUND_RESULT:
+                if (isHost)
+                {
+                    EventManager.instance.Raise(new InGameEvent(InGameEvent.DISPATCH_NEXT_ROUND));
+                }
+                break;
+            case NetworkConstants.API.NEXT_ROUND:
+                if (isHost)
+                {
+                    EventManager.instance.Raise(new InGameEvent(InGameEvent.START_ROUND));
                 }
                 break;
         }

@@ -10,7 +10,8 @@ public class NetworkConstants
         MATCH_STARTED = 2,
         HOST_DATA = 3,
         CARDS_DATA = 4,
-        ROUND_RESULT = 5
+        ROUND_RESULT = 5,
+        NEXT_ROUND = 6
     }
 
     public static string KEY_API = "api";

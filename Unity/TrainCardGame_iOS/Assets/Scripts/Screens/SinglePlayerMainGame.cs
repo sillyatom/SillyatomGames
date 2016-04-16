@@ -67,4 +67,15 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         GetLocalPlayer.UpdateCardsPosition();
         StartGame();
     }
+
+    override protected void StartRound()
+    {
+        EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, network.PlayersIds[_currentPlayerIndex]));
+        _roundHandler.StartRound();
+        //if non player round
+        if (_currentPlayerIndex != 0)
+        {
+            
+        }
+    }
 }

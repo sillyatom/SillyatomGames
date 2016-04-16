@@ -12,12 +12,13 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     public Networking network;
     public APIHandler apiHandler;
 
-    private NetworkResponse _lastResponse;
+    public Player GetLocalPlayer{ get { return _players[0]; } }
 
     protected List<Player> _players;
+    protected int _currentPlayerIndex;
     protected RoundHandler _roundHandler;
 
-    public Player GetLocalPlayer{ get { return _players[0]; } }
+    private NetworkResponse _lastResponse;
 
     override public void Init()
     {
@@ -72,6 +73,16 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             case InGameEvent.START_GAME:
                 {
                     StartGame();
+                }
+                break;
+            case InGameEvent.DISPATCH_NEXT_ROUND:
+                {
+                    DispatchNextRound();
+                }
+                break;
+            case InGameEvent.START_ROUND:
+                {
+                    StartRound();
                 }
                 break;
         }
@@ -325,8 +336,46 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.position = player.cardsHolder.position;
     }
 
+    protected void DispatchNextRound()
+    {
+        _currentPlayerIndex++;
+        _currentPlayerIndex = _currentPlayerIndex == network.numPlayers ? 0 : _currentPlayerIndex;
+
+        if (_currentPlayerIndex != 0)
+        {
+            //dispatch
+            RoundVO vo = new RoundVO();
+            vo.api = (int)(NetworkConstants.API.NEXT_ROUND);
+            vo.sender = Networking.hostId;
+            vo.api_id = ++APIHandler.GetInstance().runningId;
+            //add +1 round number will be incremented only on round start
+            vo.roundId = _roundHandler.GetRoundNumber + 1;
+
+            string data = JsonConvert.SerializeObject(vo);
+
+            API api = new API();
+            api.api = vo.api;
+            api.data = data;
+            api.id = vo.api_id;
+
+            api.playerIds = new List<string>(new string[]{ network.PlayersIds[_currentPlayerIndex] });
+            APIHandler.GetInstance().SendDataToPlayer(api);
+        }
+        else
+        {
+            StartRound();
+        }
+    }
+
+    virtual protected void StartRound()
+    {
+        EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, network.PlayersIds[_currentPlayerIndex]));
+        _roundHandler.StartRound();
+    }
+
     protected void StartGame()
     {
+        _currentPlayerIndex = 0;
         EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, GetLocalPlayer.playerId));
         _roundHandler.StartMatch();
     }
