@@ -29,6 +29,14 @@ public class Networking : ExtMonoBehaviour
 
     private bool _pauseUpdate = false;
 
+    public string HostId
+    {
+        get
+        {
+            return hostId;
+        }
+    }
+
     public int numPlayers
     {
         get

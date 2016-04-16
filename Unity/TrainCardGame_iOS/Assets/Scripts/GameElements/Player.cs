@@ -72,10 +72,7 @@ public class Player : ExtMonoBehaviour
         {
             shoutBtn.onClick.AddListener(OnShout);
         }
-    }
 
-    public void GetCardSelectionHandler()
-    {
         _cardSelectionHandler = gameObject.GetComponent<CardSelectionHandler>();
         _cardSelectionHandler.Init();
     }

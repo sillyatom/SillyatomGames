@@ -6,7 +6,7 @@ public class Dealer : ExtMonoBehaviour
 {
     private List<Card> _cards;
     private RectTransform rectTransform;
-    private const float SPACE = 50;
+    private const float SPACE = 100;
     private int _minNumOfCardsReqToMatch = 14;
 
     override public void Init()

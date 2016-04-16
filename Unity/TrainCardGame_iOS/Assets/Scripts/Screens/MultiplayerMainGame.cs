@@ -42,9 +42,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         _roundHandler.Init();
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
-        //add card selection handler to local player
-        GetLocalPlayer.GetCardSelectionHandler();
-
         //if host
         if (Networking.isHost)
         {
@@ -114,7 +111,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         _roundHandler.OnRoundEnd();
     }
 
-    private Player GetPlayerById(string playerId)
+    protected Player GetPlayerById(string playerId)
     {
         foreach (var player in _players)
         {
@@ -132,7 +129,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
         vo.sender = Networking.hostId;
         vo.api_id = ++APIHandler.GetInstance().runningId;
-        vo.cardValueType = GetLocalPlayer.SelectedCard.ValueType;
+        vo.cardValueType = GetPlayerById(_roundHandler.GetActivePlayerId).SelectedCard.ValueType;
         vo.roundId = _roundHandler.GetRoundNumber;
 
         string data = JsonConvert.SerializeObject(vo);
@@ -380,20 +377,18 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         _roundHandler.StartMatch();
     }
 
-    protected void OnRoundEnd()
+    virtual protected void OnRoundEnd()
     {
-        //if current round is played by local player
-        if (_roundHandler.IsActivePlayerLocal)
+        Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
+
+        Card selectedCard = player.SelectedCard;
+        //if player has not selected a card
+        if (selectedCard == null)
         {
-            Card selectedCard = GetLocalPlayer.SelectedCard;
-            //if player has not selected a card
-            if (selectedCard == null)
-            {
-                //do auto deal
-                GetLocalPlayer.AutoDeal();
-            }
-            DealCard(GetLocalPlayer);
+            //do auto deal
+            player.AutoDeal();
         }
+        DealCard(player);
     }
 
     private void OnRoundResult(GameEvent evt)

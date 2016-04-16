@@ -18,9 +18,6 @@ public class SinglePlayerMainGame : MultiplayerMainGame
 
         UpdatePlayers();
 
-        //add card selection handler to local player
-        GetLocalPlayer.GetCardSelectionHandler();
-
         dealer.Init();
         dealer.ShuffleCards();
         UpdatePlayerCards(GameConstants.MAX_PLAYERS);
@@ -70,12 +67,23 @@ public class SinglePlayerMainGame : MultiplayerMainGame
 
     override protected void StartRound()
     {
-        EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, network.PlayersIds[_currentPlayerIndex]));
-        _roundHandler.StartRound();
+        base.StartRound();
+
         //if non player round
         if (_currentPlayerIndex != 0)
         {
-            
+            StartCoroutine(AutoPlay());
         }
+    }
+
+    override protected void OnRoundEnd()
+    {
+        base.OnRoundEnd();
+    }
+
+    IEnumerator AutoPlay()
+    {
+        yield return new WaitForSeconds(Utility.GetRandomNumber(1.5f, 3.0f));
+        _roundHandler.StopTimer();
     }
 }
