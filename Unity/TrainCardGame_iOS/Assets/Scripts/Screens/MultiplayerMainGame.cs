@@ -10,6 +10,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 {
     public Dealer dealer;
     public Networking network;
+    public APIHandler apiHandler;
 
     private NetworkResponse _lastResponse;
 
@@ -22,11 +23,12 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         BridgeDebugger.Log("[ MultiplayerMainGame ] - Init()");
         base.Init();
+        network.Init();
 
         InitGame();
     }
 
-    virtual protected void InitGame()
+    virtual public void InitGame()
     {
         //Init Dealer
         dealer.Init();
@@ -195,11 +197,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         APIHandler.GetInstance().SendDataToAll(api);
     }
 
-    protected bool IsSinglePlayerGame()
-    {
-        return (network == null);
-    }
-
     virtual protected void UpdatePlayers()
     {
         _players = new List<Player>();
@@ -306,18 +303,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     virtual protected void OnDistributeAllCards()
     {
         GetLocalPlayer.UpdateCardsPosition();
-
-        if (IsSinglePlayerGame())
+        if (!Networking.isHost)
         {
-            StartGame();
-        }
-        else
-        {
-            if (!Networking.isHost)
-            {
-                GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
-                EventManager.instance.Raise(evt);
-            }
+            GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
+            EventManager.instance.Raise(evt);
         }
     }
 
@@ -336,7 +325,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.position = player.cardsHolder.position;
     }
 
-    private void StartGame()
+    protected void StartGame()
     {
         EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, GetLocalPlayer.playerId));
         _roundHandler.StartMatch();

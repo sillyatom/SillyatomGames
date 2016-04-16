@@ -10,7 +10,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         base.Init();
     }
 
-    protected override void InitGame()
+    public override void InitGame()
     {
         _roundHandler = gameObject.GetComponent<RoundHandler>();
         _roundHandler.Init();
@@ -60,5 +60,11 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                 }
             }
         }
+    }
+
+    override protected void OnDistributeAllCards()
+    {
+        GetLocalPlayer.UpdateCardsPosition();
+        StartGame();
     }
 }

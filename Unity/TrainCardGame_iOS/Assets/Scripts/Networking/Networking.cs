@@ -6,7 +6,7 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-public class Networking : SceneMonoBehaviour
+public class Networking : ExtMonoBehaviour
 {
     [DllImport("__Internal")]
     private static extern void sendDataToAll(string data);
@@ -16,10 +16,10 @@ public class Networking : SceneMonoBehaviour
 
     private List<NetworkResponse> _results = new List<NetworkResponse>();
 
-    private List<NetworkPlayer> _players = new List<NetworkPlayer>();
-    private List<NetworkPlayer> _playersExcludingThis = new List<NetworkPlayer>();
-    private List<string> _playersIdsExcludingThis = new List<string>();
-    private List<string> _playersIds = new List<string>();
+    protected List<NetworkPlayer> _players = new List<NetworkPlayer>();
+    protected List<NetworkPlayer> _playersExcludingThis = new List<NetworkPlayer>();
+    protected List<string> _playersIdsExcludingThis = new List<string>();
+    protected List<string> _playersIds = new List<string>();
 
     private float _timeElapsed = 0.0f;
 
@@ -69,8 +69,9 @@ public class Networking : SceneMonoBehaviour
         }
     }
 
-    void Awake()
+    public override void Init()
     {
+        base.Init();
         APIHandler.GetInstance().OnAPISuccess = OnAPISuccess;    
     }
 

@@ -4,10 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-public class APIHandler
+public class APIHandler : MonoBehaviour
 {
-    private static APIHandler instance = null;
-    private List<API> _apis = new List<API>();
+    protected List<API> _apis = new List<API>();
 
     [DllImport("__Internal")]
     private static extern void sendDataToAll(string data);
@@ -32,20 +31,16 @@ public class APIHandler
 
     public static APIHandler GetInstance()
     {
-        if (instance == null)
-        {
-            instance = new APIHandler();
-        }
-        return instance;
+        return SingletonManager.reference.apiHandler;
     }
 
-    public void SendDataToAll(API api)
+    virtual public void SendDataToAll(API api)
     {
         sendDataToAll(api.data);
         _apis.Add(api);
     }
 
-    public void SendDataToPlayer(API api)
+    virtual public void SendDataToPlayer(API api)
     {
         sendDataToPlayer(api.playerIds[0], api.data);
         _apis.Add(api);
