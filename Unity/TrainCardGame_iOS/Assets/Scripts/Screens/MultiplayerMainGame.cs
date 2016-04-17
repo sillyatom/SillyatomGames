@@ -98,13 +98,68 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDealAnimationComplete", args, dealer.GetDeckSize());
     }
 
-    private void OnDealAnimationComplete(object args)
+    private void OnDealAnimationComplete(object pArgs)
     {
-        //send the data before dealing with cleaning up
-        DispatchRoundResult();
+        Hashtable hArgs = (Hashtable)pArgs;
+        Player player = (Player)hArgs["Player"];
 
+        ResultVO vo = null;
+
+        //CheckResult
+        if (dealer.HasMatch())
+        {
+            vo = dealer.GetResult();
+
+            //animation
+            float delay = 0.0f;
+            foreach (var card in vo.cards)
+            {
+                Hashtable cArgs = new Hashtable();
+                cArgs.Add("Player", player);
+                cArgs.Add("Card", card);
+
+                iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay
+                    , "oncomplete", "OnDistributeWinningCard", "oncompleteparams", cArgs, "oncompletetarget", this.gameObject));
+                delay += GameConstants.DEAL_ANIM_TIME * 0.5f;
+            }
+
+            Hashtable args = new Hashtable();
+            args.Add("Player", player);
+            args.Add("VO", vo);
+            Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDistributeAllWinningCards", args, 0.5f, delay);
+        }
+        else
+        {
+            Hashtable args = new Hashtable();
+            args.Add("Player", player);
+            args.Add("VO", vo);
+            OnDistributeAllWinningCards(args);            
+        }
+    }
+
+    private void OnDistributeWinningCard(object args)
+    {
         Hashtable hArgs = (Hashtable)args;
         Player player = (Player)hArgs["Player"];
+        Card card = (Card)hArgs["Card"];
+
+        card.transform.SetParent(player.cardsHolder.transform);
+        player.AddCard(card);
+
+        if (player.IsLocalPlayer)
+        {
+            player.UpdateCardsPosition();
+        }
+    }
+
+    protected void OnDistributeAllWinningCards(object args)
+    {
+        Hashtable hArgs = (Hashtable)args;
+        Player player = (Player)hArgs["Player"];
+        ResultVO vo = (ResultVO)hArgs["VO"];
+
+        //send the data before dealing with cleaning up
+        DispatchRoundResult(vo);
 
         //clear all round data
         player.OnRoundEnd();
@@ -123,7 +178,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         return null;
     }
 
-    private void DispatchRoundResult()
+    private void DispatchRoundResult(ResultVO result)
     {
         RoundResultVO vo = new RoundResultVO();
         vo.api = (int)(NetworkConstants.API.ROUND_RESULT);

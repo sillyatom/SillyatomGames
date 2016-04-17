@@ -60,6 +60,14 @@ public class Player : ExtMonoBehaviour
         }
     }
 
+    public bool IsLocalPlayer
+    {
+        get
+        {
+            return (playerId == SingletonManager.reference.network.PlayersIds[0]);
+        }
+    }
+
     override public void Init()
     {
         BridgeDebugger.Log("[ Player - Init ]");

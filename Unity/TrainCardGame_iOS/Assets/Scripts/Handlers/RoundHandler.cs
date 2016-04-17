@@ -19,7 +19,7 @@ public class RoundHandler : ExtMonoBehaviour
 
     public string GetActivePlayerId{ get { return _activePlayerId; } }
 
-    public bool IsActivePlayerLocal{ get { return (_activePlayerId == Networking.localId); } }
+    public bool IsActivePlayerLocal{ get { return (_activePlayerId == SingletonManager.reference.network.PlayersIds[0]); } }
 
     public override void Init()
     {

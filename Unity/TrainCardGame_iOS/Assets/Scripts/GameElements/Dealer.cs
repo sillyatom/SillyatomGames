@@ -9,6 +9,8 @@ public class Dealer : ExtMonoBehaviour
     private const float SPACE = 100;
     private int _minNumOfCardsReqToMatch = 14;
 
+    public List<Card> Cards{ get; set; }
+
     override public void Init()
     {
         base.Init();
@@ -109,4 +111,72 @@ public class Dealer : ExtMonoBehaviour
             }
         }
     }
+
+    public bool HasMatch()
+    {
+        string selectedCard = _cards[GetDeckSize() - 1].Value;
+        if (GetDeckSize() > 1)
+        {
+            if (_cards[GetDeckSize() - 1].Value != selectedCard)
+            {
+                throw new UnityException("Oops !!! some bad logic");
+            }
+
+            int length = GetDeckSize();
+            for (int index = length - 2; index >= 0; index--)
+            {
+                if (_cards[index].Value == selectedCard)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public ResultVO GetResult()
+    {
+        string selectedCard = _cards[GetDeckSize() - 1].Value;
+        //Check result only if the deck has more than one card
+        ResultVO vo = new ResultVO();
+        if (GetDeckSize() > 1)
+        {
+            if (_cards[GetDeckSize() - 1].Value != selectedCard)
+            {
+                throw new UnityException("Oops !!! some bad logic");
+            }
+
+            int length = GetDeckSize();
+            for (int index = length - 2; index >= 0; index--)
+            {
+                if (_cards[index].Value == selectedCard)
+                {
+                    vo.count = length - index - 1;
+                    vo.startIndex = index;
+
+                    List<Card> matchedCards = new List<Card>();
+                    for (int i = length - 1; i >= index; i--)
+                    {
+                        matchedCards.Add(_cards[i]);
+                        _cards.RemoveAt(i);
+                    }
+
+                    vo.cards = matchedCards;
+                    break;
+                }
+            }
+        }
+        return vo;
+    }
+}
+
+public class ResultVO
+{
+    public int count{ get; set; }
+
+    public int startIndex{ get; set; }
+
+    public bool hasMatch{ get { return count > 0; } }
+
+    public List<Card> cards{ get; set; }
 }
