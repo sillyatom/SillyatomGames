@@ -37,7 +37,6 @@ public class MatchSelectionScreen : SceneMonoBehaviour
         if (btn == autoMatchBtn)
         {
             MultiplayerMainGame game = gameLayout.gameObject.AddComponent<MultiplayerMainGame>();
-            gameLayout.gameObject.GetComponent<MainGame>().isSinglePlayerGame = false;
 
             //reference dealer
             {
@@ -49,11 +48,7 @@ public class MatchSelectionScreen : SceneMonoBehaviour
                 game.dealer = gos[0].GetComponent<Dealer>();
             }
 
-            game.network = game.gameObject.AddComponent<Networking>();
-            game.apiHandler = game.gameObject.AddComponent<APIHandler>();
-
-            SingletonManager.reference.apiHandler = game.apiHandler;
-            SingletonManager.reference.network = game.network;
+            game.network = SingletonManager.reference.network;
 
             #if UNITY_EDITOR
             MoveToScene(TagConstants.TAG_MAIN_GAME, true);
@@ -68,7 +63,6 @@ public class MatchSelectionScreen : SceneMonoBehaviour
         else if (btn == singlePlayerBtn)
         {
             SinglePlayerMainGame game = gameLayout.gameObject.AddComponent<SinglePlayerMainGame>();
-            gameLayout.gameObject.GetComponent<MainGame>().isSinglePlayerGame = true;
 
             //reference dealer
             {
@@ -80,11 +74,7 @@ public class MatchSelectionScreen : SceneMonoBehaviour
                 game.dealer = gos[0].GetComponent<Dealer>();
             }
 
-            game.network = game.gameObject.AddComponent<SinglePlayerNetworking>();
-            game.apiHandler = game.gameObject.AddComponent<SinglePlayerAPIHandler>();
-
-            SingletonManager.reference.apiHandler = game.apiHandler;
-            SingletonManager.reference.network = game.network;
+            game.network = SingletonManager.reference.network;
 
             MoveToScene(TagConstants.TAG_MAIN_GAME, true);
         }

@@ -23,9 +23,10 @@ public class Networking : ExtMonoBehaviour
 
     private float _timeElapsed = 0.0f;
 
-    public static bool isHost = false;
-    public static string hostId = "0";
-    public static string localId = "0";
+    public static bool IsHost = false;
+    public static bool IsSinglePlayerMode = false;
+    public static string hostId = "";
+    public static string localId = "";
 
     private bool _pauseUpdate = false;
 
@@ -92,7 +93,52 @@ public class Networking : ExtMonoBehaviour
     public override void Init()
     {
         base.Init();
-        APIHandler.GetInstance().OnAPISuccess = OnAPISuccess;    
+        APIHandler.GetInstance().OnAPISuccess = OnAPISuccess;  
+
+        IsHost = false;
+        hostId = "";
+        localId = "";
+        IsSinglePlayerMode = false;
+    }
+
+    public void OnSinglePlayerMode()
+    {
+        IsHost = true;
+        hostId = "0";
+        localId = "0";
+        IsSinglePlayerMode = true;
+        UpdateSinglePlayerData();
+    }
+
+    private void UpdateSinglePlayerData()
+    {
+        //create players
+        for (int index = 0; index < GameConstants.MAX_PLAYERS; index++)
+        {
+            NetworkPlayer player = new NetworkPlayer();
+            player.PlayerId = index.ToString();
+            player.Name = "player" + player.PlayerId;
+            _players.Add(player);
+        }
+
+        //copy to players excluding this
+        for (int index = 1; index < _players.Count; index++)
+        {
+            NetworkPlayer player = _players[index];
+            _playersExcludingThis.Add(player.DeepClone());
+        }
+
+        //copy to playersIds
+        foreach (var player in _players)
+        {
+            _playersIds.Add(player.PlayerId.DeepClone());
+        }
+
+        //copy to playersIdsExcludingThis
+        foreach (var player in _playersExcludingThis)
+        {
+            _playersIdsExcludingThis.Add(player.PlayerId.DeepClone());
+        }
     }
 
     private bool isIdHost(string id)
@@ -182,7 +228,7 @@ public class Networking : ExtMonoBehaviour
                     GameEvent gEvent = new GameEvent(GameEvent.MATCH_STARTED, response);
                     JObject json = JObject.Parse(response.data);
 
-                    isHost = ((int)json[NetworkConstants.KEY_IS_HOST]) == 1 ? true : false;
+                    IsHost = ((int)json[NetworkConstants.KEY_IS_HOST]) == 1 ? true : false;
 
                     _players = JsonConvert.DeserializeAnonymousType<List<NetworkPlayer>>(json[NetworkConstants.KEY_PLAYERS].ToString(), _players);
                     UpdatePlayersData();
@@ -198,13 +244,13 @@ public class Networking : ExtMonoBehaviour
                         BridgeDebugger.Log(player.ToString());
                     }
 
-                    if (isHost)
+                    if (IsHost)
                     {
                         hostId = string.Copy(_players[0].PlayerId);
                     }
                     localId = string.Copy(_players[0].PlayerId);
 
-                    BridgeDebugger.Log("[ Match Started ] - isHost " + isHost + " hostId " + hostId);
+                    BridgeDebugger.Log("[ Match Started ] - isHost " + IsHost + " hostId " + hostId);
                     EventManager.instance.Raise(gEvent);
                     Acknowledge();
                 }
@@ -235,26 +281,27 @@ public class Networking : ExtMonoBehaviour
                     EventManager.instance.Raise(gEvent);
                 }
                 break;
+            case NetworkConstants.API.NEXT_ROUND:
+                {
+                    GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
+                    EventManager.instance.Raise(gEvent);
+                    Acknowledge();
+                }
+                break;
         }
     }
 
     private void Acknowledge(NetworkResponse response = null, bool isSenderHost = false)
     {
-        if (response != null && isSenderHost)
+        if (response != null && response.sender != localId)
         {
             AcknowledgeVO vo = new AcknowledgeVO((int)response.api, response.apiId, response.sender);
             vo.player_id = _players[0].PlayerId;
             BridgeDebugger.Log("[ Acknowleging API_ID ] - " + response.apiId);
             string data = JsonConvert.SerializeObject(vo);
 
-            if (isSenderHost)
-            {
-                sendDataToPlayer(hostId, data);
-            }
-            else
-            {
-                //TODO
-            }
+            BridgeDebugger.Log("[ Acknowleging to sender ] - " + response.sender);
+            sendDataToPlayer(response.sender, data);
         }
         _results.RemoveAt(0);
         _pauseUpdate = false;
@@ -268,24 +315,19 @@ public class Networking : ExtMonoBehaviour
         switch (eAPI)
         {
             case NetworkConstants.API.HOST_DATA:
-                EventManager.instance.Raise(new InGameEvent(InGameEvent.DISPATCH_CARDS_DATA));
+                {
+                    EventManager.instance.Raise(new InGameEvent(InGameEvent.DISPATCH_CARDS_DATA));
+                }
                 break;
             case NetworkConstants.API.CARDS_DATA:
-                if (isHost)
+                if (IsHost)
                 {
                     EventManager.instance.Raise(new InGameEvent(InGameEvent.START_GAME));
                 }
                 break;
             case NetworkConstants.API.ROUND_RESULT:
-                if (isHost)
                 {
                     EventManager.instance.Raise(new InGameEvent(InGameEvent.DISPATCH_NEXT_ROUND));
-                }
-                break;
-            case NetworkConstants.API.NEXT_ROUND:
-                if (isHost)
-                {
-                    EventManager.instance.Raise(new InGameEvent(InGameEvent.START_ROUND));
                 }
                 break;
         }

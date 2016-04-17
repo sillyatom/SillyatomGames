@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 public class RoundHandler : ExtMonoBehaviour
 {
     public static int currentRound = 0;
@@ -19,22 +22,24 @@ public class RoundHandler : ExtMonoBehaviour
 
     public string GetActivePlayerId{ get { return _activePlayerId; } }
 
-    public bool IsActivePlayerLocal{ get { return (_activePlayerId == SingletonManager.reference.network.PlayersIds[0]); } }
+    public bool IsActivePlayerLocal{ get { return (_activePlayerId == Networking.localId); } }
 
     public override void Init()
     {
         base.Init();
         _elapsedTime = 0.0f;
 
-        EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
+        EventManager.instance.AddListener<GameEvent>(OnGameEvent);
     }
 
-    private void OnInGameEvent(InGameEvent evt)
+    override protected void OnGameEvent(GameEvent evt)
     {
         switch (evt.type)
         {
-            case InGameEvent.Round_Active_Player:
-                _activePlayerId = evt.playerId;
+            case GameEvent.START_ROUND:
+                RoundVO vo = JsonConvert.DeserializeObject<RoundVO>(evt.response.data);
+                _activePlayerId = vo.playerIdForRound;
+                StartRound();
                 break;
         }
     }
@@ -42,6 +47,7 @@ public class RoundHandler : ExtMonoBehaviour
     public void StartMatch()
     {
         currentRound = 0;
+        _activePlayerId = Networking.hostId;
         StartRound();
     }
 
@@ -54,7 +60,6 @@ public class RoundHandler : ExtMonoBehaviour
         progressBar.fillAmount = 0.0f;
 
         StartTimer(); 
-        Debug.Log("--------------START ROUND!!!-------------");
     }
 
     public void StopTimer()
@@ -65,7 +70,6 @@ public class RoundHandler : ExtMonoBehaviour
 
     private void StopRound()
     {
-        Debug.Log("--------------STOP ROUND!!!-------------");
         OnRoundCompleteCallback();
     }
 

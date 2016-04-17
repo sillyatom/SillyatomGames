@@ -13,7 +13,6 @@ public class MainScreen : SceneMonoBehaviour
     override public void Init()
     {
         base.Init();
-
         playBtn.onClick.AddListener(OnPlay);    
     }
 

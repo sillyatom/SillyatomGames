@@ -11,12 +11,15 @@ public class GameEvent
 
     public const string UPDATE_CARDS_DATA = "update_cards_data";
     public const string ROUND_RESULT = "round_result";
+    public const string START_ROUND = "start_round";
 
     public string type{ get; set; }
 
     public System.Action<NetworkResponse, bool> callback{ get; set; }
 
     public NetworkResponse response{ get; set; }
+
+    public HeaderVO vo{ get; set; }
 
     public GameEvent(string type)
     {
@@ -27,5 +30,11 @@ public class GameEvent
     {
         this.type = type;
         this.response = response;
+    }
+
+    public GameEvent(string type, HeaderVO vo)
+    {
+        this.type = type;
+        this.vo = vo;
     }
 }

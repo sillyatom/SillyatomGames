@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 public class SinglePlayerMainGame : MultiplayerMainGame
 {
+    private int _currentPlayerIndex;
+
     override public void Init()
     {
         BridgeDebugger.Log("[ SinglePlayerMainGame ] - Init()");
         base.Init();
+        network.OnSinglePlayerMode();
     }
 
     public override void InitGame()
@@ -59,31 +64,69 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         }
     }
 
+    override protected void OnDistributeAllWinningCards(object args)
+    {
+        Hashtable hArgs = (Hashtable)args;
+        Player player = (Player)hArgs["Player"];
+        ResultVO vo = (ResultVO)hArgs["VO"];
+
+
+        //clear all round data
+        player.OnRoundEnd();
+        _roundHandler.OnRoundEnd();
+        _currentPlayerIndex++;
+        _currentPlayerIndex = (_currentPlayerIndex == network.numPlayers) ? 0 : _currentPlayerIndex;
+        DispatchNextRound();
+    }
+
     override protected void OnDistributeAllCards()
     {
         GetLocalPlayer.UpdateCardsPosition();
-        StartGame();
+        _currentPlayerIndex = 0;
+        _roundHandler.StartMatch();
     }
 
-    override protected void StartRound()
+    override protected void OnGameEvent(GameEvent evt)
     {
-        base.StartRound();
-
-        //if non player round
-        if (_currentPlayerIndex != 0)
+        switch (evt.type)
         {
-            StartCoroutine(AutoPlay());
-        }
-    }
+            case GameEvent.START_ROUND:
+                {
+                    RoundVO vo = JsonConvert.DeserializeObject<RoundVO>(evt.response.data);
+                    string playerId = vo.playerIdForRound;
 
-    override protected void OnRoundEnd()
-    {
-        base.OnRoundEnd();
+                    //if non player round
+                    if (playerId != Networking.localId)
+                    {
+                        StartCoroutine(AutoPlay());
+                    }
+                }
+                break;
+        }
     }
 
     IEnumerator AutoPlay()
     {
         yield return new WaitForSeconds(Utility.GetRandomNumber(1.5f, 3.0f));
         _roundHandler.StopTimer();
+    }
+
+    override protected void DispatchNextRound()
+    {
+        //dispatch
+        RoundVO vo = new RoundVO();
+        vo.api = (int)(NetworkConstants.API.NEXT_ROUND);
+        vo.sender = Networking.hostId;
+        vo.api_id = ++APIHandler.GetInstance().runningId;
+        //add +1 round number will be incremented only on round start
+        vo.roundId = _roundHandler.GetRoundNumber + 1;
+        vo.playerIdForRound = _currentPlayerIndex.ToString();
+
+        string data = JsonConvert.SerializeObject(vo);
+
+        NetworkResponse response = new NetworkResponse(NetworkConstants.API.NEXT_ROUND,
+                                       -1, "", "", data);
+        GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
+        EventManager.instance.Raise(gEvent);
     }
 }

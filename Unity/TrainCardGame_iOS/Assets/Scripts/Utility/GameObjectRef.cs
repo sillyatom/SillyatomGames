@@ -4,9 +4,6 @@ using System.Collections;
 public class GameObjectRef : MonoBehaviour
 {
     [SerializeField]
-    public MainGame mainGame;
-
-    [SerializeField]
     public RoundHandler roundHandler;
 
     [SerializeField]

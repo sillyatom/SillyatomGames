@@ -60,6 +60,18 @@ public class Player : ExtMonoBehaviour
         }
     }
 
+    public Card GetCardByValueType(string valueType)
+    {
+        foreach (var card in _cards)
+        {
+            if (card.ValueType == valueType)
+            {
+                return card;
+            }
+        }
+        return null;
+    }
+
     public bool IsLocalPlayer
     {
         get
@@ -70,7 +82,6 @@ public class Player : ExtMonoBehaviour
 
     override public void Init()
     {
-        BridgeDebugger.Log("[ Player - Init ]");
         base.Init();
 
         _canDrag = false;
@@ -110,6 +121,12 @@ public class Player : ExtMonoBehaviour
     public void AutoDeal()
     {
         Card card = _cards[0];
+        _cardSelectionHandler.SetSelectedCard(card);
+    }
+
+    public void OnRoundResult(string cardValueType)
+    {
+        Card card = GetCardByValueType(cardValueType);
         _cardSelectionHandler.SetSelectedCard(card);
     }
 
@@ -200,11 +217,11 @@ public class Player : ExtMonoBehaviour
             }
         }
         #elif UNITY_IPHONE
-        Touch touch = Input.GetTouch(0);
-        if (touch.phase == TouchPhase.Began)
-        {
-            
-        }
+//        Touch touch = Input.GetTouch(0);
+//        if (touch.phase == TouchPhase.Began)
+//        {
+//            
+//        }
         #endif
     }
 }

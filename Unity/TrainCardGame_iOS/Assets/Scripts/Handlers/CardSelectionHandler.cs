@@ -26,7 +26,7 @@ public class CardSelectionHandler : ExtMonoBehaviour
         }
         if (card != null)
         {
-            BridgeDebugger.Log("Selected Card : " + card.ValueType);
+            BridgeDebugger.Log("--------------------------------------- Selected Card : " + card.ValueType);
         }
         _selectedCard = card;
     }

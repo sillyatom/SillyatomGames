@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-public class APIHandler : MonoBehaviour
+public class APIHandler
 {
     protected List<API> _apis = new List<API>();
+
+    private static APIHandler instance = null;
 
     [DllImport("__Internal")]
     private static extern void sendDataToAll(string data);
@@ -31,18 +33,44 @@ public class APIHandler : MonoBehaviour
 
     public static APIHandler GetInstance()
     {
-        return SingletonManager.reference.apiHandler;
+        if (instance == null)
+        {
+            instance = new APIHandler();
+        }
+        return instance;
     }
 
     virtual public void SendDataToAll(API api)
     {
-        sendDataToAll(api.data);
+        if (Networking.IsSinglePlayerMode)
+        {
+            StartDelayAPISuccess(api.api);
+        }
+        else
+        {
+            sendDataToAll(api.data);
+        }
         _apis.Add(api);
+    }
+
+    private void StartDelayAPISuccess(int api)
+    {
+        GameObject go = SingletonManager.reference.network.gameObject;
+        Hashtable args = new Hashtable();
+        args.Add("api", api);
+        Utility.DelayedCallWithArgs(go, go, "OnAPISuccess", api, 0.1f, 0.5f);
     }
 
     virtual public void SendDataToPlayer(API api)
     {
-        sendDataToPlayer(api.playerIds[0], api.data);
+        if (Networking.IsSinglePlayerMode)
+        {
+            StartDelayAPISuccess(api.api);
+        }
+        else
+        {
+            sendDataToPlayer(api.playerIds[0], api.data);
+        }
         _apis.Add(api);
     }
 

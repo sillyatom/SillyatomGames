@@ -10,21 +10,17 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 {
     public Dealer dealer;
     public Networking network;
-    public APIHandler apiHandler;
 
     public Player GetLocalPlayer{ get { return _players[0]; } }
 
     protected List<Player> _players;
-    protected int _currentPlayerIndex;
     protected RoundHandler _roundHandler;
 
     private NetworkResponse _lastResponse;
 
     override public void Init()
     {
-        BridgeDebugger.Log("[ MultiplayerMainGame ] - Init()");
         base.Init();
-        network.Init();
 
         InitGame();
     }
@@ -43,7 +39,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
         //if host
-        if (Networking.isHost)
+        if (Networking.IsHost)
         {
             dealer.ShuffleCards();
             DispatchHostSelected();
@@ -67,19 +63,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                     DealCard(player);
                 }
                 break;
-            case InGameEvent.START_GAME:
-                {
-                    StartGame();
-                }
-                break;
             case InGameEvent.DISPATCH_NEXT_ROUND:
                 {
                     DispatchNextRound();
-                }
-                break;
-            case InGameEvent.START_ROUND:
-                {
-                    StartRound();
                 }
                 break;
         }
@@ -88,6 +74,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     private void DealCard(Player player)
     {
         Card card = player.SelectedCard;
+        player.RemoveCardWithValue(card.ValueType);
         card.transform.SetParent(dealer.transform);
         card.transform.localEulerAngles = Vector3.zero;
         Hashtable args = new Hashtable();
@@ -152,18 +139,26 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }
     }
 
-    protected void OnDistributeAllWinningCards(object args)
+    virtual protected void OnDistributeAllWinningCards(object args)
     {
-        Hashtable hArgs = (Hashtable)args;
-        Player player = (Player)hArgs["Player"];
-        ResultVO vo = (ResultVO)hArgs["VO"];
+        if (_roundHandler.IsActivePlayerLocal)
+        {
+            Hashtable hArgs = (Hashtable)args;
+            Player player = (Player)hArgs["Player"];
+            ResultVO vo = (ResultVO)hArgs["VO"];
 
-        //send the data before dealing with cleaning up
-        DispatchRoundResult(vo);
+            //send the data before dealing with cleaning up
+            DispatchRoundResult(vo);
 
-        //clear all round data
-        player.OnRoundEnd();
-        _roundHandler.OnRoundEnd();
+            //clear all round data
+            player.OnRoundEnd();
+            _roundHandler.OnRoundEnd();
+        }
+        else
+        {
+            GameEvent gEvt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
+            EventManager.instance.Raise(gEvt);
+        }
     }
 
     protected Player GetPlayerById(string playerId)
@@ -182,7 +177,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         RoundResultVO vo = new RoundResultVO();
         vo.api = (int)(NetworkConstants.API.ROUND_RESULT);
-        vo.sender = Networking.hostId;
+        vo.sender = Networking.localId;
+        vo.player_id = Networking.localId;
         vo.api_id = ++APIHandler.GetInstance().runningId;
         vo.cardValueType = GetPlayerById(_roundHandler.GetActivePlayerId).SelectedCard.ValueType;
         vo.roundId = _roundHandler.GetRoundNumber;
@@ -194,18 +190,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         api.data = data;
         api.id = vo.api_id;
 
-        //if player is host send to all
-        if (Networking.isHost)
-        {
-            api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
-            APIHandler.GetInstance().SendDataToAll(api);
-        }
-        //send only to host
-        else
-        {
-            api.playerIds = Utility.DeepCloneList<string>(new List<string>(new string[]{ Networking.hostId }));
-            APIHandler.GetInstance().SendDataToPlayer(api);
-        }
+        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
+        APIHandler.GetInstance().SendDataToAll(api);
     }
 
     private void DispatchHostSelected()
@@ -216,7 +202,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         vo.api_id = ++APIHandler.GetInstance().runningId;
 
         string data = JsonConvert.SerializeObject(vo);
-
+        BridgeDebugger.Log("[ Dispatching Host Selected ]" + data);
         API api = new API();
         api.api = vo.api;
         api.data = data;
@@ -298,18 +284,20 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         base.OnGameEvent(evt);
 
-        _lastResponse = evt.response;
-
         switch (evt.type)
         {
             case GameEvent.UPDATE_CARDS_DATA:
                 {
+                    _lastResponse = evt.response;
+
                     InitCardsData(evt);
                     DistributeCards(network.numPlayers);
                 }
                 break;
             case GameEvent.ROUND_RESULT:
                 {
+                    _lastResponse = evt.response;
+
                     OnRoundResult(evt);
                 }
                 break;
@@ -366,10 +354,14 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     virtual protected void OnDistributeAllCards()
     {
         GetLocalPlayer.UpdateCardsPosition();
-        if (!Networking.isHost)
+        if (!Networking.IsHost)
         {
             GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
             EventManager.instance.Raise(evt);
+        }
+        else
+        {
+            _roundHandler.StartMatch();
         }
     }
 
@@ -388,48 +380,26 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.position = player.cardsHolder.position;
     }
 
-    protected void DispatchNextRound()
+    virtual protected void DispatchNextRound()
     {
-        _currentPlayerIndex++;
-        _currentPlayerIndex = _currentPlayerIndex == network.numPlayers ? 0 : _currentPlayerIndex;
+        //dispatch
+        RoundVO vo = new RoundVO();
+        vo.api = (int)(NetworkConstants.API.NEXT_ROUND);
+        vo.sender = Networking.localId;
+        vo.api_id = ++APIHandler.GetInstance().runningId;
+        //add +1 round number will be incremented only on round start
+        vo.roundId = _roundHandler.GetRoundNumber + 1;
+        vo.playerIdForRound = network.PlayersIdsExcludingThis[0];
 
-        if (_currentPlayerIndex != 0)
-        {
-            //dispatch
-            RoundVO vo = new RoundVO();
-            vo.api = (int)(NetworkConstants.API.NEXT_ROUND);
-            vo.sender = Networking.hostId;
-            vo.api_id = ++APIHandler.GetInstance().runningId;
-            //add +1 round number will be incremented only on round start
-            vo.roundId = _roundHandler.GetRoundNumber + 1;
+        string data = JsonConvert.SerializeObject(vo);
 
-            string data = JsonConvert.SerializeObject(vo);
+        API api = new API();
+        api.api = vo.api;
+        api.data = data;
+        api.id = vo.api_id;
 
-            API api = new API();
-            api.api = vo.api;
-            api.data = data;
-            api.id = vo.api_id;
-
-            api.playerIds = new List<string>(new string[]{ network.PlayersIds[_currentPlayerIndex] });
-            APIHandler.GetInstance().SendDataToPlayer(api);
-        }
-        else
-        {
-            StartRound();
-        }
-    }
-
-    virtual protected void StartRound()
-    {
-        EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, network.PlayersIds[_currentPlayerIndex]));
-        _roundHandler.StartRound();
-    }
-
-    protected void StartGame()
-    {
-        _currentPlayerIndex = 0;
-        EventManager.instance.Raise(new InGameEvent(InGameEvent.Round_Active_Player, GetLocalPlayer.playerId));
-        _roundHandler.StartMatch();
+        api.playerIds = Utility.DeepCloneList<string>(network.PlayersIdsExcludingThis);
+        APIHandler.GetInstance().SendDataToAll(api);
     }
 
     virtual protected void OnRoundEnd()
@@ -448,5 +418,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void OnRoundResult(GameEvent evt)
     {
+        RoundResultVO vo = JsonConvert.DeserializeObject<RoundResultVO>(evt.response.data);
+        Player player = GetPlayerById(vo.player_id);
+        BridgeDebugger.Log("--------------------------------------- Received Selected Card : " + vo.cardValueType);
+        player.OnRoundResult(vo.cardValueType);
+        DealCard(player);
     }
 }

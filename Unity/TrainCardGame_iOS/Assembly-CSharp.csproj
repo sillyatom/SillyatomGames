@@ -409,8 +409,6 @@
      <Compile Include="Assets\Scripts\Networking\Networking.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GameCenterAuthVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\MatchStartedVO.cs" />
-     <Compile Include="Assets\Scripts\Networking\SinglePlayerAPIHandler.cs" />
-     <Compile Include="Assets\Scripts\Networking\SinglePlayerNetworking.cs" />
      <Compile Include="Assets\Scripts\Screens\MainScreen.cs" />
      <Compile Include="Assets\Scripts\Screens\MatchSelectionScreen.cs" />
      <Compile Include="Assets\Scripts\Screens\MultiplayerMainGame.cs" />

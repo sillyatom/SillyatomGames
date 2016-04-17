@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SingletonManager : MonoBehaviour
+public class SingletonManager : ExtMonoBehaviour
 {
     public static GameObjectRef reference;
 
-    void Awake()
+    public override void Init()
     {
         reference = GameObject.FindGameObjectWithTag("GameObjectReference").GetComponent<GameObjectRef>();
     }
