@@ -11,8 +11,8 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     override public void Init()
     {
         BridgeDebugger.Log("[ SinglePlayerMainGame ] - Init()");
-        base.Init();
         network.OnSinglePlayerMode();
+        base.Init();
     }
 
     public override void InitGame()
@@ -67,9 +67,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     override protected void OnDistributeAllWinningCards(object args)
     {
         Hashtable hArgs = (Hashtable)args;
-        Player player = (Player)hArgs["Player"];
-        ResultVO vo = (ResultVO)hArgs["VO"];
-
+        Player player = GetPlayerById((string)hArgs["Player"]);
 
         //clear all round data
         player.OnRoundEnd();
@@ -128,5 +126,23 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                                        -1, "", "", data);
         GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
         EventManager.instance.Raise(gEvent);
+    }
+
+    override protected void OnRoundEnd()
+    {
+        Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
+
+        Card selectedCard = player.SelectedCard;
+        //if player has not selected a card
+        if (selectedCard == null)
+        {
+            //do auto deal
+            player.AutoDeal();
+            DealCard(player, true);
+        }
+        else
+        {
+            CheckWinnings();
+        }
     }
 }

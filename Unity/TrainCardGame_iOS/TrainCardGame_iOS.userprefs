@@ -1,34 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameElements/Card.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Handlers/BridgeDebugger.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/MatchSelectionScreen.cs" Line="39" Column="25" />
-      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="46" Column="24" />
-      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="22" Column="24" />
-      <File FileName="Assets/Scripts/Ext/SceneMonoBehaviour.cs" Line="26" Column="41" />
-      <File FileName="Assets/Scripts/Handlers/SceneTransitionManager.cs" Line="25" Column="5" />
-      <File FileName="Assets/Scripts/Utility/SingletonManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Utility/GameObjectRef.cs" Line="4" Column="1" />
-      <File FileName="Assets/Scripts/Networking/DispatchVO/RoundVO.cs" Line="4" Column="19" />
-      <File FileName="Assets/Scripts/Constants/NetworkConstants.cs" Line="14" Column="23" />
-      <File FileName="Assets/Scripts/Handlers/RoundHandler.cs" Line="80" Column="1" />
-      <File FileName="Assets/Scripts/GameElements/Player.cs" Line="108" Column="37" />
-      <File FileName="Assets/Scripts/Handlers/CardSelectionHandler.cs" Line="30" Column="19" />
-      <File FileName="Assets/Scripts/Handlers/BridgeDebugger.cs" Line="18" Column="2" />
-      <File FileName="Assets/Scripts/GameElements/Card.cs" Line="63" Column="1" />
-      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="72" Column="46" NotebookId="1" />
-      <File FileName="Assets/Scripts/Networking/APIHandler.cs" Line="18" Column="5" NotebookId="1" />
-      <File FileName="Assets/Scripts/Networking/SinglePlayerAPIHandler.cs" Line="22" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Networking/SinglePlayerNetworking.cs" Line="33" Column="9" NotebookId="1" />
-      <File FileName="Assets/Scripts/Networking/API.cs" Line="5" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Networking/NetworkPlayer.cs" Line="6" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Events/InGameEvent.cs" Line="19" Column="21" NotebookId="1" />
+      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="24" Column="54" />
+      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/Handlers/ExecutionOrderManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Handlers/BridgeDebugger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="90" Column="21" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/Scripts/Handlers/RoundHandler.cs" line="80" column="30" />
-      <Breakpoint file="/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/Scripts/Handlers/RoundHandler.cs" line="37" column="48" />
+      <Breakpoint file="/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/Scripts/Screens/SinglePlayerMainGame.cs" line="15" column="16" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

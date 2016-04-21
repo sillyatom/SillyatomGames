@@ -58,13 +58,15 @@ public class Dealer : ExtMonoBehaviour
         _cards.Shuffle<Card>();
     }
 
-    public void ShiftCards()
+    public float ShiftCards()
     {
         for (int index = 0; index < GetDeckSize(); index++)
         {
             Vector3 pos = GetPositionForIndex(index);
             MoveCardToPosition(_cards[index], pos, 1.0f);
         }
+
+        return 2.0f;
     }
 
     private Vector3 GetPositionForIndex(int index)
@@ -137,6 +139,7 @@ public class Dealer : ExtMonoBehaviour
     public ResultVO GetResult()
     {
         string selectedCard = _cards[GetDeckSize() - 1].Value;
+
         //Check result only if the deck has more than one card
         ResultVO vo = new ResultVO();
         if (GetDeckSize() > 1)
@@ -153,7 +156,6 @@ public class Dealer : ExtMonoBehaviour
                 {
                     vo.count = length - index - 1;
                     vo.startIndex = index;
-
                     List<Card> matchedCards = new List<Card>();
                     for (int i = length - 1; i >= index; i--)
                     {

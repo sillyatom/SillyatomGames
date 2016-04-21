@@ -17,7 +17,7 @@ public class APIHandler
     private static extern void sendDataToPlayer(string playerId, string data);
 
     private int _runningId = -1;
-    public Action<int> OnAPISuccess;
+    public Action<int, NetworkResponse> OnAPISuccess;
 
     public int runningId
     {
@@ -74,9 +74,9 @@ public class APIHandler
         _apis.Add(api);
     }
 
-    public void OnReceiveAcknowledgement(int apiId, string playerId)
+    public void OnReceiveAcknowledgement(int apiId, string playerId, NetworkResponse response = null)
     {
-        BridgeDebugger.Log("[ API Handler ] On Receive Acknowledgement for apiId " + apiId);
+        BridgeDebugger.Log("[ API Handler ] On Receive Acknowledgement for api " + response.api.ToString());
 
         if (playerId.Length == 0)
         {
@@ -87,7 +87,7 @@ public class APIHandler
         int count = api.RemoveId(playerId);
         if (count == 0)
         {
-            OnAPISuccess(iAPI);
+            OnAPISuccess(iAPI, response);
         }
     }
 

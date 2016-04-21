@@ -38,6 +38,14 @@ public class Networking : ExtMonoBehaviour
         }
     }
 
+    public string LocalId
+    {
+        get
+        {
+            return localId;
+        }
+    }
+
     public int numPlayers
     {
         get
@@ -189,7 +197,7 @@ public class Networking : ExtMonoBehaviour
     {
         if (response.sender.Length > 0 && response.sender == _players[0].PlayerId)
         {
-            APIHandler.GetInstance().OnReceiveAcknowledgement(response.apiId, response.playerId);
+            APIHandler.GetInstance().OnReceiveAcknowledgement(response.apiId, response.playerId, response);
             Acknowledge();
         }
         else
@@ -285,7 +293,7 @@ public class Networking : ExtMonoBehaviour
                 {
                     GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
                     EventManager.instance.Raise(gEvent);
-                    Acknowledge();
+                    Acknowledge(response, isIdHost(response.sender));
                 }
                 break;
         }
@@ -303,11 +311,17 @@ public class Networking : ExtMonoBehaviour
             BridgeDebugger.Log("[ Acknowleging to sender ] - " + response.sender);
             sendDataToPlayer(response.sender, data);
         }
+
         _results.RemoveAt(0);
+        Utility.DelayedCall(gameObject, gameObject, "OnAcknowledge", 1.0f, 0.0f);
+    }
+
+    private void OnAcknowledge()
+    {
         _pauseUpdate = false;
     }
 
-    public void OnAPISuccess(int api)
+    public void OnAPISuccess(int api, NetworkResponse response = null)
     {
         NetworkConstants.API eAPI = (NetworkConstants.API)api;
         BridgeDebugger.Log("[ ON API SUCCESS ] " + eAPI.ToString());
@@ -328,6 +342,13 @@ public class Networking : ExtMonoBehaviour
             case NetworkConstants.API.ROUND_RESULT:
                 {
                     EventManager.instance.Raise(new InGameEvent(InGameEvent.DISPATCH_NEXT_ROUND));
+                }
+                break;
+            case NetworkConstants.API.NEXT_ROUND:
+                {
+                    //when acknowledgement succeed
+                    //set the next player and start round
+                    EventManager.instance.Raise(new InGameEvent(InGameEvent.UPDATE_ROUND_DATA, _playersIdsExcludingThis[0]));
                 }
                 break;
         }

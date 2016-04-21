@@ -13,7 +13,6 @@ public class CardSelectionHandler : ExtMonoBehaviour
     {
         base.Init();
         _selectedCard = null;
-        EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
         playerId = GetComponent<Player>().playerId;
     }
 
@@ -29,16 +28,5 @@ public class CardSelectionHandler : ExtMonoBehaviour
             BridgeDebugger.Log("--------------------------------------- Selected Card : " + card.ValueType);
         }
         _selectedCard = card;
-    }
-
-    public void OnInGameEvent(InGameEvent evt)
-    {
-        if (evt.type == InGameEvent.ON_CARD_SELECTED)
-        {
-            if (playerId == SingletonManager.reference.network.HostId && SingletonManager.reference.roundHandler.IsActivePlayerLocal)
-            {
-                SetSelectedCard(evt.card);
-            }
-        }
     }
 }

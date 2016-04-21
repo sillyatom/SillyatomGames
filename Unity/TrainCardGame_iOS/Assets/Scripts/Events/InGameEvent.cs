@@ -8,6 +8,7 @@ public class InGameEvent : GameEvent
     public const string ON_SPIN_COMPLETE = "OnSpinComplete";
     public const string DISPATCH_CARDS_DATA = "dispatch_cards_data";
     public const string ON_CARD_SELECTED = "OnCardSelected";
+    public const string UPDATE_ROUND_DATA = "UpdateRoundData";
 
     public string playerId{ get; set; }
 

@@ -118,22 +118,27 @@ public class Player : ExtMonoBehaviour
         return retCard;
     }
 
+    public void SetSelectedCard(Card card)
+    {
+        _cardSelectionHandler.SetSelectedCard(card);
+    }
+
     public void AutoDeal()
     {
         Card card = _cards[0];
-        _cardSelectionHandler.SetSelectedCard(card);
+        SetSelectedCard(card);
     }
 
     public void OnRoundResult(string cardValueType)
     {
         Card card = GetCardByValueType(cardValueType);
-        _cardSelectionHandler.SetSelectedCard(card);
+        SetSelectedCard(card);
     }
 
     public void OnRoundEnd()
     {
         RemoveCardWithValue(SelectedCardValueType);
-        _cardSelectionHandler.SetSelectedCard(null);
+        SetSelectedCard(null);
     }
 
     private void OnShout()

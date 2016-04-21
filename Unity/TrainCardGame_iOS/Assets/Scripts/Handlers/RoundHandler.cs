@@ -22,6 +22,8 @@ public class RoundHandler : ExtMonoBehaviour
 
     public string GetActivePlayerId{ get { return _activePlayerId; } }
 
+    public string SetActivePlayerId{ set { _activePlayerId = value; } }
+
     public bool IsActivePlayerLocal{ get { return (_activePlayerId == Networking.localId); } }
 
     public override void Init()
@@ -30,6 +32,7 @@ public class RoundHandler : ExtMonoBehaviour
         _elapsedTime = 0.0f;
 
         EventManager.instance.AddListener<GameEvent>(OnGameEvent);
+        EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
     }
 
     override protected void OnGameEvent(GameEvent evt)
@@ -39,6 +42,18 @@ public class RoundHandler : ExtMonoBehaviour
             case GameEvent.START_ROUND:
                 RoundVO vo = JsonConvert.DeserializeObject<RoundVO>(evt.response.data);
                 _activePlayerId = vo.playerIdForRound;
+                BridgeDebugger.SillyLog(" On received next player : " + _activePlayerId);
+                StartRound();
+                break;
+        }
+    }
+
+    protected void OnInGameEvent(InGameEvent evt)
+    {
+        switch (evt.type)
+        {
+            case InGameEvent.UPDATE_ROUND_DATA:
+                _activePlayerId = evt.playerId;
                 StartRound();
                 break;
         }
@@ -82,6 +97,7 @@ public class RoundHandler : ExtMonoBehaviour
     public void OnRoundEnd()
     {
         _activePlayerId = "";
+        BridgeDebugger.SillyLog(" OnRoundEnd : " + _activePlayerId);
     }
 
     void Update()

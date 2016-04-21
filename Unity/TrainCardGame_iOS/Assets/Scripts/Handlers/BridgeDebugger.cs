@@ -15,4 +15,13 @@ public class BridgeDebugger
         Debug.Log(msg);
         #endif
     }
+
+    public static void SillyLog(string msg)
+    {
+        #if DEBUG && !UNITY_EDITOR
+        debugMessage(msg);
+        #elif UNITY_EDITOR
+        Debug.Log(msg);
+        #endif
+    }
 }
