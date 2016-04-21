@@ -388,10 +388,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
             EventManager.instance.Raise(evt);
         }
-        else
-        {
-            _roundHandler.StartMatch();
-        }
+        _roundHandler.StartMatch();
     }
 
     virtual protected void OnDistributeAnimationComplete(object args)
