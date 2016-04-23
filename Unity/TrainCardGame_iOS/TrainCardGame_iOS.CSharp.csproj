@@ -408,22 +408,28 @@
     <Compile Include="Assets\Scripts\Events\EventManager.cs" />
     <Compile Include="Assets\Scripts\Events\GameEvent.cs" />
     <Compile Include="Assets\Scripts\Events\InGameEvent.cs" />
+    <Compile Include="Assets\Scripts\Ext\ButtonComponent.cs" />
+    <Compile Include="Assets\Scripts\Ext\ExtMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Ext\SceneMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\ExtensionMethods\ExtensionMethods.cs" />
     <Compile Include="Assets\Scripts\GameElements\Card.cs" />
     <Compile Include="Assets\Scripts\GameElements\Dealer.cs" />
     <Compile Include="Assets\Scripts\GameElements\Player.cs" />
     <Compile Include="Assets\Scripts\Handlers\BridgeDebugger.cs" />
+    <Compile Include="Assets\Scripts\Handlers\CardSelectionHandler.cs" />
     <Compile Include="Assets\Scripts\Handlers\ExecutionOrderManager.cs" />
     <Compile Include="Assets\Scripts\Handlers\RoundHandler.cs" />
     <Compile Include="Assets\Scripts\Handlers\SceneTransitionManager.cs" />
     <Compile Include="Assets\Scripts\Handlers\SpinHandler.cs" />
+    <Compile Include="Assets\Scripts\MainGame.cs" />
     <Compile Include="Assets\Scripts\Networking\API.cs" />
     <Compile Include="Assets\Scripts\Networking\APIHandler.cs" />
     <Compile Include="Assets\Scripts\Networking\DispatchVO\AcknowledgeVO.cs" />
     <Compile Include="Assets\Scripts\Networking\DispatchVO\HeaderVO.cs" />
     <Compile Include="Assets\Scripts\Networking\DispatchVO\HostSelectedVO.cs" />
     <Compile Include="Assets\Scripts\Networking\DispatchVO\InitCardsDataVO.cs" />
+    <Compile Include="Assets\Scripts\Networking\DispatchVO\RoundResultVO.cs" />
+    <Compile Include="Assets\Scripts\Networking\DispatchVO\RoundVO.cs" />
     <Compile Include="Assets\Scripts\Networking\NetworkPlayer.cs" />
     <Compile Include="Assets\Scripts\Networking\NetworkResponse.cs" />
     <Compile Include="Assets\Scripts\Networking\Networking.cs" />
@@ -434,6 +440,8 @@
     <Compile Include="Assets\Scripts\Screens\MultiplayerMainGame.cs" />
     <Compile Include="Assets\Scripts\Screens\SinglePlayerMainGame.cs" />
     <Compile Include="Assets\Scripts\TestScripts\TestScript.cs" />
+    <Compile Include="Assets\Scripts\Utility\GameObjectRef.cs" />
+    <Compile Include="Assets\Scripts\Utility\SingletonManager.cs" />
     <Compile Include="Assets\Scripts\Utility\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
