@@ -68,6 +68,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     {
         Hashtable hArgs = (Hashtable)args;
         Player player = GetPlayerById((string)hArgs["Player"]);
+        dealer.ShiftCards();
 
         //clear all round data
         player.OnRoundEnd();

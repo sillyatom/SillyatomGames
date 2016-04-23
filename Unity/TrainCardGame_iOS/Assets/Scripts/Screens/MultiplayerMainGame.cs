@@ -100,7 +100,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     protected void CheckWinnings()
     {
         Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
-
+        bool isLocal = (player.playerId == Networking.localId);
         ResultVO vo = null;
 
         //CheckResult
@@ -116,6 +116,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 cArgs.Add("Player", player.playerId);
                 cArgs.Add("Card", card);
 
+                if (!isLocal)
+                {
+                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay));
+                }
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay
                     , "oncomplete", "OnDistributeWinningCard", "oncompleteparams", cArgs, "oncompletetarget", this.gameObject));
                 delay += GameConstants.DEAL_ANIM_TIME * 0.5f;
@@ -131,7 +135,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             Hashtable args = new Hashtable();
             args.Add("Player", player.playerId);
             OnDistributeAllWinningCards(args);   
-
         }
     }
 
@@ -143,7 +146,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         card.transform.SetParent(player.cardsHolder.transform);
         player.AddCard(card);
-
+        card.transform.localScale = Vector3.one;
         if (player.IsLocalPlayer)
         {
             player.UpdateCardsPosition();
@@ -154,7 +157,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         Hashtable hArgs = (Hashtable)args;
         Player player = GetPlayerById((string)hArgs["Player"]);
-
+        dealer.ShiftCards();
         if (_roundHandler.IsActivePlayerLocal)
         {
 
@@ -375,7 +378,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     private void ResetScale(object args)
     {
         Hashtable hash = (Hashtable)(args);
-        Player player = (Player)hash["player"];
         Card card = (Card)hash["card"];
         card.transform.localScale = Vector3.one;
     }
