@@ -70,6 +70,8 @@ public class RoundHandler : ExtMonoBehaviour
     {
         currentRound++;
 
+        EventManager.instance.Raise(new InGameEvent(InGameEvent.ON_ROUND_START, _activePlayerId));
+
         //update player details
         currentPlayerName.text = SingletonManager.reference.network.GetPlayerById(_activePlayerId).Name;
         progressBar.fillAmount = 0.0f;

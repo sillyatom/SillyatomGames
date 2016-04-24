@@ -86,6 +86,7 @@ public class Dealer : ExtMonoBehaviour
 
     private void MoveCardToPosition(Card card, Vector3 pos, float time, float delay = 0.0f)
     {
+        card.ShowFrontFace();
         iTween.MoveTo(card.gameObject, iTween.Hash("x", pos.x, "y", pos.y, "time", time, "delay", delay));
         iTween.ScaleTo(card.gameObject, iTween.Hash("x", 1.0f, "y", 1.0f, "time", time, "delay", delay));
     }
@@ -181,4 +182,18 @@ public class ResultVO
     public bool hasMatch{ get { return count > 0; } }
 
     public List<Card> cards{ get; set; }
+
+    public Dictionary<string, List<string>> winningCards{ get; set; }
+
+    public Card GetCardWithValueType(string cardValueType)
+    {
+        foreach (var card in cards)
+        {
+            if (card.ValueType == cardValueType)
+            {
+                return card;
+            }
+        }
+        return null;
+    }
 }

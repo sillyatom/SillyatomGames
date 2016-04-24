@@ -9,6 +9,7 @@ public class InGameEvent : GameEvent
     public const string DISPATCH_CARDS_DATA = "dispatch_cards_data";
     public const string ON_CARD_SELECTED = "OnCardSelected";
     public const string UPDATE_ROUND_DATA = "UpdateRoundData";
+    public const string ON_ROUND_START = "OnRoundStart";
 
     public string playerId{ get; set; }
 

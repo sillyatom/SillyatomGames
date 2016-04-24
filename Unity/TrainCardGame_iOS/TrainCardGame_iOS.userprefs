@@ -1,18 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Handlers/BridgeDebugger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameElements/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="24" Column="54" />
-      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/Handlers/ExecutionOrderManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Handlers/BridgeDebugger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="90" Column="21" NotebookId="1" />
+      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="106" Column="20" />
+      <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="83" Column="24" />
+      <File FileName="Assets/Scripts/GameElements/Player.cs" Line="183" Column="9" />
+      <File FileName="Assets/Scripts/GameElements/Dealer.cs" Line="93" Column="5" />
+      <File FileName="Assets/Scripts/Constants/GameConstants.cs" Line="9" Column="45" />
+      <File FileName="Assets/Scripts/Handlers/BridgeDebugger.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="90" Column="6" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Sillyatom/Development/SillyatomGames/Unity/TrainCardGame_iOS/Assets/Scripts/Screens/SinglePlayerMainGame.cs" line="15" column="16" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -10,7 +10,7 @@ public class Player : ExtMonoBehaviour
     public string playerId;
     public Text playerName;
     public Image playerDP;
-    public Button shoutBtn;
+    public Button pullOverBtn;
     public RectTransform cardsHolder;
 
     private CardSelectionHandler _cardSelectionHandler = null;
@@ -18,6 +18,7 @@ public class Player : ExtMonoBehaviour
     private float _angle;
     private bool _canDrag;
     private List<Card> _cards;
+    private List<string> _cardsRewarded;
     private Vector3 _rotateAround;
     private Vector2 _lastMousePosition;
 
@@ -30,6 +31,20 @@ public class Player : ExtMonoBehaviour
             return _cards;
         }
     }
+
+    public List<string> CardsRewarded
+    {
+        get
+        {
+            return _cardsRewarded;
+        }
+        set
+        {
+            _cardsRewarded = value;
+        }
+    }
+
+    public bool DidPullOver{ get; set; }
 
     public string SelectedCardValueType
     {
@@ -80,16 +95,22 @@ public class Player : ExtMonoBehaviour
         }
     }
 
+    public void OnRoundStart()
+    {
+        DidPullOver = false;
+    }
+
     override public void Init()
     {
         base.Init();
 
         _canDrag = false;
         _cards = new List<Card>();
+        _cardsRewarded = new List<string>();
 
-        if (shoutBtn != null)
+        if (pullOverBtn != null)
         {
-            shoutBtn.onClick.AddListener(OnShout);
+            pullOverBtn.onClick.AddListener(OnPullOver);
         }
 
         _cardSelectionHandler = gameObject.GetComponent<CardSelectionHandler>();
@@ -129,10 +150,11 @@ public class Player : ExtMonoBehaviour
         SetSelectedCard(card);
     }
 
-    public void OnRoundResult(string cardValueType)
+    public void OnRoundResult(string cardValueType, bool didPullOver)
     {
         Card card = GetCardByValueType(cardValueType);
         SetSelectedCard(card);
+        DidPullOver = didPullOver;
     }
 
     public void OnRoundEnd()
@@ -141,9 +163,9 @@ public class Player : ExtMonoBehaviour
         SetSelectedCard(null);
     }
 
-    private void OnShout()
+    private void OnPullOver()
     {
-        
+        DidPullOver = true;
     }
 
     private void UpdateAngle(float startAngle)
@@ -154,20 +176,27 @@ public class Player : ExtMonoBehaviour
 
     public void UpdateCardsPosition()
     {
+        foreach (Card card in _cards)
+        {
+            card.transform.rotation = Quaternion.identity;
+            card.transform.localPosition = Vector3.zero;
+        }
+
         float maxRadius = (600.0f / 13.0f) * 26;
         float radius = (600.0f / 13.0f) * _cards.Count;
 
         UpdateAngle((radius > maxRadius) ? 180.0f : 135.0f);
         radius = (radius > maxRadius) ? maxRadius : radius;
-
         _rotateAround = new Vector3(cardsHolder.transform.position.x, 
             cardsHolder.transform.position.y - radius, cardsHolder.transform.position.z);
+        
         foreach (Card card in _cards)
         {
             card.transform.RotateAround(_rotateAround,
                 new Vector3(0.0f, 0.0f, 1.0f), _angle);
             _angle -= _delAngle;
         }
+
         Vector2 size = CalculateCardsHolderBounds();
         cardsHolder.sizeDelta = size;
     }
@@ -179,7 +208,7 @@ public class Player : ExtMonoBehaviour
         return new Vector2(width * 1.25f, height);
     }
 
-    void FixedUpdate()
+    void Update()
     {   
         #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
@@ -195,24 +224,22 @@ public class Player : ExtMonoBehaviour
         {
             _canDrag = false;
         }
-
         if (_canDrag)
         {
             float distance = Vector2.Distance(_lastMousePosition, Input.mousePosition);
             distance = (_lastMousePosition.x > Input.mousePosition.x) ? distance : distance * -1;
             _lastMousePosition = Input.mousePosition;
-
             if (distance != 0.0f)
             {
                 int len = _cards.Count;
                 for (int index = 0; index < len; index++)
                 {
-                    if (
-                        _cards[0].transform.localEulerAngles.z + distance < 40.0f
-                        || _cards[len - 1].transform.localEulerAngles.z + distance > 320.0f)
-                    {
-                        distance = 0.0f;
-                    }
+//                    if (
+//                        _cards[0].transform.localEulerAngles.z + distance <= 40.0f
+//                        || _cards[len - 1].transform.localEulerAngles.z + distance >= 320.0f)
+//                    {
+//                        break;
+//                    }
                     Card card = _cards[index];
                     card.transform.RotateAround(_rotateAround,
                         new Vector3(0.0f, 0.0f, 1.0f), 
@@ -222,11 +249,48 @@ public class Player : ExtMonoBehaviour
             }
         }
         #elif UNITY_IPHONE
-//        Touch touch = Input.GetTouch(0);
-//        if (touch.phase == TouchPhase.Began)
-//        {
-//            
-//        }
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                if (RectTransformUtility.RectangleContainsScreenPoint(cardsHolder, touch.position
+                , Camera.main))
+                {
+                    _canDrag = true;
+                    _lastMousePosition = touch.position;
+                }
+            }
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                _canDrag = false;
+            }
+            if (_canDrag)
+            {
+                float distance = Vector2.Distance(_lastMousePosition, touch.position);
+                distance = (_lastMousePosition.x > touch.position.x) ? distance : distance * -1;
+                _lastMousePosition = touch.position;
+
+                if (distance != 0.0f)
+                {
+                    int len = _cards.Count;
+                    for (int index = 0; index < len; index++)
+                    {
+                        //if (
+                          //  _cards[0].transform.localEulerAngles.z + distance <= 40.0f
+                          //  || _cards[len - 1].transform.localEulerAngles.z + distance >= 320.0f)
+                        //{
+                          //  break;
+                        //}
+                        Card card = _cards[index];
+                        card.transform.RotateAround(_rotateAround,
+                            new Vector3(0.0f, 0.0f, 1.0f), 
+                            distance
+                        );
+                    }
+                }
+            }
+        }
         #endif
     }
 }

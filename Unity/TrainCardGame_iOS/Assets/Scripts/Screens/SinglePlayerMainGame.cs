@@ -106,7 +106,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
 
     IEnumerator AutoPlay()
     {
-        yield return new WaitForSeconds(Utility.GetRandomNumber(1.5f, 3.0f));
+        yield return new WaitForSeconds(Utility.GetRandomNumber(GameConstants.ROUND_TIME * 0.5f, GameConstants.ROUND_TIME * 0.75f));
         _roundHandler.StopTimer();
     }
 
