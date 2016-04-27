@@ -416,8 +416,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         float delay = 0.0f;
         float playerDelay = 0.0f;
 
-        foreach (var player in _players)
+		foreach (KeyValuePair<string, List<string>> iter in vo.winningCards)
         {
+			Player player = GetPlayerById (iter.Key);
             if (!vo.winningCards.ContainsKey(player.playerId))
             {
                 continue;
