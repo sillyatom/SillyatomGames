@@ -10096,6 +10096,38 @@ extern const Il2CppType IComparer_1_t2701800257_0_0_0 = { &IComparer_1_t27018002
 Il2CppGenericClass Comparison_1_t2705767724_GenericClass = { 903, { &GenInst_Card_t2092848_0_0_0, NULL }, NULL };
 extern const Il2CppType Comparison_1_t2705767724_0_0_0 = { &Comparison_1_t2705767724_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
+extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0;
+Il2CppGenericClass Dictionary_2_t3403145775_GenericClass = { 159, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType Dictionary_2_t3403145775_0_0_0 = { &Dictionary_2_t3403145775_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+extern const Il2CppType Dictionary_2_t3403145775_0_0_1 = { &Dictionary_2_t3403145775_GenericClass, 1, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0;
+Il2CppGenericClass Transform_1_t3095833267_GenericClass = { 166, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0, NULL }, NULL };
+extern const Il2CppType Transform_1_t3095833267_0_0_0 = { &Transform_1_t3095833267_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+Il2CppGenericClass IDictionary_2_t283844266_GenericClass = { 171, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType IDictionary_2_t283844266_0_0_0 = { &IDictionary_2_t283844266_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+extern const Il2CppGenericInst GenInst_List_1_t1765447871_0_0_0;
+Il2CppGenericClass ICollection_1_t2231279257_GenericClass = { 49, { &GenInst_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType ICollection_1_t2231279257_0_0_0 = { &ICollection_1_t2231279257_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+Il2CppGenericClass KeyValuePair_2_t2891677073_GenericClass = { 174, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType KeyValuePair_2_t2891677073_0_0_0 = { &KeyValuePair_2_t2891677073_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+extern const Il2CppGenericInst GenInst_KeyValuePair_2_t2891677073_0_0_0;
+Il2CppGenericClass IEnumerator_1_t79816225_GenericClass = { 25, { &GenInst_KeyValuePair_2_t2891677073_0_0_0, NULL }, NULL };
+extern const Il2CppType IEnumerator_1_t79816225_0_0_0 = { &IEnumerator_1_t79816225_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+Il2CppGenericClass KeyCollection_t1431453759_GenericClass = { 162, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType KeyCollection_t1431453759_0_0_0 = { &KeyCollection_t1431453759_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+Il2CppGenericClass ValueCollection_t1030315573_GenericClass = { 164, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType ValueCollection_t1030315573_0_0_0 = { &ValueCollection_t1030315573_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
+Il2CppGenericClass Enumerator_t3170173716_GenericClass = { 161, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
+extern const Il2CppType Enumerator_t3170173716_0_0_0 = { &Enumerator_t3170173716_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+
 extern const Il2CppGenericInst GenInst_SceneMonoBehaviour_t4246217742_0_0_0;
 Il2CppGenericClass List_1_t748209415_GenericClass = { 175, { &GenInst_SceneMonoBehaviour_t4246217742_0_0_0, NULL }, NULL };
 extern const Il2CppType List_1_t748209415_0_0_0 = { &List_1_t748209415_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
@@ -10212,38 +10244,6 @@ extern const Il2CppGenericInst GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t
 Il2CppGenericClass Action_2_t2455300638_GenericClass = { 1264, { &GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t1683455087_0_0_0, NULL }, NULL };
 extern const Il2CppType Action_2_t2455300638_0_0_0 = { &Action_2_t2455300638_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 extern const Il2CppType Action_2_t2455300638_0_0_6 = { &Action_2_t2455300638_GenericClass, 6, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0;
-Il2CppGenericClass Dictionary_2_t3403145775_GenericClass = { 159, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType Dictionary_2_t3403145775_0_0_0 = { &Dictionary_2_t3403145775_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-extern const Il2CppType Dictionary_2_t3403145775_0_0_1 = { &Dictionary_2_t3403145775_GenericClass, 1, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0;
-Il2CppGenericClass Transform_1_t3095833267_GenericClass = { 166, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0, NULL }, NULL };
-extern const Il2CppType Transform_1_t3095833267_0_0_0 = { &Transform_1_t3095833267_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IDictionary_2_t283844266_GenericClass = { 171, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType IDictionary_2_t283844266_0_0_0 = { &IDictionary_2_t283844266_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const Il2CppGenericInst GenInst_List_1_t1765447871_0_0_0;
-Il2CppGenericClass ICollection_1_t2231279257_GenericClass = { 49, { &GenInst_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType ICollection_1_t2231279257_0_0_0 = { &ICollection_1_t2231279257_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass KeyValuePair_2_t2891677073_GenericClass = { 174, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType KeyValuePair_2_t2891677073_0_0_0 = { &KeyValuePair_2_t2891677073_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const Il2CppGenericInst GenInst_KeyValuePair_2_t2891677073_0_0_0;
-Il2CppGenericClass IEnumerator_1_t79816225_GenericClass = { 25, { &GenInst_KeyValuePair_2_t2891677073_0_0_0, NULL }, NULL };
-extern const Il2CppType IEnumerator_1_t79816225_0_0_0 = { &IEnumerator_1_t79816225_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass KeyCollection_t1431453759_GenericClass = { 162, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType KeyCollection_t1431453759_0_0_0 = { &KeyCollection_t1431453759_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass ValueCollection_t1030315573_GenericClass = { 164, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType ValueCollection_t1030315573_0_0_0 = { &ValueCollection_t1030315573_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass Enumerator_t3170173716_GenericClass = { 161, { &GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0, NULL }, NULL };
-extern const Il2CppType Enumerator_t3170173716_0_0_0 = { &Enumerator_t3170173716_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
 extern const Il2CppGenericInst GenInst_NetworkPlayer_t4053218959_0_0_0;
 Il2CppGenericClass List_1_t555210632_GenericClass = { 175, { &GenInst_NetworkPlayer_t4053218959_0_0_0, NULL }, NULL };
@@ -24925,6 +24925,15 @@ extern const Il2CppType* const  g_Il2CppTypeTable[11082] =
 	&Enumerator_t3179802105_0_0_0,
 	&IComparer_1_t2701800257_0_0_0,
 	&Comparison_1_t2705767724_0_0_0,
+	&Dictionary_2_t3403145775_0_0_0,
+	&Transform_1_t3095833267_0_0_0,
+	&IDictionary_2_t283844266_0_0_0,
+	&ICollection_1_t2231279257_0_0_0,
+	&KeyValuePair_2_t2891677073_0_0_0,
+	&IEnumerator_1_t79816225_0_0_0,
+	&KeyCollection_t1431453759_0_0_0,
+	&ValueCollection_t1030315573_0_0_0,
+	&Enumerator_t3170173716_0_0_0,
 	&List_1_t748209415_0_0_0,
 	&SceneMonoBehaviour_t4246217742_0_0_0,
 	&IEnumerable_1_t2823404802_0_0_0,
@@ -24961,15 +24970,6 @@ extern const Il2CppType* const  g_Il2CppTypeTable[11082] =
 	&IComparer_1_t2699772427_0_0_0,
 	&Comparison_1_t2703739894_0_0_0,
 	&Action_2_t2455300638_0_0_0,
-	&Dictionary_2_t3403145775_0_0_0,
-	&Transform_1_t3095833267_0_0_0,
-	&IDictionary_2_t283844266_0_0_0,
-	&ICollection_1_t2231279257_0_0_0,
-	&KeyValuePair_2_t2891677073_0_0_0,
-	&IEnumerator_1_t79816225_0_0_0,
-	&KeyCollection_t1431453759_0_0_0,
-	&ValueCollection_t1030315573_0_0_0,
-	&Enumerator_t3170173716_0_0_0,
 	&List_1_t555210632_0_0_0,
 	&NetworkPlayer_t4053218959_0_0_0,
 	&IEnumerable_1_t2630406019_0_0_0,
@@ -32865,12 +32865,14 @@ extern const Il2CppType* const  g_Il2CppTypeTable[11082] =
 	&ResultVO_t4023821238_0_0_0,
 	&List_1_t799051817_0_0_1,
 	&ResultVO_t4023821238_1_0_0,
+	&Dictionary_2_t3403145775_0_0_1,
 	&Player_t2393081601_1_0_0,
 	&CardSelectionHandler_t2914958190_0_0_0,
 	&Text_t3286458198_0_0_6,
 	&Button_t990034267_0_0_6,
 	&RectTransform_t3317474837_0_0_6,
 	&CardSelectionHandler_t2914958190_0_0_1,
+	&List_1_t1765447871_0_0_1,
 	&BridgeDebugger_t2949066474_0_0_0,
 	&BridgeDebugger_t2949066474_1_0_0,
 	&CardSelectionHandler_t2914958190_1_0_0,
@@ -32890,7 +32892,6 @@ extern const Il2CppType* const  g_Il2CppTypeTable[11082] =
 	&MainGame_t55813483_0_0_0,
 	&MainGame_t55813483_1_0_0,
 	&API_t65019_1_0_0,
-	&List_1_t1765447871_0_0_1,
 	&APIHandler_t2277647344_0_0_0,
 	&APIHandler_t2277647344_1_0_0,
 	&NetworkResponse_t1683455087_0_0_4112,
@@ -32904,7 +32905,6 @@ extern const Il2CppType* const  g_Il2CppTypeTable[11082] =
 	&HostSelectedVO_t4056182396_1_0_0,
 	&InitCardsDataVO_t1547396566_0_0_0,
 	&InitCardsDataVO_t1547396566_1_0_0,
-	&Dictionary_2_t3403145775_0_0_1,
 	&RoundResultVO_t2594510628_0_0_0,
 	&RoundResultVO_t2594510628_1_0_0,
 	&RoundVO_t3050121383_0_0_0,

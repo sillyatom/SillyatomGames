@@ -73,6 +73,10 @@ extern "C"  void MultiplayerMainGame_UpdatePlayers_m104739053 (MultiplayerMainGa
 extern "C"  void MultiplayerMainGame_OnGameEvent_m442202237 (MultiplayerMainGame_t4046083237 * __this, GameEvent_t2981166504 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::InitCardsData(GameEvent)
 extern "C"  void MultiplayerMainGame_InitCardsData_m3006629097 (MultiplayerMainGame_t4046083237 * __this, GameEvent_t2981166504 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::DistributeFailedCards(System.Int32,System.Object)
+extern "C"  void MultiplayerMainGame_DistributeFailedCards_m1378212840 (MultiplayerMainGame_t4046083237 * __this, int32_t ___numPlayers, Il2CppObject * ___oArgs, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::OnDistributeAllFailedCards(System.Object)
+extern "C"  void MultiplayerMainGame_OnDistributeAllFailedCards_m821197137 (MultiplayerMainGame_t4046083237 * __this, Il2CppObject * ___oArgs, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::DistributeCards(System.Int32)
 extern "C"  void MultiplayerMainGame_DistributeCards_m772136855 (MultiplayerMainGame_t4046083237 * __this, int32_t ___numPlayers, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::ResetScale(System.Object)

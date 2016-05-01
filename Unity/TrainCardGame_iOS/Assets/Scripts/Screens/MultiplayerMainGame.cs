@@ -57,6 +57,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                     DistributeCards(network.numPlayers);
                 }
                 break;
+            case InGameEvent.START_GAME:
+                {
+                    _roundHandler.StartMatch();
+                }
+                break;
             case InGameEvent.DISPATCH_NEXT_ROUND:
                 {
                     DispatchNextRound();
@@ -129,7 +134,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         if (dealer.HasMatch() && player.DidPullOver)
         {
             vo = dealer.GetResult();
-
             //animation
             float delay = 0.0f;
             foreach (var card in vo.cards)
@@ -199,6 +203,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         {
             Hashtable args = new Hashtable();
             args.Add("Player", player.playerId);
+            args.Add("VO", new ResultVO());
             OnDistributeAllWinningCards(args);   
         }
     }
@@ -416,9 +421,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         float delay = 0.0f;
         float playerDelay = 0.0f;
 
-		foreach (KeyValuePair<string, List<string>> iter in vo.winningCards)
+        foreach (KeyValuePair<string, List<string>> iter in vo.winningCards)
         {
-			Player player = GetPlayerById (iter.Key);
+            Player player = GetPlayerById(iter.Key);
             if (!vo.winningCards.ContainsKey(player.playerId))
             {
                 continue;
@@ -504,8 +509,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         {
             GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
             EventManager.instance.Raise(evt);
+            _roundHandler.StartMatch();
         }
-        _roundHandler.StartMatch();
     }
 
     virtual protected void OnDistributeAnimationComplete(object args)

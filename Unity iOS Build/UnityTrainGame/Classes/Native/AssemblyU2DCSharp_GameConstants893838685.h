@@ -40,6 +40,8 @@ public:
 	float ___SYMBOL_SPACE_3;
 	// System.Single GameConstants::ROUND_TIME
 	float ___ROUND_TIME_4;
+	// System.Single GameConstants::DEALT_CARD_SCALE
+	float ___DEALT_CARD_SCALE_5;
 
 public:
 	inline static int32_t get_offset_of_MIN_PLAYERS_0() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___MIN_PLAYERS_0)); }
@@ -80,6 +82,14 @@ public:
 	inline void set_ROUND_TIME_4(float value)
 	{
 		___ROUND_TIME_4 = value;
+	}
+
+	inline static int32_t get_offset_of_DEALT_CARD_SCALE_5() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___DEALT_CARD_SCALE_5)); }
+	inline float get_DEALT_CARD_SCALE_5() const { return ___DEALT_CARD_SCALE_5; }
+	inline float* get_address_of_DEALT_CARD_SCALE_5() { return &___DEALT_CARD_SCALE_5; }
+	inline void set_DEALT_CARD_SCALE_5(float value)
+	{
+		___DEALT_CARD_SCALE_5 = value;
 	}
 };
 

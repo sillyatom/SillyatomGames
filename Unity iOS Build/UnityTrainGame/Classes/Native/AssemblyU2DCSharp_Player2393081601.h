@@ -24,6 +24,8 @@ struct RectTransform_t3317474837;
 struct CardSelectionHandler_t2914958190;
 // System.Collections.Generic.List`1<Card>
 struct List_1_t799051817;
+// System.Collections.Generic.List`1<System.String>
+struct List_1_t1765447871;
 
 #include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
 #include "UnityEngine_UnityEngine_Vector33525329789.h"
@@ -47,8 +49,8 @@ public:
 	Text_t3286458198 * ___playerName_5;
 	// UnityEngine.UI.Image Player::playerDP
 	Image_t3354615620 * ___playerDP_6;
-	// UnityEngine.UI.Button Player::shoutBtn
-	Button_t990034267 * ___shoutBtn_7;
+	// UnityEngine.UI.Button Player::pullOverBtn
+	Button_t990034267 * ___pullOverBtn_7;
 	// UnityEngine.RectTransform Player::cardsHolder
 	RectTransform_t3317474837 * ___cardsHolder_8;
 	// CardSelectionHandler Player::_cardSelectionHandler
@@ -61,10 +63,14 @@ public:
 	bool ____canDrag_12;
 	// System.Collections.Generic.List`1<Card> Player::_cards
 	List_1_t799051817 * ____cards_13;
+	// System.Collections.Generic.List`1<System.String> Player::_cardsRewarded
+	List_1_t1765447871 * ____cardsRewarded_14;
 	// UnityEngine.Vector3 Player::_rotateAround
-	Vector3_t3525329789  ____rotateAround_14;
+	Vector3_t3525329789  ____rotateAround_15;
 	// UnityEngine.Vector2 Player::_lastMousePosition
-	Vector2_t3525329788  ____lastMousePosition_15;
+	Vector2_t3525329788  ____lastMousePosition_16;
+	// System.Boolean Player::<DidPullOver>k__BackingField
+	bool ___U3CDidPullOverU3Ek__BackingField_17;
 
 public:
 	inline static int32_t get_offset_of_index_3() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___index_3)); }
@@ -102,13 +108,13 @@ public:
 		Il2CppCodeGenWriteBarrier(&___playerDP_6, value);
 	}
 
-	inline static int32_t get_offset_of_shoutBtn_7() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___shoutBtn_7)); }
-	inline Button_t990034267 * get_shoutBtn_7() const { return ___shoutBtn_7; }
-	inline Button_t990034267 ** get_address_of_shoutBtn_7() { return &___shoutBtn_7; }
-	inline void set_shoutBtn_7(Button_t990034267 * value)
+	inline static int32_t get_offset_of_pullOverBtn_7() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___pullOverBtn_7)); }
+	inline Button_t990034267 * get_pullOverBtn_7() const { return ___pullOverBtn_7; }
+	inline Button_t990034267 ** get_address_of_pullOverBtn_7() { return &___pullOverBtn_7; }
+	inline void set_pullOverBtn_7(Button_t990034267 * value)
 	{
-		___shoutBtn_7 = value;
-		Il2CppCodeGenWriteBarrier(&___shoutBtn_7, value);
+		___pullOverBtn_7 = value;
+		Il2CppCodeGenWriteBarrier(&___pullOverBtn_7, value);
 	}
 
 	inline static int32_t get_offset_of_cardsHolder_8() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___cardsHolder_8)); }
@@ -162,20 +168,37 @@ public:
 		Il2CppCodeGenWriteBarrier(&____cards_13, value);
 	}
 
-	inline static int32_t get_offset_of__rotateAround_14() { return static_cast<int32_t>(offsetof(Player_t2393081601, ____rotateAround_14)); }
-	inline Vector3_t3525329789  get__rotateAround_14() const { return ____rotateAround_14; }
-	inline Vector3_t3525329789 * get_address_of__rotateAround_14() { return &____rotateAround_14; }
-	inline void set__rotateAround_14(Vector3_t3525329789  value)
+	inline static int32_t get_offset_of__cardsRewarded_14() { return static_cast<int32_t>(offsetof(Player_t2393081601, ____cardsRewarded_14)); }
+	inline List_1_t1765447871 * get__cardsRewarded_14() const { return ____cardsRewarded_14; }
+	inline List_1_t1765447871 ** get_address_of__cardsRewarded_14() { return &____cardsRewarded_14; }
+	inline void set__cardsRewarded_14(List_1_t1765447871 * value)
 	{
-		____rotateAround_14 = value;
+		____cardsRewarded_14 = value;
+		Il2CppCodeGenWriteBarrier(&____cardsRewarded_14, value);
 	}
 
-	inline static int32_t get_offset_of__lastMousePosition_15() { return static_cast<int32_t>(offsetof(Player_t2393081601, ____lastMousePosition_15)); }
-	inline Vector2_t3525329788  get__lastMousePosition_15() const { return ____lastMousePosition_15; }
-	inline Vector2_t3525329788 * get_address_of__lastMousePosition_15() { return &____lastMousePosition_15; }
-	inline void set__lastMousePosition_15(Vector2_t3525329788  value)
+	inline static int32_t get_offset_of__rotateAround_15() { return static_cast<int32_t>(offsetof(Player_t2393081601, ____rotateAround_15)); }
+	inline Vector3_t3525329789  get__rotateAround_15() const { return ____rotateAround_15; }
+	inline Vector3_t3525329789 * get_address_of__rotateAround_15() { return &____rotateAround_15; }
+	inline void set__rotateAround_15(Vector3_t3525329789  value)
 	{
-		____lastMousePosition_15 = value;
+		____rotateAround_15 = value;
+	}
+
+	inline static int32_t get_offset_of__lastMousePosition_16() { return static_cast<int32_t>(offsetof(Player_t2393081601, ____lastMousePosition_16)); }
+	inline Vector2_t3525329788  get__lastMousePosition_16() const { return ____lastMousePosition_16; }
+	inline Vector2_t3525329788 * get_address_of__lastMousePosition_16() { return &____lastMousePosition_16; }
+	inline void set__lastMousePosition_16(Vector2_t3525329788  value)
+	{
+		____lastMousePosition_16 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CDidPullOverU3Ek__BackingField_17() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___U3CDidPullOverU3Ek__BackingField_17)); }
+	inline bool get_U3CDidPullOverU3Ek__BackingField_17() const { return ___U3CDidPullOverU3Ek__BackingField_17; }
+	inline bool* get_address_of_U3CDidPullOverU3Ek__BackingField_17() { return &___U3CDidPullOverU3Ek__BackingField_17; }
+	inline void set_U3CDidPullOverU3Ek__BackingField_17(bool value)
+	{
+		___U3CDidPullOverU3Ek__BackingField_17 = value;
 	}
 };
 

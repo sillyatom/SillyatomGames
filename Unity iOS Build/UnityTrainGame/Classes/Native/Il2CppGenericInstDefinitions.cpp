@@ -1514,6 +1514,16 @@ extern const Il2CppGenericInst GenInst_InGameEvent_t511087107_0_0_0 = { 1, GenIn
 extern const Il2CppType Card_t2092848_0_0_0;
 static const Il2CppType* GenInst_Card_t2092848_0_0_0_Types[] = { &Card_t2092848_0_0_0 };
 extern const Il2CppGenericInst GenInst_Card_t2092848_0_0_0 = { 1, GenInst_Card_t2092848_0_0_0_Types };
+extern const Il2CppType List_1_t1765447871_0_0_0;
+static const Il2CppType* GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_Types[] = { &String_t_0_0_0, &List_1_t1765447871_0_0_0 };
+extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0 = { 2, GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_Types };
+static const Il2CppType* GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0_Types[] = { &String_t_0_0_0, &List_1_t1765447871_0_0_0, &DictionaryEntry_t130027246_0_0_0 };
+extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0 = { 3, GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0_Types };
+static const Il2CppType* GenInst_List_1_t1765447871_0_0_0_Types[] = { &List_1_t1765447871_0_0_0 };
+extern const Il2CppGenericInst GenInst_List_1_t1765447871_0_0_0 = { 1, GenInst_List_1_t1765447871_0_0_0_Types };
+extern const Il2CppType KeyValuePair_2_t2891677073_0_0_0;
+static const Il2CppType* GenInst_KeyValuePair_2_t2891677073_0_0_0_Types[] = { &KeyValuePair_2_t2891677073_0_0_0 };
+extern const Il2CppGenericInst GenInst_KeyValuePair_2_t2891677073_0_0_0 = { 1, GenInst_KeyValuePair_2_t2891677073_0_0_0_Types };
 extern const Il2CppType SceneMonoBehaviour_t4246217742_0_0_0;
 static const Il2CppType* GenInst_SceneMonoBehaviour_t4246217742_0_0_0_Types[] = { &SceneMonoBehaviour_t4246217742_0_0_0 };
 extern const Il2CppGenericInst GenInst_SceneMonoBehaviour_t4246217742_0_0_0 = { 1, GenInst_SceneMonoBehaviour_t4246217742_0_0_0_Types };
@@ -1525,16 +1535,6 @@ static const Il2CppType* GenInst_API_t65019_0_0_0_Types[] = { &API_t65019_0_0_0 
 extern const Il2CppGenericInst GenInst_API_t65019_0_0_0 = { 1, GenInst_API_t65019_0_0_0_Types };
 static const Il2CppType* GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t1683455087_0_0_0_Types[] = { &Int32_t2847414787_0_0_0, &NetworkResponse_t1683455087_0_0_0 };
 extern const Il2CppGenericInst GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t1683455087_0_0_0 = { 2, GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t1683455087_0_0_0_Types };
-extern const Il2CppType List_1_t1765447871_0_0_0;
-static const Il2CppType* GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_Types[] = { &String_t_0_0_0, &List_1_t1765447871_0_0_0 };
-extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0 = { 2, GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_Types };
-static const Il2CppType* GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0_Types[] = { &String_t_0_0_0, &List_1_t1765447871_0_0_0, &DictionaryEntry_t130027246_0_0_0 };
-extern const Il2CppGenericInst GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0 = { 3, GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0_Types };
-static const Il2CppType* GenInst_List_1_t1765447871_0_0_0_Types[] = { &List_1_t1765447871_0_0_0 };
-extern const Il2CppGenericInst GenInst_List_1_t1765447871_0_0_0 = { 1, GenInst_List_1_t1765447871_0_0_0_Types };
-extern const Il2CppType KeyValuePair_2_t2891677073_0_0_0;
-static const Il2CppType* GenInst_KeyValuePair_2_t2891677073_0_0_0_Types[] = { &KeyValuePair_2_t2891677073_0_0_0 };
-extern const Il2CppGenericInst GenInst_KeyValuePair_2_t2891677073_0_0_0 = { 1, GenInst_KeyValuePair_2_t2891677073_0_0_0_Types };
 extern const Il2CppType NetworkPlayer_t4053218959_0_0_0;
 static const Il2CppType* GenInst_NetworkPlayer_t4053218959_0_0_0_Types[] = { &NetworkPlayer_t4053218959_0_0_0 };
 extern const Il2CppGenericInst GenInst_NetworkPlayer_t4053218959_0_0_0 = { 1, GenInst_NetworkPlayer_t4053218959_0_0_0_Types };
@@ -3630,14 +3630,14 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1117] =
 	&GenInst_GameEvent_t2981166504_0_0_0,
 	&GenInst_InGameEvent_t511087107_0_0_0,
 	&GenInst_Card_t2092848_0_0_0,
-	&GenInst_SceneMonoBehaviour_t4246217742_0_0_0,
-	&GenInst_ExtMonoBehaviour_t2624599193_0_0_0,
-	&GenInst_API_t65019_0_0_0,
-	&GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t1683455087_0_0_0,
 	&GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0,
 	&GenInst_String_t_0_0_0_List_1_t1765447871_0_0_0_DictionaryEntry_t130027246_0_0_0,
 	&GenInst_List_1_t1765447871_0_0_0,
 	&GenInst_KeyValuePair_2_t2891677073_0_0_0,
+	&GenInst_SceneMonoBehaviour_t4246217742_0_0_0,
+	&GenInst_ExtMonoBehaviour_t2624599193_0_0_0,
+	&GenInst_API_t65019_0_0_0,
+	&GenInst_Int32_t2847414787_0_0_0_NetworkResponse_t1683455087_0_0_0,
 	&GenInst_NetworkPlayer_t4053218959_0_0_0,
 	&GenInst_NetworkResponse_t1683455087_0_0_0,
 	&GenInst_Player_t2393081601_0_0_0,

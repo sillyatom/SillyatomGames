@@ -12,6 +12,8 @@
 
 // System.Collections.Generic.List`1<Card>
 struct List_1_t799051817;
+// System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>
+struct Dictionary_2_t3403145775;
 
 #include "mscorlib_System_Object837106420.h"
 
@@ -31,6 +33,8 @@ public:
 	int32_t ___U3CstartIndexU3Ek__BackingField_1;
 	// System.Collections.Generic.List`1<Card> ResultVO::<cards>k__BackingField
 	List_1_t799051817 * ___U3CcardsU3Ek__BackingField_2;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>> ResultVO::<winningCards>k__BackingField
+	Dictionary_2_t3403145775 * ___U3CwinningCardsU3Ek__BackingField_3;
 
 public:
 	inline static int32_t get_offset_of_U3CcountU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(ResultVO_t4023821238, ___U3CcountU3Ek__BackingField_0)); }
@@ -56,6 +60,15 @@ public:
 	{
 		___U3CcardsU3Ek__BackingField_2 = value;
 		Il2CppCodeGenWriteBarrier(&___U3CcardsU3Ek__BackingField_2, value);
+	}
+
+	inline static int32_t get_offset_of_U3CwinningCardsU3Ek__BackingField_3() { return static_cast<int32_t>(offsetof(ResultVO_t4023821238, ___U3CwinningCardsU3Ek__BackingField_3)); }
+	inline Dictionary_2_t3403145775 * get_U3CwinningCardsU3Ek__BackingField_3() const { return ___U3CwinningCardsU3Ek__BackingField_3; }
+	inline Dictionary_2_t3403145775 ** get_address_of_U3CwinningCardsU3Ek__BackingField_3() { return &___U3CwinningCardsU3Ek__BackingField_3; }
+	inline void set_U3CwinningCardsU3Ek__BackingField_3(Dictionary_2_t3403145775 * value)
+	{
+		___U3CwinningCardsU3Ek__BackingField_3 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CwinningCardsU3Ek__BackingField_3, value);
 	}
 };
 

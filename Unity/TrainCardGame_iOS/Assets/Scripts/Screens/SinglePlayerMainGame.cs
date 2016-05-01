@@ -43,7 +43,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                 if (player.index == index)
                 {
                     player.playerId = index.ToString();
-                    player.playerName.text = "Name:" + index.ToString();
+                    player.playerName.text = "Player " + index.ToString();
                     player.Init();
                     _players.Add(player);
                     break;

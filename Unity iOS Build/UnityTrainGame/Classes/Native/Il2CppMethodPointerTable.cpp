@@ -13898,6 +13898,8 @@ extern "C" void MultiplayerMainGame_DispatchCardsData_m706330263 ();
 extern "C" void MultiplayerMainGame_UpdatePlayers_m104739053 ();
 extern "C" void MultiplayerMainGame_OnGameEvent_m442202237 ();
 extern "C" void MultiplayerMainGame_InitCardsData_m3006629097 ();
+extern "C" void MultiplayerMainGame_DistributeFailedCards_m1378212840 ();
+extern "C" void MultiplayerMainGame_OnDistributeAllFailedCards_m821197137 ();
 extern "C" void MultiplayerMainGame_DistributeCards_m772136855 ();
 extern "C" void MultiplayerMainGame_ResetScale_m3709387099 ();
 extern "C" void MultiplayerMainGame_OnDistributeAllCards_m4252258592 ();
@@ -15904,19 +15906,24 @@ extern "C" void ValidationUtils_ArgumentConditionTrue_m3530257957 ();
 extern "C" void Player__ctor_m871706298 ();
 extern "C" void Player_get_CardSelectionHandler_m97634160 ();
 extern "C" void Player_get_Cards_m2643897007 ();
+extern "C" void Player_get_CardsRewarded_m1644079663 ();
+extern "C" void Player_set_CardsRewarded_m3167286272 ();
+extern "C" void Player_get_DidPullOver_m1102557715 ();
+extern "C" void Player_set_DidPullOver_m4156915338 ();
 extern "C" void Player_get_SelectedCardValueType_m3899190188 ();
 extern "C" void Player_get_SelectedCard_m249687851 ();
 extern "C" void Player_get_GetCardsValueType_m1254267132 ();
 extern "C" void Player_GetCardByValueType_m2104611901 ();
 extern "C" void Player_get_IsLocalPlayer_m840128861 ();
+extern "C" void Player_OnRoundStart_m4031893565 ();
 extern "C" void Player_Init_m3304792154 ();
 extern "C" void Player_AddCard_m2388479993 ();
 extern "C" void Player_RemoveCardWithValue_m2478900832 ();
 extern "C" void Player_SetSelectedCard_m1287222901 ();
 extern "C" void Player_AutoDeal_m2757988037 ();
-extern "C" void Player_OnRoundResult_m2111082430 ();
+extern "C" void Player_OnRoundResult_m2417922047 ();
 extern "C" void Player_OnRoundEnd_m3267062006 ();
-extern "C" void Player_OnShout_m3242061266 ();
+extern "C" void Player_OnPullOver_m568651330 ();
 extern "C" void Player_UpdateAngle_m3770627913 ();
 extern "C" void Player_UpdateCardsPosition_m1738611259 ();
 extern "C" void Player_CalculateCardsHolderBounds_m1279546019 ();
@@ -15929,6 +15936,9 @@ extern "C" void ResultVO_set_startIndex_m2397683965 ();
 extern "C" void ResultVO_get_hasMatch_m20929191 ();
 extern "C" void ResultVO_get_cards_m1913580282 ();
 extern "C" void ResultVO_set_cards_m3628560153 ();
+extern "C" void ResultVO_get_winningCards_m2091815133 ();
+extern "C" void ResultVO_set_winningCards_m625555250 ();
+extern "C" void ResultVO_GetCardWithValueType_m3773938007 ();
 extern "C" void RoundHandler__ctor_m1935710239 ();
 extern "C" void RoundHandler__cctor_m3690346350 ();
 extern "C" void RoundHandler_get_OnRoundCompleteCallback_m3342306211 ();
@@ -15952,6 +15962,10 @@ extern "C" void RoundResultVO_get_cardValueType_m826512602 ();
 extern "C" void RoundResultVO_set_cardValueType_m2111050591 ();
 extern "C" void RoundResultVO_get_roundId_m3715032435 ();
 extern "C" void RoundResultVO_set_roundId_m4084278850 ();
+extern "C" void RoundResultVO_get_didPullOver_m3431748840 ();
+extern "C" void RoundResultVO_set_didPullOver_m1798136759 ();
+extern "C" void RoundResultVO_get_winningCards_m3857848247 ();
+extern "C" void RoundResultVO_set_winningCards_m1959232980 ();
 extern "C" void RoundVO__ctor_m143774372 ();
 extern "C" void RoundVO_get_roundId_m1406987792 ();
 extern "C" void RoundVO_set_roundId_m1649707231 ();
@@ -16061,7 +16075,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16050] = 
+extern const methodPointerType g_MethodPointers[16064] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -29950,6 +29964,8 @@ extern const methodPointerType g_MethodPointers[16050] =
 	MultiplayerMainGame_UpdatePlayers_m104739053,
 	MultiplayerMainGame_OnGameEvent_m442202237,
 	MultiplayerMainGame_InitCardsData_m3006629097,
+	MultiplayerMainGame_DistributeFailedCards_m1378212840,
+	MultiplayerMainGame_OnDistributeAllFailedCards_m821197137,
 	MultiplayerMainGame_DistributeCards_m772136855,
 	MultiplayerMainGame_ResetScale_m3709387099,
 	MultiplayerMainGame_OnDistributeAllCards_m4252258592,
@@ -31956,19 +31972,24 @@ extern const methodPointerType g_MethodPointers[16050] =
 	Player__ctor_m871706298,
 	Player_get_CardSelectionHandler_m97634160,
 	Player_get_Cards_m2643897007,
+	Player_get_CardsRewarded_m1644079663,
+	Player_set_CardsRewarded_m3167286272,
+	Player_get_DidPullOver_m1102557715,
+	Player_set_DidPullOver_m4156915338,
 	Player_get_SelectedCardValueType_m3899190188,
 	Player_get_SelectedCard_m249687851,
 	Player_get_GetCardsValueType_m1254267132,
 	Player_GetCardByValueType_m2104611901,
 	Player_get_IsLocalPlayer_m840128861,
+	Player_OnRoundStart_m4031893565,
 	Player_Init_m3304792154,
 	Player_AddCard_m2388479993,
 	Player_RemoveCardWithValue_m2478900832,
 	Player_SetSelectedCard_m1287222901,
 	Player_AutoDeal_m2757988037,
-	Player_OnRoundResult_m2111082430,
+	Player_OnRoundResult_m2417922047,
 	Player_OnRoundEnd_m3267062006,
-	Player_OnShout_m3242061266,
+	Player_OnPullOver_m568651330,
 	Player_UpdateAngle_m3770627913,
 	Player_UpdateCardsPosition_m1738611259,
 	Player_CalculateCardsHolderBounds_m1279546019,
@@ -31981,6 +32002,9 @@ extern const methodPointerType g_MethodPointers[16050] =
 	ResultVO_get_hasMatch_m20929191,
 	ResultVO_get_cards_m1913580282,
 	ResultVO_set_cards_m3628560153,
+	ResultVO_get_winningCards_m2091815133,
+	ResultVO_set_winningCards_m625555250,
+	ResultVO_GetCardWithValueType_m3773938007,
 	RoundHandler__ctor_m1935710239,
 	RoundHandler__cctor_m3690346350,
 	RoundHandler_get_OnRoundCompleteCallback_m3342306211,
@@ -32004,6 +32028,10 @@ extern const methodPointerType g_MethodPointers[16050] =
 	RoundResultVO_set_cardValueType_m2111050591,
 	RoundResultVO_get_roundId_m3715032435,
 	RoundResultVO_set_roundId_m4084278850,
+	RoundResultVO_get_didPullOver_m3431748840,
+	RoundResultVO_set_didPullOver_m1798136759,
+	RoundResultVO_get_winningCards_m3857848247,
+	RoundResultVO_set_winningCards_m1959232980,
 	RoundVO__ctor_m143774372,
 	RoundVO_get_roundId_m1406987792,
 	RoundVO_set_roundId_m1649707231,

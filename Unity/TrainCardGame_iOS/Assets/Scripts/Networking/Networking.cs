@@ -125,7 +125,7 @@ public class Networking : ExtMonoBehaviour
         {
             NetworkPlayer player = new NetworkPlayer();
             player.PlayerId = index.ToString();
-            player.Name = "player" + player.PlayerId;
+            player.Name = "Player " + player.PlayerId;
             _players.Add(player);
         }
 

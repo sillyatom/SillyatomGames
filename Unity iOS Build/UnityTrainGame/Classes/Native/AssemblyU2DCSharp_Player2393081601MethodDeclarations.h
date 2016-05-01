@@ -18,12 +18,12 @@ struct Player_t2393081601;
 struct CardSelectionHandler_t2914958190;
 // System.Collections.Generic.List`1<Card>
 struct List_1_t799051817;
+// System.Collections.Generic.List`1<System.String>
+struct List_1_t1765447871;
 // System.String
 struct String_t;
 // Card
 struct Card_t2092848;
-// System.Collections.Generic.List`1<System.String>
-struct List_1_t1765447871;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_String968488902.h"
@@ -36,6 +36,14 @@ extern "C"  void Player__ctor_m871706298 (Player_t2393081601 * __this, const Met
 extern "C"  CardSelectionHandler_t2914958190 * Player_get_CardSelectionHandler_m97634160 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.Generic.List`1<Card> Player::get_Cards()
 extern "C"  List_1_t799051817 * Player_get_Cards_m2643897007 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.Generic.List`1<System.String> Player::get_CardsRewarded()
+extern "C"  List_1_t1765447871 * Player_get_CardsRewarded_m1644079663 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::set_CardsRewarded(System.Collections.Generic.List`1<System.String>)
+extern "C"  void Player_set_CardsRewarded_m3167286272 (Player_t2393081601 * __this, List_1_t1765447871 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean Player::get_DidPullOver()
+extern "C"  bool Player_get_DidPullOver_m1102557715 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::set_DidPullOver(System.Boolean)
+extern "C"  void Player_set_DidPullOver_m4156915338 (Player_t2393081601 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String Player::get_SelectedCardValueType()
 extern "C"  String_t* Player_get_SelectedCardValueType_m3899190188 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Card Player::get_SelectedCard()
@@ -46,6 +54,8 @@ extern "C"  List_1_t1765447871 * Player_get_GetCardsValueType_m1254267132 (Playe
 extern "C"  Card_t2092848 * Player_GetCardByValueType_m2104611901 (Player_t2393081601 * __this, String_t* ___valueType, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Player::get_IsLocalPlayer()
 extern "C"  bool Player_get_IsLocalPlayer_m840128861 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::OnRoundStart()
+extern "C"  void Player_OnRoundStart_m4031893565 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::Init()
 extern "C"  void Player_Init_m3304792154 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::AddCard(Card)
@@ -56,12 +66,12 @@ extern "C"  Card_t2092848 * Player_RemoveCardWithValue_m2478900832 (Player_t2393
 extern "C"  void Player_SetSelectedCard_m1287222901 (Player_t2393081601 * __this, Card_t2092848 * ___card, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::AutoDeal()
 extern "C"  void Player_AutoDeal_m2757988037 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Player::OnRoundResult(System.String)
-extern "C"  void Player_OnRoundResult_m2111082430 (Player_t2393081601 * __this, String_t* ___cardValueType, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::OnRoundResult(System.String,System.Boolean)
+extern "C"  void Player_OnRoundResult_m2417922047 (Player_t2393081601 * __this, String_t* ___cardValueType, bool ___didPullOver, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::OnRoundEnd()
 extern "C"  void Player_OnRoundEnd_m3267062006 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Player::OnShout()
-extern "C"  void Player_OnShout_m3242061266 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::OnPullOver()
+extern "C"  void Player_OnPullOver_m568651330 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::UpdateAngle(System.Single)
 extern "C"  void Player_UpdateAngle_m3770627913 (Player_t2393081601 * __this, float ___startAngle, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::UpdateCardsPosition()
