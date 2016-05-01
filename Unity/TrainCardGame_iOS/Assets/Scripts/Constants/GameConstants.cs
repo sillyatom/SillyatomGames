@@ -10,4 +10,6 @@ public class GameConstants
     public static float SYMBOL_SPACE = 0.0f;
 
     public static float ROUND_TIME = 1.0f;
+
+    public static float DEALT_CARD_SCALE = 1.0f;
 }

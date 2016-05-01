@@ -63,6 +63,7 @@ public class Dealer : ExtMonoBehaviour
         for (int index = 0; index < GetDeckSize(); index++)
         {
             Vector3 pos = GetPositionForIndex(index);
+            pos.y -= _cards[index].GetComponent<RectTransform>().rect.height * 0.5f;
             MoveCardToPosition(_cards[index], pos, 1.0f);
         }
 
