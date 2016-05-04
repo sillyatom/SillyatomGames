@@ -8,7 +8,7 @@ public class SceneTransitionManager : SceneMonoBehaviour
     public RectTransform startScreen;
     public List<RectTransform> screens;
 
-    private int SPACE = 200;
+    private int SPACE = 2000;
 
     public override void Init()
     {

@@ -1,13 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Screens\MultiplayerMainGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Handlers\BridgeDebugger.cs">
     <Files>
-      <File FileName="Assets\Scripts\Screens\MultiplayerMainGame.cs" Line="424" Column="26" />
-      <File FileName="Assets\Scripts\Screens\SinglePlayerMainGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameElements\Player.cs" Line="193" Column="21" />
-      <File FileName="Assets\Scripts\GameElements\Dealer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Constants\GameConstants.cs" Line="8" Column="2" />
-      <File FileName="Assets\Scripts\Handlers\BridgeDebugger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Screens\SinglePlayerMainGame.cs" Line="135" Column="51" />
+      <File FileName="Assets\Scripts\Screens\MultiplayerMainGame.cs" Line="89" Column="5" />
+      <File FileName="Assets\Scripts\Constants\GameConstants.cs" Line="12" Column="39" />
+      <File FileName="Assets\Scripts\Utility\Utility.cs" Line="27" Column="22" />
+      <File FileName="Assets\Scripts\Handlers\BridgeDebugger.cs" Line="24" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

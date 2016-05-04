@@ -132,7 +132,11 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     override protected void OnRoundEnd()
     {
         Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
-
+		if (_roundHandler.GetActivePlayerId != network.LocalId) 
+		{
+			player.DidPullOver = (Utility.GetRandomNumber (0, 100) >= 90);
+		}
+		Debug.Log ("player.DidPullOver " + player.DidPullOver);
         Card selectedCard = player.SelectedCard;
         //if player has not selected a card
         if (selectedCard == null)

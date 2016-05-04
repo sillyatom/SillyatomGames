@@ -216,7 +216,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         card.transform.SetParent(player.cardsHolder.transform);
         player.AddCard(card);
-        card.ShowBackFace();
+		#if !DEBUG
+        	card.ShowBackFace();
+		#else
+			card.ShowFrontFace();
+		#endif
         card.transform.localScale = Vector3.one;
         if (player.IsLocalPlayer)
         {
@@ -518,7 +522,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable hash = (Hashtable)(args);
         Player player = (Player)hash["player"];
         Card card = (Card)hash["card"];
-        card.ShowBackFace();
+		#if !DEBUG
+        	card.ShowBackFace();
+		#else
+			card.ShowFrontFace();
+		#endif
         //swap parent
         RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
         rectTransform.SetParent(player.cardsHolder);
