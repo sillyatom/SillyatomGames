@@ -231,6 +231,13 @@ public class Networking : ExtMonoBehaviour
                     Acknowledge();
                 }
                 break;
+            case NetworkConstants.API.DETERMINING_HOST:
+                {
+                    GameEvent gEvent = new GameEvent(GameEvent.DETERMINING_HOST);
+                    EventManager.instance.Raise(gEvent);
+                    Acknowledge();
+                }
+                break;
             case NetworkConstants.API.MATCH_STARTED:
                 {
                     GameEvent gEvent = new GameEvent(GameEvent.MATCH_STARTED, response);

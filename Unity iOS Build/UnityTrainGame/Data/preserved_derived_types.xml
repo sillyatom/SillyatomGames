@@ -15,11 +15,13 @@
 <type fullname="Player" preserve="all"/>
 <type fullname="CardSelectionHandler" preserve="all"/>
 <type fullname="ExecutionOrderManager" preserve="all"/>
+<type fullname="PopupManager" preserve="all"/>
 <type fullname="RoundHandler" preserve="all"/>
 <type fullname="SceneTransitionManager" preserve="all"/>
 <type fullname="SpinHandler" preserve="all"/>
 <type fullname="MainGame" preserve="all"/>
 <type fullname="Networking" preserve="all"/>
+<type fullname="GenericPopup" preserve="all"/>
 <type fullname="MainScreen" preserve="all"/>
 <type fullname="MatchSelectionScreen" preserve="all"/>
 <type fullname="MultiplayerMainGame" preserve="all"/>

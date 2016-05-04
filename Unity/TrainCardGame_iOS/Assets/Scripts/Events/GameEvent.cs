@@ -5,6 +5,7 @@ public class GameEvent
 {
     public const string GC_AUTH_SUCCESS = "gc_auth_success";
     public const string GC_AUTH_FAILED = "gc_auth_failed";
+    public const string DETERMINING_HOST = "gc_determining_host";
     public const string MATCH_STARTED = "gc_match_started";
     public const string HOST_DATA = "host_data";
     public const string ACKNOWLEDGE = "acknowledge";

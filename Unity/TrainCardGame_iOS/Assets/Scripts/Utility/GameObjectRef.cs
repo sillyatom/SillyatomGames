@@ -14,4 +14,7 @@ public class GameObjectRef : MonoBehaviour
 
     [SerializeField]
     public APIHandler apiHandler;
+
+    [SerializeField]
+    public PopupManager popupManager;
 }

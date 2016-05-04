@@ -7,6 +7,7 @@ public class NetworkConstants
     {
         GAME_CENTER_AUTH_SUCCESS = 0,
         GAME_CENTER_AUTH_FAILED = 1,
+        DETERMINING_HOST = 7,
         MATCH_STARTED = 2,
         HOST_DATA = 3,
         CARDS_DATA = 4,

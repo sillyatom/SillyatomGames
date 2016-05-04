@@ -83,8 +83,13 @@ public class MatchSelectionScreen : SceneMonoBehaviour
 
     override protected void OnGameEvent(GameEvent gEvent)
     {
-        if (gEvent.type == GameEvent.MATCH_STARTED)
+        if (gEvent.type == GameEvent.DETERMINING_HOST)
         {
+            SingletonManager.reference.popupManager.CreateGenericPopup("Host Selection", "Determining Host...");
+        }
+        else if (gEvent.type == GameEvent.MATCH_STARTED)
+        {
+            SingletonManager.reference.popupManager.RemoveActivePopup();
             MoveToScene(TagConstants.TAG_MAIN_GAME, true);
         }
     }

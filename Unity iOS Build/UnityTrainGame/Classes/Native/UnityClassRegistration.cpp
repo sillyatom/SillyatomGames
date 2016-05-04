@@ -12,6 +12,9 @@ void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_Audio();
 	RegisterModule_Audio();
 
+	void RegisterModule_ParticleSystem();
+	RegisterModule_ParticleSystem();
+
 	void RegisterModule_Physics();
 	RegisterModule_Physics();
 
@@ -31,7 +34,7 @@ void RegisterStaticallyLinkedModulesGranular()
 
 void RegisterAllClasses()
 {
-	//Total: 71 classes
+	//Total: 72 classes
 	//0. Mesh
 	void RegisterClass_Mesh();
 	RegisterClass_Mesh();
@@ -256,63 +259,67 @@ void RegisterAllClasses()
 	void RegisterClass_TagManager();
 	RegisterClass_TagManager();
 
-	//56. AudioListener
-	void RegisterClass_AudioListener();
-	RegisterClass_AudioListener();
-
-	//57. ScriptMapper
+	//56. ScriptMapper
 	void RegisterClass_ScriptMapper();
 	RegisterClass_ScriptMapper();
 
-	//58. DelayedCallManager
+	//57. DelayedCallManager
 	void RegisterClass_DelayedCallManager();
 	RegisterClass_DelayedCallManager();
 
-	//59. RenderSettings
+	//58. RenderSettings
 	void RegisterClass_RenderSettings();
 	RegisterClass_RenderSettings();
 
-	//60. Animation
+	//59. Animation
 	void RegisterClass_Animation();
 	RegisterClass_Animation();
 
-	//61. MonoScript
+	//60. MonoScript
 	void RegisterClass_MonoScript();
 	RegisterClass_MonoScript();
 
-	//62. MonoManager
+	//61. MonoManager
 	void RegisterClass_MonoManager();
 	RegisterClass_MonoManager();
 
-	//63. FlareLayer
+	//62. FlareLayer
 	void RegisterClass_FlareLayer();
 	RegisterClass_FlareLayer();
 
-	//64. PlayerSettings
+	//63. PlayerSettings
 	void RegisterClass_PlayerSettings();
 	RegisterClass_PlayerSettings();
 
-	//65. BuildSettings
+	//64. BuildSettings
 	void RegisterClass_BuildSettings();
 	RegisterClass_BuildSettings();
 
-	//66. ResourceManager
+	//65. ResourceManager
 	void RegisterClass_ResourceManager();
 	RegisterClass_ResourceManager();
 
-	//67. NetworkManager
+	//66. NetworkManager
 	void RegisterClass_NetworkManager();
 	RegisterClass_NetworkManager();
 
-	//68. MasterServerInterface
+	//67. MasterServerInterface
 	void RegisterClass_MasterServerInterface();
 	RegisterClass_MasterServerInterface();
 
-	//69. LightmapSettings
+	//68. LightmapSettings
 	void RegisterClass_LightmapSettings();
 	RegisterClass_LightmapSettings();
 
-	//70. RuntimeInitializeOnLoadManager
+	//69. ParticleSystem
+	void RegisterClass_ParticleSystem();
+	RegisterClass_ParticleSystem();
+
+	//70. ParticleSystemRenderer
+	void RegisterClass_ParticleSystemRenderer();
+	RegisterClass_ParticleSystemRenderer();
+
+	//71. RuntimeInitializeOnLoadManager
 	void RegisterClass_RuntimeInitializeOnLoadManager();
 	RegisterClass_RuntimeInitializeOnLoadManager();
 

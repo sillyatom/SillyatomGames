@@ -18,6 +18,8 @@ struct CardSelectionHandler_t2914958190;
 struct Networking_t1515242260;
 // APIHandler
 struct APIHandler_t2277647344;
+// PopupManager
+struct PopupManager_t2711269761;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -39,6 +41,8 @@ public:
 	Networking_t1515242260 * ___network_4;
 	// APIHandler GameObjectRef::apiHandler
 	APIHandler_t2277647344 * ___apiHandler_5;
+	// PopupManager GameObjectRef::popupManager
+	PopupManager_t2711269761 * ___popupManager_6;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -75,6 +79,15 @@ public:
 	{
 		___apiHandler_5 = value;
 		Il2CppCodeGenWriteBarrier(&___apiHandler_5, value);
+	}
+
+	inline static int32_t get_offset_of_popupManager_6() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___popupManager_6)); }
+	inline PopupManager_t2711269761 * get_popupManager_6() const { return ___popupManager_6; }
+	inline PopupManager_t2711269761 ** get_address_of_popupManager_6() { return &___popupManager_6; }
+	inline void set_popupManager_6(PopupManager_t2711269761 * value)
+	{
+		___popupManager_6 = value;
+		Il2CppCodeGenWriteBarrier(&___popupManager_6, value);
 	}
 };
 

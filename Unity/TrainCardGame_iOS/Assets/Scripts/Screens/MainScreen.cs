@@ -22,6 +22,7 @@ public class MainScreen : SceneMonoBehaviour
             gEvent.type == GameEvent.GC_AUTH_SUCCESS
             || gEvent.type == GameEvent.GC_AUTH_FAILED)
         {
+            SingletonManager.reference.popupManager.RemoveActivePopup();
             MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
         }
     }
@@ -31,8 +32,10 @@ public class MainScreen : SceneMonoBehaviour
         #if UNITY_EDITOR
         MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
         #else
+        SingletonManager.reference.popupManager.CreateGenericPopup("Connecting", "Signing in Game Center");
         authenticateLocalPlayer();
         #endif
         playBtn.enabled = false;
     }
+
 }

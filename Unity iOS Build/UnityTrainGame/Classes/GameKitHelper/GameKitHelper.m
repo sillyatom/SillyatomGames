@@ -6,6 +6,7 @@
 //
 //
 #import "GameKitHelper.h"
+#import "../UnityAppController.h"
 
 @implementation GameKitHelper
 
@@ -178,6 +179,15 @@ BOOL _matchStarted;
     self.match = match;
     match.delegate = self;
     [self startMatch];
+    
+    NSError * error;
+    
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
+    [dict setValue:[NSNumber numberWithUnsignedInt:7] forKey:@"api"];
+    
+    NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    UnityAppController* ctrller = (UnityAppController*)[UIApplication sharedApplication].delegate;
+    [ctrller sendGameEvent:data api:7];
 }
 
 - (void) lookUpPlayers
