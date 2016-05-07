@@ -111,20 +111,24 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         {
             Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDealComplete", args, 0.2f, delay);
         }
+
+		if (player.IsLocalPlayer)
+		{
+			player.UpdateCardsPosition();
+		}
     }
 
     private void OnDealComplete(object pArgs)
     {
-        Hashtable args = (Hashtable)(pArgs);
-        Player player = (Player)(args["Player"]);
-        if (player.IsLocalPlayer)
-        {
-            player.UpdateCardsPosition();
-        }
+        //Hashtable args = (Hashtable)(pArgs);
+        //Player player = (Player)(args["Player"]);
     }
 
     private void OnAutoDealAnimationComplete(object pArgs)
     {
+		//Hashtable args = (Hashtable)(pArgs);
+		//Player player = (Player)(args["Player"]);
+
         CheckWinnings();
     }
 
@@ -444,6 +448,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
+				args.Add ("canUpdatePos", true);
+				args.Add ("canAddCard", true);
 
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
@@ -466,7 +472,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     virtual protected void OnDistributeAllFailedCards(object oArgs)
     {
         Hashtable args = (Hashtable)(oArgs);
-        GetLocalPlayer.UpdateCardsPosition();
+		GetLocalPlayer.UpdateCardsPosition ();
         OnDistributeAllWinningCards(args);
     }
 
@@ -484,7 +490,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
-
+				args.Add ("canUpdatePos", false);
+				args.Add ("canAddCard", false);
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
                 if (!isLocal)
@@ -526,6 +533,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable hash = (Hashtable)(args);
         Player player = (Player)hash["player"];
         Card card = (Card)hash["card"];
+		bool canUpdate = (bool)hash["canUpdatePos"];
+		bool canAdd = (bool)hash["canAddCard"];
+
         #if !CAN_SHOW_FRONT_FACE
         card.ShowBackFace();
         #else
@@ -536,6 +546,17 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.SetParent(player.cardsHolder);
         rectTransform.localScale = Vector3.one;
         rectTransform.position = player.cardsHolder.position;
+		if (canAdd) 
+		{
+			player.AddCard (card);
+		}
+		if (canUpdate) 
+		{
+			if (player.IsLocalPlayer) 
+			{
+				player.UpdateCardsPosition ();
+			}
+		}		
     }
 
     virtual protected void DispatchNextRound()
