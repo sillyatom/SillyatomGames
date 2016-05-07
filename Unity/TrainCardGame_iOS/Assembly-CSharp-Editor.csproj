@@ -48,6 +48,7 @@
      <Compile Include="Assets\Editor\PostBuildProcessor.cs" />
      <None Include="Assets\Resources\Images\GUI\Button.png.txt" />
      <None Include="Assets\Resources\Fonts\flubber\Flubber.txt" />
+     <None Include="Assets\Resources\Fonts\alpine\1001fonts-alpine-eula.txt" />
      <None Include="Assets\Resources\Fonts\blow\readme.txt" />
      <None Include="Assets\JsonDotNet\ReadMe.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
