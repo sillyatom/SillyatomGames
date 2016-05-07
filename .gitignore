@@ -32,3 +32,9 @@ ehthumbs.db
 [Tt]humbs.db
 
 Unity\ iOS\ Build/UnityTrainGame/Libraries/libiPhone-lib.a
+
+*.resS
+
+Unity iOS Build/UnityTrainGame/Data/resources.assets.resS
+
+*.resS

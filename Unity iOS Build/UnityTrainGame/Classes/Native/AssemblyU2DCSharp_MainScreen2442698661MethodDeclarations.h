@@ -16,8 +16,6 @@
 struct MainScreen_t2442698661;
 // GameEvent
 struct GameEvent_t2981166504;
-// System.Collections.IEnumerator
-struct IEnumerator_t287207039;
 
 #include "codegen/il2cpp-codegen.h"
 #include "AssemblyU2DCSharp_GameEvent2981166504.h"
@@ -32,5 +30,3 @@ extern "C"  void MainScreen_Init_m3193217278 (MainScreen_t2442698661 * __this, c
 extern "C"  void MainScreen_OnGameEvent_m3786029133 (MainScreen_t2442698661 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MainScreen::OnPlay()
 extern "C"  void MainScreen_OnPlay_m3220741537 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Collections.IEnumerator MainScreen::MoveToNextScene()
-extern "C"  Il2CppObject * MainScreen_MoveToNextScene_m3503911929 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

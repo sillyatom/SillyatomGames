@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿#define CAN_SHOW_FRONT_FACE
+#undef CAN_SHOW_FRONT_FACE
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Newtonsoft;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
 
 public class MultiplayerMainGame : SceneMonoBehaviour
 {
@@ -216,11 +220,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
         card.transform.SetParent(player.cardsHolder.transform);
         player.AddCard(card);
-		#if !DEBUG
-        	card.ShowBackFace();
-		#else
-			card.ShowFrontFace();
-		#endif
+        #if !CAN_SHOW_FRONT_FACE
+        card.ShowBackFace();
+        #else
+        card.ShowFrontFace();
+        #endif
         card.transform.localScale = Vector3.one;
         if (player.IsLocalPlayer)
         {
@@ -522,11 +526,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable hash = (Hashtable)(args);
         Player player = (Player)hash["player"];
         Card card = (Card)hash["card"];
-		#if !DEBUG
-        	card.ShowBackFace();
-		#else
-			card.ShowFrontFace();
-		#endif
+        #if !CAN_SHOW_FRONT_FACE
+        card.ShowBackFace();
+        #else
+        card.ShowFrontFace();
+        #endif
         //swap parent
         RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
         rectTransform.SetParent(player.cardsHolder);

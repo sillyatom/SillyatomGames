@@ -173,10 +173,6 @@ struct Dictionary_2_t3845796966;
 struct MainGame_t55813483;
 // MainScreen
 struct MainScreen_t2442698661;
-// System.Collections.IEnumerator
-struct IEnumerator_t287207039;
-// MainScreen/<MoveToNextScene>c__Iterator7
-struct U3CMoveToNextSceneU3Ec__Iterator7_t3648877427;
 // MatchSelectionScreen
 struct MatchSelectionScreen_t3589239987;
 // UnityEngine.UI.Button
@@ -207,6 +203,8 @@ struct Action_1_t985559125;
 struct IEnumerable_1_t1356416995;
 // Newtonsoft.Json.Bson.BsonArray
 struct BsonArray_t1697181552;
+// System.Collections.IEnumerator
+struct IEnumerator_t287207039;
 // Newtonsoft.Json.Bson.BsonToken
 struct BsonToken_t1714632464;
 // System.Collections.Generic.IEnumerator`1<Newtonsoft.Json.Bson.BsonToken>
@@ -301,12 +299,12 @@ struct IEnumerable_1_t2452418874;
 struct Func_2_t3699959175;
 // System.Collections.Generic.Dictionary`2<System.String,System.String>
 struct Dictionary_2_t2606186806;
-// Newtonsoft.Json.Converters.XmlNodeConverter/<DeserializeNode>c__AnonStoreyB
-struct U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748;
-// Newtonsoft.Json.Converters.XmlNodeConverter/<ReadArrayElements>c__AnonStoreyA
-struct U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418;
-// Newtonsoft.Json.Converters.XmlNodeConverter/<SerializeNode>c__AnonStorey9
-struct U3CSerializeNodeU3Ec__AnonStorey9_t1219097706;
+// Newtonsoft.Json.Converters.XmlNodeConverter/<DeserializeNode>c__AnonStoreyA
+struct U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747;
+// Newtonsoft.Json.Converters.XmlNodeConverter/<ReadArrayElements>c__AnonStorey9
+struct U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410;
+// Newtonsoft.Json.Converters.XmlNodeConverter/<SerializeNode>c__AnonStorey8
+struct U3CSerializeNodeU3Ec__AnonStorey8_t1219097705;
 // Newtonsoft.Json.Converters.XmlNodeWrapper
 struct XmlNodeWrapper_t3886750706;
 // System.Xml.XmlNode
@@ -644,13 +642,6 @@ struct ObjectU5BU5D_t11523773;
 #include "AssemblyU2DCSharp_TagConstants2563060469.h"
 #include "AssemblyU2DCSharp_TagConstants2563060469MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Behaviour3120504042MethodDeclarations.h"
-#include "AssemblyU2DCSharp_MainScreen_U3CMoveToNextSceneU3E3648877427MethodDeclarations.h"
-#include "AssemblyU2DCSharp_MainScreen_U3CMoveToNextSceneU3E3648877427.h"
-#include "UnityEngine_UnityEngine_WaitForSeconds1291133240MethodDeclarations.h"
-#include "mscorlib_System_UInt32985925326.h"
-#include "UnityEngine_UnityEngine_WaitForSeconds1291133240.h"
-#include "mscorlib_System_NotSupportedException1374155497MethodDeclarations.h"
-#include "mscorlib_System_NotSupportedException1374155497.h"
 #include "AssemblyU2DCSharp_MatchSelectionScreen3589239987.h"
 #include "AssemblyU2DCSharp_MatchSelectionScreen3589239987MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MultiplayerMainGame4046083237.h"
@@ -780,6 +771,7 @@ struct ObjectU5BU5D_t11523773;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonWriter1972966974MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonWriterExcept1233309079MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonWriterExcept1233309079.h"
+#include "mscorlib_System_UInt32985925326.h"
 #include "mscorlib_System_UInt64985925421.h"
 #include "mscorlib_System_Int162847414729.h"
 #include "mscorlib_System_UInt16985925268.h"
@@ -874,9 +866,9 @@ struct ObjectU5BU5D_t11523773;
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g2748772561.h"
 #include "mscorlib_System_Collections_Generic_KeyValuePair_22237303859.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_E2515800502.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097706MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097705MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec1402980234MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097706.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097705.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec1402980234.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Miscel2000562298MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g2606186806MethodDeclarations.h"
@@ -887,12 +879,12 @@ struct ObjectU5BU5D_t11523773;
 #include "mscorlib_System_Collections_Generic_KeyValuePair_22094718104.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_E2373214747.h"
 #include "System_Xml_System_Xml_XmlDateTimeSerializationMode167003369.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1716967418MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1716967410MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen3699959175MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1716967418.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1716967410.h"
 #include "System_Core_System_Func_2_gen3699959175.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNod352517748MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNod352517748.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNod352517747MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNod352517747.h"
 #include "System_Core_System_Func_2_gen3409608043MethodDeclarations.h"
 #include "System_Xml_System_Xml_XmlNodeList3966370975.h"
 #include "System_Core_System_Func_2_gen3409608043.h"
@@ -1004,6 +996,7 @@ struct ObjectU5BU5D_t11523773;
 #include "mscorlib_System_Nullable_1_gen1369777311MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen1369777311.h"
 #include "mscorlib_System_OverflowException3216083426.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonTextReader_R3492087312MethodDeclarations.h"
 
 // UnityEngine.GameObject UnityEngine.EventSystems.ExecuteEvents::ExecuteHierarchy<System.Object>(UnityEngine.GameObject,UnityEngine.EventSystems.BaseEventData,UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<!!0>)
 extern "C"  GameObject_t4012695102 * ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293_gshared (Il2CppObject * __this /* static, unused */, GameObject_t4012695102 * p0, BaseEventData_t3547103726 * p1, EventFunction_1_t3885370180 * p2, const MethodInfo* method);
@@ -7528,146 +7521,6 @@ extern "C"  void MainScreen_OnPlay_m3220741537 (MainScreen_t2442698661 * __this,
 		NullCheck(L_2);
 		Behaviour_set_enabled_m2046806933(L_2, (bool)0, /*hidden argument*/NULL);
 		return;
-	}
-}
-// System.Collections.IEnumerator MainScreen::MoveToNextScene()
-extern TypeInfo* U3CMoveToNextSceneU3Ec__Iterator7_t3648877427_il2cpp_TypeInfo_var;
-extern const uint32_t MainScreen_MoveToNextScene_m3503911929_MetadataUsageId;
-extern "C"  Il2CppObject * MainScreen_MoveToNextScene_m3503911929 (MainScreen_t2442698661 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (MainScreen_MoveToNextScene_m3503911929_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * V_0 = NULL;
-	{
-		U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * L_0 = (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 *)il2cpp_codegen_object_new(U3CMoveToNextSceneU3Ec__Iterator7_t3648877427_il2cpp_TypeInfo_var);
-		U3CMoveToNextSceneU3Ec__Iterator7__ctor_m3050324530(L_0, /*hidden argument*/NULL);
-		V_0 = L_0;
-		U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * L_1 = V_0;
-		NullCheck(L_1);
-		L_1->set_U3CU3Ef__this_2(__this);
-		U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Void MainScreen/<MoveToNextScene>c__Iterator7::.ctor()
-extern "C"  void U3CMoveToNextSceneU3Ec__Iterator7__ctor_m3050324530 (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Object MainScreen/<MoveToNextScene>c__Iterator7::System.Collections.Generic.IEnumerator<object>.get_Current()
-extern "C"  Il2CppObject * U3CMoveToNextSceneU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m187895274 (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * __this, const MethodInfo* method)
-{
-	{
-		Il2CppObject * L_0 = __this->get_U24current_1();
-		return L_0;
-	}
-}
-// System.Object MainScreen/<MoveToNextScene>c__Iterator7::System.Collections.IEnumerator.get_Current()
-extern "C"  Il2CppObject * U3CMoveToNextSceneU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m1736582526 (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * __this, const MethodInfo* method)
-{
-	{
-		Il2CppObject * L_0 = __this->get_U24current_1();
-		return L_0;
-	}
-}
-// System.Boolean MainScreen/<MoveToNextScene>c__Iterator7::MoveNext()
-extern TypeInfo* WaitForSeconds_t1291133240_il2cpp_TypeInfo_var;
-extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
-extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
-extern const uint32_t U3CMoveToNextSceneU3Ec__Iterator7_MoveNext_m2259921514_MetadataUsageId;
-extern "C"  bool U3CMoveToNextSceneU3Ec__Iterator7_MoveNext_m2259921514 (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (U3CMoveToNextSceneU3Ec__Iterator7_MoveNext_m2259921514_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	uint32_t V_0 = 0;
-	bool V_1 = false;
-	{
-		int32_t L_0 = __this->get_U24PC_0();
-		V_0 = L_0;
-		__this->set_U24PC_0((-1));
-		uint32_t L_1 = V_0;
-		if (L_1 == 0)
-		{
-			goto IL_0021;
-		}
-		if (L_1 == 1)
-		{
-			goto IL_003d;
-		}
-	}
-	{
-		goto IL_0064;
-	}
-
-IL_0021:
-	{
-		WaitForSeconds_t1291133240 * L_2 = (WaitForSeconds_t1291133240 *)il2cpp_codegen_object_new(WaitForSeconds_t1291133240_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_m3184996201(L_2, (5.0f), /*hidden argument*/NULL);
-		__this->set_U24current_1(L_2);
-		__this->set_U24PC_0(1);
-		goto IL_0066;
-	}
-
-IL_003d:
-	{
-		GameObjectRef_t4121474274 * L_3 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
-		NullCheck(L_3);
-		PopupManager_t2711269761 * L_4 = L_3->get_popupManager_6();
-		NullCheck(L_4);
-		PopupManager_RemoveActivePopup_m4117325434(L_4, /*hidden argument*/NULL);
-		MainScreen_t2442698661 * L_5 = __this->get_U3CU3Ef__this_2();
-		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
-		String_t* L_6 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MATCH_SELECTION_SCREEN_1();
-		NullCheck(L_5);
-		VirtActionInvoker2< String_t*, bool >::Invoke(5 /* System.Void SceneMonoBehaviour::MoveToScene(System.String,System.Boolean) */, L_5, L_6, (bool)0);
-		__this->set_U24PC_0((-1));
-	}
-
-IL_0064:
-	{
-		return (bool)0;
-	}
-
-IL_0066:
-	{
-		return (bool)1;
-	}
-	// Dead block : IL_0068: ldloc.1
-}
-// System.Void MainScreen/<MoveToNextScene>c__Iterator7::Dispose()
-extern "C"  void U3CMoveToNextSceneU3Ec__Iterator7_Dispose_m2092460527 (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * __this, const MethodInfo* method)
-{
-	{
-		__this->set_U24PC_0((-1));
-		return;
-	}
-}
-// System.Void MainScreen/<MoveToNextScene>c__Iterator7::Reset()
-extern TypeInfo* NotSupportedException_t1374155497_il2cpp_TypeInfo_var;
-extern const uint32_t U3CMoveToNextSceneU3Ec__Iterator7_Reset_m696757471_MetadataUsageId;
-extern "C"  void U3CMoveToNextSceneU3Ec__Iterator7_Reset_m696757471 (U3CMoveToNextSceneU3Ec__Iterator7_t3648877427 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (U3CMoveToNextSceneU3Ec__Iterator7_Reset_m696757471_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		NotSupportedException_t1374155497 * L_0 = (NotSupportedException_t1374155497 *)il2cpp_codegen_object_new(NotSupportedException_t1374155497_il2cpp_TypeInfo_var);
-		NotSupportedException__ctor_m149930845(L_0, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
 	}
 }
 // System.Void MatchSelectionScreen::.ctor()
@@ -23236,7 +23089,7 @@ IL_0130:
 	}
 }
 // System.Void Newtonsoft.Json.Converters.XmlNodeConverter::SerializeNode(Newtonsoft.Json.JsonWriter,Newtonsoft.Json.Converters.IXmlNode,System.Xml.XmlNamespaceManager,System.Boolean)
-extern TypeInfo* U3CSerializeNodeU3Ec__AnonStorey9_t1219097706_il2cpp_TypeInfo_var;
+extern TypeInfo* U3CSerializeNodeU3Ec__AnonStorey8_t1219097705_il2cpp_TypeInfo_var;
 extern TypeInfo* IXmlNode_t314115688_il2cpp_TypeInfo_var;
 extern TypeInfo* Func_2_t355623069_il2cpp_TypeInfo_var;
 extern TypeInfo* ICollection_1_t779947074_il2cpp_TypeInfo_var;
@@ -23249,7 +23102,7 @@ extern TypeInfo* IList_1_t2480608002_il2cpp_TypeInfo_var;
 extern TypeInfo* IXmlDeclaration_t2136135108_il2cpp_TypeInfo_var;
 extern TypeInfo* XmlNodeType_t3966624571_il2cpp_TypeInfo_var;
 extern TypeInfo* JsonSerializationException_t90215434_il2cpp_TypeInfo_var;
-extern const MethodInfo* U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068_MethodInfo_var;
+extern const MethodInfo* U3CSerializeNodeU3Ec__AnonStorey8_U3CU3Em__6_m2629687365_MethodInfo_var;
 extern const MethodInfo* Func_2__ctor_m2560080719_MethodInfo_var;
 extern const MethodInfo* Enumerable_All_TisIXmlNode_t314115688_m4122960222_MethodInfo_var;
 extern const MethodInfo* Enumerable_Count_TisIXmlNode_t314115688_m2654788120_MethodInfo_var;
@@ -23276,7 +23129,7 @@ extern "C"  void XmlNodeConverter_SerializeNode_m257388430 (XmlNodeConverter_t23
 	String_t* V_2 = NULL;
 	int32_t V_3 = 0;
 	Il2CppObject * V_4 = NULL;
-	U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * V_5 = NULL;
+	U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * V_5 = NULL;
 	int32_t V_6 = 0;
 	Exception_t1967233988 * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
@@ -23286,14 +23139,14 @@ extern "C"  void XmlNodeConverter_SerializeNode_m257388430 (XmlNodeConverter_t23
 	NO_UNUSED_WARNING (__leave_target);
 	String_t* G_B13_0 = NULL;
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_0 = (U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 *)il2cpp_codegen_object_new(U3CSerializeNodeU3Ec__AnonStorey9_t1219097706_il2cpp_TypeInfo_var);
-		U3CSerializeNodeU3Ec__AnonStorey9__ctor_m2496087683(L_0, /*hidden argument*/NULL);
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_0 = (U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 *)il2cpp_codegen_object_new(U3CSerializeNodeU3Ec__AnonStorey8_t1219097705_il2cpp_TypeInfo_var);
+		U3CSerializeNodeU3Ec__AnonStorey8__ctor_m2692601188(L_0, /*hidden argument*/NULL);
 		V_5 = L_0;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_1 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_1 = V_5;
 		Il2CppObject * L_2 = ___node;
 		NullCheck(L_1);
 		L_1->set_node_0(L_2);
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_3 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_3 = V_5;
 		NullCheck(L_3);
 		Il2CppObject * L_4 = L_3->get_node_0();
 		NullCheck(L_4);
@@ -23376,7 +23229,7 @@ extern "C"  void XmlNodeConverter_SerializeNode_m257388430 (XmlNodeConverter_t23
 IL_006f:
 	{
 		JsonWriter_t1972966974 * L_7 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_8 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_8 = V_5;
 		NullCheck(L_8);
 		Il2CppObject * L_9 = L_8->get_node_0();
 		XmlNamespaceManager_t1861067185 * L_10 = ___manager;
@@ -23387,7 +23240,7 @@ IL_006f:
 
 IL_0085:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_12 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_12 = V_5;
 		NullCheck(L_12);
 		Il2CppObject * L_13 = L_12->get_node_0();
 		bool L_14 = XmlNodeConverter_IsArray_m415743613(__this, L_13, /*hidden argument*/NULL);
@@ -23397,14 +23250,14 @@ IL_0085:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_15 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_15 = V_5;
 		NullCheck(L_15);
 		Il2CppObject * L_16 = L_15->get_node_0();
 		NullCheck(L_16);
 		Il2CppObject* L_17 = InterfaceFuncInvoker0< Il2CppObject* >::Invoke(2 /* System.Collections.Generic.IList`1<Newtonsoft.Json.Converters.IXmlNode> Newtonsoft.Json.Converters.IXmlNode::get_ChildNodes() */, IXmlNode_t314115688_il2cpp_TypeInfo_var, L_16);
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_18 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_18 = V_5;
 		IntPtr_t L_19;
-		L_19.set_m_value_0((void*)U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068_MethodInfo_var);
+		L_19.set_m_value_0((void*)U3CSerializeNodeU3Ec__AnonStorey8_U3CU3Em__6_m2629687365_MethodInfo_var);
 		Func_2_t355623069 * L_20 = (Func_2_t355623069 *)il2cpp_codegen_object_new(Func_2_t355623069_il2cpp_TypeInfo_var);
 		Func_2__ctor_m2560080719(L_20, L_18, L_19, /*hidden argument*/Func_2__ctor_m2560080719_MethodInfo_var);
 		bool L_21 = Enumerable_All_TisIXmlNode_t314115688_m4122960222(NULL /*static, unused*/, L_17, L_20, /*hidden argument*/Enumerable_All_TisIXmlNode_t314115688_m4122960222_MethodInfo_var);
@@ -23414,7 +23267,7 @@ IL_0085:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_22 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_22 = V_5;
 		NullCheck(L_22);
 		Il2CppObject * L_23 = L_22->get_node_0();
 		NullCheck(L_23);
@@ -23428,7 +23281,7 @@ IL_0085:
 	}
 	{
 		JsonWriter_t1972966974 * L_26 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_27 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_27 = V_5;
 		NullCheck(L_27);
 		Il2CppObject * L_28 = L_27->get_node_0();
 		XmlNamespaceManager_t1861067185 * L_29 = ___manager;
@@ -23438,7 +23291,7 @@ IL_0085:
 
 IL_00e6:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_30 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_30 = V_5;
 		NullCheck(L_30);
 		Il2CppObject * L_31 = L_30->get_node_0();
 		NullCheck(L_31);
@@ -23574,7 +23427,7 @@ IL_0167:
 	}
 	{
 		JsonWriter_t1972966974 * L_54 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_55 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_55 = V_5;
 		NullCheck(L_55);
 		Il2CppObject * L_56 = L_55->get_node_0();
 		XmlNamespaceManager_t1861067185 * L_57 = ___manager;
@@ -23585,7 +23438,7 @@ IL_0167:
 
 IL_0182:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_59 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_59 = V_5;
 		NullCheck(L_59);
 		Il2CppObject * L_60 = L_59->get_node_0();
 		NullCheck(L_60);
@@ -23598,7 +23451,7 @@ IL_0182:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_64 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_64 = V_5;
 		NullCheck(L_64);
 		Il2CppObject * L_65 = L_64->get_node_0();
 		NullCheck(L_65);
@@ -23611,7 +23464,7 @@ IL_0182:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_68 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_68 = V_5;
 		NullCheck(L_68);
 		Il2CppObject * L_69 = L_68->get_node_0();
 		NullCheck(L_69);
@@ -23627,7 +23480,7 @@ IL_0182:
 	}
 	{
 		JsonWriter_t1972966974 * L_73 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_74 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_74 = V_5;
 		NullCheck(L_74);
 		Il2CppObject * L_75 = L_74->get_node_0();
 		NullCheck(L_75);
@@ -23643,7 +23496,7 @@ IL_0182:
 
 IL_01f4:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_79 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_79 = V_5;
 		NullCheck(L_79);
 		Il2CppObject * L_80 = L_79->get_node_0();
 		NullCheck(L_80);
@@ -23656,7 +23509,7 @@ IL_01f4:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_83 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_83 = V_5;
 		NullCheck(L_83);
 		Il2CppObject * L_84 = L_83->get_node_0();
 		NullCheck(L_84);
@@ -23686,7 +23539,7 @@ IL_022b:
 IL_0238:
 	{
 		JsonWriter_t1972966974 * L_89 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_90 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_90 = V_5;
 		NullCheck(L_90);
 		Il2CppObject * L_91 = L_90->get_node_0();
 		NullCheck(L_91);
@@ -23703,7 +23556,7 @@ IL_0238:
 IL_0257:
 	{
 		int32_t L_97 = V_3;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_98 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_98 = V_5;
 		NullCheck(L_98);
 		Il2CppObject * L_99 = L_98->get_node_0();
 		NullCheck(L_99);
@@ -23717,7 +23570,7 @@ IL_0257:
 	}
 	{
 		JsonWriter_t1972966974 * L_102 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_103 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_103 = V_5;
 		NullCheck(L_103);
 		Il2CppObject * L_104 = L_103->get_node_0();
 		XmlNamespaceManager_t1861067185 * L_105 = ___manager;
@@ -23742,7 +23595,7 @@ IL_0289:
 	}
 	{
 		JsonWriter_t1972966974 * L_108 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_109 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_109 = V_5;
 		NullCheck(L_109);
 		Il2CppObject * L_110 = L_109->get_node_0();
 		NullCheck(L_110);
@@ -23758,7 +23611,7 @@ IL_02a2:
 
 IL_02a7:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_112 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_112 = V_5;
 		NullCheck(L_112);
 		Il2CppObject * L_113 = L_112->get_node_0();
 		NullCheck(L_113);
@@ -23771,7 +23624,7 @@ IL_02a7:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_116 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_116 = V_5;
 		NullCheck(L_116);
 		Il2CppObject * L_117 = L_116->get_node_0();
 		NullCheck(L_117);
@@ -23789,7 +23642,7 @@ IL_02a7:
 
 IL_02de:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_120 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_120 = V_5;
 		NullCheck(L_120);
 		Il2CppObject * L_121 = L_120->get_node_0();
 		NullCheck(L_121);
@@ -23802,7 +23655,7 @@ IL_02de:
 		}
 	}
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_124 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_124 = V_5;
 		NullCheck(L_124);
 		Il2CppObject * L_125 = L_124->get_node_0();
 		NullCheck(L_125);
@@ -23828,7 +23681,7 @@ IL_0315:
 	}
 	{
 		JsonWriter_t1972966974 * L_129 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_130 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_130 = V_5;
 		NullCheck(L_130);
 		Il2CppObject * L_131 = L_130->get_node_0();
 		XmlNamespaceManager_t1861067185 * L_132 = ___manager;
@@ -23840,7 +23693,7 @@ IL_0315:
 IL_0330:
 	{
 		JsonWriter_t1972966974 * L_134 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_135 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_135 = V_5;
 		NullCheck(L_135);
 		Il2CppObject * L_136 = L_135->get_node_0();
 		NullCheck(L_136);
@@ -23852,12 +23705,12 @@ IL_0330:
 
 IL_0347:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_138 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_138 = V_5;
 		NullCheck(L_138);
 		Il2CppObject * L_139 = L_138->get_node_0();
 		V_4 = ((Il2CppObject *)Castclass(L_139, IXmlDeclaration_t2136135108_il2cpp_TypeInfo_var));
 		JsonWriter_t1972966974 * L_140 = ___writer;
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_141 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_141 = V_5;
 		NullCheck(L_141);
 		Il2CppObject * L_142 = L_141->get_node_0();
 		XmlNamespaceManager_t1861067185 * L_143 = ___manager;
@@ -23947,7 +23800,7 @@ IL_03ea:
 
 IL_03f5:
 	{
-		U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * L_168 = V_5;
+		U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * L_168 = V_5;
 		NullCheck(L_168);
 		Il2CppObject * L_169 = L_168->get_node_0();
 		NullCheck(L_169);
@@ -24653,11 +24506,11 @@ IL_01fc:
 	}
 }
 // System.Void Newtonsoft.Json.Converters.XmlNodeConverter::ReadArrayElements(Newtonsoft.Json.JsonReader,Newtonsoft.Json.Converters.IXmlDocument,System.String,Newtonsoft.Json.Converters.IXmlNode,System.Xml.XmlNamespaceManager)
-extern TypeInfo* U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418_il2cpp_TypeInfo_var;
+extern TypeInfo* U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410_il2cpp_TypeInfo_var;
 extern TypeInfo* IXmlNode_t314115688_il2cpp_TypeInfo_var;
 extern TypeInfo* Func_2_t3699959175_il2cpp_TypeInfo_var;
 extern const MethodInfo* CollectionUtils_CastValid_TisIXmlElement_t3875231814_m3811909609_MethodInfo_var;
-extern const MethodInfo* U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505_MethodInfo_var;
+extern const MethodInfo* U3CReadArrayElementsU3Ec__AnonStorey9_U3CU3Em__7_m1962196377_MethodInfo_var;
 extern const MethodInfo* Func_2__ctor_m606685087_MethodInfo_var;
 extern const MethodInfo* Enumerable_Single_TisIXmlElement_t3875231814_m2344245072_MethodInfo_var;
 extern const uint32_t XmlNodeConverter_ReadArrayElements_m1210940686_MetadataUsageId;
@@ -24673,21 +24526,21 @@ extern "C"  void XmlNodeConverter_ReadArrayElements_m1210940686 (XmlNodeConverte
 	Il2CppObject * V_1 = NULL;
 	int32_t V_2 = 0;
 	Il2CppObject * V_3 = NULL;
-	U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * V_4 = NULL;
+	U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * V_4 = NULL;
 	{
-		U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * L_0 = (U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 *)il2cpp_codegen_object_new(U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418_il2cpp_TypeInfo_var);
-		U3CReadArrayElementsU3Ec__AnonStoreyA__ctor_m3630415859(L_0, /*hidden argument*/NULL);
+		U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * L_0 = (U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 *)il2cpp_codegen_object_new(U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410_il2cpp_TypeInfo_var);
+		U3CReadArrayElementsU3Ec__AnonStorey9__ctor_m907556603(L_0, /*hidden argument*/NULL);
 		V_4 = L_0;
-		U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * L_1 = V_4;
+		U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * L_1 = V_4;
 		String_t* L_2 = ___propertyName;
 		NullCheck(L_1);
 		L_1->set_propertyName_0(L_2);
-		U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * L_3 = V_4;
+		U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * L_3 = V_4;
 		NullCheck(L_3);
 		String_t* L_4 = L_3->get_propertyName_0();
 		String_t* L_5 = MiscellaneousUtils_GetPrefix_m349331776(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
 		V_0 = L_5;
-		U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * L_6 = V_4;
+		U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * L_6 = V_4;
 		NullCheck(L_6);
 		String_t* L_7 = L_6->get_propertyName_0();
 		Il2CppObject * L_8 = ___document;
@@ -24708,7 +24561,7 @@ IL_003e:
 		JsonReader_t1817561742 * L_14 = ___reader;
 		Il2CppObject * L_15 = ___document;
 		XmlNamespaceManager_t1861067185 * L_16 = ___manager;
-		U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * L_17 = V_4;
+		U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * L_17 = V_4;
 		NullCheck(L_17);
 		String_t* L_18 = L_17->get_propertyName_0();
 		Il2CppObject * L_19 = V_1;
@@ -24771,9 +24624,9 @@ IL_007f:
 		NullCheck(L_30);
 		Il2CppObject* L_31 = InterfaceFuncInvoker0< Il2CppObject* >::Invoke(2 /* System.Collections.Generic.IList`1<Newtonsoft.Json.Converters.IXmlNode> Newtonsoft.Json.Converters.IXmlNode::get_ChildNodes() */, IXmlNode_t314115688_il2cpp_TypeInfo_var, L_30);
 		Il2CppObject* L_32 = CollectionUtils_CastValid_TisIXmlElement_t3875231814_m3811909609(NULL /*static, unused*/, L_31, /*hidden argument*/CollectionUtils_CastValid_TisIXmlElement_t3875231814_m3811909609_MethodInfo_var);
-		U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * L_33 = V_4;
+		U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * L_33 = V_4;
 		IntPtr_t L_34;
-		L_34.set_m_value_0((void*)U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505_MethodInfo_var);
+		L_34.set_m_value_0((void*)U3CReadArrayElementsU3Ec__AnonStorey9_U3CU3Em__7_m1962196377_MethodInfo_var);
 		Func_2_t3699959175 * L_35 = (Func_2_t3699959175 *)il2cpp_codegen_object_new(Func_2_t3699959175_il2cpp_TypeInfo_var);
 		Func_2__ctor_m606685087(L_35, L_33, L_34, /*hidden argument*/Func_2__ctor_m606685087_MethodInfo_var);
 		Il2CppObject * L_36 = Enumerable_Single_TisIXmlElement_t3875231814_m2344245072(NULL /*static, unused*/, L_32, L_35, /*hidden argument*/Enumerable_Single_TisIXmlElement_t3875231814_m2344245072_MethodInfo_var);
@@ -25466,7 +25319,7 @@ IL_0028:
 	}
 }
 // System.Void Newtonsoft.Json.Converters.XmlNodeConverter::DeserializeNode(Newtonsoft.Json.JsonReader,Newtonsoft.Json.Converters.IXmlDocument,System.Xml.XmlNamespaceManager,Newtonsoft.Json.Converters.IXmlNode)
-extern TypeInfo* U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748_il2cpp_TypeInfo_var;
+extern TypeInfo* U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747_il2cpp_TypeInfo_var;
 extern TypeInfo* IXmlNode_t314115688_il2cpp_TypeInfo_var;
 extern TypeInfo* IXmlDocument_t2884133505_il2cpp_TypeInfo_var;
 extern TypeInfo* JsonSerializationException_t90215434_il2cpp_TypeInfo_var;
@@ -25474,7 +25327,7 @@ extern TypeInfo* Func_2_t3699959175_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* JsonToken_t326031476_il2cpp_TypeInfo_var;
 extern const MethodInfo* CollectionUtils_CastValid_TisIXmlElement_t3875231814_m3811909609_MethodInfo_var;
-extern const MethodInfo* U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236_MethodInfo_var;
+extern const MethodInfo* U3CDeserializeNodeU3Ec__AnonStoreyA_U3CU3Em__8_m1059805595_MethodInfo_var;
 extern const MethodInfo* Func_2__ctor_m606685087_MethodInfo_var;
 extern const MethodInfo* Enumerable_Single_TisIXmlElement_t3875231814_m2344245072_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2834151384;
@@ -25492,7 +25345,7 @@ extern "C"  void XmlNodeConverter_DeserializeNode_m911498479 (XmlNodeConverter_t
 	Il2CppObject * V_1 = NULL;
 	String_t* V_2 = NULL;
 	int32_t V_3 = 0;
-	U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * V_4 = NULL;
+	U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * V_4 = NULL;
 
 IL_0000:
 	{
@@ -25534,8 +25387,8 @@ IL_0000:
 
 IL_0030:
 	{
-		U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * L_5 = (U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 *)il2cpp_codegen_object_new(U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748_il2cpp_TypeInfo_var);
-		U3CDeserializeNodeU3Ec__AnonStoreyB__ctor_m3362637113(L_5, /*hidden argument*/NULL);
+		U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * L_5 = (U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 *)il2cpp_codegen_object_new(U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747_il2cpp_TypeInfo_var);
+		U3CDeserializeNodeU3Ec__AnonStoreyA__ctor_m3559150618(L_5, /*hidden argument*/NULL);
 		V_4 = L_5;
 		Il2CppObject * L_6 = ___currentNode;
 		NullCheck(L_6);
@@ -25562,7 +25415,7 @@ IL_0030:
 
 IL_005b:
 	{
-		U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * L_11 = V_4;
+		U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * L_11 = V_4;
 		JsonReader_t1817561742 * L_12 = ___reader;
 		NullCheck(L_12);
 		Il2CppObject * L_13 = VirtFuncInvoker0< Il2CppObject * >::Invoke(8 /* System.Object Newtonsoft.Json.JsonReader::get_Value() */, L_12);
@@ -25591,7 +25444,7 @@ IL_0087:
 		JsonReader_t1817561742 * L_18 = ___reader;
 		Il2CppObject * L_19 = ___document;
 		XmlNamespaceManager_t1861067185 * L_20 = ___manager;
-		U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * L_21 = V_4;
+		U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * L_21 = V_4;
 		NullCheck(L_21);
 		String_t* L_22 = L_21->get_propertyName_0();
 		Il2CppObject * L_23 = ___currentNode;
@@ -25640,9 +25493,9 @@ IL_00b5:
 		NullCheck(L_31);
 		Il2CppObject* L_32 = InterfaceFuncInvoker0< Il2CppObject* >::Invoke(2 /* System.Collections.Generic.IList`1<Newtonsoft.Json.Converters.IXmlNode> Newtonsoft.Json.Converters.IXmlNode::get_ChildNodes() */, IXmlNode_t314115688_il2cpp_TypeInfo_var, L_31);
 		Il2CppObject* L_33 = CollectionUtils_CastValid_TisIXmlElement_t3875231814_m3811909609(NULL /*static, unused*/, L_32, /*hidden argument*/CollectionUtils_CastValid_TisIXmlElement_t3875231814_m3811909609_MethodInfo_var);
-		U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * L_34 = V_4;
+		U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * L_34 = V_4;
 		IntPtr_t L_35;
-		L_35.set_m_value_0((void*)U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236_MethodInfo_var);
+		L_35.set_m_value_0((void*)U3CDeserializeNodeU3Ec__AnonStoreyA_U3CU3Em__8_m1059805595_MethodInfo_var);
 		Func_2_t3699959175 * L_36 = (Func_2_t3699959175 *)il2cpp_codegen_object_new(Func_2_t3699959175_il2cpp_TypeInfo_var);
 		Func_2__ctor_m606685087(L_36, L_34, L_35, /*hidden argument*/Func_2__ctor_m606685087_MethodInfo_var);
 		Il2CppObject * L_37 = Enumerable_Single_TisIXmlElement_t3875231814_m2344245072(NULL /*static, unused*/, L_33, L_36, /*hidden argument*/Enumerable_Single_TisIXmlElement_t3875231814_m2344245072_MethodInfo_var);
@@ -25662,7 +25515,7 @@ IL_00f3:
 		JsonReader_t1817561742 * L_40 = ___reader;
 		Il2CppObject * L_41 = ___document;
 		XmlNamespaceManager_t1861067185 * L_42 = ___manager;
-		U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * L_43 = V_4;
+		U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * L_43 = V_4;
 		NullCheck(L_43);
 		String_t* L_44 = L_43->get_propertyName_0();
 		Il2CppObject * L_45 = ___currentNode;
@@ -25964,24 +25817,24 @@ extern "C"  bool XmlNodeConverter_U3CValueAttributesU3Em__9_m1449517454 (Il2CppO
 		return L_2;
 	}
 }
-// System.Void Newtonsoft.Json.Converters.XmlNodeConverter/<DeserializeNode>c__AnonStoreyB::.ctor()
-extern "C"  void U3CDeserializeNodeU3Ec__AnonStoreyB__ctor_m3362637113 (U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * __this, const MethodInfo* method)
+// System.Void Newtonsoft.Json.Converters.XmlNodeConverter/<DeserializeNode>c__AnonStoreyA::.ctor()
+extern "C"  void U3CDeserializeNodeU3Ec__AnonStoreyA__ctor_m3559150618 (U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * __this, const MethodInfo* method)
 {
 	{
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Boolean Newtonsoft.Json.Converters.XmlNodeConverter/<DeserializeNode>c__AnonStoreyB::<>m__8(Newtonsoft.Json.Converters.IXmlElement)
+// System.Boolean Newtonsoft.Json.Converters.XmlNodeConverter/<DeserializeNode>c__AnonStoreyA::<>m__8(Newtonsoft.Json.Converters.IXmlElement)
 extern TypeInfo* IXmlNode_t314115688_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern const uint32_t U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236_MetadataUsageId;
-extern "C"  bool U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236 (U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748 * __this, Il2CppObject * ___n, const MethodInfo* method)
+extern const uint32_t U3CDeserializeNodeU3Ec__AnonStoreyA_U3CU3Em__8_m1059805595_MetadataUsageId;
+extern "C"  bool U3CDeserializeNodeU3Ec__AnonStoreyA_U3CU3Em__8_m1059805595 (U3CDeserializeNodeU3Ec__AnonStoreyA_t352517747 * __this, Il2CppObject * ___n, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236_MetadataUsageId);
+		il2cpp_codegen_initialize_method (U3CDeserializeNodeU3Ec__AnonStoreyA_U3CU3Em__8_m1059805595_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -25994,24 +25847,24 @@ extern "C"  bool U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236 (U3C
 		return L_3;
 	}
 }
-// System.Void Newtonsoft.Json.Converters.XmlNodeConverter/<ReadArrayElements>c__AnonStoreyA::.ctor()
-extern "C"  void U3CReadArrayElementsU3Ec__AnonStoreyA__ctor_m3630415859 (U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * __this, const MethodInfo* method)
+// System.Void Newtonsoft.Json.Converters.XmlNodeConverter/<ReadArrayElements>c__AnonStorey9::.ctor()
+extern "C"  void U3CReadArrayElementsU3Ec__AnonStorey9__ctor_m907556603 (U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * __this, const MethodInfo* method)
 {
 	{
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Boolean Newtonsoft.Json.Converters.XmlNodeConverter/<ReadArrayElements>c__AnonStoreyA::<>m__7(Newtonsoft.Json.Converters.IXmlElement)
+// System.Boolean Newtonsoft.Json.Converters.XmlNodeConverter/<ReadArrayElements>c__AnonStorey9::<>m__7(Newtonsoft.Json.Converters.IXmlElement)
 extern TypeInfo* IXmlNode_t314115688_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern const uint32_t U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505_MetadataUsageId;
-extern "C"  bool U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505 (U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418 * __this, Il2CppObject * ___n, const MethodInfo* method)
+extern const uint32_t U3CReadArrayElementsU3Ec__AnonStorey9_U3CU3Em__7_m1962196377_MetadataUsageId;
+extern "C"  bool U3CReadArrayElementsU3Ec__AnonStorey9_U3CU3Em__7_m1962196377 (U3CReadArrayElementsU3Ec__AnonStorey9_t1716967410 * __this, Il2CppObject * ___n, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505_MetadataUsageId);
+		il2cpp_codegen_initialize_method (U3CReadArrayElementsU3Ec__AnonStorey9_U3CU3Em__7_m1962196377_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -26024,24 +25877,24 @@ extern "C"  bool U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505 (U
 		return L_3;
 	}
 }
-// System.Void Newtonsoft.Json.Converters.XmlNodeConverter/<SerializeNode>c__AnonStorey9::.ctor()
-extern "C"  void U3CSerializeNodeU3Ec__AnonStorey9__ctor_m2496087683 (U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * __this, const MethodInfo* method)
+// System.Void Newtonsoft.Json.Converters.XmlNodeConverter/<SerializeNode>c__AnonStorey8::.ctor()
+extern "C"  void U3CSerializeNodeU3Ec__AnonStorey8__ctor_m2692601188 (U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * __this, const MethodInfo* method)
 {
 	{
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Boolean Newtonsoft.Json.Converters.XmlNodeConverter/<SerializeNode>c__AnonStorey9::<>m__6(Newtonsoft.Json.Converters.IXmlNode)
+// System.Boolean Newtonsoft.Json.Converters.XmlNodeConverter/<SerializeNode>c__AnonStorey8::<>m__6(Newtonsoft.Json.Converters.IXmlNode)
 extern TypeInfo* IXmlNode_t314115688_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern const uint32_t U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068_MetadataUsageId;
-extern "C"  bool U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068 (U3CSerializeNodeU3Ec__AnonStorey9_t1219097706 * __this, Il2CppObject * ___n, const MethodInfo* method)
+extern const uint32_t U3CSerializeNodeU3Ec__AnonStorey8_U3CU3Em__6_m2629687365_MetadataUsageId;
+extern "C"  bool U3CSerializeNodeU3Ec__AnonStorey8_U3CU3Em__6_m2629687365 (U3CSerializeNodeU3Ec__AnonStorey8_t1219097705 * __this, Il2CppObject * ___n, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068_MetadataUsageId);
+		il2cpp_codegen_initialize_method (U3CSerializeNodeU3Ec__AnonStorey8_U3CU3Em__6_m2629687365_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
