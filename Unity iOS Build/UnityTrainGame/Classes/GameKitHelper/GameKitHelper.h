@@ -31,6 +31,7 @@ extern int const MAX_PLAYERS;
 @property (nonatomic, assign) BOOL isHost;
 @property (nonatomic, assign) id<GameKitHelperDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary * playersDict;
+@property (nonatomic, strong) NSMutableDictionary * playersDP;
 
 -(void) findMatchWithMinPlayers : (int) minPlayers maxPlayers:(int)maxPlayers viewController:(UIViewController*)viewController delegate:(id<GameKitHelperDelegate>)delegate;
 

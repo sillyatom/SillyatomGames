@@ -448,6 +448,7 @@ UnityEngine.Sprite::get_pixelsPerUnit
 UnityEngine.Sprite::INTERNAL_get_border
 UnityEngine.Sprite::INTERNAL_get_rect
 UnityEngine.Sprite::INTERNAL_get_textureRect
+UnityEngine.Sprite::INTERNAL_CALL_Create
 UnityEngine.Sprite::get_texture
 UnityEngine.Sprites.DataUtility::INTERNAL_CALL_GetInnerUV
 UnityEngine.Sprites.DataUtility::INTERNAL_CALL_GetOuterUV
@@ -466,6 +467,7 @@ UnityEngine.TextGenerator::Init
 UnityEngine.TextMesh::set_text
 UnityEngine.Texture::Internal_GetHeight
 UnityEngine.Texture::Internal_GetWidth
+UnityEngine.Texture2D::LoadImage
 UnityEngine.Texture2D::Apply
 UnityEngine.Texture2D::INTERNAL_CALL_GetPixelBilinear
 UnityEngine.Texture2D::Internal_Create

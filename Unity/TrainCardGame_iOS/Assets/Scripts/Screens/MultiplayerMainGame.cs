@@ -12,6 +12,9 @@ using Newtonsoft.Json.Linq;
 
 public class MultiplayerMainGame : SceneMonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern string GetDPPath(string playerId);
+
     public Dealer dealer;
     public Networking network;
 
@@ -98,7 +101,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         card.transform.localEulerAngles = Vector3.zero;
         Hashtable args = new Hashtable();
         args.Add("Player", player);
-
+        player.RemoveCount(1);
         dealer.AddCard(card);
 
         float delay = dealer.ShiftCards();
@@ -112,10 +115,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDealComplete", args, 0.2f, delay);
         }
 
-		if (player.IsLocalPlayer)
-		{
-			player.UpdateCardsPosition();
-		}
+        if (player.IsLocalPlayer)
+        {
+            player.UpdateCardsPosition();
+        }
     }
 
     private void OnDealComplete(object pArgs)
@@ -126,8 +129,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void OnAutoDealAnimationComplete(object pArgs)
     {
-		//Hashtable args = (Hashtable)(pArgs);
-		//Player player = (Player)(args["Player"]);
+        //Hashtable args = (Hashtable)(pArgs);
+        //Player player = (Player)(args["Player"]);
 
         CheckWinnings();
     }
@@ -363,6 +366,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                     player.playerId = network.Players[index].PlayerId;
                     player.playerName.text = network.Players[index].Name;
                     player.Init();
+                    #if !UNITY_EDITOR
+                    player.UpdateDP(GetDPPath(player.playerId));
+                    #endif
                     _players.Add(player);
                     break;
                 }
@@ -441,23 +447,22 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 continue;
             }
             delay = playerDelay;
-            bool isLocal = (player.playerId == Networking.localId);
             foreach (var cardVT in vo.winningCards[player.playerId])
             {
                 Card card = vo.GetCardWithValueType(cardVT);
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
-				args.Add ("canUpdatePos", true);
-				args.Add ("canAddCard", true);
+                args.Add("canUpdatePos", true);
+                args.Add("canAddCard", true);
 
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
-                if (!isLocal)
-                {
-                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay, "oncomplete", "ResetScale",
-                            "oncompleteparams", args, "oncompletetarget", this.gameObject));
-                }
+//                if (!isLocal)
+//                {
+//                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay, "oncomplete", "ResetScale",
+//                            "oncompleteparams", args, "oncompletetarget", this.gameObject));
+//                }
                 delay += (GameConstants.DEAL_ANIM_TIME * numPlayers);
             }
 
@@ -472,7 +477,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     virtual protected void OnDistributeAllFailedCards(object oArgs)
     {
         Hashtable args = (Hashtable)(oArgs);
-		GetLocalPlayer.UpdateCardsPosition ();
+        GetLocalPlayer.UpdateCardsPosition();
         OnDistributeAllWinningCards(args);
     }
 
@@ -484,21 +489,20 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         foreach (var player in _players)
         {
             delay = playerDelay;
-            bool isLocal = (player.playerId == Networking.localId);
             foreach (var card in player.Cards)
             {
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
-				args.Add ("canUpdatePos", false);
-				args.Add ("canAddCard", false);
+                args.Add("canUpdatePos", false);
+                args.Add("canAddCard", false);
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
-                if (!isLocal)
-                {
-                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay, "oncomplete", "ResetScale",
-                            "oncompleteparams", args, "oncompletetarget", this.gameObject));
-                }
+//                if (!isLocal)
+//                {
+//                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay, "oncomplete", "ResetScale",
+//                            "oncompleteparams", args, "oncompletetarget", this.gameObject));
+//                }
                 delay += (GameConstants.DEAL_ANIM_TIME * numPlayers);
             }
 
@@ -532,9 +536,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         Hashtable hash = (Hashtable)(args);
         Player player = (Player)hash["player"];
+        player.AddCount(1);
         Card card = (Card)hash["card"];
-		bool canUpdate = (bool)hash["canUpdatePos"];
-		bool canAdd = (bool)hash["canAddCard"];
+        bool canUpdate = (bool)hash["canUpdatePos"];
+        bool canAdd = (bool)hash["canAddCard"];
 
         #if !CAN_SHOW_FRONT_FACE
         card.ShowBackFace();
@@ -546,17 +551,17 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.SetParent(player.cardsHolder);
         rectTransform.localScale = Vector3.one;
         rectTransform.position = player.cardsHolder.position;
-		if (canAdd) 
-		{
-			player.AddCard (card);
-		}
-		if (canUpdate) 
-		{
-			if (player.IsLocalPlayer) 
-			{
-				player.UpdateCardsPosition ();
-			}
-		}		
+        if (canAdd)
+        {
+            player.AddCard(card);
+        }
+        if (canUpdate)
+        {
+            if (player.IsLocalPlayer)
+            {
+                player.UpdateCardsPosition();
+            }
+        }		
     }
 
     virtual protected void DispatchNextRound()

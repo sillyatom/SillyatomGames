@@ -83,6 +83,8 @@ struct TextMesh_t583678247;
 struct Texture_t1769722184;
 // UnityEngine.Color[]
 struct ColorU5BU5D_t3477081137;
+// System.Byte[]
+struct ByteU5BU5D_t58506160;
 // UnityEngine.TooltipAttribute
 struct TooltipAttribute_t3386766918;
 // UnityEngine.TouchScreenKeyboard
@@ -188,12 +190,15 @@ struct TypeInferenceRuleAttribute_t471424957;
 #include "UnityEngine_UnityEngine_Sprite4006040370.h"
 #include "UnityEngine_UnityEngine_Sprite4006040370MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Rect1525428817.h"
+#include "UnityEngine_UnityEngine_Vector23525329788.h"
+#include "UnityEngine_UnityEngine_Vector43525329790MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Vector43525329790.h"
+#include "UnityEngine_UnityEngine_SpriteMeshType2246008089.h"
+#include "UnityEngine_UnityEngine_SpriteMeshType2246008089MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SpriteRenderer2223784725.h"
 #include "UnityEngine_UnityEngine_SpriteRenderer2223784725MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Sprites_DataUtility4121269839.h"
 #include "UnityEngine_UnityEngine_Sprites_DataUtility4121269839MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Vector23525329788.h"
 #include "UnityEngine_UnityEngine_StackTraceUtility3762183996.h"
 #include "UnityEngine_UnityEngine_StackTraceUtility3762183996MethodDeclarations.h"
 #include "mscorlib_System_Diagnostics_StackTrace2873626364MethodDeclarations.h"
@@ -262,6 +267,7 @@ struct TypeInferenceRuleAttribute_t471424957;
 #include "mscorlib_System_IntPtr676692020.h"
 #include "mscorlib_System_IntPtr676692020MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_TextureFormat2239483167.h"
+#include "mscorlib_System_Byte2778693821.h"
 #include "UnityEngine_UnityEngine_TextureFormat2239483167MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Time1525492538.h"
 #include "UnityEngine_UnityEngine_Time1525492538MethodDeclarations.h"
@@ -301,9 +307,7 @@ struct TypeInferenceRuleAttribute_t471424957;
 #include "UnityEngine_UnityEngine_UIVertex2260061605.h"
 #include "UnityEngine_UnityEngine_UIVertex2260061605MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Color324137084207MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Vector43525329790MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Color324137084207.h"
-#include "mscorlib_System_Byte2778693821.h"
 #include "UnityEngine_UnityEngine_UnhandledExceptionHandler991098059.h"
 #include "UnityEngine_UnityEngine_UnhandledExceptionHandler991098059MethodDeclarations.h"
 #include "mscorlib_System_AppDomain1551247802MethodDeclarations.h"
@@ -1969,6 +1973,37 @@ extern "C"  void SpaceAttribute__ctor_m2299833492 (SpaceAttribute_t1190449315 * 
 		__this->set_height_0(L_0);
 		return;
 	}
+}
+// UnityEngine.Sprite UnityEngine.Sprite::Create(UnityEngine.Texture2D,UnityEngine.Rect,UnityEngine.Vector2)
+extern "C"  Sprite_t4006040370 * Sprite_Create_m278903054 (Il2CppObject * __this /* static, unused */, Texture2D_t2509538522 * ___texture, Rect_t1525428817  ___rect, Vector2_t3525329788  ___pivot, const MethodInfo* method)
+{
+	Vector4_t3525329790  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	int32_t V_1 = 0;
+	uint32_t V_2 = 0;
+	float V_3 = 0.0f;
+	{
+		Vector4_t3525329790  L_0 = Vector4_get_zero_m3835647092(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_0;
+		V_1 = 1;
+		V_2 = 0;
+		V_3 = (100.0f);
+		Texture2D_t2509538522 * L_1 = ___texture;
+		float L_2 = V_3;
+		uint32_t L_3 = V_2;
+		int32_t L_4 = V_1;
+		Sprite_t4006040370 * L_5 = Sprite_INTERNAL_CALL_Create_m1601644917(NULL /*static, unused*/, L_1, (&___rect), (&___pivot), L_2, L_3, L_4, (&V_0), /*hidden argument*/NULL);
+		return L_5;
+	}
+}
+// UnityEngine.Sprite UnityEngine.Sprite::INTERNAL_CALL_Create(UnityEngine.Texture2D,UnityEngine.Rect&,UnityEngine.Vector2&,System.Single,System.UInt32,UnityEngine.SpriteMeshType,UnityEngine.Vector4&)
+extern "C"  Sprite_t4006040370 * Sprite_INTERNAL_CALL_Create_m1601644917 (Il2CppObject * __this /* static, unused */, Texture2D_t2509538522 * ___texture, Rect_t1525428817 * ___rect, Vector2_t3525329788 * ___pivot, float ___pixelsPerUnit, uint32_t ___extrude, int32_t ___meshType, Vector4_t3525329790 * ___border, const MethodInfo* method)
+{
+	typedef Sprite_t4006040370 * (*Sprite_INTERNAL_CALL_Create_m1601644917_ftn) (Texture2D_t2509538522 *, Rect_t1525428817 *, Vector2_t3525329788 *, float, uint32_t, int32_t, Vector4_t3525329790 *);
+	static Sprite_INTERNAL_CALL_Create_m1601644917_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Sprite_INTERNAL_CALL_Create_m1601644917_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Sprite::INTERNAL_CALL_Create(UnityEngine.Texture2D,UnityEngine.Rect&,UnityEngine.Vector2&,System.Single,System.UInt32,UnityEngine.SpriteMeshType,UnityEngine.Vector4&)");
+	return _il2cpp_icall_func(___texture, ___rect, ___pivot, ___pixelsPerUnit, ___extrude, ___meshType, ___border);
 }
 // UnityEngine.Rect UnityEngine.Sprite::get_rect()
 extern "C"  Rect_t1525428817  Sprite_get_rect_m132626493 (Sprite_t4006040370 * __this, const MethodInfo* method)
@@ -4617,6 +4652,27 @@ extern "C"  void Texture2D_SetPixels_m3304189612 (Texture2D_t2509538522 * __this
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Texture2D_SetPixels_m3304189612_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Texture2D::SetPixels(System.Int32,System.Int32,System.Int32,System.Int32,UnityEngine.Color[],System.Int32)");
 	_il2cpp_icall_func(__this, ___x, ___y, ___blockWidth, ___blockHeight, ___colors, ___miplevel);
+}
+// System.Boolean UnityEngine.Texture2D::LoadImage(System.Byte[],System.Boolean)
+extern "C"  bool Texture2D_LoadImage_m1576144569 (Texture2D_t2509538522 * __this, ByteU5BU5D_t58506160* ___data, bool ___markNonReadable, const MethodInfo* method)
+{
+	typedef bool (*Texture2D_LoadImage_m1576144569_ftn) (Texture2D_t2509538522 *, ByteU5BU5D_t58506160*, bool);
+	static Texture2D_LoadImage_m1576144569_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Texture2D_LoadImage_m1576144569_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Texture2D::LoadImage(System.Byte[],System.Boolean)");
+	return _il2cpp_icall_func(__this, ___data, ___markNonReadable);
+}
+// System.Boolean UnityEngine.Texture2D::LoadImage(System.Byte[])
+extern "C"  bool Texture2D_LoadImage_m2186196036 (Texture2D_t2509538522 * __this, ByteU5BU5D_t58506160* ___data, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		V_0 = (bool)0;
+		ByteU5BU5D_t58506160* L_0 = ___data;
+		bool L_1 = V_0;
+		bool L_2 = Texture2D_LoadImage_m1576144569(__this, L_0, L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
 }
 // System.Void UnityEngine.Texture2D::Apply(System.Boolean,System.Boolean)
 extern "C"  void Texture2D_Apply_m2754532430 (Texture2D_t2509538522 * __this, bool ___updateMipmaps, bool ___makeNoLongerReadable, const MethodInfo* method)

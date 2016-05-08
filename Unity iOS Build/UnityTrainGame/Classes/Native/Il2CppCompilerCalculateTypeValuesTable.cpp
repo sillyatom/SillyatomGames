@@ -911,6 +911,7 @@
 #include "UnityEngine_UnityEngine_RectTransform_Axis2055105.h"
 #include "UnityEngine_UnityEngine_ResourceRequest2256525006.h"
 #include "UnityEngine_UnityEngine_SortingLayer1789336218.h"
+#include "UnityEngine_UnityEngine_SpriteMeshType2246008089.h"
 #include "UnityEngine_UnityEngine_AsyncOperation3374395064.h"
 #include "UnityEngine_UnityEngine_Application450040189.h"
 #include "UnityEngine_UnityEngine_Camera3533968274.h"
@@ -2071,7 +2072,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9341] = 
+extern const int32_t g_FieldOffsetTable[9346] = 
 {
 	0,
 	0,
@@ -7797,6 +7798,9 @@ extern const int32_t g_FieldOffsetTable[9341] =
 	ResourceRequest_t2256525006::get_offset_of_m_Path_1(),
 	ResourceRequest_t2256525006::get_offset_of_m_Type_2(),
 	SortingLayer_t1789336218::get_offset_of_m_Id_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	SpriteMeshType_t2246008089::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
 	AsyncOperation_t3374395064::get_offset_of_m_Ptr_0(),
 	Application_t450040189_StaticFields::get_offset_of_s_LogCallbackHandler_0(),
 	Application_t450040189_StaticFields::get_offset_of_s_LogCallbackHandlerThreaded_1(),
@@ -11290,19 +11294,21 @@ extern const int32_t g_FieldOffsetTable[9341] =
 	ResultVO_t4023821238::get_offset_of_U3CwinningCardsU3Ek__BackingField_3(),
 	Player_t2393081601::get_offset_of_index_3(),
 	Player_t2393081601::get_offset_of_playerId_4(),
-	Player_t2393081601::get_offset_of_playerName_5(),
-	Player_t2393081601::get_offset_of_playerDP_6(),
-	Player_t2393081601::get_offset_of_pullOverBtn_7(),
-	Player_t2393081601::get_offset_of_cardsHolder_8(),
-	Player_t2393081601::get_offset_of__cardSelectionHandler_9(),
-	Player_t2393081601::get_offset_of__delAngle_10(),
-	Player_t2393081601::get_offset_of__angle_11(),
-	Player_t2393081601::get_offset_of__canDrag_12(),
-	Player_t2393081601::get_offset_of__cards_13(),
-	Player_t2393081601::get_offset_of__cardsRewarded_14(),
-	Player_t2393081601::get_offset_of__rotateAround_15(),
-	Player_t2393081601::get_offset_of__lastMousePosition_16(),
-	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_17(),
+	Player_t2393081601::get_offset_of_cardCount_5(),
+	Player_t2393081601::get_offset_of_playerName_6(),
+	Player_t2393081601::get_offset_of_playerDP_7(),
+	Player_t2393081601::get_offset_of_pullOverBtn_8(),
+	Player_t2393081601::get_offset_of_cardsHolder_9(),
+	Player_t2393081601::get_offset_of__cardSelectionHandler_10(),
+	Player_t2393081601::get_offset_of__delAngle_11(),
+	Player_t2393081601::get_offset_of__angle_12(),
+	Player_t2393081601::get_offset_of__canDrag_13(),
+	Player_t2393081601::get_offset_of__cards_14(),
+	Player_t2393081601::get_offset_of__cardsRewarded_15(),
+	Player_t2393081601::get_offset_of__rotateAround_16(),
+	Player_t2393081601::get_offset_of__lastMousePosition_17(),
+	Player_t2393081601::get_offset_of_count_18(),
+	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_19(),
 	CardSelectionHandler_t2914958190::get_offset_of__selectedCard_3(),
 	CardSelectionHandler_t2914958190::get_offset_of_U3CplayerIdU3Ek__BackingField_4(),
 	ExecutionOrderManager_t3968579479::get_offset_of__monos_2(),
@@ -11418,7 +11424,7 @@ extern const int32_t g_FieldOffsetTable[9341] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2358] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2359] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -12886,6 +12892,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2358] =
 	sizeof (Shader_t3998140498), -1, 0, 0,
 	sizeof (Material_t1886596500), -1, 0, 0,
 	sizeof (SortingLayer_t1789336218)+ sizeof (Il2CppObject), sizeof(SortingLayer_t1789336218_marshaled_pinvoke), 0, 0,
+	sizeof (SpriteMeshType_t2246008089)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (Sprite_t4006040370), -1, 0, 0,
 	sizeof (SpriteRenderer_t2223784725), -1, 0, 0,
 	sizeof (DataUtility_t4121269839), -1, 0, 0,

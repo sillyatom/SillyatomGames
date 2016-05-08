@@ -9,7 +9,7 @@ public class GameConstants
     public static float DEAL_ANIM_TIME = 0.15f;
     public static float SYMBOL_SPACE = 0.0f;
 
-    public static float ROUND_TIME = 1.0f;
+    public static float ROUND_TIME = 2.5f;
 
     public static float DEALT_CARD_SCALE = 1.0f;
 }

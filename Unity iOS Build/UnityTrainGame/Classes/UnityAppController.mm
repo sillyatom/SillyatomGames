@@ -57,7 +57,7 @@ bool	_unityAppReady			= false;
 bool	_wasPausedExternal		= false;
 // should we skip present on next draw: used in corner cases (like rotation) to fill both draw-buffers with some content
 bool	_skipPresent			= false;
-// was app "resigned active": some operations do not make sense while app is in background
+// was app "resigned active": some operations do not ` sense while app is in background
 bool	_didResignActive		= false;
 
 // was startUnity scheduled: used to make startup robust in case of locking device
@@ -481,6 +481,31 @@ extern "C"
     {
         [[GameKitHelper sharedGameKitHelper]sendDataToPlayer:[[NSString alloc]initWithUTF8String:playerId] strData:[[NSString alloc]initWithUTF8String:data]];
     }
+    
+    char*  GetDPPath(char* playerId)
+    {
+        NSString * filePath = [[NSString alloc]init];
+        NSString * nsPlayerId = [NSString stringWithUTF8String:playerId];
+        
+        NSMutableDictionary * playerDPs = [[GameKitHelper sharedGameKitHelper] playersDP];
+        for(id key in playerDPs)
+        {
+            if ([key isEqualToString:nsPlayerId])
+            {
+                filePath = [playerDPs objectForKey:key];
+                break;
+            }
+        }
+        
+        const char * string = ([filePath UTF8String]);
+        if (string == NULL)
+            return NULL;
+        
+        char* res = (char*)malloc(strlen(string) + 1);
+        strcpy(res, string);
+        return res;
+    }
+    
 }
 
 @end

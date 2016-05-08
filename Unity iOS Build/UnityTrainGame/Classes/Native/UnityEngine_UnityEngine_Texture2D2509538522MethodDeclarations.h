@@ -16,6 +16,8 @@
 struct Texture2D_t2509538522;
 // UnityEngine.Color[]
 struct ColorU5BU5D_t3477081137;
+// System.Byte[]
+struct ByteU5BU5D_t58506160;
 
 #include "codegen/il2cpp-codegen.h"
 #include "UnityEngine_UnityEngine_TextureFormat2239483167.h"
@@ -41,6 +43,10 @@ extern "C"  void Texture2D_SetPixels_m1289331147 (Texture2D_t2509538522 * __this
 extern "C"  void Texture2D_SetPixels_m2710961388 (Texture2D_t2509538522 * __this, ColorU5BU5D_t3477081137* ___colors, int32_t ___miplevel, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Texture2D::SetPixels(System.Int32,System.Int32,System.Int32,System.Int32,UnityEngine.Color[],System.Int32)
 extern "C"  void Texture2D_SetPixels_m3304189612 (Texture2D_t2509538522 * __this, int32_t ___x, int32_t ___y, int32_t ___blockWidth, int32_t ___blockHeight, ColorU5BU5D_t3477081137* ___colors, int32_t ___miplevel, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Texture2D::LoadImage(System.Byte[],System.Boolean)
+extern "C"  bool Texture2D_LoadImage_m1576144569 (Texture2D_t2509538522 * __this, ByteU5BU5D_t58506160* ___data, bool ___markNonReadable, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Texture2D::LoadImage(System.Byte[])
+extern "C"  bool Texture2D_LoadImage_m2186196036 (Texture2D_t2509538522 * __this, ByteU5BU5D_t58506160* ___data, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Texture2D::Apply(System.Boolean,System.Boolean)
 extern "C"  void Texture2D_Apply_m2754532430 (Texture2D_t2509538522 * __this, bool ___updateMipmaps, bool ___makeNoLongerReadable, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Texture2D::Apply()

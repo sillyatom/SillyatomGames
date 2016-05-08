@@ -1,4 +1,4 @@
-//Generated on : 07-05-2016 17:26:03
+//Generated on : 08-05-2016 18:49:20
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.AnimationCurve
@@ -2067,6 +2067,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Sprite_INTERNAL_get_textureRect();
 		Register_UnityEngine_Sprite_INTERNAL_get_textureRect();
 
+		//UnityEngine.Sprite UnityEngine.Sprite::INTERNAL_CALL_Create(UnityEngine.Texture2D,UnityEngine.Rect&,UnityEngine.Vector2&,System.Single,System.UInt32,UnityEngine.SpriteMeshType,UnityEngine.Vector4&)
+		void Register_UnityEngine_Sprite_INTERNAL_CALL_Create();
+		Register_UnityEngine_Sprite_INTERNAL_CALL_Create();
+
 		//UnityEngine.Texture2D UnityEngine.Sprite::get_texture()
 		void Register_UnityEngine_Sprite_get_texture();
 		Register_UnityEngine_Sprite_get_texture();
@@ -2158,6 +2162,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Texture
 
 	//Start Registrations for type : UnityEngine.Texture2D
+
+		//System.Boolean UnityEngine.Texture2D::LoadImage(System.Byte[],System.Boolean)
+		void Register_UnityEngine_Texture2D_LoadImage();
+		Register_UnityEngine_Texture2D_LoadImage();
 
 		//System.Void UnityEngine.Texture2D::Apply(System.Boolean,System.Boolean)
 		void Register_UnityEngine_Texture2D_Apply();

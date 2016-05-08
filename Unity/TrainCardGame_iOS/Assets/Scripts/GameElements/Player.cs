@@ -8,6 +8,7 @@ public class Player : ExtMonoBehaviour
     [SerializeField]
     public int index;
     public string playerId;
+    public Text cardCount;
     public Text playerName;
     public Image playerDP;
     public Button pullOverBtn;
@@ -23,6 +24,8 @@ public class Player : ExtMonoBehaviour
     private Vector2 _lastMousePosition;
 
     public CardSelectionHandler CardSelectionHandler{ get { return _cardSelectionHandler; } }
+
+    private int count = 0;
 
     public List<Card> Cards
     {
@@ -100,6 +103,18 @@ public class Player : ExtMonoBehaviour
         DidPullOver = false;
     }
 
+    public void UpdateDP(string imagePath)
+    {
+        if (!string.IsNullOrEmpty(imagePath))
+        {
+            Rect rect = playerDP.GetComponent<RectTransform>().rect;
+            Texture2D texture2D = new Texture2D((int)(rect.width), (int)(rect.height));
+            byte[] imageBytes = System.IO.File.ReadAllBytes(imagePath);
+            texture2D.LoadImage(imageBytes);
+            playerDP.sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+        }
+    }
+
     override public void Init()
     {
         base.Init();
@@ -115,14 +130,47 @@ public class Player : ExtMonoBehaviour
 
         _cardSelectionHandler = gameObject.GetComponent<CardSelectionHandler>();
         _cardSelectionHandler.Init();
+
+        UpdateCount(this.count);
     }
 
-    public void AddCard(Card card)
+    public void AddCard(Card card, bool updateCount = false)
     {
         _cards.Add(card);
+        if (updateCount)
+        {
+            cardCount.text = _cards.Count.ToString();
+        }
     }
 
-    public Card RemoveCardWithValue(string valueType)
+    public void AddCount(int count)
+    {
+        this.count += count;
+        cardCount.text = this.count.ToString();
+        UpdateCount(this.count);
+    }
+
+    public void RemoveCount(int count)
+    {
+        this.count -= count;
+        cardCount.text = this.count.ToString();
+        UpdateCount(this.count);
+    }
+
+    public void UpdateCount(int count)
+    {
+        cardCount.text = count.ToString();
+        if (count <= 0 && cardCount.gameObject.activeSelf)
+        {
+            cardCount.gameObject.SetActive(false);
+        }
+        else if (!cardCount.gameObject.activeSelf && count > 0)
+        {
+            cardCount.gameObject.SetActive(true);
+        }
+    }
+
+    public Card RemoveCardWithValue(string valueType, bool updateCount = false)
     {
         Card retCard = null;
 
@@ -134,6 +182,10 @@ public class Player : ExtMonoBehaviour
                 _cards.Remove(card);
                 break;
             }
+        }
+        if (updateCount)
+        {
+            cardCount.text = _cards.Count.ToString();
         }
 
         return retCard;

@@ -14,29 +14,31 @@
 
 // MultiplayerMainGame
 struct MultiplayerMainGame_t4046083237;
+// System.String
+struct String_t;
 // Player
 struct Player_t2393081601;
 // InGameEvent
 struct InGameEvent_t511087107;
 // System.Object
 struct Il2CppObject;
-// System.String
-struct String_t;
 // ResultVO
 struct ResultVO_t4023821238;
 // GameEvent
 struct GameEvent_t2981166504;
 
 #include "codegen/il2cpp-codegen.h"
+#include "mscorlib_System_String968488902.h"
 #include "AssemblyU2DCSharp_InGameEvent511087107.h"
 #include "AssemblyU2DCSharp_Player2393081601.h"
 #include "mscorlib_System_Object837106420.h"
-#include "mscorlib_System_String968488902.h"
 #include "AssemblyU2DCSharp_ResultVO4023821238.h"
 #include "AssemblyU2DCSharp_GameEvent2981166504.h"
 
 // System.Void MultiplayerMainGame::.ctor()
 extern "C"  void MultiplayerMainGame__ctor_m3970443366 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String MultiplayerMainGame::GetDPPath(System.String)
+extern "C"  String_t* MultiplayerMainGame_GetDPPath_m1101217716 (Il2CppObject * __this /* static, unused */, String_t* ___playerId, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Player MultiplayerMainGame::get_GetLocalPlayer()
 extern "C"  Player_t2393081601 * MultiplayerMainGame_get_GetLocalPlayer_m1775319809 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::Init()

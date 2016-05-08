@@ -2441,6 +2441,7 @@ extern "C" void File_Exists_m1326262381 ();
 extern "C" void File_Open_m1918038371 ();
 extern "C" void File_OpenRead_m3104031109 ();
 extern "C" void File_OpenText_m396847893 ();
+extern "C" void File_ReadAllBytes_m621899937 ();
 extern "C" void FileNotFoundException__ctor_m1040614905 ();
 extern "C" void FileNotFoundException__ctor_m4237579689 ();
 extern "C" void FileNotFoundException__ctor_m2788024869 ();
@@ -10639,6 +10640,8 @@ extern "C" void Range__ctor_m872630735 ();
 extern "C" void SortingLayer_GetLayerValueFromID_m2560954442 ();
 extern "C" void SpaceAttribute__ctor_m3636842103 ();
 extern "C" void SpaceAttribute__ctor_m2299833492 ();
+extern "C" void Sprite_Create_m278903054 ();
+extern "C" void Sprite_INTERNAL_CALL_Create_m1601644917 ();
 extern "C" void Sprite_get_rect_m132626493 ();
 extern "C" void Sprite_INTERNAL_get_rect_m853825042 ();
 extern "C" void Sprite_get_pixelsPerUnit_m2438708453 ();
@@ -10727,6 +10730,8 @@ extern "C" void Texture2D_INTERNAL_CALL_GetPixelBilinear_m2056702809 ();
 extern "C" void Texture2D_SetPixels_m1289331147 ();
 extern "C" void Texture2D_SetPixels_m2710961388 ();
 extern "C" void Texture2D_SetPixels_m3304189612 ();
+extern "C" void Texture2D_LoadImage_m1576144569 ();
+extern "C" void Texture2D_LoadImage_m2186196036 ();
 extern "C" void Texture2D_Apply_m2754532430 ();
 extern "C" void Texture2D_Apply_m1364130776 ();
 extern "C" void Time_get_time_m342192902 ();
@@ -13883,6 +13888,7 @@ extern "C" void MatchSelectionScreen_U3CInitU3Em__4E_m1738530578 ();
 extern "C" void MatchSelectionScreen_U3CInitU3Em__4F_m1738531539 ();
 extern "C" void MatchStartedVO__ctor_m622607718 ();
 extern "C" void MultiplayerMainGame__ctor_m3970443366 ();
+extern "C" void MultiplayerMainGame_GetDPPath_m1101217716 ();
 extern "C" void MultiplayerMainGame_get_GetLocalPlayer_m1775319809 ();
 extern "C" void MultiplayerMainGame_Init_m3127656750 ();
 extern "C" void MultiplayerMainGame_InitGame_m1931109952 ();
@@ -15919,9 +15925,13 @@ extern "C" void Player_get_GetCardsValueType_m1254267132 ();
 extern "C" void Player_GetCardByValueType_m2104611901 ();
 extern "C" void Player_get_IsLocalPlayer_m840128861 ();
 extern "C" void Player_OnRoundStart_m4031893565 ();
+extern "C" void Player_UpdateDP_m4160431299 ();
 extern "C" void Player_Init_m3304792154 ();
-extern "C" void Player_AddCard_m2388479993 ();
-extern "C" void Player_RemoveCardWithValue_m2478900832 ();
+extern "C" void Player_AddCard_m3248222820 ();
+extern "C" void Player_AddCount_m531903881 ();
+extern "C" void Player_RemoveCount_m737381268 ();
+extern "C" void Player_UpdateCount_m2085950255 ();
+extern "C" void Player_RemoveCardWithValue_m1598406941 ();
 extern "C" void Player_SetSelectedCard_m1287222901 ();
 extern "C" void Player_AutoDeal_m2757988037 ();
 extern "C" void Player_OnRoundResult_m2417922047 ();
@@ -16086,7 +16096,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16075] = 
+extern const methodPointerType g_MethodPointers[16085] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -18518,6 +18528,7 @@ extern const methodPointerType g_MethodPointers[16075] =
 	File_Open_m1918038371,
 	File_OpenRead_m3104031109,
 	File_OpenText_m396847893,
+	File_ReadAllBytes_m621899937,
 	FileNotFoundException__ctor_m1040614905,
 	FileNotFoundException__ctor_m4237579689,
 	FileNotFoundException__ctor_m2788024869,
@@ -26716,6 +26727,8 @@ extern const methodPointerType g_MethodPointers[16075] =
 	SortingLayer_GetLayerValueFromID_m2560954442,
 	SpaceAttribute__ctor_m3636842103,
 	SpaceAttribute__ctor_m2299833492,
+	Sprite_Create_m278903054,
+	Sprite_INTERNAL_CALL_Create_m1601644917,
 	Sprite_get_rect_m132626493,
 	Sprite_INTERNAL_get_rect_m853825042,
 	Sprite_get_pixelsPerUnit_m2438708453,
@@ -26804,6 +26817,8 @@ extern const methodPointerType g_MethodPointers[16075] =
 	Texture2D_SetPixels_m1289331147,
 	Texture2D_SetPixels_m2710961388,
 	Texture2D_SetPixels_m3304189612,
+	Texture2D_LoadImage_m1576144569,
+	Texture2D_LoadImage_m2186196036,
 	Texture2D_Apply_m2754532430,
 	Texture2D_Apply_m1364130776,
 	Time_get_time_m342192902,
@@ -29960,6 +29975,7 @@ extern const methodPointerType g_MethodPointers[16075] =
 	MatchSelectionScreen_U3CInitU3Em__4F_m1738531539,
 	MatchStartedVO__ctor_m622607718,
 	MultiplayerMainGame__ctor_m3970443366,
+	MultiplayerMainGame_GetDPPath_m1101217716,
 	MultiplayerMainGame_get_GetLocalPlayer_m1775319809,
 	MultiplayerMainGame_Init_m3127656750,
 	MultiplayerMainGame_InitGame_m1931109952,
@@ -31996,9 +32012,13 @@ extern const methodPointerType g_MethodPointers[16075] =
 	Player_GetCardByValueType_m2104611901,
 	Player_get_IsLocalPlayer_m840128861,
 	Player_OnRoundStart_m4031893565,
+	Player_UpdateDP_m4160431299,
 	Player_Init_m3304792154,
-	Player_AddCard_m2388479993,
-	Player_RemoveCardWithValue_m2478900832,
+	Player_AddCard_m3248222820,
+	Player_AddCount_m531903881,
+	Player_RemoveCount_m737381268,
+	Player_UpdateCount_m2085950255,
+	Player_RemoveCardWithValue_m1598406941,
 	Player_SetSelectedCard_m1287222901,
 	Player_AutoDeal_m2757988037,
 	Player_OnRoundResult_m2417922047,
