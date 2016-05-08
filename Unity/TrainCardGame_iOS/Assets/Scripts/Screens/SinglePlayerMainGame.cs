@@ -69,10 +69,10 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         Hashtable hArgs = (Hashtable)args;
         Player player = GetPlayerById((string)hArgs["Player"]);
         dealer.ShiftCards();
-		if (player.playerId == network.LocalId) 
-		{
-			player.UpdateCardsPosition ();
-		}
+        if (player.playerId == network.LocalId)
+        {
+            player.UpdateCardsPosition();
+        }
         //clear all round data
         player.OnRoundEnd();
         _roundHandler.OnRoundEnd();
@@ -135,13 +135,13 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     override protected void OnRoundEnd()
     {
         Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
-		if (_roundHandler.GetActivePlayerId != network.LocalId) 
-		{
-			player.DidPullOver = (Utility.GetRandomNumber (0, 100) >= 90);
-		}
+        if (_roundHandler.GetActivePlayerId != network.LocalId)
+        {
+            player.DidPullOver = (Utility.GetRandomNumber(0, 100) >= 90);
+        }
 
-		//TODO for testing
-		player.DidPullOver = false;
+        //TODO for testing
+//		player.DidPullOver = false;
 
         Card selectedCard = player.SelectedCard;
         //if player has not selected a card
