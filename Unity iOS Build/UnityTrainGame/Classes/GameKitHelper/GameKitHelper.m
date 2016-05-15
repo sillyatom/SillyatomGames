@@ -39,6 +39,8 @@ BOOL _matchStarted;
     _enableGameCenter = (self) ? YES : NO;
     _matchStarted = false;
     isHost = false;
+    _signingStatus = -1;
+    _gcStatus = -1;
     return self;
 }
 
@@ -70,11 +72,17 @@ BOOL _matchStarted;
 {
     GKLocalPlayer * localPlayer = [GKLocalPlayer localPlayer];
     
+    _signingStatus = 0;
+    
     if (localPlayer.isAuthenticated)
     {
-        [self sendAuthMessage];
+        _signingStatus = 2;
+        _gcStatus = 1;
+        [self initGame];
         return;
     }
+    
+    _signingStatus = 1;
     
     localPlayer.authenticateHandler = ^(UIViewController * viewController, NSError * error)
     {
@@ -93,19 +101,29 @@ BOOL _matchStarted;
         else if ([GKLocalPlayer localPlayer].isAuthenticated)
         {
             _enableGameCenter = YES;
+            _gcStatus = 1;
             NSLog(@" [ Player Authenticated ] ");
         }
         else
         {
             _enableGameCenter = NO;
+            _gcStatus = 0;
         }
         
-        [self sendAuthMessage];
+        _signingStatus = 2;
+        [self initGame];
     };
+}
+
+- (void) initGame
+{
+    UnitySendMessage("ExecutionOrder", "Init", "");
 }
 
 -(void) sendAuthMessage
 {
+    [[GKLocalPlayer localPlayer]registerListener:self];
+    
     NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
     
     if ([[GKLocalPlayer localPlayer]isAuthenticated])
@@ -138,7 +156,6 @@ BOOL _matchStarted;
     
     GKMatchmakerViewController * matchMakerViewCtrller = [[GKMatchmakerViewController alloc]initWithMatchRequest:gkMatchRequest];
     matchMakerViewCtrller.matchmakerDelegate = self;
-    
     [viewController presentViewController:matchMakerViewCtrller animated:YES completion:nil];
 }
 
@@ -170,6 +187,29 @@ BOOL _matchStarted;
             [_delegate matchStarted];
         }];
     }
+}
+
+- (void)player:(GKPlayer *)player didAcceptInvite:(GKInvite *)invite
+{
+    //.... insert some cleanup code here to manage view controllers etc before presenting the matchmakerviewcontroller.
+    NSLog(@"Invite accepted!");
+    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithInvite:invite];
+    mmvc.matchmakerDelegate = self;
+    UnityAppController* ctrller = (UnityAppController*)[UIApplication sharedApplication].delegate;
+    [ctrller.rootViewController presentViewController:mmvc animated:YES completion:nil];
+}
+
+
+- (void)player:(GKPlayer *)player didRequestMatchWithPlayers:(NSArray *)playerIDsToInvite
+{
+    //......insert some cleanup code for managing view controllers
+    GKMatchRequest *match = [[GKMatchRequest alloc]init];
+    match.playersToInvite = playerIDsToInvite;
+    
+    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc]initWithMatchRequest:match];
+    mmvc.matchmakerDelegate = self;
+    UnityAppController* ctrller = (UnityAppController*)[UIApplication sharedApplication].delegate;
+    [ctrller.rootViewController presentViewController:mmvc animated:YES completion:nil];
 }
 
 // A peer-to-peer match has been found, the game should start

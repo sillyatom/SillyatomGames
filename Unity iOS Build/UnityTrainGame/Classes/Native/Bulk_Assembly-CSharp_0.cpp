@@ -634,10 +634,10 @@ struct ObjectU5BU5D_t11523773;
 #include "UnityEngine_UI_UnityEngine_UI_Button990034267MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Events_UnityAction909267611MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Events_UnityEvent2938797301MethodDeclarations.h"
+#include "AssemblyU2DCSharp_PopupManager2711269761MethodDeclarations.h"
 #include "UnityEngine_UI_UnityEngine_UI_Button990034267.h"
 #include "UnityEngine_UI_UnityEngine_UI_Button_ButtonClickedE962981669.h"
 #include "UnityEngine_UnityEngine_Events_UnityAction909267611.h"
-#include "AssemblyU2DCSharp_PopupManager2711269761MethodDeclarations.h"
 #include "AssemblyU2DCSharp_PopupManager2711269761.h"
 #include "AssemblyU2DCSharp_TagConstants2563060469.h"
 #include "AssemblyU2DCSharp_TagConstants2563060469MethodDeclarations.h"
@@ -3221,9 +3221,11 @@ extern "C"  float Dealer_ShiftCards_m1364653135 (Dealer_t2043054649 * __this, co
 	memset(&V_1, 0, sizeof(V_1));
 	Rect_t1525428817  V_2;
 	memset(&V_2, 0, sizeof(V_2));
+	Vector3_t3525329789  V_3;
+	memset(&V_3, 0, sizeof(V_3));
 	{
 		V_0 = 0;
-		goto IL_0062;
+		goto IL_0076;
 	}
 
 IL_0007:
@@ -3243,22 +3245,27 @@ IL_0007:
 		Rect_t1525428817  L_8 = RectTransform_get_rect_m1566017036(L_7, /*hidden argument*/NULL);
 		V_2 = L_8;
 		float L_9 = Rect_get_height_m2154960823((&V_2), /*hidden argument*/NULL);
-		L_2->set_y_2(((float)((float)L_3-(float)((float)((float)L_9*(float)(0.5f))))));
-		List_1_t799051817 * L_10 = __this->get__cards_4();
-		int32_t L_11 = V_0;
+		Transform_t284553113 * L_10 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
 		NullCheck(L_10);
-		Card_t2092848 * L_12 = VirtFuncInvoker1< Card_t2092848 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<Card>::get_Item(System.Int32) */, L_10, L_11);
-		Vector3_t3525329789  L_13 = V_1;
-		Dealer_MoveCardToPosition_m1759962004(__this, L_12, L_13, (1.0f), (0.0f), /*hidden argument*/NULL);
+		Vector3_t3525329789  L_11 = Transform_get_localScale_m3886572677(L_10, /*hidden argument*/NULL);
+		V_3 = L_11;
+		float L_12 = (&V_3)->get_y_2();
+		L_2->set_y_2(((float)((float)L_3-(float)((float)((float)((float)((float)L_9*(float)L_12))*(float)(0.5f))))));
+		List_1_t799051817 * L_13 = __this->get__cards_4();
 		int32_t L_14 = V_0;
-		V_0 = ((int32_t)((int32_t)L_14+(int32_t)1));
+		NullCheck(L_13);
+		Card_t2092848 * L_15 = VirtFuncInvoker1< Card_t2092848 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<Card>::get_Item(System.Int32) */, L_13, L_14);
+		Vector3_t3525329789  L_16 = V_1;
+		Dealer_MoveCardToPosition_m1759962004(__this, L_15, L_16, (1.0f), (0.0f), /*hidden argument*/NULL);
+		int32_t L_17 = V_0;
+		V_0 = ((int32_t)((int32_t)L_17+(int32_t)1));
 	}
 
-IL_0062:
+IL_0076:
 	{
-		int32_t L_15 = V_0;
-		int32_t L_16 = Dealer_GetDeckSize_m1851388114(__this, /*hidden argument*/NULL);
-		if ((((int32_t)L_15) < ((int32_t)L_16)))
+		int32_t L_18 = V_0;
+		int32_t L_19 = Dealer_GetDeckSize_m1851388114(__this, /*hidden argument*/NULL);
+		if ((((int32_t)L_18) < ((int32_t)L_19)))
 		{
 			goto IL_0007;
 		}
@@ -5056,7 +5063,7 @@ extern "C"  void ExecutionOrderManager__ctor_m3664436148 (ExecutionOrderManager_
 		return;
 	}
 }
-// System.Void ExecutionOrderManager::Awake()
+// System.Void ExecutionOrderManager::Init(System.String)
 extern TypeInfo* Enumerator_t1507341154_il2cpp_TypeInfo_var;
 extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
 extern TypeInfo* Enumerator_t3128959703_il2cpp_TypeInfo_var;
@@ -5066,13 +5073,13 @@ extern const MethodInfo* Enumerator_MoveNext_m3116308223_MethodInfo_var;
 extern const MethodInfo* List_1_GetEnumerator_m2040457606_MethodInfo_var;
 extern const MethodInfo* Enumerator_get_Current_m3857619890_MethodInfo_var;
 extern const MethodInfo* Enumerator_MoveNext_m1992885354_MethodInfo_var;
-extern const uint32_t ExecutionOrderManager_Awake_m3902041367_MetadataUsageId;
-extern "C"  void ExecutionOrderManager_Awake_m3902041367 (ExecutionOrderManager_t3968579479 * __this, const MethodInfo* method)
+extern const uint32_t ExecutionOrderManager_Init_m4122699490_MetadataUsageId;
+extern "C"  void ExecutionOrderManager_Init_m4122699490 (ExecutionOrderManager_t3968579479 * __this, String_t* ___data, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (ExecutionOrderManager_Awake_m3902041367_MetadataUsageId);
+		il2cpp_codegen_initialize_method (ExecutionOrderManager_Init_m4122699490_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	ExtMonoBehaviour_t2624599193 * V_0 = NULL;
@@ -7396,29 +7403,12 @@ extern "C"  void MainScreen__ctor_m1707852438 (MainScreen_t2442698661 * __this, 
 		return;
 	}
 }
-// System.Void MainScreen::authenticateLocalPlayer()
-extern "C" {void DEFAULT_CALL authenticateLocalPlayer();}
-extern "C"  void MainScreen_authenticateLocalPlayer_m68500331 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
-{
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-	static PInvokeFunc _il2cpp_pinvoke_func;
-	if (!_il2cpp_pinvoke_func)
-	{
-		_il2cpp_pinvoke_func = (PInvokeFunc)authenticateLocalPlayer;
-
-		if (_il2cpp_pinvoke_func == NULL)
-		{
-			IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_not_supported_exception("Unable to find method for p/invoke: 'authenticateLocalPlayer'"));
-		}
-	}
-
-	// Native function invocation
-	_il2cpp_pinvoke_func();
-
-}
 // System.Void MainScreen::Init()
 extern TypeInfo* UnityAction_t909267611_il2cpp_TypeInfo_var;
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
 extern const MethodInfo* MainScreen_OnPlay_m3220741537_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1217813208;
+extern Il2CppCodeGenString* _stringLiteral3270497891;
 extern const uint32_t MainScreen_Init_m3193217278_MetadataUsageId;
 extern "C"  void MainScreen_Init_m3193217278 (MainScreen_t2442698661 * __this, const MethodInfo* method)
 {
@@ -7439,6 +7429,38 @@ extern "C"  void MainScreen_Init_m3193217278 (MainScreen_t2442698661 * __this, c
 		UnityAction__ctor_m4130179243(L_3, __this, L_2, /*hidden argument*/NULL);
 		NullCheck(L_1);
 		UnityEvent_AddListener_m4099140869(L_1, L_3, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_4 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_4);
+		PopupManager_t2711269761 * L_5 = L_4->get_popupManager_6();
+		NullCheck(L_5);
+		PopupManager_CreateGenericPopup_m2827790414(L_5, _stringLiteral1217813208, _stringLiteral3270497891, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MainScreen::AuthGC()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1217813208;
+extern Il2CppCodeGenString* _stringLiteral3270497891;
+extern const uint32_t MainScreen_AuthGC_m3239920690_MetadataUsageId;
+extern "C"  void MainScreen_AuthGC_m3239920690 (MainScreen_t2442698661 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MainScreen_AuthGC_m3239920690_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_0);
+		PopupManager_t2711269761 * L_1 = L_0->get_popupManager_6();
+		NullCheck(L_1);
+		PopupManager_CreateGenericPopup_m2827790414(L_1, _stringLiteral1217813208, _stringLiteral3270497891, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_2 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_2);
+		Networking_t1515242260 * L_3 = L_2->get_network_4();
+		NullCheck(L_3);
+		Networking_SignInGC_m4010373883(L_3, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -7498,9 +7520,7 @@ IL_0045:
 	}
 }
 // System.Void MainScreen::OnPlay()
-extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral1217813208;
-extern Il2CppCodeGenString* _stringLiteral3270497891;
+extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
 extern const uint32_t MainScreen_OnPlay_m3220741537_MetadataUsageId;
 extern "C"  void MainScreen_OnPlay_m3220741537 (MainScreen_t2442698661 * __this, const MethodInfo* method)
 {
@@ -7511,15 +7531,12 @@ extern "C"  void MainScreen_OnPlay_m3220741537 (MainScreen_t2442698661 * __this,
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
-		NullCheck(L_0);
-		PopupManager_t2711269761 * L_1 = L_0->get_popupManager_6();
+		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
+		String_t* L_0 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MATCH_SELECTION_SCREEN_1();
+		VirtActionInvoker2< String_t*, bool >::Invoke(5 /* System.Void SceneMonoBehaviour::MoveToScene(System.String,System.Boolean) */, __this, L_0, (bool)0);
+		Button_t990034267 * L_1 = __this->get_playBtn_4();
 		NullCheck(L_1);
-		PopupManager_CreateGenericPopup_m2827790414(L_1, _stringLiteral1217813208, _stringLiteral3270497891, /*hidden argument*/NULL);
-		MainScreen_authenticateLocalPlayer_m68500331(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Button_t990034267 * L_2 = __this->get_playBtn_4();
-		NullCheck(L_2);
-		Behaviour_set_enabled_m2046806933(L_2, (bool)0, /*hidden argument*/NULL);
+		Behaviour_set_enabled_m2046806933(L_1, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -11600,6 +11617,26 @@ extern "C"  void Networking__cctor_m1296187526 (Il2CppObject * __this /* static,
 		return;
 	}
 }
+// System.Void Networking::authenticateLocalPlayer()
+extern "C" {void DEFAULT_CALL authenticateLocalPlayer();}
+extern "C"  void Networking_authenticateLocalPlayer_m2265016988 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+	static PInvokeFunc _il2cpp_pinvoke_func;
+	if (!_il2cpp_pinvoke_func)
+	{
+		_il2cpp_pinvoke_func = (PInvokeFunc)authenticateLocalPlayer;
+
+		if (_il2cpp_pinvoke_func == NULL)
+		{
+			IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_not_supported_exception("Unable to find method for p/invoke: 'authenticateLocalPlayer'"));
+		}
+	}
+
+	// Native function invocation
+	_il2cpp_pinvoke_func();
+
+}
 // System.Void Networking::sendDataToAll(System.String)
 extern "C"  void Networking_sendDataToAll_m3741350505 (Il2CppObject * __this /* static, unused */, String_t* ___data, const MethodInfo* method)
 {
@@ -11660,6 +11697,68 @@ extern "C"  void Networking_sendDataToPlayer_m4247746419 (Il2CppObject * __this 
 	// Marshaling cleanup of parameter '___data' native representation
 	il2cpp_codegen_marshal_free(____data_marshaled);
 	____data_marshaled = NULL;
+
+}
+// System.Int32 Networking::getAuthStatus()
+extern "C" {int32_t DEFAULT_CALL getAuthStatus();}
+extern "C"  int32_t Networking_getAuthStatus_m778936871 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
+	static PInvokeFunc _il2cpp_pinvoke_func;
+	if (!_il2cpp_pinvoke_func)
+	{
+		_il2cpp_pinvoke_func = (PInvokeFunc)getAuthStatus;
+
+		if (_il2cpp_pinvoke_func == NULL)
+		{
+			IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_not_supported_exception("Unable to find method for p/invoke: 'getAuthStatus'"));
+		}
+	}
+
+	// Native function invocation and marshaling of return value back from native representation
+	int32_t _return_value = _il2cpp_pinvoke_func();
+
+	return _return_value;
+}
+// System.Int32 Networking::getGCStatus()
+extern "C" {int32_t DEFAULT_CALL getGCStatus();}
+extern "C"  int32_t Networking_getGCStatus_m2120910907 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
+	static PInvokeFunc _il2cpp_pinvoke_func;
+	if (!_il2cpp_pinvoke_func)
+	{
+		_il2cpp_pinvoke_func = (PInvokeFunc)getGCStatus;
+
+		if (_il2cpp_pinvoke_func == NULL)
+		{
+			IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_not_supported_exception("Unable to find method for p/invoke: 'getGCStatus'"));
+		}
+	}
+
+	// Native function invocation and marshaling of return value back from native representation
+	int32_t _return_value = _il2cpp_pinvoke_func();
+
+	return _return_value;
+}
+// System.Void Networking::dispatchAuthResponse()
+extern "C" {void DEFAULT_CALL dispatchAuthResponse();}
+extern "C"  void Networking_dispatchAuthResponse_m1695556384 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+	static PInvokeFunc _il2cpp_pinvoke_func;
+	if (!_il2cpp_pinvoke_func)
+	{
+		_il2cpp_pinvoke_func = (PInvokeFunc)dispatchAuthResponse;
+
+		if (_il2cpp_pinvoke_func == NULL)
+		{
+			IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_not_supported_exception("Unable to find method for p/invoke: 'dispatchAuthResponse'"));
+		}
+	}
+
+	// Native function invocation
+	_il2cpp_pinvoke_func();
 
 }
 // System.String Networking::get_HostId()
@@ -13411,6 +13510,74 @@ FINALLY_00c9:
 
 IL_00d6:
 	{
+		return;
+	}
+}
+// System.Void Networking::SignInGC()
+extern TypeInfo* Networking_t1515242260_il2cpp_TypeInfo_var;
+extern const uint32_t Networking_SignInGC_m4010373883_MetadataUsageId;
+extern "C"  void Networking_SignInGC_m4010373883 (Networking_t1515242260 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Networking_SignInGC_m4010373883_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
+		Networking_authenticateLocalPlayer_m2265016988(NULL /*static, unused*/, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Networking::SigningStatus()
+extern TypeInfo* Networking_t1515242260_il2cpp_TypeInfo_var;
+extern const uint32_t Networking_SigningStatus_m2778579438_MetadataUsageId;
+extern "C"  int32_t Networking_SigningStatus_m2778579438 (Networking_t1515242260 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Networking_SigningStatus_m2778579438_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
+		int32_t L_0 = Networking_getAuthStatus_m778936871(NULL /*static, unused*/, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// System.Int32 Networking::GameCenterStatus()
+extern TypeInfo* Networking_t1515242260_il2cpp_TypeInfo_var;
+extern const uint32_t Networking_GameCenterStatus_m2830491492_MetadataUsageId;
+extern "C"  int32_t Networking_GameCenterStatus_m2830491492 (Networking_t1515242260 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Networking_GameCenterStatus_m2830491492_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
+		int32_t L_0 = Networking_getGCStatus_m2120910907(NULL /*static, unused*/, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// System.Void Networking::DispatchAuthResponse()
+extern TypeInfo* Networking_t1515242260_il2cpp_TypeInfo_var;
+extern const uint32_t Networking_DispatchAuthResponse_m2488848192_MetadataUsageId;
+extern "C"  void Networking_DispatchAuthResponse_m2488848192 (Networking_t1515242260 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Networking_DispatchAuthResponse_m2488848192_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
+		Networking_dispatchAuthResponse_m1695556384(NULL /*static, unused*/, /*hidden argument*/NULL);
 		return;
 	}
 }

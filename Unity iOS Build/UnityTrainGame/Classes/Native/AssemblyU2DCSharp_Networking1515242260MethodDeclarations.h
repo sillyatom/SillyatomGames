@@ -36,10 +36,18 @@ struct NetworkResponse_t1683455087;
 extern "C"  void Networking__ctor_m3798141959 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::.cctor()
 extern "C"  void Networking__cctor_m1296187526 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Networking::authenticateLocalPlayer()
+extern "C"  void Networking_authenticateLocalPlayer_m2265016988 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::sendDataToAll(System.String)
 extern "C"  void Networking_sendDataToAll_m3741350505 (Il2CppObject * __this /* static, unused */, String_t* ___data, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::sendDataToPlayer(System.String,System.String)
 extern "C"  void Networking_sendDataToPlayer_m4247746419 (Il2CppObject * __this /* static, unused */, String_t* ___playerId, String_t* ___data, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 Networking::getAuthStatus()
+extern "C"  int32_t Networking_getAuthStatus_m778936871 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 Networking::getGCStatus()
+extern "C"  int32_t Networking_getGCStatus_m2120910907 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Networking::dispatchAuthResponse()
+extern "C"  void Networking_dispatchAuthResponse_m1695556384 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String Networking::get_HostId()
 extern "C"  String_t* Networking_get_HostId_m3636325228 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String Networking::get_LocalId()
@@ -82,3 +90,11 @@ extern "C"  void Networking_OnAPISuccess_m3301231507 (Networking_t1515242260 * _
 extern "C"  void Networking_Update_m3505145830 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::UpdatePlayersData()
 extern "C"  void Networking_UpdatePlayersData_m4188696152 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Networking::SignInGC()
+extern "C"  void Networking_SignInGC_m4010373883 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 Networking::SigningStatus()
+extern "C"  int32_t Networking_SigningStatus_m2778579438 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 Networking::GameCenterStatus()
+extern "C"  int32_t Networking_GameCenterStatus_m2830491492 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Networking::DispatchAuthResponse()
+extern "C"  void Networking_DispatchAuthResponse_m2488848192 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

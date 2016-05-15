@@ -5,15 +5,19 @@ using System.Runtime.InteropServices;
 
 public class MainScreen : SceneMonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern void authenticateLocalPlayer();
-
+    
     public Button playBtn;
 
     override public void Init()
     {
         base.Init();
-        playBtn.onClick.AddListener(OnPlay);    
+        playBtn.onClick.AddListener(OnPlay);
+    }
+
+    private void AuthGC()
+    {
+        SingletonManager.reference.popupManager.CreateGenericPopup("Connecting", "Signing in Game Center");
+        SingletonManager.reference.network.SignInGC();
     }
 
     override protected void OnGameEvent(GameEvent gEvent)
@@ -29,13 +33,7 @@ public class MainScreen : SceneMonoBehaviour
 
     private void OnPlay()
     {
-        #if UNITY_EDITOR
         MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
-        #else
-        SingletonManager.reference.popupManager.CreateGenericPopup("Connecting", "Signing in Game Center");
-        authenticateLocalPlayer();
-        #endif
         playBtn.enabled = false;
     }
-
 }

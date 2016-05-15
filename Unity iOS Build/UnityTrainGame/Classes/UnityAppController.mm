@@ -242,6 +242,8 @@ extern "C" void UnityRequestQuit()
 
 	[self createUI];
 	[self preStartUnity];
+    
+    [[GameKitHelper sharedGameKitHelper]authenticateLocalPlayer];
 
 	// if you wont use keyboard you may comment it out at save some memory
 	[KeyboardDelegate Initialize];
@@ -452,9 +454,24 @@ void UnityInitTrampoline()
 
 extern "C"
 {
+    void dispatchAuthResponse()
+    {
+        [[GameKitHelper sharedGameKitHelper] sendAuthMessage];
+    }
+    
     void authenticateLocalPlayer()
     {
-        [[GameKitHelper sharedGameKitHelper]authenticateLocalPlayer];
+        [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
+    }
+    
+    int getAuthStatus()
+    {
+        return [[GameKitHelper sharedGameKitHelper] signingStatus];
+    }
+    
+    int getGCStatus()
+    {
+        return [[GameKitHelper sharedGameKitHelper] gcStatus];
     }
     
     void debugMessage(char* msg)

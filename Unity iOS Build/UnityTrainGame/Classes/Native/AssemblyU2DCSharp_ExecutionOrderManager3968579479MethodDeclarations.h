@@ -14,10 +14,13 @@
 
 // ExecutionOrderManager
 struct ExecutionOrderManager_t3968579479;
+// System.String
+struct String_t;
 
 #include "codegen/il2cpp-codegen.h"
+#include "mscorlib_System_String968488902.h"
 
 // System.Void ExecutionOrderManager::.ctor()
 extern "C"  void ExecutionOrderManager__ctor_m3664436148 (ExecutionOrderManager_t3968579479 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void ExecutionOrderManager::Awake()
-extern "C"  void ExecutionOrderManager_Awake_m3902041367 (ExecutionOrderManager_t3968579479 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ExecutionOrderManager::Init(System.String)
+extern "C"  void ExecutionOrderManager_Init_m4122699490 (ExecutionOrderManager_t3968579479 * __this, String_t* ___data, const MethodInfo* method) IL2CPP_METHOD_ATTR;

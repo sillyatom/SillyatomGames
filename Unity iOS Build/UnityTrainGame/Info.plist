@@ -18,7 +18,7 @@
       <string>AppIcon76x76~ipad.png</string>
     </array>
     <key>CFBundleIdentifier</key>
-    <string>com.sillyatomgames.${PRODUCT_NAME}</string>
+    <string>com.sag.${PRODUCT_NAME}</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -29,6 +29,8 @@
     <string>1.8</string>
     <key>CFBundleVersion</key>
     <string>0</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false />
     <key>LSRequiresIPhoneOS</key>
     <true />
     <key>NSAppTransportSecurity</key>

@@ -22,10 +22,10 @@ struct GameEvent_t2981166504;
 
 // System.Void MainScreen::.ctor()
 extern "C"  void MainScreen__ctor_m1707852438 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void MainScreen::authenticateLocalPlayer()
-extern "C"  void MainScreen_authenticateLocalPlayer_m68500331 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MainScreen::Init()
 extern "C"  void MainScreen_Init_m3193217278 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MainScreen::AuthGC()
+extern "C"  void MainScreen_AuthGC_m3239920690 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MainScreen::OnGameEvent(GameEvent)
 extern "C"  void MainScreen_OnGameEvent_m3786029133 (MainScreen_t2442698661 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MainScreen::OnPlay()

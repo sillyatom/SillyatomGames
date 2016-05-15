@@ -24,19 +24,22 @@ extern NSString * const FIND_MATCHES;
 extern int const MIN_PLAYERS;
 extern int const MAX_PLAYERS;
 
-@interface GameKitHelper : NSObject <GKMatchmakerViewControllerDelegate, GKMatchDelegate>
+@interface GameKitHelper : NSObject <GKMatchmakerViewControllerDelegate, GKMatchDelegate, GKLocalPlayerListener>
 
 @property (nonatomic, strong) GKMatch * match;
 @property (nonatomic, strong) NSString * hostID;
 @property (nonatomic, assign) BOOL isHost;
+@property (nonatomic, assign) int signingStatus;
+@property (nonatomic, assign) int gcStatus;
 @property (nonatomic, assign) id<GameKitHelperDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary * playersDict;
 @property (nonatomic, strong) NSMutableDictionary * playersDP;
 
 -(void) findMatchWithMinPlayers : (int) minPlayers maxPlayers:(int)maxPlayers viewController:(UIViewController*)viewController delegate:(id<GameKitHelperDelegate>)delegate;
 
--(void) sendDataToPlayer:(NSString*)playerId strData:(NSString*)str;
+- (void) sendDataToPlayer:(NSString*)playerId strData:(NSString*)str;
 - (void) sendDataToAll:(NSString*)str;
+- (void) sendAuthMessage;
 
 @property (nonatomic, readonly) UIViewController * authenticationViewController;
 @property (nonatomic, readonly) NSError * lastError;

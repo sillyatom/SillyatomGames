@@ -13802,7 +13802,7 @@ extern "C" void EventDelegate_Invoke_m918255398 ();
 extern "C" void EventDelegate_BeginInvoke_m1563626523 ();
 extern "C" void EventDelegate_EndInvoke_m2568619290 ();
 extern "C" void ExecutionOrderManager__ctor_m3664436148 ();
-extern "C" void ExecutionOrderManager_Awake_m3902041367 ();
+extern "C" void ExecutionOrderManager_Init_m4122699490 ();
 extern "C" void ExtensionMethods__cctor_m390673221 ();
 extern "C" void ExtMonoBehaviour__ctor_m885263906 ();
 extern "C" void ExtMonoBehaviour_Init_m949924850 ();
@@ -13874,8 +13874,8 @@ extern "C" void JsonTestScript_LogSerialized_m2811006310 ();
 extern "C" void JsonTestScript_LogResult_m3100334651 ();
 extern "C" void MainGame__ctor_m2200502672 ();
 extern "C" void MainScreen__ctor_m1707852438 ();
-extern "C" void MainScreen_authenticateLocalPlayer_m68500331 ();
 extern "C" void MainScreen_Init_m3193217278 ();
+extern "C" void MainScreen_AuthGC_m3239920690 ();
 extern "C" void MainScreen_OnGameEvent_m3786029133 ();
 extern "C" void MainScreen_OnPlay_m3220741537 ();
 extern "C" void MatchSelectionScreen__ctor_m2494922568 ();
@@ -13920,8 +13920,12 @@ extern "C" void NetworkConstants__ctor_m1175725274 ();
 extern "C" void NetworkConstants__cctor_m1605648915 ();
 extern "C" void Networking__ctor_m3798141959 ();
 extern "C" void Networking__cctor_m1296187526 ();
+extern "C" void Networking_authenticateLocalPlayer_m2265016988 ();
 extern "C" void Networking_sendDataToAll_m3741350505 ();
 extern "C" void Networking_sendDataToPlayer_m4247746419 ();
+extern "C" void Networking_getAuthStatus_m778936871 ();
+extern "C" void Networking_getGCStatus_m2120910907 ();
+extern "C" void Networking_dispatchAuthResponse_m1695556384 ();
 extern "C" void Networking_get_HostId_m3636325228 ();
 extern "C" void Networking_get_LocalId_m589514783 ();
 extern "C" void Networking_get_numPlayers_m3270147296 ();
@@ -13943,6 +13947,10 @@ extern "C" void Networking_OnAcknowledge_m221945122 ();
 extern "C" void Networking_OnAPISuccess_m3301231507 ();
 extern "C" void Networking_Update_m3505145830 ();
 extern "C" void Networking_UpdatePlayersData_m4188696152 ();
+extern "C" void Networking_SignInGC_m4010373883 ();
+extern "C" void Networking_SigningStatus_m2778579438 ();
+extern "C" void Networking_GameCenterStatus_m2830491492 ();
+extern "C" void Networking_DispatchAuthResponse_m2488848192 ();
 extern "C" void NetworkPlayer__ctor_m3253083068 ();
 extern "C" void NetworkPlayer_get_Name_m2083514009 ();
 extern "C" void NetworkPlayer_set_Name_m1086070834 ();
@@ -16096,7 +16104,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16085] = 
+extern const methodPointerType g_MethodPointers[16093] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -29889,7 +29897,7 @@ extern const methodPointerType g_MethodPointers[16085] =
 	EventDelegate_BeginInvoke_m1563626523,
 	EventDelegate_EndInvoke_m2568619290,
 	ExecutionOrderManager__ctor_m3664436148,
-	ExecutionOrderManager_Awake_m3902041367,
+	ExecutionOrderManager_Init_m4122699490,
 	ExtensionMethods__cctor_m390673221,
 	ExtMonoBehaviour__ctor_m885263906,
 	ExtMonoBehaviour_Init_m949924850,
@@ -29961,8 +29969,8 @@ extern const methodPointerType g_MethodPointers[16085] =
 	JsonTestScript_LogResult_m3100334651,
 	MainGame__ctor_m2200502672,
 	MainScreen__ctor_m1707852438,
-	MainScreen_authenticateLocalPlayer_m68500331,
 	MainScreen_Init_m3193217278,
+	MainScreen_AuthGC_m3239920690,
 	MainScreen_OnGameEvent_m3786029133,
 	MainScreen_OnPlay_m3220741537,
 	MatchSelectionScreen__ctor_m2494922568,
@@ -30007,8 +30015,12 @@ extern const methodPointerType g_MethodPointers[16085] =
 	NetworkConstants__cctor_m1605648915,
 	Networking__ctor_m3798141959,
 	Networking__cctor_m1296187526,
+	Networking_authenticateLocalPlayer_m2265016988,
 	Networking_sendDataToAll_m3741350505,
 	Networking_sendDataToPlayer_m4247746419,
+	Networking_getAuthStatus_m778936871,
+	Networking_getGCStatus_m2120910907,
+	Networking_dispatchAuthResponse_m1695556384,
 	Networking_get_HostId_m3636325228,
 	Networking_get_LocalId_m589514783,
 	Networking_get_numPlayers_m3270147296,
@@ -30030,6 +30042,10 @@ extern const methodPointerType g_MethodPointers[16085] =
 	Networking_OnAPISuccess_m3301231507,
 	Networking_Update_m3505145830,
 	Networking_UpdatePlayersData_m4188696152,
+	Networking_SignInGC_m4010373883,
+	Networking_SigningStatus_m2778579438,
+	Networking_GameCenterStatus_m2830491492,
+	Networking_DispatchAuthResponse_m2488848192,
 	NetworkPlayer__ctor_m3253083068,
 	NetworkPlayer_get_Name_m2083514009,
 	NetworkPlayer_set_Name_m1086070834,

@@ -12,9 +12,6 @@ void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_Audio();
 	RegisterModule_Audio();
 
-	void RegisterModule_ParticleSystem();
-	RegisterModule_ParticleSystem();
-
 	void RegisterModule_Physics();
 	RegisterModule_Physics();
 
@@ -34,7 +31,7 @@ void RegisterStaticallyLinkedModulesGranular()
 
 void RegisterAllClasses()
 {
-	//Total: 74 classes
+	//Total: 72 classes
 	//0. Mesh
 	void RegisterClass_Mesh();
 	RegisterClass_Mesh();
@@ -319,15 +316,7 @@ void RegisterAllClasses()
 	void RegisterClass_LightmapSettings();
 	RegisterClass_LightmapSettings();
 
-	//71. ParticleSystem
-	void RegisterClass_ParticleSystem();
-	RegisterClass_ParticleSystem();
-
-	//72. ParticleSystemRenderer
-	void RegisterClass_ParticleSystemRenderer();
-	RegisterClass_ParticleSystemRenderer();
-
-	//73. RuntimeInitializeOnLoadManager
+	//71. RuntimeInitializeOnLoadManager
 	void RegisterClass_RuntimeInitializeOnLoadManager();
 	RegisterClass_RuntimeInitializeOnLoadManager();
 

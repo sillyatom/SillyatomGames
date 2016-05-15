@@ -7,7 +7,7 @@ public class ExecutionOrderManager : MonoBehaviour
     public List<SceneMonoBehaviour> _monos;
     public List<ExtMonoBehaviour> _extMonos;
 
-    void Awake()
+    public void Init(string data)
     {
         foreach (var mono in _extMonos)
         {

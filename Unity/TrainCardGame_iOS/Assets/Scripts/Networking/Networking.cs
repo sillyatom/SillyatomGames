@@ -9,10 +9,22 @@ using Newtonsoft.Json.Linq;
 public class Networking : ExtMonoBehaviour
 {
     [DllImport("__Internal")]
+    private static extern void authenticateLocalPlayer();
+
+    [DllImport("__Internal")]
     private static extern void sendDataToAll(string data);
 
     [DllImport("__Internal")]
     private static extern void sendDataToPlayer(string playerId, string data);
+
+    [DllImport("__Internal")]
+    private static extern int getAuthStatus();
+
+    [DllImport("__Internal")]
+    private static extern int getGCStatus();
+
+    [DllImport("__Internal")]
+    private static extern void dispatchAuthResponse();
 
     private List<NetworkResponse> _results = new List<NetworkResponse>();
 
@@ -400,5 +412,25 @@ public class Networking : ExtMonoBehaviour
         {
             _playersIdsExcludingThis.Add(player.PlayerId.DeepClone());
         }
+    }
+
+    public void SignInGC()
+    {
+        authenticateLocalPlayer();
+    }
+
+    public int SigningStatus()
+    {
+        return getAuthStatus();
+    }
+
+    public int GameCenterStatus()
+    {
+        return getGCStatus();
+    }
+
+    public void DispatchAuthResponse()
+    {
+        dispatchAuthResponse();
     }
 }

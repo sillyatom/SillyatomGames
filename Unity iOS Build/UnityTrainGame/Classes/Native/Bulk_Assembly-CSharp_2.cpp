@@ -462,7 +462,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_SingletonManager825254210MethodDeclarations.h"
 #include "AssemblyU2DCSharp_GameObjectRef4121474274.h"
 #include "AssemblyU2DCSharp_Networking1515242260.h"
-#include "AssemblyU2DCSharp_BridgeDebugger2949066474MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Component2126946602MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_RectTransform3317474837MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Rect1525428817MethodDeclarations.h"
@@ -531,6 +530,7 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_NetworkResponse1683455087MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConvert748332590MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundVO3050121383MethodDeclarations.h"
+#include "AssemblyU2DCSharp_BridgeDebugger2949066474MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundVO3050121383.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395.h"
 #include "AssemblyU2DCSharp_NetworkResponse1683455087.h"
@@ -10199,8 +10199,6 @@ extern "C"  void Player_OnRoundStart_m4031893565 (Player_t2393081601 * __this, c
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* Texture2D_t2509538522_il2cpp_TypeInfo_var;
 extern const MethodInfo* Component_GetComponent_TisRectTransform_t3317474837_m1940403147_MethodInfo_var;
-extern Il2CppCodeGenString* _stringLiteral180323565;
-extern Il2CppCodeGenString* _stringLiteral180323596;
 extern const uint32_t Player_UpdateDP_m4160431299_MetadataUsageId;
 extern "C"  void Player_UpdateDP_m4160431299 (Player_t2393081601 * __this, String_t* ___imagePath, const MethodInfo* method)
 {
@@ -10217,58 +10215,51 @@ extern "C"  void Player_UpdateDP_m4160431299 (Player_t2393081601 * __this, Strin
 	{
 		String_t* L_0 = ___imagePath;
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral180323565, L_0, /*hidden argument*/NULL);
-		BridgeDebugger_Log_m140064271(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		String_t* L_2 = ___imagePath;
-		bool L_3 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
-		if (L_3)
+		bool L_1 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		if (L_1)
 		{
-			goto IL_009e;
+			goto IL_007e;
 		}
 	}
 	{
-		String_t* L_4 = ___imagePath;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_5 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral180323596, L_4, /*hidden argument*/NULL);
-		BridgeDebugger_Log_m140064271(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
-		Image_t3354615620 * L_6 = __this->get_playerDP_7();
-		NullCheck(L_6);
-		RectTransform_t3317474837 * L_7 = Component_GetComponent_TisRectTransform_t3317474837_m1940403147(L_6, /*hidden argument*/Component_GetComponent_TisRectTransform_t3317474837_m1940403147_MethodInfo_var);
-		NullCheck(L_7);
-		Rect_t1525428817  L_8 = RectTransform_get_rect_m1566017036(L_7, /*hidden argument*/NULL);
-		V_0 = L_8;
-		float L_9 = Rect_get_width_m2824209432((&V_0), /*hidden argument*/NULL);
-		float L_10 = Rect_get_height_m2154960823((&V_0), /*hidden argument*/NULL);
-		Texture2D_t2509538522 * L_11 = (Texture2D_t2509538522 *)il2cpp_codegen_object_new(Texture2D_t2509538522_il2cpp_TypeInfo_var);
-		Texture2D__ctor_m1883511258(L_11, (((int32_t)((int32_t)L_9))), (((int32_t)((int32_t)L_10))), /*hidden argument*/NULL);
-		V_1 = L_11;
-		String_t* L_12 = ___imagePath;
-		ByteU5BU5D_t58506160* L_13 = File_ReadAllBytes_m621899937(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		V_2 = L_13;
+		Image_t3354615620 * L_2 = __this->get_playerDP_7();
+		NullCheck(L_2);
+		RectTransform_t3317474837 * L_3 = Component_GetComponent_TisRectTransform_t3317474837_m1940403147(L_2, /*hidden argument*/Component_GetComponent_TisRectTransform_t3317474837_m1940403147_MethodInfo_var);
+		NullCheck(L_3);
+		Rect_t1525428817  L_4 = RectTransform_get_rect_m1566017036(L_3, /*hidden argument*/NULL);
+		V_0 = L_4;
+		float L_5 = Rect_get_width_m2824209432((&V_0), /*hidden argument*/NULL);
+		float L_6 = Rect_get_height_m2154960823((&V_0), /*hidden argument*/NULL);
+		Texture2D_t2509538522 * L_7 = (Texture2D_t2509538522 *)il2cpp_codegen_object_new(Texture2D_t2509538522_il2cpp_TypeInfo_var);
+		Texture2D__ctor_m1883511258(L_7, (((int32_t)((int32_t)L_5))), (((int32_t)((int32_t)L_6))), /*hidden argument*/NULL);
+		V_1 = L_7;
+		String_t* L_8 = ___imagePath;
+		ByteU5BU5D_t58506160* L_9 = File_ReadAllBytes_m621899937(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		V_2 = L_9;
+		Texture2D_t2509538522 * L_10 = V_1;
+		ByteU5BU5D_t58506160* L_11 = V_2;
+		NullCheck(L_10);
+		Texture2D_LoadImage_m2186196036(L_10, L_11, /*hidden argument*/NULL);
+		Image_t3354615620 * L_12 = __this->get_playerDP_7();
+		Texture2D_t2509538522 * L_13 = V_1;
 		Texture2D_t2509538522 * L_14 = V_1;
-		ByteU5BU5D_t58506160* L_15 = V_2;
 		NullCheck(L_14);
-		Texture2D_LoadImage_m2186196036(L_14, L_15, /*hidden argument*/NULL);
-		Image_t3354615620 * L_16 = __this->get_playerDP_7();
-		Texture2D_t2509538522 * L_17 = V_1;
-		Texture2D_t2509538522 * L_18 = V_1;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_18);
-		Texture2D_t2509538522 * L_20 = V_1;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(5 /* System.Int32 UnityEngine.Texture::get_height() */, L_20);
-		Rect_t1525428817  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		Rect__ctor_m3291325233(&L_22, (0.0f), (0.0f), (((float)((float)L_19))), (((float)((float)L_21))), /*hidden argument*/NULL);
-		Vector2_t3525329788  L_23;
-		memset(&L_23, 0, sizeof(L_23));
-		Vector2__ctor_m1517109030(&L_23, (0.5f), (0.5f), /*hidden argument*/NULL);
-		Sprite_t4006040370 * L_24 = Sprite_Create_m278903054(NULL /*static, unused*/, L_17, L_22, L_23, /*hidden argument*/NULL);
+		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_14);
+		Texture2D_t2509538522 * L_16 = V_1;
 		NullCheck(L_16);
-		Image_set_sprite_m572551402(L_16, L_24, /*hidden argument*/NULL);
+		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(5 /* System.Int32 UnityEngine.Texture::get_height() */, L_16);
+		Rect_t1525428817  L_18;
+		memset(&L_18, 0, sizeof(L_18));
+		Rect__ctor_m3291325233(&L_18, (0.0f), (0.0f), (((float)((float)L_15))), (((float)((float)L_17))), /*hidden argument*/NULL);
+		Vector2_t3525329788  L_19;
+		memset(&L_19, 0, sizeof(L_19));
+		Vector2__ctor_m1517109030(&L_19, (0.5f), (0.5f), /*hidden argument*/NULL);
+		Sprite_t4006040370 * L_20 = Sprite_Create_m278903054(NULL /*static, unused*/, L_13, L_18, L_19, /*hidden argument*/NULL);
+		NullCheck(L_12);
+		Image_set_sprite_m572551402(L_12, L_20, /*hidden argument*/NULL);
 	}
 
-IL_009e:
+IL_007e:
 	{
 		return;
 	}
@@ -10327,6 +10318,8 @@ IL_0050:
 		CardSelectionHandler_t2914958190 * L_10 = __this->get__cardSelectionHandler_10();
 		NullCheck(L_10);
 		VirtActionInvoker0::Invoke(4 /* System.Void CardSelectionHandler::Init() */, L_10);
+		int32_t L_11 = __this->get_count_18();
+		Player_UpdateCount_m2085950255(__this, L_11, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -10406,7 +10399,7 @@ extern "C"  void Player_UpdateCount_m2085950255 (Player_t2393081601 * __this, in
 		int32_t L_2 = ___count;
 		if ((((int32_t)L_2) > ((int32_t)0)))
 		{
-			goto IL_003f;
+			goto IL_0044;
 		}
 	}
 	{
@@ -10417,7 +10410,7 @@ extern "C"  void Player_UpdateCount_m2085950255 (Player_t2393081601 * __this, in
 		bool L_5 = GameObject_get_activeSelf_m3858025161(L_4, /*hidden argument*/NULL);
 		if (!L_5)
 		{
-			goto IL_003f;
+			goto IL_0044;
 		}
 	}
 	{
@@ -10426,9 +10419,37 @@ extern "C"  void Player_UpdateCount_m2085950255 (Player_t2393081601 * __this, in
 		GameObject_t4012695102 * L_7 = Component_get_gameObject_m1170635899(L_6, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		GameObject_SetActive_m3538205401(L_7, (bool)0, /*hidden argument*/NULL);
+		goto IL_0071;
 	}
 
-IL_003f:
+IL_0044:
+	{
+		Text_t3286458198 * L_8 = __this->get_cardCount_5();
+		NullCheck(L_8);
+		GameObject_t4012695102 * L_9 = Component_get_gameObject_m1170635899(L_8, /*hidden argument*/NULL);
+		NullCheck(L_9);
+		bool L_10 = GameObject_get_activeSelf_m3858025161(L_9, /*hidden argument*/NULL);
+		if (L_10)
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		int32_t L_11 = ___count;
+		if ((((int32_t)L_11) <= ((int32_t)0)))
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		Text_t3286458198 * L_12 = __this->get_cardCount_5();
+		NullCheck(L_12);
+		GameObject_t4012695102 * L_13 = Component_get_gameObject_m1170635899(L_12, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		GameObject_SetActive_m3538205401(L_13, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_0071:
 	{
 		return;
 	}
@@ -13142,33 +13163,30 @@ IL_0047:
 	{
 		Player_t2393081601 * L_10 = V_0;
 		NullCheck(L_10);
-		Player_set_DidPullOver_m4156915338(L_10, (bool)0, /*hidden argument*/NULL);
-		Player_t2393081601 * L_11 = V_0;
-		NullCheck(L_11);
-		Card_t2092848 * L_12 = Player_get_SelectedCard_m249687851(L_11, /*hidden argument*/NULL);
-		V_1 = L_12;
-		Card_t2092848 * L_13 = V_1;
-		bool L_14 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_13, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
-		if (!L_14)
+		Card_t2092848 * L_11 = Player_get_SelectedCard_m249687851(L_10, /*hidden argument*/NULL);
+		V_1 = L_11;
+		Card_t2092848 * L_12 = V_1;
+		bool L_13 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_12, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
+		if (!L_13)
 		{
-			goto IL_0074;
+			goto IL_006d;
 		}
 	}
 	{
+		Player_t2393081601 * L_14 = V_0;
+		NullCheck(L_14);
+		Player_AutoDeal_m2757988037(L_14, /*hidden argument*/NULL);
 		Player_t2393081601 * L_15 = V_0;
-		NullCheck(L_15);
-		Player_AutoDeal_m2757988037(L_15, /*hidden argument*/NULL);
-		Player_t2393081601 * L_16 = V_0;
-		MultiplayerMainGame_DealCard_m747093444(__this, L_16, (bool)1, /*hidden argument*/NULL);
-		goto IL_007a;
+		MultiplayerMainGame_DealCard_m747093444(__this, L_15, (bool)1, /*hidden argument*/NULL);
+		goto IL_0073;
 	}
 
-IL_0074:
+IL_006d:
 	{
 		MultiplayerMainGame_CheckWinnings_m3943219407(__this, /*hidden argument*/NULL);
 	}
 
-IL_007a:
+IL_0073:
 	{
 		return;
 	}
