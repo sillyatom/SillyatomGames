@@ -19,7 +19,7 @@
 <type fullname="RoundHandler" preserve="all"/>
 <type fullname="SceneTransitionManager" preserve="all"/>
 <type fullname="SpinHandler" preserve="all"/>
-<type fullname="MainGame" preserve="all"/>
+<type fullname="Main" preserve="all"/>
 <type fullname="Networking" preserve="all"/>
 <type fullname="GenericPopup" preserve="all"/>
 <type fullname="MainScreen" preserve="all"/>

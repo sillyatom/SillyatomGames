@@ -396,7 +396,7 @@
      <Compile Include="Assets\Scripts\Handlers\RoundHandler.cs" />
      <Compile Include="Assets\Scripts\Handlers\SceneTransitionManager.cs" />
      <Compile Include="Assets\Scripts\Handlers\SpinHandler.cs" />
-     <Compile Include="Assets\Scripts\MainGame.cs" />
+     <Compile Include="Assets\Scripts\Main.cs" />
      <Compile Include="Assets\Scripts\Networking\API.cs" />
      <Compile Include="Assets\Scripts\Networking\APIHandler.cs" />
      <Compile Include="Assets\Scripts\Networking\DispatchVO\AcknowledgeVO.cs" />
@@ -408,6 +408,7 @@
      <Compile Include="Assets\Scripts\Networking\NetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkResponse.cs" />
      <Compile Include="Assets\Scripts\Networking\Networking.cs" />
+     <Compile Include="Assets\Scripts\Networking\ResponseVO\GCStatusVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GameCenterAuthVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\MatchStartedVO.cs" />
      <Compile Include="Assets\Scripts\Popups\GenericPopup.cs" />

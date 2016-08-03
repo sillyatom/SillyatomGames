@@ -58,6 +58,8 @@ extern "C"  void UnityEventBase_RebuildPersistentCallsIfNeeded_m4147202091 (Unit
 extern "C"  void UnityEventBase_AddCall_m1246572149 (UnityEventBase_t2174897510 * __this, BaseInvokableCall_t1733537956 * ___call, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.UnityEventBase::RemoveListener(System.Object,System.Reflection.MethodInfo)
 extern "C"  void UnityEventBase_RemoveListener_m276725997 (UnityEventBase_t2174897510 * __this, Il2CppObject * ___targetObj, MethodInfo_t * ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Events.UnityEventBase::RemoveAllListeners()
+extern "C"  void UnityEventBase_RemoveAllListeners_m2083644536 (UnityEventBase_t2174897510 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.UnityEventBase::Invoke(System.Object[])
 extern "C"  void UnityEventBase_Invoke_m3681078084 (UnityEventBase_t2174897510 * __this, ObjectU5BU5D_t11523773* ___parameters, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Events.UnityEventBase::ToString()

@@ -25,6 +25,8 @@ struct Card_t2092848;
 
 // System.Void InGameEvent::.ctor(System.String)
 extern "C"  void InGameEvent__ctor_m2728077114 (InGameEvent_t511087107 * __this, String_t* ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void InGameEvent::.ctor(System.String,System.Int32)
+extern "C"  void InGameEvent__ctor_m2522809309 (InGameEvent_t511087107 * __this, String_t* ___type, int32_t ___status, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void InGameEvent::.ctor(System.String,System.String)
 extern "C"  void InGameEvent__ctor_m1354375670 (InGameEvent_t511087107 * __this, String_t* ___type, String_t* ___playerId, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void InGameEvent::.ctor(System.String,Card)
@@ -37,3 +39,7 @@ extern "C"  void InGameEvent_set_playerId_m4245859309 (InGameEvent_t511087107 * 
 extern "C"  Card_t2092848 * InGameEvent_get_card_m1665257800 (InGameEvent_t511087107 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void InGameEvent::set_card(Card)
 extern "C"  void InGameEvent_set_card_m1793598009 (InGameEvent_t511087107 * __this, Card_t2092848 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 InGameEvent::get_status()
+extern "C"  int32_t InGameEvent_get_status_m20898569 (InGameEvent_t511087107 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void InGameEvent::set_status(System.Int32)
+extern "C"  void InGameEvent_set_status_m3406780060 (InGameEvent_t511087107 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

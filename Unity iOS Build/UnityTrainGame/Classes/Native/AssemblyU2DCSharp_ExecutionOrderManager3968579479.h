@@ -31,6 +31,8 @@ public:
 	List_1_t748209415 * ____monos_2;
 	// System.Collections.Generic.List`1<ExtMonoBehaviour> ExecutionOrderManager::_extMonos
 	List_1_t3421558162 * ____extMonos_3;
+	// System.Boolean ExecutionOrderManager::_didInit
+	bool ____didInit_4;
 
 public:
 	inline static int32_t get_offset_of__monos_2() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____monos_2)); }
@@ -49,6 +51,14 @@ public:
 	{
 		____extMonos_3 = value;
 		Il2CppCodeGenWriteBarrier(&____extMonos_3, value);
+	}
+
+	inline static int32_t get_offset_of__didInit_4() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____didInit_4)); }
+	inline bool get__didInit_4() const { return ____didInit_4; }
+	inline bool* get_address_of__didInit_4() { return &____didInit_4; }
+	inline void set__didInit_4(bool value)
+	{
+		____didInit_4 = value;
 	}
 };
 

@@ -7587,6 +7587,17 @@ IL_003b:
 		return;
 	}
 }
+// System.Void UnityEngine.Events.InvokableCallList::Clear()
+extern "C"  void InvokableCallList_Clear_m4114435434 (InvokableCallList_t3771143731 * __this, const MethodInfo* method)
+{
+	{
+		List_1_t2530496925 * L_0 = __this->get_m_RuntimeCalls_1();
+		NullCheck(L_0);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall>::Clear() */, L_0);
+		__this->set_m_NeedsUpdate_3((bool)1);
+		return;
+	}
+}
 // System.Void UnityEngine.Events.InvokableCallList::ClearPersistent()
 extern "C"  void InvokableCallList_ClearPersistent_m1690187553 (InvokableCallList_t3771143731 * __this, const MethodInfo* method)
 {
@@ -8731,6 +8742,16 @@ extern "C"  void UnityEventBase_RemoveListener_m276725997 (UnityEventBase_t21748
 		MethodInfo_t * L_2 = ___method;
 		NullCheck(L_0);
 		InvokableCallList_RemoveListener_m855004700(L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Events.UnityEventBase::RemoveAllListeners()
+extern "C"  void UnityEventBase_RemoveAllListeners_m2083644536 (UnityEventBase_t2174897510 * __this, const MethodInfo* method)
+{
+	{
+		InvokableCallList_t3771143731 * L_0 = __this->get_m_Calls_0();
+		NullCheck(L_0);
+		InvokableCallList_Clear_m4114435434(L_0, /*hidden argument*/NULL);
 		return;
 	}
 }

@@ -36,8 +36,11 @@ public class PopupManager : ExtMonoBehaviour
 
     public void RemoveActivePopup()
     {
-        RemovePopup(_activePopup);
-        ShowPopup();
+        if (_activePopup != null)
+        {
+            RemovePopup(_activePopup);
+            ShowPopup();
+        }
     }
 
     private void ShowPopup()

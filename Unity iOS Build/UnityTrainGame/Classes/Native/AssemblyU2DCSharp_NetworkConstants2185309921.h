@@ -50,6 +50,20 @@ public:
 	String_t* ___KEY_PLAYER_ID_7;
 	// System.String NetworkConstants::KEY_CARDS_DATA
 	String_t* ___KEY_CARDS_DATA_8;
+	// System.Int32 NetworkConstants::GC_SIGNING_STATUS_NOT_INITIALIZED
+	int32_t ___GC_SIGNING_STATUS_NOT_INITIALIZED_9;
+	// System.Int32 NetworkConstants::GC_SIGNING_STATUS_INIT
+	int32_t ___GC_SIGNING_STATUS_INIT_10;
+	// System.Int32 NetworkConstants::GC_SIGNING_STATUS_PROCESSING
+	int32_t ___GC_SIGNING_STATUS_PROCESSING_11;
+	// System.Int32 NetworkConstants::GC_SIGNING_STATUS_SUCCEEDED
+	int32_t ___GC_SIGNING_STATUS_SUCCEEDED_12;
+	// System.Int32 NetworkConstants::GC_STATUS_NOT_INITIATED
+	int32_t ___GC_STATUS_NOT_INITIATED_13;
+	// System.Int32 NetworkConstants::GC_STATUS_NOT_AVAILABLE
+	int32_t ___GC_STATUS_NOT_AVAILABLE_14;
+	// System.Int32 NetworkConstants::GC_STATUS_AVAILABLE
+	int32_t ___GC_STATUS_AVAILABLE_15;
 
 public:
 	inline static int32_t get_offset_of_KEY_API_0() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___KEY_API_0)); }
@@ -131,6 +145,62 @@ public:
 	{
 		___KEY_CARDS_DATA_8 = value;
 		Il2CppCodeGenWriteBarrier(&___KEY_CARDS_DATA_8, value);
+	}
+
+	inline static int32_t get_offset_of_GC_SIGNING_STATUS_NOT_INITIALIZED_9() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_SIGNING_STATUS_NOT_INITIALIZED_9)); }
+	inline int32_t get_GC_SIGNING_STATUS_NOT_INITIALIZED_9() const { return ___GC_SIGNING_STATUS_NOT_INITIALIZED_9; }
+	inline int32_t* get_address_of_GC_SIGNING_STATUS_NOT_INITIALIZED_9() { return &___GC_SIGNING_STATUS_NOT_INITIALIZED_9; }
+	inline void set_GC_SIGNING_STATUS_NOT_INITIALIZED_9(int32_t value)
+	{
+		___GC_SIGNING_STATUS_NOT_INITIALIZED_9 = value;
+	}
+
+	inline static int32_t get_offset_of_GC_SIGNING_STATUS_INIT_10() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_SIGNING_STATUS_INIT_10)); }
+	inline int32_t get_GC_SIGNING_STATUS_INIT_10() const { return ___GC_SIGNING_STATUS_INIT_10; }
+	inline int32_t* get_address_of_GC_SIGNING_STATUS_INIT_10() { return &___GC_SIGNING_STATUS_INIT_10; }
+	inline void set_GC_SIGNING_STATUS_INIT_10(int32_t value)
+	{
+		___GC_SIGNING_STATUS_INIT_10 = value;
+	}
+
+	inline static int32_t get_offset_of_GC_SIGNING_STATUS_PROCESSING_11() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_SIGNING_STATUS_PROCESSING_11)); }
+	inline int32_t get_GC_SIGNING_STATUS_PROCESSING_11() const { return ___GC_SIGNING_STATUS_PROCESSING_11; }
+	inline int32_t* get_address_of_GC_SIGNING_STATUS_PROCESSING_11() { return &___GC_SIGNING_STATUS_PROCESSING_11; }
+	inline void set_GC_SIGNING_STATUS_PROCESSING_11(int32_t value)
+	{
+		___GC_SIGNING_STATUS_PROCESSING_11 = value;
+	}
+
+	inline static int32_t get_offset_of_GC_SIGNING_STATUS_SUCCEEDED_12() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_SIGNING_STATUS_SUCCEEDED_12)); }
+	inline int32_t get_GC_SIGNING_STATUS_SUCCEEDED_12() const { return ___GC_SIGNING_STATUS_SUCCEEDED_12; }
+	inline int32_t* get_address_of_GC_SIGNING_STATUS_SUCCEEDED_12() { return &___GC_SIGNING_STATUS_SUCCEEDED_12; }
+	inline void set_GC_SIGNING_STATUS_SUCCEEDED_12(int32_t value)
+	{
+		___GC_SIGNING_STATUS_SUCCEEDED_12 = value;
+	}
+
+	inline static int32_t get_offset_of_GC_STATUS_NOT_INITIATED_13() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_STATUS_NOT_INITIATED_13)); }
+	inline int32_t get_GC_STATUS_NOT_INITIATED_13() const { return ___GC_STATUS_NOT_INITIATED_13; }
+	inline int32_t* get_address_of_GC_STATUS_NOT_INITIATED_13() { return &___GC_STATUS_NOT_INITIATED_13; }
+	inline void set_GC_STATUS_NOT_INITIATED_13(int32_t value)
+	{
+		___GC_STATUS_NOT_INITIATED_13 = value;
+	}
+
+	inline static int32_t get_offset_of_GC_STATUS_NOT_AVAILABLE_14() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_STATUS_NOT_AVAILABLE_14)); }
+	inline int32_t get_GC_STATUS_NOT_AVAILABLE_14() const { return ___GC_STATUS_NOT_AVAILABLE_14; }
+	inline int32_t* get_address_of_GC_STATUS_NOT_AVAILABLE_14() { return &___GC_STATUS_NOT_AVAILABLE_14; }
+	inline void set_GC_STATUS_NOT_AVAILABLE_14(int32_t value)
+	{
+		___GC_STATUS_NOT_AVAILABLE_14 = value;
+	}
+
+	inline static int32_t get_offset_of_GC_STATUS_AVAILABLE_15() { return static_cast<int32_t>(offsetof(NetworkConstants_t2185309921_StaticFields, ___GC_STATUS_AVAILABLE_15)); }
+	inline int32_t get_GC_STATUS_AVAILABLE_15() const { return ___GC_STATUS_AVAILABLE_15; }
+	inline int32_t* get_address_of_GC_STATUS_AVAILABLE_15() { return &___GC_STATUS_AVAILABLE_15; }
+	inline void set_GC_STATUS_AVAILABLE_15(int32_t value)
+	{
+		___GC_STATUS_AVAILABLE_15 = value;
 	}
 };
 

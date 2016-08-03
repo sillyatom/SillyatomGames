@@ -2,20 +2,21 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Screens/MainScreen.cs">
     <Files>
-      <File FileName="Assets/Editor/PostBuildProcessor.cs" Line="31" Column="3" />
+      <File FileName="Assets/Editor/PostBuildProcessor.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Popups/GenericPopup.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Handlers/PopupManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Handlers/PopupManager.cs" Line="43" Column="9" />
       <File FileName="Assets/Scripts/Utility/GameObjectRef.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Screens/MainScreen.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/Screens/MainScreen.cs" Line="21" Column="46" />
       <File FileName="Assets/Scripts/Screens/MatchSelectionScreen.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="179" Column="23" />
+      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Events/GameEvent.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Constants/NetworkConstants.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Screens/SinglePlayerMainGame.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Handlers/ExecutionOrderManager.cs" Line="10" Column="33" />
-      <File FileName="Assets/Scripts/Handlers/SceneTransitionManager.cs" Line="5" Column="24" />
-      <File FileName="Assets/Scripts/Ext/SceneMonoBehaviour.cs" Line="14" Column="110" />
+      <File FileName="Assets/Scripts/Handlers/ExecutionOrderManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Handlers/SceneTransitionManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Ext/SceneMonoBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Handlers/BridgeDebugger.cs" Line="10" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

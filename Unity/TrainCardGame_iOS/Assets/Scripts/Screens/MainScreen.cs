@@ -5,35 +5,55 @@ using System.Runtime.InteropServices;
 
 public class MainScreen : SceneMonoBehaviour
 {
-    
     public Button playBtn;
+    private Networking network;
+    private int _signingStatus;
 
     override public void Init()
     {
         base.Init();
-        playBtn.onClick.AddListener(OnPlay);
+        network = SingletonManager.reference.network;
     }
 
     private void AuthGC()
     {
         SingletonManager.reference.popupManager.CreateGenericPopup("Connecting", "Signing in Game Center");
-        SingletonManager.reference.network.SignInGC();
+        StartCoroutine(StartSignInProcess());
     }
 
-    override protected void OnGameEvent(GameEvent gEvent)
+    private IEnumerator StartSignInProcess()
     {
-        if (
-            gEvent.type == GameEvent.GC_AUTH_SUCCESS
-            || gEvent.type == GameEvent.GC_AUTH_FAILED)
+        yield return new WaitForSeconds(1.0f);
+        network.SignInGC();
+    }
+
+    override protected void OnInGameEvent(InGameEvent evt)
+    {
+        switch (evt.type)
         {
-            SingletonManager.reference.popupManager.RemoveActivePopup();
-            MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
+            case InGameEvent.GC_STATUS:
+                _signingStatus = evt.status;
+                playBtn.onClick.RemoveAllListeners();
+                playBtn.onClick.AddListener(OnPlay);
+                break;
         }
     }
 
     private void OnPlay()
     {
-        MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
-        playBtn.enabled = false;
+        BridgeDebugger.Log("status : " + _signingStatus);
+        if (_signingStatus == NetworkConstants.GC_SIGNING_STATUS_SUCCEEDED)
+        {
+            SingletonManager.reference.popupManager.RemoveActivePopup();
+            MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
+        }
+        else if (_signingStatus == NetworkConstants.GC_SIGNING_STATUS_NOT_INITIALIZED)
+        {
+            AuthGC();
+        }
+        else
+        {
+            BridgeDebugger.Log("Missed Case Main Screen");
+        }
     }
 }

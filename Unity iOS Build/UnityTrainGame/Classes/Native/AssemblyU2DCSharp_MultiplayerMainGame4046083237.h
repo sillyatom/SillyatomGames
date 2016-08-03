@@ -96,28 +96,28 @@ public:
 struct MultiplayerMainGame_t4046083237_StaticFields
 {
 public:
-	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> MultiplayerMainGame::<>f__switch$map7
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map7_9;
 	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> MultiplayerMainGame::<>f__switch$map8
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map8_10;
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map8_9;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> MultiplayerMainGame::<>f__switch$map9
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map9_10;
 
 public:
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map7_9() { return static_cast<int32_t>(offsetof(MultiplayerMainGame_t4046083237_StaticFields, ___U3CU3Ef__switchU24map7_9)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map7_9() const { return ___U3CU3Ef__switchU24map7_9; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map7_9() { return &___U3CU3Ef__switchU24map7_9; }
-	inline void set_U3CU3Ef__switchU24map7_9(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map8_9() { return static_cast<int32_t>(offsetof(MultiplayerMainGame_t4046083237_StaticFields, ___U3CU3Ef__switchU24map8_9)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map8_9() const { return ___U3CU3Ef__switchU24map8_9; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map8_9() { return &___U3CU3Ef__switchU24map8_9; }
+	inline void set_U3CU3Ef__switchU24map8_9(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map7_9 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map7_9, value);
+		___U3CU3Ef__switchU24map8_9 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map8_9, value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map8_10() { return static_cast<int32_t>(offsetof(MultiplayerMainGame_t4046083237_StaticFields, ___U3CU3Ef__switchU24map8_10)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map8_10() const { return ___U3CU3Ef__switchU24map8_10; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map8_10() { return &___U3CU3Ef__switchU24map8_10; }
-	inline void set_U3CU3Ef__switchU24map8_10(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map9_10() { return static_cast<int32_t>(offsetof(MultiplayerMainGame_t4046083237_StaticFields, ___U3CU3Ef__switchU24map9_10)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map9_10() const { return ___U3CU3Ef__switchU24map9_10; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map9_10() { return &___U3CU3Ef__switchU24map9_10; }
+	inline void set_U3CU3Ef__switchU24map9_10(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map8_10 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map8_10, value);
+		___U3CU3Ef__switchU24map9_10 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map9_10, value);
 	}
 };
 

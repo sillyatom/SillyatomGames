@@ -102,22 +102,39 @@ BOOL _matchStarted;
         {
             _enableGameCenter = YES;
             _gcStatus = 1;
+            _signingStatus = 2;
             NSLog(@" [ Player Authenticated ] ");
         }
         else
         {
             _enableGameCenter = NO;
             _gcStatus = 0;
+            _signingStatus = -1;
         }
         
-        _signingStatus = 2;
+        
         [self initGame];
     };
 }
 
 - (void) initGame
 {
-    UnitySendMessage("ExecutionOrder", "Init", "");
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
+    
+    if ([[GKLocalPlayer localPlayer]isAuthenticated])
+    {
+        [dict setValue:[NSNumber numberWithUnsignedInt:2] forKey:@"SigningStatus"];
+    }
+    else
+    {
+        [dict setValue:[NSNumber numberWithUnsignedInteger:0] forKey:@"SigningStatus"];
+    }
+    
+    NSError * error = nil;
+    NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    NSString * dataStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+
+    UnitySendMessage("ExecutionOrder", "Init", [dataStr UTF8String]);
 }
 
 -(void) sendAuthMessage

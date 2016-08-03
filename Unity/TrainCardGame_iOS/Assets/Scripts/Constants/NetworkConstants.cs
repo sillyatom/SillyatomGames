@@ -24,4 +24,13 @@ public class NetworkConstants
     public static string KEY_PLAYER_IDS = "playerids";
     public static string KEY_PLAYER_ID = "player_id";
     public static string KEY_CARDS_DATA = "cards_data";
+
+    public static int GC_SIGNING_STATUS_NOT_INITIALIZED = -1;
+    public static int GC_SIGNING_STATUS_INIT = 0;
+    public static int GC_SIGNING_STATUS_PROCESSING = 1;
+    public static int GC_SIGNING_STATUS_SUCCEEDED = 2;
+
+    public static int GC_STATUS_NOT_INITIATED = -1;
+    public static int GC_STATUS_NOT_AVAILABLE = 0;
+    public static int GC_STATUS_AVAILABLE = 1;
 }
