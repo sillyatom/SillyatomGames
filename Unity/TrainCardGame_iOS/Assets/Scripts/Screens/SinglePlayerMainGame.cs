@@ -97,12 +97,6 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                     RoundVO vo = JsonConvert.DeserializeObject<RoundVO>(evt.response.data);
                     string playerId = vo.playerIdForRound;
 
-                    Player player = GetPlayerById(playerId);
-                    player.OnRoundStart();
-                    string nextPlayerId = network.GetNextPlayer(playerId).PlayerId;
-                    Player nextPlayer = GetPlayerById(nextPlayerId);
-                    nextPlayer.SetTurnStatus(E_PLAYER_TURN.GET_READY);
-
                     //if non player round
                     if (playerId != Networking.localId)
                     {

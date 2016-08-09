@@ -422,6 +422,7 @@
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />
      <None Include="Assets\Resources\Images\GUI\Button.png.txt" />
      <None Include="Assets\Resources\Fonts\flubber\Flubber.txt" />
+     <None Include="Assets\Resources\Shaders\GrayScale.shader" />
      <None Include="Assets\Resources\Fonts\alpine\1001fonts-alpine-eula.txt" />
      <None Include="Assets\Resources\Fonts\blow\readme.txt" />
      <None Include="Assets\JsonDotNet\ReadMe.txt" />

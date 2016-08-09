@@ -39,6 +39,8 @@ public class Player : ExtMonoBehaviour
     public Image dimYellow;
     public Image dimGreen;
 
+    public List<Image> grayShaderImages;
+
     public List<Card> Cards
     {
         get
@@ -98,6 +100,16 @@ public class Player : ExtMonoBehaviour
                 dimYellow.enabled = false;
                 dimGreen.enabled = true;
                 break;
+        }
+
+        SetGrayEffectAmount((status == E_PLAYER_TURN.PLAYING) ? 0f : 1f);
+    }
+
+    private void SetGrayEffectAmount(float amount)
+    {
+        foreach (var image in grayShaderImages)
+        {
+            image.material.SetFloat("_EffectAmount", amount);
         }
     }
 
@@ -169,6 +181,8 @@ public class Player : ExtMonoBehaviour
         _cardSelectionHandler.Init();
 
         UpdateCount(this.count);
+
+        SetTurnStatus(E_PLAYER_TURN.WAITING);
     }
 
     public void AddCard(Card card, bool updateCount = false)
