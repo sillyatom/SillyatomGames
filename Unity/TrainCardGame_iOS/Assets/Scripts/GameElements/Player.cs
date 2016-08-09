@@ -3,6 +3,13 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
+public enum E_PLAYER_TURN
+{
+    WAITING = 0,
+    GET_READY = 1,
+    PLAYING = 2
+}
+
 public class Player : ExtMonoBehaviour
 {
     [SerializeField]
@@ -14,7 +21,6 @@ public class Player : ExtMonoBehaviour
     public Button pullOverBtn;
     public RectTransform cardsHolder;
 
-    private CardSelectionHandler _cardSelectionHandler = null;
     private float _delAngle;
     private float _angle;
     private bool _canDrag;
@@ -23,9 +29,15 @@ public class Player : ExtMonoBehaviour
     private Vector3 _rotateAround;
     private Vector2 _lastMousePosition;
 
+    private CardSelectionHandler _cardSelectionHandler = null;
+
     public CardSelectionHandler CardSelectionHandler{ get { return _cardSelectionHandler; } }
 
     private int count = 0;
+
+    public Image dimRed;
+    public Image dimYellow;
+    public Image dimGreen;
 
     public List<Card> Cards
     {
@@ -65,6 +77,30 @@ public class Player : ExtMonoBehaviour
         }
     }
 
+    public void SetTurnStatus(E_PLAYER_TURN status)
+    {
+        switch (status)
+        {
+            case E_PLAYER_TURN.WAITING:
+                dimRed.enabled = true;
+                dimYellow.enabled = true;
+                dimGreen.enabled = true;
+                break;
+
+            case E_PLAYER_TURN.PLAYING:
+                dimRed.enabled = true;
+                dimYellow.enabled = true;
+                dimGreen.enabled = false;
+                break;
+
+            case E_PLAYER_TURN.GET_READY:
+                dimRed.enabled = true;
+                dimYellow.enabled = false;
+                dimGreen.enabled = true;
+                break;
+        }
+    }
+
     public List<string> GetCardsValueType
     {
         get
@@ -101,6 +137,7 @@ public class Player : ExtMonoBehaviour
     public void OnRoundStart()
     {
         DidPullOver = false;
+        SetTurnStatus(E_PLAYER_TURN.PLAYING);
     }
 
     public void UpdateDP(string imagePath)
@@ -213,6 +250,7 @@ public class Player : ExtMonoBehaviour
     {
         RemoveCardWithValue(SelectedCardValueType);
         SetSelectedCard(null);
+        SetTurnStatus(E_PLAYER_TURN.WAITING);
     }
 
     private void OnPullOver()

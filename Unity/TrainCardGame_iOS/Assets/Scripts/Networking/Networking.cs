@@ -130,6 +130,23 @@ public class Networking : ExtMonoBehaviour
         UpdateSinglePlayerData();
     }
 
+    public NetworkPlayer GetNextPlayer(string playerId)
+    {
+        for (int index = 0; index < Players.Count; index++)
+        {
+            NetworkPlayer player = Players[index];
+
+            if (player.PlayerId == playerId)
+            {
+                index++;
+                index = (index == Players.Count) ? 0 : index;
+                return Players[index];
+            }
+        }
+
+        return null;
+    }
+
     private void UpdateSinglePlayerData()
     {
         //create players

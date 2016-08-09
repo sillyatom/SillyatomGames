@@ -88,6 +88,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 {
                     Player player = GetPlayerById(evt.playerId);
                     player.OnRoundStart();
+                    string nextPlayerId = network.GetNextPlayer(player.playerId).PlayerId;
+                    Player nextPlayer = GetPlayerById(nextPlayerId);
+                    nextPlayer.SetTurnStatus(E_PLAYER_TURN.GET_READY);
                 }
                 break;
         }
