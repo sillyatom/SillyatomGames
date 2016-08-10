@@ -15,6 +15,7 @@ public class RoundHandler : ExtMonoBehaviour
 
     public Image progressBar;
     public Text currentPlayerName;
+    public InGameInfoText roundMessage;
 
     public System.Action OnRoundCompleteCallback{ get; set; }
 
@@ -31,6 +32,8 @@ public class RoundHandler : ExtMonoBehaviour
         base.Init();
         _elapsedTime = 0.0f;
 
+        roundMessage.Init();
+        roundMessage.Hide();
         EventManager.instance.AddListener<GameEvent>(OnGameEvent);
         EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
     }
@@ -63,7 +66,7 @@ public class RoundHandler : ExtMonoBehaviour
     {
         currentRound = 0;
         _activePlayerId = Networking.hostId;
-        StartRound();
+        roundMessage.ShowMessage("Match Started!!!", StartRound);
     }
 
     public void StartRound()

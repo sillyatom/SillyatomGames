@@ -418,6 +418,7 @@
      <Compile Include="Assets\Scripts\Screens\SinglePlayerMainGame.cs" />
      <Compile Include="Assets\Scripts\TestScripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\Utility\GameObjectRef.cs" />
+     <Compile Include="Assets\Scripts\Utility\InGameInfoText.cs" />
      <Compile Include="Assets\Scripts\Utility\SingletonManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />
      <None Include="Assets\Resources\Images\GUI\Button.png.txt" />
