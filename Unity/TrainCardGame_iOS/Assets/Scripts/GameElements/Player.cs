@@ -335,6 +335,7 @@ public class Player : ExtMonoBehaviour
             _lastMousePosition = Input.mousePosition;
             if (distance != 0.0f)
             {
+                distance *= 0.1f;
                 int len = _cards.Count;
                 for (int index = 0; index < len; index++)
                 {
@@ -342,7 +343,7 @@ public class Player : ExtMonoBehaviour
 //                        _cards[0].transform.localEulerAngles.z + distance <= 40.0f
 //                        || _cards[len - 1].transform.localEulerAngles.z + distance >= 320.0f)
 //                    {
-//                        break;
+//                        return;
 //                    }
                     Card card = _cards[index];
                     card.transform.RotateAround(_rotateAround,
@@ -377,6 +378,8 @@ public class Player : ExtMonoBehaviour
 
                 if (distance != 0.0f)
                 {
+                    distance *= 0.1f;
+
                     int len = _cards.Count;
                     for (int index = 0; index < len; index++)
                     {
@@ -384,7 +387,7 @@ public class Player : ExtMonoBehaviour
                           //  _cards[0].transform.localEulerAngles.z + distance <= 40.0f
                           //  || _cards[len - 1].transform.localEulerAngles.z + distance >= 320.0f)
                         //{
-                          //  break;
+                            //  return;
                         //}
                         Card card = _cards[index];
                         card.transform.RotateAround(_rotateAround,

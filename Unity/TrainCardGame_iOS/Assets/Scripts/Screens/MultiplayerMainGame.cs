@@ -230,7 +230,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Card card = (Card)hArgs["Card"];
 
         card.transform.SetParent(player.cardsHolder.transform);
-        player.AddCard(card);
+        player.AddCard(card, true);
         #if !CAN_SHOW_FRONT_FACE
         card.ShowBackFace();
         #else

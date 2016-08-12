@@ -22,6 +22,8 @@ struct String_t;
 struct GameEvent_t2981166504;
 // InGameEvent
 struct InGameEvent_t511087107;
+// System.Collections.IEnumerator
+struct IEnumerator_t287207039;
 
 #include "codegen/il2cpp-codegen.h"
 #include "System_Core_System_Action437523947.h"
@@ -53,6 +55,8 @@ extern "C"  void RoundHandler_OnGameEvent_m2386591652 (RoundHandler_t2172802556 
 extern "C"  void RoundHandler_OnInGameEvent_m1941447854 (RoundHandler_t2172802556 * __this, InGameEvent_t511087107 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::StartMatch()
 extern "C"  void RoundHandler_StartMatch_m3028602888 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.IEnumerator RoundHandler::WaitAndStartRound()
+extern "C"  Il2CppObject * RoundHandler_WaitAndStartRound_m3152815747 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::StartRound()
 extern "C"  void RoundHandler_StartRound_m3573209489 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::StopTimer()

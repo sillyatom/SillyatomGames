@@ -52,8 +52,8 @@ extern "C"  Vector3_t3525329789  Dealer_GetPositionForIndex_m2589089215 (Dealer_
 extern "C"  void Dealer_MoveCardToPosition_m1759962004 (Dealer_t2043054649 * __this, Card_t2092848 * ___card, Vector3_t3525329789  ___pos, float ___time, float ___delay, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Dealer::AddCard(Card)
 extern "C"  void Dealer_AddCard_m2791077313 (Dealer_t2043054649 * __this, Card_t2092848 * ___card, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Dealer::CreateCards()
-extern "C"  void Dealer_CreateCards_m1902951015 (Dealer_t2043054649 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Dealer::CreateCards(System.Int32)
+extern "C"  void Dealer_CreateCards_m4016770360 (Dealer_t2043054649 * __this, int32_t ___numOfPlayers, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Dealer::HasMatch()
 extern "C"  bool Dealer_HasMatch_m3915893825 (Dealer_t2043054649 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // ResultVO Dealer::GetResult()

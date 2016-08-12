@@ -46,7 +46,7 @@ public class RoundHandler : ExtMonoBehaviour
                 RoundVO vo = JsonConvert.DeserializeObject<RoundVO>(evt.response.data);
                 _activePlayerId = vo.playerIdForRound;
                 BridgeDebugger.SillyLog(" On received next player : " + _activePlayerId);
-                StartRound();
+                StartCoroutine(WaitAndStartRound());
                 break;
         }
     }
@@ -57,7 +57,7 @@ public class RoundHandler : ExtMonoBehaviour
         {
             case InGameEvent.UPDATE_ROUND_DATA:
                 _activePlayerId = evt.playerId;
-                StartRound();
+                StartCoroutine(WaitAndStartRound());
                 break;
         }
     }
@@ -69,7 +69,13 @@ public class RoundHandler : ExtMonoBehaviour
         roundMessage.ShowMessage("Match Started!!!", StartRound);
     }
 
-    public void StartRound()
+    private IEnumerator WaitAndStartRound()
+    {
+        yield return new WaitForSeconds(1.0f);
+        StartRound();
+    }
+
+    private void StartRound()
     {
         currentRound++;
 

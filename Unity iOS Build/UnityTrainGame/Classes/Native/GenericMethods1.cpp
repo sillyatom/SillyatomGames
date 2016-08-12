@@ -570,15 +570,15 @@ struct EventFunction_1_t3885370180;
 #include "mscorlib_System_Converter_2_gen113996300MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279.h"
 #include "System_Core_System_Func_2_gen2601891118.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String2387805922.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String2387805922MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3122573226.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3122573226MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen1844407557.h"
 #include "System_Core_System_Func_2_gen1844407557MethodDeclarations.h"
 #include "System_Core_System_Linq_Enumerable4285654829MethodDeclarations.h"
 #include "System_Core_System_Linq_Enumerable4285654829.h"
 #include "System_Core_System_Func_2_gen2267165834.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String4206923190.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String4206923190MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_StringU646723198.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_StringU646723198MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen1509682273.h"
 #include "System_Core_System_Func_2_gen1509682273MethodDeclarations.h"
 #include "System_Core_System_Linq_Check3277941805MethodDeclarations.h"
@@ -22962,20 +22962,20 @@ extern "C"  KeyValuePair_2_t3312956448  StringUtils_ForgivingCaseSensitiveFind_T
 	KeyValuePair_2U5BU5D_t346249057* V_0 = NULL;
 	int32_t V_1 = 0;
 	Il2CppObject* V_2 = NULL;
-	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * V_3 = NULL;
+	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * V_3 = NULL;
 	KeyValuePair_2_t3312956448  V_4;
 	memset(&V_4, 0, sizeof(V_4));
 	KeyValuePair_2_t3312956448  G_B8_0;
 	memset(&G_B8_0, 0, sizeof(G_B8_0));
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 *)L_0;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * L_1 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 *)L_0;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_1 = V_3;
 		Func_2_t2601891118 * L_2 = ___valueSelector;
 		NullCheck(L_1);
 		L_1->set_valueSelector_0(L_2);
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * L_3 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_3 = V_3;
 		String_t* L_4 = ___testValue;
 		NullCheck(L_3);
 		L_3->set_testValue_1(L_4);
@@ -22993,7 +22993,7 @@ extern "C"  KeyValuePair_2_t3312956448  StringUtils_ForgivingCaseSensitiveFind_T
 
 IL_0025:
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * L_7 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_7 = V_3;
 		NullCheck(L_7);
 		Func_2_t2601891118 * L_8 = (Func_2_t2601891118 *)L_7->get_valueSelector_0();
 		if (L_8)
@@ -23010,7 +23010,7 @@ IL_0025:
 IL_003b:
 	{
 		Il2CppObject* L_10 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * L_11 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_11 = V_3;
 		IntPtr_t L_12;
 		L_12.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_2_t1844407557 * L_13 = (Func_2_t1844407557 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -23058,7 +23058,7 @@ IL_007b:
 IL_007c:
 	{
 		Il2CppObject* L_22 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t2387805922 * L_23 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_23 = V_3;
 		IntPtr_t L_24;
 		L_24.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 7));
 		Func_2_t1844407557 * L_25 = (Func_2_t1844407557 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -23088,18 +23088,18 @@ extern "C"  Il2CppObject * StringUtils_ForgivingCaseSensitiveFind_TisIl2CppObjec
 	ObjectU5BU5D_t11523773* V_0 = NULL;
 	int32_t V_1 = 0;
 	Il2CppObject* V_2 = NULL;
-	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * V_3 = NULL;
+	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * V_3 = NULL;
 	Il2CppObject * V_4 = NULL;
 	Il2CppObject * G_B8_0 = NULL;
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 *)L_0;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * L_1 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 *)L_0;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_1 = V_3;
 		Func_2_t2267165834 * L_2 = ___valueSelector;
 		NullCheck(L_1);
 		L_1->set_valueSelector_0(L_2);
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * L_3 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_3 = V_3;
 		String_t* L_4 = ___testValue;
 		NullCheck(L_3);
 		L_3->set_testValue_1(L_4);
@@ -23117,7 +23117,7 @@ extern "C"  Il2CppObject * StringUtils_ForgivingCaseSensitiveFind_TisIl2CppObjec
 
 IL_0025:
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * L_7 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_7 = V_3;
 		NullCheck(L_7);
 		Func_2_t2267165834 * L_8 = (Func_2_t2267165834 *)L_7->get_valueSelector_0();
 		if (L_8)
@@ -23134,7 +23134,7 @@ IL_0025:
 IL_003b:
 	{
 		Il2CppObject* L_10 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * L_11 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_11 = V_3;
 		IntPtr_t L_12;
 		L_12.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_2_t1509682273 * L_13 = (Func_2_t1509682273 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -23182,7 +23182,7 @@ IL_007b:
 IL_007c:
 	{
 		Il2CppObject* L_22 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey29_1_t4206923190 * L_23 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_23 = V_3;
 		IntPtr_t L_24;
 		L_24.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 7));
 		Func_2_t1509682273 * L_25 = (Func_2_t1509682273 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
