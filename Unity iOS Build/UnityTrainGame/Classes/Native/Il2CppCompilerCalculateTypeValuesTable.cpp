@@ -1301,9 +1301,9 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlDe2023072328.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo3886750706.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo2302997311.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097706.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1716967418.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNod352517748.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097714.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1716967419.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNod352517749.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_DefaultValueHand3337232248.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonArrayAttribu2894116366.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134.h"
@@ -1358,27 +1358,27 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Required3381566050.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem4227645115.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema784386180.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3267381568.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3267381569.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3472853112.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1081788280.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem4182086140.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema554744219.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1029731821.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1029731822.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3130009042.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1662421389.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem2256819293.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1524499937.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3437332033.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3437332034.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem2257008021.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema424268942.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_SchemaExt1694656391.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_SchemaExte994739966.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_UndefinedS576293603.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_Validatio1948980208.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Re3504657184.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2164550322.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Def531145130.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2698107152.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De1057672071.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Def531145131.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2698107153.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De1057672072.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Def258914185.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2071761170.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De4116944666.h"
@@ -1395,7 +1395,7 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1638952051.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1236026514.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1236026515.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1794357283.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2629456141.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1197019735.h"
@@ -1406,23 +1406,23 @@
 #include "AssemblyU2DCSharp_System_Runtime_Serialization_Enu2225818298.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_TypeNameHandling2373316525.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Base641606947748.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collect420883082.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3670503051.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec2550116756.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collect420883083.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3670503052.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec2550116757.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver2270763477.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3846323878.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1018633113.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3673050829.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3106773937.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1018633114.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3673050830.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3106773938.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_EnumUt3585396487.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1497004953.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect767490589.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec1253501026.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec2023321984.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec1253501027.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec2023321985.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1107775176.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String2072168981.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1159182696.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String2072168982.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1159182697.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Validat272309903.h"
 #include "AssemblyU2DCSharp_CardConstants1869142015.h"
 #include "AssemblyU2DCSharp_GameConstants893838685.h"
@@ -1438,6 +1438,7 @@
 #include "AssemblyU2DCSharp_Card2092848.h"
 #include "AssemblyU2DCSharp_Dealer2043054649.h"
 #include "AssemblyU2DCSharp_ResultVO4023821238.h"
+#include "AssemblyU2DCSharp_E_PLAYER_TURN3347637793.h"
 #include "AssemblyU2DCSharp_Player2393081601.h"
 #include "AssemblyU2DCSharp_CardSelectionHandler2914958190.h"
 #include "AssemblyU2DCSharp_ExecutionOrderManager3968579479.h"
@@ -1468,6 +1469,8 @@
 #include "AssemblyU2DCSharp_SinglePlayerMainGame3863033300.h"
 #include "AssemblyU2DCSharp_SinglePlayerMainGame_U3CAutoPlay3593857286.h"
 #include "AssemblyU2DCSharp_GameObjectRef4121474274.h"
+#include "AssemblyU2DCSharp_InGameInfoText36852466.h"
+#include "AssemblyU2DCSharp_InGameInfoText_U3CRemoveMessageU1537395679.h"
 #include "AssemblyU2DCSharp_SingletonManager825254210.h"
 #include "AssemblyU2DCSharp_Utility1549674828.h"
 #include "mscorlib_U3CModuleU3E86524790.h"
@@ -2074,7 +2077,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9364] = 
+extern const int32_t g_FieldOffsetTable[9380] = 
 {
 	0,
 	0,
@@ -10544,9 +10547,9 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	XmlNodeConverter_t2302997311_StaticFields::get_offset_of_U3CU3Ef__switchU24map0_11(),
 	XmlNodeConverter_t2302997311_StaticFields::get_offset_of_U3CU3Ef__switchU24map1_12(),
 	XmlNodeConverter_t2302997311_StaticFields::get_offset_of_U3CU3Ef__amU24cache6_13(),
-	U3CSerializeNodeU3Ec__AnonStorey9_t1219097706::get_offset_of_node_0(),
-	U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418::get_offset_of_propertyName_0(),
-	U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748::get_offset_of_propertyName_0(),
+	U3CSerializeNodeU3Ec__AnonStoreyA_t1219097714::get_offset_of_node_0(),
+	U3CReadArrayElementsU3Ec__AnonStoreyB_t1716967419::get_offset_of_propertyName_0(),
+	U3CDeserializeNodeU3Ec__AnonStoreyC_t352517749::get_offset_of_propertyName_0(),
 	DefaultValueHandling_t3337232248::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -10897,7 +10900,7 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	JsonSchemaBuilder_t784386180::get_offset_of__currentSchema_3(),
 	JsonSchemaBuilder_t784386180_StaticFields::get_offset_of_U3CU3Ef__switchU24map2_4(),
 	JsonSchemaBuilder_t784386180_StaticFields::get_offset_of_U3CU3Ef__switchU24map3_5(),
-	U3CMapTypeU3Ec__AnonStoreyC_t3267381568::get_offset_of_type_0(),
+	U3CMapTypeU3Ec__AnonStoreyD_t3267381569::get_offset_of_type_0(),
 	0,
 	0,
 	0,
@@ -10941,7 +10944,7 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	JsonSchemaGenerator_t4182086140::get_offset_of_U3CUndefinedSchemaIdHandlingU3Ek__BackingField_4(),
 	TypeSchema_t554744219::get_offset_of_U3CTypeU3Ek__BackingField_0(),
 	TypeSchema_t554744219::get_offset_of_U3CSchemaU3Ek__BackingField_1(),
-	U3CGenerateInternalU3Ec__AnonStoreyD_t1029731821::get_offset_of_type_0(),
+	U3CGenerateInternalU3Ec__AnonStoreyE_t1029731822::get_offset_of_type_0(),
 	JsonSchemaModel_t3130009042::get_offset_of_U3CRequiredU3Ek__BackingField_0(),
 	JsonSchemaModel_t3130009042::get_offset_of_U3CTypeU3Ek__BackingField_1(),
 	JsonSchemaModel_t3130009042::get_offset_of_U3CMinimumLengthU3Ek__BackingField_2(),
@@ -10973,7 +10976,7 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	JsonSchemaNode_t2256819293_StaticFields::get_offset_of_U3CU3Ef__amU24cache6_6(),
 	JsonSchemaNode_t2256819293_StaticFields::get_offset_of_U3CU3Ef__amU24cache7_7(),
 	JsonSchemaResolver_t1524499937::get_offset_of_U3CLoadedSchemasU3Ek__BackingField_0(),
-	U3CGetSchemaU3Ec__AnonStoreyE_t3437332033::get_offset_of_id_0(),
+	U3CGetSchemaU3Ec__AnonStoreyF_t3437332034::get_offset_of_id_0(),
 	JsonSchemaType_t2257008021::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -10987,7 +10990,7 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	JsonSchemaWriter_t424268942::get_offset_of__writer_0(),
 	JsonSchemaWriter_t424268942::get_offset_of__resolver_1(),
 	JsonSchemaWriter_t424268942_StaticFields::get_offset_of_U3CU3Ef__amU24cache2_2(),
-	U3CIsValidU3Ec__AnonStoreyF_t1694656391::get_offset_of_valid_0(),
+	U3CIsValidU3Ec__AnonStorey10_t994739966::get_offset_of_valid_0(),
 	UndefinedSchemaIdHandling_t576293603::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -11006,9 +11009,9 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	DefaultContractResolver_t2164550322_StaticFields::get_offset_of_U3CU3Ef__amU24cache7_7(),
 	DefaultContractResolver_t2164550322_StaticFields::get_offset_of_U3CU3Ef__amU24cache8_8(),
 	DefaultContractResolver_t2164550322_StaticFields::get_offset_of_U3CU3Ef__amU24cache9_9(),
-	U3CCreateISerializableContractU3Ec__AnonStorey10_t531145130::get_offset_of_methodCall_0(),
-	U3CCreateShouldSerializeTestU3Ec__AnonStorey11_t2698107152::get_offset_of_shouldSerializeCall_0(),
-	U3CSetIsSpecifiedActionsU3Ec__AnonStorey12_t1057672071::get_offset_of_specifiedPropertyGet_0(),
+	U3CCreateISerializableContractU3Ec__AnonStorey11_t531145131::get_offset_of_methodCall_0(),
+	U3CCreateShouldSerializeTestU3Ec__AnonStorey12_t2698107153::get_offset_of_shouldSerializeCall_0(),
+	U3CSetIsSpecifiedActionsU3Ec__AnonStorey13_t1057672072::get_offset_of_specifiedPropertyGet_0(),
 	DefaultReferenceResolver_t258914185::get_offset_of__referenceCount_0(),
 	DefaultSerializationBinder_t2071761170_StaticFields::get_offset_of_Instance_0(),
 	DefaultSerializationBinder_t2071761170::get_offset_of__typeCache_1(),
@@ -11088,10 +11091,10 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	0,
 	0,
 	0,
-	U3CCreateAndPopulateListU3Ec__AnonStorey13_t1236026514::get_offset_of_reference_0(),
-	U3CCreateAndPopulateListU3Ec__AnonStorey13_t1236026514::get_offset_of_contract_1(),
-	U3CCreateAndPopulateListU3Ec__AnonStorey13_t1236026514::get_offset_of_reader_2(),
-	U3CCreateAndPopulateListU3Ec__AnonStorey13_t1236026514::get_offset_of_U3CU3Ef__this_3(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey14_t1236026515::get_offset_of_reference_0(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey14_t1236026515::get_offset_of_contract_1(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey14_t1236026515::get_offset_of_reader_2(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey14_t1236026515::get_offset_of_U3CU3Ef__this_3(),
 	JsonSerializerInternalWriter_t1794357283::get_offset_of__internalSerializer_3(),
 	JsonSerializerInternalWriter_t1794357283::get_offset_of__serializeStack_4(),
 	JsonSerializerProxy_t2629456141::get_offset_of__serializerReader_15(),
@@ -11136,27 +11139,27 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	0,
 	0,
 	0,
-	U3CCreateCollectionWrapperU3Ec__AnonStorey15_t420883082::get_offset_of_collectionDefinition_0(),
-	U3CCreateCollectionWrapperU3Ec__AnonStorey15_t420883082::get_offset_of_list_1(),
-	U3CCreateListWrapperU3Ec__AnonStorey16_t3670503051::get_offset_of_listDefinition_0(),
-	U3CCreateListWrapperU3Ec__AnonStorey16_t3670503051::get_offset_of_list_1(),
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey17_t2550116756::get_offset_of_dictionaryDefinition_0(),
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey17_t2550116756::get_offset_of_dictionary_1(),
+	U3CCreateCollectionWrapperU3Ec__AnonStorey16_t420883083::get_offset_of_collectionDefinition_0(),
+	U3CCreateCollectionWrapperU3Ec__AnonStorey16_t420883083::get_offset_of_list_1(),
+	U3CCreateListWrapperU3Ec__AnonStorey17_t3670503052::get_offset_of_listDefinition_0(),
+	U3CCreateListWrapperU3Ec__AnonStorey17_t3670503052::get_offset_of_list_1(),
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey18_t2550116757::get_offset_of_dictionaryDefinition_0(),
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey18_t2550116757::get_offset_of_dictionary_1(),
 	0,
 	0,
 	0,
 	ConvertUtils_t2270763477_StaticFields::get_offset_of_CastConverters_0(),
 	TypeConvertKey_t3846323878::get_offset_of__initialType_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	TypeConvertKey_t3846323878::get_offset_of__targetType_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	U3CCreateCastConverterU3Ec__AnonStorey18_t1018633113::get_offset_of_call_0(),
+	U3CCreateCastConverterU3Ec__AnonStorey19_t1018633114::get_offset_of_call_0(),
 	0,
-	U3CTryConvertU3Ec__AnonStorey1A_t3673050829::get_offset_of_initialValue_0(),
-	U3CTryConvertU3Ec__AnonStorey1A_t3673050829::get_offset_of_culture_1(),
-	U3CTryConvertU3Ec__AnonStorey1A_t3673050829::get_offset_of_targetType_2(),
+	U3CTryConvertU3Ec__AnonStorey1B_t3673050830::get_offset_of_initialValue_0(),
+	U3CTryConvertU3Ec__AnonStorey1B_t3673050830::get_offset_of_culture_1(),
+	U3CTryConvertU3Ec__AnonStorey1B_t3673050830::get_offset_of_targetType_2(),
 	0,
-	U3CTryConvertOrCastU3Ec__AnonStorey1C_t3106773937::get_offset_of_initialValue_0(),
-	U3CTryConvertOrCastU3Ec__AnonStorey1C_t3106773937::get_offset_of_culture_1(),
-	U3CTryConvertOrCastU3Ec__AnonStorey1C_t3106773937::get_offset_of_targetType_2(),
+	U3CTryConvertOrCastU3Ec__AnonStorey1D_t3106773938::get_offset_of_initialValue_0(),
+	U3CTryConvertOrCastU3Ec__AnonStorey1D_t3106773938::get_offset_of_culture_1(),
+	U3CTryConvertOrCastU3Ec__AnonStorey1D_t3106773938::get_offset_of_targetType_2(),
 	0,
 	0,
 	0,
@@ -11183,8 +11186,8 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	ReflectionUtils_t767490589_StaticFields::get_offset_of_U3CU3Ef__amU24cache2_2(),
 	ReflectionUtils_t767490589_StaticFields::get_offset_of_U3CU3Ef__amU24cache3_3(),
 	ReflectionUtils_t767490589_StaticFields::get_offset_of_U3CU3Ef__amU24cache4_4(),
-	U3CGetFieldsAndPropertiesU3Ec__AnonStorey24_t1253501026::get_offset_of_bindingAttr_0(),
-	U3CGetChildPrivatePropertiesU3Ec__AnonStorey25_t2023321984::get_offset_of_nonPublicProperty_0(),
+	U3CGetFieldsAndPropertiesU3Ec__AnonStorey25_t1253501027::get_offset_of_bindingAttr_0(),
+	U3CGetChildPrivatePropertiesU3Ec__AnonStorey26_t2023321985::get_offset_of_nonPublicProperty_0(),
 	StringBuffer_t1107775176::get_offset_of__buffer_0(),
 	StringBuffer_t1107775176::get_offset_of__position_1(),
 	StringBuffer_t1107775176_StaticFields::get_offset_of__emptyBuffer_2(),
@@ -11193,9 +11196,9 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	0,
 	0,
 	0,
-	U3CIndentU3Ec__AnonStorey26_t2072168981::get_offset_of_indentChar_0(),
-	U3CIndentU3Ec__AnonStorey26_t2072168981::get_offset_of_indentation_1(),
-	U3CNumberLinesU3Ec__AnonStorey27_t1159182696::get_offset_of_lineNumber_0(),
+	U3CIndentU3Ec__AnonStorey27_t2072168982::get_offset_of_indentChar_0(),
+	U3CIndentU3Ec__AnonStorey27_t2072168982::get_offset_of_indentation_1(),
+	U3CNumberLinesU3Ec__AnonStorey28_t1159182697::get_offset_of_lineNumber_0(),
 	0,
 	0,
 	0,
@@ -11303,6 +11306,10 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	ResultVO_t4023821238::get_offset_of_U3CstartIndexU3Ek__BackingField_1(),
 	ResultVO_t4023821238::get_offset_of_U3CcardsU3Ek__BackingField_2(),
 	ResultVO_t4023821238::get_offset_of_U3CwinningCardsU3Ek__BackingField_3(),
+	E_PLAYER_TURN_t3347637793::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
 	Player_t2393081601::get_offset_of_index_3(),
 	Player_t2393081601::get_offset_of_playerId_4(),
 	Player_t2393081601::get_offset_of_cardCount_5(),
@@ -11310,16 +11317,20 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	Player_t2393081601::get_offset_of_playerDP_7(),
 	Player_t2393081601::get_offset_of_pullOverBtn_8(),
 	Player_t2393081601::get_offset_of_cardsHolder_9(),
-	Player_t2393081601::get_offset_of__cardSelectionHandler_10(),
-	Player_t2393081601::get_offset_of__delAngle_11(),
-	Player_t2393081601::get_offset_of__angle_12(),
-	Player_t2393081601::get_offset_of__canDrag_13(),
-	Player_t2393081601::get_offset_of__cards_14(),
-	Player_t2393081601::get_offset_of__cardsRewarded_15(),
-	Player_t2393081601::get_offset_of__rotateAround_16(),
-	Player_t2393081601::get_offset_of__lastMousePosition_17(),
+	Player_t2393081601::get_offset_of__delAngle_10(),
+	Player_t2393081601::get_offset_of__angle_11(),
+	Player_t2393081601::get_offset_of__canDrag_12(),
+	Player_t2393081601::get_offset_of__cards_13(),
+	Player_t2393081601::get_offset_of__cardsRewarded_14(),
+	Player_t2393081601::get_offset_of__rotateAround_15(),
+	Player_t2393081601::get_offset_of__lastMousePosition_16(),
+	Player_t2393081601::get_offset_of__cardSelectionHandler_17(),
 	Player_t2393081601::get_offset_of_count_18(),
-	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_19(),
+	Player_t2393081601::get_offset_of_dimRed_19(),
+	Player_t2393081601::get_offset_of_dimYellow_20(),
+	Player_t2393081601::get_offset_of_dimGreen_21(),
+	Player_t2393081601::get_offset_of_grayShaderImages_22(),
+	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_23(),
 	CardSelectionHandler_t2914958190::get_offset_of__selectedCard_3(),
 	CardSelectionHandler_t2914958190::get_offset_of_U3CplayerIdU3Ek__BackingField_4(),
 	ExecutionOrderManager_t3968579479::get_offset_of__monos_2(),
@@ -11335,9 +11346,10 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	RoundHandler_t2172802556::get_offset_of__activePlayerId_6(),
 	RoundHandler_t2172802556::get_offset_of_progressBar_7(),
 	RoundHandler_t2172802556::get_offset_of_currentPlayerName_8(),
-	RoundHandler_t2172802556::get_offset_of_U3COnRoundCompleteCallbackU3Ek__BackingField_9(),
-	RoundHandler_t2172802556_StaticFields::get_offset_of_U3CU3Ef__switchU24map4_10(),
-	RoundHandler_t2172802556_StaticFields::get_offset_of_U3CU3Ef__switchU24map5_11(),
+	RoundHandler_t2172802556::get_offset_of_roundMessage_9(),
+	RoundHandler_t2172802556::get_offset_of_U3COnRoundCompleteCallbackU3Ek__BackingField_10(),
+	RoundHandler_t2172802556_StaticFields::get_offset_of_U3CU3Ef__switchU24map4_11(),
+	RoundHandler_t2172802556_StaticFields::get_offset_of_U3CU3Ef__switchU24map5_12(),
 	SceneTransitionManager_t1210711436::get_offset_of__activeScreen_4(),
 	SceneTransitionManager_t1210711436::get_offset_of_startScreen_5(),
 	SceneTransitionManager_t1210711436::get_offset_of_screens_6(),
@@ -11436,6 +11448,13 @@ extern const int32_t g_FieldOffsetTable[9364] =
 	GameObjectRef_t4121474274::get_offset_of_network_4(),
 	GameObjectRef_t4121474274::get_offset_of_apiHandler_5(),
 	GameObjectRef_t4121474274::get_offset_of_popupManager_6(),
+	InGameInfoText_t36852466::get_offset_of_text_3(),
+	InGameInfoText_t36852466::get_offset_of__removeCoroutine_4(),
+	U3CRemoveMessageU3Ec__Iterator9_t1537395679::get_offset_of_callback_0(),
+	U3CRemoveMessageU3Ec__Iterator9_t1537395679::get_offset_of_U24PC_1(),
+	U3CRemoveMessageU3Ec__Iterator9_t1537395679::get_offset_of_U24current_2(),
+	U3CRemoveMessageU3Ec__Iterator9_t1537395679::get_offset_of_U3CU24U3Ecallback_3(),
+	U3CRemoveMessageU3Ec__Iterator9_t1537395679::get_offset_of_U3CU3Ef__this_4(),
 	SingletonManager_t825254210_StaticFields::get_offset_of_reference_3(),
 	Utility_t1549674828_StaticFields::get_offset_of_random_0(),
 	0,
@@ -11444,7 +11463,7 @@ extern const int32_t g_FieldOffsetTable[9364] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2364] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -13565,9 +13584,9 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	0, -1, 0, 0,
 	0, -1, 0, 0,
 	sizeof (XmlNodeConverter_t2302997311), -1, sizeof(XmlNodeConverter_t2302997311_StaticFields), 0,
-	sizeof (U3CSerializeNodeU3Ec__AnonStorey9_t1219097706), -1, 0, 0,
-	sizeof (U3CReadArrayElementsU3Ec__AnonStoreyA_t1716967418), -1, 0, 0,
-	sizeof (U3CDeserializeNodeU3Ec__AnonStoreyB_t352517748), -1, 0, 0,
+	sizeof (U3CSerializeNodeU3Ec__AnonStoreyA_t1219097714), -1, 0, 0,
+	sizeof (U3CReadArrayElementsU3Ec__AnonStoreyB_t1716967419), -1, 0, 0,
+	sizeof (U3CDeserializeNodeU3Ec__AnonStoreyC_t352517749), -1, 0, 0,
 	sizeof (DefaultValueHandling_t3337232248)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	0, -1, 0, 0,
 	sizeof (JsonArrayAttribute_t2894116366), -1, 0, 0,
@@ -13638,31 +13657,31 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	sizeof (Required_t3381566050)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (JsonSchema_t4227645115), -1, 0, 0,
 	sizeof (JsonSchemaBuilder_t784386180), -1, sizeof(JsonSchemaBuilder_t784386180_StaticFields), 0,
-	sizeof (U3CMapTypeU3Ec__AnonStoreyC_t3267381568), -1, 0, 0,
+	sizeof (U3CMapTypeU3Ec__AnonStoreyD_t3267381569), -1, 0, 0,
 	sizeof (JsonSchemaConstants_t3472853112), -1, sizeof(JsonSchemaConstants_t3472853112_StaticFields), 0,
 	sizeof (JsonSchemaException_t1081788280), -1, 0, 0,
 	sizeof (JsonSchemaGenerator_t4182086140), -1, 0, 0,
 	sizeof (TypeSchema_t554744219), -1, 0, 0,
-	sizeof (U3CGenerateInternalU3Ec__AnonStoreyD_t1029731821), -1, 0, 0,
+	sizeof (U3CGenerateInternalU3Ec__AnonStoreyE_t1029731822), -1, 0, 0,
 	sizeof (JsonSchemaModel_t3130009042), -1, 0, 0,
 	sizeof (JsonSchemaModelBuilder_t1662421389), -1, 0, 0,
 	sizeof (JsonSchemaNode_t2256819293), -1, sizeof(JsonSchemaNode_t2256819293_StaticFields), 0,
 	sizeof (JsonSchemaNodeCollection_t3364623707), -1, 0, 0,
 	sizeof (JsonSchemaResolver_t1524499937), -1, 0, 0,
-	sizeof (U3CGetSchemaU3Ec__AnonStoreyE_t3437332033), -1, 0, 0,
+	sizeof (U3CGetSchemaU3Ec__AnonStoreyF_t3437332034), -1, 0, 0,
 	sizeof (JsonSchemaType_t2257008021)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (JsonSchemaWriter_t424268942), -1, sizeof(JsonSchemaWriter_t424268942_StaticFields), 0,
 	sizeof (SchemaExtensions_t3848408743), -1, 0, 0,
-	sizeof (U3CIsValidU3Ec__AnonStoreyF_t1694656391), -1, 0, 0,
+	sizeof (U3CIsValidU3Ec__AnonStorey10_t994739966), -1, 0, 0,
 	sizeof (UndefinedSchemaIdHandling_t576293603)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (ValidationEventArgs_t1948980208), -1, 0, 0,
 	0, 0, 0, 0,
 	sizeof (CamelCasePropertyNamesContractResolver_t3371534270), -1, 0, 0,
 	sizeof (ResolverContractKey_t3504657184)+ sizeof (Il2CppObject), -1, 0, 0,
 	sizeof (DefaultContractResolver_t2164550322), -1, sizeof(DefaultContractResolver_t2164550322_StaticFields), 0,
-	sizeof (U3CCreateISerializableContractU3Ec__AnonStorey10_t531145130), -1, 0, 0,
-	sizeof (U3CCreateShouldSerializeTestU3Ec__AnonStorey11_t2698107152), -1, 0, 0,
-	sizeof (U3CSetIsSpecifiedActionsU3Ec__AnonStorey12_t1057672071), -1, 0, 0,
+	sizeof (U3CCreateISerializableContractU3Ec__AnonStorey11_t531145131), -1, 0, 0,
+	sizeof (U3CCreateShouldSerializeTestU3Ec__AnonStorey12_t2698107153), -1, 0, 0,
+	sizeof (U3CSetIsSpecifiedActionsU3Ec__AnonStorey13_t1057672072), -1, 0, 0,
 	sizeof (DefaultReferenceResolver_t258914185), -1, 0, 0,
 	sizeof (DefaultSerializationBinder_t2071761170), -1, sizeof(DefaultSerializationBinder_t2071761170_StaticFields), 0,
 	sizeof (TypeNameKey_t4116944666)+ sizeof (Il2CppObject), sizeof(TypeNameKey_t4116944666_marshaled_pinvoke), 0, 0,
@@ -13685,7 +13704,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	sizeof (ReferenceEqualsEqualityComparer_t56069681), -1, 0, 0,
 	sizeof (JsonSerializerInternalReader_t1638952051), -1, sizeof(JsonSerializerInternalReader_t1638952051_StaticFields), 0,
 	sizeof (PropertyPresence_t2652339728)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
-	sizeof (U3CCreateAndPopulateListU3Ec__AnonStorey13_t1236026514), -1, 0, 0,
+	sizeof (U3CCreateAndPopulateListU3Ec__AnonStorey14_t1236026515), -1, 0, 0,
 	sizeof (JsonSerializerInternalWriter_t1794357283), -1, 0, 0,
 	sizeof (JsonSerializerProxy_t2629456141), -1, 0, 0,
 	sizeof (JsonStringContract_t2937851556), -1, 0, 0,
@@ -13702,18 +13721,18 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	0, 0, 0, 0,
 	sizeof (CollectionUtils_t1402980234), -1, 0, 0,
 	0, 0, 0, 0,
-	sizeof (U3CCreateCollectionWrapperU3Ec__AnonStorey15_t420883082), -1, 0, 0,
-	sizeof (U3CCreateListWrapperU3Ec__AnonStorey16_t3670503051), -1, 0, 0,
-	sizeof (U3CCreateDictionaryWrapperU3Ec__AnonStorey17_t2550116756), -1, 0, 0,
+	sizeof (U3CCreateCollectionWrapperU3Ec__AnonStorey16_t420883083), -1, 0, 0,
+	sizeof (U3CCreateListWrapperU3Ec__AnonStorey17_t3670503052), -1, 0, 0,
+	sizeof (U3CCreateDictionaryWrapperU3Ec__AnonStorey18_t2550116757), -1, 0, 0,
 	0, -1, 0, 0,
 	0, 0, 0, 0,
 	sizeof (ConvertUtils_t2270763477), -1, sizeof(ConvertUtils_t2270763477_StaticFields), 0,
 	sizeof (TypeConvertKey_t3846323878)+ sizeof (Il2CppObject), -1, 0, 0,
-	sizeof (U3CCreateCastConverterU3Ec__AnonStorey18_t1018633113), -1, 0, 0,
+	sizeof (U3CCreateCastConverterU3Ec__AnonStorey19_t1018633114), -1, 0, 0,
 	0, 0, 0, 0,
-	sizeof (U3CTryConvertU3Ec__AnonStorey1A_t3673050829), -1, 0, 0,
+	sizeof (U3CTryConvertU3Ec__AnonStorey1B_t3673050830), -1, 0, 0,
 	0, 0, 0, 0,
-	sizeof (U3CTryConvertOrCastU3Ec__AnonStorey1C_t3106773937), -1, 0, 0,
+	sizeof (U3CTryConvertOrCastU3Ec__AnonStorey1D_t3106773938), -1, 0, 0,
 	sizeof (DateTimeUtils_t3878737069), -1, 0, 0,
 	0, -1, 0, 0,
 	0, 0, 0, 0,
@@ -13736,13 +13755,13 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	sizeof (MiscellaneousUtils_t2000562298), -1, 0, 0,
 	sizeof (ReflectionDelegateFactory_t267368177), -1, 0, 0,
 	sizeof (ReflectionUtils_t767490589), -1, sizeof(ReflectionUtils_t767490589_StaticFields), 0,
-	sizeof (U3CGetFieldsAndPropertiesU3Ec__AnonStorey24_t1253501026), -1, 0, 0,
-	sizeof (U3CGetChildPrivatePropertiesU3Ec__AnonStorey25_t2023321984), -1, 0, 0,
+	sizeof (U3CGetFieldsAndPropertiesU3Ec__AnonStorey25_t1253501027), -1, 0, 0,
+	sizeof (U3CGetChildPrivatePropertiesU3Ec__AnonStorey26_t2023321985), -1, 0, 0,
 	sizeof (StringBuffer_t1107775176), -1, sizeof(StringBuffer_t1107775176_StaticFields), 0,
 	sizeof (StringUtils_t1497036279), -1, 0, 0,
 	sizeof (ActionLine_t3845092202), sizeof(methodPointerType), 0, 0,
-	sizeof (U3CIndentU3Ec__AnonStorey26_t2072168981), -1, 0, 0,
-	sizeof (U3CNumberLinesU3Ec__AnonStorey27_t1159182696), -1, 0, 0,
+	sizeof (U3CIndentU3Ec__AnonStorey27_t2072168982), -1, 0, 0,
+	sizeof (U3CNumberLinesU3Ec__AnonStorey28_t1159182697), -1, 0, 0,
 	0, 0, 0, 0,
 	0, 0, 0, 0,
 	sizeof (ValidationUtils_t272309903), -1, 0, 0,
@@ -13764,6 +13783,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	sizeof (Card_t2092848), -1, 0, 0,
 	sizeof (Dealer_t2043054649), -1, 0, 0,
 	sizeof (ResultVO_t4023821238), -1, 0, 0,
+	sizeof (E_PLAYER_TURN_t3347637793)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (Player_t2393081601), -1, 0, 0,
 	sizeof (BridgeDebugger_t2949066474), -1, 0, 0,
 	sizeof (CardSelectionHandler_t2914958190), -1, 0, 0,
@@ -13796,6 +13816,8 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2361] =
 	sizeof (U3CAutoPlayU3Ec__Iterator8_t3593857286), -1, 0, 0,
 	sizeof (TestScript_t3705514013), -1, 0, 0,
 	sizeof (GameObjectRef_t4121474274), -1, 0, 0,
+	sizeof (InGameInfoText_t36852466), -1, 0, 0,
+	sizeof (U3CRemoveMessageU3Ec__Iterator9_t1537395679), -1, 0, 0,
 	sizeof (SingletonManager_t825254210), -1, sizeof(SingletonManager_t825254210_StaticFields), 0,
 	sizeof (Utility_t1549674828), -1, sizeof(Utility_t1549674828_StaticFields), 0,
 	sizeof (AddingNewEventHandler_t1582510268), sizeof(methodPointerType), 0, 0,

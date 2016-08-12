@@ -68,6 +68,8 @@ extern "C"  NetworkPlayer_t4053218959 * Networking_GetPlayerById_m2192672952 (Ne
 extern "C"  void Networking_Init_m4091929965 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::OnSinglePlayerMode()
 extern "C"  void Networking_OnSinglePlayerMode_m504645416 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// NetworkPlayer Networking::GetNextPlayer(System.String)
+extern "C"  NetworkPlayer_t4053218959 * Networking_GetNextPlayer_m972504375 (Networking_t1515242260 * __this, String_t* ___playerId, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::UpdateSinglePlayerData()
 extern "C"  void Networking_UpdateSinglePlayerData_m2490043865 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Networking::isIdHost(System.String)

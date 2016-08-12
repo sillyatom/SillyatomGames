@@ -28,6 +28,7 @@
 <type fullname="SinglePlayerMainGame" preserve="all"/>
 <type fullname="TestScript" preserve="all"/>
 <type fullname="GameObjectRef" preserve="all"/>
+<type fullname="InGameInfoText" preserve="all"/>
 <type fullname="SingletonManager" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">

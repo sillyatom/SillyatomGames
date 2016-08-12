@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class Dealer : ExtMonoBehaviour
 {
     private List<Card> _cards;
-    private RectTransform rectTransform;
     private const float SPACE = 100;
+    private RectTransform rectTransform;
     private int _minNumOfCardsReqToMatch = 14;
 
     public List<Card> Cards{ get; set; }
@@ -15,8 +15,6 @@ public class Dealer : ExtMonoBehaviour
     {
         base.Init();
         rectTransform = GetComponent<RectTransform>();
-
-        CreateCards();
     }
 
     public int GetDeckSize()
@@ -97,12 +95,16 @@ public class Dealer : ExtMonoBehaviour
         _cards.Add(card);
     }
 
-    private void CreateCards()
+    public void CreateCards(int numOfPlayers)
     {
         _cards = new List<Card>();
 
         foreach (var type in CardConstants.CARD_TYPES)
         {
+            if (numOfPlayers == 0)
+            {
+                break;
+            }
             foreach (var value in CardConstants.CARD_VALUES)
             {
                 GameObject cardObj = Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Card"));
@@ -113,6 +115,7 @@ public class Dealer : ExtMonoBehaviour
                 card.UpdateCard(value, type);
                 _cards.Add(card);
             }
+            numOfPlayers--;
         }
     }
 

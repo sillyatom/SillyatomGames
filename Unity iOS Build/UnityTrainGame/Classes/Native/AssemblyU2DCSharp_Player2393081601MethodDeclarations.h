@@ -26,6 +26,7 @@ struct String_t;
 struct Card_t2092848;
 
 #include "codegen/il2cpp-codegen.h"
+#include "AssemblyU2DCSharp_E_PLAYER_TURN3347637793.h"
 #include "mscorlib_System_String968488902.h"
 #include "AssemblyU2DCSharp_Card2092848.h"
 #include "UnityEngine_UnityEngine_Vector23525329788.h"
@@ -48,6 +49,10 @@ extern "C"  void Player_set_DidPullOver_m4156915338 (Player_t2393081601 * __this
 extern "C"  String_t* Player_get_SelectedCardValueType_m3899190188 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Card Player::get_SelectedCard()
 extern "C"  Card_t2092848 * Player_get_SelectedCard_m249687851 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::SetTurnStatus(E_PLAYER_TURN)
+extern "C"  void Player_SetTurnStatus_m1956600040 (Player_t2393081601 * __this, int32_t ___status, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::SetGrayEffectAmount(System.Single)
+extern "C"  void Player_SetGrayEffectAmount_m533122949 (Player_t2393081601 * __this, float ___amount, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.Generic.List`1<System.String> Player::get_GetCardsValueType()
 extern "C"  List_1_t1765447871 * Player_get_GetCardsValueType_m1254267132 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Card Player::GetCardByValueType(System.String)

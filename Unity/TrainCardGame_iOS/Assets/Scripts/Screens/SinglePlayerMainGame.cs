@@ -24,6 +24,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         UpdatePlayers();
 
         dealer.Init();
+        dealer.CreateCards(network.numPlayers);
         dealer.ShuffleCards();
         UpdatePlayerCards(GameConstants.MAX_PLAYERS);
         DistributeCards(GameConstants.MAX_PLAYERS);

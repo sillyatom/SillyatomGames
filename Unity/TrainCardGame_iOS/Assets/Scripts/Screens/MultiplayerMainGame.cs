@@ -36,6 +36,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     {
         //Init Dealer
         dealer.Init();
+        dealer.CreateCards(network.numPlayers);
 
         //update players
         UpdatePlayers();

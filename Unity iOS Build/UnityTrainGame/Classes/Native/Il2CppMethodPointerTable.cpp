@@ -13856,6 +13856,16 @@ extern "C" void InGameEvent_get_card_m1665257800 ();
 extern "C" void InGameEvent_set_card_m1793598009 ();
 extern "C" void InGameEvent_get_status_m20898569 ();
 extern "C" void InGameEvent_set_status_m3406780060 ();
+extern "C" void InGameInfoText__ctor_m801941993 ();
+extern "C" void InGameInfoText_Hide_m1606563581 ();
+extern "C" void InGameInfoText_ShowMessage_m3546954056 ();
+extern "C" void InGameInfoText_RemoveMessage_m70429915 ();
+extern "C" void U3CRemoveMessageU3Ec__Iterator9__ctor_m2855348377 ();
+extern "C" void U3CRemoveMessageU3Ec__Iterator9_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2333634723 ();
+extern "C" void U3CRemoveMessageU3Ec__Iterator9_System_Collections_IEnumerator_get_Current_m722344503 ();
+extern "C" void U3CRemoveMessageU3Ec__Iterator9_MoveNext_m789805475 ();
+extern "C" void U3CRemoveMessageU3Ec__Iterator9_Dispose_m3698938518 ();
+extern "C" void U3CRemoveMessageU3Ec__Iterator9_Reset_m501781318 ();
 extern "C" void InitCardsDataVO__ctor_m928158293 ();
 extern "C" void InitCardsDataVO_get_cards_data_m2867116220 ();
 extern "C" void InitCardsDataVO_set_cards_data_m3700077615 ();
@@ -13952,6 +13962,7 @@ extern "C" void Networking_get_PlayersIdsExcludingThis_m2072180026 ();
 extern "C" void Networking_GetPlayerById_m2192672952 ();
 extern "C" void Networking_Init_m4091929965 ();
 extern "C" void Networking_OnSinglePlayerMode_m504645416 ();
+extern "C" void Networking_GetNextPlayer_m972504375 ();
 extern "C" void Networking_UpdateSinglePlayerData_m2490043865 ();
 extern "C" void Networking_isIdHost_m3288564196 ();
 extern "C" void Networking_OnGameEvent_m3990535868 ();
@@ -14202,12 +14213,12 @@ extern "C" void XmlNodeConverter_ValueAttributes_m2742225691 ();
 extern "C" void XmlNodeConverter_CanConvert_m178606020 ();
 extern "C" void XmlNodeConverter_U3CIsArrayU3Em__5_m4879609 ();
 extern "C" void XmlNodeConverter_U3CValueAttributesU3Em__9_m1449517454 ();
-extern "C" void U3CDeserializeNodeU3Ec__AnonStoreyB__ctor_m3362637113 ();
-extern "C" void U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236 ();
-extern "C" void U3CReadArrayElementsU3Ec__AnonStoreyA__ctor_m3630415859 ();
-extern "C" void U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505 ();
-extern "C" void U3CSerializeNodeU3Ec__AnonStorey9__ctor_m2496087683 ();
-extern "C" void U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068 ();
+extern "C" void U3CDeserializeNodeU3Ec__AnonStoreyC__ctor_m3166123608 ();
+extern "C" void U3CDeserializeNodeU3Ec__AnonStoreyC_U3CU3Em__8_m1044286877 ();
+extern "C" void U3CReadArrayElementsU3Ec__AnonStoreyB__ctor_m3433902354 ();
+extern "C" void U3CReadArrayElementsU3Ec__AnonStoreyB_U3CU3Em__7_m1892362146 ();
+extern "C" void U3CSerializeNodeU3Ec__AnonStoreyA__ctor_m923979643 ();
+extern "C" void U3CSerializeNodeU3Ec__AnonStoreyA_U3CU3Em__6_m569496284 ();
 extern "C" void XmlNodeWrapper__ctor_m3381972616 ();
 extern "C" void XmlNodeWrapper_get_WrappedNode_m573484220 ();
 extern "C" void XmlNodeWrapper_get_NodeType_m2384883038 ();
@@ -15246,8 +15257,8 @@ extern "C" void JsonSchemaBuilder_ProcessProperties_m1405999713 ();
 extern "C" void JsonSchemaBuilder_ProcessType_m3913635737 ();
 extern "C" void JsonSchemaBuilder_MapType_m869536421 ();
 extern "C" void JsonSchemaBuilder_MapType_m2251695781 ();
-extern "C" void U3CMapTypeU3Ec__AnonStoreyC__ctor_m325798576 ();
-extern "C" void U3CMapTypeU3Ec__AnonStoreyC_U3CU3Em__15_m2805294267 ();
+extern "C" void U3CMapTypeU3Ec__AnonStoreyD__ctor_m129285071 ();
+extern "C" void U3CMapTypeU3Ec__AnonStoreyD_U3CU3Em__15_m346169818 ();
 extern "C" void JsonSchemaConstants__cctor_m611616000 ();
 extern "C" void JsonSchemaException__ctor_m2578772301 ();
 extern "C" void JsonSchemaException__ctor_m1538388693 ();
@@ -15279,8 +15290,8 @@ extern "C" void JsonSchemaGenerator_GenerateObjectSchema_m1181619249 ();
 extern "C" void JsonSchemaGenerator_GenerateISerializableContract_m3261479610 ();
 extern "C" void JsonSchemaGenerator_HasFlag_m218382716 ();
 extern "C" void JsonSchemaGenerator_GetJsonSchemaType_m3509475073 ();
-extern "C" void U3CGenerateInternalU3Ec__AnonStoreyD__ctor_m3010391009 ();
-extern "C" void U3CGenerateInternalU3Ec__AnonStoreyD_U3CU3Em__16_m1440955991 ();
+extern "C" void U3CGenerateInternalU3Ec__AnonStoreyE__ctor_m2813877504 ();
+extern "C" void U3CGenerateInternalU3Ec__AnonStoreyE_U3CU3Em__16_m2745349720 ();
 extern "C" void TypeSchema__ctor_m3366031153 ();
 extern "C" void TypeSchema_get_Type_m2755959450 ();
 extern "C" void TypeSchema_set_Type_m226775697 ();
@@ -15359,8 +15370,8 @@ extern "C" void JsonSchemaResolver__ctor_m4119934948 ();
 extern "C" void JsonSchemaResolver_get_LoadedSchemas_m3892697129 ();
 extern "C" void JsonSchemaResolver_set_LoadedSchemas_m61670256 ();
 extern "C" void JsonSchemaResolver_GetSchema_m3258389463 ();
-extern "C" void U3CGetSchemaU3Ec__AnonStoreyE__ctor_m237107186 ();
-extern "C" void U3CGetSchemaU3Ec__AnonStoreyE_U3CU3Em__19_m3650379226 ();
+extern "C" void U3CGetSchemaU3Ec__AnonStoreyF__ctor_m40593681 ();
+extern "C" void U3CGetSchemaU3Ec__AnonStoreyF_U3CU3Em__19_m1949638747 ();
 extern "C" void JsonSchemaWriter__ctor_m3948718252 ();
 extern "C" void JsonSchemaWriter_ReferenceOrWriteSchema_m1671254770 ();
 extern "C" void JsonSchemaWriter_WriteSchema_m1999116124 ();
@@ -15372,8 +15383,8 @@ extern "C" void JsonSchemaWriter_U3CWriteTypeU3Em__1A_m2223945794 ();
 extern "C" void SchemaExtensions_IsValid_m49735123 ();
 extern "C" void SchemaExtensions_Validate_m2989695417 ();
 extern "C" void SchemaExtensions_Validate_m68313348 ();
-extern "C" void U3CIsValidU3Ec__AnonStoreyF__ctor_m3775303014 ();
-extern "C" void U3CIsValidU3Ec__AnonStoreyF_U3CU3Em__1B_m1369909260 ();
+extern "C" void U3CIsValidU3Ec__AnonStorey10__ctor_m1280420859 ();
+extern "C" void U3CIsValidU3Ec__AnonStorey10_U3CU3Em__1B_m16839265 ();
 extern "C" void ValidationEventArgs__ctor_m727474055 ();
 extern "C" void ValidationEventArgs_get_Exception_m3409740938 ();
 extern "C" void ValidationEventArgs_get_Message_m710533966 ();
@@ -15427,12 +15438,12 @@ extern "C" void DefaultContractResolver_U3CGetSerializableMembersU3Em__1D_m12200
 extern "C" void DefaultContractResolver_U3CCreateObjectContractU3Em__1E_m1282338507 ();
 extern "C" void DefaultContractResolver_U3CGetAttributeConstructorU3Em__1F_m3297923847 ();
 extern "C" void DefaultContractResolver_U3CCreatePropertiesU3Em__21_m2996004570 ();
-extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey10__ctor_m2430991336 ();
-extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey10_U3CU3Em__20_m695040920 ();
-extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey11__ctor_m3744915202 ();
-extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey11_U3CU3Em__22_m2074588829 ();
-extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey12__ctor_m1419043307 ();
-extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey12_U3CU3Em__23_m455064691 ();
+extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey11__ctor_m2234477831 ();
+extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey11_U3CU3Em__20_m1656654937 ();
+extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey12__ctor_m3548401697 ();
+extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey12_U3CU3Em__22_m4292346782 ();
+extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey13__ctor_m1222529802 ();
+extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey13_U3CU3Em__23_m2672822644 ();
 extern "C" void DefaultReferenceResolver__ctor_m2046477720 ();
 extern "C" void DefaultReferenceResolver_GetMappings_m1562190554 ();
 extern "C" void DefaultReferenceResolver_ResolveReference_m2170076464 ();
@@ -15643,8 +15654,8 @@ extern "C" void JsonSerializerInternalReader_U3CCreateObjectFromNonDefaultConstr
 extern "C" void JsonSerializerInternalReader_U3CCreateObjectFromNonDefaultConstructorU3Em__27_m1440543146 ();
 extern "C" void JsonSerializerInternalReader_U3CPopulateObjectU3Em__28_m335707273 ();
 extern "C" void JsonSerializerInternalReader_U3CPopulateObjectU3Em__29_m488875958 ();
-extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey13__ctor_m2096654551 ();
-extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey13_U3CU3Em__24_m2694558090 ();
+extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey14__ctor_m1900141046 ();
+extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey14_U3CU3Em__24_m3827748683 ();
 extern "C" void JsonSerializerInternalWriter__ctor_m1848814959 ();
 extern "C" void JsonSerializerInternalWriter_get_SerializeStack_m1412853750 ();
 extern "C" void JsonSerializerInternalWriter_Serialize_m2835988858 ();
@@ -15758,12 +15769,12 @@ extern "C" void CollectionUtils_GetDimensions_m2553219236 ();
 extern "C" void CollectionUtils_ToMultidimensionalArray_m3333505339 ();
 extern "C" void CollectionUtils_JaggedArrayGetValue_m3503854466 ();
 extern "C" void CollectionUtils_CopyFromJaggedToMultidimensionalArray_m992916538 ();
-extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey15__ctor_m4051827772 ();
-extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey15_U3CU3Em__2C_m2885217457 ();
-extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey17__ctor_m1849606258 ();
-extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey17_U3CU3Em__2E_m1944879481 ();
-extern "C" void U3CCreateListWrapperU3Ec__AnonStorey16__ctor_m2470569883 ();
-extern "C" void U3CCreateListWrapperU3Ec__AnonStorey16_U3CU3Em__2D_m2042024209 ();
+extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey16__ctor_m3855314267 ();
+extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey16_U3CU3Em__2C_m1929696178 ();
+extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey18__ctor_m1653092753 ();
+extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey18_U3CU3Em__2E_m989358202 ();
+extern "C" void U3CCreateListWrapperU3Ec__AnonStorey17__ctor_m2274056378 ();
+extern "C" void U3CCreateListWrapperU3Ec__AnonStorey17_U3CU3Em__2D_m1086502930 ();
 extern "C" void ConvertUtils__cctor_m914182345 ();
 extern "C" void ConvertUtils_CreateCastConverter_m3653731189 ();
 extern "C" void ConvertUtils_CanConvertType_m732072898 ();
@@ -15775,12 +15786,12 @@ extern "C" void ConvertUtils_TryConvertOrCast_m75399195 ();
 extern "C" void ConvertUtils_EnsureTypeAssignable_m712946340 ();
 extern "C" void ConvertUtils_GetConverter_m1269630463 ();
 extern "C" void ConvertUtils_IsInteger_m1657944146 ();
-extern "C" void U3CCreateCastConverterU3Ec__AnonStorey18__ctor_m2801726202 ();
-extern "C" void U3CCreateCastConverterU3Ec__AnonStorey18_U3CU3Em__2F_m3537407368 ();
-extern "C" void U3CTryConvertU3Ec__AnonStorey1A__ctor_m3665500262 ();
-extern "C" void U3CTryConvertU3Ec__AnonStorey1A_U3CU3Em__31_m1609220600 ();
-extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey1C__ctor_m3132604418 ();
-extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey1C_U3CU3Em__33_m3585080790 ();
+extern "C" void U3CCreateCastConverterU3Ec__AnonStorey19__ctor_m2605212697 ();
+extern "C" void U3CCreateCastConverterU3Ec__AnonStorey19_U3CU3Em__2F_m1460198025 ();
+extern "C" void U3CTryConvertU3Ec__AnonStorey1B__ctor_m3468986757 ();
+extern "C" void U3CTryConvertU3Ec__AnonStorey1B_U3CU3Em__31_m1738303319 ();
+extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey1D__ctor_m2936090913 ();
+extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey1D_U3CU3Em__33_m3714163509 ();
 extern "C" void TypeConvertKey__ctor_m3900280831 ();
 extern "C" void TypeConvertKey_get_InitialType_m2680337466 ();
 extern "C" void TypeConvertKey_get_TargetType_m1522591025 ();
@@ -15880,10 +15891,10 @@ extern "C" void ReflectionUtils_U3CGetFieldsAndPropertiesU3Em__42_m2688226790 ()
 extern "C" void ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851 ();
 extern "C" void ReflectionUtils_U3CGetMemberInfoFromTypeU3Em__45_m2175382557 ();
 extern "C" void ReflectionUtils_U3CGetChildPrivateFieldsU3Em__46_m3251665617 ();
-extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey25__ctor_m479302745 ();
-extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey25_U3CU3Em__47_m1847959018 ();
-extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey24__ctor_m3192000715 ();
-extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey24_U3CU3Em__43_m1244983067 ();
+extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey26__ctor_m282789240 ();
+extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey26_U3CU3Em__47_m1972032265 ();
+extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey25__ctor_m2995487210 ();
+extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey25_U3CU3Em__43_m2706563066 ();
 extern "C" void StringBuffer__ctor_m1224086481 ();
 extern "C" void StringBuffer__ctor_m284661666 ();
 extern "C" void StringBuffer__cctor_m3104846332 ();
@@ -15915,10 +15926,10 @@ extern "C" void StringUtils_GetLength_m3269432277 ();
 extern "C" void StringUtils_ToCharAsUnicode_m4026369150 ();
 extern "C" void StringUtils_WriteCharAsUnicode_m368627844 ();
 extern "C" void StringUtils_ToCamelCase_m3833750098 ();
-extern "C" void U3CIndentU3Ec__AnonStorey26__ctor_m1445289054 ();
-extern "C" void U3CIndentU3Ec__AnonStorey26_U3CU3Em__48_m3504342398 ();
-extern "C" void U3CNumberLinesU3Ec__AnonStorey27__ctor_m3652599755 ();
-extern "C" void U3CNumberLinesU3Ec__AnonStorey27_U3CU3Em__49_m253250028 ();
+extern "C" void U3CIndentU3Ec__AnonStorey27__ctor_m1248775549 ();
+extern "C" void U3CIndentU3Ec__AnonStorey27_U3CU3Em__48_m2320995101 ();
+extern "C" void U3CNumberLinesU3Ec__AnonStorey28__ctor_m3456086250 ();
+extern "C" void U3CNumberLinesU3Ec__AnonStorey28_U3CU3Em__49_m3364870027 ();
 extern "C" void ActionLine__ctor_m70167161 ();
 extern "C" void ActionLine_Invoke_m105523814 ();
 extern "C" void ActionLine_BeginInvoke_m1477326427 ();
@@ -15945,6 +15956,8 @@ extern "C" void Player_get_DidPullOver_m1102557715 ();
 extern "C" void Player_set_DidPullOver_m4156915338 ();
 extern "C" void Player_get_SelectedCardValueType_m3899190188 ();
 extern "C" void Player_get_SelectedCard_m249687851 ();
+extern "C" void Player_SetTurnStatus_m1956600040 ();
+extern "C" void Player_SetGrayEffectAmount_m533122949 ();
 extern "C" void Player_get_GetCardsValueType_m1254267132 ();
 extern "C" void Player_GetCardByValueType_m2104611901 ();
 extern "C" void Player_get_IsLocalPlayer_m840128861 ();
@@ -16120,7 +16133,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16109] = 
+extern const methodPointerType g_MethodPointers[16122] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -29967,6 +29980,16 @@ extern const methodPointerType g_MethodPointers[16109] =
 	InGameEvent_set_card_m1793598009,
 	InGameEvent_get_status_m20898569,
 	InGameEvent_set_status_m3406780060,
+	InGameInfoText__ctor_m801941993,
+	InGameInfoText_Hide_m1606563581,
+	InGameInfoText_ShowMessage_m3546954056,
+	InGameInfoText_RemoveMessage_m70429915,
+	U3CRemoveMessageU3Ec__Iterator9__ctor_m2855348377,
+	U3CRemoveMessageU3Ec__Iterator9_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2333634723,
+	U3CRemoveMessageU3Ec__Iterator9_System_Collections_IEnumerator_get_Current_m722344503,
+	U3CRemoveMessageU3Ec__Iterator9_MoveNext_m789805475,
+	U3CRemoveMessageU3Ec__Iterator9_Dispose_m3698938518,
+	U3CRemoveMessageU3Ec__Iterator9_Reset_m501781318,
 	InitCardsDataVO__ctor_m928158293,
 	InitCardsDataVO_get_cards_data_m2867116220,
 	InitCardsDataVO_set_cards_data_m3700077615,
@@ -30063,6 +30086,7 @@ extern const methodPointerType g_MethodPointers[16109] =
 	Networking_GetPlayerById_m2192672952,
 	Networking_Init_m4091929965,
 	Networking_OnSinglePlayerMode_m504645416,
+	Networking_GetNextPlayer_m972504375,
 	Networking_UpdateSinglePlayerData_m2490043865,
 	Networking_isIdHost_m3288564196,
 	Networking_OnGameEvent_m3990535868,
@@ -30313,12 +30337,12 @@ extern const methodPointerType g_MethodPointers[16109] =
 	XmlNodeConverter_CanConvert_m178606020,
 	XmlNodeConverter_U3CIsArrayU3Em__5_m4879609,
 	XmlNodeConverter_U3CValueAttributesU3Em__9_m1449517454,
-	U3CDeserializeNodeU3Ec__AnonStoreyB__ctor_m3362637113,
-	U3CDeserializeNodeU3Ec__AnonStoreyB_U3CU3Em__8_m1052046236,
-	U3CReadArrayElementsU3Ec__AnonStoreyA__ctor_m3630415859,
-	U3CReadArrayElementsU3Ec__AnonStoreyA_U3CU3Em__7_m1900121505,
-	U3CSerializeNodeU3Ec__AnonStorey9__ctor_m2496087683,
-	U3CSerializeNodeU3Ec__AnonStorey9_U3CU3Em__6_m1446340068,
+	U3CDeserializeNodeU3Ec__AnonStoreyC__ctor_m3166123608,
+	U3CDeserializeNodeU3Ec__AnonStoreyC_U3CU3Em__8_m1044286877,
+	U3CReadArrayElementsU3Ec__AnonStoreyB__ctor_m3433902354,
+	U3CReadArrayElementsU3Ec__AnonStoreyB_U3CU3Em__7_m1892362146,
+	U3CSerializeNodeU3Ec__AnonStoreyA__ctor_m923979643,
+	U3CSerializeNodeU3Ec__AnonStoreyA_U3CU3Em__6_m569496284,
 	XmlNodeWrapper__ctor_m3381972616,
 	XmlNodeWrapper_get_WrappedNode_m573484220,
 	XmlNodeWrapper_get_NodeType_m2384883038,
@@ -31357,8 +31381,8 @@ extern const methodPointerType g_MethodPointers[16109] =
 	JsonSchemaBuilder_ProcessType_m3913635737,
 	JsonSchemaBuilder_MapType_m869536421,
 	JsonSchemaBuilder_MapType_m2251695781,
-	U3CMapTypeU3Ec__AnonStoreyC__ctor_m325798576,
-	U3CMapTypeU3Ec__AnonStoreyC_U3CU3Em__15_m2805294267,
+	U3CMapTypeU3Ec__AnonStoreyD__ctor_m129285071,
+	U3CMapTypeU3Ec__AnonStoreyD_U3CU3Em__15_m346169818,
 	JsonSchemaConstants__cctor_m611616000,
 	JsonSchemaException__ctor_m2578772301,
 	JsonSchemaException__ctor_m1538388693,
@@ -31390,8 +31414,8 @@ extern const methodPointerType g_MethodPointers[16109] =
 	JsonSchemaGenerator_GenerateISerializableContract_m3261479610,
 	JsonSchemaGenerator_HasFlag_m218382716,
 	JsonSchemaGenerator_GetJsonSchemaType_m3509475073,
-	U3CGenerateInternalU3Ec__AnonStoreyD__ctor_m3010391009,
-	U3CGenerateInternalU3Ec__AnonStoreyD_U3CU3Em__16_m1440955991,
+	U3CGenerateInternalU3Ec__AnonStoreyE__ctor_m2813877504,
+	U3CGenerateInternalU3Ec__AnonStoreyE_U3CU3Em__16_m2745349720,
 	TypeSchema__ctor_m3366031153,
 	TypeSchema_get_Type_m2755959450,
 	TypeSchema_set_Type_m226775697,
@@ -31470,8 +31494,8 @@ extern const methodPointerType g_MethodPointers[16109] =
 	JsonSchemaResolver_get_LoadedSchemas_m3892697129,
 	JsonSchemaResolver_set_LoadedSchemas_m61670256,
 	JsonSchemaResolver_GetSchema_m3258389463,
-	U3CGetSchemaU3Ec__AnonStoreyE__ctor_m237107186,
-	U3CGetSchemaU3Ec__AnonStoreyE_U3CU3Em__19_m3650379226,
+	U3CGetSchemaU3Ec__AnonStoreyF__ctor_m40593681,
+	U3CGetSchemaU3Ec__AnonStoreyF_U3CU3Em__19_m1949638747,
 	JsonSchemaWriter__ctor_m3948718252,
 	JsonSchemaWriter_ReferenceOrWriteSchema_m1671254770,
 	JsonSchemaWriter_WriteSchema_m1999116124,
@@ -31483,8 +31507,8 @@ extern const methodPointerType g_MethodPointers[16109] =
 	SchemaExtensions_IsValid_m49735123,
 	SchemaExtensions_Validate_m2989695417,
 	SchemaExtensions_Validate_m68313348,
-	U3CIsValidU3Ec__AnonStoreyF__ctor_m3775303014,
-	U3CIsValidU3Ec__AnonStoreyF_U3CU3Em__1B_m1369909260,
+	U3CIsValidU3Ec__AnonStorey10__ctor_m1280420859,
+	U3CIsValidU3Ec__AnonStorey10_U3CU3Em__1B_m16839265,
 	ValidationEventArgs__ctor_m727474055,
 	ValidationEventArgs_get_Exception_m3409740938,
 	ValidationEventArgs_get_Message_m710533966,
@@ -31538,12 +31562,12 @@ extern const methodPointerType g_MethodPointers[16109] =
 	DefaultContractResolver_U3CCreateObjectContractU3Em__1E_m1282338507,
 	DefaultContractResolver_U3CGetAttributeConstructorU3Em__1F_m3297923847,
 	DefaultContractResolver_U3CCreatePropertiesU3Em__21_m2996004570,
-	U3CCreateISerializableContractU3Ec__AnonStorey10__ctor_m2430991336,
-	U3CCreateISerializableContractU3Ec__AnonStorey10_U3CU3Em__20_m695040920,
-	U3CCreateShouldSerializeTestU3Ec__AnonStorey11__ctor_m3744915202,
-	U3CCreateShouldSerializeTestU3Ec__AnonStorey11_U3CU3Em__22_m2074588829,
-	U3CSetIsSpecifiedActionsU3Ec__AnonStorey12__ctor_m1419043307,
-	U3CSetIsSpecifiedActionsU3Ec__AnonStorey12_U3CU3Em__23_m455064691,
+	U3CCreateISerializableContractU3Ec__AnonStorey11__ctor_m2234477831,
+	U3CCreateISerializableContractU3Ec__AnonStorey11_U3CU3Em__20_m1656654937,
+	U3CCreateShouldSerializeTestU3Ec__AnonStorey12__ctor_m3548401697,
+	U3CCreateShouldSerializeTestU3Ec__AnonStorey12_U3CU3Em__22_m4292346782,
+	U3CSetIsSpecifiedActionsU3Ec__AnonStorey13__ctor_m1222529802,
+	U3CSetIsSpecifiedActionsU3Ec__AnonStorey13_U3CU3Em__23_m2672822644,
 	DefaultReferenceResolver__ctor_m2046477720,
 	DefaultReferenceResolver_GetMappings_m1562190554,
 	DefaultReferenceResolver_ResolveReference_m2170076464,
@@ -31754,8 +31778,8 @@ extern const methodPointerType g_MethodPointers[16109] =
 	JsonSerializerInternalReader_U3CCreateObjectFromNonDefaultConstructorU3Em__27_m1440543146,
 	JsonSerializerInternalReader_U3CPopulateObjectU3Em__28_m335707273,
 	JsonSerializerInternalReader_U3CPopulateObjectU3Em__29_m488875958,
-	U3CCreateAndPopulateListU3Ec__AnonStorey13__ctor_m2096654551,
-	U3CCreateAndPopulateListU3Ec__AnonStorey13_U3CU3Em__24_m2694558090,
+	U3CCreateAndPopulateListU3Ec__AnonStorey14__ctor_m1900141046,
+	U3CCreateAndPopulateListU3Ec__AnonStorey14_U3CU3Em__24_m3827748683,
 	JsonSerializerInternalWriter__ctor_m1848814959,
 	JsonSerializerInternalWriter_get_SerializeStack_m1412853750,
 	JsonSerializerInternalWriter_Serialize_m2835988858,
@@ -31869,12 +31893,12 @@ extern const methodPointerType g_MethodPointers[16109] =
 	CollectionUtils_ToMultidimensionalArray_m3333505339,
 	CollectionUtils_JaggedArrayGetValue_m3503854466,
 	CollectionUtils_CopyFromJaggedToMultidimensionalArray_m992916538,
-	U3CCreateCollectionWrapperU3Ec__AnonStorey15__ctor_m4051827772,
-	U3CCreateCollectionWrapperU3Ec__AnonStorey15_U3CU3Em__2C_m2885217457,
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey17__ctor_m1849606258,
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey17_U3CU3Em__2E_m1944879481,
-	U3CCreateListWrapperU3Ec__AnonStorey16__ctor_m2470569883,
-	U3CCreateListWrapperU3Ec__AnonStorey16_U3CU3Em__2D_m2042024209,
+	U3CCreateCollectionWrapperU3Ec__AnonStorey16__ctor_m3855314267,
+	U3CCreateCollectionWrapperU3Ec__AnonStorey16_U3CU3Em__2C_m1929696178,
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey18__ctor_m1653092753,
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey18_U3CU3Em__2E_m989358202,
+	U3CCreateListWrapperU3Ec__AnonStorey17__ctor_m2274056378,
+	U3CCreateListWrapperU3Ec__AnonStorey17_U3CU3Em__2D_m1086502930,
 	ConvertUtils__cctor_m914182345,
 	ConvertUtils_CreateCastConverter_m3653731189,
 	ConvertUtils_CanConvertType_m732072898,
@@ -31886,12 +31910,12 @@ extern const methodPointerType g_MethodPointers[16109] =
 	ConvertUtils_EnsureTypeAssignable_m712946340,
 	ConvertUtils_GetConverter_m1269630463,
 	ConvertUtils_IsInteger_m1657944146,
-	U3CCreateCastConverterU3Ec__AnonStorey18__ctor_m2801726202,
-	U3CCreateCastConverterU3Ec__AnonStorey18_U3CU3Em__2F_m3537407368,
-	U3CTryConvertU3Ec__AnonStorey1A__ctor_m3665500262,
-	U3CTryConvertU3Ec__AnonStorey1A_U3CU3Em__31_m1609220600,
-	U3CTryConvertOrCastU3Ec__AnonStorey1C__ctor_m3132604418,
-	U3CTryConvertOrCastU3Ec__AnonStorey1C_U3CU3Em__33_m3585080790,
+	U3CCreateCastConverterU3Ec__AnonStorey19__ctor_m2605212697,
+	U3CCreateCastConverterU3Ec__AnonStorey19_U3CU3Em__2F_m1460198025,
+	U3CTryConvertU3Ec__AnonStorey1B__ctor_m3468986757,
+	U3CTryConvertU3Ec__AnonStorey1B_U3CU3Em__31_m1738303319,
+	U3CTryConvertOrCastU3Ec__AnonStorey1D__ctor_m2936090913,
+	U3CTryConvertOrCastU3Ec__AnonStorey1D_U3CU3Em__33_m3714163509,
 	TypeConvertKey__ctor_m3900280831,
 	TypeConvertKey_get_InitialType_m2680337466,
 	TypeConvertKey_get_TargetType_m1522591025,
@@ -31991,10 +32015,10 @@ extern const methodPointerType g_MethodPointers[16109] =
 	ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851,
 	ReflectionUtils_U3CGetMemberInfoFromTypeU3Em__45_m2175382557,
 	ReflectionUtils_U3CGetChildPrivateFieldsU3Em__46_m3251665617,
-	U3CGetChildPrivatePropertiesU3Ec__AnonStorey25__ctor_m479302745,
-	U3CGetChildPrivatePropertiesU3Ec__AnonStorey25_U3CU3Em__47_m1847959018,
-	U3CGetFieldsAndPropertiesU3Ec__AnonStorey24__ctor_m3192000715,
-	U3CGetFieldsAndPropertiesU3Ec__AnonStorey24_U3CU3Em__43_m1244983067,
+	U3CGetChildPrivatePropertiesU3Ec__AnonStorey26__ctor_m282789240,
+	U3CGetChildPrivatePropertiesU3Ec__AnonStorey26_U3CU3Em__47_m1972032265,
+	U3CGetFieldsAndPropertiesU3Ec__AnonStorey25__ctor_m2995487210,
+	U3CGetFieldsAndPropertiesU3Ec__AnonStorey25_U3CU3Em__43_m2706563066,
 	StringBuffer__ctor_m1224086481,
 	StringBuffer__ctor_m284661666,
 	StringBuffer__cctor_m3104846332,
@@ -32026,10 +32050,10 @@ extern const methodPointerType g_MethodPointers[16109] =
 	StringUtils_ToCharAsUnicode_m4026369150,
 	StringUtils_WriteCharAsUnicode_m368627844,
 	StringUtils_ToCamelCase_m3833750098,
-	U3CIndentU3Ec__AnonStorey26__ctor_m1445289054,
-	U3CIndentU3Ec__AnonStorey26_U3CU3Em__48_m3504342398,
-	U3CNumberLinesU3Ec__AnonStorey27__ctor_m3652599755,
-	U3CNumberLinesU3Ec__AnonStorey27_U3CU3Em__49_m253250028,
+	U3CIndentU3Ec__AnonStorey27__ctor_m1248775549,
+	U3CIndentU3Ec__AnonStorey27_U3CU3Em__48_m2320995101,
+	U3CNumberLinesU3Ec__AnonStorey28__ctor_m3456086250,
+	U3CNumberLinesU3Ec__AnonStorey28_U3CU3Em__49_m3364870027,
 	ActionLine__ctor_m70167161,
 	ActionLine_Invoke_m105523814,
 	ActionLine_BeginInvoke_m1477326427,
@@ -32056,6 +32080,8 @@ extern const methodPointerType g_MethodPointers[16109] =
 	Player_set_DidPullOver_m4156915338,
 	Player_get_SelectedCardValueType_m3899190188,
 	Player_get_SelectedCard_m249687851,
+	Player_SetTurnStatus_m1956600040,
+	Player_SetGrayEffectAmount_m533122949,
 	Player_get_GetCardsValueType_m1254267132,
 	Player_GetCardByValueType_m2104611901,
 	Player_get_IsLocalPlayer_m840128861,
