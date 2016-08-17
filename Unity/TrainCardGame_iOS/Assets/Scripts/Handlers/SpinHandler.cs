@@ -140,7 +140,7 @@ public class SpinHandler : ExtMonoBehaviour
 
     private void OnSpinAnimCompleteDelay()
     {
-        Utility.DelayedCall(gameObject, gameObject, "OnSpinAnimComplete", 1.5f);
+        DelayedCall(1.5f, OnSpinAnimComplete);
     }
 
     private void OnSpinAnimComplete()

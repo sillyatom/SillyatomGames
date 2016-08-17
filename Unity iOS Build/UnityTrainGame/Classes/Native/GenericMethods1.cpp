@@ -290,6 +290,10 @@ struct EventFunction_1_t3885370180;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "mscorlib_System_Reflection_Emit_ILTokenInfo3723275281.h"
+#include "mscorlib_System_Reflection_Emit_MonoResource1936012254.h"
+#include "mscorlib_System_Reflection_ParameterModifier500203470.h"
+#include "mscorlib_System_Resources_ResourceReader_ResourceC3699857703.h"
 #include "mscorlib_System_Resources_ResourceReader_ResourceI4074584572.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_B1738289281.h"
 #include "System_System_Security_Cryptography_X509Certificat1122151684.h"
@@ -543,10 +547,6 @@ struct EventFunction_1_t3885370180;
 #include "mscorlib_System_IntPtr676692020.h"
 #include "mscorlib_System_Reflection_Emit_ILGenerator_LabelD1395746974.h"
 #include "mscorlib_System_Reflection_Emit_ILGenerator_LabelFi320573180.h"
-#include "mscorlib_System_Reflection_Emit_ILTokenInfo3723275281.h"
-#include "mscorlib_System_Reflection_Emit_MonoResource1936012254.h"
-#include "mscorlib_System_Reflection_ParameterModifier500203470.h"
-#include "mscorlib_System_Resources_ResourceReader_ResourceC3699857703.h"
 #include "mscorlib_System_IntPtr676692020MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_CastHelper_1_gen4244616972.h"
 #include "UnityEngine_UI_UnityEngine_EventSystems_BaseEventD3547103726.h"
@@ -570,15 +570,15 @@ struct EventFunction_1_t3885370180;
 #include "mscorlib_System_Converter_2_gen113996300MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279.h"
 #include "System_Core_System_Func_2_gen2601891118.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3122573226.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3122573226MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1342473230.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1342473230MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen1844407557.h"
 #include "System_Core_System_Func_2_gen1844407557MethodDeclarations.h"
 #include "System_Core_System_Linq_Enumerable4285654829MethodDeclarations.h"
 #include "System_Core_System_Linq_Enumerable4285654829.h"
 #include "System_Core_System_Func_2_gen2267165834.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_StringU646723198.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_StringU646723198MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3161590498.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3161590498MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen1509682273.h"
 #include "System_Core_System_Func_2_gen1509682273MethodDeclarations.h"
 #include "System_Core_System_Linq_Check3277941805MethodDeclarations.h"
@@ -603,6 +603,18 @@ struct EventFunction_1_t3885370180;
 #include "mscorlib_System_Collections_Generic_List_1_gen1081512082MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Transform284553113MethodDeclarations.h"
 
+// System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.ILTokenInfo>(System.Int32,T&)
+extern "C"  void Array_SetGenericValueImpl_TisILTokenInfo_t3723275281_m4064664696_gshared (Il2CppArray * __this, int32_t ___pos, ILTokenInfo_t3723275281 * ___value, const MethodInfo* method);
+#define Array_SetGenericValueImpl_TisILTokenInfo_t3723275281_m4064664696(__this, ___pos, ___value, method) ((  void (*) (Il2CppArray *, int32_t, ILTokenInfo_t3723275281 *, const MethodInfo*))Array_SetGenericValueImpl_TisILTokenInfo_t3723275281_m4064664696_gshared)(__this, ___pos, ___value, method)
+// System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.MonoResource>(System.Int32,T&)
+extern "C"  void Array_SetGenericValueImpl_TisMonoResource_t1936012254_m3943978589_gshared (Il2CppArray * __this, int32_t ___pos, MonoResource_t1936012254 * ___value, const MethodInfo* method);
+#define Array_SetGenericValueImpl_TisMonoResource_t1936012254_m3943978589(__this, ___pos, ___value, method) ((  void (*) (Il2CppArray *, int32_t, MonoResource_t1936012254 *, const MethodInfo*))Array_SetGenericValueImpl_TisMonoResource_t1936012254_m3943978589_gshared)(__this, ___pos, ___value, method)
+// System.Void System.Array::SetGenericValueImpl<System.Reflection.ParameterModifier>(System.Int32,T&)
+extern "C"  void Array_SetGenericValueImpl_TisParameterModifier_t500203470_m2765080465_gshared (Il2CppArray * __this, int32_t ___pos, ParameterModifier_t500203470 * ___value, const MethodInfo* method);
+#define Array_SetGenericValueImpl_TisParameterModifier_t500203470_m2765080465(__this, ___pos, ___value, method) ((  void (*) (Il2CppArray *, int32_t, ParameterModifier_t500203470 *, const MethodInfo*))Array_SetGenericValueImpl_TisParameterModifier_t500203470_m2765080465_gshared)(__this, ___pos, ___value, method)
+// System.Void System.Array::SetGenericValueImpl<System.Resources.ResourceReader/ResourceCacheItem>(System.Int32,T&)
+extern "C"  void Array_SetGenericValueImpl_TisResourceCacheItem_t3699857703_m581600614_gshared (Il2CppArray * __this, int32_t ___pos, ResourceCacheItem_t3699857703 * ___value, const MethodInfo* method);
+#define Array_SetGenericValueImpl_TisResourceCacheItem_t3699857703_m581600614(__this, ___pos, ___value, method) ((  void (*) (Il2CppArray *, int32_t, ResourceCacheItem_t3699857703 *, const MethodInfo*))Array_SetGenericValueImpl_TisResourceCacheItem_t3699857703_m581600614_gshared)(__this, ___pos, ___value, method)
 // System.Void System.Array::SetGenericValueImpl<System.Resources.ResourceReader/ResourceInfo>(System.Int32,T&)
 extern "C"  void Array_SetGenericValueImpl_TisResourceInfo_t4074584572_m1464674077_gshared (Il2CppArray * __this, int32_t ___pos, ResourceInfo_t4074584572 * ___value, const MethodInfo* method);
 #define Array_SetGenericValueImpl_TisResourceInfo_t4074584572_m1464674077(__this, ___pos, ___value, method) ((  void (*) (Il2CppArray *, int32_t, ResourceInfo_t4074584572 *, const MethodInfo*))Array_SetGenericValueImpl_TisResourceInfo_t4074584572_m1464674077_gshared)(__this, ___pos, ___value, method)
@@ -2145,6 +2157,10 @@ extern "C"  GameObject_t4012695102 * ExecuteEvents_GetEventHandler_TisIl2CppObje
 // System.Boolean UnityEngine.EventSystems.ExecuteEvents::CanHandleEvent<System.Object>(UnityEngine.GameObject)
 extern "C"  bool ExecuteEvents_CanHandleEvent_TisIl2CppObject_m2627025177_gshared (Il2CppObject * __this /* static, unused */, GameObject_t4012695102 * p0, const MethodInfo* method);
 #define ExecuteEvents_CanHandleEvent_TisIl2CppObject_m2627025177(__this /* static, unused */, p0, method) ((  bool (*) (Il2CppObject * /* static, unused */, GameObject_t4012695102 *, const MethodInfo*))ExecuteEvents_CanHandleEvent_TisIl2CppObject_m2627025177_gshared)(__this /* static, unused */, p0, method)
+// System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.ILTokenInfo>(System.Int32,T&)
+// System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.MonoResource>(System.Int32,T&)
+// System.Void System.Array::SetGenericValueImpl<System.Reflection.ParameterModifier>(System.Int32,T&)
+// System.Void System.Array::SetGenericValueImpl<System.Resources.ResourceReader/ResourceCacheItem>(System.Int32,T&)
 // System.Void System.Array::SetGenericValueImpl<System.Resources.ResourceReader/ResourceInfo>(System.Int32,T&)
 // System.Void System.Array::SetGenericValueImpl<System.Runtime.Serialization.Formatters.Binary.TypeTag>(System.Int32,T&)
 // System.Void System.Array::SetGenericValueImpl<System.SByte>(System.Int32,T&)
@@ -22962,20 +22978,20 @@ extern "C"  KeyValuePair_2_t3312956448  StringUtils_ForgivingCaseSensitiveFind_T
 	KeyValuePair_2U5BU5D_t346249057* V_0 = NULL;
 	int32_t V_1 = 0;
 	Il2CppObject* V_2 = NULL;
-	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * V_3 = NULL;
+	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * V_3 = NULL;
 	KeyValuePair_2_t3312956448  V_4;
 	memset(&V_4, 0, sizeof(V_4));
 	KeyValuePair_2_t3312956448  G_B8_0;
 	memset(&G_B8_0, 0, sizeof(G_B8_0));
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 *)L_0;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_1 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 *)L_0;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * L_1 = V_3;
 		Func_2_t2601891118 * L_2 = ___valueSelector;
 		NullCheck(L_1);
 		L_1->set_valueSelector_0(L_2);
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_3 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * L_3 = V_3;
 		String_t* L_4 = ___testValue;
 		NullCheck(L_3);
 		L_3->set_testValue_1(L_4);
@@ -22993,7 +23009,7 @@ extern "C"  KeyValuePair_2_t3312956448  StringUtils_ForgivingCaseSensitiveFind_T
 
 IL_0025:
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_7 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * L_7 = V_3;
 		NullCheck(L_7);
 		Func_2_t2601891118 * L_8 = (Func_2_t2601891118 *)L_7->get_valueSelector_0();
 		if (L_8)
@@ -23010,7 +23026,7 @@ IL_0025:
 IL_003b:
 	{
 		Il2CppObject* L_10 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_11 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * L_11 = V_3;
 		IntPtr_t L_12;
 		L_12.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_2_t1844407557 * L_13 = (Func_2_t1844407557 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -23058,7 +23074,7 @@ IL_007b:
 IL_007c:
 	{
 		Il2CppObject* L_22 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t3122573226 * L_23 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t1342473230 * L_23 = V_3;
 		IntPtr_t L_24;
 		L_24.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 7));
 		Func_2_t1844407557 * L_25 = (Func_2_t1844407557 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -23088,18 +23104,18 @@ extern "C"  Il2CppObject * StringUtils_ForgivingCaseSensitiveFind_TisIl2CppObjec
 	ObjectU5BU5D_t11523773* V_0 = NULL;
 	int32_t V_1 = 0;
 	Il2CppObject* V_2 = NULL;
-	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * V_3 = NULL;
+	U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * V_3 = NULL;
 	Il2CppObject * V_4 = NULL;
 	Il2CppObject * G_B8_0 = NULL;
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 *)L_0;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_1 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * L_0 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_3 = (U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 *)L_0;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * L_1 = V_3;
 		Func_2_t2267165834 * L_2 = ___valueSelector;
 		NullCheck(L_1);
 		L_1->set_valueSelector_0(L_2);
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_3 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * L_3 = V_3;
 		String_t* L_4 = ___testValue;
 		NullCheck(L_3);
 		L_3->set_testValue_1(L_4);
@@ -23117,7 +23133,7 @@ extern "C"  Il2CppObject * StringUtils_ForgivingCaseSensitiveFind_TisIl2CppObjec
 
 IL_0025:
 	{
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_7 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * L_7 = V_3;
 		NullCheck(L_7);
 		Func_2_t2267165834 * L_8 = (Func_2_t2267165834 *)L_7->get_valueSelector_0();
 		if (L_8)
@@ -23134,7 +23150,7 @@ IL_0025:
 IL_003b:
 	{
 		Il2CppObject* L_10 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_11 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * L_11 = V_3;
 		IntPtr_t L_12;
 		L_12.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_2_t1509682273 * L_13 = (Func_2_t1509682273 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -23182,7 +23198,7 @@ IL_007b:
 IL_007c:
 	{
 		Il2CppObject* L_22 = ___source;
-		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2A_1_t646723198 * L_23 = V_3;
+		U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_t3161590498 * L_23 = V_3;
 		IntPtr_t L_24;
 		L_24.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 7));
 		Func_2_t1509682273 * L_25 = (Func_2_t1509682273 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));

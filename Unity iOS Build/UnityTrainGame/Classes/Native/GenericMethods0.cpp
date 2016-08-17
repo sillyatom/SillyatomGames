@@ -323,6 +323,12 @@ struct List_1_t3639992783;
 struct ICollection_t3761522009;
 // System.Collections.Generic.List`1<Newtonsoft.Json.Schema.JsonSchemaType>
 struct List_1_t3053966990;
+// System.Collections.IEnumerator
+struct IEnumerator_t287207039;
+// ExtMonoBehaviour
+struct ExtMonoBehaviour_t2624599193;
+// System.Action`1<System.Object>
+struct Action_1_t985559125;
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Object>
 struct ReadOnlyCollection_1_t4000251768;
 // System.Collections.ObjectModel.ReadOnlyCollection`1<System.Reflection.CustomAttributeNamedArgument>
@@ -375,8 +381,6 @@ struct StaticGetter_1_t171826611;
 struct EventDelegate_1_t3301404201;
 // EventManager
 struct EventManager_t1907836883;
-// System.Action`1<System.Object>
-struct Action_1_t985559125;
 // System.Collections.Generic.IEnumerable`1<System.Type>
 struct IEnumerable_1_t1356416995;
 // System.String
@@ -583,19 +587,19 @@ struct Comparison_1_t1934037370;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1497004953.h"
 #include "mscorlib_System_Reflection_MethodBase3461000640.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_MethodC121884815.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo2804674128.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo2804674128MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1024574132.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1024574132MethodDeclarations.h"
 #include "mscorlib_System_Reflection_ConstructorInfo3542137334.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_MethodC121884815MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect267368177.h"
 #include "mscorlib_System_Reflection_FieldInfo1164929782.h"
 #include "System_Core_System_Action_2_gen4105459918.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo3866362127.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo3866362127MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo2086262131.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo2086262131MethodDeclarations.h"
 #include "System_Core_System_Action_2_gen4105459918MethodDeclarations.h"
 #include "mscorlib_System_Reflection_PropertyInfo1490548369.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo3421337128.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo3421337128MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1641237132.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1641237132MethodDeclarations.h"
 #include "mscorlib_System_Reflection_MemberInfo2843033814.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect267368177MethodDeclarations.h"
@@ -628,18 +632,18 @@ struct Comparison_1_t1934037370;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec1402980234MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect767490589MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect767490589.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3699834850.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3699834850MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3099527157.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3099527157MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Creator566709293.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Creator566709293MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Miscel2000562298MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Miscel2000562298.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver2270763477.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1324973632.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1324973632MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3839840932.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3839840932MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver2270763477MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1024472196.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1024472196MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver4274106800.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver4274106800MethodDeclarations.h"
 #include "mscorlib_System_Object837106420MethodDeclarations.h"
 #include "mscorlib_System_Predicate_1_gen1408070318.h"
 #include "mscorlib_System_Predicate_1_gen1408070318MethodDeclarations.h"
@@ -1000,6 +1004,12 @@ struct Comparison_1_t1934037370;
 #include "mscorlib_System_Collections_Generic_List_1_Enumera4014815677MethodDeclarations.h"
 #include "AssemblyU2DCSharp_ExtensionMethods1227265683MethodDeclarations.h"
 #include "AssemblyU2DCSharp_ExtensionMethods1227265683.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour_U3CStartDelayWi3248688255.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour_U3CStartDelayWi3248688255MethodDeclarations.h"
+#include "mscorlib_System_Action_1_gen985559125.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour_U3CStartDelayWi2614425247.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour_U3CStartDelayWi2614425247MethodDeclarations.h"
 #include "mscorlib_System_Collections_ObjectModel_ReadOnlyCo4000251768.h"
 #include "mscorlib_System_Array_ArrayReadOnlyList_1_gen398457203.h"
 #include "mscorlib_System_Array_ArrayReadOnlyList_1_gen398457203MethodDeclarations.h"
@@ -1013,13 +1023,13 @@ struct Comparison_1_t1934037370;
 #include "mscorlib_System_Array_ArrayReadOnlyList_1_gen121766345MethodDeclarations.h"
 #include "mscorlib_System_Collections_ObjectModel_ReadOnlyCo3723560910MethodDeclarations.h"
 #include "System_Core_System_Func_1_gen1979887667.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1825127411.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1825127411MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBoun45027415.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBoun45027415MethodDeclarations.h"
 #include "System_Core_System_Func_1_gen1979887667MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1585807818.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1585807818MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo2030832817.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo2030832817MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo4100675118.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo4100675118MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBou250732821.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBou250732821MethodDeclarations.h"
 #include "mscorlib_System_ArgumentOutOfRangeException3479058991MethodDeclarations.h"
 #include "mscorlib_System_ArgumentOutOfRangeException3479058991.h"
 #include "mscorlib_System_Collections_Generic_Comparer_1_gen3302075123MethodDeclarations.h"
@@ -1072,8 +1082,8 @@ struct Comparison_1_t1934037370;
 #include "AssemblyU2DCSharp_EventManager_EventDelegate4004424223MethodDeclarations.h"
 #include "mscorlib_System_Delegate3660574010MethodDeclarations.h"
 #include "AssemblyU2DCSharp_EventManager_EventDelegate4004424223.h"
-#include "AssemblyU2DCSharp_EventManager_U3CAddListenerU3Ec_3552437124.h"
-#include "AssemblyU2DCSharp_EventManager_U3CAddListenerU3Ec_3552437124MethodDeclarations.h"
+#include "AssemblyU2DCSharp_EventManager_U3CAddListenerU3Ec_1772337128.h"
+#include "AssemblyU2DCSharp_EventManager_U3CAddListenerU3Ec_1772337128MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g2647676363.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g2647676363MethodDeclarations.h"
 #include "mscorlib_System_Delegate3660574010.h"
@@ -1082,8 +1092,10 @@ struct Comparison_1_t1934037370;
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g1822004642MethodDeclarations.h"
 #include "mscorlib_System_Random922188920.h"
 #include "mscorlib_System_Random922188920MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_MonoBehaviour3012272455MethodDeclarations.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Coroutine2246592261.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Aot_EnumerationE1512765731.h"
-#include "mscorlib_System_Action_1_gen985559125.h"
 #include "mscorlib_System_FormatException2404802957MethodDeclarations.h"
 #include "mscorlib_System_Reflection_MethodInfo3461221277.h"
 #include "mscorlib_System_FormatException2404802957.h"
@@ -2480,6 +2492,12 @@ extern "C"  Il2CppObject * ExtensionMethods_DeepClone_TisIl2CppObject_m801134232
 // System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<Newtonsoft.Json.Schema.JsonSchemaType>(System.Collections.Generic.IEnumerable`1<TSource>)
 extern "C"  List_1_t3053966990 * Enumerable_ToList_TisJsonSchemaType_t2257008021_m3950757796_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* ___source, const MethodInfo* method);
 #define Enumerable_ToList_TisJsonSchemaType_t2257008021_m3950757796(__this /* static, unused */, ___source, method) ((  List_1_t3053966990 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisJsonSchemaType_t2257008021_m3950757796_gshared)(__this /* static, unused */, ___source, method)
+// System.Collections.IEnumerator ExtMonoBehaviour::StartDelayWithArgs<System.Object,System.Object>(System.Single,System.Action`2<T,U>,T,U)
+extern "C"  Il2CppObject * ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_TisIl2CppObject_m4025739826_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_2_t4105459918 * ___callback, Il2CppObject * ___arg1, Il2CppObject * ___arg2, const MethodInfo* method);
+#define ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_TisIl2CppObject_m4025739826(__this, ___delay, ___callback, ___arg1, ___arg2, method) ((  Il2CppObject * (*) (ExtMonoBehaviour_t2624599193 *, float, Action_2_t4105459918 *, Il2CppObject *, Il2CppObject *, const MethodInfo*))ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_TisIl2CppObject_m4025739826_gshared)(__this, ___delay, ___callback, ___arg1, ___arg2, method)
+// System.Collections.IEnumerator ExtMonoBehaviour::StartDelayWithArgs<System.Object>(System.Single,System.Action`1<T>,T)
+extern "C"  Il2CppObject * ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_m2577880131_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_1_t985559125 * ___callback, Il2CppObject * ___arg, const MethodInfo* method);
+#define ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_m2577880131(__this, ___delay, ___callback, ___arg, method) ((  Il2CppObject * (*) (ExtMonoBehaviour_t2624599193 *, float, Action_1_t985559125 *, Il2CppObject *, const MethodInfo*))ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_m2577880131_gshared)(__this, ___delay, ___callback, ___arg, method)
 // System.Collections.ObjectModel.ReadOnlyCollection`1<T> System.Array::AsReadOnly<System.Object>(T[])
 extern "C"  ReadOnlyCollection_1_t4000251768 * Array_AsReadOnly_TisIl2CppObject_m3222156752_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t11523773* ___array, const MethodInfo* method);
 #define Array_AsReadOnly_TisIl2CppObject_m3222156752(__this /* static, unused */, ___array, method) ((  ReadOnlyCollection_1_t4000251768 * (*) (Il2CppObject * /* static, unused */, ObjectU5BU5D_t11523773*, const MethodInfo*))Array_AsReadOnly_TisIl2CppObject_m3222156752_gshared)(__this /* static, unused */, ___array, method)
@@ -2922,11 +2940,17 @@ extern "C"  Il2CppObject * MonoProperty_StaticGetterAdapterFrame_TisIl2CppObject
 extern "C"  void EventManager_AddListener_TisIl2CppObject_m2531195641_gshared (EventManager_t1907836883 * __this, EventDelegate_1_t3301404201 * ___del, const MethodInfo* method);
 #define EventManager_AddListener_TisIl2CppObject_m2531195641(__this, ___del, method) ((  void (*) (EventManager_t1907836883 *, EventDelegate_1_t3301404201 *, const MethodInfo*))EventManager_AddListener_TisIl2CppObject_m2531195641_gshared)(__this, ___del, method)
 // System.Void EventManager::RemoveListener<System.Object>(EventManager/EventDelegate`1<T>)
-extern "C"  void EventManager_RemoveListener_TisIl2CppObject_m724949750_gshared (EventManager_t1907836883 * __this, EventDelegate_1_t3301404201 * ___del, const MethodInfo* method);
-#define EventManager_RemoveListener_TisIl2CppObject_m724949750(__this, ___del, method) ((  void (*) (EventManager_t1907836883 *, EventDelegate_1_t3301404201 *, const MethodInfo*))EventManager_RemoveListener_TisIl2CppObject_m724949750_gshared)(__this, ___del, method)
+extern "C"  void EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared (EventManager_t1907836883 * __this, EventDelegate_1_t3301404201 * ___del, const MethodInfo* method);
+#define EventManager_RemoveListener_TisIl2CppObject_m844052978(__this, ___del, method) ((  void (*) (EventManager_t1907836883 *, EventDelegate_1_t3301404201 *, const MethodInfo*))EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared)(__this, ___del, method)
 // System.Void ExtensionMethods::Shuffle<System.Object>(System.Collections.Generic.IList`1<T>)
 extern "C"  void ExtensionMethods_Shuffle_TisIl2CppObject_m492938450_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* ___list, const MethodInfo* method);
 #define ExtensionMethods_Shuffle_TisIl2CppObject_m492938450(__this /* static, unused */, ___list, method) ((  void (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))ExtensionMethods_Shuffle_TisIl2CppObject_m492938450_gshared)(__this /* static, unused */, ___list, method)
+// System.Void ExtMonoBehaviour::DelayedCallWithArgs<System.Object,System.Object>(System.Single,System.Action`2<T,U>,T,U)
+extern "C"  void ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_TisIl2CppObject_m1864766621_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_2_t4105459918 * ___callback, Il2CppObject * ___arg1, Il2CppObject * ___arg2, const MethodInfo* method);
+#define ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_TisIl2CppObject_m1864766621(__this, ___delay, ___callback, ___arg1, ___arg2, method) ((  void (*) (ExtMonoBehaviour_t2624599193 *, float, Action_2_t4105459918 *, Il2CppObject *, Il2CppObject *, const MethodInfo*))ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_TisIl2CppObject_m1864766621_gshared)(__this, ___delay, ___callback, ___arg1, ___arg2, method)
+// System.Void ExtMonoBehaviour::DelayedCallWithArgs<System.Object>(System.Single,System.Action`1<T>,T)
+extern "C"  void ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_1_t985559125 * ___callback, Il2CppObject * ___arg, const MethodInfo* method);
+#define ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430(__this, ___delay, ___callback, ___arg, method) ((  void (*) (ExtMonoBehaviour_t2624599193 *, float, Action_1_t985559125 *, Il2CppObject *, const MethodInfo*))ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430_gshared)(__this, ___delay, ___callback, ___arg, method)
 // System.Void Newtonsoft.Json.Aot.EnumerationExtension::ForEach<System.Object>(System.Collections.Generic.IEnumerable`1<T>,System.Action`1<T>)
 extern "C"  void EnumerationExtension_ForEach_TisIl2CppObject_m1727404791_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* ___enumerable, Action_1_t985559125 * ___action, const MethodInfo* method);
 #define EnumerationExtension_ForEach_TisIl2CppObject_m1727404791(__this /* static, unused */, ___enumerable, ___action, method) ((  void (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Action_1_t985559125 *, const MethodInfo*))EnumerationExtension_ForEach_TisIl2CppObject_m1727404791_gshared)(__this /* static, unused */, ___enumerable, ___action, method)
@@ -4845,26 +4869,26 @@ extern "C"  MethodCall_2_t121884815 * LateBoundReflectionDelegateFactory_CreateM
 		il2cpp_codegen_initialize_method (LateBoundReflectionDelegateFactory_CreateMethodCall_TisIl2CppObject_m2955469920_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * V_0 = NULL;
+	U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * V_0 = NULL;
 	{
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_0 = (U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 *)L_0;
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_1 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_0 = (U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 *)L_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_1 = V_0;
 		MethodBase_t3461000640 * L_2 = ___method;
 		NullCheck(L_1);
 		L_1->set_method_1(L_2);
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_3 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_3 = V_0;
 		NullCheck(L_3);
 		MethodBase_t3461000640 * L_4 = (MethodBase_t3461000640 *)L_3->get_method_1();
 		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, (Il2CppObject *)L_4, (String_t*)_stringLiteral3217412321, /*hidden argument*/NULL);
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_5 = V_0;
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_6 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_5 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_6 = V_0;
 		NullCheck(L_6);
 		MethodBase_t3461000640 * L_7 = (MethodBase_t3461000640 *)L_6->get_method_1();
 		NullCheck(L_5);
 		L_5->set_c_0(((ConstructorInfo_t3542137334 *)IsInst(L_7, ConstructorInfo_t3542137334_il2cpp_TypeInfo_var)));
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_8 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_8 = V_0;
 		NullCheck(L_8);
 		ConstructorInfo_t3542137334 * L_9 = (ConstructorInfo_t3542137334 *)L_8->get_c_0();
 		if (!L_9)
@@ -4873,7 +4897,7 @@ extern "C"  MethodCall_2_t121884815 * LateBoundReflectionDelegateFactory_CreateM
 		}
 	}
 	{
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_10 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_10 = V_0;
 		IntPtr_t L_11;
 		L_11.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		MethodCall_2_t121884815 * L_12 = (MethodCall_2_t121884815 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -4883,7 +4907,7 @@ extern "C"  MethodCall_2_t121884815 * LateBoundReflectionDelegateFactory_CreateM
 
 IL_0046:
 	{
-		U3CCreateMethodCallU3Ec__AnonStorey20_1_t2804674128 * L_13 = V_0;
+		U3CCreateMethodCallU3Ec__AnonStorey24_1_t1024574132 * L_13 = V_0;
 		IntPtr_t L_14;
 		L_14.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 5));
 		MethodCall_2_t121884815 * L_15 = (MethodCall_2_t121884815 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -4904,20 +4928,20 @@ extern "C"  Action_2_t4105459918 * LateBoundReflectionDelegateFactory_CreateSet_
 		il2cpp_codegen_initialize_method (LateBoundReflectionDelegateFactory_CreateSet_TisIl2CppObject_m3380507076_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 * V_0 = NULL;
+	U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 * V_0 = NULL;
 	{
-		U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 * L_0 = (U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 *)L_0;
-		U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 * L_1 = V_0;
+		U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 * L_0 = (U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 *)L_0;
+		U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 * L_1 = V_0;
 		FieldInfo_t * L_2 = ___fieldInfo;
 		NullCheck(L_1);
 		L_1->set_fieldInfo_0(L_2);
-		U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 * L_3 = V_0;
+		U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 * L_3 = V_0;
 		NullCheck(L_3);
 		FieldInfo_t * L_4 = (FieldInfo_t *)L_3->get_fieldInfo_0();
 		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, (Il2CppObject *)L_4, (String_t*)_stringLiteral1264872648, /*hidden argument*/NULL);
-		U3CCreateSetU3Ec__AnonStorey24_1_t3866362127 * L_5 = V_0;
+		U3CCreateSetU3Ec__AnonStorey28_1_t2086262131 * L_5 = V_0;
 		IntPtr_t L_6;
 		L_6.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Action_2_t4105459918 * L_7 = (Action_2_t4105459918 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -4937,20 +4961,20 @@ extern "C"  Action_2_t4105459918 * LateBoundReflectionDelegateFactory_CreateSet_
 		il2cpp_codegen_initialize_method (LateBoundReflectionDelegateFactory_CreateSet_TisIl2CppObject_m3709492259_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 * V_0 = NULL;
+	U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 * V_0 = NULL;
 	{
-		U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 * L_0 = (U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 *)L_0;
-		U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 * L_1 = V_0;
+		U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 * L_0 = (U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 *)L_0;
+		U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 * L_1 = V_0;
 		PropertyInfo_t * L_2 = ___propertyInfo;
 		NullCheck(L_1);
 		L_1->set_propertyInfo_0(L_2);
-		U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 * L_3 = V_0;
+		U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 * L_3 = V_0;
 		NullCheck(L_3);
 		PropertyInfo_t * L_4 = (PropertyInfo_t *)L_3->get_propertyInfo_0();
 		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, (Il2CppObject *)L_4, (String_t*)_stringLiteral3430138915, /*hidden argument*/NULL);
-		U3CCreateSetU3Ec__AnonStorey25_1_t3421337128 * L_5 = V_0;
+		U3CCreateSetU3Ec__AnonStorey29_1_t1641237132 * L_5 = V_0;
 		IntPtr_t L_6;
 		L_6.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Action_2_t4105459918 * L_7 = (Action_2_t4105459918 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -6362,20 +6386,20 @@ IL_0059:
 // System.Boolean Newtonsoft.Json.Utilities.CollectionUtils::TryGetSingleItem<System.Object>(System.Collections.Generic.IList`1<T>,System.Boolean,T&)
 extern "C"  bool CollectionUtils_TryGetSingleItem_TisIl2CppObject_m2221712227_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* ___list, bool ___returnDefaultIfEmpty, Il2CppObject ** ___value, const MethodInfo* method)
 {
-	U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 * V_0 = NULL;
+	U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 * V_0 = NULL;
 	{
-		U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 * L_0 = (U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 *)L_0;
-		U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 * L_1 = V_0;
+		U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 * L_0 = (U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 *)L_0;
+		U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 * L_1 = V_0;
 		Il2CppObject* L_2 = ___list;
 		NullCheck(L_1);
 		L_1->set_list_0(L_2);
-		U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 * L_3 = V_0;
+		U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 * L_3 = V_0;
 		bool L_4 = ___returnDefaultIfEmpty;
 		NullCheck(L_3);
 		L_3->set_returnDefaultIfEmpty_1(L_4);
-		U3CTryGetSingleItemU3Ec__AnonStorey16_1_t3699834850 * L_5 = V_0;
+		U3CTryGetSingleItemU3Ec__AnonStorey1A_1_t3099527157 * L_5 = V_0;
 		IntPtr_t L_6;
 		L_6.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Creator_1_t566709293 * L_7 = (Creator_1_t566709293 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -6400,16 +6424,16 @@ extern "C"  bool CollectionUtils_TryGetSingleItem_TisIl2CppObject_m161282024_gsh
 // System.Boolean Newtonsoft.Json.Utilities.ConvertUtils::TryConvert<System.Object>(System.Object,System.Globalization.CultureInfo,T&)
 extern "C"  bool ConvertUtils_TryConvert_TisIl2CppObject_m4111699808_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * ___initialValue, CultureInfo_t3603717042 * ___culture, Il2CppObject ** ___convertedValue, const MethodInfo* method)
 {
-	U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 * V_0 = NULL;
+	U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 * V_0 = NULL;
 	{
-		U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 * L_0 = (U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 *)L_0;
-		U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 * L_1 = V_0;
+		U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 * L_0 = (U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 *)L_0;
+		U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 * L_1 = V_0;
 		Il2CppObject * L_2 = ___initialValue;
 		NullCheck(L_1);
 		L_1->set_initialValue_0(L_2);
-		U3CTryConvertU3Ec__AnonStorey1B_1_t1324973632 * L_3 = V_0;
+		U3CTryConvertU3Ec__AnonStorey1F_1_t3839840932 * L_3 = V_0;
 		IntPtr_t L_4;
 		L_4.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Creator_1_t566709293 * L_5 = (Creator_1_t566709293 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -6446,16 +6470,16 @@ extern "C"  bool ConvertUtils_TryConvert_TisIl2CppObject_m2484532690_gshared (Il
 // System.Boolean Newtonsoft.Json.Utilities.ConvertUtils::TryConvertOrCast<System.Object>(System.Object,System.Globalization.CultureInfo,T&)
 extern "C"  bool ConvertUtils_TryConvertOrCast_TisIl2CppObject_m58813058_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * ___initialValue, CultureInfo_t3603717042 * ___culture, Il2CppObject ** ___convertedValue, const MethodInfo* method)
 {
-	U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 * V_0 = NULL;
+	U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 * V_0 = NULL;
 	{
-		U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 * L_0 = (U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 *)L_0;
-		U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 * L_1 = V_0;
+		U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 * L_0 = (U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 *)L_0;
+		U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 * L_1 = V_0;
 		Il2CppObject * L_2 = ___initialValue;
 		NullCheck(L_1);
 		L_1->set_initialValue_0(L_2);
-		U3CTryConvertOrCastU3Ec__AnonStorey1D_1_t1024472196 * L_3 = V_0;
+		U3CTryConvertOrCastU3Ec__AnonStorey21_1_t4274106800 * L_3 = V_0;
 		IntPtr_t L_4;
 		L_4.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Creator_1_t566709293 * L_5 = (Creator_1_t566709293 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -20185,6 +20209,88 @@ extern "C"  List_1_t1634065389 * Enumerable_ToList_TisIl2CppObject_m1075343207_g
 		return L_2;
 	}
 }
+// System.Collections.IEnumerator ExtMonoBehaviour::StartDelayWithArgs<System.Object,System.Object>(System.Single,System.Action`2<T,U>,T,U)
+// System.Collections.IEnumerator ExtMonoBehaviour::StartDelayWithArgs<System.Object,System.Object>(System.Single,System.Action`2<T,U>,T,U)
+extern "C"  Il2CppObject * ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_TisIl2CppObject_m4025739826_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_2_t4105459918 * ___callback, Il2CppObject * ___arg1, Il2CppObject * ___arg2, const MethodInfo* method)
+{
+	U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * V_0 = NULL;
+	{
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_0 = (U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 *)L_0;
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_1 = V_0;
+		float L_2 = ___delay;
+		NullCheck(L_1);
+		L_1->set_delay_0(L_2);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_3 = V_0;
+		Action_2_t4105459918 * L_4 = ___callback;
+		NullCheck(L_3);
+		L_3->set_callback_1(L_4);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_5 = V_0;
+		Il2CppObject * L_6 = ___arg1;
+		NullCheck(L_5);
+		L_5->set_arg1_2(L_6);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_7 = V_0;
+		Il2CppObject * L_8 = ___arg2;
+		NullCheck(L_7);
+		L_7->set_arg2_3(L_8);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_9 = V_0;
+		float L_10 = ___delay;
+		NullCheck(L_9);
+		L_9->set_U3CU24U3Edelay_6(L_10);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_11 = V_0;
+		Action_2_t4105459918 * L_12 = ___callback;
+		NullCheck(L_11);
+		L_11->set_U3CU24U3Ecallback_7(L_12);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_13 = V_0;
+		Il2CppObject * L_14 = ___arg1;
+		NullCheck(L_13);
+		L_13->set_U3CU24U3Earg1_8(L_14);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_15 = V_0;
+		Il2CppObject * L_16 = ___arg2;
+		NullCheck(L_15);
+		L_15->set_U3CU24U3Earg2_9(L_16);
+		U3CStartDelayWithArgsU3Ec__Iterator9_2_t3248688255 * L_17 = V_0;
+		return L_17;
+	}
+}
+// System.Collections.IEnumerator ExtMonoBehaviour::StartDelayWithArgs<System.Object>(System.Single,System.Action`1<T>,T)
+// System.Collections.IEnumerator ExtMonoBehaviour::StartDelayWithArgs<System.Object>(System.Single,System.Action`1<T>,T)
+extern "C"  Il2CppObject * ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_m2577880131_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_1_t985559125 * ___callback, Il2CppObject * ___arg, const MethodInfo* method)
+{
+	U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * V_0 = NULL;
+	{
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_0 = (U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 *)L_0;
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_1 = V_0;
+		float L_2 = ___delay;
+		NullCheck(L_1);
+		L_1->set_delay_0(L_2);
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_3 = V_0;
+		Action_1_t985559125 * L_4 = ___callback;
+		NullCheck(L_3);
+		L_3->set_callback_1(L_4);
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_5 = V_0;
+		Il2CppObject * L_6 = ___arg;
+		NullCheck(L_5);
+		L_5->set_arg_2(L_6);
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_7 = V_0;
+		float L_8 = ___delay;
+		NullCheck(L_7);
+		L_7->set_U3CU24U3Edelay_5(L_8);
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_9 = V_0;
+		Action_1_t985559125 * L_10 = ___callback;
+		NullCheck(L_9);
+		L_9->set_U3CU24U3Ecallback_6(L_10);
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_11 = V_0;
+		Il2CppObject * L_12 = ___arg;
+		NullCheck(L_11);
+		L_11->set_U3CU24U3Earg_7(L_12);
+		U3CStartDelayWithArgsU3Ec__Iterator8_1_t2614425247 * L_13 = V_0;
+		return L_13;
+	}
+}
 // System.Collections.ObjectModel.ReadOnlyCollection`1<T> System.Array::AsReadOnly<System.Object>(T[])
 // System.Collections.ObjectModel.ReadOnlyCollection`1<T> System.Array::AsReadOnly<System.Object>(T[])
 extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
@@ -20305,20 +20411,20 @@ extern "C"  Func_1_t1979887667 * LateBoundReflectionDelegateFactory_CreateDefaul
 		il2cpp_codegen_initialize_method (LateBoundReflectionDelegateFactory_CreateDefaultConstructor_TisIl2CppObject_m1598864383_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * V_0 = NULL;
+	U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * V_0 = NULL;
 	{
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_0 = (U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 *)L_0;
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_1 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_0 = (U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 *)L_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_1 = V_0;
 		Type_t * L_2 = ___type;
 		NullCheck(L_1);
 		L_1->set_type_0(L_2);
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_3 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_3 = V_0;
 		NullCheck(L_3);
 		Type_t * L_4 = (Type_t *)L_3->get_type_0();
 		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, (Il2CppObject *)L_4, (String_t*)_stringLiteral3575610, /*hidden argument*/NULL);
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_5 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_5 = V_0;
 		NullCheck(L_5);
 		Type_t * L_6 = (Type_t *)L_5->get_type_0();
 		NullCheck((Type_t *)L_6);
@@ -20329,7 +20435,7 @@ extern "C"  Func_1_t1979887667 * LateBoundReflectionDelegateFactory_CreateDefaul
 		}
 	}
 	{
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_8 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_8 = V_0;
 		IntPtr_t L_9;
 		L_9.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_1_t1979887667 * L_10 = (Func_1_t1979887667 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -20339,14 +20445,14 @@ extern "C"  Func_1_t1979887667 * LateBoundReflectionDelegateFactory_CreateDefaul
 
 IL_003a:
 	{
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_11 = V_0;
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_12 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_11 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_12 = V_0;
 		NullCheck(L_12);
 		Type_t * L_13 = (Type_t *)L_12->get_type_0();
 		ConstructorInfo_t3542137334 * L_14 = ReflectionUtils_GetDefaultConstructor_m1495828862(NULL /*static, unused*/, (Type_t *)L_13, (bool)1, /*hidden argument*/NULL);
 		NullCheck(L_11);
 		L_11->set_constructorInfo_1(L_14);
-		U3CCreateDefaultConstructorU3Ec__AnonStorey21_1_t1825127411 * L_15 = V_0;
+		U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_t45027415 * L_15 = V_0;
 		IntPtr_t L_16;
 		L_16.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 5));
 		Func_1_t1979887667 * L_17 = (Func_1_t1979887667 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -20367,20 +20473,20 @@ extern "C"  Func_2_t2135783352 * LateBoundReflectionDelegateFactory_CreateGet_Ti
 		il2cpp_codegen_initialize_method (LateBoundReflectionDelegateFactory_CreateGet_TisIl2CppObject_m3476688234_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 * V_0 = NULL;
+	U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 * V_0 = NULL;
 	{
-		U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 * L_0 = (U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 *)L_0;
-		U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 * L_1 = V_0;
+		U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 * L_0 = (U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 *)L_0;
+		U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 * L_1 = V_0;
 		FieldInfo_t * L_2 = ___fieldInfo;
 		NullCheck(L_1);
 		L_1->set_fieldInfo_0(L_2);
-		U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 * L_3 = V_0;
+		U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 * L_3 = V_0;
 		NullCheck(L_3);
 		FieldInfo_t * L_4 = (FieldInfo_t *)L_3->get_fieldInfo_0();
 		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, (Il2CppObject *)L_4, (String_t*)_stringLiteral1264872648, /*hidden argument*/NULL);
-		U3CCreateGetU3Ec__AnonStorey23_1_t1585807818 * L_5 = V_0;
+		U3CCreateGetU3Ec__AnonStorey27_1_t4100675118 * L_5 = V_0;
 		IntPtr_t L_6;
 		L_6.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_2_t2135783352 * L_7 = (Func_2_t2135783352 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -20400,20 +20506,20 @@ extern "C"  Func_2_t2135783352 * LateBoundReflectionDelegateFactory_CreateGet_Ti
 		il2cpp_codegen_initialize_method (LateBoundReflectionDelegateFactory_CreateGet_TisIl2CppObject_m4216509_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 * V_0 = NULL;
+	U3CCreateGetU3Ec__AnonStorey26_1_t250732821 * V_0 = NULL;
 	{
-		U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 * L_0 = (U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_0 = (U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 *)L_0;
-		U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 * L_1 = V_0;
+		U3CCreateGetU3Ec__AnonStorey26_1_t250732821 * L_0 = (U3CCreateGetU3Ec__AnonStorey26_1_t250732821 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CCreateGetU3Ec__AnonStorey26_1_t250732821 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (U3CCreateGetU3Ec__AnonStorey26_1_t250732821 *)L_0;
+		U3CCreateGetU3Ec__AnonStorey26_1_t250732821 * L_1 = V_0;
 		PropertyInfo_t * L_2 = ___propertyInfo;
 		NullCheck(L_1);
 		L_1->set_propertyInfo_0(L_2);
-		U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 * L_3 = V_0;
+		U3CCreateGetU3Ec__AnonStorey26_1_t250732821 * L_3 = V_0;
 		NullCheck(L_3);
 		PropertyInfo_t * L_4 = (PropertyInfo_t *)L_3->get_propertyInfo_0();
 		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, (Il2CppObject *)L_4, (String_t*)_stringLiteral3430138915, /*hidden argument*/NULL);
-		U3CCreateGetU3Ec__AnonStorey22_1_t2030832817 * L_5 = V_0;
+		U3CCreateGetU3Ec__AnonStorey26_1_t250732821 * L_5 = V_0;
 		IntPtr_t L_6;
 		L_6.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		Func_2_t2135783352 * L_7 = (Func_2_t2135783352 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 3));
@@ -33781,17 +33887,17 @@ extern "C"  void EventManager_AddListener_TisIl2CppObject_m2531195641_gshared (E
 	}
 	EventDelegate_t4004424223 * V_0 = NULL;
 	EventDelegate_t4004424223 * V_1 = NULL;
-	U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 * V_2 = NULL;
+	U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 * V_2 = NULL;
 	{
-		U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 * L_0 = (U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
-		((  void (*) (U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		V_2 = (U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 *)L_0;
-		U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 * L_1 = V_2;
+		U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 * L_0 = (U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(method->rgctx_data, 0));
+		((  void (*) (U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->method)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_2 = (U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 *)L_0;
+		U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 * L_1 = V_2;
 		EventDelegate_1_t3301404201 * L_2 = ___del;
 		NullCheck(L_1);
 		L_1->set_del_0(L_2);
 		Dictionary_2_t2647676363 * L_3 = (Dictionary_2_t2647676363 *)__this->get_delegateLookup_2();
-		U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 * L_4 = V_2;
+		U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 * L_4 = V_2;
 		NullCheck(L_4);
 		EventDelegate_1_t3301404201 * L_5 = (EventDelegate_1_t3301404201 *)L_4->get_del_0();
 		NullCheck((Dictionary_2_t2647676363 *)L_3);
@@ -33807,14 +33913,14 @@ extern "C"  void EventManager_AddListener_TisIl2CppObject_m2531195641_gshared (E
 
 IL_0024:
 	{
-		U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 * L_7 = V_2;
+		U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 * L_7 = V_2;
 		IntPtr_t L_8;
 		L_8.set_m_value_0((void*)IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		EventDelegate_t4004424223 * L_9 = (EventDelegate_t4004424223 *)il2cpp_codegen_object_new(EventDelegate_t4004424223_il2cpp_TypeInfo_var);
 		EventDelegate__ctor_m4124179978(L_9, (Il2CppObject *)L_7, (IntPtr_t)L_8, /*hidden argument*/NULL);
 		V_0 = (EventDelegate_t4004424223 *)L_9;
 		Dictionary_2_t2647676363 * L_10 = (Dictionary_2_t2647676363 *)__this->get_delegateLookup_2();
-		U3CAddListenerU3Ec__AnonStorey2B_1_t3552437124 * L_11 = V_2;
+		U3CAddListenerU3Ec__AnonStorey2F_1_t1772337128 * L_11 = V_2;
 		NullCheck(L_11);
 		EventDelegate_1_t3301404201 * L_12 = (EventDelegate_1_t3301404201 *)L_11->get_del_0();
 		EventDelegate_t4004424223 * L_13 = V_0;
@@ -33863,13 +33969,13 @@ IL_009d:
 // System.Void EventManager::RemoveListener<System.Object>(EventManager/EventDelegate`1<T>)
 extern TypeInfo* Type_t_il2cpp_TypeInfo_var;
 extern TypeInfo* EventDelegate_t4004424223_il2cpp_TypeInfo_var;
-extern const uint32_t EventManager_RemoveListener_TisIl2CppObject_m724949750_MetadataUsageId;
-extern "C"  void EventManager_RemoveListener_TisIl2CppObject_m724949750_gshared (EventManager_t1907836883 * __this, EventDelegate_1_t3301404201 * ___del, const MethodInfo* method)
+extern const uint32_t EventManager_RemoveListener_TisIl2CppObject_m844052978_MetadataUsageId;
+extern "C"  void EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared (EventManager_t1907836883 * __this, EventDelegate_1_t3301404201 * ___del, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (EventManager_RemoveListener_TisIl2CppObject_m724949750_MetadataUsageId);
+		il2cpp_codegen_initialize_method (EventManager_RemoveListener_TisIl2CppObject_m844052978_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	EventDelegate_t4004424223 * V_0 = NULL;
@@ -34001,6 +34107,37 @@ IL_003d:
 		}
 	}
 	{
+		return;
+	}
+}
+// System.Void ExtMonoBehaviour::DelayedCallWithArgs<System.Object,System.Object>(System.Single,System.Action`2<T,U>,T,U)
+// System.Void ExtMonoBehaviour::DelayedCallWithArgs<System.Object,System.Object>(System.Single,System.Action`2<T,U>,T,U)
+extern "C"  void ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_TisIl2CppObject_m1864766621_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_2_t4105459918 * ___callback, Il2CppObject * ___arg1, Il2CppObject * ___arg2, const MethodInfo* method)
+{
+	{
+		float L_0 = ___delay;
+		Action_2_t4105459918 * L_1 = ___callback;
+		Il2CppObject * L_2 = ___arg1;
+		Il2CppObject * L_3 = ___arg2;
+		NullCheck((ExtMonoBehaviour_t2624599193 *)__this);
+		Il2CppObject * L_4 = ((  Il2CppObject * (*) (ExtMonoBehaviour_t2624599193 *, float, Action_2_t4105459918 *, Il2CppObject *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->method)((ExtMonoBehaviour_t2624599193 *)__this, (float)L_0, (Action_2_t4105459918 *)L_1, (Il2CppObject *)L_2, (Il2CppObject *)L_3, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		NullCheck((MonoBehaviour_t3012272455 *)__this);
+		MonoBehaviour_StartCoroutine_m2135303124((MonoBehaviour_t3012272455 *)__this, (Il2CppObject *)L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void ExtMonoBehaviour::DelayedCallWithArgs<System.Object>(System.Single,System.Action`1<T>,T)
+// System.Void ExtMonoBehaviour::DelayedCallWithArgs<System.Object>(System.Single,System.Action`1<T>,T)
+extern "C"  void ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430_gshared (ExtMonoBehaviour_t2624599193 * __this, float ___delay, Action_1_t985559125 * ___callback, Il2CppObject * ___arg, const MethodInfo* method)
+{
+	{
+		float L_0 = ___delay;
+		Action_1_t985559125 * L_1 = ___callback;
+		Il2CppObject * L_2 = ___arg;
+		NullCheck((ExtMonoBehaviour_t2624599193 *)__this);
+		Il2CppObject * L_3 = ((  Il2CppObject * (*) (ExtMonoBehaviour_t2624599193 *, float, Action_1_t985559125 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->method)((ExtMonoBehaviour_t2624599193 *)__this, (float)L_0, (Action_1_t985559125 *)L_1, (Il2CppObject *)L_2, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		NullCheck((MonoBehaviour_t3012272455 *)__this);
+		MonoBehaviour_StartCoroutine_m2135303124((MonoBehaviour_t3012272455 *)__this, (Il2CppObject *)L_3, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -58189,7 +58326,3 @@ IL_0028:
 // System.Void System.Array::SetGenericValueImpl<System.Reflection.CustomAttributeTypedArgument>(System.Int32,T&)
 // System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.ILGenerator/LabelData>(System.Int32,T&)
 // System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.ILGenerator/LabelFixup>(System.Int32,T&)
-// System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.ILTokenInfo>(System.Int32,T&)
-// System.Void System.Array::SetGenericValueImpl<System.Reflection.Emit.MonoResource>(System.Int32,T&)
-// System.Void System.Array::SetGenericValueImpl<System.Reflection.ParameterModifier>(System.Int32,T&)
-// System.Void System.Array::SetGenericValueImpl<System.Resources.ResourceReader/ResourceCacheItem>(System.Int32,T&)

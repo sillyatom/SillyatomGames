@@ -40,3 +40,7 @@ extern "C"  void RoundResultVO_set_didPullOver_m1798136759 (RoundResultVO_t25945
 extern "C"  Dictionary_2_t3403145775 * RoundResultVO_get_winningCards_m3857848247 (RoundResultVO_t2594510628 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundResultVO::set_winningCards(System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>)
 extern "C"  void RoundResultVO_set_winningCards_m1959232980 (RoundResultVO_t2594510628 * __this, Dictionary_2_t3403145775 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 RoundResultVO::get_cardsCount()
+extern "C"  int32_t RoundResultVO_get_cardsCount_m479974756 (RoundResultVO_t2594510628 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void RoundResultVO::set_cardsCount(System.Int32)
+extern "C"  void RoundResultVO_set_cardsCount_m2969799671 (RoundResultVO_t2594510628 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

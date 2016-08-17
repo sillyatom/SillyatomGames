@@ -13,6 +13,12 @@ public class Card : ButtonComponent
     public Image Front;
     public Image Back;
 
+    public void SetGrayEffect(float amount)
+    {
+        Front.material.SetFloat("_EffectAmount", amount); 
+        Back.material.SetFloat("_EffectAmount", amount);
+    }
+
     public void UpdateCard(string value, string type)
     {
         this.Value = value;
@@ -24,7 +30,11 @@ public class Card : ButtonComponent
     private void UpdateSkin()
     {
         Front.sprite = Resources.Load<Sprite>("Images/Cards/" + this.ValueType);    
-        Back.sprite = Resources.Load<Sprite>("Images/Cards/Back");    
+        Back.sprite = Resources.Load<Sprite>("Images/Cards/Back");
+
+        Front.material = Instantiate<Material>(Resources.Load<Material>("Materials/GrayMaterial"));
+        Back.material = Instantiate<Material>(Resources.Load<Material>("Materials/GrayMaterial"));
+        SetGrayEffect(0);
     }
 
     public void ShowFrontFace()

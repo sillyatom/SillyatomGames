@@ -51,7 +51,7 @@ public class MatchSelectionScreen : SceneMonoBehaviour
             game.network = SingletonManager.reference.network;
 
             #if UNITY_EDITOR
-            MoveToScene(TagConstants.TAG_MAIN_GAME, true);
+            MoveToScene(TagConstants.TAG_MAIN_GAME);
             #else
             findMatches();
             #endif
@@ -76,13 +76,15 @@ public class MatchSelectionScreen : SceneMonoBehaviour
 
             game.network = SingletonManager.reference.network;
 
-            MoveToScene(TagConstants.TAG_MAIN_GAME, true);
+            MoveToScene(TagConstants.TAG_MAIN_GAME);
         }
         btn.enabled = false;
     }
 
     override protected void OnGameEvent(GameEvent gEvent)
     {
+        BridgeDebugger.Log("[ MatchSelectionScreen OnGameEvent type ] " + gEvent.type);
+
         if (gEvent.type == GameEvent.DETERMINING_HOST)
         {
             SingletonManager.reference.popupManager.CreateGenericPopup("Host Selection", "Determining Host...");
@@ -90,7 +92,7 @@ public class MatchSelectionScreen : SceneMonoBehaviour
         else if (gEvent.type == GameEvent.MATCH_STARTED)
         {
             SingletonManager.reference.popupManager.RemoveActivePopup();
-            MoveToScene(TagConstants.TAG_MAIN_GAME, true);
+            MoveToScene(TagConstants.TAG_MAIN_GAME);
         }
     }
 }

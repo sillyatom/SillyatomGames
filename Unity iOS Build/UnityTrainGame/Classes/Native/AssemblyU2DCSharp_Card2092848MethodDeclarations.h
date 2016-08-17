@@ -37,6 +37,8 @@ extern "C"  void Card_set_Type_m3950350162 (Card_t2092848 * __this, String_t* __
 extern "C"  String_t* Card_get_ValueType_m2362782312 (Card_t2092848 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Card::set_ValueType(System.String)
 extern "C"  void Card_set_ValueType_m3781852331 (Card_t2092848 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Card::SetGrayEffect(System.Single)
+extern "C"  void Card_SetGrayEffect_m2033095468 (Card_t2092848 * __this, float ___amount, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Card::UpdateCard(System.String,System.String)
 extern "C"  void Card_UpdateCard_m75797196 (Card_t2092848 * __this, String_t* ___value, String_t* ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Card::UpdateSkin()

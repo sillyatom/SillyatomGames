@@ -110,6 +110,54 @@ public class Networking : ExtMonoBehaviour
         return null;
     }
 
+    public NetworkPlayer GetPlayerByIdExcludeList(string id)
+    {
+        foreach (var player in PlayersExcludingThis)
+        {
+            if (player.PlayerId == id)
+            {
+                return player;
+            }
+        }
+        return null;
+    }
+
+    public void RemovePlayer(string playerId)
+    {
+        {
+            NetworkPlayer player = GetPlayerById(playerId);
+            _players.Remove(player);
+        }
+        {
+            NetworkPlayer player = GetPlayerByIdExcludeList(playerId);
+            _playersExcludingThis.Remove(player);
+        }
+        {
+            string itemToRemove = null;
+            foreach (var item in PlayersIds)
+            {
+                if (string.Equals(item, playerId))
+                {
+                    itemToRemove = item;
+                    break;
+                }
+            }
+            _playersIds.Remove(itemToRemove);
+        }
+        {
+            string itemToRemove = null;
+            foreach (var item in _playersIdsExcludingThis)
+            {
+                if (string.Equals(item, playerId))
+                {
+                    itemToRemove = item;
+                    break;
+                }
+            }
+            _playersIdsExcludingThis.Remove(itemToRemove);
+        }
+    }
+
     public override void Init()
     {
         base.Init();
@@ -119,6 +167,7 @@ public class Networking : ExtMonoBehaviour
         hostId = "";
         localId = "";
         IsSinglePlayerMode = false;
+        AddListeners();
     }
 
     public void OnSinglePlayerMode()
@@ -327,6 +376,12 @@ public class Networking : ExtMonoBehaviour
                 break;
             case NetworkConstants.API.NEXT_ROUND:
                 {
+                    RoundVO vo = JsonConvert.DeserializeObject<RoundVO>(response.data);
+                    if (vo.cardsCount == 0)
+                    {
+                        RemovePlayer(vo.player_id);
+                        EventManager.instance.Raise(new InGameEvent(InGameEvent.REMOVE_PLAYER, vo.player_id));
+                    }
                     GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
                     EventManager.instance.Raise(gEvent);
                     Acknowledge(response, isIdHost(response.sender));
@@ -349,7 +404,7 @@ public class Networking : ExtMonoBehaviour
         }
 
         _results.RemoveAt(0);
-        Utility.DelayedCall(gameObject, gameObject, "OnAcknowledge", 1.0f, 0.0f);
+        DelayedCall(1.0f, OnAcknowledge);
     }
 
     private void OnAcknowledge()

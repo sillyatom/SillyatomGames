@@ -20,6 +20,8 @@ struct Networking_t1515242260;
 struct APIHandler_t2277647344;
 // PopupManager
 struct PopupManager_t2711269761;
+// SceneTransitionManager
+struct SceneTransitionManager_t1210711436;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -43,6 +45,8 @@ public:
 	APIHandler_t2277647344 * ___apiHandler_5;
 	// PopupManager GameObjectRef::popupManager
 	PopupManager_t2711269761 * ___popupManager_6;
+	// SceneTransitionManager GameObjectRef::sceneTransitionManager
+	SceneTransitionManager_t1210711436 * ___sceneTransitionManager_7;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -88,6 +92,15 @@ public:
 	{
 		___popupManager_6 = value;
 		Il2CppCodeGenWriteBarrier(&___popupManager_6, value);
+	}
+
+	inline static int32_t get_offset_of_sceneTransitionManager_7() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___sceneTransitionManager_7)); }
+	inline SceneTransitionManager_t1210711436 * get_sceneTransitionManager_7() const { return ___sceneTransitionManager_7; }
+	inline SceneTransitionManager_t1210711436 ** get_address_of_sceneTransitionManager_7() { return &___sceneTransitionManager_7; }
+	inline void set_sceneTransitionManager_7(SceneTransitionManager_t1210711436 * value)
+	{
+		___sceneTransitionManager_7 = value;
+		Il2CppCodeGenWriteBarrier(&___sceneTransitionManager_7, value);
 	}
 };
 

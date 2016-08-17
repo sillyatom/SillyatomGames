@@ -9537,7 +9537,6 @@ extern "C" void InvokableCallList__ctor_m2413334847 ();
 extern "C" void InvokableCallList_AddPersistentInvokableCall_m4220625340 ();
 extern "C" void InvokableCallList_AddListener_m1356872764 ();
 extern "C" void InvokableCallList_RemoveListener_m855004700 ();
-extern "C" void InvokableCallList_Clear_m4114435434 ();
 extern "C" void InvokableCallList_ClearPersistent_m1690187553 ();
 extern "C" void InvokableCallList_Invoke_m575840373 ();
 extern "C" void PersistentCall__ctor_m3363339247 ();
@@ -9569,7 +9568,6 @@ extern "C" void UnityEventBase_DirtyPersistentCalls_m1636785090 ();
 extern "C" void UnityEventBase_RebuildPersistentCallsIfNeeded_m4147202091 ();
 extern "C" void UnityEventBase_AddCall_m1246572149 ();
 extern "C" void UnityEventBase_RemoveListener_m276725997 ();
-extern "C" void UnityEventBase_RemoveAllListeners_m2083644536 ();
 extern "C" void UnityEventBase_Invoke_m3681078084 ();
 extern "C" void UnityEventBase_ToString_m249191135 ();
 extern "C" void UnityEventBase_GetValidMethodInfo_m2325301202 ();
@@ -13738,6 +13736,7 @@ extern "C" void Card_get_Type_m480613471 ();
 extern "C" void Card_set_Type_m3950350162 ();
 extern "C" void Card_get_ValueType_m2362782312 ();
 extern "C" void Card_set_ValueType_m3781852331 ();
+extern "C" void Card_SetGrayEffect_m2033095468 ();
 extern "C" void Card_UpdateCard_m75797196 ();
 extern "C" void Card_UpdateSkin_m3256011999 ();
 extern "C" void Card_ShowFrontFace_m3400762866 ();
@@ -13756,6 +13755,7 @@ extern "C" void Dealer_get_Cards_m624206455 ();
 extern "C" void Dealer_set_Cards_m320147516 ();
 extern "C" void Dealer_Init_m425946002 ();
 extern "C" void Dealer_GetDeckSize_m1851388114 ();
+extern "C" void Dealer_SetGrayEffect_m507993717 ();
 extern "C" void Dealer_PopBack_m1962333771 ();
 extern "C" void Dealer_RemoveCardByValueType_m2372030607 ();
 extern "C" void Dealer_ShuffleCards_m452971244 ();
@@ -13807,8 +13807,21 @@ extern "C" void ExecutionOrderManager__ctor_m3664436148 ();
 extern "C" void ExecutionOrderManager_Init_m4122699490 ();
 extern "C" void ExtensionMethods__cctor_m390673221 ();
 extern "C" void ExtMonoBehaviour__ctor_m885263906 ();
+extern "C" void ExtMonoBehaviour_get_isInitialized_m952256653 ();
 extern "C" void ExtMonoBehaviour_Init_m949924850 ();
+extern "C" void ExtMonoBehaviour_AddListeners_m2272350464 ();
+extern "C" void ExtMonoBehaviour_RemoveListeners_m1741366235 ();
+extern "C" void ExtMonoBehaviour_DelayedCall_m1718849090 ();
+extern "C" void ExtMonoBehaviour_StartDelay_m1484571095 ();
 extern "C" void ExtMonoBehaviour_OnGameEvent_m1534583617 ();
+extern "C" void ExtMonoBehaviour_OnMoveOutOfView_m4152219546 ();
+extern "C" void ExtMonoBehaviour_OnSetToView_m2578106083 ();
+extern "C" void U3CStartDelayU3Ec__Iterator7__ctor_m1190923598 ();
+extern "C" void U3CStartDelayU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m426610948 ();
+extern "C" void U3CStartDelayU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m3444186264 ();
+extern "C" void U3CStartDelayU3Ec__Iterator7_MoveNext_m1719457510 ();
+extern "C" void U3CStartDelayU3Ec__Iterator7_Dispose_m1914560011 ();
+extern "C" void U3CStartDelayU3Ec__Iterator7_Reset_m3132323835 ();
 extern "C" void GameCenterAuthVO__ctor_m3296291667 ();
 extern "C" void GameConstants__ctor_m2970825902 ();
 extern "C" void GameConstants__cctor_m1419193535 ();
@@ -13860,12 +13873,12 @@ extern "C" void InGameInfoText__ctor_m801941993 ();
 extern "C" void InGameInfoText_Hide_m1606563581 ();
 extern "C" void InGameInfoText_ShowMessage_m3546954056 ();
 extern "C" void InGameInfoText_RemoveMessage_m70429915 ();
-extern "C" void U3CRemoveMessageU3Ec__IteratorA__ctor_m1283240337 ();
-extern "C" void U3CRemoveMessageU3Ec__IteratorA_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m664048299 ();
-extern "C" void U3CRemoveMessageU3Ec__IteratorA_System_Collections_IEnumerator_get_Current_m3604958271 ();
-extern "C" void U3CRemoveMessageU3Ec__IteratorA_MoveNext_m2737548715 ();
-extern "C" void U3CRemoveMessageU3Ec__IteratorA_Dispose_m436632974 ();
-extern "C" void U3CRemoveMessageU3Ec__IteratorA_Reset_m3224640574 ();
+extern "C" void U3CRemoveMessageU3Ec__IteratorE__ctor_m497186317 ();
+extern "C" void U3CRemoveMessageU3Ec__IteratorE_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4124222383 ();
+extern "C" void U3CRemoveMessageU3Ec__IteratorE_System_Collections_IEnumerator_get_Current_m2898781507 ();
+extern "C" void U3CRemoveMessageU3Ec__IteratorE_MoveNext_m1563936687 ();
+extern "C" void U3CRemoveMessageU3Ec__IteratorE_Dispose_m952963850 ();
+extern "C" void U3CRemoveMessageU3Ec__IteratorE_Reset_m2438586554 ();
 extern "C" void InitCardsDataVO__ctor_m928158293 ();
 extern "C" void InitCardsDataVO_get_cards_data_m2867116220 ();
 extern "C" void InitCardsDataVO_set_cards_data_m3700077615 ();
@@ -13896,14 +13909,15 @@ extern "C" void MainScreen__ctor_m1707852438 ();
 extern "C" void MainScreen_Init_m3193217278 ();
 extern "C" void MainScreen_AuthGC_m3239920690 ();
 extern "C" void MainScreen_StartSignInProcess_m1885858753 ();
+extern "C" void MainScreen_OnGameEvent_m3786029133 ();
 extern "C" void MainScreen_OnInGameEvent_m349397207 ();
 extern "C" void MainScreen_OnPlay_m3220741537 ();
-extern "C" void U3CStartSignInProcessU3Ec__Iterator8__ctor_m127237059 ();
-extern "C" void U3CStartSignInProcessU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4031644399 ();
-extern "C" void U3CStartSignInProcessU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m3865691267 ();
-extern "C" void U3CStartSignInProcessU3Ec__Iterator8_MoveNext_m1441437009 ();
-extern "C" void U3CStartSignInProcessU3Ec__Iterator8_Dispose_m1914012480 ();
-extern "C" void U3CStartSignInProcessU3Ec__Iterator8_Reset_m2068637296 ();
+extern "C" void U3CStartSignInProcessU3Ec__IteratorB__ctor_m2457069305 ();
+extern "C" void U3CStartSignInProcessU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1944661369 ();
+extern "C" void U3CStartSignInProcessU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m2100249357 ();
+extern "C" void U3CStartSignInProcessU3Ec__IteratorB_MoveNext_m2802374235 ();
+extern "C" void U3CStartSignInProcessU3Ec__IteratorB_Dispose_m3204839670 ();
+extern "C" void U3CStartSignInProcessU3Ec__IteratorB_Reset_m103502246 ();
 extern "C" void MatchSelectionScreen__ctor_m2494922568 ();
 extern "C" void MatchSelectionScreen_findMatches_m3505743744 ();
 extern "C" void MatchSelectionScreen_Init_m2110227980 ();
@@ -13915,7 +13929,6 @@ extern "C" void MatchSelectionScreen_U3CInitU3Em__4F_m1738531539 ();
 extern "C" void MatchStartedVO__ctor_m622607718 ();
 extern "C" void MultiplayerMainGame__ctor_m3970443366 ();
 extern "C" void MultiplayerMainGame_GetDPPath_m1101217716 ();
-extern "C" void MultiplayerMainGame_get_GetLocalPlayer_m1775319809 ();
 extern "C" void MultiplayerMainGame_Init_m3127656750 ();
 extern "C" void MultiplayerMainGame_InitGame_m1931109952 ();
 extern "C" void MultiplayerMainGame_OnInGameEvent_m361302279 ();
@@ -13924,6 +13937,7 @@ extern "C" void MultiplayerMainGame_OnDealComplete_m1518237874 ();
 extern "C" void MultiplayerMainGame_OnAutoDealAnimationComplete_m3604132397 ();
 extern "C" void MultiplayerMainGame_CheckWinnings_m3943219407 ();
 extern "C" void MultiplayerMainGame_OnDistributeWinningCard_m2574405840 ();
+extern "C" void MultiplayerMainGame_OnShiftComplete_m4273595235 ();
 extern "C" void MultiplayerMainGame_OnDistributeAllWinningCards_m4220136092 ();
 extern "C" void MultiplayerMainGame_GetPlayerById_m1959206393 ();
 extern "C" void MultiplayerMainGame_DispatchRoundResult_m3513127295 ();
@@ -13938,10 +13952,17 @@ extern "C" void MultiplayerMainGame_OnDistributeAllFailedCards_m821197137 ();
 extern "C" void MultiplayerMainGame_DistributeCards_m772136855 ();
 extern "C" void MultiplayerMainGame_ResetScale_m3709387099 ();
 extern "C" void MultiplayerMainGame_OnDistributeAllCards_m4252258592 ();
+extern "C" void MultiplayerMainGame_OnDistributeFailedAnimationComplete_m3518080240 ();
 extern "C" void MultiplayerMainGame_OnDistributeAnimationComplete_m1894607443 ();
 extern "C" void MultiplayerMainGame_DispatchNextRound_m3515514821 ();
 extern "C" void MultiplayerMainGame_OnRoundEnd_m3044907722 ();
 extern "C" void MultiplayerMainGame_OnRoundResult_m1984846874 ();
+extern "C" void U3COnShiftCompleteU3Ec__IteratorC__ctor_m1879341029 ();
+extern "C" void U3COnShiftCompleteU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4036508621 ();
+extern "C" void U3COnShiftCompleteU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m2840426849 ();
+extern "C" void U3COnShiftCompleteU3Ec__IteratorC_MoveNext_m1854424303 ();
+extern "C" void U3COnShiftCompleteU3Ec__IteratorC_Dispose_m2058747618 ();
+extern "C" void U3COnShiftCompleteU3Ec__IteratorC_Reset_m3820741266 ();
 extern "C" void NetworkConstants__ctor_m1175725274 ();
 extern "C" void NetworkConstants__cctor_m1605648915 ();
 extern "C" void Networking__ctor_m3798141959 ();
@@ -13960,6 +13981,8 @@ extern "C" void Networking_get_PlayersIds_m2292660285 ();
 extern "C" void Networking_get_PlayersExcludingThis_m4242695033 ();
 extern "C" void Networking_get_PlayersIdsExcludingThis_m2072180026 ();
 extern "C" void Networking_GetPlayerById_m2192672952 ();
+extern "C" void Networking_GetPlayerByIdExcludeList_m3185995186 ();
+extern "C" void Networking_RemovePlayer_m3493736096 ();
 extern "C" void Networking_Init_m4091929965 ();
 extern "C" void Networking_OnSinglePlayerMode_m504645416 ();
 extern "C" void Networking_GetNextPlayer_m972504375 ();
@@ -14213,12 +14236,12 @@ extern "C" void XmlNodeConverter_ValueAttributes_m2742225691 ();
 extern "C" void XmlNodeConverter_CanConvert_m178606020 ();
 extern "C" void XmlNodeConverter_U3CIsArrayU3Em__5_m4879609 ();
 extern "C" void XmlNodeConverter_U3CValueAttributesU3Em__9_m1449517454 ();
-extern "C" void U3CDeserializeNodeU3Ec__AnonStoreyD__ctor_m2969610103 ();
-extern "C" void U3CDeserializeNodeU3Ec__AnonStoreyD_U3CU3Em__8_m1036527518 ();
-extern "C" void U3CReadArrayElementsU3Ec__AnonStoreyC__ctor_m3237388849 ();
-extern "C" void U3CReadArrayElementsU3Ec__AnonStoreyC_U3CU3Em__7_m1884602787 ();
-extern "C" void U3CSerializeNodeU3Ec__AnonStoreyB__ctor_m727466138 ();
-extern "C" void U3CSerializeNodeU3Ec__AnonStoreyB_U3CU3Em__6_m3681116283 ();
+extern "C" void U3CDeserializeNodeU3Ec__AnonStorey11__ctor_m2578295467 ();
+extern "C" void U3CDeserializeNodeU3Ec__AnonStorey11_U3CU3Em__8_m492890578 ();
+extern "C" void U3CReadArrayElementsU3Ec__AnonStorey10__ctor_m689064147 ();
+extern "C" void U3CReadArrayElementsU3Ec__AnonStorey10_U3CU3Em__7_m2840372905 ();
+extern "C" void U3CSerializeNodeU3Ec__AnonStoreyF__ctor_m4236379414 ();
+extern "C" void U3CSerializeNodeU3Ec__AnonStoreyF_U3CU3Em__6_m3242694391 ();
 extern "C" void XmlNodeWrapper__ctor_m3381972616 ();
 extern "C" void XmlNodeWrapper_get_WrappedNode_m573484220 ();
 extern "C" void XmlNodeWrapper_get_NodeType_m2384883038 ();
@@ -15257,8 +15280,8 @@ extern "C" void JsonSchemaBuilder_ProcessProperties_m1405999713 ();
 extern "C" void JsonSchemaBuilder_ProcessType_m3913635737 ();
 extern "C" void JsonSchemaBuilder_MapType_m869536421 ();
 extern "C" void JsonSchemaBuilder_MapType_m2251695781 ();
-extern "C" void U3CMapTypeU3Ec__AnonStoreyE__ctor_m4227738862 ();
-extern "C" void U3CMapTypeU3Ec__AnonStoreyE_U3CU3Em__15_m2182012665 ();
+extern "C" void U3CMapTypeU3Ec__AnonStorey12__ctor_m231051890 ();
+extern "C" void U3CMapTypeU3Ec__AnonStorey12_U3CU3Em__15_m2134488677 ();
 extern "C" void JsonSchemaConstants__cctor_m611616000 ();
 extern "C" void JsonSchemaException__ctor_m2578772301 ();
 extern "C" void JsonSchemaException__ctor_m1538388693 ();
@@ -15290,8 +15313,8 @@ extern "C" void JsonSchemaGenerator_GenerateObjectSchema_m1181619249 ();
 extern "C" void JsonSchemaGenerator_GenerateISerializableContract_m3261479610 ();
 extern "C" void JsonSchemaGenerator_HasFlag_m218382716 ();
 extern "C" void JsonSchemaGenerator_GetJsonSchemaType_m3509475073 ();
-extern "C" void U3CGenerateInternalU3Ec__AnonStoreyF__ctor_m2617363999 ();
-extern "C" void U3CGenerateInternalU3Ec__AnonStoreyF_U3CU3Em__16_m4049743449 ();
+extern "C" void U3CGenerateInternalU3Ec__AnonStorey13__ctor_m3449476543 ();
+extern "C" void U3CGenerateInternalU3Ec__AnonStorey13_U3CU3Em__16_m931297953 ();
 extern "C" void TypeSchema__ctor_m3366031153 ();
 extern "C" void TypeSchema_get_Type_m2755959450 ();
 extern "C" void TypeSchema_set_Type_m226775697 ();
@@ -15370,8 +15393,8 @@ extern "C" void JsonSchemaResolver__ctor_m4119934948 ();
 extern "C" void JsonSchemaResolver_get_LoadedSchemas_m3892697129 ();
 extern "C" void JsonSchemaResolver_set_LoadedSchemas_m61670256 ();
 extern "C" void JsonSchemaResolver_GetSchema_m3258389463 ();
-extern "C" void U3CGetSchemaU3Ec__AnonStorey10__ctor_m1468548528 ();
-extern "C" void U3CGetSchemaU3Ec__AnonStorey10_U3CU3Em__19_m926128964 ();
+extern "C" void U3CGetSchemaU3Ec__AnonStorey14__ctor_m682494508 ();
+extern "C" void U3CGetSchemaU3Ec__AnonStorey14_U3CU3Em__19_m2713101640 ();
 extern "C" void JsonSchemaWriter__ctor_m3948718252 ();
 extern "C" void JsonSchemaWriter_ReferenceOrWriteSchema_m1671254770 ();
 extern "C" void JsonSchemaWriter_WriteSchema_m1999116124 ();
@@ -15383,8 +15406,8 @@ extern "C" void JsonSchemaWriter_U3CWriteTypeU3Em__1A_m2223945794 ();
 extern "C" void SchemaExtensions_IsValid_m49735123 ();
 extern "C" void SchemaExtensions_Validate_m2989695417 ();
 extern "C" void SchemaExtensions_Validate_m68313348 ();
-extern "C" void U3CIsValidU3Ec__AnonStorey11__ctor_m1083907354 ();
-extern "C" void U3CIsValidU3Ec__AnonStorey11_U3CU3Em__1B_m2641292992 ();
+extern "C" void U3CIsValidU3Ec__AnonStorey15__ctor_m297853334 ();
+extern "C" void U3CIsValidU3Ec__AnonStorey15_U3CU3Em__1B_m254206012 ();
 extern "C" void ValidationEventArgs__ctor_m727474055 ();
 extern "C" void ValidationEventArgs_get_Exception_m3409740938 ();
 extern "C" void ValidationEventArgs_get_Message_m710533966 ();
@@ -15438,12 +15461,12 @@ extern "C" void DefaultContractResolver_U3CGetSerializableMembersU3Em__1D_m12200
 extern "C" void DefaultContractResolver_U3CCreateObjectContractU3Em__1E_m1282338507 ();
 extern "C" void DefaultContractResolver_U3CGetAttributeConstructorU3Em__1F_m3297923847 ();
 extern "C" void DefaultContractResolver_U3CCreatePropertiesU3Em__21_m2996004570 ();
-extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey12__ctor_m2037964326 ();
-extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey12_U3CU3Em__20_m2618268954 ();
-extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey13__ctor_m3351888192 ();
-extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey13_U3CU3Em__22_m2215137439 ();
-extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey14__ctor_m1026016297 ();
-extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey14_U3CU3Em__23_m595613301 ();
+extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey16__ctor_m1251910306 ();
+extern "C" void U3CCreateISerializableContractU3Ec__AnonStorey16_U3CU3Em__20_m2169757726 ();
+extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey17__ctor_m2565834172 ();
+extern "C" void U3CCreateShouldSerializeTestU3Ec__AnonStorey17_U3CU3Em__22_m2496234659 ();
+extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey18__ctor_m239962277 ();
+extern "C" void U3CSetIsSpecifiedActionsU3Ec__AnonStorey18_U3CU3Em__23_m876710521 ();
 extern "C" void DefaultReferenceResolver__ctor_m2046477720 ();
 extern "C" void DefaultReferenceResolver_GetMappings_m1562190554 ();
 extern "C" void DefaultReferenceResolver_ResolveReference_m2170076464 ();
@@ -15654,8 +15677,8 @@ extern "C" void JsonSerializerInternalReader_U3CCreateObjectFromNonDefaultConstr
 extern "C" void JsonSerializerInternalReader_U3CCreateObjectFromNonDefaultConstructorU3Em__27_m1440543146 ();
 extern "C" void JsonSerializerInternalReader_U3CPopulateObjectU3Em__28_m335707273 ();
 extern "C" void JsonSerializerInternalReader_U3CPopulateObjectU3Em__29_m488875958 ();
-extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey15__ctor_m1703627541 ();
-extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey15_U3CU3Em__24_m665971980 ();
+extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey19__ctor_m917573521 ();
+extern "C" void U3CCreateAndPopulateListU3Ec__AnonStorey19_U3CU3Em__24_m903767056 ();
 extern "C" void JsonSerializerInternalWriter__ctor_m1848814959 ();
 extern "C" void JsonSerializerInternalWriter_get_SerializeStack_m1412853750 ();
 extern "C" void JsonSerializerInternalWriter_Serialize_m2835988858 ();
@@ -15769,12 +15792,12 @@ extern "C" void CollectionUtils_GetDimensions_m2553219236 ();
 extern "C" void CollectionUtils_ToMultidimensionalArray_m3333505339 ();
 extern "C" void CollectionUtils_JaggedArrayGetValue_m3503854466 ();
 extern "C" void CollectionUtils_CopyFromJaggedToMultidimensionalArray_m992916538 ();
-extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey17__ctor_m3658800762 ();
-extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey17_U3CU3Em__2C_m974174899 ();
-extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey19__ctor_m1456579248 ();
-extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey19_U3CU3Em__2E_m33836923 ();
-extern "C" void U3CCreateListWrapperU3Ec__AnonStorey18__ctor_m2077542873 ();
-extern "C" void U3CCreateListWrapperU3Ec__AnonStorey18_U3CU3Em__2D_m130981651 ();
+extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey1B__ctor_m1497152207 ();
+extern "C" void U3CCreateCollectionWrapperU3Ec__AnonStorey1B_U3CU3Em__2C_m3348342718 ();
+extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey1D__ctor_m3589897989 ();
+extern "C" void U3CCreateDictionaryWrapperU3Ec__AnonStorey1D_U3CU3Em__2E_m2408004742 ();
+extern "C" void U3CCreateListWrapperU3Ec__AnonStorey1C__ctor_m4210861614 ();
+extern "C" void U3CCreateListWrapperU3Ec__AnonStorey1C_U3CU3Em__2D_m2505149470 ();
 extern "C" void ConvertUtils__cctor_m914182345 ();
 extern "C" void ConvertUtils_CreateCastConverter_m3653731189 ();
 extern "C" void ConvertUtils_CanConvertType_m732072898 ();
@@ -15786,12 +15809,12 @@ extern "C" void ConvertUtils_TryConvertOrCast_m75399195 ();
 extern "C" void ConvertUtils_EnsureTypeAssignable_m712946340 ();
 extern "C" void ConvertUtils_GetConverter_m1269630463 ();
 extern "C" void ConvertUtils_IsInteger_m1657944146 ();
-extern "C" void U3CCreateCastConverterU3Ec__AnonStorey1A__ctor_m1033104657 ();
-extern "C" void U3CCreateCastConverterU3Ec__AnonStorey1A_U3CU3Em__2F_m2022392465 ();
-extern "C" void U3CTryConvertU3Ec__AnonStorey1C__ctor_m3272473252 ();
-extern "C" void U3CTryConvertU3Ec__AnonStorey1C_U3CU3Em__31_m1867386038 ();
-extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey1E__ctor_m2739577408 ();
-extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey1E_U3CU3Em__33_m3843246228 ();
+extern "C" void U3CCreateCastConverterU3Ec__AnonStorey1E__ctor_m247050637 ();
+extern "C" void U3CCreateCastConverterU3Ec__AnonStorey1E_U3CU3Em__2F_m2303489685 ();
+extern "C" void U3CTryConvertU3Ec__AnonStorey20__ctor_m914311192 ();
+extern "C" void U3CTryConvertU3Ec__AnonStorey20_U3CU3Em__31_m3416378666 ();
+extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey22__ctor_m381415348 ();
+extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey22_U3CU3Em__33_m1097271560 ();
 extern "C" void TypeConvertKey__ctor_m3900280831 ();
 extern "C" void TypeConvertKey_get_InitialType_m2680337466 ();
 extern "C" void TypeConvertKey_get_TargetType_m1522591025 ();
@@ -15891,10 +15914,10 @@ extern "C" void ReflectionUtils_U3CGetFieldsAndPropertiesU3Em__42_m2688226790 ()
 extern "C" void ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851 ();
 extern "C" void ReflectionUtils_U3CGetMemberInfoFromTypeU3Em__45_m2175382557 ();
 extern "C" void ReflectionUtils_U3CGetChildPrivateFieldsU3Em__46_m3251665617 ();
-extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey27__ctor_m86275735 ();
-extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey27_U3CU3Em__47_m2096105512 ();
-extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey26__ctor_m2798973705 ();
-extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey26_U3CU3Em__43_m4168143065 ();
+extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey2B__ctor_m2219594476 ();
+extern "C" void U3CGetChildPrivatePropertiesU3Ec__AnonStorey2B_U3CU3Em__47_m3460911229 ();
+extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey2A__ctor_m637325150 ();
+extern "C" void U3CGetFieldsAndPropertiesU3Ec__AnonStorey2A_U3CU3Em__43_m3065653870 ();
 extern "C" void StringBuffer__ctor_m1224086481 ();
 extern "C" void StringBuffer__ctor_m284661666 ();
 extern "C" void StringBuffer__cctor_m3104846332 ();
@@ -15926,10 +15949,10 @@ extern "C" void StringUtils_GetLength_m3269432277 ();
 extern "C" void StringUtils_ToCharAsUnicode_m4026369150 ();
 extern "C" void StringUtils_WriteCharAsUnicode_m368627844 ();
 extern "C" void StringUtils_ToCamelCase_m3833750098 ();
-extern "C" void U3CIndentU3Ec__AnonStorey28__ctor_m1052262044 ();
-extern "C" void U3CIndentU3Ec__AnonStorey28_U3CU3Em__48_m1137647804 ();
-extern "C" void U3CNumberLinesU3Ec__AnonStorey29__ctor_m3259572745 ();
-extern "C" void U3CNumberLinesU3Ec__AnonStorey29_U3CU3Em__49_m2181522730 ();
+extern "C" void U3CIndentU3Ec__AnonStorey2C__ctor_m3185580785 ();
+extern "C" void U3CIndentU3Ec__AnonStorey2C_U3CU3Em__48_m1005729425 ();
+extern "C" void U3CNumberLinesU3Ec__AnonStorey2D__ctor_m1097924190 ();
+extern "C" void U3CNumberLinesU3Ec__AnonStorey2D_U3CU3Em__49_m2049604351 ();
 extern "C" void ActionLine__ctor_m70167161 ();
 extern "C" void ActionLine_Invoke_m105523814 ();
 extern "C" void ActionLine_BeginInvoke_m1477326427 ();
@@ -15949,6 +15972,8 @@ extern "C" void ValidationUtils_ObjectNotDisposed_m1242768045 ();
 extern "C" void ValidationUtils_ArgumentConditionTrue_m3530257957 ();
 extern "C" void Player__ctor_m871706298 ();
 extern "C" void Player_get_CardSelectionHandler_m97634160 ();
+extern "C" void Player_get_IsDistributionComplete_m3501797998 ();
+extern "C" void Player_set_IsDistributionComplete_m976958245 ();
 extern "C" void Player_get_Cards_m2643897007 ();
 extern "C" void Player_get_CardsRewarded_m1644079663 ();
 extern "C" void Player_set_CardsRewarded_m3167286272 ();
@@ -15956,6 +15981,8 @@ extern "C" void Player_get_DidPullOver_m1102557715 ();
 extern "C" void Player_set_DidPullOver_m4156915338 ();
 extern "C" void Player_get_SelectedCardValueType_m3899190188 ();
 extern "C" void Player_get_SelectedCard_m249687851 ();
+extern "C" void Player_get_HasCards_m704772400 ();
+extern "C" void Player_get_CardsCount_m2813266637 ();
 extern "C" void Player_SetTurnStatus_m1956600040 ();
 extern "C" void Player_SetGrayEffectAmount_m533122949 ();
 extern "C" void Player_get_GetCardsValueType_m1254267132 ();
@@ -15964,11 +15991,10 @@ extern "C" void Player_get_IsLocalPlayer_m840128861 ();
 extern "C" void Player_OnRoundStart_m4031893565 ();
 extern "C" void Player_UpdateDP_m4160431299 ();
 extern "C" void Player_Init_m3304792154 ();
-extern "C" void Player_AddCard_m3248222820 ();
-extern "C" void Player_AddCount_m531903881 ();
-extern "C" void Player_RemoveCount_m737381268 ();
-extern "C" void Player_UpdateCount_m2085950255 ();
-extern "C" void Player_RemoveCardWithValue_m1598406941 ();
+extern "C" void Player_EnableCountPip_m2105921196 ();
+extern "C" void Player_AddCard_m2388479993 ();
+extern "C" void Player_UpdatePipCount_m2208836971 ();
+extern "C" void Player_RemoveCardWithValue_m2478900832 ();
 extern "C" void Player_SetSelectedCard_m1287222901 ();
 extern "C" void Player_AutoDeal_m2757988037 ();
 extern "C" void Player_OnRoundResult_m2417922047 ();
@@ -16015,12 +16041,12 @@ extern "C" void RoundHandler_StopRound_m1145433833 ();
 extern "C" void RoundHandler_StartTimer_m873831816 ();
 extern "C" void RoundHandler_OnRoundEnd_m1197676209 ();
 extern "C" void RoundHandler_Update_m1604337358 ();
-extern "C" void U3CWaitAndStartRoundU3Ec__Iterator7__ctor_m2117457660 ();
-extern "C" void U3CWaitAndStartRoundU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m728654048 ();
-extern "C" void U3CWaitAndStartRoundU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m1346249844 ();
-extern "C" void U3CWaitAndStartRoundU3Ec__Iterator7_MoveNext_m427552608 ();
-extern "C" void U3CWaitAndStartRoundU3Ec__Iterator7_Dispose_m3255563321 ();
-extern "C" void U3CWaitAndStartRoundU3Ec__Iterator7_Reset_m4058857897 ();
+extern "C" void U3CWaitAndStartRoundU3Ec__IteratorA__ctor_m152322610 ();
+extern "C" void U3CWaitAndStartRoundU3Ec__IteratorA_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2936638314 ();
+extern "C" void U3CWaitAndStartRoundU3Ec__IteratorA_System_Collections_IEnumerator_get_Current_m3875775230 ();
+extern "C" void U3CWaitAndStartRoundU3Ec__IteratorA_MoveNext_m1788489834 ();
+extern "C" void U3CWaitAndStartRoundU3Ec__IteratorA_Dispose_m251423215 ();
+extern "C" void U3CWaitAndStartRoundU3Ec__IteratorA_Reset_m2093722847 ();
 extern "C" void RoundResultVO__ctor_m1764954823 ();
 extern "C" void RoundResultVO_get_cardValueType_m826512602 ();
 extern "C" void RoundResultVO_set_cardValueType_m2111050591 ();
@@ -16030,11 +16056,15 @@ extern "C" void RoundResultVO_get_didPullOver_m3431748840 ();
 extern "C" void RoundResultVO_set_didPullOver_m1798136759 ();
 extern "C" void RoundResultVO_get_winningCards_m3857848247 ();
 extern "C" void RoundResultVO_set_winningCards_m1959232980 ();
+extern "C" void RoundResultVO_get_cardsCount_m479974756 ();
+extern "C" void RoundResultVO_set_cardsCount_m2969799671 ();
 extern "C" void RoundVO__ctor_m143774372 ();
 extern "C" void RoundVO_get_roundId_m1406987792 ();
 extern "C" void RoundVO_set_roundId_m1649707231 ();
 extern "C" void RoundVO_get_playerIdForRound_m4024745735 ();
 extern "C" void RoundVO_set_playerIdForRound_m3657658052 ();
+extern "C" void RoundVO_get_cardsCount_m3948424103 ();
+extern "C" void RoundVO_set_cardsCount_m3759425594 ();
 extern "C" void SampleObject__ctor_m1005768466 ();
 extern "C" void SampleObject_get_StringProperty_m2930064612 ();
 extern "C" void SampleObject_set_StringProperty_m1759976749 ();
@@ -16046,30 +16076,33 @@ extern "C" void SampleObject_get_VectorProperty_m934415661 ();
 extern "C" void SampleObject_set_VectorProperty_m375571922 ();
 extern "C" void SceneMonoBehaviour__ctor_m3321531469 ();
 extern "C" void SceneMonoBehaviour_Init_m1859798119 ();
-extern "C" void SceneMonoBehaviour_MoveToScene_m2583316838 ();
+extern "C" void SceneMonoBehaviour_AddListeners_m2489556085 ();
+extern "C" void SceneMonoBehaviour_RemoveListeners_m4293273670 ();
+extern "C" void SceneMonoBehaviour_MoveToScene_m2765100343 ();
 extern "C" void SceneMonoBehaviour_OnGameEvent_m641067446 ();
 extern "C" void SceneMonoBehaviour_OnInGameEvent_m3756406208 ();
 extern "C" void SceneTransitionManager__ctor_m2716382351 ();
 extern "C" void SceneTransitionManager_Init_m3225750501 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3383367968 ();
-extern "C" void SceneTransitionManager_SetActiveScreen_m2555694844 ();
+extern "C" void SceneTransitionManager_SetActiveScreen_m3079263841 ();
 extern "C" void SceneTransitionManager_RearrangeScreens_m1562589827 ();
 extern "C" void SinglePlayerMainGame__ctor_m725906247 ();
 extern "C" void SinglePlayerMainGame_Init_m1637520941 ();
 extern "C" void SinglePlayerMainGame_InitGame_m2164794303 ();
 extern "C" void SinglePlayerMainGame_UpdatePlayers_m18221774 ();
 extern "C" void SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371 ();
+extern "C" void SinglePlayerMainGame_GetPrevPlayerIndex_m2147577523 ();
 extern "C" void SinglePlayerMainGame_OnDistributeAllCards_m2662254623 ();
 extern "C" void SinglePlayerMainGame_OnGameEvent_m3147165564 ();
 extern "C" void SinglePlayerMainGame_AutoPlay_m469515816 ();
 extern "C" void SinglePlayerMainGame_DispatchNextRound_m2268102950 ();
 extern "C" void SinglePlayerMainGame_OnRoundEnd_m4277269641 ();
-extern "C" void U3CAutoPlayU3Ec__Iterator9__ctor_m2910374409 ();
-extern "C" void U3CAutoPlayU3Ec__Iterator9_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m912528489 ();
-extern "C" void U3CAutoPlayU3Ec__Iterator9_System_Collections_IEnumerator_get_Current_m179702269 ();
-extern "C" void U3CAutoPlayU3Ec__Iterator9_MoveNext_m3837548875 ();
-extern "C" void U3CAutoPlayU3Ec__Iterator9_Dispose_m744380422 ();
-extern "C" void U3CAutoPlayU3Ec__Iterator9_Reset_m556807350 ();
+extern "C" void U3CAutoPlayU3Ec__IteratorD__ctor_m748725854 ();
+extern "C" void U3CAutoPlayU3Ec__IteratorD_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2911814452 ();
+extern "C" void U3CAutoPlayU3Ec__IteratorD_System_Collections_IEnumerator_get_Current_m385199816 ();
+extern "C" void U3CAutoPlayU3Ec__IteratorD_MoveNext_m610115798 ();
+extern "C" void U3CAutoPlayU3Ec__IteratorD_Dispose_m2164290331 ();
+extern "C" void U3CAutoPlayU3Ec__IteratorD_Reset_m2690126091 ();
 extern "C" void SingletonManager__ctor_m3690008473 ();
 extern "C" void SingletonManager_Init_m2980063131 ();
 extern "C" void SpinHandler__ctor_m730293219 ();
@@ -16123,7 +16156,6 @@ extern "C" void Utility__cctor_m1235518446 ();
 extern "C" void Utility_SinInterpolate_m2903343064 ();
 extern "C" void Utility_GetRandomNumber_m363916787 ();
 extern "C" void Utility_GetRandomNumber_m1068903833 ();
-extern "C" void Utility_DelayedCall_m1320402319 ();
 extern "C" void Utility_DelayedCallWithArgs_m949739098 ();
 extern "C" void Vector2Converter__ctor_m1149976202 ();
 extern "C" void Vector2Converter_WriteJson_m2524851850 ();
@@ -16140,7 +16172,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16129] = 
+extern const methodPointerType g_MethodPointers[16161] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -25668,7 +25700,6 @@ extern const methodPointerType g_MethodPointers[16129] =
 	InvokableCallList_AddPersistentInvokableCall_m4220625340,
 	InvokableCallList_AddListener_m1356872764,
 	InvokableCallList_RemoveListener_m855004700,
-	InvokableCallList_Clear_m4114435434,
 	InvokableCallList_ClearPersistent_m1690187553,
 	InvokableCallList_Invoke_m575840373,
 	PersistentCall__ctor_m3363339247,
@@ -25700,7 +25731,6 @@ extern const methodPointerType g_MethodPointers[16129] =
 	UnityEventBase_RebuildPersistentCallsIfNeeded_m4147202091,
 	UnityEventBase_AddCall_m1246572149,
 	UnityEventBase_RemoveListener_m276725997,
-	UnityEventBase_RemoveAllListeners_m2083644536,
 	UnityEventBase_Invoke_m3681078084,
 	UnityEventBase_ToString_m249191135,
 	UnityEventBase_GetValidMethodInfo_m2325301202,
@@ -29869,6 +29899,7 @@ extern const methodPointerType g_MethodPointers[16129] =
 	Card_set_Type_m3950350162,
 	Card_get_ValueType_m2362782312,
 	Card_set_ValueType_m3781852331,
+	Card_SetGrayEffect_m2033095468,
 	Card_UpdateCard_m75797196,
 	Card_UpdateSkin_m3256011999,
 	Card_ShowFrontFace_m3400762866,
@@ -29887,6 +29918,7 @@ extern const methodPointerType g_MethodPointers[16129] =
 	Dealer_set_Cards_m320147516,
 	Dealer_Init_m425946002,
 	Dealer_GetDeckSize_m1851388114,
+	Dealer_SetGrayEffect_m507993717,
 	Dealer_PopBack_m1962333771,
 	Dealer_RemoveCardByValueType_m2372030607,
 	Dealer_ShuffleCards_m452971244,
@@ -29938,8 +29970,21 @@ extern const methodPointerType g_MethodPointers[16129] =
 	ExecutionOrderManager_Init_m4122699490,
 	ExtensionMethods__cctor_m390673221,
 	ExtMonoBehaviour__ctor_m885263906,
+	ExtMonoBehaviour_get_isInitialized_m952256653,
 	ExtMonoBehaviour_Init_m949924850,
+	ExtMonoBehaviour_AddListeners_m2272350464,
+	ExtMonoBehaviour_RemoveListeners_m1741366235,
+	ExtMonoBehaviour_DelayedCall_m1718849090,
+	ExtMonoBehaviour_StartDelay_m1484571095,
 	ExtMonoBehaviour_OnGameEvent_m1534583617,
+	ExtMonoBehaviour_OnMoveOutOfView_m4152219546,
+	ExtMonoBehaviour_OnSetToView_m2578106083,
+	U3CStartDelayU3Ec__Iterator7__ctor_m1190923598,
+	U3CStartDelayU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m426610948,
+	U3CStartDelayU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m3444186264,
+	U3CStartDelayU3Ec__Iterator7_MoveNext_m1719457510,
+	U3CStartDelayU3Ec__Iterator7_Dispose_m1914560011,
+	U3CStartDelayU3Ec__Iterator7_Reset_m3132323835,
 	GameCenterAuthVO__ctor_m3296291667,
 	GameConstants__ctor_m2970825902,
 	GameConstants__cctor_m1419193535,
@@ -29991,12 +30036,12 @@ extern const methodPointerType g_MethodPointers[16129] =
 	InGameInfoText_Hide_m1606563581,
 	InGameInfoText_ShowMessage_m3546954056,
 	InGameInfoText_RemoveMessage_m70429915,
-	U3CRemoveMessageU3Ec__IteratorA__ctor_m1283240337,
-	U3CRemoveMessageU3Ec__IteratorA_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m664048299,
-	U3CRemoveMessageU3Ec__IteratorA_System_Collections_IEnumerator_get_Current_m3604958271,
-	U3CRemoveMessageU3Ec__IteratorA_MoveNext_m2737548715,
-	U3CRemoveMessageU3Ec__IteratorA_Dispose_m436632974,
-	U3CRemoveMessageU3Ec__IteratorA_Reset_m3224640574,
+	U3CRemoveMessageU3Ec__IteratorE__ctor_m497186317,
+	U3CRemoveMessageU3Ec__IteratorE_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4124222383,
+	U3CRemoveMessageU3Ec__IteratorE_System_Collections_IEnumerator_get_Current_m2898781507,
+	U3CRemoveMessageU3Ec__IteratorE_MoveNext_m1563936687,
+	U3CRemoveMessageU3Ec__IteratorE_Dispose_m952963850,
+	U3CRemoveMessageU3Ec__IteratorE_Reset_m2438586554,
 	InitCardsDataVO__ctor_m928158293,
 	InitCardsDataVO_get_cards_data_m2867116220,
 	InitCardsDataVO_set_cards_data_m3700077615,
@@ -30027,14 +30072,15 @@ extern const methodPointerType g_MethodPointers[16129] =
 	MainScreen_Init_m3193217278,
 	MainScreen_AuthGC_m3239920690,
 	MainScreen_StartSignInProcess_m1885858753,
+	MainScreen_OnGameEvent_m3786029133,
 	MainScreen_OnInGameEvent_m349397207,
 	MainScreen_OnPlay_m3220741537,
-	U3CStartSignInProcessU3Ec__Iterator8__ctor_m127237059,
-	U3CStartSignInProcessU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4031644399,
-	U3CStartSignInProcessU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m3865691267,
-	U3CStartSignInProcessU3Ec__Iterator8_MoveNext_m1441437009,
-	U3CStartSignInProcessU3Ec__Iterator8_Dispose_m1914012480,
-	U3CStartSignInProcessU3Ec__Iterator8_Reset_m2068637296,
+	U3CStartSignInProcessU3Ec__IteratorB__ctor_m2457069305,
+	U3CStartSignInProcessU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1944661369,
+	U3CStartSignInProcessU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m2100249357,
+	U3CStartSignInProcessU3Ec__IteratorB_MoveNext_m2802374235,
+	U3CStartSignInProcessU3Ec__IteratorB_Dispose_m3204839670,
+	U3CStartSignInProcessU3Ec__IteratorB_Reset_m103502246,
 	MatchSelectionScreen__ctor_m2494922568,
 	MatchSelectionScreen_findMatches_m3505743744,
 	MatchSelectionScreen_Init_m2110227980,
@@ -30046,7 +30092,6 @@ extern const methodPointerType g_MethodPointers[16129] =
 	MatchStartedVO__ctor_m622607718,
 	MultiplayerMainGame__ctor_m3970443366,
 	MultiplayerMainGame_GetDPPath_m1101217716,
-	MultiplayerMainGame_get_GetLocalPlayer_m1775319809,
 	MultiplayerMainGame_Init_m3127656750,
 	MultiplayerMainGame_InitGame_m1931109952,
 	MultiplayerMainGame_OnInGameEvent_m361302279,
@@ -30055,6 +30100,7 @@ extern const methodPointerType g_MethodPointers[16129] =
 	MultiplayerMainGame_OnAutoDealAnimationComplete_m3604132397,
 	MultiplayerMainGame_CheckWinnings_m3943219407,
 	MultiplayerMainGame_OnDistributeWinningCard_m2574405840,
+	MultiplayerMainGame_OnShiftComplete_m4273595235,
 	MultiplayerMainGame_OnDistributeAllWinningCards_m4220136092,
 	MultiplayerMainGame_GetPlayerById_m1959206393,
 	MultiplayerMainGame_DispatchRoundResult_m3513127295,
@@ -30069,10 +30115,17 @@ extern const methodPointerType g_MethodPointers[16129] =
 	MultiplayerMainGame_DistributeCards_m772136855,
 	MultiplayerMainGame_ResetScale_m3709387099,
 	MultiplayerMainGame_OnDistributeAllCards_m4252258592,
+	MultiplayerMainGame_OnDistributeFailedAnimationComplete_m3518080240,
 	MultiplayerMainGame_OnDistributeAnimationComplete_m1894607443,
 	MultiplayerMainGame_DispatchNextRound_m3515514821,
 	MultiplayerMainGame_OnRoundEnd_m3044907722,
 	MultiplayerMainGame_OnRoundResult_m1984846874,
+	U3COnShiftCompleteU3Ec__IteratorC__ctor_m1879341029,
+	U3COnShiftCompleteU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4036508621,
+	U3COnShiftCompleteU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m2840426849,
+	U3COnShiftCompleteU3Ec__IteratorC_MoveNext_m1854424303,
+	U3COnShiftCompleteU3Ec__IteratorC_Dispose_m2058747618,
+	U3COnShiftCompleteU3Ec__IteratorC_Reset_m3820741266,
 	NetworkConstants__ctor_m1175725274,
 	NetworkConstants__cctor_m1605648915,
 	Networking__ctor_m3798141959,
@@ -30091,6 +30144,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	Networking_get_PlayersExcludingThis_m4242695033,
 	Networking_get_PlayersIdsExcludingThis_m2072180026,
 	Networking_GetPlayerById_m2192672952,
+	Networking_GetPlayerByIdExcludeList_m3185995186,
+	Networking_RemovePlayer_m3493736096,
 	Networking_Init_m4091929965,
 	Networking_OnSinglePlayerMode_m504645416,
 	Networking_GetNextPlayer_m972504375,
@@ -30344,12 +30399,12 @@ extern const methodPointerType g_MethodPointers[16129] =
 	XmlNodeConverter_CanConvert_m178606020,
 	XmlNodeConverter_U3CIsArrayU3Em__5_m4879609,
 	XmlNodeConverter_U3CValueAttributesU3Em__9_m1449517454,
-	U3CDeserializeNodeU3Ec__AnonStoreyD__ctor_m2969610103,
-	U3CDeserializeNodeU3Ec__AnonStoreyD_U3CU3Em__8_m1036527518,
-	U3CReadArrayElementsU3Ec__AnonStoreyC__ctor_m3237388849,
-	U3CReadArrayElementsU3Ec__AnonStoreyC_U3CU3Em__7_m1884602787,
-	U3CSerializeNodeU3Ec__AnonStoreyB__ctor_m727466138,
-	U3CSerializeNodeU3Ec__AnonStoreyB_U3CU3Em__6_m3681116283,
+	U3CDeserializeNodeU3Ec__AnonStorey11__ctor_m2578295467,
+	U3CDeserializeNodeU3Ec__AnonStorey11_U3CU3Em__8_m492890578,
+	U3CReadArrayElementsU3Ec__AnonStorey10__ctor_m689064147,
+	U3CReadArrayElementsU3Ec__AnonStorey10_U3CU3Em__7_m2840372905,
+	U3CSerializeNodeU3Ec__AnonStoreyF__ctor_m4236379414,
+	U3CSerializeNodeU3Ec__AnonStoreyF_U3CU3Em__6_m3242694391,
 	XmlNodeWrapper__ctor_m3381972616,
 	XmlNodeWrapper_get_WrappedNode_m573484220,
 	XmlNodeWrapper_get_NodeType_m2384883038,
@@ -31388,8 +31443,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	JsonSchemaBuilder_ProcessType_m3913635737,
 	JsonSchemaBuilder_MapType_m869536421,
 	JsonSchemaBuilder_MapType_m2251695781,
-	U3CMapTypeU3Ec__AnonStoreyE__ctor_m4227738862,
-	U3CMapTypeU3Ec__AnonStoreyE_U3CU3Em__15_m2182012665,
+	U3CMapTypeU3Ec__AnonStorey12__ctor_m231051890,
+	U3CMapTypeU3Ec__AnonStorey12_U3CU3Em__15_m2134488677,
 	JsonSchemaConstants__cctor_m611616000,
 	JsonSchemaException__ctor_m2578772301,
 	JsonSchemaException__ctor_m1538388693,
@@ -31421,8 +31476,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	JsonSchemaGenerator_GenerateISerializableContract_m3261479610,
 	JsonSchemaGenerator_HasFlag_m218382716,
 	JsonSchemaGenerator_GetJsonSchemaType_m3509475073,
-	U3CGenerateInternalU3Ec__AnonStoreyF__ctor_m2617363999,
-	U3CGenerateInternalU3Ec__AnonStoreyF_U3CU3Em__16_m4049743449,
+	U3CGenerateInternalU3Ec__AnonStorey13__ctor_m3449476543,
+	U3CGenerateInternalU3Ec__AnonStorey13_U3CU3Em__16_m931297953,
 	TypeSchema__ctor_m3366031153,
 	TypeSchema_get_Type_m2755959450,
 	TypeSchema_set_Type_m226775697,
@@ -31501,8 +31556,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	JsonSchemaResolver_get_LoadedSchemas_m3892697129,
 	JsonSchemaResolver_set_LoadedSchemas_m61670256,
 	JsonSchemaResolver_GetSchema_m3258389463,
-	U3CGetSchemaU3Ec__AnonStorey10__ctor_m1468548528,
-	U3CGetSchemaU3Ec__AnonStorey10_U3CU3Em__19_m926128964,
+	U3CGetSchemaU3Ec__AnonStorey14__ctor_m682494508,
+	U3CGetSchemaU3Ec__AnonStorey14_U3CU3Em__19_m2713101640,
 	JsonSchemaWriter__ctor_m3948718252,
 	JsonSchemaWriter_ReferenceOrWriteSchema_m1671254770,
 	JsonSchemaWriter_WriteSchema_m1999116124,
@@ -31514,8 +31569,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	SchemaExtensions_IsValid_m49735123,
 	SchemaExtensions_Validate_m2989695417,
 	SchemaExtensions_Validate_m68313348,
-	U3CIsValidU3Ec__AnonStorey11__ctor_m1083907354,
-	U3CIsValidU3Ec__AnonStorey11_U3CU3Em__1B_m2641292992,
+	U3CIsValidU3Ec__AnonStorey15__ctor_m297853334,
+	U3CIsValidU3Ec__AnonStorey15_U3CU3Em__1B_m254206012,
 	ValidationEventArgs__ctor_m727474055,
 	ValidationEventArgs_get_Exception_m3409740938,
 	ValidationEventArgs_get_Message_m710533966,
@@ -31569,12 +31624,12 @@ extern const methodPointerType g_MethodPointers[16129] =
 	DefaultContractResolver_U3CCreateObjectContractU3Em__1E_m1282338507,
 	DefaultContractResolver_U3CGetAttributeConstructorU3Em__1F_m3297923847,
 	DefaultContractResolver_U3CCreatePropertiesU3Em__21_m2996004570,
-	U3CCreateISerializableContractU3Ec__AnonStorey12__ctor_m2037964326,
-	U3CCreateISerializableContractU3Ec__AnonStorey12_U3CU3Em__20_m2618268954,
-	U3CCreateShouldSerializeTestU3Ec__AnonStorey13__ctor_m3351888192,
-	U3CCreateShouldSerializeTestU3Ec__AnonStorey13_U3CU3Em__22_m2215137439,
-	U3CSetIsSpecifiedActionsU3Ec__AnonStorey14__ctor_m1026016297,
-	U3CSetIsSpecifiedActionsU3Ec__AnonStorey14_U3CU3Em__23_m595613301,
+	U3CCreateISerializableContractU3Ec__AnonStorey16__ctor_m1251910306,
+	U3CCreateISerializableContractU3Ec__AnonStorey16_U3CU3Em__20_m2169757726,
+	U3CCreateShouldSerializeTestU3Ec__AnonStorey17__ctor_m2565834172,
+	U3CCreateShouldSerializeTestU3Ec__AnonStorey17_U3CU3Em__22_m2496234659,
+	U3CSetIsSpecifiedActionsU3Ec__AnonStorey18__ctor_m239962277,
+	U3CSetIsSpecifiedActionsU3Ec__AnonStorey18_U3CU3Em__23_m876710521,
 	DefaultReferenceResolver__ctor_m2046477720,
 	DefaultReferenceResolver_GetMappings_m1562190554,
 	DefaultReferenceResolver_ResolveReference_m2170076464,
@@ -31785,8 +31840,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	JsonSerializerInternalReader_U3CCreateObjectFromNonDefaultConstructorU3Em__27_m1440543146,
 	JsonSerializerInternalReader_U3CPopulateObjectU3Em__28_m335707273,
 	JsonSerializerInternalReader_U3CPopulateObjectU3Em__29_m488875958,
-	U3CCreateAndPopulateListU3Ec__AnonStorey15__ctor_m1703627541,
-	U3CCreateAndPopulateListU3Ec__AnonStorey15_U3CU3Em__24_m665971980,
+	U3CCreateAndPopulateListU3Ec__AnonStorey19__ctor_m917573521,
+	U3CCreateAndPopulateListU3Ec__AnonStorey19_U3CU3Em__24_m903767056,
 	JsonSerializerInternalWriter__ctor_m1848814959,
 	JsonSerializerInternalWriter_get_SerializeStack_m1412853750,
 	JsonSerializerInternalWriter_Serialize_m2835988858,
@@ -31900,12 +31955,12 @@ extern const methodPointerType g_MethodPointers[16129] =
 	CollectionUtils_ToMultidimensionalArray_m3333505339,
 	CollectionUtils_JaggedArrayGetValue_m3503854466,
 	CollectionUtils_CopyFromJaggedToMultidimensionalArray_m992916538,
-	U3CCreateCollectionWrapperU3Ec__AnonStorey17__ctor_m3658800762,
-	U3CCreateCollectionWrapperU3Ec__AnonStorey17_U3CU3Em__2C_m974174899,
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey19__ctor_m1456579248,
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey19_U3CU3Em__2E_m33836923,
-	U3CCreateListWrapperU3Ec__AnonStorey18__ctor_m2077542873,
-	U3CCreateListWrapperU3Ec__AnonStorey18_U3CU3Em__2D_m130981651,
+	U3CCreateCollectionWrapperU3Ec__AnonStorey1B__ctor_m1497152207,
+	U3CCreateCollectionWrapperU3Ec__AnonStorey1B_U3CU3Em__2C_m3348342718,
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey1D__ctor_m3589897989,
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey1D_U3CU3Em__2E_m2408004742,
+	U3CCreateListWrapperU3Ec__AnonStorey1C__ctor_m4210861614,
+	U3CCreateListWrapperU3Ec__AnonStorey1C_U3CU3Em__2D_m2505149470,
 	ConvertUtils__cctor_m914182345,
 	ConvertUtils_CreateCastConverter_m3653731189,
 	ConvertUtils_CanConvertType_m732072898,
@@ -31917,12 +31972,12 @@ extern const methodPointerType g_MethodPointers[16129] =
 	ConvertUtils_EnsureTypeAssignable_m712946340,
 	ConvertUtils_GetConverter_m1269630463,
 	ConvertUtils_IsInteger_m1657944146,
-	U3CCreateCastConverterU3Ec__AnonStorey1A__ctor_m1033104657,
-	U3CCreateCastConverterU3Ec__AnonStorey1A_U3CU3Em__2F_m2022392465,
-	U3CTryConvertU3Ec__AnonStorey1C__ctor_m3272473252,
-	U3CTryConvertU3Ec__AnonStorey1C_U3CU3Em__31_m1867386038,
-	U3CTryConvertOrCastU3Ec__AnonStorey1E__ctor_m2739577408,
-	U3CTryConvertOrCastU3Ec__AnonStorey1E_U3CU3Em__33_m3843246228,
+	U3CCreateCastConverterU3Ec__AnonStorey1E__ctor_m247050637,
+	U3CCreateCastConverterU3Ec__AnonStorey1E_U3CU3Em__2F_m2303489685,
+	U3CTryConvertU3Ec__AnonStorey20__ctor_m914311192,
+	U3CTryConvertU3Ec__AnonStorey20_U3CU3Em__31_m3416378666,
+	U3CTryConvertOrCastU3Ec__AnonStorey22__ctor_m381415348,
+	U3CTryConvertOrCastU3Ec__AnonStorey22_U3CU3Em__33_m1097271560,
 	TypeConvertKey__ctor_m3900280831,
 	TypeConvertKey_get_InitialType_m2680337466,
 	TypeConvertKey_get_TargetType_m1522591025,
@@ -32022,10 +32077,10 @@ extern const methodPointerType g_MethodPointers[16129] =
 	ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851,
 	ReflectionUtils_U3CGetMemberInfoFromTypeU3Em__45_m2175382557,
 	ReflectionUtils_U3CGetChildPrivateFieldsU3Em__46_m3251665617,
-	U3CGetChildPrivatePropertiesU3Ec__AnonStorey27__ctor_m86275735,
-	U3CGetChildPrivatePropertiesU3Ec__AnonStorey27_U3CU3Em__47_m2096105512,
-	U3CGetFieldsAndPropertiesU3Ec__AnonStorey26__ctor_m2798973705,
-	U3CGetFieldsAndPropertiesU3Ec__AnonStorey26_U3CU3Em__43_m4168143065,
+	U3CGetChildPrivatePropertiesU3Ec__AnonStorey2B__ctor_m2219594476,
+	U3CGetChildPrivatePropertiesU3Ec__AnonStorey2B_U3CU3Em__47_m3460911229,
+	U3CGetFieldsAndPropertiesU3Ec__AnonStorey2A__ctor_m637325150,
+	U3CGetFieldsAndPropertiesU3Ec__AnonStorey2A_U3CU3Em__43_m3065653870,
 	StringBuffer__ctor_m1224086481,
 	StringBuffer__ctor_m284661666,
 	StringBuffer__cctor_m3104846332,
@@ -32057,10 +32112,10 @@ extern const methodPointerType g_MethodPointers[16129] =
 	StringUtils_ToCharAsUnicode_m4026369150,
 	StringUtils_WriteCharAsUnicode_m368627844,
 	StringUtils_ToCamelCase_m3833750098,
-	U3CIndentU3Ec__AnonStorey28__ctor_m1052262044,
-	U3CIndentU3Ec__AnonStorey28_U3CU3Em__48_m1137647804,
-	U3CNumberLinesU3Ec__AnonStorey29__ctor_m3259572745,
-	U3CNumberLinesU3Ec__AnonStorey29_U3CU3Em__49_m2181522730,
+	U3CIndentU3Ec__AnonStorey2C__ctor_m3185580785,
+	U3CIndentU3Ec__AnonStorey2C_U3CU3Em__48_m1005729425,
+	U3CNumberLinesU3Ec__AnonStorey2D__ctor_m1097924190,
+	U3CNumberLinesU3Ec__AnonStorey2D_U3CU3Em__49_m2049604351,
 	ActionLine__ctor_m70167161,
 	ActionLine_Invoke_m105523814,
 	ActionLine_BeginInvoke_m1477326427,
@@ -32080,6 +32135,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	ValidationUtils_ArgumentConditionTrue_m3530257957,
 	Player__ctor_m871706298,
 	Player_get_CardSelectionHandler_m97634160,
+	Player_get_IsDistributionComplete_m3501797998,
+	Player_set_IsDistributionComplete_m976958245,
 	Player_get_Cards_m2643897007,
 	Player_get_CardsRewarded_m1644079663,
 	Player_set_CardsRewarded_m3167286272,
@@ -32087,6 +32144,8 @@ extern const methodPointerType g_MethodPointers[16129] =
 	Player_set_DidPullOver_m4156915338,
 	Player_get_SelectedCardValueType_m3899190188,
 	Player_get_SelectedCard_m249687851,
+	Player_get_HasCards_m704772400,
+	Player_get_CardsCount_m2813266637,
 	Player_SetTurnStatus_m1956600040,
 	Player_SetGrayEffectAmount_m533122949,
 	Player_get_GetCardsValueType_m1254267132,
@@ -32095,11 +32154,10 @@ extern const methodPointerType g_MethodPointers[16129] =
 	Player_OnRoundStart_m4031893565,
 	Player_UpdateDP_m4160431299,
 	Player_Init_m3304792154,
-	Player_AddCard_m3248222820,
-	Player_AddCount_m531903881,
-	Player_RemoveCount_m737381268,
-	Player_UpdateCount_m2085950255,
-	Player_RemoveCardWithValue_m1598406941,
+	Player_EnableCountPip_m2105921196,
+	Player_AddCard_m2388479993,
+	Player_UpdatePipCount_m2208836971,
+	Player_RemoveCardWithValue_m2478900832,
 	Player_SetSelectedCard_m1287222901,
 	Player_AutoDeal_m2757988037,
 	Player_OnRoundResult_m2417922047,
@@ -32146,12 +32204,12 @@ extern const methodPointerType g_MethodPointers[16129] =
 	RoundHandler_StartTimer_m873831816,
 	RoundHandler_OnRoundEnd_m1197676209,
 	RoundHandler_Update_m1604337358,
-	U3CWaitAndStartRoundU3Ec__Iterator7__ctor_m2117457660,
-	U3CWaitAndStartRoundU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m728654048,
-	U3CWaitAndStartRoundU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m1346249844,
-	U3CWaitAndStartRoundU3Ec__Iterator7_MoveNext_m427552608,
-	U3CWaitAndStartRoundU3Ec__Iterator7_Dispose_m3255563321,
-	U3CWaitAndStartRoundU3Ec__Iterator7_Reset_m4058857897,
+	U3CWaitAndStartRoundU3Ec__IteratorA__ctor_m152322610,
+	U3CWaitAndStartRoundU3Ec__IteratorA_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2936638314,
+	U3CWaitAndStartRoundU3Ec__IteratorA_System_Collections_IEnumerator_get_Current_m3875775230,
+	U3CWaitAndStartRoundU3Ec__IteratorA_MoveNext_m1788489834,
+	U3CWaitAndStartRoundU3Ec__IteratorA_Dispose_m251423215,
+	U3CWaitAndStartRoundU3Ec__IteratorA_Reset_m2093722847,
 	RoundResultVO__ctor_m1764954823,
 	RoundResultVO_get_cardValueType_m826512602,
 	RoundResultVO_set_cardValueType_m2111050591,
@@ -32161,11 +32219,15 @@ extern const methodPointerType g_MethodPointers[16129] =
 	RoundResultVO_set_didPullOver_m1798136759,
 	RoundResultVO_get_winningCards_m3857848247,
 	RoundResultVO_set_winningCards_m1959232980,
+	RoundResultVO_get_cardsCount_m479974756,
+	RoundResultVO_set_cardsCount_m2969799671,
 	RoundVO__ctor_m143774372,
 	RoundVO_get_roundId_m1406987792,
 	RoundVO_set_roundId_m1649707231,
 	RoundVO_get_playerIdForRound_m4024745735,
 	RoundVO_set_playerIdForRound_m3657658052,
+	RoundVO_get_cardsCount_m3948424103,
+	RoundVO_set_cardsCount_m3759425594,
 	SampleObject__ctor_m1005768466,
 	SampleObject_get_StringProperty_m2930064612,
 	SampleObject_set_StringProperty_m1759976749,
@@ -32177,30 +32239,33 @@ extern const methodPointerType g_MethodPointers[16129] =
 	SampleObject_set_VectorProperty_m375571922,
 	SceneMonoBehaviour__ctor_m3321531469,
 	SceneMonoBehaviour_Init_m1859798119,
-	SceneMonoBehaviour_MoveToScene_m2583316838,
+	SceneMonoBehaviour_AddListeners_m2489556085,
+	SceneMonoBehaviour_RemoveListeners_m4293273670,
+	SceneMonoBehaviour_MoveToScene_m2765100343,
 	SceneMonoBehaviour_OnGameEvent_m641067446,
 	SceneMonoBehaviour_OnInGameEvent_m3756406208,
 	SceneTransitionManager__ctor_m2716382351,
 	SceneTransitionManager_Init_m3225750501,
 	SceneTransitionManager_SetActiveScreen_m3383367968,
-	SceneTransitionManager_SetActiveScreen_m2555694844,
+	SceneTransitionManager_SetActiveScreen_m3079263841,
 	SceneTransitionManager_RearrangeScreens_m1562589827,
 	SinglePlayerMainGame__ctor_m725906247,
 	SinglePlayerMainGame_Init_m1637520941,
 	SinglePlayerMainGame_InitGame_m2164794303,
 	SinglePlayerMainGame_UpdatePlayers_m18221774,
 	SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371,
+	SinglePlayerMainGame_GetPrevPlayerIndex_m2147577523,
 	SinglePlayerMainGame_OnDistributeAllCards_m2662254623,
 	SinglePlayerMainGame_OnGameEvent_m3147165564,
 	SinglePlayerMainGame_AutoPlay_m469515816,
 	SinglePlayerMainGame_DispatchNextRound_m2268102950,
 	SinglePlayerMainGame_OnRoundEnd_m4277269641,
-	U3CAutoPlayU3Ec__Iterator9__ctor_m2910374409,
-	U3CAutoPlayU3Ec__Iterator9_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m912528489,
-	U3CAutoPlayU3Ec__Iterator9_System_Collections_IEnumerator_get_Current_m179702269,
-	U3CAutoPlayU3Ec__Iterator9_MoveNext_m3837548875,
-	U3CAutoPlayU3Ec__Iterator9_Dispose_m744380422,
-	U3CAutoPlayU3Ec__Iterator9_Reset_m556807350,
+	U3CAutoPlayU3Ec__IteratorD__ctor_m748725854,
+	U3CAutoPlayU3Ec__IteratorD_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2911814452,
+	U3CAutoPlayU3Ec__IteratorD_System_Collections_IEnumerator_get_Current_m385199816,
+	U3CAutoPlayU3Ec__IteratorD_MoveNext_m610115798,
+	U3CAutoPlayU3Ec__IteratorD_Dispose_m2164290331,
+	U3CAutoPlayU3Ec__IteratorD_Reset_m2690126091,
 	SingletonManager__ctor_m3690008473,
 	SingletonManager_Init_m2980063131,
 	SpinHandler__ctor_m730293219,
@@ -32254,7 +32319,6 @@ extern const methodPointerType g_MethodPointers[16129] =
 	Utility_SinInterpolate_m2903343064,
 	Utility_GetRandomNumber_m363916787,
 	Utility_GetRandomNumber_m1068903833,
-	Utility_DelayedCall_m1320402319,
 	Utility_DelayedCallWithArgs_m949739098,
 	Vector2Converter__ctor_m1149976202,
 	Vector2Converter_WriteJson_m2524851850,

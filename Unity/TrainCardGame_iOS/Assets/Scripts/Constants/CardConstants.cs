@@ -21,6 +21,7 @@ public class CardConstants
     public static int CARD_VALUE_END = 13;
 
     public static List<string> CARD_VALUES = new List<string>(new string[]{ "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" });
-    public static List<string> CARD_TYPES = new List<string>(new string[]{ "D", "C", "H", "S" });
+    public static List<string> CARD_TYPES = new List<string>(new string[]{ "H", "S" });
+    //    public static List<string> CARD_TYPES = new List<string>(new string[]{ "D", "C", "H", "S" });
 }
     

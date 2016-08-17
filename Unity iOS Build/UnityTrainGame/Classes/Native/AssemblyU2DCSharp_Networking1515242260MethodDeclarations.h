@@ -64,6 +64,10 @@ extern "C"  List_1_t555210632 * Networking_get_PlayersExcludingThis_m4242695033 
 extern "C"  List_1_t1765447871 * Networking_get_PlayersIdsExcludingThis_m2072180026 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // NetworkPlayer Networking::GetPlayerById(System.String)
 extern "C"  NetworkPlayer_t4053218959 * Networking_GetPlayerById_m2192672952 (Networking_t1515242260 * __this, String_t* ___id, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// NetworkPlayer Networking::GetPlayerByIdExcludeList(System.String)
+extern "C"  NetworkPlayer_t4053218959 * Networking_GetPlayerByIdExcludeList_m3185995186 (Networking_t1515242260 * __this, String_t* ___id, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Networking::RemovePlayer(System.String)
+extern "C"  void Networking_RemovePlayer_m3493736096 (Networking_t1515242260 * __this, String_t* ___playerId, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::Init()
 extern "C"  void Networking_Init_m4091929965 (Networking_t1515242260 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Networking::OnSinglePlayerMode()

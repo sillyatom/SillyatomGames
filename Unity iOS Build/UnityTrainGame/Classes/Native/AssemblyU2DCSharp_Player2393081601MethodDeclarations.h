@@ -35,6 +35,10 @@ struct Card_t2092848;
 extern "C"  void Player__ctor_m871706298 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // CardSelectionHandler Player::get_CardSelectionHandler()
 extern "C"  CardSelectionHandler_t2914958190 * Player_get_CardSelectionHandler_m97634160 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean Player::get_IsDistributionComplete()
+extern "C"  bool Player_get_IsDistributionComplete_m3501797998 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::set_IsDistributionComplete(System.Boolean)
+extern "C"  void Player_set_IsDistributionComplete_m976958245 (Player_t2393081601 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.Generic.List`1<Card> Player::get_Cards()
 extern "C"  List_1_t799051817 * Player_get_Cards_m2643897007 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.Generic.List`1<System.String> Player::get_CardsRewarded()
@@ -49,6 +53,10 @@ extern "C"  void Player_set_DidPullOver_m4156915338 (Player_t2393081601 * __this
 extern "C"  String_t* Player_get_SelectedCardValueType_m3899190188 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Card Player::get_SelectedCard()
 extern "C"  Card_t2092848 * Player_get_SelectedCard_m249687851 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean Player::get_HasCards()
+extern "C"  bool Player_get_HasCards_m704772400 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 Player::get_CardsCount()
+extern "C"  int32_t Player_get_CardsCount_m2813266637 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::SetTurnStatus(E_PLAYER_TURN)
 extern "C"  void Player_SetTurnStatus_m1956600040 (Player_t2393081601 * __this, int32_t ___status, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::SetGrayEffectAmount(System.Single)
@@ -65,16 +73,14 @@ extern "C"  void Player_OnRoundStart_m4031893565 (Player_t2393081601 * __this, c
 extern "C"  void Player_UpdateDP_m4160431299 (Player_t2393081601 * __this, String_t* ___imagePath, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::Init()
 extern "C"  void Player_Init_m3304792154 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Player::AddCard(Card,System.Boolean)
-extern "C"  void Player_AddCard_m3248222820 (Player_t2393081601 * __this, Card_t2092848 * ___card, bool ___updateCount, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Player::AddCount(System.Int32)
-extern "C"  void Player_AddCount_m531903881 (Player_t2393081601 * __this, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Player::RemoveCount(System.Int32)
-extern "C"  void Player_RemoveCount_m737381268 (Player_t2393081601 * __this, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void Player::UpdateCount(System.Int32)
-extern "C"  void Player_UpdateCount_m2085950255 (Player_t2393081601 * __this, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// Card Player::RemoveCardWithValue(System.String,System.Boolean)
-extern "C"  Card_t2092848 * Player_RemoveCardWithValue_m1598406941 (Player_t2393081601 * __this, String_t* ___valueType, bool ___updateCount, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::EnableCountPip(System.Boolean)
+extern "C"  void Player_EnableCountPip_m2105921196 (Player_t2393081601 * __this, bool ___val, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::AddCard(Card)
+extern "C"  void Player_AddCard_m2388479993 (Player_t2393081601 * __this, Card_t2092848 * ___card, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::UpdatePipCount()
+extern "C"  void Player_UpdatePipCount_m2208836971 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// Card Player::RemoveCardWithValue(System.String)
+extern "C"  Card_t2092848 * Player_RemoveCardWithValue_m2478900832 (Player_t2393081601 * __this, String_t* ___valueType, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::SetSelectedCard(Card)
 extern "C"  void Player_SetSelectedCard_m1287222901 (Player_t2393081601 * __this, Card_t2092848 * ___card, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::AutoDeal()

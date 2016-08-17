@@ -35,6 +35,8 @@ extern "C"  void SinglePlayerMainGame_InitGame_m2164794303 (SinglePlayerMainGame
 extern "C"  void SinglePlayerMainGame_UpdatePlayers_m18221774 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::OnDistributeAllWinningCards(System.Object)
 extern "C"  void SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371 (SinglePlayerMainGame_t3863033300 * __this, Il2CppObject * ___args, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 SinglePlayerMainGame::GetPrevPlayerIndex()
+extern "C"  int32_t SinglePlayerMainGame_GetPrevPlayerIndex_m2147577523 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::OnDistributeAllCards()
 extern "C"  void SinglePlayerMainGame_OnDistributeAllCards_m2662254623 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::OnGameEvent(GameEvent)

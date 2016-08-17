@@ -24,7 +24,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         UpdatePlayers();
 
         dealer.Init();
-        dealer.CreateCards(network.numPlayers);
+        dealer.CreateCards(GameConstants.MAX_PLAYERS);
         dealer.ShuffleCards();
         UpdatePlayerCards(GameConstants.MAX_PLAYERS);
         DistributeCards(GameConstants.MAX_PLAYERS);
@@ -69,7 +69,8 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     {
         Hashtable hArgs = (Hashtable)args;
         Player player = GetPlayerById((string)hArgs["Player"]);
-        dealer.ShiftCards();
+        float delay = dealer.ShiftCards();
+        StartCoroutine(OnShiftComplete(delay));
         if (player.playerId == network.LocalId)
         {
             player.UpdateCardsPosition();
@@ -77,14 +78,23 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         //clear all round data
         player.OnRoundEnd();
         _roundHandler.OnRoundEnd();
-        _currentPlayerIndex++;
-        _currentPlayerIndex = (_currentPlayerIndex == network.numPlayers) ? 0 : _currentPlayerIndex;
         DispatchNextRound();
+    }
+
+    private int GetPrevPlayerIndex()
+    {
+        int prevIndex = (_currentPlayerIndex == 0) ? network.numPlayers - 1 : _currentPlayerIndex - 1;
+        return prevIndex;
     }
 
     override protected void OnDistributeAllCards()
     {
-        GetLocalPlayer.UpdateCardsPosition();
+        _players[0].UpdateCardsPosition();
+        foreach (var player in _players)
+        {
+            player.IsDistributionComplete = true;
+            player.EnableCountPip(true);
+        }
         _currentPlayerIndex = 0;
         _roundHandler.StartMatch();
     }
@@ -122,13 +132,21 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         vo.sender = Networking.hostId;
         vo.api_id = ++APIHandler.GetInstance().runningId;
         //add +1 round number will be incremented only on round start
+        vo.cardsCount = GetPlayerById(_currentPlayerIndex.ToString()).CardsCount;
         vo.roundId = _roundHandler.GetRoundNumber + 1;
+        vo.player_id = _currentPlayerIndex.ToString();
+        //get next player
+        _currentPlayerIndex = int.Parse(network.GetNextPlayer(_currentPlayerIndex.ToString()).PlayerId);
         vo.playerIdForRound = _currentPlayerIndex.ToString();
 
         string data = JsonConvert.SerializeObject(vo);
-
         NetworkResponse response = new NetworkResponse(NetworkConstants.API.NEXT_ROUND,
                                        -1, "", "", data);
+        if (vo.cardsCount == 0)
+        {
+            network.RemovePlayer(vo.player_id);
+            EventManager.instance.Raise(new InGameEvent(InGameEvent.REMOVE_PLAYER, vo.player_id));
+        }
         GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
         EventManager.instance.Raise(gEvent);
     }
@@ -138,11 +156,8 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
         if (_roundHandler.GetActivePlayerId != network.LocalId)
         {
-            player.DidPullOver = (Utility.GetRandomNumber(0, 100) >= 90);
+            player.DidPullOver = true;//(Utility.GetRandomNumber(0, 100) <= 90);
         }
-
-        //TODO for testing
-//		player.DidPullOver = false;
 
         Card selectedCard = player.SelectedCard;
         //if player has not selected a card

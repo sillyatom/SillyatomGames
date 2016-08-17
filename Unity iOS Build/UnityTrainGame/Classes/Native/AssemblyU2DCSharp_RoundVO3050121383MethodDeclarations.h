@@ -30,3 +30,7 @@ extern "C"  void RoundVO_set_roundId_m1649707231 (RoundVO_t3050121383 * __this, 
 extern "C"  String_t* RoundVO_get_playerIdForRound_m4024745735 (RoundVO_t3050121383 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundVO::set_playerIdForRound(System.String)
 extern "C"  void RoundVO_set_playerIdForRound_m3657658052 (RoundVO_t3050121383 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 RoundVO::get_cardsCount()
+extern "C"  int32_t RoundVO_get_cardsCount_m3948424103 (RoundVO_t3050121383 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void RoundVO::set_cardsCount(System.Int32)
+extern "C"  void RoundVO_set_cardsCount_m3759425594 (RoundVO_t3050121383 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

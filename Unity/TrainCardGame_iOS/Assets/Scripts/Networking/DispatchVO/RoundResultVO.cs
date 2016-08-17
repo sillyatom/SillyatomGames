@@ -11,4 +11,6 @@ public class RoundResultVO : HeaderVO
     public bool didPullOver{ get; set; }
 
     public Dictionary<string, List<string>> winningCards{ get; set; }
+
+    public int cardsCount{ get; set; }
 }

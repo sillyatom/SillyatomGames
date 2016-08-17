@@ -35,6 +35,8 @@ public:
 	bool ___U3CdidPullOverU3Ek__BackingField_6;
 	// System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>> RoundResultVO::<winningCards>k__BackingField
 	Dictionary_2_t3403145775 * ___U3CwinningCardsU3Ek__BackingField_7;
+	// System.Int32 RoundResultVO::<cardsCount>k__BackingField
+	int32_t ___U3CcardsCountU3Ek__BackingField_8;
 
 public:
 	inline static int32_t get_offset_of_U3CcardValueTypeU3Ek__BackingField_4() { return static_cast<int32_t>(offsetof(RoundResultVO_t2594510628, ___U3CcardValueTypeU3Ek__BackingField_4)); }
@@ -69,6 +71,14 @@ public:
 	{
 		___U3CwinningCardsU3Ek__BackingField_7 = value;
 		Il2CppCodeGenWriteBarrier(&___U3CwinningCardsU3Ek__BackingField_7, value);
+	}
+
+	inline static int32_t get_offset_of_U3CcardsCountU3Ek__BackingField_8() { return static_cast<int32_t>(offsetof(RoundResultVO_t2594510628, ___U3CcardsCountU3Ek__BackingField_8)); }
+	inline int32_t get_U3CcardsCountU3Ek__BackingField_8() const { return ___U3CcardsCountU3Ek__BackingField_8; }
+	inline int32_t* get_address_of_U3CcardsCountU3Ek__BackingField_8() { return &___U3CcardsCountU3Ek__BackingField_8; }
+	inline void set_U3CcardsCountU3Ek__BackingField_8(int32_t value)
+	{
+		___U3CcardsCountU3Ek__BackingField_8 = value;
 	}
 };
 

@@ -17,7 +17,7 @@
 #include "mscorlib_System_Action_1_gen985559125MethodDeclarations.h"
 
 // System.Void System.Action`1<UnityEngine.SocialPlatforms.IScore[]>::.ctor(System.Object,System.IntPtr)
-#define Action_1__ctor_m2334743993(__this, ___object, ___method, method) ((  void (*) (Action_1_t832764753 *, Il2CppObject *, IntPtr_t, const MethodInfo*))Action_1__ctor_m881151526_gshared)(__this, ___object, ___method, method)
+#define Action_1__ctor_m2334743993(__this, ___object, ___method, method) ((  void (*) (Action_1_t832764753 *, Il2CppObject *, IntPtr_t, const MethodInfo*))Action_1__ctor_m751950045_gshared)(__this, ___object, ___method, method)
 // System.Void System.Action`1<UnityEngine.SocialPlatforms.IScore[]>::Invoke(T)
 #define Action_1_Invoke_m50340758(__this, ___obj, method) ((  void (*) (Action_1_t832764753 *, IScoreU5BU5D_t684312048*, const MethodInfo*))Action_1_Invoke_m1684751784_gshared)(__this, ___obj, method)
 // System.IAsyncResult System.Action`1<UnityEngine.SocialPlatforms.IScore[]>::BeginInvoke(T,System.AsyncCallback,System.Object)

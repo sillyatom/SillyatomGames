@@ -29,6 +29,8 @@ public:
 	int32_t ___U3CroundIdU3Ek__BackingField_4;
 	// System.String RoundVO::<playerIdForRound>k__BackingField
 	String_t* ___U3CplayerIdForRoundU3Ek__BackingField_5;
+	// System.Int32 RoundVO::<cardsCount>k__BackingField
+	int32_t ___U3CcardsCountU3Ek__BackingField_6;
 
 public:
 	inline static int32_t get_offset_of_U3CroundIdU3Ek__BackingField_4() { return static_cast<int32_t>(offsetof(RoundVO_t3050121383, ___U3CroundIdU3Ek__BackingField_4)); }
@@ -46,6 +48,14 @@ public:
 	{
 		___U3CplayerIdForRoundU3Ek__BackingField_5 = value;
 		Il2CppCodeGenWriteBarrier(&___U3CplayerIdForRoundU3Ek__BackingField_5, value);
+	}
+
+	inline static int32_t get_offset_of_U3CcardsCountU3Ek__BackingField_6() { return static_cast<int32_t>(offsetof(RoundVO_t3050121383, ___U3CcardsCountU3Ek__BackingField_6)); }
+	inline int32_t get_U3CcardsCountU3Ek__BackingField_6() const { return ___U3CcardsCountU3Ek__BackingField_6; }
+	inline int32_t* get_address_of_U3CcardsCountU3Ek__BackingField_6() { return &___U3CcardsCountU3Ek__BackingField_6; }
+	inline void set_U3CcardsCountU3Ek__BackingField_6(int32_t value)
+	{
+		___U3CcardsCountU3Ek__BackingField_6 = value;
 	}
 };
 

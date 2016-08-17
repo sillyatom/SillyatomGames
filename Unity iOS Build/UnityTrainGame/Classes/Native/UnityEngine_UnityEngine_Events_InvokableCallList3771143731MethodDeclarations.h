@@ -36,8 +36,6 @@ extern "C"  void InvokableCallList_AddPersistentInvokableCall_m4220625340 (Invok
 extern "C"  void InvokableCallList_AddListener_m1356872764 (InvokableCallList_t3771143731 * __this, BaseInvokableCall_t1733537956 * ___call, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.InvokableCallList::RemoveListener(System.Object,System.Reflection.MethodInfo)
 extern "C"  void InvokableCallList_RemoveListener_m855004700 (InvokableCallList_t3771143731 * __this, Il2CppObject * ___targetObj, MethodInfo_t * ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Events.InvokableCallList::Clear()
-extern "C"  void InvokableCallList_Clear_m4114435434 (InvokableCallList_t3771143731 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.InvokableCallList::ClearPersistent()
 extern "C"  void InvokableCallList_ClearPersistent_m1690187553 (InvokableCallList_t3771143731 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.InvokableCallList::Invoke(System.Object[])

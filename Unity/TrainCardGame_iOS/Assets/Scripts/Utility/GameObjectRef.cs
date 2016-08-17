@@ -17,4 +17,7 @@ public class GameObjectRef : MonoBehaviour
 
     [SerializeField]
     public PopupManager popupManager;
+
+    [SerializeField]
+    public SceneTransitionManager sceneTransitionManager;
 }

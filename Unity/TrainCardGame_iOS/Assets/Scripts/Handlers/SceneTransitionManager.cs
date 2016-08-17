@@ -22,13 +22,14 @@ public class SceneTransitionManager : SceneMonoBehaviour
         RearrangeScreens();
     }
 
-    public void SetActiveScreen(string tag, bool doInit)
+    public void SetActiveScreen(string tag)
     {
         GameObject go = GameObject.FindGameObjectWithTag(tag);
         SetActiveScreen(go.GetComponent<RectTransform>());
-        if (doInit)
+        SceneMonoBehaviour sceneMono = go.GetComponent<SceneMonoBehaviour>();
+        bool isInitialized = sceneMono.isInitialized;
+        if (!isInitialized)
         {
-            SceneMonoBehaviour sceneMono = go.GetComponent<SceneMonoBehaviour>();
             if (sceneMono != null)
             {
                 sceneMono.Init();
@@ -37,6 +38,10 @@ public class SceneTransitionManager : SceneMonoBehaviour
             {
                 BridgeDebugger.Log(string.Format(" Screen {0} doesn't have Scene Monobehaviour to Init()", go.name));
             }
+        }
+        if (sceneMono != null)
+        {
+            sceneMono.OnSetToView();
         }
     }
 

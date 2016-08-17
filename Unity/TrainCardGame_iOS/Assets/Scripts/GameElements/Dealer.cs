@@ -22,6 +22,14 @@ public class Dealer : ExtMonoBehaviour
         return _cards.Count;    
     }
 
+    public void SetGrayEffect(float amount)
+    {
+        foreach (var card in _cards)
+        {
+            card.SetGrayEffect(amount);
+        }
+    }
+
     public Card PopBack()
     {
         Card retCard = null;

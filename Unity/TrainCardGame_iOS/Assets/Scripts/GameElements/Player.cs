@@ -15,6 +15,7 @@ public class Player : ExtMonoBehaviour
     [SerializeField]
     public int index;
     public string playerId;
+    public GameObject countPip;
     public Text cardCount;
     public Text playerName;
     public Image playerDP;
@@ -33,7 +34,7 @@ public class Player : ExtMonoBehaviour
 
     public CardSelectionHandler CardSelectionHandler{ get { return _cardSelectionHandler; } }
 
-    private int count = 0;
+    public bool IsDistributionComplete{ get; set; }
 
     public Image dimRed;
     public Image dimYellow;
@@ -76,6 +77,26 @@ public class Player : ExtMonoBehaviour
         get
         {
             return _cardSelectionHandler.SelectedCard;
+        }
+    }
+
+    public bool HasCards
+    {
+        get
+        {
+            return Cards.Count > 0 ? true : false;
+        }
+    }
+
+    public int CardsCount
+    {
+        get
+        {
+            if (Cards.Count != cardsHolder.transform.childCount)
+            {
+                Debug.LogError("[ Bug Sucks ] " + Cards.Count + " " + cardsHolder.transform.childCount);
+            }
+            return Cards.Count;
         }
     }
 
@@ -142,7 +163,7 @@ public class Player : ExtMonoBehaviour
     {
         get
         {
-            return (playerId == SingletonManager.reference.network.PlayersIds[0]);
+            return (playerId == SingletonManager.reference.network.LocalId);
         }
     }
 
@@ -171,7 +192,7 @@ public class Player : ExtMonoBehaviour
         _canDrag = false;
         _cards = new List<Card>();
         _cardsRewarded = new List<string>();
-
+        IsDistributionComplete = false;
         if (pullOverBtn != null)
         {
             pullOverBtn.onClick.AddListener(OnPullOver);
@@ -180,48 +201,44 @@ public class Player : ExtMonoBehaviour
         _cardSelectionHandler = gameObject.GetComponent<CardSelectionHandler>();
         _cardSelectionHandler.Init();
 
-        UpdateCount(this.count);
-
+        UpdatePipCount();
+        countPip.SetActive(false);
         SetTurnStatus(E_PLAYER_TURN.WAITING);
     }
 
-    public void AddCard(Card card, bool updateCount = false)
+    public void EnableCountPip(bool val)
+    {
+        if (IsDistributionComplete)
+        {
+            if (countPip.activeSelf != val)
+            {
+                countPip.SetActive(val);
+            }
+        }
+    }
+
+    public void AddCard(Card card)
     {
         _cards.Add(card);
-        if (updateCount)
-        {
-            cardCount.text = _cards.Count.ToString();
-        }
+//        Debug.LogError("[ AddCard ] " + card.ValueType);
+        UpdatePipCount();
     }
 
-    public void AddCount(int count)
+    public void UpdatePipCount()
     {
-        this.count += count;
-        cardCount.text = this.count.ToString();
-        UpdateCount(this.count);
-    }
-
-    public void RemoveCount(int count)
-    {
-        this.count -= count;
-        cardCount.text = this.count.ToString();
-        UpdateCount(this.count);
-    }
-
-    public void UpdateCount(int count)
-    {
+        int count = _cards.Count;
         cardCount.text = count.ToString();
-        if (count <= 0 && cardCount.gameObject.activeSelf)
+        if (count <= 0)
         {
-            cardCount.gameObject.SetActive(false);
+            EnableCountPip(false);
         }
-        else if (!cardCount.gameObject.activeSelf && count > 0)
+        else if (count > 0)
         {
-            cardCount.gameObject.SetActive(true);
+            EnableCountPip(true);
         }
     }
 
-    public Card RemoveCardWithValue(string valueType, bool updateCount = false)
+    public Card RemoveCardWithValue(string valueType)
     {
         Card retCard = null;
 
@@ -231,14 +248,12 @@ public class Player : ExtMonoBehaviour
             {
                 retCard = card;
                 _cards.Remove(card);
+//                Debug.LogError("[ RemoveCardWithValue ] " + card.ValueType);
+                UpdatePipCount();
+
                 break;
             }
         }
-        if (updateCount)
-        {
-            cardCount.text = _cards.Count.ToString();
-        }
-
         return retCard;
     }
 
@@ -262,7 +277,7 @@ public class Player : ExtMonoBehaviour
 
     public void OnRoundEnd()
     {
-        RemoveCardWithValue(SelectedCardValueType);
+//        RemoveCardWithValue(SelectedCardValueType);
         SetSelectedCard(null);
         SetTurnStatus(E_PLAYER_TURN.WAITING);
     }
@@ -280,6 +295,10 @@ public class Player : ExtMonoBehaviour
 
     public void UpdateCardsPosition()
     {
+        if (!HasCards)
+        {
+            return;
+        }
         foreach (Card card in _cards)
         {
             card.transform.rotation = Quaternion.identity;

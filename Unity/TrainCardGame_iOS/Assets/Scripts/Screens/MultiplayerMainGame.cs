@@ -18,8 +18,6 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     public Dealer dealer;
     public Networking network;
 
-    public Player GetLocalPlayer{ get { return _players[0]; } }
-
     protected List<Player> _players;
     protected RoundHandler _roundHandler;
 
@@ -56,9 +54,16 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     override protected void OnInGameEvent(InGameEvent evt)
     {
+        BridgeDebugger.Log("[ MultiplayerMainGame OnInGameEvent ] " + evt.type);
         base.OnInGameEvent(evt);
         switch (evt.type)
         {
+            case InGameEvent.REMOVE_PLAYER:
+                {
+                    Player player = GetPlayerById(evt.playerId);
+                    _players.Remove(player);
+                }
+                break;
             case InGameEvent.DISPATCH_CARDS_DATA:
                 {
                     DispatchCardsData();
@@ -77,11 +82,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 break;
             case InGameEvent.ON_CARD_SELECTED:
                 {
-                    Player player = GetLocalPlayer;
-                    if (player.playerId == SingletonManager.reference.network.LocalId && SingletonManager.reference.roundHandler.IsActivePlayerLocal)
+                    if (SingletonManager.reference.roundHandler.IsActivePlayerLocal)
                     {
-                        player.SetSelectedCard(evt.card);
-                        DealCard(player);
+                        _players[0].SetSelectedCard(evt.card);
+                        DealCard(_players[0]);
                     }
                 }
                 break;
@@ -105,18 +109,17 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         card.transform.localEulerAngles = Vector3.zero;
         Hashtable args = new Hashtable();
         args.Add("Player", player);
-        player.RemoveCount(1);
         dealer.AddCard(card);
 
         float delay = dealer.ShiftCards();
 
         if (isAutoDeal)
         {
-            Utility.DelayedCallWithArgs(gameObject, gameObject, "OnAutoDealAnimationComplete", args, 0.2f, delay);
+            DelayedCallWithArgs<object>(delay + 0.2f, OnAutoDealAnimationComplete, args);
         }
         else
         {
-            Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDealComplete", args, 0.2f, delay);
+            DelayedCallWithArgs<object>(delay + 0.2f, OnDealComplete, args);
         }
 
         if (player.IsLocalPlayer)
@@ -127,15 +130,10 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     private void OnDealComplete(object pArgs)
     {
-        //Hashtable args = (Hashtable)(pArgs);
-        //Player player = (Player)(args["Player"]);
     }
 
     private void OnAutoDealAnimationComplete(object pArgs)
     {
-        //Hashtable args = (Hashtable)(pArgs);
-        //Player player = (Player)(args["Player"]);
-
         CheckWinnings();
     }
 
@@ -148,11 +146,14 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         //CheckResult
         if (dealer.HasMatch() && player.DidPullOver)
         {
+            dealer.SetGrayEffect(1.0f);
             vo = dealer.GetResult();
             //animation
             float delay = 0.0f;
             foreach (var card in vo.cards)
             {
+                card.SetGrayEffect(0.0f);
+                card.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
                 Hashtable cArgs = new Hashtable();
                 cArgs.Add("Player", player.playerId);
                 cArgs.Add("Card", card);
@@ -168,7 +169,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             Hashtable args = new Hashtable();
             args.Add("Player", player.playerId);
             args.Add("VO", vo);
-            Utility.DelayedCallWithArgs(gameObject, gameObject, "OnDistributeAllWinningCards", args, GameConstants.DEAL_ANIM_TIME, delay + GameConstants.DEAL_ANIM_TIME);
+            DelayedCallWithArgs<object>(delay + (GameConstants.DEAL_ANIM_TIME) + 1.5f, OnDistributeAllWinningCards, args);
         }
         else if (dealer.HasMatch() && !player.DidPullOver)
         {
@@ -178,6 +179,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             //update vo.winningCards
             List<string> rewardingPlayers = new List<string>();
             int indexOf = network.PlayersIds.IndexOf(_roundHandler.GetActivePlayerId);
+            Debug.LogError(" active Playerid " + _roundHandler.GetActivePlayerId);
+            Debug.LogError(" network.PlayersIds " + network.PlayersIds.Count);
+            Debug.LogError(" IndexOf " + indexOf);
             for (int i = indexOf + 1; i < network.PlayersIds.Count; i++)
             {
                 rewardingPlayers.Add(network.PlayersIds[i]);
@@ -186,10 +190,12 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             {
                 rewardingPlayers.Add(network.PlayersIds[i]);
             }
+            Debug.LogError(" rewardingPlayers Count " + rewardingPlayers.Count);
 
             foreach (var playerId in rewardingPlayers)
             {
                 vo.winningCards[playerId] = new List<string>();
+                Debug.LogError(" winningCards playerId " + playerId);
             }
 
             int len = rewardingPlayers.Count;
@@ -200,6 +206,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 {
                     runningIndex = 0;
                 }
+
                 vo.winningCards[rewardingPlayers[runningIndex]].Add(card.ValueType);
                 runningIndex++;
             }
@@ -228,9 +235,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         Hashtable hArgs = (Hashtable)args;
         Player player = GetPlayerById((string)hArgs["Player"]);
         Card card = (Card)hArgs["Card"];
-
         card.transform.SetParent(player.cardsHolder.transform);
-        player.AddCard(card, true);
+        player.AddCard(card);
         #if !CAN_SHOW_FRONT_FACE
         card.ShowBackFace();
         #else
@@ -243,11 +249,18 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }
     }
 
+    virtual protected IEnumerator OnShiftComplete(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        dealer.SetGrayEffect(0);
+    }
+
     virtual protected void OnDistributeAllWinningCards(object args)
     {
         Hashtable hArgs = (Hashtable)args;
         Player player = GetPlayerById((string)hArgs["Player"]);
-        dealer.ShiftCards();
+        float delay = dealer.ShiftCards();
+        StartCoroutine(OnShiftComplete(delay));
         if (_roundHandler.IsActivePlayerLocal)
         {
             //send the data before dealing with cleaning up
@@ -264,8 +277,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         //clear all round data
         player.OnRoundEnd();
 
+        //clear round data
         _roundHandler.OnRoundEnd();
-
     }
 
     protected Player GetPlayerById(string playerId)
@@ -289,8 +302,9 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         vo.api_id = ++APIHandler.GetInstance().runningId;
         vo.cardValueType = GetPlayerById(_roundHandler.GetActivePlayerId).SelectedCard.ValueType;
         vo.roundId = _roundHandler.GetRoundNumber;
-        vo.didPullOver = GetLocalPlayer.DidPullOver;
+        vo.didPullOver = _players[0].DidPullOver;
         vo.winningCards = result.winningCards;
+        vo.cardsCount = _players[0].CardsCount;
 
         string data = JsonConvert.SerializeObject(vo);
 
@@ -395,7 +409,7 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     override protected void OnGameEvent(GameEvent evt)
     {
         base.OnGameEvent(evt);
-
+        BridgeDebugger.Log("[ MultiplayerMainGame OnGameEvent ] " + evt.type);
         switch (evt.type)
         {
             case GameEvent.UPDATE_CARDS_DATA:
@@ -454,26 +468,20 @@ public class MultiplayerMainGame : SceneMonoBehaviour
             foreach (var cardVT in vo.winningCards[player.playerId])
             {
                 Card card = vo.GetCardWithValueType(cardVT);
+                card.SetGrayEffect(1.0f);
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
-                args.Add("canUpdatePos", true);
-                args.Add("canAddCard", true);
 
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
-                        "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
-//                if (!isLocal)
-//                {
-//                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay, "oncomplete", "ResetScale",
-//                            "oncompleteparams", args, "oncompletetarget", this.gameObject));
-//                }
+                        "oncomplete", "OnDistributeFailedAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
                 delay += (GameConstants.DEAL_ANIM_TIME * numPlayers);
             }
 
             playerDelay += GameConstants.DEAL_ANIM_TIME;
         }            
         {
-            iTween.ScaleTo(this.gameObject, iTween.Hash("z", 1.0f, "time", GameConstants.DEAL_ANIM_TIME, "delay", delay,
+            iTween.ScaleTo(this.gameObject, iTween.Hash("z", 1.0f, "time", 0.5f, "delay", delay + 1.0f,
                     "oncomplete", "OnDistributeAllFailedCards", "oncompletetarget", this.gameObject, "oncompleteparams", oArgs));
         }
     }
@@ -481,7 +489,11 @@ public class MultiplayerMainGame : SceneMonoBehaviour
     virtual protected void OnDistributeAllFailedCards(object oArgs)
     {
         Hashtable args = (Hashtable)(oArgs);
-        GetLocalPlayer.UpdateCardsPosition();
+        string playerId = args["Player"] as string;
+        if (playerId == network.LocalId)
+        {
+            GetPlayerById(playerId).UpdateCardsPosition();
+        }
         OnDistributeAllWinningCards(args);
     }
 
@@ -498,15 +510,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
                 Hashtable args = new Hashtable();
                 args.Add("player", player);
                 args.Add("card", card);
-                args.Add("canUpdatePos", false);
-                args.Add("canAddCard", false);
                 iTween.MoveTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", player.cardsHolder.position.x, "y", player.cardsHolder.position.y, "delay", delay,
                         "oncomplete", "OnDistributeAnimationComplete", "oncompleteparams", args, "oncompletetarget", this.gameObject));
-//                if (!isLocal)
-//                {
-//                    iTween.ScaleTo(card.gameObject, iTween.Hash("time", GameConstants.DEAL_ANIM_TIME, "x", 0.5f, "y", 0.5f, "delay", delay, "oncomplete", "ResetScale",
-//                            "oncompleteparams", args, "oncompletetarget", this.gameObject));
-//                }
                 delay += (GameConstants.DEAL_ANIM_TIME * numPlayers);
             }
 
@@ -527,7 +532,17 @@ public class MultiplayerMainGame : SceneMonoBehaviour
 
     virtual protected void OnDistributeAllCards()
     {
-        GetLocalPlayer.UpdateCardsPosition();
+        if (_players[0].playerId == network.LocalId)
+        {
+            _players[0].UpdateCardsPosition();
+        }
+
+        foreach (var player in _players)
+        {
+            player.IsDistributionComplete = true;
+            player.EnableCountPip(true);
+        }
+            
         if (!Networking.IsHost)
         {
             GameEvent evt = new GameEvent(GameEvent.ACKNOWLEDGE, _lastResponse);
@@ -536,15 +551,13 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }
     }
 
-    virtual protected void OnDistributeAnimationComplete(object args)
+    virtual protected void OnDistributeFailedAnimationComplete(object args)
     {
         Hashtable hash = (Hashtable)(args);
         Player player = (Player)hash["player"];
-        player.AddCount(1);
         Card card = (Card)hash["card"];
-        bool canUpdate = (bool)hash["canUpdatePos"];
-        bool canAdd = (bool)hash["canAddCard"];
-
+        //reset to color
+        card.SetGrayEffect(0.0f);
         #if !CAN_SHOW_FRONT_FACE
         card.ShowBackFace();
         #else
@@ -555,17 +568,30 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         rectTransform.SetParent(player.cardsHolder);
         rectTransform.localScale = Vector3.one;
         rectTransform.position = player.cardsHolder.position;
-        if (canAdd)
+        player.AddCard(card);
+        if (player.IsLocalPlayer)
         {
-            player.AddCard(card);
+            player.UpdateCardsPosition();
         }
-        if (canUpdate)
-        {
-            if (player.IsLocalPlayer)
-            {
-                player.UpdateCardsPosition();
-            }
-        }		
+    }
+
+    virtual protected void OnDistributeAnimationComplete(object args)
+    {
+        Hashtable hash = (Hashtable)(args);
+        Player player = (Player)hash["player"];
+        Card card = (Card)hash["card"];
+        //reset to color
+        card.SetGrayEffect(0.0f);
+        #if !CAN_SHOW_FRONT_FACE
+        card.ShowBackFace();
+        #else
+        card.ShowFrontFace();
+        #endif
+        //swap parent
+        RectTransform rectTransform = card.gameObject.GetComponent<RectTransform>();
+        rectTransform.SetParent(player.cardsHolder);
+        rectTransform.localScale = Vector3.one;
+        rectTransform.position = player.cardsHolder.position;
     }
 
     virtual protected void DispatchNextRound()
@@ -578,6 +604,8 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         //add +1 round number will be incremented only on round start
         vo.roundId = _roundHandler.GetRoundNumber + 1;
         vo.playerIdForRound = network.PlayersIdsExcludingThis[0];
+        vo.cardsCount = _players[0].CardsCount;
+        vo.player_id = Networking.localId;
 
         string data = JsonConvert.SerializeObject(vo);
 

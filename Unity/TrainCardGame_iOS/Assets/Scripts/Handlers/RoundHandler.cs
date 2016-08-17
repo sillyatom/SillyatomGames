@@ -78,7 +78,7 @@ public class RoundHandler : ExtMonoBehaviour
     private void StartRound()
     {
         currentRound++;
-
+        BridgeDebugger.Log("Start Round - player id " + _activePlayerId);
         EventManager.instance.Raise(new InGameEvent(InGameEvent.ON_ROUND_START, _activePlayerId));
 
         //update player details
@@ -107,8 +107,8 @@ public class RoundHandler : ExtMonoBehaviour
 
     public void OnRoundEnd()
     {
-        _activePlayerId = "";
         BridgeDebugger.SillyLog(" OnRoundEnd : " + _activePlayerId);
+        _activePlayerId = "";
     }
 
     void Update()

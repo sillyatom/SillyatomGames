@@ -123,6 +123,7 @@ BOOL _matchStarted;
     
     if ([[GKLocalPlayer localPlayer]isAuthenticated])
     {
+        [[GKLocalPlayer localPlayer]registerListener:self];
         [dict setValue:[NSNumber numberWithUnsignedInt:2] forKey:@"SigningStatus"];
     }
     else
@@ -139,8 +140,6 @@ BOOL _matchStarted;
 
 -(void) sendAuthMessage
 {
-    [[GKLocalPlayer localPlayer]registerListener:self];
-    
     NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
     
     if ([[GKLocalPlayer localPlayer]isAuthenticated])

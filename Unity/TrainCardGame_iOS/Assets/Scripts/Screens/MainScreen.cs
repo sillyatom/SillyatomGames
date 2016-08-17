@@ -27,13 +27,18 @@ public class MainScreen : SceneMonoBehaviour
         network.SignInGC();
     }
 
+    protected override void OnGameEvent(GameEvent gEvent)
+    {
+        base.OnGameEvent(gEvent);
+        BridgeDebugger.Log(" [ MainScreen OnGameEvent ] " + gEvent.type);
+    }
+
     override protected void OnInGameEvent(InGameEvent evt)
     {
         switch (evt.type)
         {
             case InGameEvent.GC_STATUS:
                 _signingStatus = evt.status;
-                playBtn.onClick.RemoveAllListeners();
                 playBtn.onClick.AddListener(OnPlay);
                 break;
         }

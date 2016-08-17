@@ -1,34 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneMonoBehaviour : MonoBehaviour
+public class SceneMonoBehaviour : ExtMonoBehaviour
 {
     private SceneTransitionManager sceneTransitionManager;
-    private bool _isInitialized;
 
-    virtual public void Init()
+    override public void Init()
     {
-        if (!_isInitialized)
-        {
-            _isInitialized = true;
-            sceneTransitionManager = GameObject.FindGameObjectWithTag("SceneTransitionHandler").GetComponent<SceneTransitionManager>();
-            EventManager.instance.AddListener<GameEvent>(OnGameEvent);
-            EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
-        }
-        else
-        {
-            throw new UnityException(" SceneMono - Initializing Twice");
-        }
+        base.Init();
+        sceneTransitionManager = GameObject.FindGameObjectWithTag("SceneTransitionHandler").GetComponent<SceneTransitionManager>();
     }
 
-    virtual public void MoveToScene(string tag, bool doInit = false)
+    public override void AddListeners()
     {
-        sceneTransitionManager.SetActiveScreen(tag, doInit);
+        base.AddListeners();
+        EventManager.instance.AddListener<InGameEvent>(OnInGameEvent);
     }
 
-    virtual protected void OnGameEvent(GameEvent gEvent)
+    public override void RemoveListeners()
     {
-        
+        base.RemoveListeners();
+        EventManager.instance.RemoveListener<InGameEvent>(OnInGameEvent);
+    }
+
+    virtual public void MoveToScene(string tag)
+    {
+        OnMoveOutOfView();
+        sceneTransitionManager.SetActiveScreen(tag);
+    }
+
+    override protected void OnGameEvent(GameEvent gEvent)
+    {
+        base.OnGameEvent(gEvent);
     }
 
     virtual protected void OnInGameEvent(InGameEvent evt)

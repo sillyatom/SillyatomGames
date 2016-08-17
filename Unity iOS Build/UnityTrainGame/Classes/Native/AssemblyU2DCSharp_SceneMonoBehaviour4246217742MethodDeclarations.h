@@ -30,8 +30,12 @@ struct InGameEvent_t511087107;
 extern "C"  void SceneMonoBehaviour__ctor_m3321531469 (SceneMonoBehaviour_t4246217742 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneMonoBehaviour::Init()
 extern "C"  void SceneMonoBehaviour_Init_m1859798119 (SceneMonoBehaviour_t4246217742 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void SceneMonoBehaviour::MoveToScene(System.String,System.Boolean)
-extern "C"  void SceneMonoBehaviour_MoveToScene_m2583316838 (SceneMonoBehaviour_t4246217742 * __this, String_t* ___tag, bool ___doInit, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneMonoBehaviour::AddListeners()
+extern "C"  void SceneMonoBehaviour_AddListeners_m2489556085 (SceneMonoBehaviour_t4246217742 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneMonoBehaviour::RemoveListeners()
+extern "C"  void SceneMonoBehaviour_RemoveListeners_m4293273670 (SceneMonoBehaviour_t4246217742 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneMonoBehaviour::MoveToScene(System.String)
+extern "C"  void SceneMonoBehaviour_MoveToScene_m2765100343 (SceneMonoBehaviour_t4246217742 * __this, String_t* ___tag, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneMonoBehaviour::OnGameEvent(GameEvent)
 extern "C"  void SceneMonoBehaviour_OnGameEvent_m641067446 (SceneMonoBehaviour_t4246217742 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneMonoBehaviour::OnInGameEvent(InGameEvent)
