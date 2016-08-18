@@ -17,7 +17,7 @@ struct Networking_t1515242260;
 // System.Collections.Generic.Dictionary`2<System.String,System.Int32>
 struct Dictionary_2_t190145395;
 
-#include "AssemblyU2DCSharp_SceneMonoBehaviour4246217742.h"
+#include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -26,7 +26,7 @@ struct Dictionary_2_t190145395;
 #endif
 
 // MainScreen
-struct  MainScreen_t2442698661  : public SceneMonoBehaviour_t4246217742
+struct  MainScreen_t2442698661  : public GameScreenMonoBehaviour_t3269764764
 {
 public:
 	// UnityEngine.UI.Button MainScreen::playBtn

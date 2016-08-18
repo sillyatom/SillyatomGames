@@ -23,7 +23,7 @@ struct NetworkResponse_t1683455087;
 // System.Collections.Generic.Dictionary`2<System.String,System.Int32>
 struct Dictionary_2_t190145395;
 
-#include "AssemblyU2DCSharp_SceneMonoBehaviour4246217742.h"
+#include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -32,7 +32,7 @@ struct Dictionary_2_t190145395;
 #endif
 
 // MultiplayerMainGame
-struct  MultiplayerMainGame_t4046083237  : public SceneMonoBehaviour_t4246217742
+struct  MultiplayerMainGame_t4046083237  : public GameScreenMonoBehaviour_t3269764764
 {
 public:
 	// Dealer MultiplayerMainGame::dealer

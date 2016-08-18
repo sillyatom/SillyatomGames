@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class GenericPopup : ExtMonoBehaviour
+public class GenericPopup : BaseDialog
 {
     public Text header;
     public Text body;
@@ -16,5 +16,11 @@ public class GenericPopup : ExtMonoBehaviour
     {
         this.header.text = header;
         this.body.text = body;
+    }
+
+    public override void OnRemove()
+    {
+        base.OnRemove();
+        Destroy(gameObject);
     }
 }

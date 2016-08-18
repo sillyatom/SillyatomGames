@@ -15,7 +15,7 @@ struct RectTransform_t3317474837;
 // UnityEngine.UI.Button
 struct Button_t990034267;
 
-#include "AssemblyU2DCSharp_SceneMonoBehaviour4246217742.h"
+#include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -24,7 +24,7 @@ struct Button_t990034267;
 #endif
 
 // MatchSelectionScreen
-struct  MatchSelectionScreen_t3589239987  : public SceneMonoBehaviour_t4246217742
+struct  MatchSelectionScreen_t3589239987  : public GameScreenMonoBehaviour_t3269764764
 {
 public:
 	// UnityEngine.RectTransform MatchSelectionScreen::gameLayout

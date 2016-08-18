@@ -13837,6 +13837,8 @@ extern "C" void GameEvent_set_response_m304452356 ();
 extern "C" void GameEvent_get_vo_m187295500 ();
 extern "C" void GameEvent_set_vo_m2866285265 ();
 extern "C" void GameObjectRef__ctor_m443681481 ();
+extern "C" void GameScreenMonoBehaviour__ctor_m1875208271 ();
+extern "C" void GameScreenMonoBehaviour_OnGameEvent_m2365278580 ();
 extern "C" void GCStatusVO__ctor_m3090562388 ();
 extern "C" void GCStatusVO_get_SigningStatus_m2509911506 ();
 extern "C" void GCStatusVO_set_SigningStatus_m3973825021 ();
@@ -13909,7 +13911,6 @@ extern "C" void MainScreen__ctor_m1707852438 ();
 extern "C" void MainScreen_Init_m3193217278 ();
 extern "C" void MainScreen_AuthGC_m3239920690 ();
 extern "C" void MainScreen_StartSignInProcess_m1885858753 ();
-extern "C" void MainScreen_OnGameEvent_m3786029133 ();
 extern "C" void MainScreen_OnInGameEvent_m349397207 ();
 extern "C" void MainScreen_OnPlay_m3220741537 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorB__ctor_m2457069305 ();
@@ -16172,7 +16173,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16161] = 
+extern const methodPointerType g_MethodPointers[16162] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -30000,6 +30001,8 @@ extern const methodPointerType g_MethodPointers[16161] =
 	GameEvent_get_vo_m187295500,
 	GameEvent_set_vo_m2866285265,
 	GameObjectRef__ctor_m443681481,
+	GameScreenMonoBehaviour__ctor_m1875208271,
+	GameScreenMonoBehaviour_OnGameEvent_m2365278580,
 	GCStatusVO__ctor_m3090562388,
 	GCStatusVO_get_SigningStatus_m2509911506,
 	GCStatusVO_set_SigningStatus_m3973825021,
@@ -30072,7 +30075,6 @@ extern const methodPointerType g_MethodPointers[16161] =
 	MainScreen_Init_m3193217278,
 	MainScreen_AuthGC_m3239920690,
 	MainScreen_StartSignInProcess_m1885858753,
-	MainScreen_OnGameEvent_m3786029133,
 	MainScreen_OnInGameEvent_m349397207,
 	MainScreen_OnPlay_m3220741537,
 	U3CStartSignInProcessU3Ec__IteratorB__ctor_m2457069305,

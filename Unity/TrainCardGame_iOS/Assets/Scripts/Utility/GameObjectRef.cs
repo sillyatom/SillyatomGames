@@ -20,4 +20,10 @@ public class GameObjectRef : MonoBehaviour
 
     [SerializeField]
     public SceneTransitionManager sceneTransitionManager;
+
+    [SerializeField]
+    public GameObject gameWinDialog;
+
+    [SerializeField]
+    public GameObject gameFailDialog;
 }

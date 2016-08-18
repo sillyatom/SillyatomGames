@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 
-public class MultiplayerMainGame : SceneMonoBehaviour
+public class MultiplayerMainGame : GameScreenMonoBehaviour
 {
     [DllImport("__Internal")]
     private static extern string GetDPPath(string playerId);
@@ -52,12 +52,38 @@ public class MultiplayerMainGame : SceneMonoBehaviour
         }
     }
 
+    private void ShowWinDialog()
+    {
+        GameObject dialog = SingletonManager.reference.gameWinDialog;
+        dialog.GetComponent<GameWinDialog>().InitWithData(2, 200);
+        SingletonManager.reference.popupManager.AddPopup(dialog);
+    }
+
+    private void ShowFailDialog()
+    {
+        GameObject dialog = SingletonManager.reference.gameFailDialog;
+        dialog.GetComponent<GameFailDialog>().InitWithData(2, 200);
+        SingletonManager.reference.popupManager.AddPopup(dialog);
+    }
+
     override protected void OnInGameEvent(InGameEvent evt)
     {
         BridgeDebugger.Log("[ MultiplayerMainGame OnInGameEvent ] " + evt.type);
         base.OnInGameEvent(evt);
         switch (evt.type)
         {
+            case InGameEvent.SHOW_GAME_END_DIALOG:
+                {
+                    if (evt.playerId == network.LocalId)
+                    {
+                        ShowWinDialog();
+                    }
+                    else
+                    {
+                        ShowFailDialog();
+                    }
+                }
+                break;
             case InGameEvent.REMOVE_PLAYER:
                 {
                     Player player = GetPlayerById(evt.playerId);

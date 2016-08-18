@@ -6,8 +6,8 @@ using Newtonsoft.Json.Linq;
 
 public class ExecutionOrderManager : MonoBehaviour
 {
-    public List<SceneMonoBehaviour> _monos;
     public List<ExtMonoBehaviour> _extMonos;
+    public List<SceneMonoBehaviour> _monos;
 
     private bool _didInit = false;
 

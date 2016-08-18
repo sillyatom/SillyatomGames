@@ -2065,6 +2065,7 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3845092202.h"
 #include "AssemblyU2DCSharp_EventManager_EventDelegate4004424223.h"
 #include "AssemblyU2DCSharp_ButtonComponent2676344267.h"
+#include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 #include "AssemblyU2DCSharp_BridgeDebugger2949066474.h"
 #include "AssemblyU2DCSharp_TestScript3705514013.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObservableSuppor1582510268.h"
@@ -11502,7 +11503,7 @@ extern const int32_t g_FieldOffsetTable[9416] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2369] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -13820,6 +13821,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2369] =
 	sizeof (U3CStartDelayU3Ec__Iterator7_t3616559111), -1, 0, 0,
 	0, 0, 0, 0,
 	0, 0, 0, 0,
+	sizeof (GameScreenMonoBehaviour_t3269764764), -1, 0, 0,
 	sizeof (SceneMonoBehaviour_t4246217742), -1, 0, 0,
 	sizeof (ExtensionMethods_t1227265683), -1, sizeof(ExtensionMethods_t1227265683_StaticFields), 0,
 	sizeof (Card_t2092848), -1, 0, 0,

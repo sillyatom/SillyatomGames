@@ -211,8 +211,10 @@ BOOL _matchStarted;
     NSLog(@"Invite accepted!");
     GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithInvite:invite];
     mmvc.matchmakerDelegate = self;
+    
     UnityAppController* ctrller = (UnityAppController*)[UIApplication sharedApplication].delegate;
     [ctrller.rootViewController presentViewController:mmvc animated:YES completion:nil];
+    _delegate = ctrller;
 }
 
 

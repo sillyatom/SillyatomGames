@@ -12,6 +12,7 @@ public class InGameEvent : GameEvent
     public const string UPDATE_ROUND_DATA = "UpdateRoundData";
     public const string ON_ROUND_START = "OnRoundStart";
     public const string REMOVE_PLAYER = "RemovePlayer";
+    public const string SHOW_GAME_END_DIALOG = "ShowGameEndDialog";
 
     public string playerId{ get; set; }
 

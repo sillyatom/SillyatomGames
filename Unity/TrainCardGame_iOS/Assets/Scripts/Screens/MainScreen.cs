@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-public class MainScreen : SceneMonoBehaviour
+public class MainScreen : GameScreenMonoBehaviour
 {
     public Button playBtn;
     private Networking network;
@@ -25,12 +25,6 @@ public class MainScreen : SceneMonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         network.SignInGC();
-    }
-
-    protected override void OnGameEvent(GameEvent gEvent)
-    {
-        base.OnGameEvent(gEvent);
-        BridgeDebugger.Log(" [ MainScreen OnGameEvent ] " + gEvent.type);
     }
 
     override protected void OnInGameEvent(InGameEvent evt)

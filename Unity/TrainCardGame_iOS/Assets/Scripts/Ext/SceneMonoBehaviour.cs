@@ -8,7 +8,7 @@ public class SceneMonoBehaviour : ExtMonoBehaviour
     override public void Init()
     {
         base.Init();
-        sceneTransitionManager = GameObject.FindGameObjectWithTag("SceneTransitionHandler").GetComponent<SceneTransitionManager>();
+        sceneTransitionManager = SingletonManager.reference.sceneTransitionManager;
     }
 
     public override void AddListeners()

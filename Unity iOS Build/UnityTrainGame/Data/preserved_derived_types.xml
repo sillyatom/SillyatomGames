@@ -9,6 +9,7 @@
 <type fullname="TextTest" preserve="all"/>
 <type fullname="ButtonComponent" preserve="all"/>
 <type fullname="ExtMonoBehaviour" preserve="all"/>
+<type fullname="GameScreenMonoBehaviour" preserve="all"/>
 <type fullname="SceneMonoBehaviour" preserve="all"/>
 <type fullname="Card" preserve="all"/>
 <type fullname="Dealer" preserve="all"/>

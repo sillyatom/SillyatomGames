@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-public class MatchSelectionScreen : SceneMonoBehaviour
+public class MatchSelectionScreen : GameScreenMonoBehaviour
 {
     [DllImport("__Internal")]
     private static extern void findMatches();

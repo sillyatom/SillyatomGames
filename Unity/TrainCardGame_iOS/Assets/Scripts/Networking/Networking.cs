@@ -382,9 +382,17 @@ public class Networking : ExtMonoBehaviour
                         RemovePlayer(vo.player_id);
                         EventManager.instance.Raise(new InGameEvent(InGameEvent.REMOVE_PLAYER, vo.player_id));
                     }
-                    GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
-                    EventManager.instance.Raise(gEvent);
-                    Acknowledge(response, isIdHost(response.sender));
+                    if (_players.Count == 1)
+                    {
+                        BridgeDebugger.Log(" Game Won By " + _players[0].Name);
+                        EventManager.instance.Raise(new InGameEvent(InGameEvent.SHOW_GAME_END_DIALOG, _players[0].PlayerId));
+                    }
+                    else
+                    {
+                        GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
+                        EventManager.instance.Raise(gEvent);
+                        Acknowledge(response, isIdHost(response.sender));
+                    }
                 }
                 break;
         }

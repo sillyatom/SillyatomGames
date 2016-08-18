@@ -384,6 +384,7 @@
      <Compile Include="Assets\Scripts\Events\InGameEvent.cs" />
      <Compile Include="Assets\Scripts\Ext\ButtonComponent.cs" />
      <Compile Include="Assets\Scripts\Ext\ExtMonoBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Ext\GameScreenMonoBehaviour.cs" />
      <Compile Include="Assets\Scripts\Ext\SceneMonoBehaviour.cs" />
      <Compile Include="Assets\Scripts\ExtensionMethods\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\GameElements\Card.cs" />
@@ -411,6 +412,9 @@
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GCStatusVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GameCenterAuthVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\MatchStartedVO.cs" />
+     <Compile Include="Assets\Scripts\Popups\BaseDialog.cs" />
+     <Compile Include="Assets\Scripts\Popups\GameFailDialog.cs" />
+     <Compile Include="Assets\Scripts\Popups\GameWinDialog.cs" />
      <Compile Include="Assets\Scripts\Popups\GenericPopup.cs" />
      <Compile Include="Assets\Scripts\Screens\MainScreen.cs" />
      <Compile Include="Assets\Scripts\Screens\MatchSelectionScreen.cs" />

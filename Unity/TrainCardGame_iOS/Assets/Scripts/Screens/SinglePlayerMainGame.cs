@@ -147,6 +147,10 @@ public class SinglePlayerMainGame : MultiplayerMainGame
             network.RemovePlayer(vo.player_id);
             EventManager.instance.Raise(new InGameEvent(InGameEvent.REMOVE_PLAYER, vo.player_id));
         }
+        if (network.Players.Count == 1)
+        {
+            EventManager.instance.Raise(new InGameEvent(InGameEvent.SHOW_GAME_END_DIALOG, network.Players[0].PlayerId));
+        }
         GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
         EventManager.instance.Raise(gEvent);
     }

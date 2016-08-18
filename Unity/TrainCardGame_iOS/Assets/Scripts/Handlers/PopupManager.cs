@@ -29,7 +29,7 @@ public class PopupManager : ExtMonoBehaviour
     public void RemovePopup(GameObject popup)
     {
         _popups.RemoveAt(_popups.IndexOf(popup));
-        Destroy(popup);
+        popup.GetComponent<BaseDialog>().OnRemove();
         blocker.gameObject.SetActive(false);
         _activePopup = null;
     }

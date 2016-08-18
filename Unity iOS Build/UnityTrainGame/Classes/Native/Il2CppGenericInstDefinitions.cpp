@@ -3014,9 +3014,6 @@ extern const Il2CppGenericInst GenInst_CardSelectionHandler_t2914958190_0_0_0 = 
 extern const Il2CppType GenericPopup_t4182595893_0_0_0;
 static const Il2CppType* GenInst_GenericPopup_t4182595893_0_0_0_Types[] = { &GenericPopup_t4182595893_0_0_0 };
 extern const Il2CppGenericInst GenInst_GenericPopup_t4182595893_0_0_0 = { 1, GenInst_GenericPopup_t4182595893_0_0_0_Types };
-extern const Il2CppType SceneTransitionManager_t1210711436_0_0_0;
-static const Il2CppType* GenInst_SceneTransitionManager_t1210711436_0_0_0_Types[] = { &SceneTransitionManager_t1210711436_0_0_0 };
-extern const Il2CppGenericInst GenInst_SceneTransitionManager_t1210711436_0_0_0 = { 1, GenInst_SceneTransitionManager_t1210711436_0_0_0_Types };
 extern const Il2CppType GameObjectRef_t4121474274_0_0_0;
 static const Il2CppType* GenInst_GameObjectRef_t4121474274_0_0_0_Types[] = { &GameObjectRef_t4121474274_0_0_0 };
 extern const Il2CppGenericInst GenInst_GameObjectRef_t4121474274_0_0_0 = { 1, GenInst_GameObjectRef_t4121474274_0_0_0_Types };
@@ -3097,7 +3094,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t1028297519_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1125] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1124] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Attribute_t498693649_0_0_0,
@@ -4184,7 +4181,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1125] =
 	&GenInst_JsonConverterAttribute_t3372878503_0_0_0,
 	&GenInst_CardSelectionHandler_t2914958190_0_0_0,
 	&GenInst_GenericPopup_t4182595893_0_0_0,
-	&GenInst_SceneTransitionManager_t1210711436_0_0_0,
 	&GenInst_GameObjectRef_t4121474274_0_0_0,
 	&GenInst_TextMesh_t583678247_0_0_0,
 	&GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_PropertyPresence_t2652339728_0_0_0,
