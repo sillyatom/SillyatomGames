@@ -53,5 +53,7 @@ extern "C"  int32_t Latin1Encoding_GetMaxCharCount_m3191404014 (Latin1Encoding_t
 extern "C"  String_t* Latin1Encoding_GetString_m1453607223 (Latin1Encoding_t1597279492 * __this, ByteU5BU5D_t58506160* ___bytes, int32_t ___index, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.Latin1Encoding::GetString(System.Byte[])
 extern "C"  String_t* Latin1Encoding_GetString_m2574520983 (Latin1Encoding_t1597279492 * __this, ByteU5BU5D_t58506160* ___bytes, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.Text.Latin1Encoding::get_HeaderName()
+extern "C"  String_t* Latin1Encoding_get_HeaderName_m1411610136 (Latin1Encoding_t1597279492 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.Latin1Encoding::get_WebName()
 extern "C"  String_t* Latin1Encoding_get_WebName_m2593974593 (Latin1Encoding_t1597279492 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

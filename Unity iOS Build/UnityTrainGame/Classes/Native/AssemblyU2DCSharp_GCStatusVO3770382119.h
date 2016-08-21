@@ -10,6 +10,8 @@
 
 #include <stdint.h>
 
+// System.String
+struct String_t;
 
 #include "mscorlib_System_Object837106420.h"
 
@@ -25,6 +27,8 @@ struct  GCStatusVO_t3770382119  : public Il2CppObject
 public:
 	// System.Int32 GCStatusVO::<SigningStatus>k__BackingField
 	int32_t ___U3CSigningStatusU3Ek__BackingField_0;
+	// System.String GCStatusVO::<uid>k__BackingField
+	String_t* ___U3CuidU3Ek__BackingField_1;
 
 public:
 	inline static int32_t get_offset_of_U3CSigningStatusU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(GCStatusVO_t3770382119, ___U3CSigningStatusU3Ek__BackingField_0)); }
@@ -33,6 +37,15 @@ public:
 	inline void set_U3CSigningStatusU3Ek__BackingField_0(int32_t value)
 	{
 		___U3CSigningStatusU3Ek__BackingField_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CuidU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(GCStatusVO_t3770382119, ___U3CuidU3Ek__BackingField_1)); }
+	inline String_t* get_U3CuidU3Ek__BackingField_1() const { return ___U3CuidU3Ek__BackingField_1; }
+	inline String_t** get_address_of_U3CuidU3Ek__BackingField_1() { return &___U3CuidU3Ek__BackingField_1; }
+	inline void set_U3CuidU3Ek__BackingField_1(String_t* value)
+	{
+		___U3CuidU3Ek__BackingField_1 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CuidU3Ek__BackingField_1, value);
 	}
 };
 

@@ -30,6 +30,7 @@ public class ExecutionOrderManager : MonoBehaviour
         SingletonManager.reference.sceneTransitionManager.SetActiveScreen(TagConstants.TAG_MAIN_SCREEN);
 
         GCStatusVO vo = JsonConvert.DeserializeObject<GCStatusVO>(data);
+        BridgeDebugger.Log("Device_id " + vo.uid);
         InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, vo.SigningStatus);
         EventManager.instance.Raise(evt);
     }

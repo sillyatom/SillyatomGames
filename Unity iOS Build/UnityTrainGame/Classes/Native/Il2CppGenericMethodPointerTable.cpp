@@ -868,8 +868,8 @@ extern "C" void CollectionUtils_IndexOf_TisIl2CppObject_m693327549_gshared ();
 extern "C" void CollectionUtils_IndexOf_TisIl2CppObject_m4170589023_gshared ();
 extern "C" void CollectionUtils_IndexOf_TisIl2CppObject_m4201499891_gshared ();
 extern "C" void CollectionUtils_U3CCastValid_1U3Em__2A_TisIl2CppObject_m225677957_gshared ();
-extern "C" void U3CTryGetSingleItemU3Ec__AnonStorey1A_1__ctor_m998140102_gshared ();
-extern "C" void U3CTryGetSingleItemU3Ec__AnonStorey1A_1_U3CU3Em__2B_m3109771264_gshared ();
+extern "C" void U3CTryGetSingleItemU3Ec__AnonStorey1B_1__ctor_m1959754119_gshared ();
+extern "C" void U3CTryGetSingleItemU3Ec__AnonStorey1B_1_U3CU3Em__2B_m3802872961_gshared ();
 extern "C" void CollectionWrapper_1_System_Collections_IList_get_IsFixedSize_m547318575_gshared ();
 extern "C" void CollectionWrapper_1_System_Collections_IList_get_Item_m1139880641_gshared ();
 extern "C" void CollectionWrapper_1_System_Collections_IList_set_Item_m3190695448_gshared ();
@@ -905,10 +905,10 @@ extern "C" void ConvertUtils_ConvertOrCast_TisIl2CppObject_m374405390_gshared ()
 extern "C" void ConvertUtils_ConvertOrCast_TisIl2CppObject_m2640121320_gshared ();
 extern "C" void ConvertUtils_TryConvertOrCast_TisIl2CppObject_m2322212464_gshared ();
 extern "C" void ConvertUtils_TryConvertOrCast_TisIl2CppObject_m58813058_gshared ();
-extern "C" void U3CTryConvertU3Ec__AnonStorey1F_1__ctor_m3582831546_gshared ();
-extern "C" void U3CTryConvertU3Ec__AnonStorey1F_1_U3CU3Em__30_m1284128351_gshared ();
-extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey21_1__ctor_m2999072166_gshared ();
-extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey21_1_U3CU3Em__32_m1420319117_gshared ();
+extern "C" void U3CTryConvertU3Ec__AnonStorey20_1__ctor_m3647423107_gshared ();
+extern "C" void U3CTryConvertU3Ec__AnonStorey20_1_U3CU3Em__30_m3227076328_gshared ();
+extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey22_1__ctor_m3960686183_gshared ();
+extern "C" void U3CTryConvertOrCastU3Ec__AnonStorey22_1_U3CU3Em__32_m2113420814_gshared ();
 extern "C" void DictionaryWrapper_2_System_Collections_IDictionary_get_IsFixedSize_m1554541772_gshared ();
 extern "C" void DictionaryWrapper_2_System_Collections_IDictionary_get_Keys_m3386191675_gshared ();
 extern "C" void DictionaryWrapper_2_System_Collections_IDictionary_get_Values_m912544105_gshared ();
@@ -958,20 +958,20 @@ extern "C" void LateBoundReflectionDelegateFactory_CreateGet_TisIl2CppObject_m42
 extern "C" void LateBoundReflectionDelegateFactory_CreateGet_TisIl2CppObject_m3476688234_gshared ();
 extern "C" void LateBoundReflectionDelegateFactory_CreateSet_TisIl2CppObject_m3380507076_gshared ();
 extern "C" void LateBoundReflectionDelegateFactory_CreateSet_TisIl2CppObject_m3709492259_gshared ();
-extern "C" void U3CCreateMethodCallU3Ec__AnonStorey24_1__ctor_m1478372174_gshared ();
-extern "C" void U3CCreateMethodCallU3Ec__AnonStorey24_1_U3CU3Em__39_m2507328024_gshared ();
-extern "C" void U3CCreateMethodCallU3Ec__AnonStorey24_1_U3CU3Em__3A_m3531701520_gshared ();
-extern "C" void U3CCreateDefaultConstructorU3Ec__AnonStorey25_1__ctor_m3484536745_gshared ();
-extern "C" void U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_U3CU3Em__3B_m3401118368_gshared ();
-extern "C" void U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_U3CU3Em__3C_m3401119329_gshared ();
-extern "C" void U3CCreateGetU3Ec__AnonStorey26_1__ctor_m3542731567_gshared ();
-extern "C" void U3CCreateGetU3Ec__AnonStorey26_1_U3CU3Em__3D_m2185491018_gshared ();
+extern "C" void U3CCreateMethodCallU3Ec__AnonStorey25_1__ctor_m2439986191_gshared ();
+extern "C" void U3CCreateMethodCallU3Ec__AnonStorey25_1_U3CU3Em__39_m1323980727_gshared ();
+extern "C" void U3CCreateMethodCallU3Ec__AnonStorey25_1_U3CU3Em__3A_m2348354223_gshared ();
+extern "C" void U3CCreateDefaultConstructorU3Ec__AnonStorey26_1__ctor_m151183466_gshared ();
+extern "C" void U3CCreateDefaultConstructorU3Ec__AnonStorey26_1_U3CU3Em__3B_m4094220065_gshared ();
+extern "C" void U3CCreateDefaultConstructorU3Ec__AnonStorey26_1_U3CU3Em__3C_m4094221026_gshared ();
 extern "C" void U3CCreateGetU3Ec__AnonStorey27_1__ctor_m209378288_gshared ();
-extern "C" void U3CCreateGetU3Ec__AnonStorey27_1_U3CU3Em__3E_m2196836936_gshared ();
-extern "C" void U3CCreateSetU3Ec__AnonStorey28_1__ctor_m2236943037_gshared ();
-extern "C" void U3CCreateSetU3Ec__AnonStorey28_1_U3CU3Em__3F_m2745111187_gshared ();
+extern "C" void U3CCreateGetU3Ec__AnonStorey27_1_U3CU3Em__3D_m2196807145_gshared ();
+extern "C" void U3CCreateGetU3Ec__AnonStorey28_1__ctor_m1170992305_gshared ();
+extern "C" void U3CCreateGetU3Ec__AnonStorey28_1_U3CU3Em__3E_m2208153063_gshared ();
 extern "C" void U3CCreateSetU3Ec__AnonStorey29_1__ctor_m3198557054_gshared ();
-extern "C" void U3CCreateSetU3Ec__AnonStorey29_1_U3CU3Em__40_m1336700681_gshared ();
+extern "C" void U3CCreateSetU3Ec__AnonStorey29_1_U3CU3Em__3F_m1720417266_gshared ();
+extern "C" void U3CCreateSetU3Ec__AnonStorey2A_1__ctor_m2301534598_gshared ();
+extern "C" void U3CCreateSetU3Ec__AnonStorey2A_1_U3CU3Em__40_m1729083905_gshared ();
 extern "C" void ListWrapper_1_get_Item_m3673329412_gshared ();
 extern "C" void ListWrapper_1_set_Item_m2730021009_gshared ();
 extern "C" void ListWrapper_1_get_Count_m1481238114_gshared ();
@@ -997,9 +997,9 @@ extern "C" void ReflectionUtils_GetAttribute_TisIl2CppObject_m2370909790_gshared
 extern "C" void ReflectionUtils_GetAttribute_TisIl2CppObject_m3144536547_gshared ();
 extern "C" void ReflectionUtils_GetAttributes_TisIl2CppObject_m2736745628_gshared ();
 extern "C" void StringUtils_ForgivingCaseSensitiveFind_TisIl2CppObject_m3955585872_gshared ();
-extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1__ctor_m2833486824_gshared ();
-extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4A_m2247377849_gshared ();
-extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4B_m2050864344_gshared ();
+extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1__ctor_m3795100841_gshared ();
+extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4A_m4197678104_gshared ();
+extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4B_m4001164599_gshared ();
 extern "C" void ThreadSafeStore_2__ctor_m835646605_gshared ();
 extern "C" void ThreadSafeStore_2_Get_m2306648125_gshared ();
 extern "C" void ThreadSafeStore_2_AddValue_m171817077_gshared ();
@@ -1011,8 +1011,8 @@ extern "C" void EventDelegate_1__ctor_m4231268031_gshared ();
 extern "C" void EventDelegate_1_Invoke_m540564645_gshared ();
 extern "C" void EventDelegate_1_BeginInvoke_m3667145466_gshared ();
 extern "C" void EventDelegate_1_EndInvoke_m3034493007_gshared ();
-extern "C" void U3CAddListenerU3Ec__AnonStorey2F_1__ctor_m3860782722_gshared ();
-extern "C" void U3CAddListenerU3Ec__AnonStorey2F_1_U3CU3Em__4C_m4200445744_gshared ();
+extern "C" void U3CAddListenerU3Ec__AnonStorey30_1__ctor_m3925374283_gshared ();
+extern "C" void U3CAddListenerU3Ec__AnonStorey30_1_U3CU3Em__4C_m1715812551_gshared ();
 extern "C" void ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430_gshared ();
 extern "C" void ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_m2577880131_gshared ();
 extern "C" void ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_TisIl2CppObject_m1864766621_gshared ();
@@ -2302,9 +2302,9 @@ extern "C" void EnumValues_1__ctor_m1304986810_gshared ();
 extern "C" void EnumValues_1_GetKeyForItem_m356483402_gshared ();
 extern "C" void EnumValues_1__ctor_m1471327349_gshared ();
 extern "C" void EnumValues_1_GetKeyForItem_m2282326315_gshared ();
-extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1__ctor_m2181769213_gshared ();
-extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4A_m341639260_gshared ();
-extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4B_m145125755_gshared ();
+extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1__ctor_m3389687388_gshared ();
+extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4A_m4194852061_gshared ();
+extern "C" void U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4B_m3998338556_gshared ();
 extern "C" void ThreadSafeStore_2_AddValue_m3087662362_gshared ();
 extern "C" void ThreadSafeStore_2_AddValue_m527102645_gshared ();
 extern "C" void Action_1__ctor_m88247757_gshared ();
@@ -7202,8 +7202,8 @@ extern const methodPointerType g_Il2CppGenericMethodPointers[6332] =
 	(methodPointerType)&CollectionUtils_IndexOf_TisIl2CppObject_m4170589023_gshared/* 848*/,
 	(methodPointerType)&CollectionUtils_IndexOf_TisIl2CppObject_m4201499891_gshared/* 849*/,
 	(methodPointerType)&CollectionUtils_U3CCastValid_1U3Em__2A_TisIl2CppObject_m225677957_gshared/* 850*/,
-	(methodPointerType)&U3CTryGetSingleItemU3Ec__AnonStorey1A_1__ctor_m998140102_gshared/* 851*/,
-	(methodPointerType)&U3CTryGetSingleItemU3Ec__AnonStorey1A_1_U3CU3Em__2B_m3109771264_gshared/* 852*/,
+	(methodPointerType)&U3CTryGetSingleItemU3Ec__AnonStorey1B_1__ctor_m1959754119_gshared/* 851*/,
+	(methodPointerType)&U3CTryGetSingleItemU3Ec__AnonStorey1B_1_U3CU3Em__2B_m3802872961_gshared/* 852*/,
 	(methodPointerType)&CollectionWrapper_1_System_Collections_IList_get_IsFixedSize_m547318575_gshared/* 853*/,
 	(methodPointerType)&CollectionWrapper_1_System_Collections_IList_get_Item_m1139880641_gshared/* 854*/,
 	(methodPointerType)&CollectionWrapper_1_System_Collections_IList_set_Item_m3190695448_gshared/* 855*/,
@@ -7239,10 +7239,10 @@ extern const methodPointerType g_Il2CppGenericMethodPointers[6332] =
 	(methodPointerType)&ConvertUtils_ConvertOrCast_TisIl2CppObject_m2640121320_gshared/* 885*/,
 	(methodPointerType)&ConvertUtils_TryConvertOrCast_TisIl2CppObject_m2322212464_gshared/* 886*/,
 	(methodPointerType)&ConvertUtils_TryConvertOrCast_TisIl2CppObject_m58813058_gshared/* 887*/,
-	(methodPointerType)&U3CTryConvertU3Ec__AnonStorey1F_1__ctor_m3582831546_gshared/* 888*/,
-	(methodPointerType)&U3CTryConvertU3Ec__AnonStorey1F_1_U3CU3Em__30_m1284128351_gshared/* 889*/,
-	(methodPointerType)&U3CTryConvertOrCastU3Ec__AnonStorey21_1__ctor_m2999072166_gshared/* 890*/,
-	(methodPointerType)&U3CTryConvertOrCastU3Ec__AnonStorey21_1_U3CU3Em__32_m1420319117_gshared/* 891*/,
+	(methodPointerType)&U3CTryConvertU3Ec__AnonStorey20_1__ctor_m3647423107_gshared/* 888*/,
+	(methodPointerType)&U3CTryConvertU3Ec__AnonStorey20_1_U3CU3Em__30_m3227076328_gshared/* 889*/,
+	(methodPointerType)&U3CTryConvertOrCastU3Ec__AnonStorey22_1__ctor_m3960686183_gshared/* 890*/,
+	(methodPointerType)&U3CTryConvertOrCastU3Ec__AnonStorey22_1_U3CU3Em__32_m2113420814_gshared/* 891*/,
 	(methodPointerType)&DictionaryWrapper_2_System_Collections_IDictionary_get_IsFixedSize_m1554541772_gshared/* 892*/,
 	(methodPointerType)&DictionaryWrapper_2_System_Collections_IDictionary_get_Keys_m3386191675_gshared/* 893*/,
 	(methodPointerType)&DictionaryWrapper_2_System_Collections_IDictionary_get_Values_m912544105_gshared/* 894*/,
@@ -7292,20 +7292,20 @@ extern const methodPointerType g_Il2CppGenericMethodPointers[6332] =
 	(methodPointerType)&LateBoundReflectionDelegateFactory_CreateGet_TisIl2CppObject_m3476688234_gshared/* 938*/,
 	(methodPointerType)&LateBoundReflectionDelegateFactory_CreateSet_TisIl2CppObject_m3380507076_gshared/* 939*/,
 	(methodPointerType)&LateBoundReflectionDelegateFactory_CreateSet_TisIl2CppObject_m3709492259_gshared/* 940*/,
-	(methodPointerType)&U3CCreateMethodCallU3Ec__AnonStorey24_1__ctor_m1478372174_gshared/* 941*/,
-	(methodPointerType)&U3CCreateMethodCallU3Ec__AnonStorey24_1_U3CU3Em__39_m2507328024_gshared/* 942*/,
-	(methodPointerType)&U3CCreateMethodCallU3Ec__AnonStorey24_1_U3CU3Em__3A_m3531701520_gshared/* 943*/,
-	(methodPointerType)&U3CCreateDefaultConstructorU3Ec__AnonStorey25_1__ctor_m3484536745_gshared/* 944*/,
-	(methodPointerType)&U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_U3CU3Em__3B_m3401118368_gshared/* 945*/,
-	(methodPointerType)&U3CCreateDefaultConstructorU3Ec__AnonStorey25_1_U3CU3Em__3C_m3401119329_gshared/* 946*/,
-	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey26_1__ctor_m3542731567_gshared/* 947*/,
-	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey26_1_U3CU3Em__3D_m2185491018_gshared/* 948*/,
-	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey27_1__ctor_m209378288_gshared/* 949*/,
-	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey27_1_U3CU3Em__3E_m2196836936_gshared/* 950*/,
-	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey28_1__ctor_m2236943037_gshared/* 951*/,
-	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey28_1_U3CU3Em__3F_m2745111187_gshared/* 952*/,
-	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey29_1__ctor_m3198557054_gshared/* 953*/,
-	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey29_1_U3CU3Em__40_m1336700681_gshared/* 954*/,
+	(methodPointerType)&U3CCreateMethodCallU3Ec__AnonStorey25_1__ctor_m2439986191_gshared/* 941*/,
+	(methodPointerType)&U3CCreateMethodCallU3Ec__AnonStorey25_1_U3CU3Em__39_m1323980727_gshared/* 942*/,
+	(methodPointerType)&U3CCreateMethodCallU3Ec__AnonStorey25_1_U3CU3Em__3A_m2348354223_gshared/* 943*/,
+	(methodPointerType)&U3CCreateDefaultConstructorU3Ec__AnonStorey26_1__ctor_m151183466_gshared/* 944*/,
+	(methodPointerType)&U3CCreateDefaultConstructorU3Ec__AnonStorey26_1_U3CU3Em__3B_m4094220065_gshared/* 945*/,
+	(methodPointerType)&U3CCreateDefaultConstructorU3Ec__AnonStorey26_1_U3CU3Em__3C_m4094221026_gshared/* 946*/,
+	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey27_1__ctor_m209378288_gshared/* 947*/,
+	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey27_1_U3CU3Em__3D_m2196807145_gshared/* 948*/,
+	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey28_1__ctor_m1170992305_gshared/* 949*/,
+	(methodPointerType)&U3CCreateGetU3Ec__AnonStorey28_1_U3CU3Em__3E_m2208153063_gshared/* 950*/,
+	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey29_1__ctor_m3198557054_gshared/* 951*/,
+	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey29_1_U3CU3Em__3F_m1720417266_gshared/* 952*/,
+	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey2A_1__ctor_m2301534598_gshared/* 953*/,
+	(methodPointerType)&U3CCreateSetU3Ec__AnonStorey2A_1_U3CU3Em__40_m1729083905_gshared/* 954*/,
 	(methodPointerType)&ListWrapper_1_get_Item_m3673329412_gshared/* 955*/,
 	(methodPointerType)&ListWrapper_1_set_Item_m2730021009_gshared/* 956*/,
 	(methodPointerType)&ListWrapper_1_get_Count_m1481238114_gshared/* 957*/,
@@ -7331,9 +7331,9 @@ extern const methodPointerType g_Il2CppGenericMethodPointers[6332] =
 	(methodPointerType)&ReflectionUtils_GetAttribute_TisIl2CppObject_m3144536547_gshared/* 977*/,
 	(methodPointerType)&ReflectionUtils_GetAttributes_TisIl2CppObject_m2736745628_gshared/* 978*/,
 	(methodPointerType)&StringUtils_ForgivingCaseSensitiveFind_TisIl2CppObject_m3955585872_gshared/* 979*/,
-	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1__ctor_m2833486824_gshared/* 980*/,
-	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4A_m2247377849_gshared/* 981*/,
-	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4B_m2050864344_gshared/* 982*/,
+	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1__ctor_m3795100841_gshared/* 980*/,
+	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4A_m4197678104_gshared/* 981*/,
+	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4B_m4001164599_gshared/* 982*/,
 	(methodPointerType)&ThreadSafeStore_2__ctor_m835646605_gshared/* 983*/,
 	(methodPointerType)&ThreadSafeStore_2_Get_m2306648125_gshared/* 984*/,
 	(methodPointerType)&ThreadSafeStore_2_AddValue_m171817077_gshared/* 985*/,
@@ -7345,8 +7345,8 @@ extern const methodPointerType g_Il2CppGenericMethodPointers[6332] =
 	(methodPointerType)&EventDelegate_1_Invoke_m540564645_gshared/* 991*/,
 	(methodPointerType)&EventDelegate_1_BeginInvoke_m3667145466_gshared/* 992*/,
 	(methodPointerType)&EventDelegate_1_EndInvoke_m3034493007_gshared/* 993*/,
-	(methodPointerType)&U3CAddListenerU3Ec__AnonStorey2F_1__ctor_m3860782722_gshared/* 994*/,
-	(methodPointerType)&U3CAddListenerU3Ec__AnonStorey2F_1_U3CU3Em__4C_m4200445744_gshared/* 995*/,
+	(methodPointerType)&U3CAddListenerU3Ec__AnonStorey30_1__ctor_m3925374283_gshared/* 994*/,
+	(methodPointerType)&U3CAddListenerU3Ec__AnonStorey30_1_U3CU3Em__4C_m1715812551_gshared/* 995*/,
 	(methodPointerType)&ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430_gshared/* 996*/,
 	(methodPointerType)&ExtMonoBehaviour_StartDelayWithArgs_TisIl2CppObject_m2577880131_gshared/* 997*/,
 	(methodPointerType)&ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_TisIl2CppObject_m1864766621_gshared/* 998*/,
@@ -8636,9 +8636,9 @@ extern const methodPointerType g_Il2CppGenericMethodPointers[6332] =
 	(methodPointerType)&EnumValues_1_GetKeyForItem_m356483402_gshared/* 2282*/,
 	(methodPointerType)&EnumValues_1__ctor_m1471327349_gshared/* 2283*/,
 	(methodPointerType)&EnumValues_1_GetKeyForItem_m2282326315_gshared/* 2284*/,
-	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1__ctor_m2181769213_gshared/* 2285*/,
-	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4A_m341639260_gshared/* 2286*/,
-	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2E_1_U3CU3Em__4B_m145125755_gshared/* 2287*/,
+	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1__ctor_m3389687388_gshared/* 2285*/,
+	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4A_m4194852061_gshared/* 2286*/,
+	(methodPointerType)&U3CForgivingCaseSensitiveFindU3Ec__AnonStorey2F_1_U3CU3Em__4B_m3998338556_gshared/* 2287*/,
 	(methodPointerType)&ThreadSafeStore_2_AddValue_m3087662362_gshared/* 2288*/,
 	(methodPointerType)&ThreadSafeStore_2_AddValue_m527102645_gshared/* 2289*/,
 	(methodPointerType)&Action_1__ctor_m88247757_gshared/* 2290*/,

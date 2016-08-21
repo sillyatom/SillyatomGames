@@ -7,6 +7,7 @@
 //
 #import "GameKitHelper.h"
 #import "../UnityAppController.h"
+#import "SSKeychain.h"
 
 @implementation GameKitHelper
 
@@ -121,14 +122,25 @@ BOOL _matchStarted;
 {
     NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
     
+    NSString * uid = [GameKitHelper RetrieveUID];
+    if (uid == NULL)
+    {
+        [GameKitHelper SetUID:[GameKitHelper GetUUID]];
+        uid = [GameKitHelper RetrieveUID];
+    }
+    
+    NSLog(@"Retrieve UID %@", uid);
+
     if ([[GKLocalPlayer localPlayer]isAuthenticated])
     {
         [[GKLocalPlayer localPlayer]registerListener:self];
         [dict setValue:[NSNumber numberWithUnsignedInt:2] forKey:@"SigningStatus"];
+        [dict setObject:uid forKey:@"uid"];
     }
     else
     {
         [dict setValue:[NSNumber numberWithUnsignedInteger:0] forKey:@"SigningStatus"];
+        [dict setObject:uid forKey:@"uid"];
     }
     
     NSError * error = nil;
@@ -136,6 +148,25 @@ BOOL _matchStarted;
     NSString * dataStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 
     UnitySendMessage("ExecutionOrder", "Init", [dataStr UTF8String]);
+}
+
++ (void) SetUID : (NSString*)uid
+{
+    [SSKeychain setPassword:uid forService:@"com.sillyatomgames.trains" account:@"user"];
+}
+
++(NSString*) RetrieveUID
+{
+    return [SSKeychain passwordForService:@"com.sillyatomgames.trains" account:@"user"];
+}
+
++ (NSString *)GetUUID
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    NSString *aNSString = (__bridge NSString *)string;
+    return aNSString;
 }
 
 -(void) sendAuthMessage

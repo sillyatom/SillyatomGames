@@ -22,6 +22,8 @@ struct APIHandler_t2277647344;
 struct PopupManager_t2711269761;
 // SceneTransitionManager
 struct SceneTransitionManager_t1210711436;
+// UnityEngine.GameObject
+struct GameObject_t4012695102;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -47,6 +49,10 @@ public:
 	PopupManager_t2711269761 * ___popupManager_6;
 	// SceneTransitionManager GameObjectRef::sceneTransitionManager
 	SceneTransitionManager_t1210711436 * ___sceneTransitionManager_7;
+	// UnityEngine.GameObject GameObjectRef::gameWinDialog
+	GameObject_t4012695102 * ___gameWinDialog_8;
+	// UnityEngine.GameObject GameObjectRef::gameFailDialog
+	GameObject_t4012695102 * ___gameFailDialog_9;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -101,6 +107,24 @@ public:
 	{
 		___sceneTransitionManager_7 = value;
 		Il2CppCodeGenWriteBarrier(&___sceneTransitionManager_7, value);
+	}
+
+	inline static int32_t get_offset_of_gameWinDialog_8() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___gameWinDialog_8)); }
+	inline GameObject_t4012695102 * get_gameWinDialog_8() const { return ___gameWinDialog_8; }
+	inline GameObject_t4012695102 ** get_address_of_gameWinDialog_8() { return &___gameWinDialog_8; }
+	inline void set_gameWinDialog_8(GameObject_t4012695102 * value)
+	{
+		___gameWinDialog_8 = value;
+		Il2CppCodeGenWriteBarrier(&___gameWinDialog_8, value);
+	}
+
+	inline static int32_t get_offset_of_gameFailDialog_9() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___gameFailDialog_9)); }
+	inline GameObject_t4012695102 * get_gameFailDialog_9() const { return ___gameFailDialog_9; }
+	inline GameObject_t4012695102 ** get_address_of_gameFailDialog_9() { return &___gameFailDialog_9; }
+	inline void set_gameFailDialog_9(GameObject_t4012695102 * value)
+	{
+		___gameFailDialog_9 = value;
+		Il2CppCodeGenWriteBarrier(&___gameFailDialog_9, value);
 	}
 };
 

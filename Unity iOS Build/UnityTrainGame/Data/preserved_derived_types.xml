@@ -22,15 +22,19 @@
 <type fullname="SpinHandler" preserve="all"/>
 <type fullname="Main" preserve="all"/>
 <type fullname="Networking" preserve="all"/>
+<type fullname="PostURL" preserve="all"/>
+<type fullname="BaseDialog" preserve="all"/>
+<type fullname="GameFailDialog" preserve="all"/>
+<type fullname="GameWinDialog" preserve="all"/>
 <type fullname="GenericPopup" preserve="all"/>
 <type fullname="MainScreen" preserve="all"/>
 <type fullname="MatchSelectionScreen" preserve="all"/>
 <type fullname="MultiplayerMainGame" preserve="all"/>
 <type fullname="SinglePlayerMainGame" preserve="all"/>
-<type fullname="TestScript" preserve="all"/>
 <type fullname="GameObjectRef" preserve="all"/>
 <type fullname="InGameInfoText" preserve="all"/>
 <type fullname="SingletonManager" preserve="all"/>
+<type fullname="TestScript" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>

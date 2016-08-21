@@ -513,3 +513,9 @@ UnityEngine.Transform::set_parentInternal
 UnityEngine.Transform::GetChild
 UnityEngine.Transform::get_parentInternal
 UnityEngine.UnhandledExceptionHandler::NativeUnhandledExceptionHandler
+UnityEngine.WWW::get_isDone
+UnityEngine.WWW::get_bytes
+UnityEngine.WWW::get_error
+UnityEngine.WWW::get_responseHeadersString
+UnityEngine.WWW::DestroyWWW
+UnityEngine.WWW::InitWWW

@@ -59,10 +59,10 @@ struct DataMemberAttribute_t3625462001;
 struct EventDelegate_t4004424223;
 // Card
 struct Card_t2092848;
-// SceneMonoBehaviour
-struct SceneMonoBehaviour_t4246217742;
 // ExtMonoBehaviour
 struct ExtMonoBehaviour_t2624599193;
+// SceneMonoBehaviour
+struct SceneMonoBehaviour_t4246217742;
 // API
 struct API_t65019;
 // NetworkPlayer
@@ -103,8 +103,8 @@ struct Player_t2393081601;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3846323878.h"
 #include "AssemblyU2DCSharp_EventManager_EventDelegate4004424223.h"
 #include "AssemblyU2DCSharp_Card2092848.h"
-#include "AssemblyU2DCSharp_SceneMonoBehaviour4246217742.h"
 #include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
+#include "AssemblyU2DCSharp_SceneMonoBehaviour4246217742.h"
 #include "AssemblyU2DCSharp_API65018.h"
 #include "AssemblyU2DCSharp_NetworkPlayer4053218959.h"
 #include "AssemblyU2DCSharp_NetworkResponse1683455087.h"
@@ -570,21 +570,6 @@ public:
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
 	}
 };
-// SceneMonoBehaviour[]
-struct SceneMonoBehaviourU5BU5D_t2284041211  : public Il2CppArray
-{
-public:
-	ALIGN_TYPE (8) SceneMonoBehaviour_t4246217742 * m_Items[1];
-
-public:
-	inline SceneMonoBehaviour_t4246217742 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
-	inline SceneMonoBehaviour_t4246217742 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
-	inline void SetAt(il2cpp_array_size_t index, SceneMonoBehaviour_t4246217742 * value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-};
 // ExtMonoBehaviour[]
 struct ExtMonoBehaviourU5BU5D_t4004499684  : public Il2CppArray
 {
@@ -595,6 +580,21 @@ public:
 	inline ExtMonoBehaviour_t2624599193 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
 	inline ExtMonoBehaviour_t2624599193 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
 	inline void SetAt(il2cpp_array_size_t index, ExtMonoBehaviour_t2624599193 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// SceneMonoBehaviour[]
+struct SceneMonoBehaviourU5BU5D_t2284041211  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) SceneMonoBehaviour_t4246217742 * m_Items[1];
+
+public:
+	inline SceneMonoBehaviour_t4246217742 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline SceneMonoBehaviour_t4246217742 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, SceneMonoBehaviour_t4246217742 * value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);

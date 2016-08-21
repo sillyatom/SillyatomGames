@@ -912,6 +912,8 @@
 #include "UnityEngine_UnityEngine_ResourceRequest2256525006.h"
 #include "UnityEngine_UnityEngine_SortingLayer1789336218.h"
 #include "UnityEngine_UnityEngine_SpriteMeshType2246008089.h"
+#include "UnityEngine_UnityEngine_WWWForm3999572776.h"
+#include "UnityEngine_UnityEngine_WWWTranscoder2954555297.h"
 #include "UnityEngine_UnityEngine_AsyncOperation3374395064.h"
 #include "UnityEngine_UnityEngine_Application450040189.h"
 #include "UnityEngine_UnityEngine_Camera3533968274.h"
@@ -1301,9 +1303,9 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlDe2023072328.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo3886750706.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo2302997311.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1219097719.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1686381958.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo2338115118.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo3432290318.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo1686381959.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Converters_XmlNo2338115119.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_DefaultValueHand3337232248.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonArrayAttribu2894116366.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134.h"
@@ -1358,27 +1360,27 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Required3381566050.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem4227645115.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema784386180.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem2504580292.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem2504580293.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3472853112.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1081788280.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem4182086140.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema554744219.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1856914841.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1856914842.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3130009042.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1662421389.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem2256819293.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1524499937.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3478077351.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem3478077352.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem2257008021.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema424268942.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_SchemaExte994739971.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_SchemaExte994739972.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_UndefinedS576293603.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_Validatio1948980208.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Re3504657184.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2164550322.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Def531145136.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2698107158.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De1057672077.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Def531145137.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2698107159.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De1057672078.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Def258914185.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2071761170.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De4116944666.h"
@@ -1395,7 +1397,7 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1638952051.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1236026520.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1236026528.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1794357283.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2629456141.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1197019735.h"
@@ -1406,23 +1408,23 @@
 #include "AssemblyU2DCSharp_System_Runtime_Serialization_Enu2225818298.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_TypeNameHandling2373316525.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Base641606947748.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collect420883095.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3670503064.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec2550116769.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collect420883096.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec3670503065.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec2550116770.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver2270763477.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3846323878.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1018633126.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3673050843.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3106773951.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver1018633127.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3673050844.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Conver3106773952.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_EnumUt3585396487.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1497004953.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect767490589.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec1253501039.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec2023321997.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec1253501040.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflec2023321998.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1107775176.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String2072168994.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1159182709.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String2072168995.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1159182710.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Validat272309903.h"
 #include "AssemblyU2DCSharp_CardConstants1869142015.h"
 #include "AssemblyU2DCSharp_GameConstants893838685.h"
@@ -1460,22 +1462,26 @@
 #include "AssemblyU2DCSharp_NetworkPlayer4053218959.h"
 #include "AssemblyU2DCSharp_NetworkResponse1683455087.h"
 #include "AssemblyU2DCSharp_Networking1515242260.h"
+#include "AssemblyU2DCSharp_PostURL_U3CWaitForRequestU3Ec__I2479391160.h"
 #include "AssemblyU2DCSharp_GCStatusVO3770382119.h"
 #include "AssemblyU2DCSharp_GameCenterAuthVO3371240520.h"
 #include "AssemblyU2DCSharp_MatchStartedVO2528145109.h"
+#include "AssemblyU2DCSharp_BaseDialog735619993.h"
+#include "AssemblyU2DCSharp_GameWinDialog176796754.h"
 #include "AssemblyU2DCSharp_GenericPopup4182595893.h"
 #include "AssemblyU2DCSharp_MainScreen2442698661.h"
-#include "AssemblyU2DCSharp_MainScreen_U3CStartSignInProcess2572545928.h"
+#include "AssemblyU2DCSharp_MainScreen_U3CStartSignInProcess2572545929.h"
 #include "AssemblyU2DCSharp_MatchSelectionScreen3589239987.h"
 #include "AssemblyU2DCSharp_MultiplayerMainGame4046083237.h"
-#include "AssemblyU2DCSharp_MultiplayerMainGame_U3COnShiftCo2598313008.h"
+#include "AssemblyU2DCSharp_MultiplayerMainGame_U3COnShiftCo2598313009.h"
 #include "AssemblyU2DCSharp_SinglePlayerMainGame3863033300.h"
-#include "AssemblyU2DCSharp_SinglePlayerMainGame_U3CAutoPlay3593857298.h"
+#include "AssemblyU2DCSharp_SinglePlayerMainGame_U3CAutoPlay3593857299.h"
 #include "AssemblyU2DCSharp_GameObjectRef4121474274.h"
 #include "AssemblyU2DCSharp_InGameInfoText36852466.h"
-#include "AssemblyU2DCSharp_InGameInfoText_U3CRemoveMessageU1537395691.h"
+#include "AssemblyU2DCSharp_InGameInfoText_U3CRemoveMessageU1537395692.h"
 #include "AssemblyU2DCSharp_SingletonManager825254210.h"
 #include "AssemblyU2DCSharp_Utility1549674828.h"
+#include "AssemblyU2DCSharp_TestScript3705514013.h"
 #include "mscorlib_U3CModuleU3E86524790.h"
 #include "mscorlib_System_Object837106420.h"
 #include "mscorlib_System_ValueType4014882752.h"
@@ -1854,6 +1860,7 @@
 #include "UnityEngine_UnityEngine_Sprite4006040370.h"
 #include "UnityEngine_UnityEngine_SpriteRenderer2223784725.h"
 #include "UnityEngine_UnityEngine_Sprites_DataUtility4121269839.h"
+#include "UnityEngine_UnityEngine_WWW1522972100.h"
 #include "UnityEngine_UnityEngine_UnityString963216403.h"
 #include "UnityEngine_UnityEngine_Application_LogCallback3235662729.h"
 #include "UnityEngine_UnityEngine_Behaviour3120504042.h"
@@ -2067,7 +2074,8 @@
 #include "AssemblyU2DCSharp_ButtonComponent2676344267.h"
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 #include "AssemblyU2DCSharp_BridgeDebugger2949066474.h"
-#include "AssemblyU2DCSharp_TestScript3705514013.h"
+#include "AssemblyU2DCSharp_PostURL1273431183.h"
+#include "AssemblyU2DCSharp_GameFailDialog1770299320.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObservableSuppor1582510268.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObservableSuppor2177590122.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObservableSuppor2916829087.h"
@@ -2081,7 +2089,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9416] = 
+extern const int32_t g_FieldOffsetTable[9446] = 
 {
 	0,
 	0,
@@ -7810,6 +7818,20 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	SpriteMeshType_t2246008089::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
+	WWWForm_t3999572776::get_offset_of_formData_0(),
+	WWWForm_t3999572776::get_offset_of_fieldNames_1(),
+	WWWForm_t3999572776::get_offset_of_fileNames_2(),
+	WWWForm_t3999572776::get_offset_of_types_3(),
+	WWWForm_t3999572776::get_offset_of_boundary_4(),
+	WWWForm_t3999572776::get_offset_of_containsFiles_5(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_ucHexChars_0(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_lcHexChars_1(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_urlEscapeChar_2(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_urlSpace_3(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_urlForbidden_4(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_qpEscapeChar_5(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_qpSpace_6(),
+	WWWTranscoder_t2954555297_StaticFields::get_offset_of_qpForbidden_7(),
 	AsyncOperation_t3374395064::get_offset_of_m_Ptr_0(),
 	Application_t450040189_StaticFields::get_offset_of_s_LogCallbackHandler_0(),
 	Application_t450040189_StaticFields::get_offset_of_s_LogCallbackHandlerThreaded_1(),
@@ -10551,9 +10573,9 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	XmlNodeConverter_t2302997311_StaticFields::get_offset_of_U3CU3Ef__switchU24map0_11(),
 	XmlNodeConverter_t2302997311_StaticFields::get_offset_of_U3CU3Ef__switchU24map1_12(),
 	XmlNodeConverter_t2302997311_StaticFields::get_offset_of_U3CU3Ef__amU24cache6_13(),
-	U3CSerializeNodeU3Ec__AnonStoreyF_t1219097719::get_offset_of_node_0(),
-	U3CReadArrayElementsU3Ec__AnonStorey10_t1686381958::get_offset_of_propertyName_0(),
-	U3CDeserializeNodeU3Ec__AnonStorey11_t2338115118::get_offset_of_propertyName_0(),
+	U3CSerializeNodeU3Ec__AnonStorey10_t3432290318::get_offset_of_node_0(),
+	U3CReadArrayElementsU3Ec__AnonStorey11_t1686381959::get_offset_of_propertyName_0(),
+	U3CDeserializeNodeU3Ec__AnonStorey12_t2338115119::get_offset_of_propertyName_0(),
 	DefaultValueHandling_t3337232248::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -10904,7 +10926,7 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	JsonSchemaBuilder_t784386180::get_offset_of__currentSchema_3(),
 	JsonSchemaBuilder_t784386180_StaticFields::get_offset_of_U3CU3Ef__switchU24map2_4(),
 	JsonSchemaBuilder_t784386180_StaticFields::get_offset_of_U3CU3Ef__switchU24map3_5(),
-	U3CMapTypeU3Ec__AnonStorey12_t2504580292::get_offset_of_type_0(),
+	U3CMapTypeU3Ec__AnonStorey13_t2504580293::get_offset_of_type_0(),
 	0,
 	0,
 	0,
@@ -10948,7 +10970,7 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	JsonSchemaGenerator_t4182086140::get_offset_of_U3CUndefinedSchemaIdHandlingU3Ek__BackingField_4(),
 	TypeSchema_t554744219::get_offset_of_U3CTypeU3Ek__BackingField_0(),
 	TypeSchema_t554744219::get_offset_of_U3CSchemaU3Ek__BackingField_1(),
-	U3CGenerateInternalU3Ec__AnonStorey13_t1856914841::get_offset_of_type_0(),
+	U3CGenerateInternalU3Ec__AnonStorey14_t1856914842::get_offset_of_type_0(),
 	JsonSchemaModel_t3130009042::get_offset_of_U3CRequiredU3Ek__BackingField_0(),
 	JsonSchemaModel_t3130009042::get_offset_of_U3CTypeU3Ek__BackingField_1(),
 	JsonSchemaModel_t3130009042::get_offset_of_U3CMinimumLengthU3Ek__BackingField_2(),
@@ -10980,7 +11002,7 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	JsonSchemaNode_t2256819293_StaticFields::get_offset_of_U3CU3Ef__amU24cache6_6(),
 	JsonSchemaNode_t2256819293_StaticFields::get_offset_of_U3CU3Ef__amU24cache7_7(),
 	JsonSchemaResolver_t1524499937::get_offset_of_U3CLoadedSchemasU3Ek__BackingField_0(),
-	U3CGetSchemaU3Ec__AnonStorey14_t3478077351::get_offset_of_id_0(),
+	U3CGetSchemaU3Ec__AnonStorey15_t3478077352::get_offset_of_id_0(),
 	JsonSchemaType_t2257008021::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -10994,7 +11016,7 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	JsonSchemaWriter_t424268942::get_offset_of__writer_0(),
 	JsonSchemaWriter_t424268942::get_offset_of__resolver_1(),
 	JsonSchemaWriter_t424268942_StaticFields::get_offset_of_U3CU3Ef__amU24cache2_2(),
-	U3CIsValidU3Ec__AnonStorey15_t994739971::get_offset_of_valid_0(),
+	U3CIsValidU3Ec__AnonStorey16_t994739972::get_offset_of_valid_0(),
 	UndefinedSchemaIdHandling_t576293603::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -11013,9 +11035,9 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	DefaultContractResolver_t2164550322_StaticFields::get_offset_of_U3CU3Ef__amU24cache7_7(),
 	DefaultContractResolver_t2164550322_StaticFields::get_offset_of_U3CU3Ef__amU24cache8_8(),
 	DefaultContractResolver_t2164550322_StaticFields::get_offset_of_U3CU3Ef__amU24cache9_9(),
-	U3CCreateISerializableContractU3Ec__AnonStorey16_t531145136::get_offset_of_methodCall_0(),
-	U3CCreateShouldSerializeTestU3Ec__AnonStorey17_t2698107158::get_offset_of_shouldSerializeCall_0(),
-	U3CSetIsSpecifiedActionsU3Ec__AnonStorey18_t1057672077::get_offset_of_specifiedPropertyGet_0(),
+	U3CCreateISerializableContractU3Ec__AnonStorey17_t531145137::get_offset_of_methodCall_0(),
+	U3CCreateShouldSerializeTestU3Ec__AnonStorey18_t2698107159::get_offset_of_shouldSerializeCall_0(),
+	U3CSetIsSpecifiedActionsU3Ec__AnonStorey19_t1057672078::get_offset_of_specifiedPropertyGet_0(),
 	DefaultReferenceResolver_t258914185::get_offset_of__referenceCount_0(),
 	DefaultSerializationBinder_t2071761170_StaticFields::get_offset_of_Instance_0(),
 	DefaultSerializationBinder_t2071761170::get_offset_of__typeCache_1(),
@@ -11095,10 +11117,10 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	0,
 	0,
 	0,
-	U3CCreateAndPopulateListU3Ec__AnonStorey19_t1236026520::get_offset_of_reference_0(),
-	U3CCreateAndPopulateListU3Ec__AnonStorey19_t1236026520::get_offset_of_contract_1(),
-	U3CCreateAndPopulateListU3Ec__AnonStorey19_t1236026520::get_offset_of_reader_2(),
-	U3CCreateAndPopulateListU3Ec__AnonStorey19_t1236026520::get_offset_of_U3CU3Ef__this_3(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528::get_offset_of_reference_0(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528::get_offset_of_contract_1(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528::get_offset_of_reader_2(),
+	U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528::get_offset_of_U3CU3Ef__this_3(),
 	JsonSerializerInternalWriter_t1794357283::get_offset_of__internalSerializer_3(),
 	JsonSerializerInternalWriter_t1794357283::get_offset_of__serializeStack_4(),
 	JsonSerializerProxy_t2629456141::get_offset_of__serializerReader_15(),
@@ -11143,27 +11165,27 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	0,
 	0,
 	0,
-	U3CCreateCollectionWrapperU3Ec__AnonStorey1B_t420883095::get_offset_of_collectionDefinition_0(),
-	U3CCreateCollectionWrapperU3Ec__AnonStorey1B_t420883095::get_offset_of_list_1(),
-	U3CCreateListWrapperU3Ec__AnonStorey1C_t3670503064::get_offset_of_listDefinition_0(),
-	U3CCreateListWrapperU3Ec__AnonStorey1C_t3670503064::get_offset_of_list_1(),
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey1D_t2550116769::get_offset_of_dictionaryDefinition_0(),
-	U3CCreateDictionaryWrapperU3Ec__AnonStorey1D_t2550116769::get_offset_of_dictionary_1(),
+	U3CCreateCollectionWrapperU3Ec__AnonStorey1C_t420883096::get_offset_of_collectionDefinition_0(),
+	U3CCreateCollectionWrapperU3Ec__AnonStorey1C_t420883096::get_offset_of_list_1(),
+	U3CCreateListWrapperU3Ec__AnonStorey1D_t3670503065::get_offset_of_listDefinition_0(),
+	U3CCreateListWrapperU3Ec__AnonStorey1D_t3670503065::get_offset_of_list_1(),
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey1E_t2550116770::get_offset_of_dictionaryDefinition_0(),
+	U3CCreateDictionaryWrapperU3Ec__AnonStorey1E_t2550116770::get_offset_of_dictionary_1(),
 	0,
 	0,
 	0,
 	ConvertUtils_t2270763477_StaticFields::get_offset_of_CastConverters_0(),
 	TypeConvertKey_t3846323878::get_offset_of__initialType_0() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	TypeConvertKey_t3846323878::get_offset_of__targetType_1() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	U3CCreateCastConverterU3Ec__AnonStorey1E_t1018633126::get_offset_of_call_0(),
+	U3CCreateCastConverterU3Ec__AnonStorey1F_t1018633127::get_offset_of_call_0(),
 	0,
-	U3CTryConvertU3Ec__AnonStorey20_t3673050843::get_offset_of_initialValue_0(),
-	U3CTryConvertU3Ec__AnonStorey20_t3673050843::get_offset_of_culture_1(),
-	U3CTryConvertU3Ec__AnonStorey20_t3673050843::get_offset_of_targetType_2(),
+	U3CTryConvertU3Ec__AnonStorey21_t3673050844::get_offset_of_initialValue_0(),
+	U3CTryConvertU3Ec__AnonStorey21_t3673050844::get_offset_of_culture_1(),
+	U3CTryConvertU3Ec__AnonStorey21_t3673050844::get_offset_of_targetType_2(),
 	0,
-	U3CTryConvertOrCastU3Ec__AnonStorey22_t3106773951::get_offset_of_initialValue_0(),
-	U3CTryConvertOrCastU3Ec__AnonStorey22_t3106773951::get_offset_of_culture_1(),
-	U3CTryConvertOrCastU3Ec__AnonStorey22_t3106773951::get_offset_of_targetType_2(),
+	U3CTryConvertOrCastU3Ec__AnonStorey23_t3106773952::get_offset_of_initialValue_0(),
+	U3CTryConvertOrCastU3Ec__AnonStorey23_t3106773952::get_offset_of_culture_1(),
+	U3CTryConvertOrCastU3Ec__AnonStorey23_t3106773952::get_offset_of_targetType_2(),
 	0,
 	0,
 	0,
@@ -11190,8 +11212,8 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	ReflectionUtils_t767490589_StaticFields::get_offset_of_U3CU3Ef__amU24cache2_2(),
 	ReflectionUtils_t767490589_StaticFields::get_offset_of_U3CU3Ef__amU24cache3_3(),
 	ReflectionUtils_t767490589_StaticFields::get_offset_of_U3CU3Ef__amU24cache4_4(),
-	U3CGetFieldsAndPropertiesU3Ec__AnonStorey2A_t1253501039::get_offset_of_bindingAttr_0(),
-	U3CGetChildPrivatePropertiesU3Ec__AnonStorey2B_t2023321997::get_offset_of_nonPublicProperty_0(),
+	U3CGetFieldsAndPropertiesU3Ec__AnonStorey2B_t1253501040::get_offset_of_bindingAttr_0(),
+	U3CGetChildPrivatePropertiesU3Ec__AnonStorey2C_t2023321998::get_offset_of_nonPublicProperty_0(),
 	StringBuffer_t1107775176::get_offset_of__buffer_0(),
 	StringBuffer_t1107775176::get_offset_of__position_1(),
 	StringBuffer_t1107775176_StaticFields::get_offset_of__emptyBuffer_2(),
@@ -11200,9 +11222,9 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	0,
 	0,
 	0,
-	U3CIndentU3Ec__AnonStorey2C_t2072168994::get_offset_of_indentChar_0(),
-	U3CIndentU3Ec__AnonStorey2C_t2072168994::get_offset_of_indentation_1(),
-	U3CNumberLinesU3Ec__AnonStorey2D_t1159182709::get_offset_of_lineNumber_0(),
+	U3CIndentU3Ec__AnonStorey2D_t2072168995::get_offset_of_indentChar_0(),
+	U3CIndentU3Ec__AnonStorey2D_t2072168995::get_offset_of_indentation_1(),
+	U3CNumberLinesU3Ec__AnonStorey2E_t1159182710::get_offset_of_lineNumber_0(),
 	0,
 	0,
 	0,
@@ -11290,9 +11312,10 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	0,
 	0,
 	0,
-	InGameEvent_t511087107::get_offset_of_U3CplayerIdU3Ek__BackingField_22(),
-	InGameEvent_t511087107::get_offset_of_U3CcardU3Ek__BackingField_23(),
-	InGameEvent_t511087107::get_offset_of_U3CstatusU3Ek__BackingField_24(),
+	0,
+	InGameEvent_t511087107::get_offset_of_U3CplayerIdU3Ek__BackingField_23(),
+	InGameEvent_t511087107::get_offset_of_U3CcardU3Ek__BackingField_24(),
+	InGameEvent_t511087107::get_offset_of_U3CstatusU3Ek__BackingField_25(),
 	ExtMonoBehaviour_t2624599193::get_offset_of__isInitialized_2(),
 	U3CStartDelayU3Ec__Iterator7_t3616559111::get_offset_of_delay_0(),
 	U3CStartDelayU3Ec__Iterator7_t3616559111::get_offset_of_callback_1(),
@@ -11362,8 +11385,8 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_24(),
 	CardSelectionHandler_t2914958190::get_offset_of__selectedCard_3(),
 	CardSelectionHandler_t2914958190::get_offset_of_U3CplayerIdU3Ek__BackingField_4(),
-	ExecutionOrderManager_t3968579479::get_offset_of__monos_2(),
-	ExecutionOrderManager_t3968579479::get_offset_of__extMonos_3(),
+	ExecutionOrderManager_t3968579479::get_offset_of__extMonos_2(),
+	ExecutionOrderManager_t3968579479::get_offset_of__monos_3(),
 	ExecutionOrderManager_t3968579479::get_offset_of__didInit_4(),
 	PopupManager_t2711269761::get_offset_of_blocker_3(),
 	PopupManager_t2711269761::get_offset_of_genericPopup_4(),
@@ -11449,18 +11472,30 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	Networking_t1515242260_StaticFields::get_offset_of_localId_12(),
 	Networking_t1515242260::get_offset_of__pauseUpdate_13(),
 	Networking_t1515242260_StaticFields::get_offset_of_U3CU3Ef__switchU24map6_14(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_www_0(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U24PC_1(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U24current_2(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U3CU24U3Ewww_3(),
 	GCStatusVO_t3770382119::get_offset_of_U3CSigningStatusU3Ek__BackingField_0(),
+	GCStatusVO_t3770382119::get_offset_of_U3CuidU3Ek__BackingField_1(),
 	GameCenterAuthVO_t3371240520::get_offset_of_api_0(),
 	MatchStartedVO_t2528145109::get_offset_of_api_0(),
-	GenericPopup_t4182595893::get_offset_of_header_3(),
-	GenericPopup_t4182595893::get_offset_of_body_4(),
+	BaseDialog_t735619993::get_offset_of_closeBtn_3(),
+	BaseDialog_t735619993::get_offset_of_okBtn_4(),
+	BaseDialog_t735619993::get_offset_of__initPosition_5(),
+	BaseDialog_t735619993::get_offset_of__parentTransform_6(),
+	GameWinDialog_t176796754::get_offset_of_stars_7(),
+	GameWinDialog_t176796754::get_offset_of_totalStarsEarned_8(),
+	GameWinDialog_t176796754::get_offset_of_tokensEarned_9(),
+	GenericPopup_t4182595893::get_offset_of_header_7(),
+	GenericPopup_t4182595893::get_offset_of_body_8(),
 	MainScreen_t2442698661::get_offset_of_playBtn_4(),
 	MainScreen_t2442698661::get_offset_of_network_5(),
 	MainScreen_t2442698661::get_offset_of__signingStatus_6(),
 	MainScreen_t2442698661_StaticFields::get_offset_of_U3CU3Ef__switchU24map7_7(),
-	U3CStartSignInProcessU3Ec__IteratorB_t2572545928::get_offset_of_U24PC_0(),
-	U3CStartSignInProcessU3Ec__IteratorB_t2572545928::get_offset_of_U24current_1(),
-	U3CStartSignInProcessU3Ec__IteratorB_t2572545928::get_offset_of_U3CU3Ef__this_2(),
+	U3CStartSignInProcessU3Ec__IteratorC_t2572545929::get_offset_of_U24PC_0(),
+	U3CStartSignInProcessU3Ec__IteratorC_t2572545929::get_offset_of_U24current_1(),
+	U3CStartSignInProcessU3Ec__IteratorC_t2572545929::get_offset_of_U3CU3Ef__this_2(),
 	MatchSelectionScreen_t3589239987::get_offset_of_gameLayout_4(),
 	MatchSelectionScreen_t3589239987::get_offset_of_autoMatchBtn_5(),
 	MatchSelectionScreen_t3589239987::get_offset_of_inviteBtn_6(),
@@ -11472,38 +11507,41 @@ extern const int32_t g_FieldOffsetTable[9416] =
 	MultiplayerMainGame_t4046083237::get_offset_of__lastResponse_8(),
 	MultiplayerMainGame_t4046083237_StaticFields::get_offset_of_U3CU3Ef__switchU24map8_9(),
 	MultiplayerMainGame_t4046083237_StaticFields::get_offset_of_U3CU3Ef__switchU24map9_10(),
-	U3COnShiftCompleteU3Ec__IteratorC_t2598313008::get_offset_of_delay_0(),
-	U3COnShiftCompleteU3Ec__IteratorC_t2598313008::get_offset_of_U24PC_1(),
-	U3COnShiftCompleteU3Ec__IteratorC_t2598313008::get_offset_of_U24current_2(),
-	U3COnShiftCompleteU3Ec__IteratorC_t2598313008::get_offset_of_U3CU24U3Edelay_3(),
-	U3COnShiftCompleteU3Ec__IteratorC_t2598313008::get_offset_of_U3CU3Ef__this_4(),
+	U3COnShiftCompleteU3Ec__IteratorD_t2598313009::get_offset_of_delay_0(),
+	U3COnShiftCompleteU3Ec__IteratorD_t2598313009::get_offset_of_U24PC_1(),
+	U3COnShiftCompleteU3Ec__IteratorD_t2598313009::get_offset_of_U24current_2(),
+	U3COnShiftCompleteU3Ec__IteratorD_t2598313009::get_offset_of_U3CU24U3Edelay_3(),
+	U3COnShiftCompleteU3Ec__IteratorD_t2598313009::get_offset_of_U3CU3Ef__this_4(),
 	SinglePlayerMainGame_t3863033300::get_offset_of__currentPlayerIndex_11(),
 	SinglePlayerMainGame_t3863033300_StaticFields::get_offset_of_U3CU3Ef__switchU24mapA_12(),
-	U3CAutoPlayU3Ec__IteratorD_t3593857298::get_offset_of_U24PC_0(),
-	U3CAutoPlayU3Ec__IteratorD_t3593857298::get_offset_of_U24current_1(),
-	U3CAutoPlayU3Ec__IteratorD_t3593857298::get_offset_of_U3CU3Ef__this_2(),
+	U3CAutoPlayU3Ec__IteratorE_t3593857299::get_offset_of_U24PC_0(),
+	U3CAutoPlayU3Ec__IteratorE_t3593857299::get_offset_of_U24current_1(),
+	U3CAutoPlayU3Ec__IteratorE_t3593857299::get_offset_of_U3CU3Ef__this_2(),
 	GameObjectRef_t4121474274::get_offset_of_roundHandler_2(),
 	GameObjectRef_t4121474274::get_offset_of_cardSelectionHandler_3(),
 	GameObjectRef_t4121474274::get_offset_of_network_4(),
 	GameObjectRef_t4121474274::get_offset_of_apiHandler_5(),
 	GameObjectRef_t4121474274::get_offset_of_popupManager_6(),
 	GameObjectRef_t4121474274::get_offset_of_sceneTransitionManager_7(),
+	GameObjectRef_t4121474274::get_offset_of_gameWinDialog_8(),
+	GameObjectRef_t4121474274::get_offset_of_gameFailDialog_9(),
 	InGameInfoText_t36852466::get_offset_of_text_3(),
 	InGameInfoText_t36852466::get_offset_of__removeCoroutine_4(),
-	U3CRemoveMessageU3Ec__IteratorE_t1537395691::get_offset_of_callback_0(),
-	U3CRemoveMessageU3Ec__IteratorE_t1537395691::get_offset_of_U24PC_1(),
-	U3CRemoveMessageU3Ec__IteratorE_t1537395691::get_offset_of_U24current_2(),
-	U3CRemoveMessageU3Ec__IteratorE_t1537395691::get_offset_of_U3CU24U3Ecallback_3(),
-	U3CRemoveMessageU3Ec__IteratorE_t1537395691::get_offset_of_U3CU3Ef__this_4(),
+	U3CRemoveMessageU3Ec__IteratorF_t1537395692::get_offset_of_callback_0(),
+	U3CRemoveMessageU3Ec__IteratorF_t1537395692::get_offset_of_U24PC_1(),
+	U3CRemoveMessageU3Ec__IteratorF_t1537395692::get_offset_of_U24current_2(),
+	U3CRemoveMessageU3Ec__IteratorF_t1537395692::get_offset_of_U3CU24U3Ecallback_3(),
+	U3CRemoveMessageU3Ec__IteratorF_t1537395692::get_offset_of_U3CU3Ef__this_4(),
 	SingletonManager_t825254210_StaticFields::get_offset_of_reference_3(),
 	Utility_t1549674828_StaticFields::get_offset_of_random_0(),
+	TestScript_t3705514013::get_offset_of_cloneTest_2(),
 	0,
 	0,
 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2378] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -12975,6 +13013,9 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	sizeof (Sprite_t4006040370), -1, 0, 0,
 	sizeof (SpriteRenderer_t2223784725), -1, 0, 0,
 	sizeof (DataUtility_t4121269839), -1, 0, 0,
+	sizeof (WWW_t1522972100), -1, 0, 0,
+	sizeof (WWWForm_t3999572776), -1, 0, 0,
+	sizeof (WWWTranscoder_t2954555297), -1, sizeof(WWWTranscoder_t2954555297_StaticFields), 0,
 	sizeof (UnityString_t963216403), -1, 0, 0,
 	sizeof (AsyncOperation_t3374395064), sizeof(AsyncOperation_t3374395064_marshaled_pinvoke), 0, 0,
 	sizeof (Application_t450040189), -1, sizeof(Application_t450040189_StaticFields), 0,
@@ -13624,9 +13665,9 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	0, -1, 0, 0,
 	0, -1, 0, 0,
 	sizeof (XmlNodeConverter_t2302997311), -1, sizeof(XmlNodeConverter_t2302997311_StaticFields), 0,
-	sizeof (U3CSerializeNodeU3Ec__AnonStoreyF_t1219097719), -1, 0, 0,
-	sizeof (U3CReadArrayElementsU3Ec__AnonStorey10_t1686381958), -1, 0, 0,
-	sizeof (U3CDeserializeNodeU3Ec__AnonStorey11_t2338115118), -1, 0, 0,
+	sizeof (U3CSerializeNodeU3Ec__AnonStorey10_t3432290318), -1, 0, 0,
+	sizeof (U3CReadArrayElementsU3Ec__AnonStorey11_t1686381959), -1, 0, 0,
+	sizeof (U3CDeserializeNodeU3Ec__AnonStorey12_t2338115119), -1, 0, 0,
 	sizeof (DefaultValueHandling_t3337232248)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	0, -1, 0, 0,
 	sizeof (JsonArrayAttribute_t2894116366), -1, 0, 0,
@@ -13697,31 +13738,31 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	sizeof (Required_t3381566050)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (JsonSchema_t4227645115), -1, 0, 0,
 	sizeof (JsonSchemaBuilder_t784386180), -1, sizeof(JsonSchemaBuilder_t784386180_StaticFields), 0,
-	sizeof (U3CMapTypeU3Ec__AnonStorey12_t2504580292), -1, 0, 0,
+	sizeof (U3CMapTypeU3Ec__AnonStorey13_t2504580293), -1, 0, 0,
 	sizeof (JsonSchemaConstants_t3472853112), -1, sizeof(JsonSchemaConstants_t3472853112_StaticFields), 0,
 	sizeof (JsonSchemaException_t1081788280), -1, 0, 0,
 	sizeof (JsonSchemaGenerator_t4182086140), -1, 0, 0,
 	sizeof (TypeSchema_t554744219), -1, 0, 0,
-	sizeof (U3CGenerateInternalU3Ec__AnonStorey13_t1856914841), -1, 0, 0,
+	sizeof (U3CGenerateInternalU3Ec__AnonStorey14_t1856914842), -1, 0, 0,
 	sizeof (JsonSchemaModel_t3130009042), -1, 0, 0,
 	sizeof (JsonSchemaModelBuilder_t1662421389), -1, 0, 0,
 	sizeof (JsonSchemaNode_t2256819293), -1, sizeof(JsonSchemaNode_t2256819293_StaticFields), 0,
 	sizeof (JsonSchemaNodeCollection_t3364623707), -1, 0, 0,
 	sizeof (JsonSchemaResolver_t1524499937), -1, 0, 0,
-	sizeof (U3CGetSchemaU3Ec__AnonStorey14_t3478077351), -1, 0, 0,
+	sizeof (U3CGetSchemaU3Ec__AnonStorey15_t3478077352), -1, 0, 0,
 	sizeof (JsonSchemaType_t2257008021)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (JsonSchemaWriter_t424268942), -1, sizeof(JsonSchemaWriter_t424268942_StaticFields), 0,
 	sizeof (SchemaExtensions_t3848408743), -1, 0, 0,
-	sizeof (U3CIsValidU3Ec__AnonStorey15_t994739971), -1, 0, 0,
+	sizeof (U3CIsValidU3Ec__AnonStorey16_t994739972), -1, 0, 0,
 	sizeof (UndefinedSchemaIdHandling_t576293603)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (ValidationEventArgs_t1948980208), -1, 0, 0,
 	0, 0, 0, 0,
 	sizeof (CamelCasePropertyNamesContractResolver_t3371534270), -1, 0, 0,
 	sizeof (ResolverContractKey_t3504657184)+ sizeof (Il2CppObject), -1, 0, 0,
 	sizeof (DefaultContractResolver_t2164550322), -1, sizeof(DefaultContractResolver_t2164550322_StaticFields), 0,
-	sizeof (U3CCreateISerializableContractU3Ec__AnonStorey16_t531145136), -1, 0, 0,
-	sizeof (U3CCreateShouldSerializeTestU3Ec__AnonStorey17_t2698107158), -1, 0, 0,
-	sizeof (U3CSetIsSpecifiedActionsU3Ec__AnonStorey18_t1057672077), -1, 0, 0,
+	sizeof (U3CCreateISerializableContractU3Ec__AnonStorey17_t531145137), -1, 0, 0,
+	sizeof (U3CCreateShouldSerializeTestU3Ec__AnonStorey18_t2698107159), -1, 0, 0,
+	sizeof (U3CSetIsSpecifiedActionsU3Ec__AnonStorey19_t1057672078), -1, 0, 0,
 	sizeof (DefaultReferenceResolver_t258914185), -1, 0, 0,
 	sizeof (DefaultSerializationBinder_t2071761170), -1, sizeof(DefaultSerializationBinder_t2071761170_StaticFields), 0,
 	sizeof (TypeNameKey_t4116944666)+ sizeof (Il2CppObject), sizeof(TypeNameKey_t4116944666_marshaled_pinvoke), 0, 0,
@@ -13744,7 +13785,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	sizeof (ReferenceEqualsEqualityComparer_t56069681), -1, 0, 0,
 	sizeof (JsonSerializerInternalReader_t1638952051), -1, sizeof(JsonSerializerInternalReader_t1638952051_StaticFields), 0,
 	sizeof (PropertyPresence_t2652339728)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
-	sizeof (U3CCreateAndPopulateListU3Ec__AnonStorey19_t1236026520), -1, 0, 0,
+	sizeof (U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528), -1, 0, 0,
 	sizeof (JsonSerializerInternalWriter_t1794357283), -1, 0, 0,
 	sizeof (JsonSerializerProxy_t2629456141), -1, 0, 0,
 	sizeof (JsonStringContract_t2937851556), -1, 0, 0,
@@ -13761,18 +13802,18 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	0, 0, 0, 0,
 	sizeof (CollectionUtils_t1402980234), -1, 0, 0,
 	0, 0, 0, 0,
-	sizeof (U3CCreateCollectionWrapperU3Ec__AnonStorey1B_t420883095), -1, 0, 0,
-	sizeof (U3CCreateListWrapperU3Ec__AnonStorey1C_t3670503064), -1, 0, 0,
-	sizeof (U3CCreateDictionaryWrapperU3Ec__AnonStorey1D_t2550116769), -1, 0, 0,
+	sizeof (U3CCreateCollectionWrapperU3Ec__AnonStorey1C_t420883096), -1, 0, 0,
+	sizeof (U3CCreateListWrapperU3Ec__AnonStorey1D_t3670503065), -1, 0, 0,
+	sizeof (U3CCreateDictionaryWrapperU3Ec__AnonStorey1E_t2550116770), -1, 0, 0,
 	0, -1, 0, 0,
 	0, 0, 0, 0,
 	sizeof (ConvertUtils_t2270763477), -1, sizeof(ConvertUtils_t2270763477_StaticFields), 0,
 	sizeof (TypeConvertKey_t3846323878)+ sizeof (Il2CppObject), -1, 0, 0,
-	sizeof (U3CCreateCastConverterU3Ec__AnonStorey1E_t1018633126), -1, 0, 0,
+	sizeof (U3CCreateCastConverterU3Ec__AnonStorey1F_t1018633127), -1, 0, 0,
 	0, 0, 0, 0,
-	sizeof (U3CTryConvertU3Ec__AnonStorey20_t3673050843), -1, 0, 0,
+	sizeof (U3CTryConvertU3Ec__AnonStorey21_t3673050844), -1, 0, 0,
 	0, 0, 0, 0,
-	sizeof (U3CTryConvertOrCastU3Ec__AnonStorey22_t3106773951), -1, 0, 0,
+	sizeof (U3CTryConvertOrCastU3Ec__AnonStorey23_t3106773952), -1, 0, 0,
 	sizeof (DateTimeUtils_t3878737069), -1, 0, 0,
 	0, -1, 0, 0,
 	0, 0, 0, 0,
@@ -13795,13 +13836,13 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	sizeof (MiscellaneousUtils_t2000562298), -1, 0, 0,
 	sizeof (ReflectionDelegateFactory_t267368177), -1, 0, 0,
 	sizeof (ReflectionUtils_t767490589), -1, sizeof(ReflectionUtils_t767490589_StaticFields), 0,
-	sizeof (U3CGetFieldsAndPropertiesU3Ec__AnonStorey2A_t1253501039), -1, 0, 0,
-	sizeof (U3CGetChildPrivatePropertiesU3Ec__AnonStorey2B_t2023321997), -1, 0, 0,
+	sizeof (U3CGetFieldsAndPropertiesU3Ec__AnonStorey2B_t1253501040), -1, 0, 0,
+	sizeof (U3CGetChildPrivatePropertiesU3Ec__AnonStorey2C_t2023321998), -1, 0, 0,
 	sizeof (StringBuffer_t1107775176), -1, sizeof(StringBuffer_t1107775176_StaticFields), 0,
 	sizeof (StringUtils_t1497036279), -1, 0, 0,
 	sizeof (ActionLine_t3845092202), sizeof(methodPointerType), 0, 0,
-	sizeof (U3CIndentU3Ec__AnonStorey2C_t2072168994), -1, 0, 0,
-	sizeof (U3CNumberLinesU3Ec__AnonStorey2D_t1159182709), -1, 0, 0,
+	sizeof (U3CIndentU3Ec__AnonStorey2D_t2072168995), -1, 0, 0,
+	sizeof (U3CNumberLinesU3Ec__AnonStorey2E_t1159182710), -1, 0, 0,
 	0, 0, 0, 0,
 	0, 0, 0, 0,
 	sizeof (ValidationUtils_t272309903), -1, 0, 0,
@@ -13849,23 +13890,28 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2370] =
 	sizeof (NetworkPlayer_t4053218959), -1, 0, 0,
 	sizeof (NetworkResponse_t1683455087), -1, 0, 0,
 	sizeof (Networking_t1515242260), -1, sizeof(Networking_t1515242260_StaticFields), 0,
+	sizeof (PostURL_t1273431183), -1, 0, 0,
+	sizeof (U3CWaitForRequestU3Ec__IteratorB_t2479391160), -1, 0, 0,
 	sizeof (GCStatusVO_t3770382119), -1, 0, 0,
 	sizeof (GameCenterAuthVO_t3371240520), -1, 0, 0,
 	sizeof (MatchStartedVO_t2528145109), -1, 0, 0,
+	sizeof (BaseDialog_t735619993), -1, 0, 0,
+	sizeof (GameFailDialog_t1770299320), -1, 0, 0,
+	sizeof (GameWinDialog_t176796754), -1, 0, 0,
 	sizeof (GenericPopup_t4182595893), -1, 0, 0,
 	sizeof (MainScreen_t2442698661), -1, sizeof(MainScreen_t2442698661_StaticFields), 0,
-	sizeof (U3CStartSignInProcessU3Ec__IteratorB_t2572545928), -1, 0, 0,
+	sizeof (U3CStartSignInProcessU3Ec__IteratorC_t2572545929), -1, 0, 0,
 	sizeof (MatchSelectionScreen_t3589239987), -1, 0, 0,
 	sizeof (MultiplayerMainGame_t4046083237), -1, sizeof(MultiplayerMainGame_t4046083237_StaticFields), 0,
-	sizeof (U3COnShiftCompleteU3Ec__IteratorC_t2598313008), -1, 0, 0,
+	sizeof (U3COnShiftCompleteU3Ec__IteratorD_t2598313009), -1, 0, 0,
 	sizeof (SinglePlayerMainGame_t3863033300), -1, sizeof(SinglePlayerMainGame_t3863033300_StaticFields), 0,
-	sizeof (U3CAutoPlayU3Ec__IteratorD_t3593857298), -1, 0, 0,
-	sizeof (TestScript_t3705514013), -1, 0, 0,
+	sizeof (U3CAutoPlayU3Ec__IteratorE_t3593857299), -1, 0, 0,
 	sizeof (GameObjectRef_t4121474274), -1, 0, 0,
 	sizeof (InGameInfoText_t36852466), -1, 0, 0,
-	sizeof (U3CRemoveMessageU3Ec__IteratorE_t1537395691), -1, 0, 0,
+	sizeof (U3CRemoveMessageU3Ec__IteratorF_t1537395692), -1, 0, 0,
 	sizeof (SingletonManager_t825254210), -1, sizeof(SingletonManager_t825254210_StaticFields), 0,
 	sizeof (Utility_t1549674828), -1, sizeof(Utility_t1549674828_StaticFields), 0,
+	sizeof (TestScript_t3705514013), -1, 0, 0,
 	sizeof (AddingNewEventHandler_t1582510268), sizeof(methodPointerType), 0, 0,
 	sizeof (NotifyCollectionChangedEventHandler_t2177590122), sizeof(methodPointerType), 0, 0,
 	sizeof (PropertyChangingEventHandler_t2916829087), sizeof(methodPointerType), 0, 0,

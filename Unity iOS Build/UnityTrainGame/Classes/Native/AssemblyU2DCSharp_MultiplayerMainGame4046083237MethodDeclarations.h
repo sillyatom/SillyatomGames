@@ -45,6 +45,10 @@ extern "C"  String_t* MultiplayerMainGame_GetDPPath_m1101217716 (Il2CppObject * 
 extern "C"  void MultiplayerMainGame_Init_m3127656750 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::InitGame()
 extern "C"  void MultiplayerMainGame_InitGame_m1931109952 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::ShowWinDialog()
+extern "C"  void MultiplayerMainGame_ShowWinDialog_m3274749579 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::ShowFailDialog()
+extern "C"  void MultiplayerMainGame_ShowFailDialog_m1861354497 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::OnInGameEvent(InGameEvent)
 extern "C"  void MultiplayerMainGame_OnInGameEvent_m361302279 (MultiplayerMainGame_t4046083237 * __this, InGameEvent_t511087107 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::DealCard(Player,System.Boolean)

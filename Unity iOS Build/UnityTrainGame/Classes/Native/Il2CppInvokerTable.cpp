@@ -7692,6 +7692,20 @@ void* RuntimeInvoker_Void_t2779279689_Il2CppObject_Vector2U26_t2646958564 (const
 	return NULL;
 }
 
+void* RuntimeInvoker_Il2CppObject_SByte_t2855346064_Il2CppObject (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Il2CppObject * (*Func)(void* obj, int8_t p1, Il2CppObject * p2, const MethodInfo* method);
+	Il2CppObject * ret = ((Func)method->method)(obj, *((int8_t*)args[0]), (Il2CppObject *)args[1], method);
+	return ret;
+}
+
+void* RuntimeInvoker_Il2CppObject_Il2CppObject_SByte_t2855346064_SByte_t2855346064_Il2CppObject_SByte_t2855346064 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Il2CppObject * (*Func)(void* obj, Il2CppObject * p1, int8_t p2, int8_t p3, Il2CppObject * p4, int8_t p5, const MethodInfo* method);
+	Il2CppObject * ret = ((Func)method->method)(obj, (Il2CppObject *)args[0], *((int8_t*)args[1]), *((int8_t*)args[2]), (Il2CppObject *)args[3], *((int8_t*)args[4]), method);
+	return ret;
+}
+
 void* RuntimeInvoker_RuntimePlatform_t1574985880 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef int32_t (*Func)(void* obj, const MethodInfo* method);
@@ -14846,7 +14860,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t587838465 (const MethodInfo* metho
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[2051] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[2053] = 
 {
 	RuntimeInvoker_Void_t2779279689,
 	RuntimeInvoker_Boolean_t211005341_Il2CppObject,
@@ -15877,6 +15891,8 @@ extern const InvokerMethod g_Il2CppInvokerPointers[2051] =
 	RuntimeInvoker_Void_t2779279689_Il2CppObject_Vector4U26_t4265112882,
 	RuntimeInvoker_Vector2_t3525329788_Il2CppObject,
 	RuntimeInvoker_Void_t2779279689_Il2CppObject_Vector2U26_t2646958564,
+	RuntimeInvoker_Il2CppObject_SByte_t2855346064_Il2CppObject,
+	RuntimeInvoker_Il2CppObject_Il2CppObject_SByte_t2855346064_SByte_t2855346064_Il2CppObject_SByte_t2855346064,
 	RuntimeInvoker_RuntimePlatform_t1574985880,
 	RuntimeInvoker_CameraClearFlags_t3602484652,
 	RuntimeInvoker_Void_t2779279689_Il2CppObject_Vector3U26_t3456035723_Vector3U26_t3456035723,

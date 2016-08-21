@@ -17,7 +17,7 @@
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g3824425150MethodDeclarations.h"
 
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor()
-#define Dictionary_2__ctor_m1597524044(__this, method) ((  void (*) (Dictionary_2_t2606186806 *, const MethodInfo*))Dictionary_2__ctor_m3794638399_gshared)(__this, method)
+#define Dictionary_2__ctor_m640701813(__this, method) ((  void (*) (Dictionary_2_t2606186806 *, const MethodInfo*))Dictionary_2__ctor_m3794638399_gshared)(__this, method)
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor(System.Collections.Generic.IEqualityComparer`1<TKey>)
 #define Dictionary_2__ctor_m639637082(__this, ___comparer, method) ((  void (*) (Dictionary_2_t2606186806 *, Il2CppObject*, const MethodInfo*))Dictionary_2__ctor_m273898294_gshared)(__this, ___comparer, method)
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.String>::.ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
@@ -121,6 +121,6 @@
 // System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.String>::ContainsKeyValuePair(System.Collections.Generic.KeyValuePair`2<TKey,TValue>)
 #define Dictionary_2_ContainsKeyValuePair_m2811382623(__this, ___pair, method) ((  bool (*) (Dictionary_2_t2606186806 *, KeyValuePair_2_t2094718104 , const MethodInfo*))Dictionary_2_ContainsKeyValuePair_m3073235459_gshared)(__this, ___pair, method)
 // System.Collections.Generic.Dictionary`2/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2<System.String,System.String>::GetEnumerator()
-#define Dictionary_2_GetEnumerator_m3769107138(__this, method) ((  Enumerator_t2373214747  (*) (Dictionary_2_t2606186806 *, const MethodInfo*))Dictionary_2_GetEnumerator_m65675076_gshared)(__this, method)
+#define Dictionary_2_GetEnumerator_m2759194411(__this, method) ((  Enumerator_t2373214747  (*) (Dictionary_2_t2606186806 *, const MethodInfo*))Dictionary_2_GetEnumerator_m65675076_gshared)(__this, method)
 // System.Collections.DictionaryEntry System.Collections.Generic.Dictionary`2<System.String,System.String>::<CopyTo>m__0(TKey,TValue)
 #define Dictionary_2_U3CCopyToU3Em__0_m1352660663(__this /* static, unused */, ___key, ___value, method) ((  DictionaryEntry_t130027246  (*) (Il2CppObject * /* static, unused */, String_t*, String_t*, const MethodInfo*))Dictionary_2_U3CCopyToU3Em__0_m3818730131_gshared)(__this /* static, unused */, ___key, ___value, method)

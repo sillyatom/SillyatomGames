@@ -91,6 +91,8 @@ extern "C"  ByteU5BU5D_t58506160* Encoding_GetPreamble_m1160659539 (Encoding_t18
 extern "C"  String_t* Encoding_GetString_m565750122 (Encoding_t180559927 * __this, ByteU5BU5D_t58506160* ___bytes, int32_t ___index, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.Encoding::GetString(System.Byte[])
 extern "C"  String_t* Encoding_GetString_m3808087178 (Encoding_t180559927 * __this, ByteU5BU5D_t58506160* ___bytes, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.Text.Encoding::get_HeaderName()
+extern "C"  String_t* Encoding_get_HeaderName_m1171313419 (Encoding_t180559927 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.Encoding::get_WebName()
 extern "C"  String_t* Encoding_get_WebName_m4104579374 (Encoding_t180559927 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.Encoding System.Text.Encoding::get_ASCII()

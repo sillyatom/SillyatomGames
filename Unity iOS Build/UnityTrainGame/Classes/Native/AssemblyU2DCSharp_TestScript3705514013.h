@@ -23,8 +23,17 @@
 struct  TestScript_t3705514013  : public MonoBehaviour_t3012272455
 {
 public:
+	// System.Boolean TestScript::cloneTest
+	bool ___cloneTest_2;
 
 public:
+	inline static int32_t get_offset_of_cloneTest_2() { return static_cast<int32_t>(offsetof(TestScript_t3705514013, ___cloneTest_2)); }
+	inline bool get_cloneTest_2() const { return ___cloneTest_2; }
+	inline bool* get_address_of_cloneTest_2() { return &___cloneTest_2; }
+	inline void set_cloneTest_2(bool value)
+	{
+		___cloneTest_2 = value;
+	}
 };
 
 #ifdef __clang__
