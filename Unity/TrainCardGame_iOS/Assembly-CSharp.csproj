@@ -409,6 +409,7 @@
      <Compile Include="Assets\Scripts\Networking\NetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkResponse.cs" />
      <Compile Include="Assets\Scripts\Networking\Networking.cs" />
+     <Compile Include="Assets\Scripts\Networking\Requests\PostURL.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GCStatusVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GameCenterAuthVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\MatchStartedVO.cs" />
@@ -420,11 +421,11 @@
      <Compile Include="Assets\Scripts\Screens\MatchSelectionScreen.cs" />
      <Compile Include="Assets\Scripts\Screens\MultiplayerMainGame.cs" />
      <Compile Include="Assets\Scripts\Screens\SinglePlayerMainGame.cs" />
-     <Compile Include="Assets\Scripts\TestScripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\Utility\GameObjectRef.cs" />
      <Compile Include="Assets\Scripts\Utility\InGameInfoText.cs" />
      <Compile Include="Assets\Scripts\Utility\SingletonManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />
+     <Compile Include="Assets\TestPackage\TestScripts\TestScript.cs" />
      <None Include="Assets\Resources\Images\GUI\Button.png.txt" />
      <None Include="Assets\Resources\Fonts\flubber\Flubber.txt" />
      <None Include="Assets\Resources\Shaders\GrayScale.shader" />
