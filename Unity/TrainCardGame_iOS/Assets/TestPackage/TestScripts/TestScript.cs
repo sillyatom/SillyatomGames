@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 public class TestScript : MonoBehaviour
 {
@@ -37,8 +39,21 @@ public class TestScript : MonoBehaviour
     public void TestPostURL()
     {
         WWWForm form = new WWWForm();
-        form.AddField("id", 2);
-        form.AddField("name", "silly");
-        gameObject.GetComponent<PostURL>().StartRequest(form);
+        form.AddField(RemoteAPIConstants.API, RemoteAPIConstants.INIT_CALL);
+        form.AddField(RemoteAPIConstants.PLAYER_UID, "1234");
+        form.AddField(RemoteAPIConstants.PLAYER_NAME, "test");
+        transform.GetComponent<PostURL>().StartRequest(form, OnDataReceived);
+    }
+
+    private void OnDataReceived(bool success, string result)
+    {
+        if (success)
+        {
+            RemoteInitVO vo = JsonConvert.DeserializeObject<RemoteInitVO>(result);
+        }
+        else
+        {
+            Debug.LogError("Init Call Failed");
+        }
     }
 }

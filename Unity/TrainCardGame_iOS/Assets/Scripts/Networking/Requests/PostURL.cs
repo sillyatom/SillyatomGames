@@ -1,27 +1,33 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PostURL : MonoBehaviour
 {
-    public void StartRequest(WWWForm form)
+    private readonly string _url = "http://sillyatomgames.com/games/trains/index.php";
+
+    public void StartRequest(WWWForm form, Action<bool, string> callback = null)
     {
-        string url = "http://sillyatomgames.com/games/trains/index.php";
-        WWW www = new WWW(url, form);
-        StartCoroutine(WaitForRequest(www));
+        WWW www = new WWW(_url, form);
+        StartCoroutine(WaitForRequest(www, callback));
     }
 
-    IEnumerator WaitForRequest(WWW www)
+    IEnumerator WaitForRequest(WWW www, Action<bool, string> callback = null)
     {
         yield return www;
 
         // check for errors
         if (www.error == null)
         {
-            Debug.Log("WWW Ok!: " + www.text);
+            if (callback != null)
+            {
+                callback(true, www.text);
+            }
         }
         else
         {
-            Debug.Log("WWW Error: " + www.error);
+            callback(false, www.error);
         }    
     }
 

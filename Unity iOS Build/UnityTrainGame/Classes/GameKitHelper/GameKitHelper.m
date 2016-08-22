@@ -135,13 +135,15 @@ BOOL _matchStarted;
     {
         [[GKLocalPlayer localPlayer]registerListener:self];
         [dict setValue:[NSNumber numberWithUnsignedInt:2] forKey:@"SigningStatus"];
-        [dict setObject:uid forKey:@"uid"];
     }
     else
     {
         [dict setValue:[NSNumber numberWithUnsignedInteger:0] forKey:@"SigningStatus"];
-        [dict setObject:uid forKey:@"uid"];
     }
+    
+    [dict setObject:uid forKey:@"uid"];
+    [dict setObject:[GKLocalPlayer localPlayer].playerID forKey:@"localPlayerId"];
+    [dict setObject:[GKLocalPlayer localPlayer].alias forKey:@"localPlayerName"];
     
     NSError * error = nil;
     NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];

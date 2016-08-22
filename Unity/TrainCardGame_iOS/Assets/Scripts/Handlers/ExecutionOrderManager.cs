@@ -9,7 +9,9 @@ public class ExecutionOrderManager : MonoBehaviour
     public List<ExtMonoBehaviour> _extMonos;
     public List<SceneMonoBehaviour> _monos;
 
+    GCStatusVO _vo;
     private bool _didInit = false;
+    private LocalPlayerModel _playerModel;
 
     public void Init(string data)
     {
@@ -29,9 +31,32 @@ public class ExecutionOrderManager : MonoBehaviour
         }
         SingletonManager.reference.sceneTransitionManager.SetActiveScreen(TagConstants.TAG_MAIN_SCREEN);
 
-        GCStatusVO vo = JsonConvert.DeserializeObject<GCStatusVO>(data);
-        BridgeDebugger.Log("Device_id " + vo.uid);
-        InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, vo.SigningStatus);
-        EventManager.instance.Raise(evt);
+        _vo = JsonConvert.DeserializeObject<GCStatusVO>(data);
+
+        _playerModel = LocalPlayerModel.GetInstance();
+        _playerModel.UpdateModel(_vo);
+
+        WWWForm form = new WWWForm();
+        form.AddField(RemoteAPIConstants.API, RemoteAPIConstants.INIT_CALL);
+        form.AddField(RemoteAPIConstants.PLAYER_UID, _playerModel.localPlayerUID);
+        form.AddField(RemoteAPIConstants.PLAYER_NAME, _playerModel.localPlayerName);
+
+        SingletonManager.reference.postMethod.StartRequest(form, OnDataReceived);
+    }
+
+    private void OnDataReceived(bool success, string result)
+    {
+        if (success)
+        {
+            RemoteInitVO vo = JsonConvert.DeserializeObject<RemoteInitVO>(result);
+            _playerModel.tokens = vo.tokens;
+            _playerModel.xp = vo.xp;
+            InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, _vo.SigningStatus);
+            EventManager.instance.Raise(evt);
+        }
+        else
+        {
+            Debug.LogError("Init Call Failed");
+        }
     }
 }

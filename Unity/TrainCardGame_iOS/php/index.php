@@ -117,6 +117,25 @@ class Main
         $stmt->close();
    }
 
+   function process()
+   {
+     if (isset($_POST["api"]))
+     {
+       if ($_POST["api"] == "init")
+       {
+         $this->init();
+       }
+       else
+       {
+         $this->sendResponse(400, 'Missing API');
+       }
+     }
+     else
+     {
+       $this->sendResponse(400, 'API not set');
+     }
+   }
+
    function init()
    {
      if (isset($_POST["id"]) && isset($_POST["name"]))
@@ -134,6 +153,7 @@ class Main
        }
        $stmt->close();
 
+       //if id not exists, insert
        if ($id1 == null)
        {
          $stmt = $this->db->prepare("INSERT INTO player_data (id, name) VALUES (?, ?)");
@@ -142,7 +162,7 @@ class Main
          $stmt->close();
 
          $id1 = $id;
-         $tokens1 = 0;
+         $tokens1 = 2000;
          $xp1 = 0;
        }
         $result = array(
@@ -163,6 +183,6 @@ class Main
 // This is the first thing that gets called when this page is loaded
 // Creates a new instance of the Main class and calls the test method
 $api = new Main;
-$api->init();
+$api->process();
 
 ?>

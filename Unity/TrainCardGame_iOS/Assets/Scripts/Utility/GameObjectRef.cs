@@ -26,4 +26,7 @@ public class GameObjectRef : MonoBehaviour
 
     [SerializeField]
     public GameObject gameFailDialog;
+
+    [SerializeField]
+    public PostURL postMethod;
 }

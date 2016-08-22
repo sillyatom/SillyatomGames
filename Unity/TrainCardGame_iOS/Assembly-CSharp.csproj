@@ -378,6 +378,7 @@
      <Compile Include="Assets\Scripts\Constants\CardConstants.cs" />
      <Compile Include="Assets\Scripts\Constants\GameConstants.cs" />
      <Compile Include="Assets\Scripts\Constants\NetworkConstants.cs" />
+     <Compile Include="Assets\Scripts\Constants\RemoteAPIConstants.cs" />
      <Compile Include="Assets\Scripts\Constants\TagConstants.cs" />
      <Compile Include="Assets\Scripts\Events\EventManager.cs" />
      <Compile Include="Assets\Scripts\Events\GameEvent.cs" />
@@ -398,6 +399,7 @@
      <Compile Include="Assets\Scripts\Handlers\SceneTransitionManager.cs" />
      <Compile Include="Assets\Scripts\Handlers\SpinHandler.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
+     <Compile Include="Assets\Scripts\Models\LocalPlayerModel.cs" />
      <Compile Include="Assets\Scripts\Networking\API.cs" />
      <Compile Include="Assets\Scripts\Networking\APIHandler.cs" />
      <Compile Include="Assets\Scripts\Networking\DispatchVO\AcknowledgeVO.cs" />
@@ -409,6 +411,7 @@
      <Compile Include="Assets\Scripts\Networking\NetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkResponse.cs" />
      <Compile Include="Assets\Scripts\Networking\Networking.cs" />
+     <Compile Include="Assets\Scripts\Networking\RemoteResponseVO\RemoteInitVO.cs" />
      <Compile Include="Assets\Scripts\Networking\Requests\PostURL.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GCStatusVO.cs" />
      <Compile Include="Assets\Scripts\Networking\ResponseVO\GameCenterAuthVO.cs" />

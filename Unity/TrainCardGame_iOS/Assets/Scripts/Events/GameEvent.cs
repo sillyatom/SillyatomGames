@@ -20,11 +20,19 @@ public class GameEvent
 
     public NetworkResponse response{ get; set; }
 
+    public string postResponse{ get; set; }
+
     public HeaderVO vo{ get; set; }
 
     public GameEvent(string type)
     {
         this.type = type;
+    }
+
+    public GameEvent(string type, string postResponse)
+    {
+        this.type = type;
+        this.postResponse = postResponse;
     }
 
     public GameEvent(string type, NetworkResponse response)

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GameConstants
 {
+    public static readonly int APP_ID = 1;
+
     public static int MIN_PLAYERS = 2;
     public static int MAX_PLAYERS = 4;
 
