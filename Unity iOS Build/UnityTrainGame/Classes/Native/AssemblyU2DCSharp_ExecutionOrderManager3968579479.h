@@ -14,6 +14,10 @@
 struct List_1_t3421558162;
 // System.Collections.Generic.List`1<SceneMonoBehaviour>
 struct List_1_t748209415;
+// GCStatusVO
+struct GCStatusVO_t3770382119;
+// LocalPlayerModel
+struct LocalPlayerModel_t1751900285;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -31,8 +35,12 @@ public:
 	List_1_t3421558162 * ____extMonos_2;
 	// System.Collections.Generic.List`1<SceneMonoBehaviour> ExecutionOrderManager::_monos
 	List_1_t748209415 * ____monos_3;
+	// GCStatusVO ExecutionOrderManager::_vo
+	GCStatusVO_t3770382119 * ____vo_4;
 	// System.Boolean ExecutionOrderManager::_didInit
-	bool ____didInit_4;
+	bool ____didInit_5;
+	// LocalPlayerModel ExecutionOrderManager::_playerModel
+	LocalPlayerModel_t1751900285 * ____playerModel_6;
 
 public:
 	inline static int32_t get_offset_of__extMonos_2() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____extMonos_2)); }
@@ -53,12 +61,30 @@ public:
 		Il2CppCodeGenWriteBarrier(&____monos_3, value);
 	}
 
-	inline static int32_t get_offset_of__didInit_4() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____didInit_4)); }
-	inline bool get__didInit_4() const { return ____didInit_4; }
-	inline bool* get_address_of__didInit_4() { return &____didInit_4; }
-	inline void set__didInit_4(bool value)
+	inline static int32_t get_offset_of__vo_4() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____vo_4)); }
+	inline GCStatusVO_t3770382119 * get__vo_4() const { return ____vo_4; }
+	inline GCStatusVO_t3770382119 ** get_address_of__vo_4() { return &____vo_4; }
+	inline void set__vo_4(GCStatusVO_t3770382119 * value)
 	{
-		____didInit_4 = value;
+		____vo_4 = value;
+		Il2CppCodeGenWriteBarrier(&____vo_4, value);
+	}
+
+	inline static int32_t get_offset_of__didInit_5() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____didInit_5)); }
+	inline bool get__didInit_5() const { return ____didInit_5; }
+	inline bool* get_address_of__didInit_5() { return &____didInit_5; }
+	inline void set__didInit_5(bool value)
+	{
+		____didInit_5 = value;
+	}
+
+	inline static int32_t get_offset_of__playerModel_6() { return static_cast<int32_t>(offsetof(ExecutionOrderManager_t3968579479, ____playerModel_6)); }
+	inline LocalPlayerModel_t1751900285 * get__playerModel_6() const { return ____playerModel_6; }
+	inline LocalPlayerModel_t1751900285 ** get_address_of__playerModel_6() { return &____playerModel_6; }
+	inline void set__playerModel_6(LocalPlayerModel_t1751900285 * value)
+	{
+		____playerModel_6 = value;
+		Il2CppCodeGenWriteBarrier(&____playerModel_6, value);
 	}
 };
 

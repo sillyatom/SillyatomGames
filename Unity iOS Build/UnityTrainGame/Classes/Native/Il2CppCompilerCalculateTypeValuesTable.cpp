@@ -1430,6 +1430,7 @@
 #include "AssemblyU2DCSharp_GameConstants893838685.h"
 #include "AssemblyU2DCSharp_NetworkConstants2185309921.h"
 #include "AssemblyU2DCSharp_NetworkConstants_API65018.h"
+#include "AssemblyU2DCSharp_RemoteAPIConstants3220785115.h"
 #include "AssemblyU2DCSharp_TagConstants2563060469.h"
 #include "AssemblyU2DCSharp_EventManager1907836883.h"
 #include "AssemblyU2DCSharp_GameEvent2981166504.h"
@@ -1451,6 +1452,7 @@
 #include "AssemblyU2DCSharp_SceneTransitionManager1210711436.h"
 #include "AssemblyU2DCSharp_SpinHandler631124104.h"
 #include "AssemblyU2DCSharp_Main2390489.h"
+#include "AssemblyU2DCSharp_LocalPlayerModel1751900285.h"
 #include "AssemblyU2DCSharp_API65018.h"
 #include "AssemblyU2DCSharp_APIHandler2277647344.h"
 #include "AssemblyU2DCSharp_AcknowledgeVO1386276405.h"
@@ -1462,6 +1464,8 @@
 #include "AssemblyU2DCSharp_NetworkPlayer4053218959.h"
 #include "AssemblyU2DCSharp_NetworkResponse1683455087.h"
 #include "AssemblyU2DCSharp_Networking1515242260.h"
+#include "AssemblyU2DCSharp_RemoteInitVO4123121615.h"
+#include "AssemblyU2DCSharp_PostURL1273431183.h"
 #include "AssemblyU2DCSharp_PostURL_U3CWaitForRequestU3Ec__I2479391160.h"
 #include "AssemblyU2DCSharp_GCStatusVO3770382119.h"
 #include "AssemblyU2DCSharp_GameCenterAuthVO3371240520.h"
@@ -2074,7 +2078,6 @@
 #include "AssemblyU2DCSharp_ButtonComponent2676344267.h"
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 #include "AssemblyU2DCSharp_BridgeDebugger2949066474.h"
-#include "AssemblyU2DCSharp_PostURL1273431183.h"
 #include "AssemblyU2DCSharp_GameFailDialog1770299320.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObservableSuppor1582510268.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObservableSuppor2177590122.h"
@@ -2089,7 +2092,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9446] = 
+extern const int32_t g_FieldOffsetTable[9472] = 
 {
 	0,
 	0,
@@ -11251,12 +11254,13 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	CardConstants_t1869142015_StaticFields::get_offset_of_CARD_VALUE_END_14(),
 	CardConstants_t1869142015_StaticFields::get_offset_of_CARD_VALUES_15(),
 	CardConstants_t1869142015_StaticFields::get_offset_of_CARD_TYPES_16(),
-	GameConstants_t893838685_StaticFields::get_offset_of_MIN_PLAYERS_0(),
-	GameConstants_t893838685_StaticFields::get_offset_of_MAX_PLAYERS_1(),
-	GameConstants_t893838685_StaticFields::get_offset_of_DEAL_ANIM_TIME_2(),
-	GameConstants_t893838685_StaticFields::get_offset_of_SYMBOL_SPACE_3(),
-	GameConstants_t893838685_StaticFields::get_offset_of_ROUND_TIME_4(),
-	GameConstants_t893838685_StaticFields::get_offset_of_DEALT_CARD_SCALE_5(),
+	GameConstants_t893838685_StaticFields::get_offset_of_APP_ID_0(),
+	GameConstants_t893838685_StaticFields::get_offset_of_MIN_PLAYERS_1(),
+	GameConstants_t893838685_StaticFields::get_offset_of_MAX_PLAYERS_2(),
+	GameConstants_t893838685_StaticFields::get_offset_of_DEAL_ANIM_TIME_3(),
+	GameConstants_t893838685_StaticFields::get_offset_of_SYMBOL_SPACE_4(),
+	GameConstants_t893838685_StaticFields::get_offset_of_ROUND_TIME_5(),
+	GameConstants_t893838685_StaticFields::get_offset_of_DEALT_CARD_SCALE_6(),
 	NetworkConstants_t2185309921_StaticFields::get_offset_of_KEY_API_0(),
 	NetworkConstants_t2185309921_StaticFields::get_offset_of_KEY_API_ID_1(),
 	NetworkConstants_t2185309921_StaticFields::get_offset_of_KEY_SENDER_2(),
@@ -11282,6 +11286,12 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	0,
 	0,
 	0,
+	RemoteAPIConstants_t3220785115_StaticFields::get_offset_of_API_0(),
+	RemoteAPIConstants_t3220785115_StaticFields::get_offset_of_INIT_CALL_1(),
+	RemoteAPIConstants_t3220785115_StaticFields::get_offset_of_PLAYER_UID_2(),
+	RemoteAPIConstants_t3220785115_StaticFields::get_offset_of_PLAYER_TOKENS_3(),
+	RemoteAPIConstants_t3220785115_StaticFields::get_offset_of_PLAYER_XP_4(),
+	RemoteAPIConstants_t3220785115_StaticFields::get_offset_of_PLAYER_NAME_5(),
 	TagConstants_t2563060469_StaticFields::get_offset_of_TAG_MAIN_SCREEN_0(),
 	TagConstants_t2563060469_StaticFields::get_offset_of_TAG_MATCH_SELECTION_SCREEN_1(),
 	TagConstants_t2563060469_StaticFields::get_offset_of_TAG_MAIN_GAME_2(),
@@ -11302,7 +11312,8 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	GameEvent_t2981166504::get_offset_of_U3CtypeU3Ek__BackingField_9(),
 	GameEvent_t2981166504::get_offset_of_U3CcallbackU3Ek__BackingField_10(),
 	GameEvent_t2981166504::get_offset_of_U3CresponseU3Ek__BackingField_11(),
-	GameEvent_t2981166504::get_offset_of_U3CvoU3Ek__BackingField_12(),
+	GameEvent_t2981166504::get_offset_of_U3CpostResponseU3Ek__BackingField_12(),
+	GameEvent_t2981166504::get_offset_of_U3CvoU3Ek__BackingField_13(),
 	0,
 	0,
 	0,
@@ -11313,9 +11324,9 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	0,
 	0,
 	0,
-	InGameEvent_t511087107::get_offset_of_U3CplayerIdU3Ek__BackingField_23(),
-	InGameEvent_t511087107::get_offset_of_U3CcardU3Ek__BackingField_24(),
-	InGameEvent_t511087107::get_offset_of_U3CstatusU3Ek__BackingField_25(),
+	InGameEvent_t511087107::get_offset_of_U3CplayerIdU3Ek__BackingField_24(),
+	InGameEvent_t511087107::get_offset_of_U3CcardU3Ek__BackingField_25(),
+	InGameEvent_t511087107::get_offset_of_U3CstatusU3Ek__BackingField_26(),
 	ExtMonoBehaviour_t2624599193::get_offset_of__isInitialized_2(),
 	U3CStartDelayU3Ec__Iterator7_t3616559111::get_offset_of_delay_0(),
 	U3CStartDelayU3Ec__Iterator7_t3616559111::get_offset_of_callback_1(),
@@ -11387,7 +11398,9 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	CardSelectionHandler_t2914958190::get_offset_of_U3CplayerIdU3Ek__BackingField_4(),
 	ExecutionOrderManager_t3968579479::get_offset_of__extMonos_2(),
 	ExecutionOrderManager_t3968579479::get_offset_of__monos_3(),
-	ExecutionOrderManager_t3968579479::get_offset_of__didInit_4(),
+	ExecutionOrderManager_t3968579479::get_offset_of__vo_4(),
+	ExecutionOrderManager_t3968579479::get_offset_of__didInit_5(),
+	ExecutionOrderManager_t3968579479::get_offset_of__playerModel_6(),
 	PopupManager_t2711269761::get_offset_of_blocker_3(),
 	PopupManager_t2711269761::get_offset_of_genericPopup_4(),
 	PopupManager_t2711269761::get_offset_of__popups_5(),
@@ -11425,6 +11438,12 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	SpinHandler_t631124104::get_offset_of_U3CReelU3Ek__BackingField_16(),
 	SpinHandler_t631124104::get_offset_of_U3CLastSpinTimeU3Ek__BackingField_17(),
 	Main_t2390489::get_offset_of__exec_2(),
+	LocalPlayerModel_t1751900285_StaticFields::get_offset_of__model_0(),
+	LocalPlayerModel_t1751900285::get_offset_of_U3ClocalPlayerIdU3Ek__BackingField_1(),
+	LocalPlayerModel_t1751900285::get_offset_of_U3ClocalPlayerNameU3Ek__BackingField_2(),
+	LocalPlayerModel_t1751900285::get_offset_of_U3ClocalPlayerUIDU3Ek__BackingField_3(),
+	LocalPlayerModel_t1751900285::get_offset_of_U3CtokensU3Ek__BackingField_4(),
+	LocalPlayerModel_t1751900285::get_offset_of_U3CxpU3Ek__BackingField_5(),
 	API_t65019::get_offset_of_U3CidU3Ek__BackingField_0(),
 	API_t65019::get_offset_of_U3CapiU3Ek__BackingField_1(),
 	API_t65019::get_offset_of_U3CdataU3Ek__BackingField_2(),
@@ -11472,12 +11491,21 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	Networking_t1515242260_StaticFields::get_offset_of_localId_12(),
 	Networking_t1515242260::get_offset_of__pauseUpdate_13(),
 	Networking_t1515242260_StaticFields::get_offset_of_U3CU3Ef__switchU24map6_14(),
+	RemoteInitVO_t4123121615::get_offset_of_U3CapiU3Ek__BackingField_0(),
+	RemoteInitVO_t4123121615::get_offset_of_U3CidU3Ek__BackingField_1(),
+	RemoteInitVO_t4123121615::get_offset_of_U3CtokensU3Ek__BackingField_2(),
+	RemoteInitVO_t4123121615::get_offset_of_U3CxpU3Ek__BackingField_3(),
+	PostURL_t1273431183::get_offset_of__url_2(),
 	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_www_0(),
-	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U24PC_1(),
-	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U24current_2(),
-	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U3CU24U3Ewww_3(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_callback_1(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U24PC_2(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U24current_3(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U3CU24U3Ewww_4(),
+	U3CWaitForRequestU3Ec__IteratorB_t2479391160::get_offset_of_U3CU24U3Ecallback_5(),
 	GCStatusVO_t3770382119::get_offset_of_U3CSigningStatusU3Ek__BackingField_0(),
 	GCStatusVO_t3770382119::get_offset_of_U3CuidU3Ek__BackingField_1(),
+	GCStatusVO_t3770382119::get_offset_of_U3ClocalPlayerIdU3Ek__BackingField_2(),
+	GCStatusVO_t3770382119::get_offset_of_U3ClocalPlayerNameU3Ek__BackingField_3(),
 	GameCenterAuthVO_t3371240520::get_offset_of_api_0(),
 	MatchStartedVO_t2528145109::get_offset_of_api_0(),
 	BaseDialog_t735619993::get_offset_of_closeBtn_3(),
@@ -11525,6 +11553,7 @@ extern const int32_t g_FieldOffsetTable[9446] =
 	GameObjectRef_t4121474274::get_offset_of_sceneTransitionManager_7(),
 	GameObjectRef_t4121474274::get_offset_of_gameWinDialog_8(),
 	GameObjectRef_t4121474274::get_offset_of_gameFailDialog_9(),
+	GameObjectRef_t4121474274::get_offset_of_postMethod_10(),
 	InGameInfoText_t36852466::get_offset_of_text_3(),
 	InGameInfoText_t36852466::get_offset_of__removeCoroutine_4(),
 	U3CRemoveMessageU3Ec__IteratorF_t1537395692::get_offset_of_callback_0(),
@@ -11541,7 +11570,7 @@ extern const int32_t g_FieldOffsetTable[9446] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2378] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2382] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -13850,6 +13879,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2378] =
 	sizeof (GameConstants_t893838685), -1, sizeof(GameConstants_t893838685_StaticFields), 0,
 	sizeof (NetworkConstants_t2185309921), -1, sizeof(NetworkConstants_t2185309921_StaticFields), 0,
 	sizeof (API_t65018)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
+	sizeof (RemoteAPIConstants_t3220785115), -1, sizeof(RemoteAPIConstants_t3220785115_StaticFields), 0,
 	sizeof (TagConstants_t2563060469), -1, sizeof(TagConstants_t2563060469_StaticFields), 0,
 	sizeof (EventManager_t1907836883), -1, sizeof(EventManager_t1907836883_StaticFields), 0,
 	0, 0, 0, 0,
@@ -13879,6 +13909,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2378] =
 	sizeof (SceneTransitionManager_t1210711436), -1, 0, 0,
 	sizeof (SpinHandler_t631124104), -1, 0, 0,
 	sizeof (Main_t2390489), -1, 0, 0,
+	sizeof (LocalPlayerModel_t1751900285), -1, sizeof(LocalPlayerModel_t1751900285_StaticFields), 0,
 	sizeof (API_t65019), -1, 0, 0,
 	sizeof (APIHandler_t2277647344), -1, sizeof(APIHandler_t2277647344_StaticFields), 0,
 	sizeof (AcknowledgeVO_t1386276405), -1, 0, 0,
@@ -13890,6 +13921,8 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2378] =
 	sizeof (NetworkPlayer_t4053218959), -1, 0, 0,
 	sizeof (NetworkResponse_t1683455087), -1, 0, 0,
 	sizeof (Networking_t1515242260), -1, sizeof(Networking_t1515242260_StaticFields), 0,
+	0, -1, 0, 0,
+	sizeof (RemoteInitVO_t4123121615), -1, 0, 0,
 	sizeof (PostURL_t1273431183), -1, 0, 0,
 	sizeof (U3CWaitForRequestU3Ec__IteratorB_t2479391160), -1, 0, 0,
 	sizeof (GCStatusVO_t3770382119), -1, 0, 0,

@@ -10930,7 +10930,6 @@ extern "C" void WWW_ParseHTTPHeaderString_m3695887721 ();
 extern "C" void WWWForm__ctor_m1417930174 ();
 extern "C" void WWWForm_AddField_m2890504319 ();
 extern "C" void WWWForm_AddField_m3426667506 ();
-extern "C" void WWWForm_AddField_m355604532 ();
 extern "C" void WWWForm_get_headers_m370408569 ();
 extern "C" void WWWForm_get_data_m2893811951 ();
 extern "C" void WWWTranscoder__cctor_m1486747496 ();
@@ -13843,6 +13842,7 @@ extern "C" void EventDelegate_BeginInvoke_m1563626523 ();
 extern "C" void EventDelegate_EndInvoke_m2568619290 ();
 extern "C" void ExecutionOrderManager__ctor_m3664436148 ();
 extern "C" void ExecutionOrderManager_Init_m4122699490 ();
+extern "C" void ExecutionOrderManager_OnDataReceived_m285443949 ();
 extern "C" void ExtensionMethods__cctor_m390673221 ();
 extern "C" void ExtMonoBehaviour__ctor_m885263906 ();
 extern "C" void ExtMonoBehaviour_get_isInitialized_m952256653 ();
@@ -13864,6 +13864,7 @@ extern "C" void GameCenterAuthVO__ctor_m3296291667 ();
 extern "C" void GameConstants__ctor_m2970825902 ();
 extern "C" void GameConstants__cctor_m1419193535 ();
 extern "C" void GameEvent__ctor_m1494597407 ();
+extern "C" void GameEvent__ctor_m4138108187 ();
 extern "C" void GameEvent__ctor_m685722812 ();
 extern "C" void GameEvent__ctor_m3060632033 ();
 extern "C" void GameEvent_get_type_m3917904769 ();
@@ -13872,6 +13873,8 @@ extern "C" void GameEvent_get_callback_m1531979647 ();
 extern "C" void GameEvent_set_callback_m4090578444 ();
 extern "C" void GameEvent_get_response_m1142487431 ();
 extern "C" void GameEvent_set_response_m304452356 ();
+extern "C" void GameEvent_get_postResponse_m4192395656 ();
+extern "C" void GameEvent_set_postResponse_m1756462883 ();
 extern "C" void GameEvent_get_vo_m187295500 ();
 extern "C" void GameEvent_set_vo_m2866285265 ();
 extern "C" void GameFailDialog__ctor_m2736610275 ();
@@ -13888,6 +13891,10 @@ extern "C" void GCStatusVO_get_SigningStatus_m2509911506 ();
 extern "C" void GCStatusVO_set_SigningStatus_m3973825021 ();
 extern "C" void GCStatusVO_get_uid_m2126609974 ();
 extern "C" void GCStatusVO_set_uid_m771798685 ();
+extern "C" void GCStatusVO_get_localPlayerId_m2413039181 ();
+extern "C" void GCStatusVO_set_localPlayerId_m2590745254 ();
+extern "C" void GCStatusVO_get_localPlayerName_m4085770109 ();
+extern "C" void GCStatusVO_set_localPlayerName_m1230915382 ();
 extern "C" void GenericPopup__ctor_m3500352774 ();
 extern "C" void GenericPopup_Init_m3805229198 ();
 extern "C" void GenericPopup_UpdateData_m1128014861 ();
@@ -13952,6 +13959,20 @@ extern "C" void JsonTestScript_LogEnd_m1659387702 ();
 extern "C" void JsonTestScript_Log_m3862502748 ();
 extern "C" void JsonTestScript_LogSerialized_m2811006310 ();
 extern "C" void JsonTestScript_LogResult_m3100334651 ();
+extern "C" void LocalPlayerModel__ctor_m1394705086 ();
+extern "C" void LocalPlayerModel__cctor_m4099055791 ();
+extern "C" void LocalPlayerModel_get_localPlayerId_m3356930807 ();
+extern "C" void LocalPlayerModel_set_localPlayerId_m3846465660 ();
+extern "C" void LocalPlayerModel_get_localPlayerName_m632555943 ();
+extern "C" void LocalPlayerModel_set_localPlayerName_m1092415372 ();
+extern "C" void LocalPlayerModel_get_localPlayerUID_m995944726 ();
+extern "C" void LocalPlayerModel_set_localPlayerUID_m3613546683 ();
+extern "C" void LocalPlayerModel_get_tokens_m3923705431 ();
+extern "C" void LocalPlayerModel_set_tokens_m468511502 ();
+extern "C" void LocalPlayerModel_get_xp_m336340533 ();
+extern "C" void LocalPlayerModel_set_xp_m3282049260 ();
+extern "C" void LocalPlayerModel_GetInstance_m4081594375 ();
+extern "C" void LocalPlayerModel_UpdateModel_m2550933877 ();
 extern "C" void Main__ctor_m2928940258 ();
 extern "C" void Main_Awake_m3166545477 ();
 extern "C" void MainScreen__ctor_m1707852438 ();
@@ -16062,14 +16083,25 @@ extern "C" void PopupManager_RemoveActivePopup_m4117325434 ();
 extern "C" void PopupManager_ShowPopup_m867864519 ();
 extern "C" void PopupManager_CreateGenericPopup_m2827790414 ();
 extern "C" void PostURL__ctor_m1961679804 ();
-extern "C" void PostURL_StartRequest_m2311390169 ();
-extern "C" void PostURL_WaitForRequest_m1633001207 ();
+extern "C" void PostURL_StartRequest_m3272825833 ();
+extern "C" void PostURL_WaitForRequest_m2552050311 ();
 extern "C" void U3CWaitForRequestU3Ec__IteratorB__ctor_m4184603235 ();
 extern "C" void U3CWaitForRequestU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3225965785 ();
 extern "C" void U3CWaitForRequestU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m344533613 ();
 extern "C" void U3CWaitForRequestU3Ec__IteratorB_MoveNext_m689287833 ();
 extern "C" void U3CWaitForRequestU3Ec__IteratorB_Dispose_m1212602848 ();
 extern "C" void U3CWaitForRequestU3Ec__IteratorB_Reset_m1831036176 ();
+extern "C" void RemoteAPIConstants__ctor_m1501585184 ();
+extern "C" void RemoteAPIConstants__cctor_m3117371533 ();
+extern "C" void RemoteInitVO__ctor_m2961863596 ();
+extern "C" void RemoteInitVO_get_api_m2469359256 ();
+extern "C" void RemoteInitVO_set_api_m2469839419 ();
+extern "C" void RemoteInitVO_get_id_m218428863 ();
+extern "C" void RemoteInitVO_set_id_m2211643058 ();
+extern "C" void RemoteInitVO_get_tokens_m2139253033 ();
+extern "C" void RemoteInitVO_set_tokens_m3206689760 ();
+extern "C" void RemoteInitVO_get_xp_m3148466695 ();
+extern "C" void RemoteInitVO_set_xp_m1483643582 ();
 extern "C" void ResultVO__ctor_m4171753381 ();
 extern "C" void ResultVO_get_count_m4041281531 ();
 extern "C" void ResultVO_set_count_m1140128806 ();
@@ -16206,6 +16238,7 @@ extern "C" void TagConstants__cctor_m2764566823 ();
 extern "C" void TestScript__ctor_m3323773214 ();
 extern "C" void TestScript_Awake_m3561378433 ();
 extern "C" void TestScript_TestPostURL_m1641278073 ();
+extern "C" void TestScript_OnDataReceived_m2185337923 ();
 extern "C" void TextTest__ctor_m3594205692 ();
 extern "C" void TextTest_Start_m2541343484 ();
 extern "C" void TextTest_Update_m1478088849 ();
@@ -16231,7 +16264,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16220] = 
+extern const methodPointerType g_MethodPointers[16253] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -27152,7 +27185,6 @@ extern const methodPointerType g_MethodPointers[16220] =
 	WWWForm__ctor_m1417930174,
 	WWWForm_AddField_m2890504319,
 	WWWForm_AddField_m3426667506,
-	WWWForm_AddField_m355604532,
 	WWWForm_get_headers_m370408569,
 	WWWForm_get_data_m2893811951,
 	WWWTranscoder__cctor_m1486747496,
@@ -30065,6 +30097,7 @@ extern const methodPointerType g_MethodPointers[16220] =
 	EventDelegate_EndInvoke_m2568619290,
 	ExecutionOrderManager__ctor_m3664436148,
 	ExecutionOrderManager_Init_m4122699490,
+	ExecutionOrderManager_OnDataReceived_m285443949,
 	ExtensionMethods__cctor_m390673221,
 	ExtMonoBehaviour__ctor_m885263906,
 	ExtMonoBehaviour_get_isInitialized_m952256653,
@@ -30086,6 +30119,7 @@ extern const methodPointerType g_MethodPointers[16220] =
 	GameConstants__ctor_m2970825902,
 	GameConstants__cctor_m1419193535,
 	GameEvent__ctor_m1494597407,
+	GameEvent__ctor_m4138108187,
 	GameEvent__ctor_m685722812,
 	GameEvent__ctor_m3060632033,
 	GameEvent_get_type_m3917904769,
@@ -30094,6 +30128,8 @@ extern const methodPointerType g_MethodPointers[16220] =
 	GameEvent_set_callback_m4090578444,
 	GameEvent_get_response_m1142487431,
 	GameEvent_set_response_m304452356,
+	GameEvent_get_postResponse_m4192395656,
+	GameEvent_set_postResponse_m1756462883,
 	GameEvent_get_vo_m187295500,
 	GameEvent_set_vo_m2866285265,
 	GameFailDialog__ctor_m2736610275,
@@ -30110,6 +30146,10 @@ extern const methodPointerType g_MethodPointers[16220] =
 	GCStatusVO_set_SigningStatus_m3973825021,
 	GCStatusVO_get_uid_m2126609974,
 	GCStatusVO_set_uid_m771798685,
+	GCStatusVO_get_localPlayerId_m2413039181,
+	GCStatusVO_set_localPlayerId_m2590745254,
+	GCStatusVO_get_localPlayerName_m4085770109,
+	GCStatusVO_set_localPlayerName_m1230915382,
 	GenericPopup__ctor_m3500352774,
 	GenericPopup_Init_m3805229198,
 	GenericPopup_UpdateData_m1128014861,
@@ -30174,6 +30214,20 @@ extern const methodPointerType g_MethodPointers[16220] =
 	JsonTestScript_Log_m3862502748,
 	JsonTestScript_LogSerialized_m2811006310,
 	JsonTestScript_LogResult_m3100334651,
+	LocalPlayerModel__ctor_m1394705086,
+	LocalPlayerModel__cctor_m4099055791,
+	LocalPlayerModel_get_localPlayerId_m3356930807,
+	LocalPlayerModel_set_localPlayerId_m3846465660,
+	LocalPlayerModel_get_localPlayerName_m632555943,
+	LocalPlayerModel_set_localPlayerName_m1092415372,
+	LocalPlayerModel_get_localPlayerUID_m995944726,
+	LocalPlayerModel_set_localPlayerUID_m3613546683,
+	LocalPlayerModel_get_tokens_m3923705431,
+	LocalPlayerModel_set_tokens_m468511502,
+	LocalPlayerModel_get_xp_m336340533,
+	LocalPlayerModel_set_xp_m3282049260,
+	LocalPlayerModel_GetInstance_m4081594375,
+	LocalPlayerModel_UpdateModel_m2550933877,
 	Main__ctor_m2928940258,
 	Main_Awake_m3166545477,
 	MainScreen__ctor_m1707852438,
@@ -32284,14 +32338,25 @@ extern const methodPointerType g_MethodPointers[16220] =
 	PopupManager_ShowPopup_m867864519,
 	PopupManager_CreateGenericPopup_m2827790414,
 	PostURL__ctor_m1961679804,
-	PostURL_StartRequest_m2311390169,
-	PostURL_WaitForRequest_m1633001207,
+	PostURL_StartRequest_m3272825833,
+	PostURL_WaitForRequest_m2552050311,
 	U3CWaitForRequestU3Ec__IteratorB__ctor_m4184603235,
 	U3CWaitForRequestU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3225965785,
 	U3CWaitForRequestU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m344533613,
 	U3CWaitForRequestU3Ec__IteratorB_MoveNext_m689287833,
 	U3CWaitForRequestU3Ec__IteratorB_Dispose_m1212602848,
 	U3CWaitForRequestU3Ec__IteratorB_Reset_m1831036176,
+	RemoteAPIConstants__ctor_m1501585184,
+	RemoteAPIConstants__cctor_m3117371533,
+	RemoteInitVO__ctor_m2961863596,
+	RemoteInitVO_get_api_m2469359256,
+	RemoteInitVO_set_api_m2469839419,
+	RemoteInitVO_get_id_m218428863,
+	RemoteInitVO_set_id_m2211643058,
+	RemoteInitVO_get_tokens_m2139253033,
+	RemoteInitVO_set_tokens_m3206689760,
+	RemoteInitVO_get_xp_m3148466695,
+	RemoteInitVO_set_xp_m1483643582,
 	ResultVO__ctor_m4171753381,
 	ResultVO_get_count_m4041281531,
 	ResultVO_set_count_m1140128806,
@@ -32428,6 +32493,7 @@ extern const methodPointerType g_MethodPointers[16220] =
 	TestScript__ctor_m3323773214,
 	TestScript_Awake_m3561378433,
 	TestScript_TestPostURL_m1641278073,
+	TestScript_OnDataReceived_m2185337923,
 	TextTest__ctor_m3594205692,
 	TextTest_Start_m2541343484,
 	TextTest_Update_m1478088849,

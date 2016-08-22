@@ -13,6 +13,8 @@
 #include <limits>
 #include <assert.h>
 
+// Newtonsoft.Json.JsonConverterCollection
+struct JsonConverterCollection_t3995341017;
 // Newtonsoft.Json.JsonIgnoreAttribute
 struct JsonIgnoreAttribute_t4251740517;
 // Newtonsoft.Json.JsonObjectAttribute
@@ -41,8 +43,6 @@ struct EventHandler_1_t1868533683;
 struct IReferenceResolver_t3571235425;
 // System.Runtime.Serialization.SerializationBinder
 struct SerializationBinder_t3161036435;
-// Newtonsoft.Json.JsonConverterCollection
-struct JsonConverterCollection_t3995341017;
 // Newtonsoft.Json.Serialization.IContractResolver
 struct IContractResolver_t1994304730;
 // Newtonsoft.Json.JsonSerializerSettings
@@ -505,9 +505,12 @@ struct U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterCol3995341017.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterCol3995341017MethodDeclarations.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Collections_ObjectModel_Collection2726189677MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonIgnoreAttrib4251740517.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonIgnoreAttrib4251740517MethodDeclarations.h"
-#include "mscorlib_System_Void2779279689.h"
 #include "mscorlib_System_Attribute498693649MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonObjectAttrib1059491480.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonObjectAttrib1059491480MethodDeclarations.h"
@@ -582,8 +585,6 @@ struct U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528;
 #include "mscorlib_System_ArgumentNullException3214793280.h"
 #include "mscorlib_System_ArgumentOutOfRangeException3479058991MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_F3852587989.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterCol3995341017.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterCol3995341017MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_De2164550322MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec1402980234MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec1402980234.h"
@@ -1129,7 +1130,6 @@ struct U3CCreateAndPopulateListU3Ec__AnonStorey1A_t1236026528;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728.h"
 #include "System_Core_System_Func_2_gen1588144240.h"
 #include "System_Core_System_Func_2_gen2399039562.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728MethodDeclarations.h"
 
 // System.Boolean Newtonsoft.Json.Utilities.CollectionUtils::IsNullOrEmpty<System.Object>(System.Collections.Generic.ICollection`1<!!0>)
 extern "C"  bool CollectionUtils_IsNullOrEmpty_TisIl2CppObject_m1747191279_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
@@ -1417,6 +1417,22 @@ extern "C"  Dictionary_2_t1344691162 * Enumerable_ToDictionary_TisIl2CppObject_T
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void Newtonsoft.Json.JsonConverterCollection::.ctor()
+extern const MethodInfo* Collection_1__ctor_m2830438351_MethodInfo_var;
+extern const uint32_t JsonConverterCollection__ctor_m524164970_MetadataUsageId;
+extern "C"  void JsonConverterCollection__ctor_m524164970 (JsonConverterCollection_t3995341017 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonConverterCollection__ctor_m524164970_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Collection_1__ctor_m2830438351(__this, /*hidden argument*/Collection_1__ctor_m2830438351_MethodInfo_var);
+		return;
+	}
+}
 // System.Void Newtonsoft.Json.JsonIgnoreAttribute::.ctor()
 extern "C"  void JsonIgnoreAttribute__ctor_m1596152542 (JsonIgnoreAttribute_t4251740517 * __this, const MethodInfo* method)
 {

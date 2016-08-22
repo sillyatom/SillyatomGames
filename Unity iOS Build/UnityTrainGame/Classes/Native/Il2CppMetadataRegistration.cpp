@@ -28,20 +28,20 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[];
 extern void** const g_MetadataUsages[];
 extern const Il2CppMetadataRegistration g_MetadataRegistration = 
 {
-	3367,
+	3369,
 	s_Il2CppGenericTypes,
-	1128,
+	1130,
 	g_Il2CppGenericInstTable,
-	7142,
+	7149,
 	s_Il2CppGenericMethodFunctions,
-	11183,
+	11199,
 	g_Il2CppTypeTable,
-	7907,
+	7914,
 	g_Il2CppMethodSpecTable,
-	9446,
+	9472,
 	g_FieldOffsetTable,
-	2378,
+	2382,
 	g_Il2CppTypeDefinitionSizesTable,
-	13654,
+	13698,
 	g_MetadataUsages,
 };

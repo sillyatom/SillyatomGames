@@ -33,8 +33,6 @@ extern "C"  void WWWForm__ctor_m1417930174 (WWWForm_t3999572776 * __this, const 
 extern "C"  void WWWForm_AddField_m2890504319 (WWWForm_t3999572776 * __this, String_t* ___fieldName, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.WWWForm::AddField(System.String,System.String,System.Text.Encoding)
 extern "C"  void WWWForm_AddField_m3426667506 (WWWForm_t3999572776 * __this, String_t* ___fieldName, String_t* ___value, Encoding_t180559927 * ___e, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.WWWForm::AddField(System.String,System.Int32)
-extern "C"  void WWWForm_AddField_m355604532 (WWWForm_t3999572776 * __this, String_t* ___fieldName, int32_t ___i, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.Generic.Dictionary`2<System.String,System.String> UnityEngine.WWWForm::get_headers()
 extern "C"  Dictionary_2_t2606186806 * WWWForm_get_headers_m370408569 (WWWForm_t3999572776 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Byte[] UnityEngine.WWWForm::get_data()

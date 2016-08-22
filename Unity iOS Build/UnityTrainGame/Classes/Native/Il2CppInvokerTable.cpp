@@ -13418,6 +13418,13 @@ void* RuntimeInvoker_KeyValuePair_2_t3312956448_Il2CppObject (const MethodInfo* 
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
+void* RuntimeInvoker_Il2CppObject_SByte_t2855346064_Il2CppObject_Il2CppObject_Il2CppObject (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Il2CppObject * (*Func)(void* obj, int8_t p1, Il2CppObject * p2, Il2CppObject * p3, Il2CppObject * p4, const MethodInfo* method);
+	Il2CppObject * ret = ((Func)method->method)(obj, *((int8_t*)args[0]), (Il2CppObject *)args[1], (Il2CppObject *)args[2], (Il2CppObject *)args[3], method);
+	return ret;
+}
+
 void* RuntimeInvoker_CustomAttributeNamedArgument_t318735129 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef CustomAttributeNamedArgument_t318735129  (*Func)(void* obj, const MethodInfo* method);
@@ -14860,7 +14867,7 @@ void* RuntimeInvoker_Il2CppObject_FloatTween_t587838465 (const MethodInfo* metho
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[2053] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[2054] = 
 {
 	RuntimeInvoker_Void_t2779279689,
 	RuntimeInvoker_Boolean_t211005341_Il2CppObject,
@@ -16709,6 +16716,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[2053] =
 	RuntimeInvoker_KeyValuePair_2_t437890753_Il2CppObject_Il2CppObject_Int32_t2847414787,
 	RuntimeInvoker_KeyValuePair_2_t3312956448_Il2CppObject_Il2CppObject_Int32_t2847414787,
 	RuntimeInvoker_KeyValuePair_2_t3312956448_Il2CppObject,
+	RuntimeInvoker_Il2CppObject_SByte_t2855346064_Il2CppObject_Il2CppObject_Il2CppObject,
 	RuntimeInvoker_CustomAttributeNamedArgument_t318735129,
 	RuntimeInvoker_CustomAttributeTypedArgument_t560415562,
 	RuntimeInvoker_TableRange_t476453423,

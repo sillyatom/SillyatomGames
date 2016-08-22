@@ -30,3 +30,11 @@ extern "C"  void GCStatusVO_set_SigningStatus_m3973825021 (GCStatusVO_t377038211
 extern "C"  String_t* GCStatusVO_get_uid_m2126609974 (GCStatusVO_t3770382119 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GCStatusVO::set_uid(System.String)
 extern "C"  void GCStatusVO_set_uid_m771798685 (GCStatusVO_t3770382119 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String GCStatusVO::get_localPlayerId()
+extern "C"  String_t* GCStatusVO_get_localPlayerId_m2413039181 (GCStatusVO_t3770382119 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GCStatusVO::set_localPlayerId(System.String)
+extern "C"  void GCStatusVO_set_localPlayerId_m2590745254 (GCStatusVO_t3770382119 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String GCStatusVO::get_localPlayerName()
+extern "C"  String_t* GCStatusVO_get_localPlayerName_m4085770109 (GCStatusVO_t3770382119 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GCStatusVO::set_localPlayerName(System.String)
+extern "C"  void GCStatusVO_set_localPlayerName_m1230915382 (GCStatusVO_t3770382119 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

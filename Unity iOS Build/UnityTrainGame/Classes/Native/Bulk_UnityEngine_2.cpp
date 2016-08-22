@@ -9173,16 +9173,6 @@ extern "C"  void WWWForm_AddField_m3426667506 (WWWForm_t3999572776 * __this, Str
 		return;
 	}
 }
-// System.Void UnityEngine.WWWForm::AddField(System.String,System.Int32)
-extern "C"  void WWWForm_AddField_m355604532 (WWWForm_t3999572776 * __this, String_t* ___fieldName, int32_t ___i, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = ___fieldName;
-		String_t* L_1 = Int32_ToString_m1286526384((&___i), /*hidden argument*/NULL);
-		WWWForm_AddField_m2890504319(__this, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
 // System.Collections.Generic.Dictionary`2<System.String,System.String> UnityEngine.WWWForm::get_headers()
 extern TypeInfo* Dictionary_2_t2606186806_il2cpp_TypeInfo_var;
 extern TypeInfo* Encoding_t180559927_il2cpp_TypeInfo_var;

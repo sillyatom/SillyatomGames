@@ -273,12 +273,18 @@ struct GenericPopup_t4182595893;
 struct PostURL_t1273431183;
 // UnityEngine.WWWForm
 struct WWWForm_t3999572776;
+// System.Action`2<System.Boolean,System.String>
+struct Action_2_t3735278643;
 // System.Collections.IEnumerator
 struct IEnumerator_t287207039;
 // UnityEngine.WWW
 struct WWW_t1522972100;
 // PostURL/<WaitForRequest>c__IteratorB
 struct U3CWaitForRequestU3Ec__IteratorB_t2479391160;
+// RemoteAPIConstants
+struct RemoteAPIConstants_t3220785115;
+// RemoteInitVO
+struct RemoteInitVO_t4123121615;
 // ResultVO
 struct ResultVO_t4023821238;
 // System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>
@@ -341,6 +347,8 @@ struct Vector4Converter_t1276662127;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1794357283.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1794357283MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializer4019458909.h"
@@ -743,14 +751,20 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_PostURL1273431183MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_WWWForm3999572776.h"
+#include "System_Core_System_Action_2_gen3735278643.h"
 #include "UnityEngine_UnityEngine_WWW1522972100MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_WWW1522972100.h"
 #include "UnityEngine_UnityEngine_Coroutine2246592261.h"
 #include "AssemblyU2DCSharp_PostURL_U3CWaitForRequestU3Ec__I2479391160MethodDeclarations.h"
 #include "AssemblyU2DCSharp_PostURL_U3CWaitForRequestU3Ec__I2479391160.h"
+#include "System_Core_System_Action_2_gen3735278643MethodDeclarations.h"
 #include "mscorlib_System_UInt32985925326.h"
 #include "mscorlib_System_NotSupportedException1374155497MethodDeclarations.h"
 #include "mscorlib_System_NotSupportedException1374155497.h"
+#include "AssemblyU2DCSharp_RemoteAPIConstants3220785115.h"
+#include "AssemblyU2DCSharp_RemoteAPIConstants3220785115MethodDeclarations.h"
+#include "AssemblyU2DCSharp_RemoteInitVO4123121615.h"
+#include "AssemblyU2DCSharp_RemoteInitVO4123121615MethodDeclarations.h"
 #include "AssemblyU2DCSharp_ResultVO4023821238.h"
 #include "AssemblyU2DCSharp_ResultVO4023821238MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g3403145775.h"
@@ -992,8 +1006,10 @@ extern "C"  List_1_t1634065389 * Utility_DeepCloneList_TisIl2CppObject_m11577837
 #define Utility_DeepCloneList_TisIl2CppObject_m1157783765(__this /* static, unused */, p0, method) ((  List_1_t1634065389 * (*) (Il2CppObject * /* static, unused */, List_1_t1634065389 *, const MethodInfo*))Utility_DeepCloneList_TisIl2CppObject_m1157783765_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.List`1<!!0> Utility::DeepCloneList<System.String>(System.Collections.Generic.List`1<!!0>)
 #define Utility_DeepCloneList_TisString_t_m2142681155(__this /* static, unused */, p0, method) ((  List_1_t1765447871 * (*) (Il2CppObject * /* static, unused */, List_1_t1765447871 *, const MethodInfo*))Utility_DeepCloneList_TisIl2CppObject_m1157783765_gshared)(__this /* static, unused */, p0, method)
-// !!0 UnityEngine.GameObject::GetComponent<PostURL>()
-#define GameObject_GetComponent_TisPostURL_t1273431183_m2313102322(__this, method) ((  PostURL_t1273431183 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.Component::GetComponent<PostURL>()
+#define Component_GetComponent_TisPostURL_t1273431183_m2672707914(__this, method) ((  PostURL_t1273431183 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
+// !!0 Newtonsoft.Json.JsonConvert::DeserializeObject<RemoteInitVO>(System.String)
+#define JsonConvert_DeserializeObject_TisRemoteInitVO_t4123121615_m1186569947(__this /* static, unused */, p0, method) ((  RemoteInitVO_t4123121615 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonConvert_DeserializeObject_TisIl2CppObject_m210131768_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.TextMesh>()
 #define GameObject_GetComponent_TisTextMesh_t583678247_m1543870284(__this, method) ((  TextMesh_t583678247 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 #ifdef __clang__
@@ -18799,49 +18815,56 @@ extern "C"  GameObject_t4012695102 * PopupManager_CreateGenericPopup_m2827790414
 	}
 }
 // System.Void PostURL::.ctor()
+extern Il2CppCodeGenString* _stringLiteral3395099843;
+extern const uint32_t PostURL__ctor_m1961679804_MetadataUsageId;
 extern "C"  void PostURL__ctor_m1961679804 (PostURL_t1273431183 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
 	{
+		il2cpp_codegen_initialize_method (PostURL__ctor_m1961679804_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		__this->set__url_2(_stringLiteral3395099843);
 		MonoBehaviour__ctor_m2022291967(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void PostURL::StartRequest(UnityEngine.WWWForm)
+// System.Void PostURL::StartRequest(UnityEngine.WWWForm,System.Action`2<System.Boolean,System.String>)
 extern TypeInfo* WWW_t1522972100_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3395099843;
-extern const uint32_t PostURL_StartRequest_m2311390169_MetadataUsageId;
-extern "C"  void PostURL_StartRequest_m2311390169 (PostURL_t1273431183 * __this, WWWForm_t3999572776 * ___form, const MethodInfo* method)
+extern const uint32_t PostURL_StartRequest_m3272825833_MetadataUsageId;
+extern "C"  void PostURL_StartRequest_m3272825833 (PostURL_t1273431183 * __this, WWWForm_t3999572776 * ___form, Action_2_t3735278643 * ___callback, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (PostURL_StartRequest_m2311390169_MetadataUsageId);
+		il2cpp_codegen_initialize_method (PostURL_StartRequest_m3272825833_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	String_t* V_0 = NULL;
-	WWW_t1522972100 * V_1 = NULL;
+	WWW_t1522972100 * V_0 = NULL;
 	{
-		V_0 = _stringLiteral3395099843;
-		String_t* L_0 = V_0;
+		String_t* L_0 = __this->get__url_2();
 		WWWForm_t3999572776 * L_1 = ___form;
 		WWW_t1522972100 * L_2 = (WWW_t1522972100 *)il2cpp_codegen_object_new(WWW_t1522972100_il2cpp_TypeInfo_var);
 		WWW__ctor_m3203953640(L_2, L_0, L_1, /*hidden argument*/NULL);
-		V_1 = L_2;
-		WWW_t1522972100 * L_3 = V_1;
-		Il2CppObject * L_4 = PostURL_WaitForRequest_m1633001207(__this, L_3, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m2135303124(__this, L_4, /*hidden argument*/NULL);
+		V_0 = L_2;
+		WWW_t1522972100 * L_3 = V_0;
+		Action_2_t3735278643 * L_4 = ___callback;
+		Il2CppObject * L_5 = PostURL_WaitForRequest_m2552050311(__this, L_3, L_4, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m2135303124(__this, L_5, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Collections.IEnumerator PostURL::WaitForRequest(UnityEngine.WWW)
+// System.Collections.IEnumerator PostURL::WaitForRequest(UnityEngine.WWW,System.Action`2<System.Boolean,System.String>)
 extern TypeInfo* U3CWaitForRequestU3Ec__IteratorB_t2479391160_il2cpp_TypeInfo_var;
-extern const uint32_t PostURL_WaitForRequest_m1633001207_MetadataUsageId;
-extern "C"  Il2CppObject * PostURL_WaitForRequest_m1633001207 (PostURL_t1273431183 * __this, WWW_t1522972100 * ___www, const MethodInfo* method)
+extern const uint32_t PostURL_WaitForRequest_m2552050311_MetadataUsageId;
+extern "C"  Il2CppObject * PostURL_WaitForRequest_m2552050311 (PostURL_t1273431183 * __this, WWW_t1522972100 * ___www, Action_2_t3735278643 * ___callback, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (PostURL_WaitForRequest_m1633001207_MetadataUsageId);
+		il2cpp_codegen_initialize_method (PostURL_WaitForRequest_m2552050311_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	U3CWaitForRequestU3Ec__IteratorB_t2479391160 * V_0 = NULL;
@@ -18854,11 +18877,19 @@ extern "C"  Il2CppObject * PostURL_WaitForRequest_m1633001207 (PostURL_t12734311
 		NullCheck(L_1);
 		L_1->set_www_0(L_2);
 		U3CWaitForRequestU3Ec__IteratorB_t2479391160 * L_3 = V_0;
-		WWW_t1522972100 * L_4 = ___www;
+		Action_2_t3735278643 * L_4 = ___callback;
 		NullCheck(L_3);
-		L_3->set_U3CU24U3Ewww_3(L_4);
+		L_3->set_callback_1(L_4);
 		U3CWaitForRequestU3Ec__IteratorB_t2479391160 * L_5 = V_0;
-		return L_5;
+		WWW_t1522972100 * L_6 = ___www;
+		NullCheck(L_5);
+		L_5->set_U3CU24U3Ewww_4(L_6);
+		U3CWaitForRequestU3Ec__IteratorB_t2479391160 * L_7 = V_0;
+		Action_2_t3735278643 * L_8 = ___callback;
+		NullCheck(L_7);
+		L_7->set_U3CU24U3Ecallback_5(L_8);
+		U3CWaitForRequestU3Ec__IteratorB_t2479391160 * L_9 = V_0;
+		return L_9;
 	}
 }
 // System.Void PostURL/<WaitForRequest>c__IteratorB::.ctor()
@@ -18873,7 +18904,7 @@ extern "C"  void U3CWaitForRequestU3Ec__IteratorB__ctor_m4184603235 (U3CWaitForR
 extern "C"  Il2CppObject * U3CWaitForRequestU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3225965785 (U3CWaitForRequestU3Ec__IteratorB_t2479391160 * __this, const MethodInfo* method)
 {
 	{
-		Il2CppObject * L_0 = __this->get_U24current_2();
+		Il2CppObject * L_0 = __this->get_U24current_3();
 		return L_0;
 	}
 }
@@ -18881,15 +18912,12 @@ extern "C"  Il2CppObject * U3CWaitForRequestU3Ec__IteratorB_System_Collections_G
 extern "C"  Il2CppObject * U3CWaitForRequestU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m344533613 (U3CWaitForRequestU3Ec__IteratorB_t2479391160 * __this, const MethodInfo* method)
 {
 	{
-		Il2CppObject * L_0 = __this->get_U24current_2();
+		Il2CppObject * L_0 = __this->get_U24current_3();
 		return L_0;
 	}
 }
 // System.Boolean PostURL/<WaitForRequest>c__IteratorB::MoveNext()
-extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3861616546;
-extern Il2CppCodeGenString* _stringLiteral153523557;
+extern const MethodInfo* Action_2_Invoke_m2497090328_MethodInfo_var;
 extern const uint32_t U3CWaitForRequestU3Ec__IteratorB_MoveNext_m689287833_MetadataUsageId;
 extern "C"  bool U3CWaitForRequestU3Ec__IteratorB_MoveNext_m689287833 (U3CWaitForRequestU3Ec__IteratorB_t2479391160 * __this, const MethodInfo* method)
 {
@@ -18902,9 +18930,9 @@ extern "C"  bool U3CWaitForRequestU3Ec__IteratorB_MoveNext_m689287833 (U3CWaitFo
 	uint32_t V_0 = 0;
 	bool V_1 = false;
 	{
-		int32_t L_0 = __this->get_U24PC_1();
+		int32_t L_0 = __this->get_U24PC_2();
 		V_0 = L_0;
-		__this->set_U24PC_1((-1));
+		__this->set_U24PC_2((-1));
 		uint32_t L_1 = V_0;
 		if (L_1 == 0)
 		{
@@ -18916,15 +18944,15 @@ extern "C"  bool U3CWaitForRequestU3Ec__IteratorB_MoveNext_m689287833 (U3CWaitFo
 		}
 	}
 	{
-		goto IL_0089;
+		goto IL_008e;
 	}
 
 IL_0021:
 	{
 		WWW_t1522972100 * L_2 = __this->get_www_0();
-		__this->set_U24current_2(L_2);
-		__this->set_U24PC_1(1);
-		goto IL_008b;
+		__this->set_U24current_3(L_2);
+		__this->set_U24PC_2(1);
+		goto IL_0090;
 	}
 
 IL_0039:
@@ -18934,52 +18962,61 @@ IL_0039:
 		String_t* L_4 = WWW_get_error_m1787423074(L_3, /*hidden argument*/NULL);
 		if (L_4)
 		{
-			goto IL_0068;
+			goto IL_0070;
 		}
 	}
 	{
-		WWW_t1522972100 * L_5 = __this->get_www_0();
-		NullCheck(L_5);
-		String_t* L_6 = WWW_get_text_m4216049525(L_5, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_7 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral3861616546, L_6, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
-		Debug_Log_m1731103628(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
-		goto IL_0082;
+		Action_2_t3735278643 * L_5 = __this->get_callback_1();
+		if (!L_5)
+		{
+			goto IL_006b;
+		}
 	}
-
-IL_0068:
 	{
-		WWW_t1522972100 * L_8 = __this->get_www_0();
-		NullCheck(L_8);
-		String_t* L_9 = WWW_get_error_m1787423074(L_8, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_10 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral153523557, L_9, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
-		Debug_Log_m1731103628(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
+		Action_2_t3735278643 * L_6 = __this->get_callback_1();
+		WWW_t1522972100 * L_7 = __this->get_www_0();
+		NullCheck(L_7);
+		String_t* L_8 = WWW_get_text_m4216049525(L_7, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		Action_2_Invoke_m2497090328(L_6, (bool)1, L_8, /*hidden argument*/Action_2_Invoke_m2497090328_MethodInfo_var);
 	}
 
-IL_0082:
+IL_006b:
 	{
-		__this->set_U24PC_1((-1));
+		goto IL_0087;
 	}
 
-IL_0089:
+IL_0070:
+	{
+		Action_2_t3735278643 * L_9 = __this->get_callback_1();
+		WWW_t1522972100 * L_10 = __this->get_www_0();
+		NullCheck(L_10);
+		String_t* L_11 = WWW_get_error_m1787423074(L_10, /*hidden argument*/NULL);
+		NullCheck(L_9);
+		Action_2_Invoke_m2497090328(L_9, (bool)0, L_11, /*hidden argument*/Action_2_Invoke_m2497090328_MethodInfo_var);
+	}
+
+IL_0087:
+	{
+		__this->set_U24PC_2((-1));
+	}
+
+IL_008e:
 	{
 		return (bool)0;
 	}
 
-IL_008b:
+IL_0090:
 	{
 		return (bool)1;
 	}
-	// Dead block : IL_008d: ldloc.1
+	// Dead block : IL_0092: ldloc.1
 }
 // System.Void PostURL/<WaitForRequest>c__IteratorB::Dispose()
 extern "C"  void U3CWaitForRequestU3Ec__IteratorB_Dispose_m1212602848 (U3CWaitForRequestU3Ec__IteratorB_t2479391160 * __this, const MethodInfo* method)
 {
 	{
-		__this->set_U24PC_1((-1));
+		__this->set_U24PC_2((-1));
 		return;
 	}
 }
@@ -18998,6 +19035,117 @@ extern "C"  void U3CWaitForRequestU3Ec__IteratorB_Reset_m1831036176 (U3CWaitForR
 		NotSupportedException_t1374155497 * L_0 = (NotSupportedException_t1374155497 *)il2cpp_codegen_object_new(NotSupportedException_t1374155497_il2cpp_TypeInfo_var);
 		NotSupportedException__ctor_m149930845(L_0, /*hidden argument*/NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
+	}
+}
+// System.Void RemoteAPIConstants::.ctor()
+extern "C"  void RemoteAPIConstants__ctor_m1501585184 (RemoteAPIConstants_t3220785115 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void RemoteAPIConstants::.cctor()
+extern TypeInfo* RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral96794;
+extern Il2CppCodeGenString* _stringLiteral3237136;
+extern Il2CppCodeGenString* _stringLiteral3355;
+extern Il2CppCodeGenString* _stringLiteral3426780570;
+extern Il2CppCodeGenString* _stringLiteral3832;
+extern Il2CppCodeGenString* _stringLiteral3373707;
+extern const uint32_t RemoteAPIConstants__cctor_m3117371533_MetadataUsageId;
+extern "C"  void RemoteAPIConstants__cctor_m3117371533 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (RemoteAPIConstants__cctor_m3117371533_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->set_API_0(_stringLiteral96794);
+		((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->set_INIT_CALL_1(_stringLiteral3237136);
+		((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->set_PLAYER_UID_2(_stringLiteral3355);
+		((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->set_PLAYER_TOKENS_3(_stringLiteral3426780570);
+		((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->set_PLAYER_XP_4(_stringLiteral3832);
+		((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->set_PLAYER_NAME_5(_stringLiteral3373707);
+		return;
+	}
+}
+// System.Void RemoteInitVO::.ctor()
+extern "C"  void RemoteInitVO__ctor_m2961863596 (RemoteInitVO_t4123121615 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String RemoteInitVO::get_api()
+extern "C"  String_t* RemoteInitVO_get_api_m2469359256 (RemoteInitVO_t4123121615 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CapiU3Ek__BackingField_0();
+		return L_0;
+	}
+}
+// System.Void RemoteInitVO::set_api(System.String)
+extern "C"  void RemoteInitVO_set_api_m2469839419 (RemoteInitVO_t4123121615 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CapiU3Ek__BackingField_0(L_0);
+		return;
+	}
+}
+// System.String RemoteInitVO::get_id()
+extern "C"  String_t* RemoteInitVO_get_id_m218428863 (RemoteInitVO_t4123121615 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_1();
+		return L_0;
+	}
+}
+// System.Void RemoteInitVO::set_id(System.String)
+extern "C"  void RemoteInitVO_set_id_m2211643058 (RemoteInitVO_t4123121615 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CidU3Ek__BackingField_1(L_0);
+		return;
+	}
+}
+// System.Int32 RemoteInitVO::get_tokens()
+extern "C"  int32_t RemoteInitVO_get_tokens_m2139253033 (RemoteInitVO_t4123121615 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_U3CtokensU3Ek__BackingField_2();
+		return L_0;
+	}
+}
+// System.Void RemoteInitVO::set_tokens(System.Int32)
+extern "C"  void RemoteInitVO_set_tokens_m3206689760 (RemoteInitVO_t4123121615 * __this, int32_t ___value, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___value;
+		__this->set_U3CtokensU3Ek__BackingField_2(L_0);
+		return;
+	}
+}
+// System.Int32 RemoteInitVO::get_xp()
+extern "C"  int32_t RemoteInitVO_get_xp_m3148466695 (RemoteInitVO_t4123121615 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_U3CxpU3Ek__BackingField_3();
+		return L_0;
+	}
+}
+// System.Void RemoteInitVO::set_xp(System.Int32)
+extern "C"  void RemoteInitVO_set_xp_m1483643582 (RemoteInitVO_t4123121615 * __this, int32_t ___value, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___value;
+		__this->set_U3CxpU3Ek__BackingField_3(L_0);
+		return;
 	}
 }
 // System.Void ResultVO::.ctor()
@@ -19706,12 +19854,12 @@ extern "C"  void RoundHandler_Update_m1604337358 (RoundHandler_t2172802556 * __t
 		__this->set__elapsedTime_4(((float)((float)L_1+(float)L_2)));
 		Image_t3354615620 * L_3 = __this->get_progressBar_7();
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		float L_4 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_4();
+		float L_4 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_5();
 		float L_5 = __this->get__elapsedTime_4();
 		NullCheck(L_3);
 		Image_set_fillAmount_m1583793743(L_3, ((float)((float)((float)((float)(1.0f)/(float)L_4))*(float)L_5)), /*hidden argument*/NULL);
 		float L_6 = __this->get__elapsedTime_4();
-		float L_7 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_4();
+		float L_7 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_5();
 		if ((!(((float)L_6) >= ((float)L_7))))
 		{
 			goto IL_0060;
@@ -20473,15 +20621,15 @@ extern "C"  void SinglePlayerMainGame_InitGame_m2164794303 (SinglePlayerMainGame
 		VirtActionInvoker0::Invoke(4 /* System.Void Dealer::Init() */, L_6);
 		Dealer_t2043054649 * L_7 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		int32_t L_8 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_1();
+		int32_t L_8 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
 		NullCheck(L_7);
 		Dealer_CreateCards_m4016770360(L_7, L_8, /*hidden argument*/NULL);
 		Dealer_t2043054649 * L_9 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
 		NullCheck(L_9);
 		Dealer_ShuffleCards_m452971244(L_9, /*hidden argument*/NULL);
-		int32_t L_10 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_1();
+		int32_t L_10 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
 		VirtActionInvoker1< int32_t >::Invoke(15 /* System.Void MultiplayerMainGame::UpdatePlayerCards(System.Int32) */, __this, L_10);
-		int32_t L_11 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_1();
+		int32_t L_11 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
 		MultiplayerMainGame_DistributeCards_m772136855(__this, L_11, /*hidden argument*/NULL);
 		return;
 	}
@@ -20522,7 +20670,7 @@ extern "C"  void SinglePlayerMainGame_UpdatePlayers_m18221774 (SinglePlayerMainG
 		GameObjectU5BU5D_t3499186955* L_1 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2393081601, /*hidden argument*/NULL);
 		V_0 = L_1;
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		int32_t L_2 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_1();
+		int32_t L_2 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
 		V_1 = L_2;
 		V_2 = 0;
 		goto IL_00a2;
@@ -20680,7 +20828,7 @@ IL_00fe:
 	{
 		int32_t L_43 = V_7;
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		int32_t L_44 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_1();
+		int32_t L_44 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
 		if ((((int32_t)L_43) < ((int32_t)L_44)))
 		{
 			goto IL_00b1;
@@ -21314,8 +21462,8 @@ extern "C"  bool U3CAutoPlayU3Ec__IteratorE_MoveNext_m316712791 (U3CAutoPlayU3Ec
 IL_0021:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		float L_2 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_4();
-		float L_3 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_4();
+		float L_2 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_5();
+		float L_3 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_ROUND_TIME_5();
 		IL2CPP_RUNTIME_CLASS_INIT(Utility_t1549674828_il2cpp_TypeInfo_var);
 		float L_4 = Utility_GetRandomNumber_m363916787(NULL /*static, unused*/, (((double)((double)((float)((float)L_2*(float)(0.5f)))))), (((double)((double)((float)((float)L_3*(float)(0.75f)))))), /*hidden argument*/NULL);
 		WaitForSeconds_t1291133240 * L_5 = (WaitForSeconds_t1291133240 *)il2cpp_codegen_object_new(WaitForSeconds_t1291133240_il2cpp_TypeInfo_var);
@@ -21640,7 +21788,7 @@ IL_0017:
 		float L_4 = __this->get__lastPosY_6();
 		float L_5 = __this->get__symbolHeight_3();
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		float L_6 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_3();
+		float L_6 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_4();
 		__this->set__lastPosY_6(((float)((float)L_4+(float)((float)((float)L_5+(float)L_6)))));
 		int32_t L_7 = V_0;
 		V_0 = ((int32_t)((int32_t)L_7+(int32_t)1));
@@ -21683,7 +21831,7 @@ IL_006b:
 		float L_15 = __this->get__lastPosY_6();
 		float L_16 = __this->get__symbolHeight_3();
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		float L_17 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_3();
+		float L_17 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_4();
 		__this->set__lastPosY_6(((float)((float)L_15+(float)((float)((float)L_16+(float)L_17)))));
 		int32_t L_18 = V_1;
 		V_1 = ((int32_t)((int32_t)L_18+(int32_t)1));
@@ -21961,7 +22109,7 @@ IL_0137:
 		ObjectU5BU5D_t11523773* L_65 = L_64;
 		float L_66 = __this->get__symbolHeight_3();
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		float L_67 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_3();
+		float L_67 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_4();
 		float L_68 = ((float)((float)L_66+(float)L_67));
 		Il2CppObject * L_69 = Box(Single_t958209021_il2cpp_TypeInfo_var, &L_68);
 		NullCheck(L_65);
@@ -22098,7 +22246,7 @@ IL_0025:
 		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)_stringLiteral3560141);
 		ObjectU5BU5D_t11523773* L_19 = L_18;
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		float L_20 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_DEAL_ANIM_TIME_2();
+		float L_20 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_DEAL_ANIM_TIME_3();
 		float L_21 = ((float)((float)L_20*(float)(2.0f)));
 		Il2CppObject * L_22 = Box(Single_t958209021_il2cpp_TypeInfo_var, &L_21);
 		NullCheck(L_19);
@@ -22428,7 +22576,7 @@ IL_0192:
 			float L_60 = __this->get__lastPosY_6();
 			float L_61 = __this->get__symbolHeight_3();
 			IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-			float L_62 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_3();
+			float L_62 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_SYMBOL_SPACE_4();
 			__this->set__lastPosY_6(((float)((float)L_60+(float)((float)((float)L_61+(float)L_62)))));
 		}
 
@@ -22952,10 +23100,13 @@ IL_0119:
 }
 // System.Void TestScript::TestPostURL()
 extern TypeInfo* WWWForm_t3999572776_il2cpp_TypeInfo_var;
-extern const MethodInfo* GameObject_GetComponent_TisPostURL_t1273431183_m2313102322_MethodInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3355;
-extern Il2CppCodeGenString* _stringLiteral3373707;
-extern Il2CppCodeGenString* _stringLiteral109440227;
+extern TypeInfo* RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var;
+extern TypeInfo* Action_2_t3735278643_il2cpp_TypeInfo_var;
+extern const MethodInfo* Component_GetComponent_TisPostURL_t1273431183_m2672707914_MethodInfo_var;
+extern const MethodInfo* TestScript_OnDataReceived_m2185337923_MethodInfo_var;
+extern const MethodInfo* Action_2__ctor_m1625443443_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1509442;
+extern Il2CppCodeGenString* _stringLiteral3556498;
 extern const uint32_t TestScript_TestPostURL_m1641278073_MetadataUsageId;
 extern "C"  void TestScript_TestPostURL_m1641278073 (TestScript_t3705514013 * __this, const MethodInfo* method)
 {
@@ -22971,17 +23122,70 @@ extern "C"  void TestScript_TestPostURL_m1641278073 (TestScript_t3705514013 * __
 		WWWForm__ctor_m1417930174(L_0, /*hidden argument*/NULL);
 		V_0 = L_0;
 		WWWForm_t3999572776 * L_1 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var);
+		String_t* L_2 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_API_0();
+		String_t* L_3 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_INIT_CALL_1();
 		NullCheck(L_1);
-		WWWForm_AddField_m355604532(L_1, _stringLiteral3355, 2, /*hidden argument*/NULL);
-		WWWForm_t3999572776 * L_2 = V_0;
-		NullCheck(L_2);
-		WWWForm_AddField_m2890504319(L_2, _stringLiteral3373707, _stringLiteral109440227, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_3 = Component_get_gameObject_m1170635899(__this, /*hidden argument*/NULL);
-		NullCheck(L_3);
-		PostURL_t1273431183 * L_4 = GameObject_GetComponent_TisPostURL_t1273431183_m2313102322(L_3, /*hidden argument*/GameObject_GetComponent_TisPostURL_t1273431183_m2313102322_MethodInfo_var);
-		WWWForm_t3999572776 * L_5 = V_0;
+		WWWForm_AddField_m2890504319(L_1, L_2, L_3, /*hidden argument*/NULL);
+		WWWForm_t3999572776 * L_4 = V_0;
+		String_t* L_5 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_UID_2();
 		NullCheck(L_4);
-		PostURL_StartRequest_m2311390169(L_4, L_5, /*hidden argument*/NULL);
+		WWWForm_AddField_m2890504319(L_4, L_5, _stringLiteral1509442, /*hidden argument*/NULL);
+		WWWForm_t3999572776 * L_6 = V_0;
+		String_t* L_7 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_NAME_5();
+		NullCheck(L_6);
+		WWWForm_AddField_m2890504319(L_6, L_7, _stringLiteral3556498, /*hidden argument*/NULL);
+		Transform_t284553113 * L_8 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		PostURL_t1273431183 * L_9 = Component_GetComponent_TisPostURL_t1273431183_m2672707914(L_8, /*hidden argument*/Component_GetComponent_TisPostURL_t1273431183_m2672707914_MethodInfo_var);
+		WWWForm_t3999572776 * L_10 = V_0;
+		IntPtr_t L_11;
+		L_11.set_m_value_0((void*)TestScript_OnDataReceived_m2185337923_MethodInfo_var);
+		Action_2_t3735278643 * L_12 = (Action_2_t3735278643 *)il2cpp_codegen_object_new(Action_2_t3735278643_il2cpp_TypeInfo_var);
+		Action_2__ctor_m1625443443(L_12, __this, L_11, /*hidden argument*/Action_2__ctor_m1625443443_MethodInfo_var);
+		NullCheck(L_9);
+		PostURL_StartRequest_m3272825833(L_9, L_10, L_12, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TestScript::OnDataReceived(System.Boolean,System.String)
+extern TypeInfo* JsonConvert_t748332590_il2cpp_TypeInfo_var;
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern const MethodInfo* JsonConvert_DeserializeObject_TisRemoteInitVO_t4123121615_m1186569947_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2646248783;
+extern const uint32_t TestScript_OnDataReceived_m2185337923_MetadataUsageId;
+extern "C"  void TestScript_OnDataReceived_m2185337923 (TestScript_t3705514013 * __this, bool ___success, String_t* ___result, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (TestScript_OnDataReceived_m2185337923_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	RemoteInitVO_t4123121615 * V_0 = NULL;
+	{
+		bool L_0 = ___success;
+		if (!L_0)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		String_t* L_1 = ___result;
+		IL2CPP_RUNTIME_CLASS_INIT(JsonConvert_t748332590_il2cpp_TypeInfo_var);
+		RemoteInitVO_t4123121615 * L_2 = JsonConvert_DeserializeObject_TisRemoteInitVO_t4123121615_m1186569947(NULL /*static, unused*/, L_1, /*hidden argument*/JsonConvert_DeserializeObject_TisRemoteInitVO_t4123121615_m1186569947_MethodInfo_var);
+		V_0 = L_2;
+		goto IL_001c;
+	}
+
+IL_0012:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_LogError_m4127342994(NULL /*static, unused*/, _stringLiteral2646248783, /*hidden argument*/NULL);
+	}
+
+IL_001c:
+	{
 		return;
 	}
 }

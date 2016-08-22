@@ -30,66 +30,76 @@ public:
 struct GameConstants_t893838685_StaticFields
 {
 public:
+	// System.Int32 GameConstants::APP_ID
+	int32_t ___APP_ID_0;
 	// System.Int32 GameConstants::MIN_PLAYERS
-	int32_t ___MIN_PLAYERS_0;
+	int32_t ___MIN_PLAYERS_1;
 	// System.Int32 GameConstants::MAX_PLAYERS
-	int32_t ___MAX_PLAYERS_1;
+	int32_t ___MAX_PLAYERS_2;
 	// System.Single GameConstants::DEAL_ANIM_TIME
-	float ___DEAL_ANIM_TIME_2;
+	float ___DEAL_ANIM_TIME_3;
 	// System.Single GameConstants::SYMBOL_SPACE
-	float ___SYMBOL_SPACE_3;
+	float ___SYMBOL_SPACE_4;
 	// System.Single GameConstants::ROUND_TIME
-	float ___ROUND_TIME_4;
+	float ___ROUND_TIME_5;
 	// System.Single GameConstants::DEALT_CARD_SCALE
-	float ___DEALT_CARD_SCALE_5;
+	float ___DEALT_CARD_SCALE_6;
 
 public:
-	inline static int32_t get_offset_of_MIN_PLAYERS_0() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___MIN_PLAYERS_0)); }
-	inline int32_t get_MIN_PLAYERS_0() const { return ___MIN_PLAYERS_0; }
-	inline int32_t* get_address_of_MIN_PLAYERS_0() { return &___MIN_PLAYERS_0; }
-	inline void set_MIN_PLAYERS_0(int32_t value)
+	inline static int32_t get_offset_of_APP_ID_0() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___APP_ID_0)); }
+	inline int32_t get_APP_ID_0() const { return ___APP_ID_0; }
+	inline int32_t* get_address_of_APP_ID_0() { return &___APP_ID_0; }
+	inline void set_APP_ID_0(int32_t value)
 	{
-		___MIN_PLAYERS_0 = value;
+		___APP_ID_0 = value;
 	}
 
-	inline static int32_t get_offset_of_MAX_PLAYERS_1() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___MAX_PLAYERS_1)); }
-	inline int32_t get_MAX_PLAYERS_1() const { return ___MAX_PLAYERS_1; }
-	inline int32_t* get_address_of_MAX_PLAYERS_1() { return &___MAX_PLAYERS_1; }
-	inline void set_MAX_PLAYERS_1(int32_t value)
+	inline static int32_t get_offset_of_MIN_PLAYERS_1() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___MIN_PLAYERS_1)); }
+	inline int32_t get_MIN_PLAYERS_1() const { return ___MIN_PLAYERS_1; }
+	inline int32_t* get_address_of_MIN_PLAYERS_1() { return &___MIN_PLAYERS_1; }
+	inline void set_MIN_PLAYERS_1(int32_t value)
 	{
-		___MAX_PLAYERS_1 = value;
+		___MIN_PLAYERS_1 = value;
 	}
 
-	inline static int32_t get_offset_of_DEAL_ANIM_TIME_2() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___DEAL_ANIM_TIME_2)); }
-	inline float get_DEAL_ANIM_TIME_2() const { return ___DEAL_ANIM_TIME_2; }
-	inline float* get_address_of_DEAL_ANIM_TIME_2() { return &___DEAL_ANIM_TIME_2; }
-	inline void set_DEAL_ANIM_TIME_2(float value)
+	inline static int32_t get_offset_of_MAX_PLAYERS_2() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___MAX_PLAYERS_2)); }
+	inline int32_t get_MAX_PLAYERS_2() const { return ___MAX_PLAYERS_2; }
+	inline int32_t* get_address_of_MAX_PLAYERS_2() { return &___MAX_PLAYERS_2; }
+	inline void set_MAX_PLAYERS_2(int32_t value)
 	{
-		___DEAL_ANIM_TIME_2 = value;
+		___MAX_PLAYERS_2 = value;
 	}
 
-	inline static int32_t get_offset_of_SYMBOL_SPACE_3() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___SYMBOL_SPACE_3)); }
-	inline float get_SYMBOL_SPACE_3() const { return ___SYMBOL_SPACE_3; }
-	inline float* get_address_of_SYMBOL_SPACE_3() { return &___SYMBOL_SPACE_3; }
-	inline void set_SYMBOL_SPACE_3(float value)
+	inline static int32_t get_offset_of_DEAL_ANIM_TIME_3() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___DEAL_ANIM_TIME_3)); }
+	inline float get_DEAL_ANIM_TIME_3() const { return ___DEAL_ANIM_TIME_3; }
+	inline float* get_address_of_DEAL_ANIM_TIME_3() { return &___DEAL_ANIM_TIME_3; }
+	inline void set_DEAL_ANIM_TIME_3(float value)
 	{
-		___SYMBOL_SPACE_3 = value;
+		___DEAL_ANIM_TIME_3 = value;
 	}
 
-	inline static int32_t get_offset_of_ROUND_TIME_4() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___ROUND_TIME_4)); }
-	inline float get_ROUND_TIME_4() const { return ___ROUND_TIME_4; }
-	inline float* get_address_of_ROUND_TIME_4() { return &___ROUND_TIME_4; }
-	inline void set_ROUND_TIME_4(float value)
+	inline static int32_t get_offset_of_SYMBOL_SPACE_4() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___SYMBOL_SPACE_4)); }
+	inline float get_SYMBOL_SPACE_4() const { return ___SYMBOL_SPACE_4; }
+	inline float* get_address_of_SYMBOL_SPACE_4() { return &___SYMBOL_SPACE_4; }
+	inline void set_SYMBOL_SPACE_4(float value)
 	{
-		___ROUND_TIME_4 = value;
+		___SYMBOL_SPACE_4 = value;
 	}
 
-	inline static int32_t get_offset_of_DEALT_CARD_SCALE_5() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___DEALT_CARD_SCALE_5)); }
-	inline float get_DEALT_CARD_SCALE_5() const { return ___DEALT_CARD_SCALE_5; }
-	inline float* get_address_of_DEALT_CARD_SCALE_5() { return &___DEALT_CARD_SCALE_5; }
-	inline void set_DEALT_CARD_SCALE_5(float value)
+	inline static int32_t get_offset_of_ROUND_TIME_5() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___ROUND_TIME_5)); }
+	inline float get_ROUND_TIME_5() const { return ___ROUND_TIME_5; }
+	inline float* get_address_of_ROUND_TIME_5() { return &___ROUND_TIME_5; }
+	inline void set_ROUND_TIME_5(float value)
 	{
-		___DEALT_CARD_SCALE_5 = value;
+		___ROUND_TIME_5 = value;
+	}
+
+	inline static int32_t get_offset_of_DEALT_CARD_SCALE_6() { return static_cast<int32_t>(offsetof(GameConstants_t893838685_StaticFields, ___DEALT_CARD_SCALE_6)); }
+	inline float get_DEALT_CARD_SCALE_6() const { return ___DEALT_CARD_SCALE_6; }
+	inline float* get_address_of_DEALT_CARD_SCALE_6() { return &___DEALT_CARD_SCALE_6; }
+	inline void set_DEALT_CARD_SCALE_6(float value)
+	{
+		___DEALT_CARD_SCALE_6 = value;
 	}
 };
 

@@ -24,6 +24,8 @@ struct PopupManager_t2711269761;
 struct SceneTransitionManager_t1210711436;
 // UnityEngine.GameObject
 struct GameObject_t4012695102;
+// PostURL
+struct PostURL_t1273431183;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -53,6 +55,8 @@ public:
 	GameObject_t4012695102 * ___gameWinDialog_8;
 	// UnityEngine.GameObject GameObjectRef::gameFailDialog
 	GameObject_t4012695102 * ___gameFailDialog_9;
+	// PostURL GameObjectRef::postMethod
+	PostURL_t1273431183 * ___postMethod_10;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -125,6 +129,15 @@ public:
 	{
 		___gameFailDialog_9 = value;
 		Il2CppCodeGenWriteBarrier(&___gameFailDialog_9, value);
+	}
+
+	inline static int32_t get_offset_of_postMethod_10() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___postMethod_10)); }
+	inline PostURL_t1273431183 * get_postMethod_10() const { return ___postMethod_10; }
+	inline PostURL_t1273431183 ** get_address_of_postMethod_10() { return &___postMethod_10; }
+	inline void set_postMethod_10(PostURL_t1273431183 * value)
+	{
+		___postMethod_10 = value;
+		Il2CppCodeGenWriteBarrier(&___postMethod_10, value);
 	}
 };
 

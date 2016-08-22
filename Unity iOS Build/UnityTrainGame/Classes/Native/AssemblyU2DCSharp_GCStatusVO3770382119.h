@@ -29,6 +29,10 @@ public:
 	int32_t ___U3CSigningStatusU3Ek__BackingField_0;
 	// System.String GCStatusVO::<uid>k__BackingField
 	String_t* ___U3CuidU3Ek__BackingField_1;
+	// System.String GCStatusVO::<localPlayerId>k__BackingField
+	String_t* ___U3ClocalPlayerIdU3Ek__BackingField_2;
+	// System.String GCStatusVO::<localPlayerName>k__BackingField
+	String_t* ___U3ClocalPlayerNameU3Ek__BackingField_3;
 
 public:
 	inline static int32_t get_offset_of_U3CSigningStatusU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(GCStatusVO_t3770382119, ___U3CSigningStatusU3Ek__BackingField_0)); }
@@ -46,6 +50,24 @@ public:
 	{
 		___U3CuidU3Ek__BackingField_1 = value;
 		Il2CppCodeGenWriteBarrier(&___U3CuidU3Ek__BackingField_1, value);
+	}
+
+	inline static int32_t get_offset_of_U3ClocalPlayerIdU3Ek__BackingField_2() { return static_cast<int32_t>(offsetof(GCStatusVO_t3770382119, ___U3ClocalPlayerIdU3Ek__BackingField_2)); }
+	inline String_t* get_U3ClocalPlayerIdU3Ek__BackingField_2() const { return ___U3ClocalPlayerIdU3Ek__BackingField_2; }
+	inline String_t** get_address_of_U3ClocalPlayerIdU3Ek__BackingField_2() { return &___U3ClocalPlayerIdU3Ek__BackingField_2; }
+	inline void set_U3ClocalPlayerIdU3Ek__BackingField_2(String_t* value)
+	{
+		___U3ClocalPlayerIdU3Ek__BackingField_2 = value;
+		Il2CppCodeGenWriteBarrier(&___U3ClocalPlayerIdU3Ek__BackingField_2, value);
+	}
+
+	inline static int32_t get_offset_of_U3ClocalPlayerNameU3Ek__BackingField_3() { return static_cast<int32_t>(offsetof(GCStatusVO_t3770382119, ___U3ClocalPlayerNameU3Ek__BackingField_3)); }
+	inline String_t* get_U3ClocalPlayerNameU3Ek__BackingField_3() const { return ___U3ClocalPlayerNameU3Ek__BackingField_3; }
+	inline String_t** get_address_of_U3ClocalPlayerNameU3Ek__BackingField_3() { return &___U3ClocalPlayerNameU3Ek__BackingField_3; }
+	inline void set_U3ClocalPlayerNameU3Ek__BackingField_3(String_t* value)
+	{
+		___U3ClocalPlayerNameU3Ek__BackingField_3 = value;
+		Il2CppCodeGenWriteBarrier(&___U3ClocalPlayerNameU3Ek__BackingField_3, value);
 	}
 };
 

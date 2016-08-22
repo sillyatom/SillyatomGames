@@ -37,8 +37,10 @@ public:
 	Action_2_t2863572912 * ___U3CcallbackU3Ek__BackingField_10;
 	// NetworkResponse GameEvent::<response>k__BackingField
 	NetworkResponse_t1683455087 * ___U3CresponseU3Ek__BackingField_11;
+	// System.String GameEvent::<postResponse>k__BackingField
+	String_t* ___U3CpostResponseU3Ek__BackingField_12;
 	// HeaderVO GameEvent::<vo>k__BackingField
-	HeaderVO_t3244352038 * ___U3CvoU3Ek__BackingField_12;
+	HeaderVO_t3244352038 * ___U3CvoU3Ek__BackingField_13;
 
 public:
 	inline static int32_t get_offset_of_U3CtypeU3Ek__BackingField_9() { return static_cast<int32_t>(offsetof(GameEvent_t2981166504, ___U3CtypeU3Ek__BackingField_9)); }
@@ -68,13 +70,22 @@ public:
 		Il2CppCodeGenWriteBarrier(&___U3CresponseU3Ek__BackingField_11, value);
 	}
 
-	inline static int32_t get_offset_of_U3CvoU3Ek__BackingField_12() { return static_cast<int32_t>(offsetof(GameEvent_t2981166504, ___U3CvoU3Ek__BackingField_12)); }
-	inline HeaderVO_t3244352038 * get_U3CvoU3Ek__BackingField_12() const { return ___U3CvoU3Ek__BackingField_12; }
-	inline HeaderVO_t3244352038 ** get_address_of_U3CvoU3Ek__BackingField_12() { return &___U3CvoU3Ek__BackingField_12; }
-	inline void set_U3CvoU3Ek__BackingField_12(HeaderVO_t3244352038 * value)
+	inline static int32_t get_offset_of_U3CpostResponseU3Ek__BackingField_12() { return static_cast<int32_t>(offsetof(GameEvent_t2981166504, ___U3CpostResponseU3Ek__BackingField_12)); }
+	inline String_t* get_U3CpostResponseU3Ek__BackingField_12() const { return ___U3CpostResponseU3Ek__BackingField_12; }
+	inline String_t** get_address_of_U3CpostResponseU3Ek__BackingField_12() { return &___U3CpostResponseU3Ek__BackingField_12; }
+	inline void set_U3CpostResponseU3Ek__BackingField_12(String_t* value)
 	{
-		___U3CvoU3Ek__BackingField_12 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CvoU3Ek__BackingField_12, value);
+		___U3CpostResponseU3Ek__BackingField_12 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CpostResponseU3Ek__BackingField_12, value);
+	}
+
+	inline static int32_t get_offset_of_U3CvoU3Ek__BackingField_13() { return static_cast<int32_t>(offsetof(GameEvent_t2981166504, ___U3CvoU3Ek__BackingField_13)); }
+	inline HeaderVO_t3244352038 * get_U3CvoU3Ek__BackingField_13() const { return ___U3CvoU3Ek__BackingField_13; }
+	inline HeaderVO_t3244352038 ** get_address_of_U3CvoU3Ek__BackingField_13() { return &___U3CvoU3Ek__BackingField_13; }
+	inline void set_U3CvoU3Ek__BackingField_13(HeaderVO_t3244352038 * value)
+	{
+		___U3CvoU3Ek__BackingField_13 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CvoU3Ek__BackingField_13, value);
 	}
 };
 
