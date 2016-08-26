@@ -14,6 +14,8 @@ public class GameEvent
     public const string ROUND_RESULT = "round_result";
     public const string START_ROUND = "start_round";
 
+    public const string UPDATE_PLAYER_MODEL = "playerModelUpdate";
+
     public string type{ get; set; }
 
     public System.Action<NetworkResponse, bool> callback{ get; set; }
@@ -22,7 +24,7 @@ public class GameEvent
 
     public string postResponse{ get; set; }
 
-    public HeaderVO vo{ get; set; }
+    public System.Object vo{ get; set; }
 
     public GameEvent(string type)
     {
@@ -41,7 +43,7 @@ public class GameEvent
         this.response = response;
     }
 
-    public GameEvent(string type, HeaderVO vo)
+    public GameEvent(string type, LocalPlayerModelVO vo)
     {
         this.type = type;
         this.vo = vo;

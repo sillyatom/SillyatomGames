@@ -34,14 +34,19 @@ public class ExecutionOrderManager : MonoBehaviour
         _vo = JsonConvert.DeserializeObject<GCStatusVO>(data);
 
         _playerModel = LocalPlayerModel.GetInstance();
-        _playerModel.UpdateModel(_vo);
+        _playerModel.UpdatePlayerDetails(_vo);
 
+        #if !UNITY_EDITOR
         WWWForm form = new WWWForm();
         form.AddField(RemoteAPIConstants.API, RemoteAPIConstants.INIT_CALL);
         form.AddField(RemoteAPIConstants.PLAYER_UID, _playerModel.localPlayerUID);
         form.AddField(RemoteAPIConstants.PLAYER_NAME, _playerModel.localPlayerName);
 
         SingletonManager.reference.postMethod.StartRequest(form, OnDataReceived);
+        #else
+        InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, _vo.SigningStatus);
+        EventManager.instance.Raise(evt);
+        #endif
     }
 
     private void OnDataReceived(bool success, string result)
@@ -49,10 +54,14 @@ public class ExecutionOrderManager : MonoBehaviour
         if (success)
         {
             RemoteInitVO vo = JsonConvert.DeserializeObject<RemoteInitVO>(result);
-            _playerModel.tokens = vo.tokens;
-            _playerModel.xp = vo.xp;
-            InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, _vo.SigningStatus);
-            EventManager.instance.Raise(evt);
+            {
+                InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, _vo.SigningStatus);
+                EventManager.instance.Raise(evt);
+            }
+            {
+                GameEvent evt = new GameEvent(GameEvent.UPDATE_PLAYER_MODEL, new LocalPlayerModelVO(vo.tokens, vo.xp));
+                EventManager.instance.Raise(evt);
+            }
         }
         else
         {

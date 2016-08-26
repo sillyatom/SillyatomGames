@@ -34,12 +34,14 @@ struct TagConstants_t2563060469_StaticFields
 public:
 	// System.String TagConstants::TAG_MAIN_SCREEN
 	String_t* ___TAG_MAIN_SCREEN_0;
+	// System.String TagConstants::TAG_GAME_SELECTION_SCREEN
+	String_t* ___TAG_GAME_SELECTION_SCREEN_1;
 	// System.String TagConstants::TAG_MATCH_SELECTION_SCREEN
-	String_t* ___TAG_MATCH_SELECTION_SCREEN_1;
+	String_t* ___TAG_MATCH_SELECTION_SCREEN_2;
 	// System.String TagConstants::TAG_MAIN_GAME
-	String_t* ___TAG_MAIN_GAME_2;
+	String_t* ___TAG_MAIN_GAME_3;
 	// System.String TagConstants::TAG_PLAYER
-	String_t* ___TAG_PLAYER_3;
+	String_t* ___TAG_PLAYER_4;
 
 public:
 	inline static int32_t get_offset_of_TAG_MAIN_SCREEN_0() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_MAIN_SCREEN_0)); }
@@ -51,31 +53,40 @@ public:
 		Il2CppCodeGenWriteBarrier(&___TAG_MAIN_SCREEN_0, value);
 	}
 
-	inline static int32_t get_offset_of_TAG_MATCH_SELECTION_SCREEN_1() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_MATCH_SELECTION_SCREEN_1)); }
-	inline String_t* get_TAG_MATCH_SELECTION_SCREEN_1() const { return ___TAG_MATCH_SELECTION_SCREEN_1; }
-	inline String_t** get_address_of_TAG_MATCH_SELECTION_SCREEN_1() { return &___TAG_MATCH_SELECTION_SCREEN_1; }
-	inline void set_TAG_MATCH_SELECTION_SCREEN_1(String_t* value)
+	inline static int32_t get_offset_of_TAG_GAME_SELECTION_SCREEN_1() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_GAME_SELECTION_SCREEN_1)); }
+	inline String_t* get_TAG_GAME_SELECTION_SCREEN_1() const { return ___TAG_GAME_SELECTION_SCREEN_1; }
+	inline String_t** get_address_of_TAG_GAME_SELECTION_SCREEN_1() { return &___TAG_GAME_SELECTION_SCREEN_1; }
+	inline void set_TAG_GAME_SELECTION_SCREEN_1(String_t* value)
 	{
-		___TAG_MATCH_SELECTION_SCREEN_1 = value;
-		Il2CppCodeGenWriteBarrier(&___TAG_MATCH_SELECTION_SCREEN_1, value);
+		___TAG_GAME_SELECTION_SCREEN_1 = value;
+		Il2CppCodeGenWriteBarrier(&___TAG_GAME_SELECTION_SCREEN_1, value);
 	}
 
-	inline static int32_t get_offset_of_TAG_MAIN_GAME_2() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_MAIN_GAME_2)); }
-	inline String_t* get_TAG_MAIN_GAME_2() const { return ___TAG_MAIN_GAME_2; }
-	inline String_t** get_address_of_TAG_MAIN_GAME_2() { return &___TAG_MAIN_GAME_2; }
-	inline void set_TAG_MAIN_GAME_2(String_t* value)
+	inline static int32_t get_offset_of_TAG_MATCH_SELECTION_SCREEN_2() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_MATCH_SELECTION_SCREEN_2)); }
+	inline String_t* get_TAG_MATCH_SELECTION_SCREEN_2() const { return ___TAG_MATCH_SELECTION_SCREEN_2; }
+	inline String_t** get_address_of_TAG_MATCH_SELECTION_SCREEN_2() { return &___TAG_MATCH_SELECTION_SCREEN_2; }
+	inline void set_TAG_MATCH_SELECTION_SCREEN_2(String_t* value)
 	{
-		___TAG_MAIN_GAME_2 = value;
-		Il2CppCodeGenWriteBarrier(&___TAG_MAIN_GAME_2, value);
+		___TAG_MATCH_SELECTION_SCREEN_2 = value;
+		Il2CppCodeGenWriteBarrier(&___TAG_MATCH_SELECTION_SCREEN_2, value);
 	}
 
-	inline static int32_t get_offset_of_TAG_PLAYER_3() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_PLAYER_3)); }
-	inline String_t* get_TAG_PLAYER_3() const { return ___TAG_PLAYER_3; }
-	inline String_t** get_address_of_TAG_PLAYER_3() { return &___TAG_PLAYER_3; }
-	inline void set_TAG_PLAYER_3(String_t* value)
+	inline static int32_t get_offset_of_TAG_MAIN_GAME_3() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_MAIN_GAME_3)); }
+	inline String_t* get_TAG_MAIN_GAME_3() const { return ___TAG_MAIN_GAME_3; }
+	inline String_t** get_address_of_TAG_MAIN_GAME_3() { return &___TAG_MAIN_GAME_3; }
+	inline void set_TAG_MAIN_GAME_3(String_t* value)
 	{
-		___TAG_PLAYER_3 = value;
-		Il2CppCodeGenWriteBarrier(&___TAG_PLAYER_3, value);
+		___TAG_MAIN_GAME_3 = value;
+		Il2CppCodeGenWriteBarrier(&___TAG_MAIN_GAME_3, value);
+	}
+
+	inline static int32_t get_offset_of_TAG_PLAYER_4() { return static_cast<int32_t>(offsetof(TagConstants_t2563060469_StaticFields, ___TAG_PLAYER_4)); }
+	inline String_t* get_TAG_PLAYER_4() const { return ___TAG_PLAYER_4; }
+	inline String_t** get_address_of_TAG_PLAYER_4() { return &___TAG_PLAYER_4; }
+	inline void set_TAG_PLAYER_4(String_t* value)
+	{
+		___TAG_PLAYER_4 = value;
+		Il2CppCodeGenWriteBarrier(&___TAG_PLAYER_4, value);
 	}
 };
 

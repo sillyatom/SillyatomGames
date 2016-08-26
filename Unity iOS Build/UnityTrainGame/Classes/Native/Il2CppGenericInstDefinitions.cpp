@@ -2973,6 +2973,9 @@ extern const Il2CppGenericInst GenInst_Dealer_t2043054649_0_0_0 = { 1, GenInst_D
 extern const Il2CppType SinglePlayerMainGame_t3863033300_0_0_0;
 static const Il2CppType* GenInst_SinglePlayerMainGame_t3863033300_0_0_0_Types[] = { &SinglePlayerMainGame_t3863033300_0_0_0 };
 extern const Il2CppGenericInst GenInst_SinglePlayerMainGame_t3863033300_0_0_0 = { 1, GenInst_SinglePlayerMainGame_t3863033300_0_0_0_Types };
+extern const Il2CppType SharedMainGame_t2807228656_0_0_0;
+static const Il2CppType* GenInst_SharedMainGame_t2807228656_0_0_0_Types[] = { &SharedMainGame_t2807228656_0_0_0 };
+extern const Il2CppGenericInst GenInst_SharedMainGame_t2807228656_0_0_0 = { 1, GenInst_SharedMainGame_t2807228656_0_0_0_Types };
 extern const Il2CppType RoundHandler_t2172802556_0_0_0;
 static const Il2CppType* GenInst_RoundHandler_t2172802556_0_0_0_Types[] = { &RoundHandler_t2172802556_0_0_0 };
 extern const Il2CppGenericInst GenInst_RoundHandler_t2172802556_0_0_0 = { 1, GenInst_RoundHandler_t2172802556_0_0_0_Types };
@@ -3111,7 +3114,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t1028297519_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1130] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1131] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Attribute_t498693649_0_0_0,
@@ -4183,6 +4186,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1130] =
 	&GenInst_MultiplayerMainGame_t4046083237_0_0_0,
 	&GenInst_Dealer_t2043054649_0_0_0,
 	&GenInst_SinglePlayerMainGame_t3863033300_0_0_0,
+	&GenInst_SharedMainGame_t2807228656_0_0_0,
 	&GenInst_RoundHandler_t2172802556_0_0_0,
 	&GenInst_GameWinDialog_t176796754_0_0_0,
 	&GenInst_GameFailDialog_t1770299320_0_0_0,

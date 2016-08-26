@@ -28,37 +28,37 @@ struct  InGameEvent_t511087107  : public GameEvent_t2981166504
 {
 public:
 	// System.String InGameEvent::<playerId>k__BackingField
-	String_t* ___U3CplayerIdU3Ek__BackingField_24;
+	String_t* ___U3CplayerIdU3Ek__BackingField_25;
 	// Card InGameEvent::<card>k__BackingField
-	Card_t2092848 * ___U3CcardU3Ek__BackingField_25;
+	Card_t2092848 * ___U3CcardU3Ek__BackingField_26;
 	// System.Int32 InGameEvent::<status>k__BackingField
-	int32_t ___U3CstatusU3Ek__BackingField_26;
+	int32_t ___U3CstatusU3Ek__BackingField_27;
 
 public:
-	inline static int32_t get_offset_of_U3CplayerIdU3Ek__BackingField_24() { return static_cast<int32_t>(offsetof(InGameEvent_t511087107, ___U3CplayerIdU3Ek__BackingField_24)); }
-	inline String_t* get_U3CplayerIdU3Ek__BackingField_24() const { return ___U3CplayerIdU3Ek__BackingField_24; }
-	inline String_t** get_address_of_U3CplayerIdU3Ek__BackingField_24() { return &___U3CplayerIdU3Ek__BackingField_24; }
-	inline void set_U3CplayerIdU3Ek__BackingField_24(String_t* value)
+	inline static int32_t get_offset_of_U3CplayerIdU3Ek__BackingField_25() { return static_cast<int32_t>(offsetof(InGameEvent_t511087107, ___U3CplayerIdU3Ek__BackingField_25)); }
+	inline String_t* get_U3CplayerIdU3Ek__BackingField_25() const { return ___U3CplayerIdU3Ek__BackingField_25; }
+	inline String_t** get_address_of_U3CplayerIdU3Ek__BackingField_25() { return &___U3CplayerIdU3Ek__BackingField_25; }
+	inline void set_U3CplayerIdU3Ek__BackingField_25(String_t* value)
 	{
-		___U3CplayerIdU3Ek__BackingField_24 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CplayerIdU3Ek__BackingField_24, value);
+		___U3CplayerIdU3Ek__BackingField_25 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CplayerIdU3Ek__BackingField_25, value);
 	}
 
-	inline static int32_t get_offset_of_U3CcardU3Ek__BackingField_25() { return static_cast<int32_t>(offsetof(InGameEvent_t511087107, ___U3CcardU3Ek__BackingField_25)); }
-	inline Card_t2092848 * get_U3CcardU3Ek__BackingField_25() const { return ___U3CcardU3Ek__BackingField_25; }
-	inline Card_t2092848 ** get_address_of_U3CcardU3Ek__BackingField_25() { return &___U3CcardU3Ek__BackingField_25; }
-	inline void set_U3CcardU3Ek__BackingField_25(Card_t2092848 * value)
+	inline static int32_t get_offset_of_U3CcardU3Ek__BackingField_26() { return static_cast<int32_t>(offsetof(InGameEvent_t511087107, ___U3CcardU3Ek__BackingField_26)); }
+	inline Card_t2092848 * get_U3CcardU3Ek__BackingField_26() const { return ___U3CcardU3Ek__BackingField_26; }
+	inline Card_t2092848 ** get_address_of_U3CcardU3Ek__BackingField_26() { return &___U3CcardU3Ek__BackingField_26; }
+	inline void set_U3CcardU3Ek__BackingField_26(Card_t2092848 * value)
 	{
-		___U3CcardU3Ek__BackingField_25 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CcardU3Ek__BackingField_25, value);
+		___U3CcardU3Ek__BackingField_26 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CcardU3Ek__BackingField_26, value);
 	}
 
-	inline static int32_t get_offset_of_U3CstatusU3Ek__BackingField_26() { return static_cast<int32_t>(offsetof(InGameEvent_t511087107, ___U3CstatusU3Ek__BackingField_26)); }
-	inline int32_t get_U3CstatusU3Ek__BackingField_26() const { return ___U3CstatusU3Ek__BackingField_26; }
-	inline int32_t* get_address_of_U3CstatusU3Ek__BackingField_26() { return &___U3CstatusU3Ek__BackingField_26; }
-	inline void set_U3CstatusU3Ek__BackingField_26(int32_t value)
+	inline static int32_t get_offset_of_U3CstatusU3Ek__BackingField_27() { return static_cast<int32_t>(offsetof(InGameEvent_t511087107, ___U3CstatusU3Ek__BackingField_27)); }
+	inline int32_t get_U3CstatusU3Ek__BackingField_27() const { return ___U3CstatusU3Ek__BackingField_27; }
+	inline int32_t* get_address_of_U3CstatusU3Ek__BackingField_27() { return &___U3CstatusU3Ek__BackingField_27; }
+	inline void set_U3CstatusU3Ek__BackingField_27(int32_t value)
 	{
-		___U3CstatusU3Ek__BackingField_26 = value;
+		___U3CstatusU3Ek__BackingField_27 = value;
 	}
 };
 

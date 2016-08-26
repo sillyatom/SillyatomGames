@@ -63,6 +63,9 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                 }
             }
         }
+        #if !UNITY_EDITOR
+        _players[0].UpdateDP(GetDPPath(LocalPlayerModel.GetInstance().localPlayerId));
+        #endif
     }
 
     override protected void OnDistributeAllWinningCards(object args)

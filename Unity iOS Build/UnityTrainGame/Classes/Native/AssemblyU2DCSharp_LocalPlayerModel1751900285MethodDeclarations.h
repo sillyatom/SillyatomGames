@@ -16,11 +16,17 @@
 struct LocalPlayerModel_t1751900285;
 // System.String
 struct String_t;
+// GameEvent
+struct GameEvent_t2981166504;
+// LocalPlayerModelVO
+struct LocalPlayerModelVO_t4243963894;
 // GCStatusVO
 struct GCStatusVO_t3770382119;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_String968488902.h"
+#include "AssemblyU2DCSharp_GameEvent2981166504.h"
+#include "AssemblyU2DCSharp_LocalPlayerModelVO4243963894.h"
 #include "AssemblyU2DCSharp_GCStatusVO3770382119.h"
 
 // System.Void LocalPlayerModel::.ctor()
@@ -49,5 +55,9 @@ extern "C"  int32_t LocalPlayerModel_get_xp_m336340533 (LocalPlayerModel_t175190
 extern "C"  void LocalPlayerModel_set_xp_m3282049260 (LocalPlayerModel_t1751900285 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // LocalPlayerModel LocalPlayerModel::GetInstance()
 extern "C"  LocalPlayerModel_t1751900285 * LocalPlayerModel_GetInstance_m4081594375 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void LocalPlayerModel::UpdateModel(GCStatusVO)
-extern "C"  void LocalPlayerModel_UpdateModel_m2550933877 (LocalPlayerModel_t1751900285 * __this, GCStatusVO_t3770382119 * ___vo, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void LocalPlayerModel::OnGameEvent(GameEvent)
+extern "C"  void LocalPlayerModel_OnGameEvent_m2766611237 (LocalPlayerModel_t1751900285 * __this, GameEvent_t2981166504 * ___gameEvent, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void LocalPlayerModel::UpdateModel(LocalPlayerModelVO)
+extern "C"  void LocalPlayerModel_UpdateModel_m1266399110 (LocalPlayerModel_t1751900285 * __this, LocalPlayerModelVO_t4243963894 * ___vo, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void LocalPlayerModel::UpdatePlayerDetails(GCStatusVO)
+extern "C"  void LocalPlayerModel_UpdatePlayerDetails_m1789618285 (LocalPlayerModel_t1751900285 * __this, GCStatusVO_t3770382119 * ___vo, const MethodInfo* method) IL2CPP_METHOD_ATTR;

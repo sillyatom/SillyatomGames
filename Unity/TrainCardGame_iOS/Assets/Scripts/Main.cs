@@ -9,7 +9,7 @@ public class Main : MonoBehaviour
     {
         #if (UNITY_EDITOR)
         {
-            _exec.Init(@"{'SigningStatus' : 2}");
+            _exec.Init(@"{'SigningStatus' : 2, 'uid' : 'uideditor', 'localPlayerId' : 'localPlayerId', 'localPlayerName' : 'localPlayer'}");
         }
         #endif
     }

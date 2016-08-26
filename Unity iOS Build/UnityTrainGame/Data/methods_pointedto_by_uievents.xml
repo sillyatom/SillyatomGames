@@ -1,2 +1,9 @@
 <linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="GameSelectionScreen">
+			<method name="Previous"/>
+			<method name="Play"/>
+			<method name="Next"/>
+		</type>
+	</assembly>
 </linker>

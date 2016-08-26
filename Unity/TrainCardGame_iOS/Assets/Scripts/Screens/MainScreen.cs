@@ -44,7 +44,7 @@ public class MainScreen : GameScreenMonoBehaviour
         if (_signingStatus == NetworkConstants.GC_SIGNING_STATUS_SUCCEEDED)
         {
             SingletonManager.reference.popupManager.RemoveActivePopup();
-            MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
+            MoveToScene(TagConstants.TAG_GAME_SELECTION_SCREEN);
         }
         else if (_signingStatus == NetworkConstants.GC_SIGNING_STATUS_NOT_INITIALIZED)
         {

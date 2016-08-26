@@ -13866,7 +13866,7 @@ extern "C" void GameConstants__cctor_m1419193535 ();
 extern "C" void GameEvent__ctor_m1494597407 ();
 extern "C" void GameEvent__ctor_m4138108187 ();
 extern "C" void GameEvent__ctor_m685722812 ();
-extern "C" void GameEvent__ctor_m3060632033 ();
+extern "C" void GameEvent__ctor_m3237779601 ();
 extern "C" void GameEvent_get_type_m3917904769 ();
 extern "C" void GameEvent_set_type_m3926350538 ();
 extern "C" void GameEvent_get_callback_m1531979647 ();
@@ -13875,14 +13875,26 @@ extern "C" void GameEvent_get_response_m1142487431 ();
 extern "C" void GameEvent_set_response_m304452356 ();
 extern "C" void GameEvent_get_postResponse_m4192395656 ();
 extern "C" void GameEvent_set_postResponse_m1756462883 ();
-extern "C" void GameEvent_get_vo_m187295500 ();
-extern "C" void GameEvent_set_vo_m2866285265 ();
+extern "C" void GameEvent_get_vo_m236630254 ();
+extern "C" void GameEvent_set_vo_m1200897213 ();
 extern "C" void GameFailDialog__ctor_m2736610275 ();
 extern "C" void GameFailDialog_InitWithData_m3581889157 ();
 extern "C" void GameFailDialog_OnRemove_m3499021188 ();
 extern "C" void GameObjectRef__ctor_m443681481 ();
 extern "C" void GameScreenMonoBehaviour__ctor_m1875208271 ();
 extern "C" void GameScreenMonoBehaviour_OnGameEvent_m2365278580 ();
+extern "C" void GameSelectionScreen__ctor_m2186336133 ();
+extern "C" void GameSelectionScreen_Init_m2238820911 ();
+extern "C" void GameSelectionScreen_OnGameEvent_m2265499518 ();
+extern "C" void GameSelectionScreen_OnInGameEvent_m3171217288 ();
+extern "C" void GameSelectionScreen_OnSetToView_m3351624198 ();
+extern "C" void GameSelectionScreen_UpdateIndex_m50862449 ();
+extern "C" void GameSelectionScreen_UpdateInteractivity_m3450296901 ();
+extern "C" void GameSelectionScreen_Next_m2374101842 ();
+extern "C" void GameSelectionScreen_Previous_m1882647382 ();
+extern "C" void GameSelectionScreen_Play_m2437144403 ();
+extern "C" void GameSelectionScreen_MoveBy_m1352856932 ();
+extern "C" void GameSelectionScreen_OnMoveComplete_m123468040 ();
 extern "C" void GameWinDialog__ctor_m2304862553 ();
 extern "C" void GameWinDialog_InitWithData_m2713714683 ();
 extern "C" void GameWinDialog_OnRemove_m434719310 ();
@@ -13915,6 +13927,10 @@ extern "C" void HostSelectedVO_get_api_id_m2459300316 ();
 extern "C" void HostSelectedVO_set_api_id_m3153261459 ();
 extern "C" void HostSelectedVO_get_sender_m962590726 ();
 extern "C" void HostSelectedVO_set_sender_m3136369547 ();
+extern "C" void HUD__ctor_m2039008372 ();
+extern "C" void HUD_Init_m3758089056 ();
+extern "C" void HUD_OnGameEvent_m4187518639 ();
+extern "C" void HUD_UpdateModel_m758038332 ();
 extern "C" void InGameEvent__ctor_m2728077114 ();
 extern "C" void InGameEvent__ctor_m2522809309 ();
 extern "C" void InGameEvent__ctor_m1354375670 ();
@@ -13972,7 +13988,14 @@ extern "C" void LocalPlayerModel_set_tokens_m468511502 ();
 extern "C" void LocalPlayerModel_get_xp_m336340533 ();
 extern "C" void LocalPlayerModel_set_xp_m3282049260 ();
 extern "C" void LocalPlayerModel_GetInstance_m4081594375 ();
-extern "C" void LocalPlayerModel_UpdateModel_m2550933877 ();
+extern "C" void LocalPlayerModel_OnGameEvent_m2766611237 ();
+extern "C" void LocalPlayerModel_UpdateModel_m1266399110 ();
+extern "C" void LocalPlayerModel_UpdatePlayerDetails_m1789618285 ();
+extern "C" void LocalPlayerModelVO__ctor_m2494425441 ();
+extern "C" void LocalPlayerModelVO_get_tokens_m3158577296 ();
+extern "C" void LocalPlayerModelVO_set_tokens_m1088248647 ();
+extern "C" void LocalPlayerModelVO_get_xp_m1723677934 ();
+extern "C" void LocalPlayerModelVO_set_xp_m3241905573 ();
 extern "C" void Main__ctor_m2928940258 ();
 extern "C" void Main_Awake_m3166545477 ();
 extern "C" void MainScreen__ctor_m1707852438 ();
@@ -16177,6 +16200,10 @@ extern "C" void SceneTransitionManager_Init_m3225750501 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3383367968 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3079263841 ();
 extern "C" void SceneTransitionManager_RearrangeScreens_m1562589827 ();
+extern "C" void SharedMainGame__ctor_m1851912619 ();
+extern "C" void SharedMainGame_Init_m3613506377 ();
+extern "C" void SharedMainGame_DisableHud_m3661054312 ();
+extern "C" void SharedMainGame_EnableHud_m1748585021 ();
 extern "C" void SinglePlayerMainGame__ctor_m725906247 ();
 extern "C" void SinglePlayerMainGame_Init_m1637520941 ();
 extern "C" void SinglePlayerMainGame_InitGame_m2164794303 ();
@@ -16264,7 +16291,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16253] = 
+extern const methodPointerType g_MethodPointers[16280] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -30121,7 +30148,7 @@ extern const methodPointerType g_MethodPointers[16253] =
 	GameEvent__ctor_m1494597407,
 	GameEvent__ctor_m4138108187,
 	GameEvent__ctor_m685722812,
-	GameEvent__ctor_m3060632033,
+	GameEvent__ctor_m3237779601,
 	GameEvent_get_type_m3917904769,
 	GameEvent_set_type_m3926350538,
 	GameEvent_get_callback_m1531979647,
@@ -30130,14 +30157,26 @@ extern const methodPointerType g_MethodPointers[16253] =
 	GameEvent_set_response_m304452356,
 	GameEvent_get_postResponse_m4192395656,
 	GameEvent_set_postResponse_m1756462883,
-	GameEvent_get_vo_m187295500,
-	GameEvent_set_vo_m2866285265,
+	GameEvent_get_vo_m236630254,
+	GameEvent_set_vo_m1200897213,
 	GameFailDialog__ctor_m2736610275,
 	GameFailDialog_InitWithData_m3581889157,
 	GameFailDialog_OnRemove_m3499021188,
 	GameObjectRef__ctor_m443681481,
 	GameScreenMonoBehaviour__ctor_m1875208271,
 	GameScreenMonoBehaviour_OnGameEvent_m2365278580,
+	GameSelectionScreen__ctor_m2186336133,
+	GameSelectionScreen_Init_m2238820911,
+	GameSelectionScreen_OnGameEvent_m2265499518,
+	GameSelectionScreen_OnInGameEvent_m3171217288,
+	GameSelectionScreen_OnSetToView_m3351624198,
+	GameSelectionScreen_UpdateIndex_m50862449,
+	GameSelectionScreen_UpdateInteractivity_m3450296901,
+	GameSelectionScreen_Next_m2374101842,
+	GameSelectionScreen_Previous_m1882647382,
+	GameSelectionScreen_Play_m2437144403,
+	GameSelectionScreen_MoveBy_m1352856932,
+	GameSelectionScreen_OnMoveComplete_m123468040,
 	GameWinDialog__ctor_m2304862553,
 	GameWinDialog_InitWithData_m2713714683,
 	GameWinDialog_OnRemove_m434719310,
@@ -30170,6 +30209,10 @@ extern const methodPointerType g_MethodPointers[16253] =
 	HostSelectedVO_set_api_id_m3153261459,
 	HostSelectedVO_get_sender_m962590726,
 	HostSelectedVO_set_sender_m3136369547,
+	HUD__ctor_m2039008372,
+	HUD_Init_m3758089056,
+	HUD_OnGameEvent_m4187518639,
+	HUD_UpdateModel_m758038332,
 	InGameEvent__ctor_m2728077114,
 	InGameEvent__ctor_m2522809309,
 	InGameEvent__ctor_m1354375670,
@@ -30227,7 +30270,14 @@ extern const methodPointerType g_MethodPointers[16253] =
 	LocalPlayerModel_get_xp_m336340533,
 	LocalPlayerModel_set_xp_m3282049260,
 	LocalPlayerModel_GetInstance_m4081594375,
-	LocalPlayerModel_UpdateModel_m2550933877,
+	LocalPlayerModel_OnGameEvent_m2766611237,
+	LocalPlayerModel_UpdateModel_m1266399110,
+	LocalPlayerModel_UpdatePlayerDetails_m1789618285,
+	LocalPlayerModelVO__ctor_m2494425441,
+	LocalPlayerModelVO_get_tokens_m3158577296,
+	LocalPlayerModelVO_set_tokens_m1088248647,
+	LocalPlayerModelVO_get_xp_m1723677934,
+	LocalPlayerModelVO_set_xp_m3241905573,
 	Main__ctor_m2928940258,
 	Main_Awake_m3166545477,
 	MainScreen__ctor_m1707852438,
@@ -32432,6 +32482,10 @@ extern const methodPointerType g_MethodPointers[16253] =
 	SceneTransitionManager_SetActiveScreen_m3383367968,
 	SceneTransitionManager_SetActiveScreen_m3079263841,
 	SceneTransitionManager_RearrangeScreens_m1562589827,
+	SharedMainGame__ctor_m1851912619,
+	SharedMainGame_Init_m3613506377,
+	SharedMainGame_DisableHud_m3661054312,
+	SharedMainGame_EnableHud_m1748585021,
 	SinglePlayerMainGame__ctor_m725906247,
 	SinglePlayerMainGame_Init_m1637520941,
 	SinglePlayerMainGame_InitGame_m2164794303,

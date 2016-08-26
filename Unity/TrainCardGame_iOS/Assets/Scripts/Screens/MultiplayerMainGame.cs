@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 public class MultiplayerMainGame : GameScreenMonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern string GetDPPath(string playerId);
+    public static extern string GetDPPath(string playerId);
 
     public Dealer dealer;
     public Networking network;
@@ -26,6 +26,7 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     override public void Init()
     {
         base.Init();
+        transform.GetComponent<SharedMainGame>().DisableHud();
         network = SingletonManager.reference.network;
         InitGame();
     }
