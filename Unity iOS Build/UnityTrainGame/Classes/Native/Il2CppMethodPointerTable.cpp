@@ -14011,13 +14011,15 @@ extern "C" void U3CStartSignInProcessU3Ec__IteratorC_MoveNext_m2508971228 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC_Dispose_m3333922389 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC_Reset_m4201956037 ();
 extern "C" void MatchSelectionScreen__ctor_m2494922568 ();
-extern "C" void MatchSelectionScreen_findMatches_m3505743744 ();
+extern "C" void MatchSelectionScreen_findMatches_m3088121079 ();
 extern "C" void MatchSelectionScreen_Init_m2110227980 ();
+extern "C" void MatchSelectionScreen_CreateMultiplayerGame_m3784813110 ();
 extern "C" void MatchSelectionScreen_OnClick_m288207406 ();
 extern "C" void MatchSelectionScreen_OnGameEvent_m3657253211 ();
 extern "C" void MatchSelectionScreen_U3CInitU3Em__4D_m1738529617 ();
 extern "C" void MatchSelectionScreen_U3CInitU3Em__4E_m1738530578 ();
 extern "C" void MatchSelectionScreen_U3CInitU3Em__4F_m1738531539 ();
+extern "C" void MatchSelectionScreen_U3CInitU3Em__50_m1738540188 ();
 extern "C" void MatchStartedVO__ctor_m622607718 ();
 extern "C" void MultiplayerMainGame__ctor_m3970443366 ();
 extern "C" void MultiplayerMainGame_GetDPPath_m1101217716 ();
@@ -16291,7 +16293,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16280] = 
+extern const methodPointerType g_MethodPointers[16282] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -30293,13 +30295,15 @@ extern const methodPointerType g_MethodPointers[16280] =
 	U3CStartSignInProcessU3Ec__IteratorC_Dispose_m3333922389,
 	U3CStartSignInProcessU3Ec__IteratorC_Reset_m4201956037,
 	MatchSelectionScreen__ctor_m2494922568,
-	MatchSelectionScreen_findMatches_m3505743744,
+	MatchSelectionScreen_findMatches_m3088121079,
 	MatchSelectionScreen_Init_m2110227980,
+	MatchSelectionScreen_CreateMultiplayerGame_m3784813110,
 	MatchSelectionScreen_OnClick_m288207406,
 	MatchSelectionScreen_OnGameEvent_m3657253211,
 	MatchSelectionScreen_U3CInitU3Em__4D_m1738529617,
 	MatchSelectionScreen_U3CInitU3Em__4E_m1738530578,
 	MatchSelectionScreen_U3CInitU3Em__4F_m1738531539,
+	MatchSelectionScreen_U3CInitU3Em__50_m1738540188,
 	MatchStartedVO__ctor_m622607718,
 	MultiplayerMainGame__ctor_m3970443366,
 	MultiplayerMainGame_GetDPPath_m1101217716,

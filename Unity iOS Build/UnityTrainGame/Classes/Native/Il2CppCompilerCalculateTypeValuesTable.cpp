@@ -2096,7 +2096,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9488] = 
+extern const int32_t g_FieldOffsetTable[9489] = 
 {
 	0,
 	0,
@@ -11544,9 +11544,10 @@ extern const int32_t g_FieldOffsetTable[9488] =
 	U3CStartSignInProcessU3Ec__IteratorC_t2572545929::get_offset_of_U24current_1(),
 	U3CStartSignInProcessU3Ec__IteratorC_t2572545929::get_offset_of_U3CU3Ef__this_2(),
 	MatchSelectionScreen_t3589239987::get_offset_of_gameLayout_4(),
-	MatchSelectionScreen_t3589239987::get_offset_of_autoMatchBtn_5(),
-	MatchSelectionScreen_t3589239987::get_offset_of_inviteBtn_6(),
-	MatchSelectionScreen_t3589239987::get_offset_of_singlePlayerBtn_7(),
+	MatchSelectionScreen_t3589239987::get_offset_of_hostMatch_5(),
+	MatchSelectionScreen_t3589239987::get_offset_of_autoMatchBtn_6(),
+	MatchSelectionScreen_t3589239987::get_offset_of_inviteBtn_7(),
+	MatchSelectionScreen_t3589239987::get_offset_of_singlePlayerBtn_8(),
 	MultiplayerMainGame_t4046083237::get_offset_of_dealer_4(),
 	MultiplayerMainGame_t4046083237::get_offset_of_network_5(),
 	MultiplayerMainGame_t4046083237::get_offset_of__players_6(),

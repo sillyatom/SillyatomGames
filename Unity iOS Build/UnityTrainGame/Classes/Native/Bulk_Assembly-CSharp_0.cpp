@@ -209,10 +209,10 @@ struct MainScreen_t2442698661;
 struct U3CStartSignInProcessU3Ec__IteratorC_t2572545929;
 // MatchSelectionScreen
 struct MatchSelectionScreen_t3589239987;
-// UnityEngine.UI.Button
-struct Button_t990034267;
 // MultiplayerMainGame
 struct MultiplayerMainGame_t4046083237;
+// UnityEngine.UI.Button
+struct Button_t990034267;
 // SinglePlayerMainGame
 struct SinglePlayerMainGame_t3863033300;
 // MatchStartedVO
@@ -2595,6 +2595,8 @@ extern "C"  void BridgeDebugger_debugMessage_m623718683 (Il2CppObject * __this /
 extern "C"  void BridgeDebugger_Log_m140064271 (Il2CppObject * __this /* static, unused */, String_t* ___msg, const MethodInfo* method)
 {
 	{
+		String_t* L_0 = ___msg;
+		BridgeDebugger_debugMessage_m623718683(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -2602,6 +2604,8 @@ extern "C"  void BridgeDebugger_Log_m140064271 (Il2CppObject * __this /* static,
 extern "C"  void BridgeDebugger_SillyLog_m1101336366 (Il2CppObject * __this /* static, unused */, String_t* ___msg, const MethodInfo* method)
 {
 	{
+		String_t* L_0 = ___msg;
+		BridgeDebugger_debugMessage_m623718683(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -9653,11 +9657,11 @@ extern "C"  void MatchSelectionScreen__ctor_m2494922568 (MatchSelectionScreen_t3
 		return;
 	}
 }
-// System.Void MatchSelectionScreen::findMatches()
-extern "C" {void DEFAULT_CALL findMatches();}
-extern "C"  void MatchSelectionScreen_findMatches_m3505743744 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+// System.Void MatchSelectionScreen::findMatches(System.Boolean)
+extern "C" {void DEFAULT_CALL findMatches(int32_t);}
+extern "C"  void MatchSelectionScreen_findMatches_m3088121079 (Il2CppObject * __this /* static, unused */, bool ___isHost, const MethodInfo* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+	typedef void (DEFAULT_CALL *PInvokeFunc) (int32_t);
 	static PInvokeFunc _il2cpp_pinvoke_func;
 	if (!_il2cpp_pinvoke_func)
 	{
@@ -9669,8 +9673,12 @@ extern "C"  void MatchSelectionScreen_findMatches_m3505743744 (Il2CppObject * __
 		}
 	}
 
+	// Marshaling of parameter '___isHost' to native representation
+
 	// Native function invocation
-	_il2cpp_pinvoke_func();
+	_il2cpp_pinvoke_func(___isHost);
+
+	// Marshaling cleanup of parameter '___isHost' native representation
 
 }
 // System.Void MatchSelectionScreen::Init()
@@ -9678,6 +9686,7 @@ extern TypeInfo* UnityAction_t909267611_il2cpp_TypeInfo_var;
 extern const MethodInfo* MatchSelectionScreen_U3CInitU3Em__4D_m1738529617_MethodInfo_var;
 extern const MethodInfo* MatchSelectionScreen_U3CInitU3Em__4E_m1738530578_MethodInfo_var;
 extern const MethodInfo* MatchSelectionScreen_U3CInitU3Em__4F_m1738531539_MethodInfo_var;
+extern const MethodInfo* MatchSelectionScreen_U3CInitU3Em__50_m1738540188_MethodInfo_var;
 extern const uint32_t MatchSelectionScreen_Init_m2110227980_MetadataUsageId;
 extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
 {
@@ -9689,7 +9698,7 @@ extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t35
 	}
 	{
 		SceneMonoBehaviour_Init_m1859798119(__this, /*hidden argument*/NULL);
-		Button_t990034267 * L_0 = __this->get_autoMatchBtn_5();
+		Button_t990034267 * L_0 = __this->get_hostMatch_5();
 		NullCheck(L_0);
 		ButtonClickedEvent_t962981669 * L_1 = Button_get_onClick_m1145127631(L_0, /*hidden argument*/NULL);
 		IntPtr_t L_2;
@@ -9698,7 +9707,7 @@ extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t35
 		UnityAction__ctor_m4130179243(L_3, __this, L_2, /*hidden argument*/NULL);
 		NullCheck(L_1);
 		UnityEvent_AddListener_m4099140869(L_1, L_3, /*hidden argument*/NULL);
-		Button_t990034267 * L_4 = __this->get_inviteBtn_6();
+		Button_t990034267 * L_4 = __this->get_autoMatchBtn_6();
 		NullCheck(L_4);
 		ButtonClickedEvent_t962981669 * L_5 = Button_get_onClick_m1145127631(L_4, /*hidden argument*/NULL);
 		IntPtr_t L_6;
@@ -9707,7 +9716,7 @@ extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t35
 		UnityAction__ctor_m4130179243(L_7, __this, L_6, /*hidden argument*/NULL);
 		NullCheck(L_5);
 		UnityEvent_AddListener_m4099140869(L_5, L_7, /*hidden argument*/NULL);
-		Button_t990034267 * L_8 = __this->get_singlePlayerBtn_7();
+		Button_t990034267 * L_8 = __this->get_inviteBtn_7();
 		NullCheck(L_8);
 		ButtonClickedEvent_t962981669 * L_9 = Button_get_onClick_m1145127631(L_8, /*hidden argument*/NULL);
 		IntPtr_t L_10;
@@ -9716,6 +9725,75 @@ extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t35
 		UnityAction__ctor_m4130179243(L_11, __this, L_10, /*hidden argument*/NULL);
 		NullCheck(L_9);
 		UnityEvent_AddListener_m4099140869(L_9, L_11, /*hidden argument*/NULL);
+		Button_t990034267 * L_12 = __this->get_singlePlayerBtn_8();
+		NullCheck(L_12);
+		ButtonClickedEvent_t962981669 * L_13 = Button_get_onClick_m1145127631(L_12, /*hidden argument*/NULL);
+		IntPtr_t L_14;
+		L_14.set_m_value_0((void*)MatchSelectionScreen_U3CInitU3Em__50_m1738540188_MethodInfo_var);
+		UnityAction_t909267611 * L_15 = (UnityAction_t909267611 *)il2cpp_codegen_object_new(UnityAction_t909267611_il2cpp_TypeInfo_var);
+		UnityAction__ctor_m4130179243(L_15, __this, L_14, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		UnityEvent_AddListener_m4099140869(L_13, L_15, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MatchSelectionScreen::CreateMultiplayerGame()
+extern TypeInfo* UnityException_t3148635335_il2cpp_TypeInfo_var;
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const MethodInfo* GameObject_AddComponent_TisMultiplayerMainGame_t4046083237_m747449959_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2043054649;
+extern Il2CppCodeGenString* _stringLiteral2184697011;
+extern const uint32_t MatchSelectionScreen_CreateMultiplayerGame_m3784813110_MetadataUsageId;
+extern "C"  void MatchSelectionScreen_CreateMultiplayerGame_m3784813110 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MatchSelectionScreen_CreateMultiplayerGame_m3784813110_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	MultiplayerMainGame_t4046083237 * V_0 = NULL;
+	GameObjectU5BU5D_t3499186955* V_1 = NULL;
+	{
+		RectTransform_t3317474837 * L_0 = __this->get_gameLayout_4();
+		NullCheck(L_0);
+		GameObject_t4012695102 * L_1 = Component_get_gameObject_m1170635899(L_0, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		MultiplayerMainGame_t4046083237 * L_2 = GameObject_AddComponent_TisMultiplayerMainGame_t4046083237_m747449959(L_1, /*hidden argument*/GameObject_AddComponent_TisMultiplayerMainGame_t4046083237_m747449959_MethodInfo_var);
+		V_0 = L_2;
+		GameObjectU5BU5D_t3499186955* L_3 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2043054649, /*hidden argument*/NULL);
+		V_1 = L_3;
+		GameObjectU5BU5D_t3499186955* L_4 = V_1;
+		NullCheck(L_4);
+		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_4)->max_length))))) <= ((int32_t)1)))
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		UnityException_t3148635335 * L_5 = (UnityException_t3148635335 *)il2cpp_codegen_object_new(UnityException_t3148635335_il2cpp_TypeInfo_var);
+		UnityException__ctor_m743662351(L_5, _stringLiteral2184697011, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_0030:
+	{
+		MultiplayerMainGame_t4046083237 * L_6 = V_0;
+		GameObjectU5BU5D_t3499186955* L_7 = V_1;
+		NullCheck(L_7);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_7, 0);
+		int32_t L_8 = 0;
+		NullCheck(((L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_8))));
+		Dealer_t2043054649 * L_9 = GameObject_GetComponent_TisDealer_t2043054649_m1448126340(((L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_8))), /*hidden argument*/GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var);
+		NullCheck(L_6);
+		L_6->set_dealer_4(L_9);
+		MultiplayerMainGame_t4046083237 * L_10 = V_0;
+		GameObjectRef_t4121474274 * L_11 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_11);
+		Networking_t1515242260 * L_12 = L_11->get_network_4();
+		NullCheck(L_10);
+		L_10->set_network_5(L_12);
 		return;
 	}
 }
@@ -9723,9 +9801,8 @@ extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t35
 extern TypeInfo* UnityException_t3148635335_il2cpp_TypeInfo_var;
 extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
 extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
-extern const MethodInfo* GameObject_AddComponent_TisMultiplayerMainGame_t4046083237_m747449959_MethodInfo_var;
-extern const MethodInfo* GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var;
 extern const MethodInfo* GameObject_AddComponent_TisSinglePlayerMainGame_t3863033300_m1855869342_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2043054649;
 extern Il2CppCodeGenString* _stringLiteral2184697011;
 extern const uint32_t MatchSelectionScreen_OnClick_m288207406_MetadataUsageId;
@@ -9737,135 +9814,112 @@ extern "C"  void MatchSelectionScreen_OnClick_m288207406 (MatchSelectionScreen_t
 		il2cpp_codegen_initialize_method (MatchSelectionScreen_OnClick_m288207406_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	MultiplayerMainGame_t4046083237 * V_0 = NULL;
+	SinglePlayerMainGame_t3863033300 * V_0 = NULL;
 	GameObjectU5BU5D_t3499186955* V_1 = NULL;
-	SinglePlayerMainGame_t3863033300 * V_2 = NULL;
-	GameObjectU5BU5D_t3499186955* V_3 = NULL;
 	{
 		Button_t990034267 * L_0 = ___btn;
-		Button_t990034267 * L_1 = __this->get_autoMatchBtn_5();
+		Button_t990034267 * L_1 = __this->get_autoMatchBtn_6();
 		bool L_2 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
 		if (!L_2)
 		{
-			goto IL_0069;
+			goto IL_0022;
 		}
 	}
 	{
-		RectTransform_t3317474837 * L_3 = __this->get_gameLayout_4();
-		NullCheck(L_3);
-		GameObject_t4012695102 * L_4 = Component_get_gameObject_m1170635899(L_3, /*hidden argument*/NULL);
-		NullCheck(L_4);
-		MultiplayerMainGame_t4046083237 * L_5 = GameObject_AddComponent_TisMultiplayerMainGame_t4046083237_m747449959(L_4, /*hidden argument*/GameObject_AddComponent_TisMultiplayerMainGame_t4046083237_m747449959_MethodInfo_var);
-		V_0 = L_5;
-		GameObjectU5BU5D_t3499186955* L_6 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2043054649, /*hidden argument*/NULL);
-		V_1 = L_6;
-		GameObjectU5BU5D_t3499186955* L_7 = V_1;
-		NullCheck(L_7);
-		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_7)->max_length))))) <= ((int32_t)1)))
-		{
-			goto IL_0041;
-		}
-	}
-	{
-		UnityException_t3148635335 * L_8 = (UnityException_t3148635335 *)il2cpp_codegen_object_new(UnityException_t3148635335_il2cpp_TypeInfo_var);
-		UnityException__ctor_m743662351(L_8, _stringLiteral2184697011, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8);
+		MatchSelectionScreen_CreateMultiplayerGame_m3784813110(__this, /*hidden argument*/NULL);
+		MatchSelectionScreen_findMatches_m3088121079(NULL /*static, unused*/, (bool)0, /*hidden argument*/NULL);
+		goto IL_00c4;
 	}
 
-IL_0041:
+IL_0022:
 	{
-		MultiplayerMainGame_t4046083237 * L_9 = V_0;
-		GameObjectU5BU5D_t3499186955* L_10 = V_1;
-		NullCheck(L_10);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_10, 0);
-		int32_t L_11 = 0;
-		NullCheck(((L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_11))));
-		Dealer_t2043054649 * L_12 = GameObject_GetComponent_TisDealer_t2043054649_m1448126340(((L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_11))), /*hidden argument*/GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var);
-		NullCheck(L_9);
-		L_9->set_dealer_4(L_12);
-		MultiplayerMainGame_t4046083237 * L_13 = V_0;
-		GameObjectRef_t4121474274 * L_14 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
-		NullCheck(L_14);
-		Networking_t1515242260 * L_15 = L_14->get_network_4();
+		Button_t990034267 * L_3 = ___btn;
+		Button_t990034267 * L_4 = __this->get_hostMatch_5();
+		bool L_5 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
+		if (!L_5)
+		{
+			goto IL_0044;
+		}
+	}
+	{
+		MatchSelectionScreen_CreateMultiplayerGame_m3784813110(__this, /*hidden argument*/NULL);
+		MatchSelectionScreen_findMatches_m3088121079(NULL /*static, unused*/, (bool)1, /*hidden argument*/NULL);
+		goto IL_00c4;
+	}
+
+IL_0044:
+	{
+		Button_t990034267 * L_6 = ___btn;
+		Button_t990034267 * L_7 = __this->get_inviteBtn_7();
+		bool L_8 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_6, L_7, /*hidden argument*/NULL);
+		if (!L_8)
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		goto IL_00c4;
+	}
+
+IL_005a:
+	{
+		Button_t990034267 * L_9 = ___btn;
+		Button_t990034267 * L_10 = __this->get_singlePlayerBtn_8();
+		bool L_11 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
+		if (!L_11)
+		{
+			goto IL_00c4;
+		}
+	}
+	{
+		RectTransform_t3317474837 * L_12 = __this->get_gameLayout_4();
+		NullCheck(L_12);
+		GameObject_t4012695102 * L_13 = Component_get_gameObject_m1170635899(L_12, /*hidden argument*/NULL);
 		NullCheck(L_13);
-		L_13->set_network_5(L_15);
-		MatchSelectionScreen_findMatches_m3505743744(NULL /*static, unused*/, /*hidden argument*/NULL);
-		goto IL_00e9;
-	}
-
-IL_0069:
-	{
-		Button_t990034267 * L_16 = ___btn;
-		Button_t990034267 * L_17 = __this->get_inviteBtn_6();
-		bool L_18 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-		if (!L_18)
+		SinglePlayerMainGame_t3863033300 * L_14 = GameObject_AddComponent_TisSinglePlayerMainGame_t3863033300_m1855869342(L_13, /*hidden argument*/GameObject_AddComponent_TisSinglePlayerMainGame_t3863033300_m1855869342_MethodInfo_var);
+		V_0 = L_14;
+		GameObjectU5BU5D_t3499186955* L_15 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2043054649, /*hidden argument*/NULL);
+		V_1 = L_15;
+		GameObjectU5BU5D_t3499186955* L_16 = V_1;
+		NullCheck(L_16);
+		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_16)->max_length))))) <= ((int32_t)1)))
 		{
-			goto IL_007f;
+			goto IL_009b;
 		}
 	}
 	{
-		goto IL_00e9;
+		UnityException_t3148635335 * L_17 = (UnityException_t3148635335 *)il2cpp_codegen_object_new(UnityException_t3148635335_il2cpp_TypeInfo_var);
+		UnityException__ctor_m743662351(L_17, _stringLiteral2184697011, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_17);
 	}
 
-IL_007f:
+IL_009b:
 	{
-		Button_t990034267 * L_19 = ___btn;
-		Button_t990034267 * L_20 = __this->get_singlePlayerBtn_7();
-		bool L_21 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_19, L_20, /*hidden argument*/NULL);
-		if (!L_21)
-		{
-			goto IL_00e9;
-		}
-	}
-	{
-		RectTransform_t3317474837 * L_22 = __this->get_gameLayout_4();
-		NullCheck(L_22);
-		GameObject_t4012695102 * L_23 = Component_get_gameObject_m1170635899(L_22, /*hidden argument*/NULL);
+		SinglePlayerMainGame_t3863033300 * L_18 = V_0;
+		GameObjectU5BU5D_t3499186955* L_19 = V_1;
+		NullCheck(L_19);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_19, 0);
+		int32_t L_20 = 0;
+		NullCheck(((L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_20))));
+		Dealer_t2043054649 * L_21 = GameObject_GetComponent_TisDealer_t2043054649_m1448126340(((L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_20))), /*hidden argument*/GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var);
+		NullCheck(L_18);
+		((MultiplayerMainGame_t4046083237 *)L_18)->set_dealer_4(L_21);
+		SinglePlayerMainGame_t3863033300 * L_22 = V_0;
+		GameObjectRef_t4121474274 * L_23 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_23);
-		SinglePlayerMainGame_t3863033300 * L_24 = GameObject_AddComponent_TisSinglePlayerMainGame_t3863033300_m1855869342(L_23, /*hidden argument*/GameObject_AddComponent_TisSinglePlayerMainGame_t3863033300_m1855869342_MethodInfo_var);
-		V_2 = L_24;
-		GameObjectU5BU5D_t3499186955* L_25 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2043054649, /*hidden argument*/NULL);
-		V_3 = L_25;
-		GameObjectU5BU5D_t3499186955* L_26 = V_3;
-		NullCheck(L_26);
-		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_26)->max_length))))) <= ((int32_t)1)))
-		{
-			goto IL_00c0;
-		}
-	}
-	{
-		UnityException_t3148635335 * L_27 = (UnityException_t3148635335 *)il2cpp_codegen_object_new(UnityException_t3148635335_il2cpp_TypeInfo_var);
-		UnityException__ctor_m743662351(L_27, _stringLiteral2184697011, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_27);
-	}
-
-IL_00c0:
-	{
-		SinglePlayerMainGame_t3863033300 * L_28 = V_2;
-		GameObjectU5BU5D_t3499186955* L_29 = V_3;
-		NullCheck(L_29);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_29, 0);
-		int32_t L_30 = 0;
-		NullCheck(((L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_30))));
-		Dealer_t2043054649 * L_31 = GameObject_GetComponent_TisDealer_t2043054649_m1448126340(((L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_30))), /*hidden argument*/GameObject_GetComponent_TisDealer_t2043054649_m1448126340_MethodInfo_var);
-		NullCheck(L_28);
-		((MultiplayerMainGame_t4046083237 *)L_28)->set_dealer_4(L_31);
-		SinglePlayerMainGame_t3863033300 * L_32 = V_2;
-		GameObjectRef_t4121474274 * L_33 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
-		NullCheck(L_33);
-		Networking_t1515242260 * L_34 = L_33->get_network_4();
-		NullCheck(L_32);
-		((MultiplayerMainGame_t4046083237 *)L_32)->set_network_5(L_34);
+		Networking_t1515242260 * L_24 = L_23->get_network_4();
+		NullCheck(L_22);
+		((MultiplayerMainGame_t4046083237 *)L_22)->set_network_5(L_24);
 		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
-		String_t* L_35 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MAIN_GAME_3();
-		VirtActionInvoker1< String_t* >::Invoke(10 /* System.Void SceneMonoBehaviour::MoveToScene(System.String) */, __this, L_35);
+		String_t* L_25 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MAIN_GAME_3();
+		VirtActionInvoker1< String_t* >::Invoke(10 /* System.Void SceneMonoBehaviour::MoveToScene(System.String) */, __this, L_25);
 	}
 
-IL_00e9:
+IL_00c4:
 	{
-		Button_t990034267 * L_36 = ___btn;
-		NullCheck(L_36);
-		Behaviour_set_enabled_m2046806933(L_36, (bool)0, /*hidden argument*/NULL);
+		Button_t990034267 * L_26 = ___btn;
+		NullCheck(L_26);
+		Behaviour_set_enabled_m2046806933(L_26, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -9944,7 +9998,7 @@ IL_0078:
 extern "C"  void MatchSelectionScreen_U3CInitU3Em__4D_m1738529617 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
 {
 	{
-		Button_t990034267 * L_0 = __this->get_autoMatchBtn_5();
+		Button_t990034267 * L_0 = __this->get_hostMatch_5();
 		MatchSelectionScreen_OnClick_m288207406(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
@@ -9953,7 +10007,7 @@ extern "C"  void MatchSelectionScreen_U3CInitU3Em__4D_m1738529617 (MatchSelectio
 extern "C"  void MatchSelectionScreen_U3CInitU3Em__4E_m1738530578 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
 {
 	{
-		Button_t990034267 * L_0 = __this->get_inviteBtn_6();
+		Button_t990034267 * L_0 = __this->get_autoMatchBtn_6();
 		MatchSelectionScreen_OnClick_m288207406(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
@@ -9962,7 +10016,16 @@ extern "C"  void MatchSelectionScreen_U3CInitU3Em__4E_m1738530578 (MatchSelectio
 extern "C"  void MatchSelectionScreen_U3CInitU3Em__4F_m1738531539 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
 {
 	{
-		Button_t990034267 * L_0 = __this->get_singlePlayerBtn_7();
+		Button_t990034267 * L_0 = __this->get_inviteBtn_7();
+		MatchSelectionScreen_OnClick_m288207406(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MatchSelectionScreen::<Init>m__50()
+extern "C"  void MatchSelectionScreen_U3CInitU3Em__50_m1738540188 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
+{
+	{
+		Button_t990034267 * L_0 = __this->get_singlePlayerBtn_8();
 		MatchSelectionScreen_OnClick_m288207406(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}

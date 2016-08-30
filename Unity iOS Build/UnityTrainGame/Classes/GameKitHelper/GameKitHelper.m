@@ -190,7 +190,7 @@ BOOL _matchStarted;
     UnitySendMessage("NetworkManager", "OnReceiveData", [dataStr UTF8String]);
 }
 
-- (void) findMatchWithMinPlayers:(int)minPlayers maxPlayers:(int)maxPlayers viewController:(UIViewController *)viewController delegate:(id<GameKitHelperDelegate>)delegate
+- (void) findMatchWithMinPlayers:(int)minPlayers maxPlayers:(int)maxPlayers isHost:(bool)isAHost viewController:(UIViewController *)viewController delegate:(id<GameKitHelperDelegate>)delegate
 {
     if (!_enableGameCenter) return;
     
@@ -202,7 +202,15 @@ BOOL _matchStarted;
     GKMatchRequest * gkMatchRequest = [[GKMatchRequest alloc]init];
     gkMatchRequest.minPlayers = minPlayers;
     gkMatchRequest.maxPlayers = maxPlayers;
-    
+    if (isAHost == true)
+    {
+        gkMatchRequest.playerAttributes = 0xFFFF0000;
+    }
+    else
+    {
+        gkMatchRequest.playerAttributes = 0xFFFFFFFF;
+    }
+    isHost = isAHost;
     GKMatchmakerViewController * matchMakerViewCtrller = [[GKMatchmakerViewController alloc]initWithMatchRequest:gkMatchRequest];
     matchMakerViewCtrller.matchmakerDelegate = self;
     [viewController presentViewController:matchMakerViewCtrller animated:YES completion:nil];
@@ -227,14 +235,18 @@ BOOL _matchStarted;
     {
         NSLog(@"GameKitHelper : Ready to start match!");
         [self lookUpPlayers];
-        [self.match chooseBestHostPlayerWithCompletionHandler:^(NSString * _Nullable playerID)
-        {
-            isHost = (playerID == [GKLocalPlayer localPlayer].playerID);
-            NSLog(@"[ Chosen Host id ] %@ - isHost %d", playerID, isHost);
-            _matchStarted = YES;
-            
-            [_delegate matchStarted];
-        }];
+        
+        //moved this callback into lookup Players
+        //since no more used apple host selection
+        
+//        [self.match chooseBestHostPlayerWithCompletionHandler:^(NSString * _Nullable playerID)
+//        {
+//            isHost = (playerID == [GKLocalPlayer localPlayer].playerID);
+//            NSLog(@"[ Chosen Host id ] %@ - isHost %d", playerID, isHost);
+//            _matchStarted = YES;
+//            
+//            [_delegate matchStarted];
+//        }];
     }
 }
 
@@ -344,6 +356,10 @@ BOOL _matchStarted;
                         });
                  }];
              }
+             
+             NSLog(@"[ Chosen Host id ] %@ - isHost %d", [GKLocalPlayer localPlayer].playerID, isHost);
+             _matchStarted = YES;
+             [_delegate matchStarted];
           }
      }];
 }

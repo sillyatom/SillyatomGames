@@ -479,9 +479,9 @@ extern "C"
         NSLog(@"[ Bridge Log ] %@", [[NSString alloc]initWithUTF8String:msg]);
     }
     
-    void findMatches()
+    void findMatches(bool isHost)
     {
-        [[GameKitHelper sharedGameKitHelper] findMatchWithMinPlayers:MIN_PLAYERS maxPlayers:MAX_PLAYERS viewController:GetAppController().rootViewController delegate:GetAppController()];
+        [[GameKitHelper sharedGameKitHelper] findMatchWithMinPlayers:MIN_PLAYERS maxPlayers:MAX_PLAYERS isHost:isHost viewController:GetAppController().rootViewController delegate:GetAppController()];
     }
     
     bool isHost()

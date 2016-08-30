@@ -6,10 +6,11 @@ using System.Runtime.InteropServices;
 public class MatchSelectionScreen : GameScreenMonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void findMatches();
+    private static extern void findMatches(bool isHost);
 
     public RectTransform gameLayout;
 
+    public Button hostMatch;
     public Button autoMatchBtn;
     public Button inviteBtn;
     public Button singlePlayerBtn;
@@ -17,7 +18,10 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
     override public void Init()
     {
         base.Init();
-
+        hostMatch.onClick.AddListener(() =>
+            {
+                OnClick(hostMatch);
+            });
         autoMatchBtn.onClick.AddListener(() =>
             {
                 OnClick(autoMatchBtn);
@@ -32,28 +36,41 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
             });
     }
 
+    private void CreateMultiplayerGame()
+    {
+        MultiplayerMainGame game = gameLayout.gameObject.AddComponent<MultiplayerMainGame>();
+
+        //reference dealer
+        {
+            GameObject[] gos = GameObject.FindGameObjectsWithTag("Dealer");
+            if (gos.Length > 1)
+            {
+                throw(new UnityException("Multiple Dealers Found !!! "));
+            }
+            game.dealer = gos[0].GetComponent<Dealer>();
+        }
+
+        game.network = SingletonManager.reference.network;
+    }
+
     public void OnClick(Button btn)
     {
         if (btn == autoMatchBtn)
         {
-            MultiplayerMainGame game = gameLayout.gameObject.AddComponent<MultiplayerMainGame>();
-
-            //reference dealer
-            {
-                GameObject[] gos = GameObject.FindGameObjectsWithTag("Dealer");
-                if (gos.Length > 1)
-                {
-                    throw(new UnityException("Multiple Dealers Found !!! "));
-                }
-                game.dealer = gos[0].GetComponent<Dealer>();
-            }
-
-            game.network = SingletonManager.reference.network;
-
+            CreateMultiplayerGame();
             #if UNITY_EDITOR
             MoveToScene(TagConstants.TAG_MAIN_GAME);
             #else
-            findMatches();
+            findMatches(false);
+            #endif
+        }
+        else if (btn == hostMatch)
+        {
+            CreateMultiplayerGame();
+            #if UNITY_EDITOR
+            MoveToScene(TagConstants.TAG_MAIN_GAME);
+            #else
+            findMatches(true);
             #endif
         }
         else if (btn == inviteBtn)
