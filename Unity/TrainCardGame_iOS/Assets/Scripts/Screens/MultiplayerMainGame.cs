@@ -26,7 +26,6 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     override public void Init()
     {
         base.Init();
-        transform.GetComponent<SharedMainGame>().DisableHud();
         network = SingletonManager.reference.network;
         InitGame();
     }
@@ -50,6 +49,15 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         {
             dealer.ShuffleCards();
             DispatchHostSelected();
+        }
+
+        if (network.Players.Count == 2)
+        {
+            transform.GetComponent<SharedMainGame>().EnableHud();
+        }
+        else
+        {
+            transform.GetComponent<SharedMainGame>().DisableHud();
         }
     }
 
