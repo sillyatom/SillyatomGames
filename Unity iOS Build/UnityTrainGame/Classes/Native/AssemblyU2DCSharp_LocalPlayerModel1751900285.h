@@ -14,6 +14,8 @@
 struct LocalPlayerModel_t1751900285;
 // System.String
 struct String_t;
+// System.Collections.Generic.Dictionary`2<System.String,System.Int32>
+struct Dictionary_2_t190145395;
 
 #include "mscorlib_System_Object837106420.h"
 
@@ -88,6 +90,8 @@ struct LocalPlayerModel_t1751900285_StaticFields
 public:
 	// LocalPlayerModel LocalPlayerModel::_model
 	LocalPlayerModel_t1751900285 * ____model_0;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> LocalPlayerModel::<>f__switch$map7
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map7_6;
 
 public:
 	inline static int32_t get_offset_of__model_0() { return static_cast<int32_t>(offsetof(LocalPlayerModel_t1751900285_StaticFields, ____model_0)); }
@@ -97,6 +101,15 @@ public:
 	{
 		____model_0 = value;
 		Il2CppCodeGenWriteBarrier(&____model_0, value);
+	}
+
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map7_6() { return static_cast<int32_t>(offsetof(LocalPlayerModel_t1751900285_StaticFields, ___U3CU3Ef__switchU24map7_6)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map7_6() const { return ___U3CU3Ef__switchU24map7_6; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map7_6() { return &___U3CU3Ef__switchU24map7_6; }
+	inline void set_U3CU3Ef__switchU24map7_6(Dictionary_2_t190145395 * value)
+	{
+		___U3CU3Ef__switchU24map7_6 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map7_6, value);
 	}
 };
 

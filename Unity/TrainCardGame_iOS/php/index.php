@@ -125,6 +125,10 @@ class Main
        {
          $this->init();
        }
+       else if ($_POST["api"] == "add_tokens")
+       {
+         $this->addTokens();
+       }
        else
        {
          $this->sendResponse(400, 'Missing API');
@@ -136,12 +140,37 @@ class Main
      }
    }
 
+   function addTokens()
+   {
+     if (isset($_POST["key_id"]) && isset($_POST["key_name"]))
+     {
+         $id = $_POST["key_id"];
+         $name = $_POST["key_name"];
+         $delTokens = $_POST["key_add_tokens"];
+         $stmt = $this->db->prepare('SELECT id, tokens, xp FROM player_data WHERE id=?');
+         $stmt->bind_param("i", $id);
+         $stmt->execute();
+         $stmt->bind_result($id1, $tokens1, $xp1);
+         while ($stmt->fetch())
+         {
+             break;
+         }
+         $stmt->close();
+         $this->db->query("UPDATE player_data SET tokens=$tokens1+$delTokens WHERE id=$id");
+         $this->db->commit();
+      }
+      else
+      {
+        $this->sendResponse(400, 'Invalid code');
+      }
+   }
+
    function init()
    {
-     if (isset($_POST["id"]) && isset($_POST["name"]))
+     if (isset($_POST["key_id"]) && isset($_POST["key_name"]))
      {
-       $id = $_POST["id"];
-       $name = $_POST["name"];
+       $id = $_POST["key_id"];
+       $name = $_POST["key_name"];
 
        $stmt = $this->db->prepare('SELECT id, tokens, xp FROM player_data WHERE id=?');
        $stmt->bind_param("i", $id);

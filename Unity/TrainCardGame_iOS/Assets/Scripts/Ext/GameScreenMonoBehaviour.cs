@@ -23,6 +23,7 @@ public class GameScreenMonoBehaviour : SceneMonoBehaviour
         else if (gEvent.type == GameEvent.MATCH_STARTED)
         {
             SingletonManager.reference.popupManager.RemoveActivePopup();
+            EventManager.instance.Raise(new GameEvent(GameEvent.ADD_TOKENS, -GameSelectionScreen.GetEntryFees()));
             MoveToScene(TagConstants.TAG_MAIN_GAME);
         }
     }

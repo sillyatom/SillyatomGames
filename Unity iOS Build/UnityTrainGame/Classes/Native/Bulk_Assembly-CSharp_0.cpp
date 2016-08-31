@@ -604,8 +604,8 @@ struct JsonContainerAttribute_t4246140134;
 #include "AssemblyU2DCSharp_GameObjectRef4121474274MethodDeclarations.h"
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764MethodDeclarations.h"
-#include "AssemblyU2DCSharp_GameSelectionScreen839734950.h"
 #include "AssemblyU2DCSharp_GameSelectionScreen839734950MethodDeclarations.h"
+#include "AssemblyU2DCSharp_GameSelectionScreen839734950.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen514686775MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen514686775.h"
 #include "mscorlib_System_Int322847414787MethodDeclarations.h"
@@ -626,6 +626,8 @@ struct JsonContainerAttribute_t4246140134;
 #include "AssemblyU2DCSharp_HostSelectedVO4056182396MethodDeclarations.h"
 #include "AssemblyU2DCSharp_HUD71895.h"
 #include "AssemblyU2DCSharp_HUD71895MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395.h"
 #include "AssemblyU2DCSharp_InGameInfoText36852466.h"
 #include "AssemblyU2DCSharp_InGameInfoText36852466MethodDeclarations.h"
 #include "AssemblyU2DCSharp_InGameInfoText_U3CRemoveMessageU1537395692MethodDeclarations.h"
@@ -692,8 +694,6 @@ struct JsonContainerAttribute_t4246140134;
 #include "AssemblyU2DCSharp_MainScreen2442698661MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MainScreen_U3CStartSignInProcess2572545929MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MainScreen_U3CStartSignInProcess2572545929.h"
-#include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395MethodDeclarations.h"
-#include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395.h"
 #include "AssemblyU2DCSharp_NetworkConstants2185309921.h"
 #include "AssemblyU2DCSharp_NetworkConstants2185309921MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MatchSelectionScreen3589239987.h"
@@ -5494,14 +5494,14 @@ IL_008a:
 		NullCheck(L_26);
 		WWWForm_AddField_m2890504319(L_26, L_27, L_28, /*hidden argument*/NULL);
 		WWWForm_t3999572776 * L_29 = V_4;
-		String_t* L_30 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_UID_2();
+		String_t* L_30 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_UID_3();
 		LocalPlayerModel_t1751900285 * L_31 = __this->get__playerModel_6();
 		NullCheck(L_31);
 		String_t* L_32 = LocalPlayerModel_get_localPlayerUID_m995944726(L_31, /*hidden argument*/NULL);
 		NullCheck(L_29);
 		WWWForm_AddField_m2890504319(L_29, L_30, L_32, /*hidden argument*/NULL);
 		WWWForm_t3999572776 * L_33 = V_4;
-		String_t* L_34 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_NAME_5();
+		String_t* L_34 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_NAME_6();
 		LocalPlayerModel_t1751900285 * L_35 = __this->get__playerModel_6();
 		NullCheck(L_35);
 		String_t* L_36 = LocalPlayerModel_get_localPlayerName_m632555943(L_35, /*hidden argument*/NULL);
@@ -5944,6 +5944,18 @@ extern "C"  void GameEvent__ctor_m1494597407 (GameEvent_t2981166504 * __this, St
 		return;
 	}
 }
+// System.Void GameEvent::.ctor(System.String,System.Int32)
+extern "C"  void GameEvent__ctor_m2474059800 (GameEvent_t2981166504 * __this, String_t* ___type, int32_t ___val, const MethodInfo* method)
+{
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___type;
+		GameEvent_set_type_m3926350538(__this, L_0, /*hidden argument*/NULL);
+		int32_t L_1 = ___val;
+		GameEvent_set_val_m1408206998(__this, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void GameEvent::.ctor(System.String,System.String)
 extern "C"  void GameEvent__ctor_m4138108187 (GameEvent_t2981166504 * __this, String_t* ___type, String_t* ___postResponse, const MethodInfo* method)
 {
@@ -5984,7 +5996,7 @@ extern "C"  void GameEvent__ctor_m3237779601 (GameEvent_t2981166504 * __this, St
 extern "C"  String_t* GameEvent_get_type_m3917904769 (GameEvent_t2981166504 * __this, const MethodInfo* method)
 {
 	{
-		String_t* L_0 = __this->get_U3CtypeU3Ek__BackingField_10();
+		String_t* L_0 = __this->get_U3CtypeU3Ek__BackingField_12();
 		return L_0;
 	}
 }
@@ -5993,7 +6005,7 @@ extern "C"  void GameEvent_set_type_m3926350538 (GameEvent_t2981166504 * __this,
 {
 	{
 		String_t* L_0 = ___value;
-		__this->set_U3CtypeU3Ek__BackingField_10(L_0);
+		__this->set_U3CtypeU3Ek__BackingField_12(L_0);
 		return;
 	}
 }
@@ -6001,7 +6013,7 @@ extern "C"  void GameEvent_set_type_m3926350538 (GameEvent_t2981166504 * __this,
 extern "C"  Action_2_t2863572912 * GameEvent_get_callback_m1531979647 (GameEvent_t2981166504 * __this, const MethodInfo* method)
 {
 	{
-		Action_2_t2863572912 * L_0 = __this->get_U3CcallbackU3Ek__BackingField_11();
+		Action_2_t2863572912 * L_0 = __this->get_U3CcallbackU3Ek__BackingField_13();
 		return L_0;
 	}
 }
@@ -6010,7 +6022,7 @@ extern "C"  void GameEvent_set_callback_m4090578444 (GameEvent_t2981166504 * __t
 {
 	{
 		Action_2_t2863572912 * L_0 = ___value;
-		__this->set_U3CcallbackU3Ek__BackingField_11(L_0);
+		__this->set_U3CcallbackU3Ek__BackingField_13(L_0);
 		return;
 	}
 }
@@ -6018,7 +6030,7 @@ extern "C"  void GameEvent_set_callback_m4090578444 (GameEvent_t2981166504 * __t
 extern "C"  NetworkResponse_t1683455087 * GameEvent_get_response_m1142487431 (GameEvent_t2981166504 * __this, const MethodInfo* method)
 {
 	{
-		NetworkResponse_t1683455087 * L_0 = __this->get_U3CresponseU3Ek__BackingField_12();
+		NetworkResponse_t1683455087 * L_0 = __this->get_U3CresponseU3Ek__BackingField_14();
 		return L_0;
 	}
 }
@@ -6027,7 +6039,7 @@ extern "C"  void GameEvent_set_response_m304452356 (GameEvent_t2981166504 * __th
 {
 	{
 		NetworkResponse_t1683455087 * L_0 = ___value;
-		__this->set_U3CresponseU3Ek__BackingField_12(L_0);
+		__this->set_U3CresponseU3Ek__BackingField_14(L_0);
 		return;
 	}
 }
@@ -6035,7 +6047,7 @@ extern "C"  void GameEvent_set_response_m304452356 (GameEvent_t2981166504 * __th
 extern "C"  String_t* GameEvent_get_postResponse_m4192395656 (GameEvent_t2981166504 * __this, const MethodInfo* method)
 {
 	{
-		String_t* L_0 = __this->get_U3CpostResponseU3Ek__BackingField_13();
+		String_t* L_0 = __this->get_U3CpostResponseU3Ek__BackingField_15();
 		return L_0;
 	}
 }
@@ -6044,7 +6056,7 @@ extern "C"  void GameEvent_set_postResponse_m1756462883 (GameEvent_t2981166504 *
 {
 	{
 		String_t* L_0 = ___value;
-		__this->set_U3CpostResponseU3Ek__BackingField_13(L_0);
+		__this->set_U3CpostResponseU3Ek__BackingField_15(L_0);
 		return;
 	}
 }
@@ -6052,7 +6064,7 @@ extern "C"  void GameEvent_set_postResponse_m1756462883 (GameEvent_t2981166504 *
 extern "C"  Il2CppObject * GameEvent_get_vo_m236630254 (GameEvent_t2981166504 * __this, const MethodInfo* method)
 {
 	{
-		Il2CppObject * L_0 = __this->get_U3CvoU3Ek__BackingField_14();
+		Il2CppObject * L_0 = __this->get_U3CvoU3Ek__BackingField_16();
 		return L_0;
 	}
 }
@@ -6061,7 +6073,24 @@ extern "C"  void GameEvent_set_vo_m1200897213 (GameEvent_t2981166504 * __this, I
 {
 	{
 		Il2CppObject * L_0 = ___value;
-		__this->set_U3CvoU3Ek__BackingField_14(L_0);
+		__this->set_U3CvoU3Ek__BackingField_16(L_0);
+		return;
+	}
+}
+// System.Int32 GameEvent::get_val()
+extern "C"  int32_t GameEvent_get_val_m2575248839 (GameEvent_t2981166504 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_U3CvalU3Ek__BackingField_17();
+		return L_0;
+	}
+}
+// System.Void GameEvent::set_val(System.Int32)
+extern "C"  void GameEvent_set_val_m1408206998 (GameEvent_t2981166504 * __this, int32_t ___value, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___value;
+		__this->set_U3CvalU3Ek__BackingField_17(L_0);
 		return;
 	}
 }
@@ -6115,11 +6144,15 @@ extern "C"  void GameScreenMonoBehaviour__ctor_m1875208271 (GameScreenMonoBehavi
 // System.Void GameScreenMonoBehaviour::OnGameEvent(GameEvent)
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern TypeInfo* EventManager_t1907836883_il2cpp_TypeInfo_var;
+extern TypeInfo* GameSelectionScreen_t839734950_il2cpp_TypeInfo_var;
+extern TypeInfo* GameEvent_t2981166504_il2cpp_TypeInfo_var;
 extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2067282234;
 extern Il2CppCodeGenString* _stringLiteral2012710164;
 extern Il2CppCodeGenString* _stringLiteral1565194166;
 extern Il2CppCodeGenString* _stringLiteral306272740;
+extern Il2CppCodeGenString* _stringLiteral2851263005;
 extern const uint32_t GameScreenMonoBehaviour_OnGameEvent_m2365278580_MetadataUsageId;
 extern "C"  void GameScreenMonoBehaviour_OnGameEvent_m2365278580 (GameScreenMonoBehaviour_t3269764764 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method)
 {
@@ -6148,7 +6181,7 @@ extern "C"  void GameScreenMonoBehaviour_OnGameEvent_m2365278580 (GameScreenMono
 		PopupManager_t2711269761 * L_5 = L_4->get_popupManager_6();
 		NullCheck(L_5);
 		PopupManager_CreateGenericPopup_m2827790414(L_5, _stringLiteral2012710164, _stringLiteral1565194166, /*hidden argument*/NULL);
-		goto IL_006a;
+		goto IL_0084;
 	}
 
 IL_003b:
@@ -6160,7 +6193,7 @@ IL_003b:
 		bool L_8 = String_op_Equality_m1260523650(NULL /*static, unused*/, L_7, _stringLiteral306272740, /*hidden argument*/NULL);
 		if (!L_8)
 		{
-			goto IL_006a;
+			goto IL_0084;
 		}
 	}
 	{
@@ -6169,21 +6202,27 @@ IL_003b:
 		PopupManager_t2711269761 * L_10 = L_9->get_popupManager_6();
 		NullCheck(L_10);
 		PopupManager_RemoveActivePopup_m4117325434(L_10, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
+		EventManager_t1907836883 * L_11 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(GameSelectionScreen_t839734950_il2cpp_TypeInfo_var);
+		int32_t L_12 = GameSelectionScreen_GetEntryFees_m821613210(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_13 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m2474059800(L_13, _stringLiteral2851263005, ((-L_12)), /*hidden argument*/NULL);
+		NullCheck(L_11);
+		EventManager_Raise_m2130241432(L_11, L_13, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
-		String_t* L_11 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MAIN_GAME_3();
-		VirtActionInvoker1< String_t* >::Invoke(10 /* System.Void SceneMonoBehaviour::MoveToScene(System.String) */, __this, L_11);
+		String_t* L_14 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MAIN_GAME_3();
+		VirtActionInvoker1< String_t* >::Invoke(10 /* System.Void SceneMonoBehaviour::MoveToScene(System.String) */, __this, L_14);
 	}
 
-IL_006a:
+IL_0084:
 	{
 		return;
 	}
 }
 // System.Void GameSelectionScreen::.ctor()
 extern TypeInfo* List_1_t514686775_il2cpp_TypeInfo_var;
-extern TypeInfo* List_1_t3644373756_il2cpp_TypeInfo_var;
 extern const MethodInfo* List_1__ctor_m2397334390_MethodInfo_var;
-extern const MethodInfo* List_1__ctor_m1634217978_MethodInfo_var;
 extern const uint32_t GameSelectionScreen__ctor_m2186336133_MetadataUsageId;
 extern "C"  void GameSelectionScreen__ctor_m2186336133 (GameSelectionScreen_t839734950 * __this, const MethodInfo* method)
 {
@@ -6197,16 +6236,13 @@ extern "C"  void GameSelectionScreen__ctor_m2186336133 (GameSelectionScreen_t839
 		List_1_t514686775 * L_0 = (List_1_t514686775 *)il2cpp_codegen_object_new(List_1_t514686775_il2cpp_TypeInfo_var);
 		List_1__ctor_m2397334390(L_0, /*hidden argument*/List_1__ctor_m2397334390_MethodInfo_var);
 		__this->set__train_7(L_0);
-		List_1_t3644373756 * L_1 = (List_1_t3644373756 *)il2cpp_codegen_object_new(List_1_t3644373756_il2cpp_TypeInfo_var);
-		List_1__ctor_m1634217978(L_1, /*hidden argument*/List_1__ctor_m1634217978_MethodInfo_var);
-		__this->set_entryFees_8(L_1);
 		GameScreenMonoBehaviour__ctor_m1875208271(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void GameSelectionScreen::.cctor()
-extern TypeInfo* GameSelectionScreen_t839734950_il2cpp_TypeInfo_var;
 extern TypeInfo* List_1_t3644373756_il2cpp_TypeInfo_var;
+extern TypeInfo* GameSelectionScreen_t839734950_il2cpp_TypeInfo_var;
 extern const MethodInfo* List_1__ctor_m1634217978_MethodInfo_var;
 extern const uint32_t GameSelectionScreen__cctor_m2869814472_MetadataUsageId;
 extern "C"  void GameSelectionScreen__cctor_m2869814472 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
@@ -6219,7 +6255,6 @@ extern "C"  void GameSelectionScreen__cctor_m2869814472 (Il2CppObject * __this /
 	}
 	List_1_t3644373756 * V_0 = NULL;
 	{
-		((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->set_selectedIndex_9(0);
 		List_1_t3644373756 * L_0 = (List_1_t3644373756 *)il2cpp_codegen_object_new(List_1_t3644373756_il2cpp_TypeInfo_var);
 		List_1__ctor_m1634217978(L_0, /*hidden argument*/List_1__ctor_m1634217978_MethodInfo_var);
 		V_0 = L_0;
@@ -6228,15 +6263,33 @@ extern "C"  void GameSelectionScreen__cctor_m2869814472 (Il2CppObject * __this /
 		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_1, 0);
 		List_1_t3644373756 * L_2 = V_0;
 		NullCheck(L_2);
-		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_2, 3);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_2, ((int32_t)100));
 		List_1_t3644373756 * L_3 = V_0;
 		NullCheck(L_3);
-		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_3, 5);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_3, ((int32_t)150));
 		List_1_t3644373756 * L_4 = V_0;
 		NullCheck(L_4);
-		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_4, ((int32_t)10));
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_4, ((int32_t)300));
 		List_1_t3644373756 * L_5 = V_0;
-		((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->set_matchTypes_10(L_5);
+		((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->set_entryFees_8(L_5);
+		((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->set_selectedIndex_9(0);
+		List_1_t3644373756 * L_6 = (List_1_t3644373756 *)il2cpp_codegen_object_new(List_1_t3644373756_il2cpp_TypeInfo_var);
+		List_1__ctor_m1634217978(L_6, /*hidden argument*/List_1__ctor_m1634217978_MethodInfo_var);
+		V_0 = L_6;
+		List_1_t3644373756 * L_7 = V_0;
+		NullCheck(L_7);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_7, 0);
+		List_1_t3644373756 * L_8 = V_0;
+		NullCheck(L_8);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_8, 3);
+		List_1_t3644373756 * L_9 = V_0;
+		NullCheck(L_9);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_9, 5);
+		List_1_t3644373756 * L_10 = V_0;
+		NullCheck(L_10);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_10, ((int32_t)10));
+		List_1_t3644373756 * L_11 = V_0;
+		((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->set_matchTypes_10(L_11);
 		return;
 	}
 }
@@ -6254,6 +6307,26 @@ extern "C"  int32_t GameSelectionScreen_GetSweepCount_m2322534634 (Il2CppObject 
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GameSelectionScreen_t839734950_il2cpp_TypeInfo_var);
 		List_1_t3644373756 * L_0 = ((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->get_matchTypes_10();
+		int32_t L_1 = ((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->get_selectedIndex_9();
+		NullCheck(L_0);
+		int32_t L_2 = VirtFuncInvoker1< int32_t, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32) */, L_0, L_1);
+		return L_2;
+	}
+}
+// System.Int32 GameSelectionScreen::GetEntryFees()
+extern TypeInfo* GameSelectionScreen_t839734950_il2cpp_TypeInfo_var;
+extern const uint32_t GameSelectionScreen_GetEntryFees_m821613210_MetadataUsageId;
+extern "C"  int32_t GameSelectionScreen_GetEntryFees_m821613210 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GameSelectionScreen_GetEntryFees_m821613210_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(GameSelectionScreen_t839734950_il2cpp_TypeInfo_var);
+		List_1_t3644373756 * L_0 = ((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->get_entryFees_8();
 		int32_t L_1 = ((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->get_selectedIndex_9();
 		NullCheck(L_0);
 		int32_t L_2 = VirtFuncInvoker1< int32_t, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32) */, L_0, L_1);
@@ -6415,7 +6488,7 @@ IL_0048:
 		NullCheck(L_8);
 		GameObject_SetActive_m3538205401(L_8, (bool)((((int32_t)((((int32_t)L_9) == ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0), /*hidden argument*/NULL);
 		Text_t3286458198 * L_10 = __this->get_entryText_13();
-		List_1_t3644373756 * L_11 = __this->get_entryFees_8();
+		List_1_t3644373756 * L_11 = ((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->get_entryFees_8();
 		int32_t L_12 = ((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->get_selectedIndex_9();
 		NullCheck(L_11);
 		int32_t L_13 = VirtFuncInvoker1< int32_t, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32) */, L_11, L_12);
@@ -7005,9 +7078,11 @@ extern "C"  void HUD_Init_m3758089056 (HUD_t71895 * __this, const MethodInfo* me
 	}
 }
 // System.Void HUD::OnGameEvent(GameEvent)
-extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern TypeInfo* LocalPlayerModelVO_t4243963894_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral1280934833;
+extern TypeInfo* HUD_t71895_il2cpp_TypeInfo_var;
+extern TypeInfo* Dictionary_2_t190145395_il2cpp_TypeInfo_var;
+extern TypeInfo* LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var;
+extern const MethodInfo* Dictionary_2__ctor_m1958628151_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2101932499;
 extern const uint32_t HUD_OnGameEvent_m4187518639_MetadataUsageId;
 extern "C"  void HUD_OnGameEvent_m4187518639 (HUD_t71895 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method)
 {
@@ -7017,53 +7092,88 @@ extern "C"  void HUD_OnGameEvent_m4187518639 (HUD_t71895 * __this, GameEvent_t29
 		il2cpp_codegen_initialize_method (HUD_OnGameEvent_m4187518639_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
+	String_t* V_0 = NULL;
+	Dictionary_2_t190145395 * V_1 = NULL;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
 	{
 		GameEvent_t2981166504 * L_0 = ___gEvent;
 		ExtMonoBehaviour_OnGameEvent_m1534583617(__this, L_0, /*hidden argument*/NULL);
 		GameEvent_t2981166504 * L_1 = ___gEvent;
 		NullCheck(L_1);
 		String_t* L_2 = GameEvent_get_type_m3917904769(L_1, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_3 = String_op_Equality_m1260523650(NULL /*static, unused*/, L_2, _stringLiteral1280934833, /*hidden argument*/NULL);
+		V_0 = L_2;
+		String_t* L_3 = V_0;
 		if (!L_3)
 		{
-			goto IL_002d;
+			goto IL_0094;
 		}
 	}
 	{
-		GameEvent_t2981166504 * L_4 = ___gEvent;
-		NullCheck(L_4);
-		Il2CppObject * L_5 = GameEvent_get_vo_m236630254(L_4, /*hidden argument*/NULL);
-		HUD_UpdateModel_m758038332(__this, ((LocalPlayerModelVO_t4243963894 *)IsInstClass(L_5, LocalPlayerModelVO_t4243963894_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		Dictionary_2_t190145395 * L_4 = ((HUD_t71895_StaticFields*)HUD_t71895_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map4_5();
+		if (L_4)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		Dictionary_2_t190145395 * L_5 = (Dictionary_2_t190145395 *)il2cpp_codegen_object_new(Dictionary_2_t190145395_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m1958628151(L_5, 1, /*hidden argument*/Dictionary_2__ctor_m1958628151_MethodInfo_var);
+		V_1 = L_5;
+		Dictionary_2_t190145395 * L_6 = V_1;
+		NullCheck(L_6);
+		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_6, _stringLiteral2101932499, 0);
+		Dictionary_2_t190145395 * L_7 = V_1;
+		((HUD_t71895_StaticFields*)HUD_t71895_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map4_5(L_7);
 	}
 
-IL_002d:
+IL_0037:
 	{
-		return;
+		Dictionary_2_t190145395 * L_8 = ((HUD_t71895_StaticFields*)HUD_t71895_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map4_5();
+		String_t* L_9 = V_0;
+		NullCheck(L_8);
+		bool L_10 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_8, L_9, (&V_2));
+		if (!L_10)
+		{
+			goto IL_0094;
+		}
 	}
-}
-// System.Void HUD::UpdateModel(LocalPlayerModelVO)
-extern "C"  void HUD_UpdateModel_m758038332 (HUD_t71895 * __this, LocalPlayerModelVO_t4243963894 * ___vo, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
 	{
-		Text_t3286458198 * L_0 = __this->get_tokenText_3();
-		LocalPlayerModelVO_t4243963894 * L_1 = ___vo;
-		NullCheck(L_1);
-		int32_t L_2 = LocalPlayerModelVO_get_tokens_m3158577296(L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		String_t* L_3 = Int32_ToString_m1286526384((&V_0), /*hidden argument*/NULL);
-		NullCheck(L_0);
-		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_3);
-		Text_t3286458198 * L_4 = __this->get_xpText_4();
-		LocalPlayerModelVO_t4243963894 * L_5 = ___vo;
-		NullCheck(L_5);
-		int32_t L_6 = LocalPlayerModelVO_get_xp_m1723677934(L_5, /*hidden argument*/NULL);
-		V_1 = L_6;
-		String_t* L_7 = Int32_ToString_m1286526384((&V_1), /*hidden argument*/NULL);
-		NullCheck(L_4);
-		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, L_7);
+		int32_t L_11 = V_2;
+		if (!L_11)
+		{
+			goto IL_0054;
+		}
+	}
+	{
+		goto IL_0094;
+	}
+
+IL_0054:
+	{
+		Text_t3286458198 * L_12 = __this->get_tokenText_3();
+		IL2CPP_RUNTIME_CLASS_INIT(LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var);
+		LocalPlayerModel_t1751900285 * L_13 = LocalPlayerModel_GetInstance_m4081594375(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		int32_t L_14 = LocalPlayerModel_get_tokens_m3923705431(L_13, /*hidden argument*/NULL);
+		V_3 = L_14;
+		String_t* L_15 = Int32_ToString_m1286526384((&V_3), /*hidden argument*/NULL);
+		NullCheck(L_12);
+		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, L_15);
+		Text_t3286458198 * L_16 = __this->get_xpText_4();
+		LocalPlayerModel_t1751900285 * L_17 = LocalPlayerModel_GetInstance_m4081594375(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_17);
+		int32_t L_18 = LocalPlayerModel_get_xp_m336340533(L_17, /*hidden argument*/NULL);
+		V_4 = L_18;
+		String_t* L_19 = Int32_ToString_m1286526384((&V_4), /*hidden argument*/NULL);
+		NullCheck(L_16);
+		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_16, L_19);
+		goto IL_0094;
+	}
+
+IL_0094:
+	{
 		return;
 	}
 }
@@ -7113,7 +7223,7 @@ extern "C"  void InGameEvent__ctor_m3208302044 (InGameEvent_t511087107 * __this,
 extern "C"  String_t* InGameEvent_get_playerId_m2478433726 (InGameEvent_t511087107 * __this, const MethodInfo* method)
 {
 	{
-		String_t* L_0 = __this->get_U3CplayerIdU3Ek__BackingField_25();
+		String_t* L_0 = __this->get_U3CplayerIdU3Ek__BackingField_28();
 		return L_0;
 	}
 }
@@ -7122,7 +7232,7 @@ extern "C"  void InGameEvent_set_playerId_m4245859309 (InGameEvent_t511087107 * 
 {
 	{
 		String_t* L_0 = ___value;
-		__this->set_U3CplayerIdU3Ek__BackingField_25(L_0);
+		__this->set_U3CplayerIdU3Ek__BackingField_28(L_0);
 		return;
 	}
 }
@@ -7130,7 +7240,7 @@ extern "C"  void InGameEvent_set_playerId_m4245859309 (InGameEvent_t511087107 * 
 extern "C"  Card_t2092848 * InGameEvent_get_card_m1665257800 (InGameEvent_t511087107 * __this, const MethodInfo* method)
 {
 	{
-		Card_t2092848 * L_0 = __this->get_U3CcardU3Ek__BackingField_26();
+		Card_t2092848 * L_0 = __this->get_U3CcardU3Ek__BackingField_29();
 		return L_0;
 	}
 }
@@ -7139,7 +7249,7 @@ extern "C"  void InGameEvent_set_card_m1793598009 (InGameEvent_t511087107 * __th
 {
 	{
 		Card_t2092848 * L_0 = ___value;
-		__this->set_U3CcardU3Ek__BackingField_26(L_0);
+		__this->set_U3CcardU3Ek__BackingField_29(L_0);
 		return;
 	}
 }
@@ -7147,7 +7257,7 @@ extern "C"  void InGameEvent_set_card_m1793598009 (InGameEvent_t511087107 * __th
 extern "C"  int32_t InGameEvent_get_status_m20898569 (InGameEvent_t511087107 * __this, const MethodInfo* method)
 {
 	{
-		int32_t L_0 = __this->get_U3CstatusU3Ek__BackingField_27();
+		int32_t L_0 = __this->get_U3CstatusU3Ek__BackingField_30();
 		return L_0;
 	}
 }
@@ -7156,7 +7266,7 @@ extern "C"  void InGameEvent_set_status_m3406780060 (InGameEvent_t511087107 * __
 {
 	{
 		int32_t L_0 = ___value;
-		__this->set_U3CstatusU3Ek__BackingField_27(L_0);
+		__this->set_U3CstatusU3Ek__BackingField_30(L_0);
 		return;
 	}
 }
@@ -9231,9 +9341,15 @@ IL_0014:
 	}
 }
 // System.Void LocalPlayerModel::OnGameEvent(GameEvent)
-extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var;
+extern TypeInfo* Dictionary_2_t190145395_il2cpp_TypeInfo_var;
 extern TypeInfo* LocalPlayerModelVO_t4243963894_il2cpp_TypeInfo_var;
+extern TypeInfo* EventManager_t1907836883_il2cpp_TypeInfo_var;
+extern TypeInfo* GameEvent_t2981166504_il2cpp_TypeInfo_var;
+extern const MethodInfo* Dictionary_2__ctor_m1958628151_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1280934833;
+extern Il2CppCodeGenString* _stringLiteral2851263005;
+extern Il2CppCodeGenString* _stringLiteral2101932499;
 extern const uint32_t LocalPlayerModel_OnGameEvent_m2766611237_MetadataUsageId;
 extern "C"  void LocalPlayerModel_OnGameEvent_m2766611237 (LocalPlayerModel_t1751900285 * __this, GameEvent_t2981166504 * ___gameEvent, const MethodInfo* method)
 {
@@ -9243,26 +9359,101 @@ extern "C"  void LocalPlayerModel_OnGameEvent_m2766611237 (LocalPlayerModel_t175
 		il2cpp_codegen_initialize_method (LocalPlayerModel_OnGameEvent_m2766611237_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
+	String_t* V_0 = NULL;
+	Dictionary_2_t190145395 * V_1 = NULL;
+	int32_t V_2 = 0;
 	{
 		GameEvent_t2981166504 * L_0 = ___gameEvent;
 		NullCheck(L_0);
 		String_t* L_1 = GameEvent_get_type_m3917904769(L_0, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_2 = String_op_Equality_m1260523650(NULL /*static, unused*/, L_1, _stringLiteral1280934833, /*hidden argument*/NULL);
+		V_0 = L_1;
+		String_t* L_2 = V_0;
 		if (!L_2)
 		{
-			goto IL_0026;
+			goto IL_0094;
 		}
 	}
 	{
-		GameEvent_t2981166504 * L_3 = ___gameEvent;
-		NullCheck(L_3);
-		Il2CppObject * L_4 = GameEvent_get_vo_m236630254(L_3, /*hidden argument*/NULL);
-		LocalPlayerModel_UpdateModel_m1266399110(__this, ((LocalPlayerModelVO_t4243963894 *)IsInstClass(L_4, LocalPlayerModelVO_t4243963894_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var);
+		Dictionary_2_t190145395 * L_3 = ((LocalPlayerModel_t1751900285_StaticFields*)LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map7_6();
+		if (L_3)
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		Dictionary_2_t190145395 * L_4 = (Dictionary_2_t190145395 *)il2cpp_codegen_object_new(Dictionary_2_t190145395_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m1958628151(L_4, 2, /*hidden argument*/Dictionary_2__ctor_m1958628151_MethodInfo_var);
+		V_1 = L_4;
+		Dictionary_2_t190145395 * L_5 = V_1;
+		NullCheck(L_5);
+		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral1280934833, 0);
+		Dictionary_2_t190145395 * L_6 = V_1;
+		NullCheck(L_6);
+		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_6, _stringLiteral2851263005, 1);
+		Dictionary_2_t190145395 * L_7 = V_1;
+		IL2CPP_RUNTIME_CLASS_INIT(LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var);
+		((LocalPlayerModel_t1751900285_StaticFields*)LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map7_6(L_7);
 	}
 
-IL_0026:
+IL_003c:
 	{
+		IL2CPP_RUNTIME_CLASS_INIT(LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var);
+		Dictionary_2_t190145395 * L_8 = ((LocalPlayerModel_t1751900285_StaticFields*)LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map7_6();
+		String_t* L_9 = V_0;
+		NullCheck(L_8);
+		bool L_10 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_8, L_9, (&V_2));
+		if (!L_10)
+		{
+			goto IL_0094;
+		}
+	}
+	{
+		int32_t L_11 = V_2;
+		if (!L_11)
+		{
+			goto IL_0060;
+		}
+	}
+	{
+		int32_t L_12 = V_2;
+		if ((((int32_t)L_12) == ((int32_t)1)))
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		goto IL_0094;
+	}
+
+IL_0060:
+	{
+		GameEvent_t2981166504 * L_13 = ___gameEvent;
+		NullCheck(L_13);
+		Il2CppObject * L_14 = GameEvent_get_vo_m236630254(L_13, /*hidden argument*/NULL);
+		LocalPlayerModel_UpdateModel_m1266399110(__this, ((LocalPlayerModelVO_t4243963894 *)IsInstClass(L_14, LocalPlayerModelVO_t4243963894_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		goto IL_0094;
+	}
+
+IL_0076:
+	{
+		int32_t L_15 = LocalPlayerModel_get_tokens_m3923705431(__this, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_16 = ___gameEvent;
+		NullCheck(L_16);
+		int32_t L_17 = GameEvent_get_val_m2575248839(L_16, /*hidden argument*/NULL);
+		LocalPlayerModel_set_tokens_m468511502(__this, ((int32_t)((int32_t)L_15+(int32_t)L_17)), /*hidden argument*/NULL);
+		LocalPlayerModel_PostTokens_m2062522080(__this, /*hidden argument*/NULL);
+		goto IL_0094;
+	}
+
+IL_0094:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
+		EventManager_t1907836883 * L_18 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_19 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m1494597407(L_19, _stringLiteral2101932499, /*hidden argument*/NULL);
+		NullCheck(L_18);
+		EventManager_Raise_m2130241432(L_18, L_19, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -9325,6 +9516,54 @@ extern "C"  void LocalPlayerModel_UpdatePlayerDetails_m1789618285 (LocalPlayerMo
 		String_t* L_8 = GCStatusVO_get_uid_m2126609974(L_7, /*hidden argument*/NULL);
 		NullCheck(L_6);
 		LocalPlayerModel_set_localPlayerUID_m3613546683(L_6, L_8, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void LocalPlayerModel::PostTokens()
+extern TypeInfo* WWWForm_t3999572776_il2cpp_TypeInfo_var;
+extern TypeInfo* RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var;
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const uint32_t LocalPlayerModel_PostTokens_m2062522080_MetadataUsageId;
+extern "C"  void LocalPlayerModel_PostTokens_m2062522080 (LocalPlayerModel_t1751900285 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (LocalPlayerModel_PostTokens_m2062522080_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	WWWForm_t3999572776 * V_0 = NULL;
+	{
+		WWWForm_t3999572776 * L_0 = (WWWForm_t3999572776 *)il2cpp_codegen_object_new(WWWForm_t3999572776_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m1417930174(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		WWWForm_t3999572776 * L_1 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var);
+		String_t* L_2 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_API_0();
+		String_t* L_3 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_ADD_TOKENS_2();
+		NullCheck(L_1);
+		WWWForm_AddField_m2890504319(L_1, L_2, L_3, /*hidden argument*/NULL);
+		WWWForm_t3999572776 * L_4 = V_0;
+		String_t* L_5 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_UID_3();
+		String_t* L_6 = LocalPlayerModel_get_localPlayerUID_m995944726(__this, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		WWWForm_AddField_m2890504319(L_4, L_5, L_6, /*hidden argument*/NULL);
+		WWWForm_t3999572776 * L_7 = V_0;
+		String_t* L_8 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_NAME_6();
+		String_t* L_9 = LocalPlayerModel_get_localPlayerName_m632555943(__this, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		WWWForm_AddField_m2890504319(L_7, L_8, L_9, /*hidden argument*/NULL);
+		WWWForm_t3999572776 * L_10 = V_0;
+		String_t* L_11 = ((RemoteAPIConstants_t3220785115_StaticFields*)RemoteAPIConstants_t3220785115_il2cpp_TypeInfo_var->static_fields)->get_PLAYER_ADD_TOKENS_4();
+		int32_t L_12 = LocalPlayerModel_get_tokens_m3923705431(__this, /*hidden argument*/NULL);
+		NullCheck(L_10);
+		WWWForm_AddField_m355604532(L_10, L_11, L_12, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_13 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_13);
+		PostURL_t1273431183 * L_14 = L_13->get_postMethod_10();
+		WWWForm_t3999572776 * L_15 = V_0;
+		NullCheck(L_14);
+		PostURL_StartRequest_m3272825833(L_14, L_15, (Action_2_t3735278643 *)NULL, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -9495,7 +9734,7 @@ extern "C"  void MainScreen_OnInGameEvent_m349397207 (MainScreen_t2442698661 * _
 		}
 	}
 	{
-		Dictionary_2_t190145395 * L_3 = ((MainScreen_t2442698661_StaticFields*)MainScreen_t2442698661_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map7_7();
+		Dictionary_2_t190145395 * L_3 = ((MainScreen_t2442698661_StaticFields*)MainScreen_t2442698661_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map9_7();
 		if (L_3)
 		{
 			goto IL_0030;
@@ -9509,12 +9748,12 @@ extern "C"  void MainScreen_OnInGameEvent_m349397207 (MainScreen_t2442698661 * _
 		NullCheck(L_5);
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral1071304885, 0);
 		Dictionary_2_t190145395 * L_6 = V_1;
-		((MainScreen_t2442698661_StaticFields*)MainScreen_t2442698661_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map7_7(L_6);
+		((MainScreen_t2442698661_StaticFields*)MainScreen_t2442698661_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map9_7(L_6);
 	}
 
 IL_0030:
 	{
-		Dictionary_2_t190145395 * L_7 = ((MainScreen_t2442698661_StaticFields*)MainScreen_t2442698661_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map7_7();
+		Dictionary_2_t190145395 * L_7 = ((MainScreen_t2442698661_StaticFields*)MainScreen_t2442698661_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map9_7();
 		String_t* L_8 = V_0;
 		NullCheck(L_7);
 		bool L_9 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_2));
@@ -10371,7 +10610,7 @@ extern "C"  void MultiplayerMainGame_OnInGameEvent_m361302279 (MultiplayerMainGa
 		}
 	}
 	{
-		Dictionary_2_t190145395 * L_7 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map8_9();
+		Dictionary_2_t190145395 * L_7 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapA_9();
 		if (L_7)
 		{
 			goto IL_009f;
@@ -10403,12 +10642,12 @@ extern "C"  void MultiplayerMainGame_OnInGameEvent_m361302279 (MultiplayerMainGa
 		NullCheck(L_15);
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_15, _stringLiteral3347881683, 6);
 		Dictionary_2_t190145395 * L_16 = V_5;
-		((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map8_9(L_16);
+		((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24mapA_9(L_16);
 	}
 
 IL_009f:
 	{
-		Dictionary_2_t190145395 * L_17 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map8_9();
+		Dictionary_2_t190145395 * L_17 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapA_9();
 		String_t* L_18 = V_4;
 		NullCheck(L_17);
 		bool L_19 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_17, L_18, (&V_6));
@@ -12533,7 +12772,7 @@ extern "C"  void MultiplayerMainGame_OnGameEvent_m442202237 (MultiplayerMainGame
 		}
 	}
 	{
-		Dictionary_2_t190145395 * L_7 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map9_10();
+		Dictionary_2_t190145395 * L_7 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapB_10();
 		if (L_7)
 		{
 			goto IL_0058;
@@ -12550,12 +12789,12 @@ extern "C"  void MultiplayerMainGame_OnGameEvent_m442202237 (MultiplayerMainGame
 		NullCheck(L_10);
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_10, _stringLiteral1425070062, 1);
 		Dictionary_2_t190145395 * L_11 = V_1;
-		((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map9_10(L_11);
+		((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24mapB_10(L_11);
 	}
 
 IL_0058:
 	{
-		Dictionary_2_t190145395 * L_12 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map9_10();
+		Dictionary_2_t190145395 * L_12 = ((MultiplayerMainGame_t4046083237_StaticFields*)MultiplayerMainGame_t4046083237_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapB_10();
 		String_t* L_13 = V_0;
 		NullCheck(L_12);
 		bool L_14 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_12, L_13, (&V_2));
@@ -15481,7 +15720,7 @@ extern "C"  void Networking_OnGameEvent_m3990535868 (Networking_t1515242260 * __
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
-		Dictionary_2_t190145395 * L_3 = ((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map6_14();
+		Dictionary_2_t190145395 * L_3 = ((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map8_14();
 		if (L_3)
 		{
 			goto IL_0030;
@@ -15496,13 +15735,13 @@ extern "C"  void Networking_OnGameEvent_m3990535868 (Networking_t1515242260 * __
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral1064297116, 0);
 		Dictionary_2_t190145395 * L_6 = V_1;
 		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
-		((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map6_14(L_6);
+		((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map8_14(L_6);
 	}
 
 IL_0030:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
-		Dictionary_2_t190145395 * L_7 = ((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map6_14();
+		Dictionary_2_t190145395 * L_7 = ((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map8_14();
 		String_t* L_8 = V_0;
 		NullCheck(L_7);
 		bool L_9 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_2));

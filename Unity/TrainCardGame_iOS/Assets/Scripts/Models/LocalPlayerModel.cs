@@ -45,10 +45,19 @@ public class LocalPlayerModel
 
     private void OnGameEvent(GameEvent gameEvent)
     {
-        if (gameEvent.type == GameEvent.UPDATE_PLAYER_MODEL)
+        switch (gameEvent.type)
         {
-            UpdateModel(gameEvent.vo as LocalPlayerModelVO);
+            case GameEvent.UPDATE_PLAYER_MODEL:
+                UpdateModel(gameEvent.vo as LocalPlayerModelVO);
+                break;
+
+            case GameEvent.ADD_TOKENS:
+                tokens += gameEvent.val;
+                PostTokens();
+                break;
         }
+
+        EventManager.instance.Raise(new GameEvent(GameEvent.PLAYER_MODEL_UPDATED));
     }
 
     private void UpdateModel(LocalPlayerModelVO vo)
@@ -62,5 +71,16 @@ public class LocalPlayerModel
         _model.localPlayerId = vo.localPlayerId;
         _model.localPlayerName = vo.localPlayerName;
         _model.localPlayerUID = vo.uid;
+    }
+
+    private void PostTokens()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField(RemoteAPIConstants.API, RemoteAPIConstants.ADD_TOKENS);
+        form.AddField(RemoteAPIConstants.PLAYER_UID, localPlayerUID);
+        form.AddField(RemoteAPIConstants.PLAYER_NAME, localPlayerName);
+        form.AddField(RemoteAPIConstants.PLAYER_ADD_TOKENS, tokens);
+
+        SingletonManager.reference.postMethod.StartRequest(form);
     }
 }

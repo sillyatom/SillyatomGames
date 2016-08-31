@@ -10930,6 +10930,7 @@ extern "C" void WWW_ParseHTTPHeaderString_m3695887721 ();
 extern "C" void WWWForm__ctor_m1417930174 ();
 extern "C" void WWWForm_AddField_m2890504319 ();
 extern "C" void WWWForm_AddField_m3426667506 ();
+extern "C" void WWWForm_AddField_m355604532 ();
 extern "C" void WWWForm_get_headers_m370408569 ();
 extern "C" void WWWForm_get_data_m2893811951 ();
 extern "C" void WWWTranscoder__cctor_m1486747496 ();
@@ -13864,6 +13865,7 @@ extern "C" void GameCenterAuthVO__ctor_m3296291667 ();
 extern "C" void GameConstants__ctor_m2970825902 ();
 extern "C" void GameConstants__cctor_m1419193535 ();
 extern "C" void GameEvent__ctor_m1494597407 ();
+extern "C" void GameEvent__ctor_m2474059800 ();
 extern "C" void GameEvent__ctor_m4138108187 ();
 extern "C" void GameEvent__ctor_m685722812 ();
 extern "C" void GameEvent__ctor_m3237779601 ();
@@ -13877,6 +13879,8 @@ extern "C" void GameEvent_get_postResponse_m4192395656 ();
 extern "C" void GameEvent_set_postResponse_m1756462883 ();
 extern "C" void GameEvent_get_vo_m236630254 ();
 extern "C" void GameEvent_set_vo_m1200897213 ();
+extern "C" void GameEvent_get_val_m2575248839 ();
+extern "C" void GameEvent_set_val_m1408206998 ();
 extern "C" void GameFailDialog__ctor_m2736610275 ();
 extern "C" void GameFailDialog_InitWithData_m3581889157 ();
 extern "C" void GameFailDialog_OnRemove_m3499021188 ();
@@ -13886,6 +13890,7 @@ extern "C" void GameScreenMonoBehaviour_OnGameEvent_m2365278580 ();
 extern "C" void GameSelectionScreen__ctor_m2186336133 ();
 extern "C" void GameSelectionScreen__cctor_m2869814472 ();
 extern "C" void GameSelectionScreen_GetSweepCount_m2322534634 ();
+extern "C" void GameSelectionScreen_GetEntryFees_m821613210 ();
 extern "C" void GameSelectionScreen_Init_m2238820911 ();
 extern "C" void GameSelectionScreen_OnGameEvent_m2265499518 ();
 extern "C" void GameSelectionScreen_OnInGameEvent_m3171217288 ();
@@ -13932,7 +13937,6 @@ extern "C" void HostSelectedVO_set_sender_m3136369547 ();
 extern "C" void HUD__ctor_m2039008372 ();
 extern "C" void HUD_Init_m3758089056 ();
 extern "C" void HUD_OnGameEvent_m4187518639 ();
-extern "C" void HUD_UpdateModel_m758038332 ();
 extern "C" void InGameEvent__ctor_m2728077114 ();
 extern "C" void InGameEvent__ctor_m2522809309 ();
 extern "C" void InGameEvent__ctor_m1354375670 ();
@@ -13993,6 +13997,7 @@ extern "C" void LocalPlayerModel_GetInstance_m4081594375 ();
 extern "C" void LocalPlayerModel_OnGameEvent_m2766611237 ();
 extern "C" void LocalPlayerModel_UpdateModel_m1266399110 ();
 extern "C" void LocalPlayerModel_UpdatePlayerDetails_m1789618285 ();
+extern "C" void LocalPlayerModel_PostTokens_m2062522080 ();
 extern "C" void LocalPlayerModelVO__ctor_m2494425441 ();
 extern "C" void LocalPlayerModelVO_get_tokens_m3158577296 ();
 extern "C" void LocalPlayerModelVO_set_tokens_m1088248647 ();
@@ -16270,6 +16275,7 @@ extern "C" void TestScript__ctor_m3323773214 ();
 extern "C" void TestScript_Awake_m3561378433 ();
 extern "C" void TestScript_TestPostURL_m1641278073 ();
 extern "C" void TestScript_OnDataReceived_m2185337923 ();
+extern "C" void TestScript_OnUpdateTokens_m259759707 ();
 extern "C" void TextTest__ctor_m3594205692 ();
 extern "C" void TextTest_Start_m2541343484 ();
 extern "C" void TextTest_Update_m1478088849 ();
@@ -16295,7 +16301,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16284] = 
+extern const methodPointerType g_MethodPointers[16290] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -27216,6 +27222,7 @@ extern const methodPointerType g_MethodPointers[16284] =
 	WWWForm__ctor_m1417930174,
 	WWWForm_AddField_m2890504319,
 	WWWForm_AddField_m3426667506,
+	WWWForm_AddField_m355604532,
 	WWWForm_get_headers_m370408569,
 	WWWForm_get_data_m2893811951,
 	WWWTranscoder__cctor_m1486747496,
@@ -30150,6 +30157,7 @@ extern const methodPointerType g_MethodPointers[16284] =
 	GameConstants__ctor_m2970825902,
 	GameConstants__cctor_m1419193535,
 	GameEvent__ctor_m1494597407,
+	GameEvent__ctor_m2474059800,
 	GameEvent__ctor_m4138108187,
 	GameEvent__ctor_m685722812,
 	GameEvent__ctor_m3237779601,
@@ -30163,6 +30171,8 @@ extern const methodPointerType g_MethodPointers[16284] =
 	GameEvent_set_postResponse_m1756462883,
 	GameEvent_get_vo_m236630254,
 	GameEvent_set_vo_m1200897213,
+	GameEvent_get_val_m2575248839,
+	GameEvent_set_val_m1408206998,
 	GameFailDialog__ctor_m2736610275,
 	GameFailDialog_InitWithData_m3581889157,
 	GameFailDialog_OnRemove_m3499021188,
@@ -30172,6 +30182,7 @@ extern const methodPointerType g_MethodPointers[16284] =
 	GameSelectionScreen__ctor_m2186336133,
 	GameSelectionScreen__cctor_m2869814472,
 	GameSelectionScreen_GetSweepCount_m2322534634,
+	GameSelectionScreen_GetEntryFees_m821613210,
 	GameSelectionScreen_Init_m2238820911,
 	GameSelectionScreen_OnGameEvent_m2265499518,
 	GameSelectionScreen_OnInGameEvent_m3171217288,
@@ -30218,7 +30229,6 @@ extern const methodPointerType g_MethodPointers[16284] =
 	HUD__ctor_m2039008372,
 	HUD_Init_m3758089056,
 	HUD_OnGameEvent_m4187518639,
-	HUD_UpdateModel_m758038332,
 	InGameEvent__ctor_m2728077114,
 	InGameEvent__ctor_m2522809309,
 	InGameEvent__ctor_m1354375670,
@@ -30279,6 +30289,7 @@ extern const methodPointerType g_MethodPointers[16284] =
 	LocalPlayerModel_OnGameEvent_m2766611237,
 	LocalPlayerModel_UpdateModel_m1266399110,
 	LocalPlayerModel_UpdatePlayerDetails_m1789618285,
+	LocalPlayerModel_PostTokens_m2062522080,
 	LocalPlayerModelVO__ctor_m2494425441,
 	LocalPlayerModelVO_get_tokens_m3158577296,
 	LocalPlayerModelVO_set_tokens_m1088248647,
@@ -32556,6 +32567,7 @@ extern const methodPointerType g_MethodPointers[16284] =
 	TestScript_Awake_m3561378433,
 	TestScript_TestPostURL_m1641278073,
 	TestScript_OnDataReceived_m2185337923,
+	TestScript_OnUpdateTokens_m259759707,
 	TextTest__ctor_m3594205692,
 	TextTest_Start_m2541343484,
 	TextTest_Update_m1478088849,

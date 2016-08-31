@@ -43,8 +43,6 @@ public:
 	Button_t990034267 * ___previous_6;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> GameSelectionScreen::_train
 	List_1_t514686775 * ____train_7;
-	// System.Collections.Generic.List`1<System.Int32> GameSelectionScreen::entryFees
-	List_1_t3644373756 * ___entryFees_8;
 	// UnityEngine.RectTransform GameSelectionScreen::mask
 	RectTransform_t3317474837 * ___mask_11;
 	// UnityEngine.GameObject GameSelectionScreen::info
@@ -89,15 +87,6 @@ public:
 		Il2CppCodeGenWriteBarrier(&____train_7, value);
 	}
 
-	inline static int32_t get_offset_of_entryFees_8() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___entryFees_8)); }
-	inline List_1_t3644373756 * get_entryFees_8() const { return ___entryFees_8; }
-	inline List_1_t3644373756 ** get_address_of_entryFees_8() { return &___entryFees_8; }
-	inline void set_entryFees_8(List_1_t3644373756 * value)
-	{
-		___entryFees_8 = value;
-		Il2CppCodeGenWriteBarrier(&___entryFees_8, value);
-	}
-
 	inline static int32_t get_offset_of_mask_11() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___mask_11)); }
 	inline RectTransform_t3317474837 * get_mask_11() const { return ___mask_11; }
 	inline RectTransform_t3317474837 ** get_address_of_mask_11() { return &___mask_11; }
@@ -129,12 +118,23 @@ public:
 struct GameSelectionScreen_t839734950_StaticFields
 {
 public:
+	// System.Collections.Generic.List`1<System.Int32> GameSelectionScreen::entryFees
+	List_1_t3644373756 * ___entryFees_8;
 	// System.Int32 GameSelectionScreen::selectedIndex
 	int32_t ___selectedIndex_9;
 	// System.Collections.Generic.List`1<System.Int32> GameSelectionScreen::matchTypes
 	List_1_t3644373756 * ___matchTypes_10;
 
 public:
+	inline static int32_t get_offset_of_entryFees_8() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950_StaticFields, ___entryFees_8)); }
+	inline List_1_t3644373756 * get_entryFees_8() const { return ___entryFees_8; }
+	inline List_1_t3644373756 ** get_address_of_entryFees_8() { return &___entryFees_8; }
+	inline void set_entryFees_8(List_1_t3644373756 * value)
+	{
+		___entryFees_8 = value;
+		Il2CppCodeGenWriteBarrier(&___entryFees_8, value);
+	}
+
 	inline static int32_t get_offset_of_selectedIndex_9() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950_StaticFields, ___selectedIndex_9)); }
 	inline int32_t get_selectedIndex_9() const { return ___selectedIndex_9; }
 	inline int32_t* get_address_of_selectedIndex_9() { return &___selectedIndex_9; }

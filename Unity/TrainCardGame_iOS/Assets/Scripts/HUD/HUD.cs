@@ -17,15 +17,12 @@ public class HUD : ExtMonoBehaviour
     {
         base.OnGameEvent(gEvent);
 
-        if (gEvent.type == GameEvent.UPDATE_PLAYER_MODEL)
+        switch (gEvent.type)
         {
-            UpdateModel(gEvent.vo as LocalPlayerModelVO);
+            case GameEvent.PLAYER_MODEL_UPDATED:
+                tokenText.text = LocalPlayerModel.GetInstance().tokens.ToString();
+                xpText.text = LocalPlayerModel.GetInstance().xp.ToString();
+                break;
         }
-    }
-
-    private void UpdateModel(LocalPlayerModelVO vo)
-    {
-        tokenText.text = vo.tokens.ToString();
-        xpText.text = vo.xp.ToString();
     }
 }

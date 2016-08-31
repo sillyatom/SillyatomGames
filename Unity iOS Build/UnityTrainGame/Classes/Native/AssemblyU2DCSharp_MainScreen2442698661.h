@@ -67,17 +67,17 @@ public:
 struct MainScreen_t2442698661_StaticFields
 {
 public:
-	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> MainScreen::<>f__switch$map7
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map7_7;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> MainScreen::<>f__switch$map9
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map9_7;
 
 public:
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map7_7() { return static_cast<int32_t>(offsetof(MainScreen_t2442698661_StaticFields, ___U3CU3Ef__switchU24map7_7)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map7_7() const { return ___U3CU3Ef__switchU24map7_7; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map7_7() { return &___U3CU3Ef__switchU24map7_7; }
-	inline void set_U3CU3Ef__switchU24map7_7(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map9_7() { return static_cast<int32_t>(offsetof(MainScreen_t2442698661_StaticFields, ___U3CU3Ef__switchU24map9_7)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map9_7() const { return ___U3CU3Ef__switchU24map9_7; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map9_7() { return &___U3CU3Ef__switchU24map9_7; }
+	inline void set_U3CU3Ef__switchU24map9_7(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map7_7 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map7_7, value);
+		___U3CU3Ef__switchU24map9_7 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map9_7, value);
 	}
 };
 

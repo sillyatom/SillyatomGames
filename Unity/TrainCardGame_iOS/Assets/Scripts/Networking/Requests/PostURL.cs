@@ -27,8 +27,10 @@ public class PostURL : MonoBehaviour
         }
         else
         {
-            callback(false, www.error);
+            if (callback != null)
+            {
+                callback(false, www.error);
+            }
         }    
     }
-
 }

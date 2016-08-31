@@ -122,8 +122,8 @@ public:
 	String_t* ___hostId_11;
 	// System.String Networking::localId
 	String_t* ___localId_12;
-	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> Networking::<>f__switch$map6
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map6_14;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> Networking::<>f__switch$map8
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map8_14;
 
 public:
 	inline static int32_t get_offset_of_IsHost_9() { return static_cast<int32_t>(offsetof(Networking_t1515242260_StaticFields, ___IsHost_9)); }
@@ -160,13 +160,13 @@ public:
 		Il2CppCodeGenWriteBarrier(&___localId_12, value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map6_14() { return static_cast<int32_t>(offsetof(Networking_t1515242260_StaticFields, ___U3CU3Ef__switchU24map6_14)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map6_14() const { return ___U3CU3Ef__switchU24map6_14; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map6_14() { return &___U3CU3Ef__switchU24map6_14; }
-	inline void set_U3CU3Ef__switchU24map6_14(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map8_14() { return static_cast<int32_t>(offsetof(Networking_t1515242260_StaticFields, ___U3CU3Ef__switchU24map8_14)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map8_14() const { return ___U3CU3Ef__switchU24map8_14; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map8_14() { return &___U3CU3Ef__switchU24map8_14; }
+	inline void set_U3CU3Ef__switchU24map8_14(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map6_14 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map6_14, value);
+		___U3CU3Ef__switchU24map8_14 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map8_14, value);
 	}
 };
 

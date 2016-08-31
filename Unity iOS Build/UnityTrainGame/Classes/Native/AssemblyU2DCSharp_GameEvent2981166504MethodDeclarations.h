@@ -33,6 +33,8 @@ struct Il2CppObject;
 
 // System.Void GameEvent::.ctor(System.String)
 extern "C"  void GameEvent__ctor_m1494597407 (GameEvent_t2981166504 * __this, String_t* ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameEvent::.ctor(System.String,System.Int32)
+extern "C"  void GameEvent__ctor_m2474059800 (GameEvent_t2981166504 * __this, String_t* ___type, int32_t ___val, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameEvent::.ctor(System.String,System.String)
 extern "C"  void GameEvent__ctor_m4138108187 (GameEvent_t2981166504 * __this, String_t* ___type, String_t* ___postResponse, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameEvent::.ctor(System.String,NetworkResponse)
@@ -59,3 +61,7 @@ extern "C"  void GameEvent_set_postResponse_m1756462883 (GameEvent_t2981166504 *
 extern "C"  Il2CppObject * GameEvent_get_vo_m236630254 (GameEvent_t2981166504 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameEvent::set_vo(System.Object)
 extern "C"  void GameEvent_set_vo_m1200897213 (GameEvent_t2981166504 * __this, Il2CppObject * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 GameEvent::get_val()
+extern "C"  int32_t GameEvent_get_val_m2575248839 (GameEvent_t2981166504 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameEvent::set_val(System.Int32)
+extern "C"  void GameEvent_set_val_m1408206998 (GameEvent_t2981166504 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -9,9 +9,9 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     public Button previous;
 
     public List<GameObject> _train = new List<GameObject>();
-    public List<int> entryFees = new List<int>();
-    public static int selectedIndex = 0;
-    public static List<int> matchTypes = new List<int>(){ 0, 3, 5, 10 };
+    private static List<int> entryFees = new List<int>(){ 0, 100, 150, 300 };
+    private static int selectedIndex = 0;
+    private static List<int> matchTypes = new List<int>(){ 0, 3, 5, 10 };
     public RectTransform mask;
     public GameObject info;
     public Text entryText;
@@ -19,6 +19,11 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     public static int GetSweepCount()
     {
         return matchTypes[selectedIndex];
+    }
+
+    public static int GetEntryFees()
+    {
+        return entryFees[selectedIndex];
     }
 
     public override void Init()

@@ -61,3 +61,5 @@ extern "C"  void LocalPlayerModel_OnGameEvent_m2766611237 (LocalPlayerModel_t175
 extern "C"  void LocalPlayerModel_UpdateModel_m1266399110 (LocalPlayerModel_t1751900285 * __this, LocalPlayerModelVO_t4243963894 * ___vo, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void LocalPlayerModel::UpdatePlayerDetails(GCStatusVO)
 extern "C"  void LocalPlayerModel_UpdatePlayerDetails_m1789618285 (LocalPlayerModel_t1751900285 * __this, GCStatusVO_t3770382119 * ___vo, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void LocalPlayerModel::PostTokens()
+extern "C"  void LocalPlayerModel_PostTokens_m2062522080 (LocalPlayerModel_t1751900285 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -14,7 +14,11 @@ public class GameEvent
     public const string ROUND_RESULT = "round_result";
     public const string START_ROUND = "start_round";
 
+    //To Update HUD
+    public const string PLAYER_MODEL_UPDATED = "__playerModelUpdated__";
+
     public const string UPDATE_PLAYER_MODEL = "playerModelUpdate";
+    public const string ADD_TOKENS = "detectTokens";
 
     public string type{ get; set; }
 
@@ -26,9 +30,17 @@ public class GameEvent
 
     public System.Object vo{ get; set; }
 
+    public int val{ get; set; }
+
     public GameEvent(string type)
     {
         this.type = type;
+    }
+
+    public GameEvent(string type, int val)
+    {
+        this.type = type;
+        this.val = val;
     }
 
     public GameEvent(string type, string postResponse)

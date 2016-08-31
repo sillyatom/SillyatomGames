@@ -36,14 +36,16 @@ public:
 	String_t* ___API_0;
 	// System.String RemoteAPIConstants::INIT_CALL
 	String_t* ___INIT_CALL_1;
+	// System.String RemoteAPIConstants::ADD_TOKENS
+	String_t* ___ADD_TOKENS_2;
 	// System.String RemoteAPIConstants::PLAYER_UID
-	String_t* ___PLAYER_UID_2;
-	// System.String RemoteAPIConstants::PLAYER_TOKENS
-	String_t* ___PLAYER_TOKENS_3;
+	String_t* ___PLAYER_UID_3;
+	// System.String RemoteAPIConstants::PLAYER_ADD_TOKENS
+	String_t* ___PLAYER_ADD_TOKENS_4;
 	// System.String RemoteAPIConstants::PLAYER_XP
-	String_t* ___PLAYER_XP_4;
+	String_t* ___PLAYER_XP_5;
 	// System.String RemoteAPIConstants::PLAYER_NAME
-	String_t* ___PLAYER_NAME_5;
+	String_t* ___PLAYER_NAME_6;
 
 public:
 	inline static int32_t get_offset_of_API_0() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___API_0)); }
@@ -64,40 +66,49 @@ public:
 		Il2CppCodeGenWriteBarrier(&___INIT_CALL_1, value);
 	}
 
-	inline static int32_t get_offset_of_PLAYER_UID_2() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_UID_2)); }
-	inline String_t* get_PLAYER_UID_2() const { return ___PLAYER_UID_2; }
-	inline String_t** get_address_of_PLAYER_UID_2() { return &___PLAYER_UID_2; }
-	inline void set_PLAYER_UID_2(String_t* value)
+	inline static int32_t get_offset_of_ADD_TOKENS_2() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___ADD_TOKENS_2)); }
+	inline String_t* get_ADD_TOKENS_2() const { return ___ADD_TOKENS_2; }
+	inline String_t** get_address_of_ADD_TOKENS_2() { return &___ADD_TOKENS_2; }
+	inline void set_ADD_TOKENS_2(String_t* value)
 	{
-		___PLAYER_UID_2 = value;
-		Il2CppCodeGenWriteBarrier(&___PLAYER_UID_2, value);
+		___ADD_TOKENS_2 = value;
+		Il2CppCodeGenWriteBarrier(&___ADD_TOKENS_2, value);
 	}
 
-	inline static int32_t get_offset_of_PLAYER_TOKENS_3() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_TOKENS_3)); }
-	inline String_t* get_PLAYER_TOKENS_3() const { return ___PLAYER_TOKENS_3; }
-	inline String_t** get_address_of_PLAYER_TOKENS_3() { return &___PLAYER_TOKENS_3; }
-	inline void set_PLAYER_TOKENS_3(String_t* value)
+	inline static int32_t get_offset_of_PLAYER_UID_3() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_UID_3)); }
+	inline String_t* get_PLAYER_UID_3() const { return ___PLAYER_UID_3; }
+	inline String_t** get_address_of_PLAYER_UID_3() { return &___PLAYER_UID_3; }
+	inline void set_PLAYER_UID_3(String_t* value)
 	{
-		___PLAYER_TOKENS_3 = value;
-		Il2CppCodeGenWriteBarrier(&___PLAYER_TOKENS_3, value);
+		___PLAYER_UID_3 = value;
+		Il2CppCodeGenWriteBarrier(&___PLAYER_UID_3, value);
 	}
 
-	inline static int32_t get_offset_of_PLAYER_XP_4() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_XP_4)); }
-	inline String_t* get_PLAYER_XP_4() const { return ___PLAYER_XP_4; }
-	inline String_t** get_address_of_PLAYER_XP_4() { return &___PLAYER_XP_4; }
-	inline void set_PLAYER_XP_4(String_t* value)
+	inline static int32_t get_offset_of_PLAYER_ADD_TOKENS_4() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_ADD_TOKENS_4)); }
+	inline String_t* get_PLAYER_ADD_TOKENS_4() const { return ___PLAYER_ADD_TOKENS_4; }
+	inline String_t** get_address_of_PLAYER_ADD_TOKENS_4() { return &___PLAYER_ADD_TOKENS_4; }
+	inline void set_PLAYER_ADD_TOKENS_4(String_t* value)
 	{
-		___PLAYER_XP_4 = value;
-		Il2CppCodeGenWriteBarrier(&___PLAYER_XP_4, value);
+		___PLAYER_ADD_TOKENS_4 = value;
+		Il2CppCodeGenWriteBarrier(&___PLAYER_ADD_TOKENS_4, value);
 	}
 
-	inline static int32_t get_offset_of_PLAYER_NAME_5() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_NAME_5)); }
-	inline String_t* get_PLAYER_NAME_5() const { return ___PLAYER_NAME_5; }
-	inline String_t** get_address_of_PLAYER_NAME_5() { return &___PLAYER_NAME_5; }
-	inline void set_PLAYER_NAME_5(String_t* value)
+	inline static int32_t get_offset_of_PLAYER_XP_5() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_XP_5)); }
+	inline String_t* get_PLAYER_XP_5() const { return ___PLAYER_XP_5; }
+	inline String_t** get_address_of_PLAYER_XP_5() { return &___PLAYER_XP_5; }
+	inline void set_PLAYER_XP_5(String_t* value)
 	{
-		___PLAYER_NAME_5 = value;
-		Il2CppCodeGenWriteBarrier(&___PLAYER_NAME_5, value);
+		___PLAYER_XP_5 = value;
+		Il2CppCodeGenWriteBarrier(&___PLAYER_XP_5, value);
+	}
+
+	inline static int32_t get_offset_of_PLAYER_NAME_6() { return static_cast<int32_t>(offsetof(RemoteAPIConstants_t3220785115_StaticFields, ___PLAYER_NAME_6)); }
+	inline String_t* get_PLAYER_NAME_6() const { return ___PLAYER_NAME_6; }
+	inline String_t** get_address_of_PLAYER_NAME_6() { return &___PLAYER_NAME_6; }
+	inline void set_PLAYER_NAME_6(String_t* value)
+	{
+		___PLAYER_NAME_6 = value;
+		Il2CppCodeGenWriteBarrier(&___PLAYER_NAME_6, value);
 	}
 };
 

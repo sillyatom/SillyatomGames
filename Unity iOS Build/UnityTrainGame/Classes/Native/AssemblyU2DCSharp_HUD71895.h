@@ -12,6 +12,8 @@
 
 // UnityEngine.UI.Text
 struct Text_t3286458198;
+// System.Collections.Generic.Dictionary`2<System.String,System.Int32>
+struct Dictionary_2_t190145395;
 
 #include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
 
@@ -47,6 +49,23 @@ public:
 	{
 		___xpText_4 = value;
 		Il2CppCodeGenWriteBarrier(&___xpText_4, value);
+	}
+};
+
+struct HUD_t71895_StaticFields
+{
+public:
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> HUD::<>f__switch$map4
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map4_5;
+
+public:
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map4_5() { return static_cast<int32_t>(offsetof(HUD_t71895_StaticFields, ___U3CU3Ef__switchU24map4_5)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map4_5() const { return ___U3CU3Ef__switchU24map4_5; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map4_5() { return &___U3CU3Ef__switchU24map4_5; }
+	inline void set_U3CU3Ef__switchU24map4_5(Dictionary_2_t190145395 * value)
+	{
+		___U3CU3Ef__switchU24map4_5 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map4_5, value);
 	}
 };
 

@@ -49,11 +49,23 @@ public class TestScript : MonoBehaviour
     {
         if (success)
         {
-            RemoteInitVO vo = JsonConvert.DeserializeObject<RemoteInitVO>(result);
+            Debug.LogError("Result " + result);
+            WWWForm form = new WWWForm();
+            form.AddField(RemoteAPIConstants.API, RemoteAPIConstants.ADD_TOKENS);
+            form.AddField(RemoteAPIConstants.PLAYER_UID, "1234");
+            form.AddField(RemoteAPIConstants.PLAYER_NAME, "test");
+            form.AddField(RemoteAPIConstants.PLAYER_ADD_TOKENS, -1000);
+
+            transform.GetComponent<PostURL>().StartRequest(form, OnUpdateTokens);
         }
         else
         {
             Debug.LogError("Init Call Failed");
         }
+    }
+
+    private void OnUpdateTokens(bool success, string result)
+    {
+        Debug.LogError("result " + result);
     }
 }

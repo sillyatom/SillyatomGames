@@ -28,3 +28,5 @@ extern "C"  void TestScript_Awake_m3561378433 (TestScript_t3705514013 * __this, 
 extern "C"  void TestScript_TestPostURL_m1641278073 (TestScript_t3705514013 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void TestScript::OnDataReceived(System.Boolean,System.String)
 extern "C"  void TestScript_OnDataReceived_m2185337923 (TestScript_t3705514013 * __this, bool ___success, String_t* ___result, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void TestScript::OnUpdateTokens(System.Boolean,System.String)
+extern "C"  void TestScript_OnUpdateTokens_m259759707 (TestScript_t3705514013 * __this, bool ___success, String_t* ___result, const MethodInfo* method) IL2CPP_METHOD_ATTR;
