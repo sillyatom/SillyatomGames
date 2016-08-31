@@ -92,10 +92,6 @@ public class Player : ExtMonoBehaviour
     {
         get
         {
-            if (Cards.Count != cardsHolder.transform.childCount)
-            {
-                Debug.LogError("[ Bug Sucks ] " + Cards.Count + " " + cardsHolder.transform.childCount);
-            }
             return Cards.Count;
         }
     }

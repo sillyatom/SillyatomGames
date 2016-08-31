@@ -214,9 +214,6 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
             //update vo.winningCards
             List<string> rewardingPlayers = new List<string>();
             int indexOf = network.PlayersIds.IndexOf(_roundHandler.GetActivePlayerId);
-            Debug.LogError(" active Playerid " + _roundHandler.GetActivePlayerId);
-            Debug.LogError(" network.PlayersIds " + network.PlayersIds.Count);
-            Debug.LogError(" IndexOf " + indexOf);
             for (int i = indexOf + 1; i < network.PlayersIds.Count; i++)
             {
                 rewardingPlayers.Add(network.PlayersIds[i]);
@@ -225,12 +222,10 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
             {
                 rewardingPlayers.Add(network.PlayersIds[i]);
             }
-            Debug.LogError(" rewardingPlayers Count " + rewardingPlayers.Count);
 
             foreach (var playerId in rewardingPlayers)
             {
                 vo.winningCards[playerId] = new List<string>();
-                Debug.LogError(" winningCards playerId " + playerId);
             }
 
             int len = rewardingPlayers.Count;
