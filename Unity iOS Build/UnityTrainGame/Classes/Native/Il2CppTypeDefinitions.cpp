@@ -4604,6 +4604,7 @@ Il2CppGenericClass List_1_t3644373756_GenericClass = { 175, { &GenInst_Int32_t28
 extern const Il2CppType List_1_t3644373756_0_0_0 = { &List_1_t3644373756_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 extern const Il2CppType List_1_t3644373756_0_0_1 = { &List_1_t3644373756_GenericClass, 1, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 extern const Il2CppType List_1_t3644373756_0_0_6 = { &List_1_t3644373756_GenericClass, 6, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
+extern const Il2CppType List_1_t3644373756_0_0_22 = { &List_1_t3644373756_GenericClass, 22, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
 Il2CppGenericClass Enumerator_t1730156748_GenericClass = { 176, { &GenInst_Int32_t2847414787_0_0_0, NULL }, NULL };
 extern const Il2CppType Enumerator_t1730156748_0_0_0 = { &Enumerator_t1730156748_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
@@ -22217,7 +22218,7 @@ extern const Il2CppType ITrackingHandlerU5BU5D_t4057050947_0_0_0 = { (void*)&ITr
 
 extern const Il2CppType XmlNode_t3592213601_0_0_0;
 extern const Il2CppType XmlNodeU5BU5D_t1808339196_0_0_0 = { (void*)&XmlNode_t3592213601_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const Il2CppType* const  g_Il2CppTypeTable[11207] = 
+extern const Il2CppType* const  g_Il2CppTypeTable[11208] = 
 {
 	&IEnumerator_1_t2320212868_0_0_0,
 	&Il2CppObject_0_0_0,
@@ -33258,6 +33259,7 @@ extern const Il2CppType* const  g_Il2CppTypeTable[11207] =
 	&GameSelectionScreen_t839734950_0_0_0,
 	&GameSelectionScreen_t839734950_1_0_0,
 	&List_1_t3644373756_0_0_6,
+	&List_1_t3644373756_0_0_22,
 	&MainScreen_t2442698661_0_0_0,
 	&MainScreen_t2442698661_1_0_0,
 	&Networking_t1515242260_0_0_1,

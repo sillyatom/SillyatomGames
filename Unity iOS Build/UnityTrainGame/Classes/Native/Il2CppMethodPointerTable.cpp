@@ -13884,6 +13884,8 @@ extern "C" void GameObjectRef__ctor_m443681481 ();
 extern "C" void GameScreenMonoBehaviour__ctor_m1875208271 ();
 extern "C" void GameScreenMonoBehaviour_OnGameEvent_m2365278580 ();
 extern "C" void GameSelectionScreen__ctor_m2186336133 ();
+extern "C" void GameSelectionScreen__cctor_m2869814472 ();
+extern "C" void GameSelectionScreen_GetSweepCount_m2322534634 ();
 extern "C" void GameSelectionScreen_Init_m2238820911 ();
 extern "C" void GameSelectionScreen_OnGameEvent_m2265499518 ();
 extern "C" void GameSelectionScreen_OnInGameEvent_m3171217288 ();
@@ -14011,7 +14013,7 @@ extern "C" void U3CStartSignInProcessU3Ec__IteratorC_MoveNext_m2508971228 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC_Dispose_m3333922389 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC_Reset_m4201956037 ();
 extern "C" void MatchSelectionScreen__ctor_m2494922568 ();
-extern "C" void MatchSelectionScreen_findMatches_m3088121079 ();
+extern "C" void MatchSelectionScreen_findMatches_m277424448 ();
 extern "C" void MatchSelectionScreen_Init_m2110227980 ();
 extern "C" void MatchSelectionScreen_CreateMultiplayerGame_m3784813110 ();
 extern "C" void MatchSelectionScreen_OnClick_m288207406 ();
@@ -16293,7 +16295,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16282] = 
+extern const methodPointerType g_MethodPointers[16284] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -30168,6 +30170,8 @@ extern const methodPointerType g_MethodPointers[16282] =
 	GameScreenMonoBehaviour__ctor_m1875208271,
 	GameScreenMonoBehaviour_OnGameEvent_m2365278580,
 	GameSelectionScreen__ctor_m2186336133,
+	GameSelectionScreen__cctor_m2869814472,
+	GameSelectionScreen_GetSweepCount_m2322534634,
 	GameSelectionScreen_Init_m2238820911,
 	GameSelectionScreen_OnGameEvent_m2265499518,
 	GameSelectionScreen_OnInGameEvent_m3171217288,
@@ -30295,7 +30299,7 @@ extern const methodPointerType g_MethodPointers[16282] =
 	U3CStartSignInProcessU3Ec__IteratorC_Dispose_m3333922389,
 	U3CStartSignInProcessU3Ec__IteratorC_Reset_m4201956037,
 	MatchSelectionScreen__ctor_m2494922568,
-	MatchSelectionScreen_findMatches_m3088121079,
+	MatchSelectionScreen_findMatches_m277424448,
 	MatchSelectionScreen_Init_m2110227980,
 	MatchSelectionScreen_CreateMultiplayerGame_m3784813110,
 	MatchSelectionScreen_OnClick_m288207406,

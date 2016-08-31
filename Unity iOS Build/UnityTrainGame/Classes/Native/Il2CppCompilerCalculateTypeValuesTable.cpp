@@ -2096,7 +2096,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9489] = 
+extern const int32_t g_FieldOffsetTable[9490] = 
 {
 	0,
 	0,
@@ -11532,10 +11532,11 @@ extern const int32_t g_FieldOffsetTable[9489] =
 	GameSelectionScreen_t839734950::get_offset_of_previous_6(),
 	GameSelectionScreen_t839734950::get_offset_of__train_7(),
 	GameSelectionScreen_t839734950::get_offset_of_entryFees_8(),
-	GameSelectionScreen_t839734950::get_offset_of__runningId_9(),
-	GameSelectionScreen_t839734950::get_offset_of_mask_10(),
-	GameSelectionScreen_t839734950::get_offset_of_info_11(),
-	GameSelectionScreen_t839734950::get_offset_of_entryText_12(),
+	GameSelectionScreen_t839734950_StaticFields::get_offset_of_selectedIndex_9(),
+	GameSelectionScreen_t839734950_StaticFields::get_offset_of_matchTypes_10(),
+	GameSelectionScreen_t839734950::get_offset_of_mask_11(),
+	GameSelectionScreen_t839734950::get_offset_of_info_12(),
+	GameSelectionScreen_t839734950::get_offset_of_entryText_13(),
 	MainScreen_t2442698661::get_offset_of_playBtn_4(),
 	MainScreen_t2442698661::get_offset_of_network_5(),
 	MainScreen_t2442698661::get_offset_of__signingStatus_6(),
@@ -13955,7 +13956,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2386] =
 	sizeof (GameFailDialog_t1770299320), -1, 0, 0,
 	sizeof (GameWinDialog_t176796754), -1, 0, 0,
 	sizeof (GenericPopup_t4182595893), -1, 0, 0,
-	sizeof (GameSelectionScreen_t839734950), -1, 0, 0,
+	sizeof (GameSelectionScreen_t839734950), -1, sizeof(GameSelectionScreen_t839734950_StaticFields), 0,
 	sizeof (MainScreen_t2442698661), -1, sizeof(MainScreen_t2442698661_StaticFields), 0,
 	sizeof (U3CStartSignInProcessU3Ec__IteratorC_t2572545929), -1, 0, 0,
 	sizeof (MatchSelectionScreen_t3589239987), -1, 0, 0,

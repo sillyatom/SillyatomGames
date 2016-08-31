@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 public class MatchSelectionScreen : GameScreenMonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void findMatches(bool isHost);
+    private static extern void findMatches(bool isHost, int matchType);
 
     public RectTransform gameLayout;
 
@@ -61,7 +61,7 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
             #if UNITY_EDITOR
             MoveToScene(TagConstants.TAG_MAIN_GAME);
             #else
-            findMatches(false);
+            findMatches(false, GameSelectionScreen.GetSweepCount());
             #endif
         }
         else if (btn == hostMatch)
@@ -70,7 +70,7 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
             #if UNITY_EDITOR
             MoveToScene(TagConstants.TAG_MAIN_GAME);
             #else
-            findMatches(true);
+            findMatches(true, GameSelectionScreen.GetSweepCount());
             #endif
         }
         else if (btn == inviteBtn)

@@ -45,14 +45,12 @@ public:
 	List_1_t514686775 * ____train_7;
 	// System.Collections.Generic.List`1<System.Int32> GameSelectionScreen::entryFees
 	List_1_t3644373756 * ___entryFees_8;
-	// System.Int32 GameSelectionScreen::_runningId
-	int32_t ____runningId_9;
 	// UnityEngine.RectTransform GameSelectionScreen::mask
-	RectTransform_t3317474837 * ___mask_10;
+	RectTransform_t3317474837 * ___mask_11;
 	// UnityEngine.GameObject GameSelectionScreen::info
-	GameObject_t4012695102 * ___info_11;
+	GameObject_t4012695102 * ___info_12;
 	// UnityEngine.UI.Text GameSelectionScreen::entryText
-	Text_t3286458198 * ___entryText_12;
+	Text_t3286458198 * ___entryText_13;
 
 public:
 	inline static int32_t get_offset_of_next_4() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___next_4)); }
@@ -100,39 +98,58 @@ public:
 		Il2CppCodeGenWriteBarrier(&___entryFees_8, value);
 	}
 
-	inline static int32_t get_offset_of__runningId_9() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ____runningId_9)); }
-	inline int32_t get__runningId_9() const { return ____runningId_9; }
-	inline int32_t* get_address_of__runningId_9() { return &____runningId_9; }
-	inline void set__runningId_9(int32_t value)
+	inline static int32_t get_offset_of_mask_11() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___mask_11)); }
+	inline RectTransform_t3317474837 * get_mask_11() const { return ___mask_11; }
+	inline RectTransform_t3317474837 ** get_address_of_mask_11() { return &___mask_11; }
+	inline void set_mask_11(RectTransform_t3317474837 * value)
 	{
-		____runningId_9 = value;
+		___mask_11 = value;
+		Il2CppCodeGenWriteBarrier(&___mask_11, value);
 	}
 
-	inline static int32_t get_offset_of_mask_10() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___mask_10)); }
-	inline RectTransform_t3317474837 * get_mask_10() const { return ___mask_10; }
-	inline RectTransform_t3317474837 ** get_address_of_mask_10() { return &___mask_10; }
-	inline void set_mask_10(RectTransform_t3317474837 * value)
+	inline static int32_t get_offset_of_info_12() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___info_12)); }
+	inline GameObject_t4012695102 * get_info_12() const { return ___info_12; }
+	inline GameObject_t4012695102 ** get_address_of_info_12() { return &___info_12; }
+	inline void set_info_12(GameObject_t4012695102 * value)
 	{
-		___mask_10 = value;
-		Il2CppCodeGenWriteBarrier(&___mask_10, value);
+		___info_12 = value;
+		Il2CppCodeGenWriteBarrier(&___info_12, value);
 	}
 
-	inline static int32_t get_offset_of_info_11() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___info_11)); }
-	inline GameObject_t4012695102 * get_info_11() const { return ___info_11; }
-	inline GameObject_t4012695102 ** get_address_of_info_11() { return &___info_11; }
-	inline void set_info_11(GameObject_t4012695102 * value)
+	inline static int32_t get_offset_of_entryText_13() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___entryText_13)); }
+	inline Text_t3286458198 * get_entryText_13() const { return ___entryText_13; }
+	inline Text_t3286458198 ** get_address_of_entryText_13() { return &___entryText_13; }
+	inline void set_entryText_13(Text_t3286458198 * value)
 	{
-		___info_11 = value;
-		Il2CppCodeGenWriteBarrier(&___info_11, value);
+		___entryText_13 = value;
+		Il2CppCodeGenWriteBarrier(&___entryText_13, value);
+	}
+};
+
+struct GameSelectionScreen_t839734950_StaticFields
+{
+public:
+	// System.Int32 GameSelectionScreen::selectedIndex
+	int32_t ___selectedIndex_9;
+	// System.Collections.Generic.List`1<System.Int32> GameSelectionScreen::matchTypes
+	List_1_t3644373756 * ___matchTypes_10;
+
+public:
+	inline static int32_t get_offset_of_selectedIndex_9() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950_StaticFields, ___selectedIndex_9)); }
+	inline int32_t get_selectedIndex_9() const { return ___selectedIndex_9; }
+	inline int32_t* get_address_of_selectedIndex_9() { return &___selectedIndex_9; }
+	inline void set_selectedIndex_9(int32_t value)
+	{
+		___selectedIndex_9 = value;
 	}
 
-	inline static int32_t get_offset_of_entryText_12() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___entryText_12)); }
-	inline Text_t3286458198 * get_entryText_12() const { return ___entryText_12; }
-	inline Text_t3286458198 ** get_address_of_entryText_12() { return &___entryText_12; }
-	inline void set_entryText_12(Text_t3286458198 * value)
+	inline static int32_t get_offset_of_matchTypes_10() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950_StaticFields, ___matchTypes_10)); }
+	inline List_1_t3644373756 * get_matchTypes_10() const { return ___matchTypes_10; }
+	inline List_1_t3644373756 ** get_address_of_matchTypes_10() { return &___matchTypes_10; }
+	inline void set_matchTypes_10(List_1_t3644373756 * value)
 	{
-		___entryText_12 = value;
-		Il2CppCodeGenWriteBarrier(&___entryText_12, value);
+		___matchTypes_10 = value;
+		Il2CppCodeGenWriteBarrier(&___matchTypes_10, value);
 	}
 };
 

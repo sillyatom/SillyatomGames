@@ -1,13 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Screens/GameSelectionScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Screens/MultiplayerMainGame.cs">
     <Files>
       <File FileName="Assets/Scripts/Screens/GameSelectionScreen.cs" Line="29" Column="31" />
-      <File FileName="Assets/Scripts/Ext/ExtMonoBehaviour.cs" Line="78" Column="1" />
-      <File FileName="Assets/Scripts/Utility/Utility.cs" Line="32" Column="9" />
-      <File FileName="Assets/Scripts/GameElements/Dealer.cs" Line="97" Column="9" />
-      <File FileName="Assets/Scripts/Handlers/SpinHandler.cs" Line="130" Column="200" />
-      <File FileName="Assets/Scripts/Screens/MainScreen.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Ext/ExtMonoBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Utility/Utility.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameElements/Dealer.cs" Line="27" Column="5" />
+      <File FileName="Assets/Scripts/Handlers/SpinHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Screens/MainScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Screens/MatchSelectionScreen.cs" Line="94" Column="46" />
+      <File FileName="Assets/Scripts/Networking/Networking.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Constants/NetworkConstants.cs" Line="11" Column="9" />
+      <File FileName="Assets/Scripts/Utility/GameObjectRef.cs" Line="13" Column="25" />
+      <File FileName="Assets/Scripts/Screens/SharedMainGame.cs" Line="4" Column="21" />
+      <File FileName="Assets/Scripts/Screens/MultiplayerMainGame.cs" Line="10" Column="28" />
+      <File FileName="Assets/Scripts/Ext/GameScreenMonoBehaviour.cs" Line="4" Column="48" />
+      <File FileName="Assets/Scripts/Ext/SceneMonoBehaviour.cs" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

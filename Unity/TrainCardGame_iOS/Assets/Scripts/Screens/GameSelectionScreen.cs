@@ -10,10 +10,16 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
 
     public List<GameObject> _train = new List<GameObject>();
     public List<int> entryFees = new List<int>();
-    private int _runningId = 0;
+    public static int selectedIndex = 0;
+    public static List<int> matchTypes = new List<int>(){ 0, 3, 5, 10 };
     public RectTransform mask;
     public GameObject info;
     public Text entryText;
+
+    public static int GetSweepCount()
+    {
+        return matchTypes[selectedIndex];
+    }
 
     public override void Init()
     {
@@ -42,34 +48,34 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     public override void OnSetToView()
     {
         base.OnSetToView();
-        _runningId = 0;
+        selectedIndex = 0;
     }
 
     private bool UpdateIndex(int del)
     {
-        _runningId += del;
+        selectedIndex += del;
 
-        if (_runningId >= _train.Count)
+        if (selectedIndex >= _train.Count)
         {
-            _runningId = _train.Count - 1;
+            selectedIndex = _train.Count - 1;
             return false;
         }
-        else if (_runningId < 0)
+        else if (selectedIndex < 0)
         {
-            _runningId = 0;
+            selectedIndex = 0;
             return false;
         }
-        info.SetActive((_runningId != 0));
-        entryText.text = entryFees[_runningId].ToString();
+        info.SetActive((selectedIndex != 0));
+        entryText.text = entryFees[selectedIndex].ToString();
 
         return true;
     }
 
     private void UpdateInteractivity()
     {
-        next.interactable = (_runningId != _train.Count - 1);
-        previous.interactable = (_runningId != 0);
-        play.interactable = (_runningId != 0);
+        next.interactable = (selectedIndex != _train.Count - 1);
+        previous.interactable = (selectedIndex != 0);
+        play.interactable = (selectedIndex != 0);
     }
 
     public void Next()

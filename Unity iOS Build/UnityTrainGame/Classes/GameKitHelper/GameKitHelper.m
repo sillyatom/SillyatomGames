@@ -190,7 +190,7 @@ BOOL _matchStarted;
     UnitySendMessage("NetworkManager", "OnReceiveData", [dataStr UTF8String]);
 }
 
-- (void) findMatchWithMinPlayers:(int)minPlayers maxPlayers:(int)maxPlayers isHost:(bool)isAHost viewController:(UIViewController *)viewController delegate:(id<GameKitHelperDelegate>)delegate
+- (void) findMatchWithMinPlayers:(int)minPlayers maxPlayers:(int)maxPlayers isHost:(bool)isAHost matchType:(int)matchType viewController:(UIViewController *)viewController delegate:(id<GameKitHelperDelegate>)delegate
 {
     if (!_enableGameCenter) return;
     
@@ -210,6 +210,9 @@ BOOL _matchStarted;
     {
         gkMatchRequest.playerAttributes = 0xFFFFFFFF;
     }
+    
+    gkMatchRequest.playerGroup = matchType;
+    
     isHost = isAHost;
     GKMatchmakerViewController * matchMakerViewCtrller = [[GKMatchmakerViewController alloc]initWithMatchRequest:gkMatchRequest];
     matchMakerViewCtrller.matchmakerDelegate = self;
