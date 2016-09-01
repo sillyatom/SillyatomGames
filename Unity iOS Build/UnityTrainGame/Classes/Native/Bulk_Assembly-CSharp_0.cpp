@@ -217,10 +217,10 @@ struct Button_t990034267;
 struct SinglePlayerMainGame_t3863033300;
 // MatchStartedVO
 struct MatchStartedVO_t2528145109;
-// SharedMainGame
-struct SharedMainGame_t2807228656;
 // RoundHandler
 struct RoundHandler_t2172802556;
+// SharedMainGame
+struct SharedMainGame_t2807228656;
 // System.Action`1<System.Object>
 struct Action_1_t985559125;
 // RoundResultVO
@@ -705,6 +705,8 @@ struct JsonContainerAttribute_t4246140134;
 #include "AssemblyU2DCSharp_MatchStartedVO2528145109MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MultiplayerMainGame4046083237MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SharedMainGame2807228656MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen555210632.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen555210632MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SharedMainGame2807228656.h"
 #include "AssemblyU2DCSharp_Player2393081601MethodDeclarations.h"
 #include "AssemblyU2DCSharp_NetworkPlayer4053218959MethodDeclarations.h"
@@ -725,8 +727,6 @@ struct JsonContainerAttribute_t4246140134;
 #include "AssemblyU2DCSharp_RoundResultVO2594510628MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundResultVO2594510628.h"
 #include "AssemblyU2DCSharp_Utility1549674828.h"
-#include "mscorlib_System_Collections_Generic_List_1_gen555210632.h"
-#include "mscorlib_System_Collections_Generic_List_1_gen555210632MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundVO3050121383MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundVO3050121383.h"
 #include "AssemblyU2DCSharp_NetworkConstants_API65018MethodDeclarations.h"
@@ -1058,10 +1058,10 @@ extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gs
 #define GameObject_GetComponent_TisDealer_t2043054649_m1448126340(__this, method) ((  Dealer_t2043054649 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::AddComponent<SinglePlayerMainGame>()
 #define GameObject_AddComponent_TisSinglePlayerMainGame_t3863033300_m1855869342(__this, method) ((  SinglePlayerMainGame_t3863033300 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
-// !!0 UnityEngine.Component::GetComponent<SharedMainGame>()
-#define Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(__this, method) ((  SharedMainGame_t2807228656 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<RoundHandler>()
 #define Component_GetComponent_TisRoundHandler_t2172802556_m3833406473(__this, method) ((  RoundHandler_t2172802556 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
+// !!0 UnityEngine.Component::GetComponent<SharedMainGame>()
+#define Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(__this, method) ((  SharedMainGame_t2807228656 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<GameWinDialog>()
 #define GameObject_GetComponent_TisGameWinDialog_t176796754_m3519535055(__this, method) ((  GameWinDialog_t176796754 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<GameFailDialog>()
@@ -9370,7 +9370,7 @@ extern "C"  void LocalPlayerModel_OnGameEvent_m2766611237 (LocalPlayerModel_t175
 		String_t* L_2 = V_0;
 		if (!L_2)
 		{
-			goto IL_0094;
+			goto IL_00bc;
 		}
 	}
 	{
@@ -9405,7 +9405,7 @@ IL_003c:
 		bool L_10 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_8, L_9, (&V_2));
 		if (!L_10)
 		{
-			goto IL_0094;
+			goto IL_00bc;
 		}
 	}
 	{
@@ -9419,11 +9419,11 @@ IL_003c:
 		int32_t L_12 = V_2;
 		if ((((int32_t)L_12) == ((int32_t)1)))
 		{
-			goto IL_0076;
+			goto IL_008a;
 		}
 	}
 	{
-		goto IL_0094;
+		goto IL_00bc;
 	}
 
 IL_0060:
@@ -9432,28 +9432,34 @@ IL_0060:
 		NullCheck(L_13);
 		Il2CppObject * L_14 = GameEvent_get_vo_m236630254(L_13, /*hidden argument*/NULL);
 		LocalPlayerModel_UpdateModel_m1266399110(__this, ((LocalPlayerModelVO_t4243963894 *)IsInstClass(L_14, LocalPlayerModelVO_t4243963894_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
-		goto IL_0094;
-	}
-
-IL_0076:
-	{
-		int32_t L_15 = LocalPlayerModel_get_tokens_m3923705431(__this, /*hidden argument*/NULL);
-		GameEvent_t2981166504 * L_16 = ___gameEvent;
-		NullCheck(L_16);
-		int32_t L_17 = GameEvent_get_val_m2575248839(L_16, /*hidden argument*/NULL);
-		LocalPlayerModel_set_tokens_m468511502(__this, ((int32_t)((int32_t)L_15+(int32_t)L_17)), /*hidden argument*/NULL);
-		LocalPlayerModel_PostTokens_m2062522080(__this, /*hidden argument*/NULL);
-		goto IL_0094;
-	}
-
-IL_0094:
-	{
 		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
-		EventManager_t1907836883 * L_18 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
-		GameEvent_t2981166504 * L_19 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
-		GameEvent__ctor_m1494597407(L_19, _stringLiteral2101932499, /*hidden argument*/NULL);
+		EventManager_t1907836883 * L_15 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_16 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m1494597407(L_16, _stringLiteral2101932499, /*hidden argument*/NULL);
+		NullCheck(L_15);
+		EventManager_Raise_m2130241432(L_15, L_16, /*hidden argument*/NULL);
+		goto IL_00bc;
+	}
+
+IL_008a:
+	{
+		int32_t L_17 = LocalPlayerModel_get_tokens_m3923705431(__this, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_18 = ___gameEvent;
 		NullCheck(L_18);
-		EventManager_Raise_m2130241432(L_18, L_19, /*hidden argument*/NULL);
+		int32_t L_19 = GameEvent_get_val_m2575248839(L_18, /*hidden argument*/NULL);
+		LocalPlayerModel_set_tokens_m468511502(__this, ((int32_t)((int32_t)L_17+(int32_t)L_19)), /*hidden argument*/NULL);
+		LocalPlayerModel_PostTokens_m2062522080(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
+		EventManager_t1907836883 * L_20 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_21 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m1494597407(L_21, _stringLiteral2101932499, /*hidden argument*/NULL);
+		NullCheck(L_20);
+		EventManager_Raise_m2130241432(L_20, L_21, /*hidden argument*/NULL);
+		goto IL_00bc;
+	}
+
+IL_00bc:
+	{
 		return;
 	}
 }
@@ -10416,7 +10422,6 @@ extern "C"  String_t* MultiplayerMainGame_GetDPPath_m1101217716 (Il2CppObject * 
 }
 // System.Void MultiplayerMainGame::Init()
 extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
-extern const MethodInfo* Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var;
 extern const uint32_t MultiplayerMainGame_Init_m3127656750_MetadataUsageId;
 extern "C"  void MultiplayerMainGame_Init_m3127656750 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method)
 {
@@ -10428,15 +10433,10 @@ extern "C"  void MultiplayerMainGame_Init_m3127656750 (MultiplayerMainGame_t4046
 	}
 	{
 		SceneMonoBehaviour_Init_m1859798119(__this, /*hidden argument*/NULL);
-		Transform_t284553113 * L_0 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_0);
-		SharedMainGame_t2807228656 * L_1 = Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(L_0, /*hidden argument*/Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var);
-		NullCheck(L_1);
-		SharedMainGame_DisableHud_m3661054312(L_1, /*hidden argument*/NULL);
-		GameObjectRef_t4121474274 * L_2 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
-		NullCheck(L_2);
-		Networking_t1515242260 * L_3 = L_2->get_network_4();
-		__this->set_network_5(L_3);
+		Networking_t1515242260 * L_1 = L_0->get_network_4();
+		__this->set_network_5(L_1);
 		VirtActionInvoker0::Invoke(12 /* System.Void MultiplayerMainGame::InitGame() */, __this);
 		return;
 	}
@@ -10445,6 +10445,7 @@ extern "C"  void MultiplayerMainGame_Init_m3127656750 (MultiplayerMainGame_t4046
 extern TypeInfo* Action_t437523947_il2cpp_TypeInfo_var;
 extern TypeInfo* Networking_t1515242260_il2cpp_TypeInfo_var;
 extern const MethodInfo* Component_GetComponent_TisRoundHandler_t2172802556_m3833406473_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var;
 extern const uint32_t MultiplayerMainGame_InitGame_m1931109952_MetadataUsageId;
 extern "C"  void MultiplayerMainGame_InitGame_m1931109952 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method)
 {
@@ -10492,6 +10493,36 @@ extern "C"  void MultiplayerMainGame_InitGame_m1931109952 (MultiplayerMainGame_t
 	}
 
 IL_0071:
+	{
+		Networking_t1515242260 * L_11 = __this->get_network_5();
+		NullCheck(L_11);
+		List_1_t555210632 * L_12 = Networking_get_Players_m2083950494(L_11, /*hidden argument*/NULL);
+		NullCheck(L_12);
+		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<NetworkPlayer>::get_Count() */, L_12);
+		if ((!(((uint32_t)L_13) == ((uint32_t)2))))
+		{
+			goto IL_009c;
+		}
+	}
+	{
+		Transform_t284553113 * L_14 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		NullCheck(L_14);
+		SharedMainGame_t2807228656 * L_15 = Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(L_14, /*hidden argument*/Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var);
+		NullCheck(L_15);
+		SharedMainGame_EnableHud_m1748585021(L_15, /*hidden argument*/NULL);
+		goto IL_00ac;
+	}
+
+IL_009c:
+	{
+		Transform_t284553113 * L_16 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		SharedMainGame_t2807228656 * L_17 = Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(L_16, /*hidden argument*/Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var);
+		NullCheck(L_17);
+		SharedMainGame_DisableHud_m3661054312(L_17, /*hidden argument*/NULL);
+	}
+
+IL_00ac:
 	{
 		return;
 	}
@@ -10961,8 +10992,6 @@ extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
 extern TypeInfo* Action_1_t985559125_il2cpp_TypeInfo_var;
 extern TypeInfo* Dictionary_2_t3403145775_il2cpp_TypeInfo_var;
 extern TypeInfo* List_1_t1765447871_il2cpp_TypeInfo_var;
-extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
-extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
 extern TypeInfo* Enumerator_t4146198159_il2cpp_TypeInfo_var;
 extern TypeInfo* Enumerator_t3170173716_il2cpp_TypeInfo_var;
 extern TypeInfo* ResultVO_t4023821238_il2cpp_TypeInfo_var;
@@ -10992,11 +11021,6 @@ extern Il2CppCodeGenString* _stringLiteral1201980512;
 extern Il2CppCodeGenString* _stringLiteral3696326558;
 extern Il2CppCodeGenString* _stringLiteral3810848681;
 extern Il2CppCodeGenString* _stringLiteral2745;
-extern Il2CppCodeGenString* _stringLiteral1421866826;
-extern Il2CppCodeGenString* _stringLiteral1812004154;
-extern Il2CppCodeGenString* _stringLiteral2468136759;
-extern Il2CppCodeGenString* _stringLiteral1794857042;
-extern Il2CppCodeGenString* _stringLiteral937807543;
 extern const uint32_t MultiplayerMainGame_CheckWinnings_m3943219407_MetadataUsageId;
 extern "C"  void MultiplayerMainGame_CheckWinnings_m3943219407 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method)
 {
@@ -11364,7 +11388,7 @@ IL_0222:
 		Action_1__ctor_m751950045(L_102, __this, L_101, /*hidden argument*/Action_1__ctor_m751950045_MethodInfo_var);
 		Hashtable_t3875263730 * L_103 = V_7;
 		ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430(__this, ((float)((float)((float)((float)L_99+(float)L_100))+(float)(1.5f))), L_102, L_103, /*hidden argument*/ExtMonoBehaviour_DelayedCallWithArgs_TisIl2CppObject_m932008430_MethodInfo_var);
-		goto IL_0532;
+		goto IL_04b2;
 	}
 
 IL_026f:
@@ -11374,7 +11398,7 @@ IL_026f:
 		bool L_105 = Dealer_HasMatch_m3915893825(L_104, /*hidden argument*/NULL);
 		if (!L_105)
 		{
-			goto IL_0500;
+			goto IL_0480;
 		}
 	}
 	{
@@ -11383,7 +11407,7 @@ IL_026f:
 		bool L_107 = Player_get_DidPullOver_m1102557715(L_106, /*hidden argument*/NULL);
 		if (L_107)
 		{
-			goto IL_0500;
+			goto IL_0480;
 		}
 	}
 	{
@@ -11408,367 +11432,332 @@ IL_026f:
 		NullCheck(L_114);
 		int32_t L_117 = VirtFuncInvoker1< int32_t, String_t* >::Invoke(28 /* System.Int32 System.Collections.Generic.List`1<System.String>::IndexOf(!0) */, L_114, L_116);
 		V_9 = L_117;
-		RoundHandler_t2172802556 * L_118 = __this->get__roundHandler_7();
-		NullCheck(L_118);
-		String_t* L_119 = RoundHandler_get_GetActivePlayerId_m3690731145(L_118, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_120 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral1421866826, L_119, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
-		Debug_LogError_m4127342994(NULL /*static, unused*/, L_120, /*hidden argument*/NULL);
-		Networking_t1515242260 * L_121 = __this->get_network_5();
+		int32_t L_118 = V_9;
+		V_10 = ((int32_t)((int32_t)L_118+(int32_t)1));
+		goto IL_02ef;
+	}
+
+IL_02d0:
+	{
+		List_1_t1765447871 * L_119 = V_8;
+		Networking_t1515242260 * L_120 = __this->get_network_5();
+		NullCheck(L_120);
+		List_1_t1765447871 * L_121 = Networking_get_PlayersIds_m2292660285(L_120, /*hidden argument*/NULL);
+		int32_t L_122 = V_10;
 		NullCheck(L_121);
-		List_1_t1765447871 * L_122 = Networking_get_PlayersIds_m2292660285(L_121, /*hidden argument*/NULL);
-		NullCheck(L_122);
-		int32_t L_123 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_122);
-		int32_t L_124 = L_123;
-		Il2CppObject * L_125 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_124);
-		String_t* L_126 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral1812004154, L_125, /*hidden argument*/NULL);
-		Debug_LogError_m4127342994(NULL /*static, unused*/, L_126, /*hidden argument*/NULL);
-		int32_t L_127 = V_9;
-		int32_t L_128 = L_127;
-		Il2CppObject * L_129 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_128);
-		String_t* L_130 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral2468136759, L_129, /*hidden argument*/NULL);
-		Debug_LogError_m4127342994(NULL /*static, unused*/, L_130, /*hidden argument*/NULL);
-		int32_t L_131 = V_9;
-		V_10 = ((int32_t)((int32_t)L_131+(int32_t)1));
-		goto IL_0343;
+		String_t* L_123 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_121, L_122);
+		NullCheck(L_119);
+		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_119, L_123);
+		int32_t L_124 = V_10;
+		V_10 = ((int32_t)((int32_t)L_124+(int32_t)1));
 	}
 
-IL_0324:
+IL_02ef:
 	{
-		List_1_t1765447871 * L_132 = V_8;
-		Networking_t1515242260 * L_133 = __this->get_network_5();
-		NullCheck(L_133);
-		List_1_t1765447871 * L_134 = Networking_get_PlayersIds_m2292660285(L_133, /*hidden argument*/NULL);
-		int32_t L_135 = V_10;
-		NullCheck(L_134);
-		String_t* L_136 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_134, L_135);
-		NullCheck(L_132);
-		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_132, L_136);
-		int32_t L_137 = V_10;
-		V_10 = ((int32_t)((int32_t)L_137+(int32_t)1));
-	}
-
-IL_0343:
-	{
-		int32_t L_138 = V_10;
-		Networking_t1515242260 * L_139 = __this->get_network_5();
-		NullCheck(L_139);
-		List_1_t1765447871 * L_140 = Networking_get_PlayersIds_m2292660285(L_139, /*hidden argument*/NULL);
-		NullCheck(L_140);
-		int32_t L_141 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_140);
-		if ((((int32_t)L_138) < ((int32_t)L_141)))
+		int32_t L_125 = V_10;
+		Networking_t1515242260 * L_126 = __this->get_network_5();
+		NullCheck(L_126);
+		List_1_t1765447871 * L_127 = Networking_get_PlayersIds_m2292660285(L_126, /*hidden argument*/NULL);
+		NullCheck(L_127);
+		int32_t L_128 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_127);
+		if ((((int32_t)L_125) < ((int32_t)L_128)))
 		{
-			goto IL_0324;
+			goto IL_02d0;
 		}
 	}
 	{
 		V_11 = 0;
-		goto IL_0381;
+		goto IL_032d;
 	}
 
-IL_0362:
+IL_030e:
 	{
-		List_1_t1765447871 * L_142 = V_8;
-		Networking_t1515242260 * L_143 = __this->get_network_5();
-		NullCheck(L_143);
-		List_1_t1765447871 * L_144 = Networking_get_PlayersIds_m2292660285(L_143, /*hidden argument*/NULL);
-		int32_t L_145 = V_11;
-		NullCheck(L_144);
-		String_t* L_146 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_144, L_145);
-		NullCheck(L_142);
-		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_142, L_146);
-		int32_t L_147 = V_11;
-		V_11 = ((int32_t)((int32_t)L_147+(int32_t)1));
+		List_1_t1765447871 * L_129 = V_8;
+		Networking_t1515242260 * L_130 = __this->get_network_5();
+		NullCheck(L_130);
+		List_1_t1765447871 * L_131 = Networking_get_PlayersIds_m2292660285(L_130, /*hidden argument*/NULL);
+		int32_t L_132 = V_11;
+		NullCheck(L_131);
+		String_t* L_133 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_131, L_132);
+		NullCheck(L_129);
+		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_129, L_133);
+		int32_t L_134 = V_11;
+		V_11 = ((int32_t)((int32_t)L_134+(int32_t)1));
 	}
 
-IL_0381:
+IL_032d:
 	{
-		int32_t L_148 = V_11;
-		int32_t L_149 = V_9;
-		if ((((int32_t)L_148) < ((int32_t)L_149)))
+		int32_t L_135 = V_11;
+		int32_t L_136 = V_9;
+		if ((((int32_t)L_135) < ((int32_t)L_136)))
 		{
-			goto IL_0362;
+			goto IL_030e;
 		}
 	}
 	{
-		List_1_t1765447871 * L_150 = V_8;
-		NullCheck(L_150);
-		int32_t L_151 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_150);
-		int32_t L_152 = L_151;
-		Il2CppObject * L_153 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_152);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_154 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral1794857042, L_153, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
-		Debug_LogError_m4127342994(NULL /*static, unused*/, L_154, /*hidden argument*/NULL);
-		List_1_t1765447871 * L_155 = V_8;
-		NullCheck(L_155);
-		Enumerator_t4146198159  L_156 = List_1_GetEnumerator_m2194092946(L_155, /*hidden argument*/List_1_GetEnumerator_m2194092946_MethodInfo_var);
-		V_13 = L_156;
+		List_1_t1765447871 * L_137 = V_8;
+		NullCheck(L_137);
+		Enumerator_t4146198159  L_138 = List_1_GetEnumerator_m2194092946(L_137, /*hidden argument*/List_1_GetEnumerator_m2194092946_MethodInfo_var);
+		V_13 = L_138;
 	}
 
-IL_03ae:
+IL_033f:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_03df;
+			goto IL_035f;
 		}
 
-IL_03b3:
+IL_0344:
 		{
-			String_t* L_157 = Enumerator_get_Current_m3788713170((&V_13), /*hidden argument*/Enumerator_get_Current_m3788713170_MethodInfo_var);
-			V_12 = L_157;
-			ResultVO_t4023821238 * L_158 = V_2;
-			NullCheck(L_158);
-			Dictionary_2_t3403145775 * L_159 = ResultVO_get_winningCards_m2091815133(L_158, /*hidden argument*/NULL);
-			String_t* L_160 = V_12;
-			List_1_t1765447871 * L_161 = (List_1_t1765447871 *)il2cpp_codegen_object_new(List_1_t1765447871_il2cpp_TypeInfo_var);
-			List_1__ctor_m459821414(L_161, /*hidden argument*/List_1__ctor_m459821414_MethodInfo_var);
-			NullCheck(L_159);
-			VirtActionInvoker2< String_t*, List_1_t1765447871 * >::Invoke(23 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>::set_Item(!0,!1) */, L_159, L_160, L_161);
-			String_t* L_162 = V_12;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_163 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral937807543, L_162, /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
-			Debug_LogError_m4127342994(NULL /*static, unused*/, L_163, /*hidden argument*/NULL);
+			String_t* L_139 = Enumerator_get_Current_m3788713170((&V_13), /*hidden argument*/Enumerator_get_Current_m3788713170_MethodInfo_var);
+			V_12 = L_139;
+			ResultVO_t4023821238 * L_140 = V_2;
+			NullCheck(L_140);
+			Dictionary_2_t3403145775 * L_141 = ResultVO_get_winningCards_m2091815133(L_140, /*hidden argument*/NULL);
+			String_t* L_142 = V_12;
+			List_1_t1765447871 * L_143 = (List_1_t1765447871 *)il2cpp_codegen_object_new(List_1_t1765447871_il2cpp_TypeInfo_var);
+			List_1__ctor_m459821414(L_143, /*hidden argument*/List_1__ctor_m459821414_MethodInfo_var);
+			NullCheck(L_141);
+			VirtActionInvoker2< String_t*, List_1_t1765447871 * >::Invoke(23 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>::set_Item(!0,!1) */, L_141, L_142, L_143);
 		}
 
-IL_03df:
+IL_035f:
 		{
-			bool L_164 = Enumerator_MoveNext_m2014284926((&V_13), /*hidden argument*/Enumerator_MoveNext_m2014284926_MethodInfo_var);
-			if (L_164)
+			bool L_144 = Enumerator_MoveNext_m2014284926((&V_13), /*hidden argument*/Enumerator_MoveNext_m2014284926_MethodInfo_var);
+			if (L_144)
 			{
-				goto IL_03b3;
+				goto IL_0344;
 			}
 		}
 
-IL_03eb:
+IL_036b:
 		{
-			IL2CPP_LEAVE(0x3FD, FINALLY_03f0);
+			IL2CPP_LEAVE(0x37D, FINALLY_0370);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
-		goto FINALLY_03f0;
+		goto FINALLY_0370;
 	}
 
-FINALLY_03f0:
+FINALLY_0370:
 	{ // begin finally (depth: 1)
-		Enumerator_t4146198159  L_165 = V_13;
-		Enumerator_t4146198159  L_166 = L_165;
-		Il2CppObject * L_167 = Box(Enumerator_t4146198159_il2cpp_TypeInfo_var, &L_166);
-		NullCheck((Il2CppObject *)L_167);
-		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_167);
-		IL2CPP_END_FINALLY(1008)
+		Enumerator_t4146198159  L_145 = V_13;
+		Enumerator_t4146198159  L_146 = L_145;
+		Il2CppObject * L_147 = Box(Enumerator_t4146198159_il2cpp_TypeInfo_var, &L_146);
+		NullCheck((Il2CppObject *)L_147);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_147);
+		IL2CPP_END_FINALLY(880)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(1008)
+	IL2CPP_CLEANUP(880)
 	{
-		IL2CPP_JUMP_TBL(0x3FD, IL_03fd)
+		IL2CPP_JUMP_TBL(0x37D, IL_037d)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
 	}
 
-IL_03fd:
+IL_037d:
 	{
-		List_1_t1765447871 * L_168 = V_8;
-		NullCheck(L_168);
-		int32_t L_169 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_168);
-		V_14 = L_169;
+		List_1_t1765447871 * L_148 = V_8;
+		NullCheck(L_148);
+		int32_t L_149 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_148);
+		V_14 = L_149;
 		V_15 = 0;
-		ResultVO_t4023821238 * L_170 = V_2;
-		NullCheck(L_170);
-		List_1_t799051817 * L_171 = ResultVO_get_cards_m1913580282(L_170, /*hidden argument*/NULL);
-		NullCheck(L_171);
-		Enumerator_t3179802105  L_172 = List_1_GetEnumerator_m1128909672(L_171, /*hidden argument*/List_1_GetEnumerator_m1128909672_MethodInfo_var);
-		V_17 = L_172;
+		ResultVO_t4023821238 * L_150 = V_2;
+		NullCheck(L_150);
+		List_1_t799051817 * L_151 = ResultVO_get_cards_m1913580282(L_150, /*hidden argument*/NULL);
+		NullCheck(L_151);
+		Enumerator_t3179802105  L_152 = List_1_GetEnumerator_m1128909672(L_151, /*hidden argument*/List_1_GetEnumerator_m1128909672_MethodInfo_var);
+		V_17 = L_152;
 	}
 
-IL_0416:
+IL_0396:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_0456;
+			goto IL_03d6;
 		}
 
-IL_041b:
+IL_039b:
 		{
-			Card_t2092848 * L_173 = Enumerator_get_Current_m1250692244((&V_17), /*hidden argument*/Enumerator_get_Current_m1250692244_MethodInfo_var);
-			V_16 = L_173;
-			int32_t L_174 = V_15;
-			int32_t L_175 = V_14;
-			if ((((int32_t)L_174) < ((int32_t)L_175)))
+			Card_t2092848 * L_153 = Enumerator_get_Current_m1250692244((&V_17), /*hidden argument*/Enumerator_get_Current_m1250692244_MethodInfo_var);
+			V_16 = L_153;
+			int32_t L_154 = V_15;
+			int32_t L_155 = V_14;
+			if ((((int32_t)L_154) < ((int32_t)L_155)))
 			{
-				goto IL_0430;
+				goto IL_03b0;
 			}
 		}
 
-IL_042d:
+IL_03ad:
 		{
 			V_15 = 0;
 		}
 
-IL_0430:
+IL_03b0:
 		{
-			ResultVO_t4023821238 * L_176 = V_2;
-			NullCheck(L_176);
-			Dictionary_2_t3403145775 * L_177 = ResultVO_get_winningCards_m2091815133(L_176, /*hidden argument*/NULL);
-			List_1_t1765447871 * L_178 = V_8;
-			int32_t L_179 = V_15;
-			NullCheck(L_178);
-			String_t* L_180 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_178, L_179);
-			NullCheck(L_177);
-			List_1_t1765447871 * L_181 = VirtFuncInvoker1< List_1_t1765447871 *, String_t* >::Invoke(22 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>::get_Item(!0) */, L_177, L_180);
-			Card_t2092848 * L_182 = V_16;
-			NullCheck(L_182);
-			String_t* L_183 = Card_get_ValueType_m2362782312(L_182, /*hidden argument*/NULL);
-			NullCheck(L_181);
-			VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_181, L_183);
-			int32_t L_184 = V_15;
-			V_15 = ((int32_t)((int32_t)L_184+(int32_t)1));
+			ResultVO_t4023821238 * L_156 = V_2;
+			NullCheck(L_156);
+			Dictionary_2_t3403145775 * L_157 = ResultVO_get_winningCards_m2091815133(L_156, /*hidden argument*/NULL);
+			List_1_t1765447871 * L_158 = V_8;
+			int32_t L_159 = V_15;
+			NullCheck(L_158);
+			String_t* L_160 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_158, L_159);
+			NullCheck(L_157);
+			List_1_t1765447871 * L_161 = VirtFuncInvoker1< List_1_t1765447871 *, String_t* >::Invoke(22 /* !1 System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>::get_Item(!0) */, L_157, L_160);
+			Card_t2092848 * L_162 = V_16;
+			NullCheck(L_162);
+			String_t* L_163 = Card_get_ValueType_m2362782312(L_162, /*hidden argument*/NULL);
+			NullCheck(L_161);
+			VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_161, L_163);
+			int32_t L_164 = V_15;
+			V_15 = ((int32_t)((int32_t)L_164+(int32_t)1));
 		}
 
-IL_0456:
+IL_03d6:
 		{
-			bool L_185 = Enumerator_MoveNext_m2340229448((&V_17), /*hidden argument*/Enumerator_MoveNext_m2340229448_MethodInfo_var);
-			if (L_185)
+			bool L_165 = Enumerator_MoveNext_m2340229448((&V_17), /*hidden argument*/Enumerator_MoveNext_m2340229448_MethodInfo_var);
+			if (L_165)
 			{
-				goto IL_041b;
+				goto IL_039b;
 			}
 		}
 
-IL_0462:
+IL_03e2:
 		{
-			IL2CPP_LEAVE(0x474, FINALLY_0467);
+			IL2CPP_LEAVE(0x3F4, FINALLY_03e7);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
-		goto FINALLY_0467;
+		goto FINALLY_03e7;
 	}
 
-FINALLY_0467:
+FINALLY_03e7:
 	{ // begin finally (depth: 1)
-		Enumerator_t3179802105  L_186 = V_17;
-		Enumerator_t3179802105  L_187 = L_186;
-		Il2CppObject * L_188 = Box(Enumerator_t3179802105_il2cpp_TypeInfo_var, &L_187);
-		NullCheck((Il2CppObject *)L_188);
-		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_188);
-		IL2CPP_END_FINALLY(1127)
+		Enumerator_t3179802105  L_166 = V_17;
+		Enumerator_t3179802105  L_167 = L_166;
+		Il2CppObject * L_168 = Box(Enumerator_t3179802105_il2cpp_TypeInfo_var, &L_167);
+		NullCheck((Il2CppObject *)L_168);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_168);
+		IL2CPP_END_FINALLY(999)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(1127)
+	IL2CPP_CLEANUP(999)
 	{
-		IL2CPP_JUMP_TBL(0x474, IL_0474)
+		IL2CPP_JUMP_TBL(0x3F4, IL_03f4)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
 	}
 
-IL_0474:
+IL_03f4:
 	{
-		ResultVO_t4023821238 * L_189 = V_2;
-		NullCheck(L_189);
-		Dictionary_2_t3403145775 * L_190 = ResultVO_get_winningCards_m2091815133(L_189, /*hidden argument*/NULL);
-		NullCheck(L_190);
-		Enumerator_t3170173716  L_191 = Dictionary_2_GetEnumerator_m1703838420(L_190, /*hidden argument*/Dictionary_2_GetEnumerator_m1703838420_MethodInfo_var);
-		V_19 = L_191;
+		ResultVO_t4023821238 * L_169 = V_2;
+		NullCheck(L_169);
+		Dictionary_2_t3403145775 * L_170 = ResultVO_get_winningCards_m2091815133(L_169, /*hidden argument*/NULL);
+		NullCheck(L_170);
+		Enumerator_t3170173716  L_171 = Dictionary_2_GetEnumerator_m1703838420(L_170, /*hidden argument*/Dictionary_2_GetEnumerator_m1703838420_MethodInfo_var);
+		V_19 = L_171;
 	}
 
-IL_0481:
+IL_0401:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_04a8;
+			goto IL_0428;
 		}
 
-IL_0486:
+IL_0406:
 		{
-			KeyValuePair_2_t2891677073  L_192 = Enumerator_get_Current_m2614886390((&V_19), /*hidden argument*/Enumerator_get_Current_m2614886390_MethodInfo_var);
-			V_18 = L_192;
-			String_t* L_193 = KeyValuePair_2_get_Key_m725244454((&V_18), /*hidden argument*/KeyValuePair_2_get_Key_m725244454_MethodInfo_var);
-			Player_t2393081601 * L_194 = MultiplayerMainGame_GetPlayerById_m1959206393(__this, L_193, /*hidden argument*/NULL);
-			List_1_t1765447871 * L_195 = KeyValuePair_2_get_Value_m3824820759((&V_18), /*hidden argument*/KeyValuePair_2_get_Value_m3824820759_MethodInfo_var);
-			NullCheck(L_194);
-			Player_set_CardsRewarded_m3167286272(L_194, L_195, /*hidden argument*/NULL);
+			KeyValuePair_2_t2891677073  L_172 = Enumerator_get_Current_m2614886390((&V_19), /*hidden argument*/Enumerator_get_Current_m2614886390_MethodInfo_var);
+			V_18 = L_172;
+			String_t* L_173 = KeyValuePair_2_get_Key_m725244454((&V_18), /*hidden argument*/KeyValuePair_2_get_Key_m725244454_MethodInfo_var);
+			Player_t2393081601 * L_174 = MultiplayerMainGame_GetPlayerById_m1959206393(__this, L_173, /*hidden argument*/NULL);
+			List_1_t1765447871 * L_175 = KeyValuePair_2_get_Value_m3824820759((&V_18), /*hidden argument*/KeyValuePair_2_get_Value_m3824820759_MethodInfo_var);
+			NullCheck(L_174);
+			Player_set_CardsRewarded_m3167286272(L_174, L_175, /*hidden argument*/NULL);
 		}
 
-IL_04a8:
+IL_0428:
 		{
-			bool L_196 = Enumerator_MoveNext_m25989783((&V_19), /*hidden argument*/Enumerator_MoveNext_m25989783_MethodInfo_var);
-			if (L_196)
+			bool L_176 = Enumerator_MoveNext_m25989783((&V_19), /*hidden argument*/Enumerator_MoveNext_m25989783_MethodInfo_var);
+			if (L_176)
 			{
-				goto IL_0486;
+				goto IL_0406;
 			}
 		}
 
-IL_04b4:
+IL_0434:
 		{
-			IL2CPP_LEAVE(0x4C6, FINALLY_04b9);
+			IL2CPP_LEAVE(0x446, FINALLY_0439);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
-		goto FINALLY_04b9;
+		goto FINALLY_0439;
 	}
 
-FINALLY_04b9:
+FINALLY_0439:
 	{ // begin finally (depth: 1)
-		Enumerator_t3170173716  L_197 = V_19;
-		Enumerator_t3170173716  L_198 = L_197;
-		Il2CppObject * L_199 = Box(Enumerator_t3170173716_il2cpp_TypeInfo_var, &L_198);
-		NullCheck((Il2CppObject *)L_199);
-		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_199);
-		IL2CPP_END_FINALLY(1209)
+		Enumerator_t3170173716  L_177 = V_19;
+		Enumerator_t3170173716  L_178 = L_177;
+		Il2CppObject * L_179 = Box(Enumerator_t3170173716_il2cpp_TypeInfo_var, &L_178);
+		NullCheck((Il2CppObject *)L_179);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_179);
+		IL2CPP_END_FINALLY(1081)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(1209)
+	IL2CPP_CLEANUP(1081)
 	{
-		IL2CPP_JUMP_TBL(0x4C6, IL_04c6)
+		IL2CPP_JUMP_TBL(0x446, IL_0446)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
 	}
 
-IL_04c6:
+IL_0446:
 	{
-		Hashtable_t3875263730 * L_200 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
-		Hashtable__ctor_m1514037738(L_200, /*hidden argument*/NULL);
-		V_20 = L_200;
-		Hashtable_t3875263730 * L_201 = V_20;
-		Player_t2393081601 * L_202 = V_0;
-		NullCheck(L_202);
-		String_t* L_203 = L_202->get_playerId_4();
-		NullCheck(L_201);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_201, _stringLiteral2393081601, L_203);
-		Hashtable_t3875263730 * L_204 = V_20;
-		ResultVO_t4023821238 * L_205 = V_2;
-		NullCheck(L_204);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_204, _stringLiteral2745, L_205);
-		List_1_t1765447871 * L_206 = V_8;
-		NullCheck(L_206);
-		int32_t L_207 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_206);
-		Hashtable_t3875263730 * L_208 = V_20;
-		MultiplayerMainGame_DistributeFailedCards_m1378212840(__this, L_207, L_208, /*hidden argument*/NULL);
-		goto IL_0532;
+		Hashtable_t3875263730 * L_180 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
+		Hashtable__ctor_m1514037738(L_180, /*hidden argument*/NULL);
+		V_20 = L_180;
+		Hashtable_t3875263730 * L_181 = V_20;
+		Player_t2393081601 * L_182 = V_0;
+		NullCheck(L_182);
+		String_t* L_183 = L_182->get_playerId_4();
+		NullCheck(L_181);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_181, _stringLiteral2393081601, L_183);
+		Hashtable_t3875263730 * L_184 = V_20;
+		ResultVO_t4023821238 * L_185 = V_2;
+		NullCheck(L_184);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_184, _stringLiteral2745, L_185);
+		List_1_t1765447871 * L_186 = V_8;
+		NullCheck(L_186);
+		int32_t L_187 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<System.String>::get_Count() */, L_186);
+		Hashtable_t3875263730 * L_188 = V_20;
+		MultiplayerMainGame_DistributeFailedCards_m1378212840(__this, L_187, L_188, /*hidden argument*/NULL);
+		goto IL_04b2;
 	}
 
-IL_0500:
+IL_0480:
 	{
-		Hashtable_t3875263730 * L_209 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
-		Hashtable__ctor_m1514037738(L_209, /*hidden argument*/NULL);
-		V_21 = L_209;
-		Hashtable_t3875263730 * L_210 = V_21;
-		Player_t2393081601 * L_211 = V_0;
-		NullCheck(L_211);
-		String_t* L_212 = L_211->get_playerId_4();
-		NullCheck(L_210);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_210, _stringLiteral2393081601, L_212);
-		Hashtable_t3875263730 * L_213 = V_21;
-		ResultVO_t4023821238 * L_214 = (ResultVO_t4023821238 *)il2cpp_codegen_object_new(ResultVO_t4023821238_il2cpp_TypeInfo_var);
-		ResultVO__ctor_m4171753381(L_214, /*hidden argument*/NULL);
-		NullCheck(L_213);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_213, _stringLiteral2745, L_214);
-		Hashtable_t3875263730 * L_215 = V_21;
-		VirtActionInvoker1< Il2CppObject * >::Invoke(14 /* System.Void MultiplayerMainGame::OnDistributeAllWinningCards(System.Object) */, __this, L_215);
+		Hashtable_t3875263730 * L_189 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
+		Hashtable__ctor_m1514037738(L_189, /*hidden argument*/NULL);
+		V_21 = L_189;
+		Hashtable_t3875263730 * L_190 = V_21;
+		Player_t2393081601 * L_191 = V_0;
+		NullCheck(L_191);
+		String_t* L_192 = L_191->get_playerId_4();
+		NullCheck(L_190);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_190, _stringLiteral2393081601, L_192);
+		Hashtable_t3875263730 * L_193 = V_21;
+		ResultVO_t4023821238 * L_194 = (ResultVO_t4023821238 *)il2cpp_codegen_object_new(ResultVO_t4023821238_il2cpp_TypeInfo_var);
+		ResultVO__ctor_m4171753381(L_194, /*hidden argument*/NULL);
+		NullCheck(L_193);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(33 /* System.Void System.Collections.Hashtable::Add(System.Object,System.Object) */, L_193, _stringLiteral2745, L_194);
+		Hashtable_t3875263730 * L_195 = V_21;
+		VirtActionInvoker1< Il2CppObject * >::Invoke(14 /* System.Void MultiplayerMainGame::OnDistributeAllWinningCards(System.Object) */, __this, L_195);
 	}
 
-IL_0532:
+IL_04b2:
 	{
 		return;
 	}

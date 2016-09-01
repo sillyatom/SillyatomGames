@@ -4,6 +4,7 @@ using System.Collections;
 public class SharedMainGame : ExtMonoBehaviour
 {
     public GameObject hud;
+    public Trains trains;
 
     public override void Init()
     {

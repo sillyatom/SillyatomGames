@@ -391,6 +391,8 @@
      <Compile Include="Assets\Scripts\GameElements\Card.cs" />
      <Compile Include="Assets\Scripts\GameElements\Dealer.cs" />
      <Compile Include="Assets\Scripts\GameElements\Player.cs" />
+     <Compile Include="Assets\Scripts\GameElements\Train.cs" />
+     <Compile Include="Assets\Scripts\GameElements\Trains.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\Handlers\BridgeDebugger.cs" />
      <Compile Include="Assets\Scripts\Handlers\CardSelectionHandler.cs" />
@@ -428,6 +430,7 @@
      <Compile Include="Assets\Scripts\Screens\SharedMainGame.cs" />
      <Compile Include="Assets\Scripts\Screens\SinglePlayerMainGame.cs" />
      <Compile Include="Assets\Scripts\Utility\GameObjectRef.cs" />
+     <Compile Include="Assets\Scripts\Utility\GrayColorToggle.cs" />
      <Compile Include="Assets\Scripts\Utility\InGameInfoText.cs" />
      <Compile Include="Assets\Scripts\Utility\SingletonManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />

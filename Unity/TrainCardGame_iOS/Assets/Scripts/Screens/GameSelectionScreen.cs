@@ -26,6 +26,11 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
         return entryFees[selectedIndex];
     }
 
+    public static int GetSelectedGameIndex()
+    {
+        return selectedIndex;
+    }
+
     public override void Init()
     {
         base.Init();

@@ -27,6 +27,8 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     {
         base.Init();
         network = SingletonManager.reference.network;
+        transform.GetComponent<SharedMainGame>().DisableHud();
+        transform.GetComponent<SharedMainGame>().trains.EnableTrainById(GameSelectionScreen.GetSelectedGameIndex());
         InitGame();
     }
 
@@ -49,15 +51,6 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         {
             dealer.ShuffleCards();
             DispatchHostSelected();
-        }
-
-        if (network.Players.Count == 2)
-        {
-            transform.GetComponent<SharedMainGame>().EnableHud();
-        }
-        else
-        {
-            transform.GetComponent<SharedMainGame>().DisableHud();
         }
     }
 

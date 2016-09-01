@@ -49,15 +49,15 @@ public class LocalPlayerModel
         {
             case GameEvent.UPDATE_PLAYER_MODEL:
                 UpdateModel(gameEvent.vo as LocalPlayerModelVO);
+                EventManager.instance.Raise(new GameEvent(GameEvent.PLAYER_MODEL_UPDATED));
                 break;
 
             case GameEvent.ADD_TOKENS:
                 tokens += gameEvent.val;
                 PostTokens();
+                EventManager.instance.Raise(new GameEvent(GameEvent.PLAYER_MODEL_UPDATED));
                 break;
         }
-
-        EventManager.instance.Raise(new GameEvent(GameEvent.PLAYER_MODEL_UPDATED));
     }
 
     private void UpdateModel(LocalPlayerModelVO vo)

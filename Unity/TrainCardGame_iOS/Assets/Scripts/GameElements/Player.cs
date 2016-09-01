@@ -216,7 +216,6 @@ public class Player : ExtMonoBehaviour
     public void AddCard(Card card)
     {
         _cards.Add(card);
-//        Debug.LogError("[ AddCard ] " + card.ValueType);
         UpdatePipCount();
     }
 
@@ -244,7 +243,6 @@ public class Player : ExtMonoBehaviour
             {
                 retCard = card;
                 _cards.Remove(card);
-//                Debug.LogError("[ RemoveCardWithValue ] " + card.ValueType);
                 UpdatePipCount();
 
                 break;
@@ -273,7 +271,6 @@ public class Player : ExtMonoBehaviour
 
     public void OnRoundEnd()
     {
-//        RemoveCardWithValue(SelectedCardValueType);
         SetSelectedCard(null);
         SetTurnStatus(E_PLAYER_TURN.WAITING);
     }
