@@ -22,6 +22,14 @@ public class SceneTransitionManager : SceneMonoBehaviour
         RearrangeScreens();
     }
 
+    public void ShowGameSelectionScreen()
+    {
+        SceneMonoBehaviour sceneMono = _activeScreen.GetComponent<SceneMonoBehaviour>();
+        sceneMono.OnMoveOutOfView();
+
+        SetActiveScreen(TagConstants.TAG_GAME_SELECTION_SCREEN);
+    }
+
     public void SetActiveScreen(string tag)
     {
         GameObject go = GameObject.FindGameObjectWithTag(tag);

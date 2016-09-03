@@ -20,6 +20,9 @@ public class GameEvent
     public const string UPDATE_PLAYER_MODEL = "playerModelUpdate";
     public const string ADD_TOKENS = "detectTokens";
 
+    public const string UPDATE_SWEEP_COUNT = "UpdateSweepCount";
+    public const string SWEEP_COUNT_UPDATED = "SWEEP_COUNT_UPDATED";
+
     public string type{ get; set; }
 
     public System.Action<NetworkResponse, bool> callback{ get; set; }

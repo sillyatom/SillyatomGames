@@ -170,6 +170,23 @@ public class Networking : ExtMonoBehaviour
         AddListeners();
     }
 
+    override public void Reset()
+    {
+        base.Reset();
+        IsHost = false;
+        hostId = "";
+        localId = "";
+        IsSinglePlayerMode = false;
+
+        _results.Clear();
+        _players.Clear();
+        _playersExcludingThis.Clear();
+        _playersIdsExcludingThis.Clear();
+        _playersIds.Clear();
+        _timeElapsed = 0.0f;
+        _pauseUpdate = false;
+    }
+
     public void OnSinglePlayerMode()
     {
         IsHost = true;
@@ -199,11 +216,20 @@ public class Networking : ExtMonoBehaviour
     private void UpdateSinglePlayerData()
     {
         //create players
+        List<string> names = new List<string>(){ "_A", "_B", "_C", "_D" };
+
         for (int index = 0; index < GameConstants.MAX_PLAYERS; index++)
         {
             NetworkPlayer player = new NetworkPlayer();
             player.PlayerId = index.ToString();
-            player.Name = "Player " + player.PlayerId;
+            if (index == 0)
+            {
+                player.Name = LocalPlayerModel.GetInstance().localPlayerName;
+            }
+            else
+            {
+                player.Name = "Player" + names[index];
+            }
             _players.Add(player);
         }
 
@@ -412,7 +438,7 @@ public class Networking : ExtMonoBehaviour
         }
 
         _results.RemoveAt(0);
-        DelayedCall(1.0f, OnAcknowledge);
+        DelayedCall(0.1f, OnAcknowledge);
     }
 
     private void OnAcknowledge()

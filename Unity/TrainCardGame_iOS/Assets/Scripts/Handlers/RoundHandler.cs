@@ -27,6 +27,16 @@ public class RoundHandler : ExtMonoBehaviour
 
     public bool IsActivePlayerLocal{ get { return (_activePlayerId == Networking.localId); } }
 
+    override public void Reset()
+    {
+        base.Reset();
+        currentRound = 0;
+        _elapsedTime = 0.0f;
+        _activePlayerId = "";
+        _isRoundActive = false;
+        progressBar.fillAmount = 0.0f;
+    }
+
     public override void Init()
     {
         base.Init();

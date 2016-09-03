@@ -1016,6 +1016,16 @@ extern "C"  int32_t AnimationEvent_GetHash_m2586883417 (AnimationEvent_t33447715
 		return L_5;
 	}
 }
+// System.Void UnityEngine.Animator::SetBool(System.String,System.Boolean)
+extern "C"  void Animator_SetBool_m2336836203 (Animator_t792326996 * __this, String_t* ___name, bool ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___name;
+		bool L_1 = ___value;
+		Animator_SetBoolString_m275475356(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Animator::SetTrigger(System.String)
 extern "C"  void Animator_SetTrigger_m514363822 (Animator_t792326996 * __this, String_t* ___name, const MethodInfo* method)
 {
@@ -1051,6 +1061,15 @@ extern "C"  int32_t Animator_StringToHash_m4020897098 (Il2CppObject * __this /* 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Animator_StringToHash_m4020897098_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::StringToHash(System.String)");
 	return _il2cpp_icall_func(___name);
+}
+// System.Void UnityEngine.Animator::SetBoolString(System.String,System.Boolean)
+extern "C"  void Animator_SetBoolString_m275475356 (Animator_t792326996 * __this, String_t* ___name, bool ___value, const MethodInfo* method)
+{
+	typedef void (*Animator_SetBoolString_m275475356_ftn) (Animator_t792326996 *, String_t*, bool);
+	static Animator_SetBoolString_m275475356_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_SetBoolString_m275475356_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::SetBoolString(System.String,System.Boolean)");
+	_il2cpp_icall_func(__this, ___name, ___value);
 }
 // System.Void UnityEngine.Animator::SetTriggerString(System.String)
 extern "C"  void Animator_SetTriggerString_m1378271133 (Animator_t792326996 * __this, String_t* ___name, const MethodInfo* method)
@@ -7587,17 +7606,6 @@ IL_003b:
 		return;
 	}
 }
-// System.Void UnityEngine.Events.InvokableCallList::Clear()
-extern "C"  void InvokableCallList_Clear_m4114435434 (InvokableCallList_t3771143731 * __this, const MethodInfo* method)
-{
-	{
-		List_1_t2530496925 * L_0 = __this->get_m_RuntimeCalls_1();
-		NullCheck(L_0);
-		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall>::Clear() */, L_0);
-		__this->set_m_NeedsUpdate_3((bool)1);
-		return;
-	}
-}
 // System.Void UnityEngine.Events.InvokableCallList::ClearPersistent()
 extern "C"  void InvokableCallList_ClearPersistent_m1690187553 (InvokableCallList_t3771143731 * __this, const MethodInfo* method)
 {
@@ -8742,16 +8750,6 @@ extern "C"  void UnityEventBase_RemoveListener_m276725997 (UnityEventBase_t21748
 		MethodInfo_t * L_2 = ___method;
 		NullCheck(L_0);
 		InvokableCallList_RemoveListener_m855004700(L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Events.UnityEventBase::RemoveAllListeners()
-extern "C"  void UnityEventBase_RemoveAllListeners_m2083644536 (UnityEventBase_t2174897510 * __this, const MethodInfo* method)
-{
-	{
-		InvokableCallList_t3771143731 * L_0 = __this->get_m_Calls_0();
-		NullCheck(L_0);
-		InvokableCallList_Clear_m4114435434(L_0, /*hidden argument*/NULL);
 		return;
 	}
 }

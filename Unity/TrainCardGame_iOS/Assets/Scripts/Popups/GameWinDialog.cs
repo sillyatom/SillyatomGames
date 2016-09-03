@@ -11,7 +11,6 @@ public class GameWinDialog : BaseDialog
 
     public void InitWithData(int starsEarned, int tokensEarned)
     {
-        closeBtn.onClick.RemoveAllListeners();
         for (int i = stars.Count - 1; i >= 0; i--)
         {
             stars[i].enabled = (starsEarned == i + 1);

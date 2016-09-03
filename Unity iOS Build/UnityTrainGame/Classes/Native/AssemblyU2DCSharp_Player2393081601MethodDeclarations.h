@@ -71,6 +71,8 @@ extern "C"  bool Player_get_IsLocalPlayer_m840128861 (Player_t2393081601 * __thi
 extern "C"  void Player_OnRoundStart_m4031893565 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::UpdateDP(System.String)
 extern "C"  void Player_UpdateDP_m4160431299 (Player_t2393081601 * __this, String_t* ___imagePath, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::Reset()
+extern "C"  void Player_Reset_m2813106535 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::Init()
 extern "C"  void Player_Init_m3304792154 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::EnableCountPip(System.Boolean)

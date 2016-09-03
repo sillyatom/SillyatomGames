@@ -44,3 +44,11 @@ extern "C"  void RoundResultVO_set_winningCards_m1959232980 (RoundResultVO_t2594
 extern "C"  int32_t RoundResultVO_get_cardsCount_m479974756 (RoundResultVO_t2594510628 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundResultVO::set_cardsCount(System.Int32)
 extern "C"  void RoundResultVO_set_cardsCount_m2969799671 (RoundResultVO_t2594510628 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean RoundResultVO::get_isSweep()
+extern "C"  bool RoundResultVO_get_isSweep_m3187763058 (RoundResultVO_t2594510628 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void RoundResultVO::set_isSweep(System.Boolean)
+extern "C"  void RoundResultVO_set_isSweep_m1082108097 (RoundResultVO_t2594510628 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 RoundResultVO::get_sweepCount()
+extern "C"  int32_t RoundResultVO_get_sweepCount_m1480831419 (RoundResultVO_t2594510628 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void RoundResultVO::set_sweepCount(System.Int32)
+extern "C"  void RoundResultVO_set_sweepCount_m1380490702 (RoundResultVO_t2594510628 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

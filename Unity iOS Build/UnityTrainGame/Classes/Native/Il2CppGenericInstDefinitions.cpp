@@ -2973,12 +2973,12 @@ extern const Il2CppGenericInst GenInst_Dealer_t2043054649_0_0_0 = { 1, GenInst_D
 extern const Il2CppType SinglePlayerMainGame_t3863033300_0_0_0;
 static const Il2CppType* GenInst_SinglePlayerMainGame_t3863033300_0_0_0_Types[] = { &SinglePlayerMainGame_t3863033300_0_0_0 };
 extern const Il2CppGenericInst GenInst_SinglePlayerMainGame_t3863033300_0_0_0 = { 1, GenInst_SinglePlayerMainGame_t3863033300_0_0_0_Types };
-extern const Il2CppType RoundHandler_t2172802556_0_0_0;
-static const Il2CppType* GenInst_RoundHandler_t2172802556_0_0_0_Types[] = { &RoundHandler_t2172802556_0_0_0 };
-extern const Il2CppGenericInst GenInst_RoundHandler_t2172802556_0_0_0 = { 1, GenInst_RoundHandler_t2172802556_0_0_0_Types };
 extern const Il2CppType SharedMainGame_t2807228656_0_0_0;
 static const Il2CppType* GenInst_SharedMainGame_t2807228656_0_0_0_Types[] = { &SharedMainGame_t2807228656_0_0_0 };
 extern const Il2CppGenericInst GenInst_SharedMainGame_t2807228656_0_0_0 = { 1, GenInst_SharedMainGame_t2807228656_0_0_0_Types };
+extern const Il2CppType RoundHandler_t2172802556_0_0_0;
+static const Il2CppType* GenInst_RoundHandler_t2172802556_0_0_0_Types[] = { &RoundHandler_t2172802556_0_0_0 };
+extern const Il2CppGenericInst GenInst_RoundHandler_t2172802556_0_0_0 = { 1, GenInst_RoundHandler_t2172802556_0_0_0_Types };
 extern const Il2CppType GameWinDialog_t176796754_0_0_0;
 static const Il2CppType* GenInst_GameWinDialog_t176796754_0_0_0_Types[] = { &GameWinDialog_t176796754_0_0_0 };
 extern const Il2CppGenericInst GenInst_GameWinDialog_t176796754_0_0_0 = { 1, GenInst_GameWinDialog_t176796754_0_0_0_Types };
@@ -3042,6 +3042,12 @@ extern const Il2CppGenericInst GenInst_PostURL_t1273431183_0_0_0 = { 1, GenInst_
 extern const Il2CppType TextMesh_t583678247_0_0_0;
 static const Il2CppType* GenInst_TextMesh_t583678247_0_0_0_Types[] = { &TextMesh_t583678247_0_0_0 };
 extern const Il2CppGenericInst GenInst_TextMesh_t583678247_0_0_0 = { 1, GenInst_TextMesh_t583678247_0_0_0_Types };
+extern const Il2CppType GrayColorToggle_t580454932_0_0_0;
+static const Il2CppType* GenInst_GrayColorToggle_t580454932_0_0_0_Types[] = { &GrayColorToggle_t580454932_0_0_0 };
+extern const Il2CppGenericInst GenInst_GrayColorToggle_t580454932_0_0_0 = { 1, GenInst_GrayColorToggle_t580454932_0_0_0_Types };
+extern const Il2CppType Train_t81068520_0_0_0;
+static const Il2CppType* GenInst_Train_t81068520_0_0_0_Types[] = { &Train_t81068520_0_0_0 };
+extern const Il2CppGenericInst GenInst_Train_t81068520_0_0_0 = { 1, GenInst_Train_t81068520_0_0_0_Types };
 static const Il2CppType* GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_PropertyPresence_t2652339728_0_0_0_Types[] = { &Il2CppObject_0_0_0, &Il2CppObject_0_0_0, &PropertyPresence_t2652339728_0_0_0 };
 extern const Il2CppGenericInst GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_PropertyPresence_t2652339728_0_0_0 = { 3, GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_PropertyPresence_t2652339728_0_0_0_Types };
 static const Il2CppType* GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_Boolean_t211005341_0_0_0_Types[] = { &Il2CppObject_0_0_0, &Il2CppObject_0_0_0, &Boolean_t211005341_0_0_0 };
@@ -3114,7 +3120,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t1028297519_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1131] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1133] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Attribute_t498693649_0_0_0,
@@ -4186,8 +4192,8 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1131] =
 	&GenInst_MultiplayerMainGame_t4046083237_0_0_0,
 	&GenInst_Dealer_t2043054649_0_0_0,
 	&GenInst_SinglePlayerMainGame_t3863033300_0_0_0,
-	&GenInst_RoundHandler_t2172802556_0_0_0,
 	&GenInst_SharedMainGame_t2807228656_0_0_0,
+	&GenInst_RoundHandler_t2172802556_0_0_0,
 	&GenInst_GameWinDialog_t176796754_0_0_0,
 	&GenInst_GameFailDialog_t1770299320_0_0_0,
 	&GenInst_InitCardsDataVO_t1547396566_0_0_0,
@@ -4211,6 +4217,8 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1131] =
 	&GenInst_GameObjectRef_t4121474274_0_0_0,
 	&GenInst_PostURL_t1273431183_0_0_0,
 	&GenInst_TextMesh_t583678247_0_0_0,
+	&GenInst_GrayColorToggle_t580454932_0_0_0,
+	&GenInst_Train_t81068520_0_0_0,
 	&GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_PropertyPresence_t2652339728_0_0_0,
 	&GenInst_Il2CppObject_0_0_0_Il2CppObject_0_0_0_Boolean_t211005341_0_0_0,
 	&GenInst_JTokenType_t656424096_0_0_0_JTokenType_t656424096_0_0_0,

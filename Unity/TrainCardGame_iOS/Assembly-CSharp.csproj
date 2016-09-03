@@ -402,6 +402,7 @@
      <Compile Include="Assets\Scripts\Handlers\SceneTransitionManager.cs" />
      <Compile Include="Assets\Scripts\Handlers\SpinHandler.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
+     <Compile Include="Assets\Scripts\Models\GameModel.cs" />
      <Compile Include="Assets\Scripts\Models\LocalPlayerModel.cs" />
      <Compile Include="Assets\Scripts\Networking\API.cs" />
      <Compile Include="Assets\Scripts\Networking\APIHandler.cs" />
@@ -436,10 +437,8 @@
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />
      <Compile Include="Assets\TestPackage\TestScripts\TestScript.cs" />
      <None Include="Assets\Resources\Images\GUI\Button.png.txt" />
-     <None Include="Assets\Resources\Fonts\flubber\Flubber.txt" />
+     <None Include="Assets\Resources\Fonts\chlorinar\1001fonts-chlorinar-eula.txt" />
      <None Include="Assets\Resources\Shaders\GrayScale.shader" />
-     <None Include="Assets\Resources\Fonts\alpine\1001fonts-alpine-eula.txt" />
-     <None Include="Assets\Resources\Fonts\blow\readme.txt" />
      <None Include="Assets\Resources\Shaders\GlowShader.shader" />
      <None Include="Assets\JsonDotNet\ReadMe.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />

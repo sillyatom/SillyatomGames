@@ -20,6 +20,8 @@ public class InGameEvent : GameEvent
 
     public int status{ get; set; }
 
+    public Player player{ get; set; }
+
     public InGameEvent(string type)
         : base(type)
     {
@@ -36,6 +38,12 @@ public class InGameEvent : GameEvent
         : base(type)
     {
         this.playerId = playerId;
+    }
+
+    public InGameEvent(string type, Player player)
+        : base(type)
+    {
+        this.player = player;
     }
 
     public InGameEvent(string type, Card card)

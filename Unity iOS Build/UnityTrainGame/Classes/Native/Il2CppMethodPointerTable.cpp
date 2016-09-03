@@ -9165,10 +9165,12 @@ extern "C" void AnimationEvent_get_animationState_m2712753230 ();
 extern "C" void AnimationEvent_get_animatorStateInfo_m194903218 ();
 extern "C" void AnimationEvent_get_animatorClipInfo_m493861262 ();
 extern "C" void AnimationEvent_GetHash_m2586883417 ();
+extern "C" void Animator_SetBool_m2336836203 ();
 extern "C" void Animator_SetTrigger_m514363822 ();
 extern "C" void Animator_ResetTrigger_m4152421915 ();
 extern "C" void Animator_get_runtimeAnimatorController_m1822082727 ();
 extern "C" void Animator_StringToHash_m4020897098 ();
+extern "C" void Animator_SetBoolString_m275475356 ();
 extern "C" void Animator_SetTriggerString_m1378271133 ();
 extern "C" void Animator_ResetTriggerString_m1817269834 ();
 extern "C" void AnimatorStateInfo_IsName_m1653922768 ();
@@ -9539,7 +9541,6 @@ extern "C" void InvokableCallList__ctor_m2413334847 ();
 extern "C" void InvokableCallList_AddPersistentInvokableCall_m4220625340 ();
 extern "C" void InvokableCallList_AddListener_m1356872764 ();
 extern "C" void InvokableCallList_RemoveListener_m855004700 ();
-extern "C" void InvokableCallList_Clear_m4114435434 ();
 extern "C" void InvokableCallList_ClearPersistent_m1690187553 ();
 extern "C" void InvokableCallList_Invoke_m575840373 ();
 extern "C" void PersistentCall__ctor_m3363339247 ();
@@ -9571,7 +9572,6 @@ extern "C" void UnityEventBase_DirtyPersistentCalls_m1636785090 ();
 extern "C" void UnityEventBase_RebuildPersistentCallsIfNeeded_m4147202091 ();
 extern "C" void UnityEventBase_AddCall_m1246572149 ();
 extern "C" void UnityEventBase_RemoveListener_m276725997 ();
-extern "C" void UnityEventBase_RemoveAllListeners_m2083644536 ();
 extern "C" void UnityEventBase_Invoke_m3681078084 ();
 extern "C" void UnityEventBase_ToString_m249191135 ();
 extern "C" void UnityEventBase_GetValidMethodInfo_m2325301202 ();
@@ -13758,8 +13758,6 @@ extern "C" void SimpleClassObject_get_VectorValue_m546478453 ();
 extern "C" void SimpleClassObject_set_VectorValue_m1113077106 ();
 extern "C" void BaseDialog__ctor_m1365764386 ();
 extern "C" void BaseDialog_Init_m1519614194 ();
-extern "C" void BaseDialog_OnClickCloseBtn_m3907925901 ();
-extern "C" void BaseDialog_OnClickOkBtn_m3938115225 ();
 extern "C" void BaseDialog_OnRemove_m1178192357 ();
 extern "C" void BridgeDebugger__ctor_m61064433 ();
 extern "C" void BridgeDebugger_debugMessage_m623718683 ();
@@ -13792,6 +13790,7 @@ extern "C" void Dealer__ctor_m1821788802 ();
 extern "C" void Dealer_get_Cards_m624206455 ();
 extern "C" void Dealer_set_Cards_m320147516 ();
 extern "C" void Dealer_Init_m425946002 ();
+extern "C" void Dealer_Reset_m3763189039 ();
 extern "C" void Dealer_GetDeckSize_m1851388114 ();
 extern "C" void Dealer_SetGrayEffect_m507993717 ();
 extern "C" void Dealer_PopBack_m1962333771 ();
@@ -13848,6 +13847,7 @@ extern "C" void ExtensionMethods__cctor_m390673221 ();
 extern "C" void ExtMonoBehaviour__ctor_m885263906 ();
 extern "C" void ExtMonoBehaviour_get_isInitialized_m952256653 ();
 extern "C" void ExtMonoBehaviour_Init_m949924850 ();
+extern "C" void ExtMonoBehaviour_OnDestroy_m2310930971 ();
 extern "C" void ExtMonoBehaviour_AddListeners_m2272350464 ();
 extern "C" void ExtMonoBehaviour_RemoveListeners_m1741366235 ();
 extern "C" void ExtMonoBehaviour_DelayedCall_m1718849090 ();
@@ -13855,6 +13855,7 @@ extern "C" void ExtMonoBehaviour_StartDelay_m1484571095 ();
 extern "C" void ExtMonoBehaviour_OnGameEvent_m1534583617 ();
 extern "C" void ExtMonoBehaviour_OnMoveOutOfView_m4152219546 ();
 extern "C" void ExtMonoBehaviour_OnSetToView_m2578106083 ();
+extern "C" void ExtMonoBehaviour_Reset_m2826664143 ();
 extern "C" void U3CStartDelayU3Ec__Iterator7__ctor_m1190923598 ();
 extern "C" void U3CStartDelayU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m426610948 ();
 extern "C" void U3CStartDelayU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m3444186264 ();
@@ -13884,6 +13885,15 @@ extern "C" void GameEvent_set_val_m1408206998 ();
 extern "C" void GameFailDialog__ctor_m2736610275 ();
 extern "C" void GameFailDialog_InitWithData_m3581889157 ();
 extern "C" void GameFailDialog_OnRemove_m3499021188 ();
+extern "C" void GameModel__ctor_m968531220 ();
+extern "C" void GameModel__cctor_m3772567833 ();
+extern "C" void GameModel_get_sweepCount_m2860013326 ();
+extern "C" void GameModel_set_sweepCount_m2029286817 ();
+extern "C" void GameModel_get_isGameOver_m1638125845 ();
+extern "C" void GameModel_set_isGameOver_m4188364148 ();
+extern "C" void GameModel_get_Instance_m4055778066 ();
+extern "C" void GameModel_Reset_m2909931457 ();
+extern "C" void GameModel_OnGameEvent_m817320463 ();
 extern "C" void GameObjectRef__ctor_m443681481 ();
 extern "C" void GameScreenMonoBehaviour__ctor_m1875208271 ();
 extern "C" void GameScreenMonoBehaviour_OnGameEvent_m2365278580 ();
@@ -13891,7 +13901,9 @@ extern "C" void GameSelectionScreen__ctor_m2186336133 ();
 extern "C" void GameSelectionScreen__cctor_m2869814472 ();
 extern "C" void GameSelectionScreen_GetSweepCount_m2322534634 ();
 extern "C" void GameSelectionScreen_GetEntryFees_m821613210 ();
+extern "C" void GameSelectionScreen_GetSelectedGameIndex_m1091878272 ();
 extern "C" void GameSelectionScreen_Init_m2238820911 ();
+extern "C" void GameSelectionScreen_Reset_m4127736370 ();
 extern "C" void GameSelectionScreen_OnGameEvent_m2265499518 ();
 extern "C" void GameSelectionScreen_OnInGameEvent_m3171217288 ();
 extern "C" void GameSelectionScreen_OnSetToView_m3351624198 ();
@@ -13918,6 +13930,8 @@ extern "C" void GenericPopup__ctor_m3500352774 ();
 extern "C" void GenericPopup_Init_m3805229198 ();
 extern "C" void GenericPopup_UpdateData_m1128014861 ();
 extern "C" void GenericPopup_OnRemove_m1415074689 ();
+extern "C" void GrayColorToggle__ctor_m2144785367 ();
+extern "C" void GrayColorToggle_SetGrayEffect_m3461180480 ();
 extern "C" void HeaderVO__ctor_m3957647157 ();
 extern "C" void HeaderVO_get_api_id_m1188521094 ();
 extern "C" void HeaderVO_set_api_id_m2709656765 ();
@@ -13940,6 +13954,7 @@ extern "C" void HUD_OnGameEvent_m4187518639 ();
 extern "C" void InGameEvent__ctor_m2728077114 ();
 extern "C" void InGameEvent__ctor_m2522809309 ();
 extern "C" void InGameEvent__ctor_m1354375670 ();
+extern "C" void InGameEvent__ctor_m2639266667 ();
 extern "C" void InGameEvent__ctor_m3208302044 ();
 extern "C" void InGameEvent_get_playerId_m2478433726 ();
 extern "C" void InGameEvent_set_playerId_m4245859309 ();
@@ -13947,6 +13962,8 @@ extern "C" void InGameEvent_get_card_m1665257800 ();
 extern "C" void InGameEvent_set_card_m1793598009 ();
 extern "C" void InGameEvent_get_status_m20898569 ();
 extern "C" void InGameEvent_set_status_m3406780060 ();
+extern "C" void InGameEvent_get_player_m3780532458 ();
+extern "C" void InGameEvent_set_player_m1548975449 ();
 extern "C" void InGameInfoText__ctor_m801941993 ();
 extern "C" void InGameInfoText_Hide_m1606563581 ();
 extern "C" void InGameInfoText_ShowMessage_m3546954056 ();
@@ -14019,6 +14036,7 @@ extern "C" void U3CStartSignInProcessU3Ec__IteratorC_Dispose_m3333922389 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC_Reset_m4201956037 ();
 extern "C" void MatchSelectionScreen__ctor_m2494922568 ();
 extern "C" void MatchSelectionScreen_findMatches_m277424448 ();
+extern "C" void MatchSelectionScreen_OnSetToView_m4214244233 ();
 extern "C" void MatchSelectionScreen_Init_m2110227980 ();
 extern "C" void MatchSelectionScreen_CreateMultiplayerGame_m3784813110 ();
 extern "C" void MatchSelectionScreen_OnClick_m288207406 ();
@@ -14031,6 +14049,7 @@ extern "C" void MatchStartedVO__ctor_m622607718 ();
 extern "C" void MultiplayerMainGame__ctor_m3970443366 ();
 extern "C" void MultiplayerMainGame_GetDPPath_m1101217716 ();
 extern "C" void MultiplayerMainGame_Init_m3127656750 ();
+extern "C" void MultiplayerMainGame_OnMoveOutOfView_m3913870558 ();
 extern "C" void MultiplayerMainGame_InitGame_m1931109952 ();
 extern "C" void MultiplayerMainGame_ShowWinDialog_m3274749579 ();
 extern "C" void MultiplayerMainGame_ShowFailDialog_m1861354497 ();
@@ -14038,6 +14057,7 @@ extern "C" void MultiplayerMainGame_OnInGameEvent_m361302279 ();
 extern "C" void MultiplayerMainGame_DealCard_m747093444 ();
 extern "C" void MultiplayerMainGame_OnDealComplete_m1518237874 ();
 extern "C" void MultiplayerMainGame_OnAutoDealAnimationComplete_m3604132397 ();
+extern "C" void MultiplayerMainGame_UpdateSweepCount_m4125627594 ();
 extern "C" void MultiplayerMainGame_CheckWinnings_m3943219407 ();
 extern "C" void MultiplayerMainGame_OnDistributeWinningCard_m2574405840 ();
 extern "C" void MultiplayerMainGame_OnShiftComplete_m4273595235 ();
@@ -14060,6 +14080,9 @@ extern "C" void MultiplayerMainGame_OnDistributeAnimationComplete_m1894607443 ()
 extern "C" void MultiplayerMainGame_DispatchNextRound_m3515514821 ();
 extern "C" void MultiplayerMainGame_OnRoundEnd_m3044907722 ();
 extern "C" void MultiplayerMainGame_OnRoundResult_m1984846874 ();
+extern "C" void MultiplayerMainGame_EndGame_m2560472305 ();
+extern "C" void MultiplayerMainGame_CheckGameEnd_m2426142783 ();
+extern "C" void MultiplayerMainGame_CleanPlayers_m1407908871 ();
 extern "C" void U3COnShiftCompleteU3Ec__IteratorD__ctor_m1682827524 ();
 extern "C" void U3COnShiftCompleteU3Ec__IteratorD_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3827810318 ();
 extern "C" void U3COnShiftCompleteU3Ec__IteratorD_System_Collections_IEnumerator_get_Current_m516399010 ();
@@ -14087,6 +14110,7 @@ extern "C" void Networking_GetPlayerById_m2192672952 ();
 extern "C" void Networking_GetPlayerByIdExcludeList_m3185995186 ();
 extern "C" void Networking_RemovePlayer_m3493736096 ();
 extern "C" void Networking_Init_m4091929965 ();
+extern "C" void Networking_Reset_m1444574900 ();
 extern "C" void Networking_OnSinglePlayerMode_m504645416 ();
 extern "C" void Networking_GetNextPlayer_m972504375 ();
 extern "C" void Networking_UpdateSinglePlayerData_m2490043865 ();
@@ -16093,6 +16117,7 @@ extern "C" void Player_GetCardByValueType_m2104611901 ();
 extern "C" void Player_get_IsLocalPlayer_m840128861 ();
 extern "C" void Player_OnRoundStart_m4031893565 ();
 extern "C" void Player_UpdateDP_m4160431299 ();
+extern "C" void Player_Reset_m2813106535 ();
 extern "C" void Player_Init_m3304792154 ();
 extern "C" void Player_EnableCountPip_m2105921196 ();
 extern "C" void Player_AddCard_m2388479993 ();
@@ -16144,6 +16169,10 @@ extern "C" void ResultVO_get_cards_m1913580282 ();
 extern "C" void ResultVO_set_cards_m3628560153 ();
 extern "C" void ResultVO_get_winningCards_m2091815133 ();
 extern "C" void ResultVO_set_winningCards_m625555250 ();
+extern "C" void ResultVO_get_isSweep_m2507918312 ();
+extern "C" void ResultVO_set_isSweep_m635921055 ();
+extern "C" void ResultVO_get_sweepCount_m3537692409 ();
+extern "C" void ResultVO_set_sweepCount_m433594288 ();
 extern "C" void ResultVO_GetCardWithValueType_m3773938007 ();
 extern "C" void RoundHandler__ctor_m1935710239 ();
 extern "C" void RoundHandler__cctor_m3690346350 ();
@@ -16153,6 +16182,7 @@ extern "C" void RoundHandler_get_GetRoundNumber_m780187549 ();
 extern "C" void RoundHandler_get_GetActivePlayerId_m3690731145 ();
 extern "C" void RoundHandler_set_SetActivePlayerId_m367756958 ();
 extern "C" void RoundHandler_get_IsActivePlayerLocal_m3242918010 ();
+extern "C" void RoundHandler_Reset_m3877110476 ();
 extern "C" void RoundHandler_Init_m2507830869 ();
 extern "C" void RoundHandler_OnGameEvent_m2386591652 ();
 extern "C" void RoundHandler_OnInGameEvent_m1941447854 ();
@@ -16181,6 +16211,10 @@ extern "C" void RoundResultVO_get_winningCards_m3857848247 ();
 extern "C" void RoundResultVO_set_winningCards_m1959232980 ();
 extern "C" void RoundResultVO_get_cardsCount_m479974756 ();
 extern "C" void RoundResultVO_set_cardsCount_m2969799671 ();
+extern "C" void RoundResultVO_get_isSweep_m3187763058 ();
+extern "C" void RoundResultVO_set_isSweep_m1082108097 ();
+extern "C" void RoundResultVO_get_sweepCount_m1480831419 ();
+extern "C" void RoundResultVO_set_sweepCount_m1380490702 ();
 extern "C" void RoundVO__ctor_m143774372 ();
 extern "C" void RoundVO_get_roundId_m1406987792 ();
 extern "C" void RoundVO_set_roundId_m1649707231 ();
@@ -16207,6 +16241,7 @@ extern "C" void SceneMonoBehaviour_OnInGameEvent_m3756406208 ();
 extern "C" void SceneTransitionManager__ctor_m2716382351 ();
 extern "C" void SceneTransitionManager_Init_m3225750501 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3383367968 ();
+extern "C" void SceneTransitionManager_ShowGameSelectionScreen_m2506809590 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3079263841 ();
 extern "C" void SceneTransitionManager_RearrangeScreens_m1562589827 ();
 extern "C" void SharedMainGame__ctor_m1851912619 ();
@@ -16224,6 +16259,8 @@ extern "C" void SinglePlayerMainGame_OnGameEvent_m3147165564 ();
 extern "C" void SinglePlayerMainGame_AutoPlay_m469515816 ();
 extern "C" void SinglePlayerMainGame_DispatchNextRound_m2268102950 ();
 extern "C" void SinglePlayerMainGame_OnRoundEnd_m4277269641 ();
+extern "C" void SinglePlayerMainGame_UpdateSweepCount_m3669746505 ();
+extern "C" void SinglePlayerMainGame_OnMoveOutOfView_m2375144063 ();
 extern "C" void U3CAutoPlayU3Ec__IteratorE__ctor_m552212349 ();
 extern "C" void U3CAutoPlayU3Ec__IteratorE_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2703116149 ();
 extern "C" void U3CAutoPlayU3Ec__IteratorE_System_Collections_IEnumerator_get_Current_m2356139273 ();
@@ -16280,6 +16317,17 @@ extern "C" void TextTest__ctor_m3594205692 ();
 extern "C" void TextTest_Start_m2541343484 ();
 extern "C" void TextTest_Update_m1478088849 ();
 extern "C" void TextTest_RunNextTest_m1901701674 ();
+extern "C" void Train__ctor_m1858104451 ();
+extern "C" void Train_Awake_m2095709670 ();
+extern "C" void Train_EnableCompartmentById_m1985356531 ();
+extern "C" void Train_DisableCompartmentById_m3656144494 ();
+extern "C" void Train_DisableAll_m67448762 ();
+extern "C" void Trains__ctor_m2614031728 ();
+extern "C" void Trains_Awake_m2851636947 ();
+extern "C" void Trains_GetActiveTrain_m2915612267 ();
+extern "C" void Trains_OnGameEvent_m416527923 ();
+extern "C" void Trains_RemoveActiveTrain_m97481484 ();
+extern "C" void Trains_EnableTrainById_m2530733590 ();
 extern "C" void Utility__ctor_m2826353567 ();
 extern "C" void Utility__cctor_m1235518446 ();
 extern "C" void Utility_SinInterpolate_m2903343064 ();
@@ -16301,7 +16349,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16290] = 
+extern const methodPointerType g_MethodPointers[16338] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -25457,10 +25505,12 @@ extern const methodPointerType g_MethodPointers[16290] =
 	AnimationEvent_get_animatorStateInfo_m194903218,
 	AnimationEvent_get_animatorClipInfo_m493861262,
 	AnimationEvent_GetHash_m2586883417,
+	Animator_SetBool_m2336836203,
 	Animator_SetTrigger_m514363822,
 	Animator_ResetTrigger_m4152421915,
 	Animator_get_runtimeAnimatorController_m1822082727,
 	Animator_StringToHash_m4020897098,
+	Animator_SetBoolString_m275475356,
 	Animator_SetTriggerString_m1378271133,
 	Animator_ResetTriggerString_m1817269834,
 	AnimatorStateInfo_IsName_m1653922768,
@@ -25831,7 +25881,6 @@ extern const methodPointerType g_MethodPointers[16290] =
 	InvokableCallList_AddPersistentInvokableCall_m4220625340,
 	InvokableCallList_AddListener_m1356872764,
 	InvokableCallList_RemoveListener_m855004700,
-	InvokableCallList_Clear_m4114435434,
 	InvokableCallList_ClearPersistent_m1690187553,
 	InvokableCallList_Invoke_m575840373,
 	PersistentCall__ctor_m3363339247,
@@ -25863,7 +25912,6 @@ extern const methodPointerType g_MethodPointers[16290] =
 	UnityEventBase_RebuildPersistentCallsIfNeeded_m4147202091,
 	UnityEventBase_AddCall_m1246572149,
 	UnityEventBase_RemoveListener_m276725997,
-	UnityEventBase_RemoveAllListeners_m2083644536,
 	UnityEventBase_Invoke_m3681078084,
 	UnityEventBase_ToString_m249191135,
 	UnityEventBase_GetValidMethodInfo_m2325301202,
@@ -30050,8 +30098,6 @@ extern const methodPointerType g_MethodPointers[16290] =
 	SimpleClassObject_set_VectorValue_m1113077106,
 	BaseDialog__ctor_m1365764386,
 	BaseDialog_Init_m1519614194,
-	BaseDialog_OnClickCloseBtn_m3907925901,
-	BaseDialog_OnClickOkBtn_m3938115225,
 	BaseDialog_OnRemove_m1178192357,
 	BridgeDebugger__ctor_m61064433,
 	BridgeDebugger_debugMessage_m623718683,
@@ -30084,6 +30130,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	Dealer_get_Cards_m624206455,
 	Dealer_set_Cards_m320147516,
 	Dealer_Init_m425946002,
+	Dealer_Reset_m3763189039,
 	Dealer_GetDeckSize_m1851388114,
 	Dealer_SetGrayEffect_m507993717,
 	Dealer_PopBack_m1962333771,
@@ -30140,6 +30187,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	ExtMonoBehaviour__ctor_m885263906,
 	ExtMonoBehaviour_get_isInitialized_m952256653,
 	ExtMonoBehaviour_Init_m949924850,
+	ExtMonoBehaviour_OnDestroy_m2310930971,
 	ExtMonoBehaviour_AddListeners_m2272350464,
 	ExtMonoBehaviour_RemoveListeners_m1741366235,
 	ExtMonoBehaviour_DelayedCall_m1718849090,
@@ -30147,6 +30195,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	ExtMonoBehaviour_OnGameEvent_m1534583617,
 	ExtMonoBehaviour_OnMoveOutOfView_m4152219546,
 	ExtMonoBehaviour_OnSetToView_m2578106083,
+	ExtMonoBehaviour_Reset_m2826664143,
 	U3CStartDelayU3Ec__Iterator7__ctor_m1190923598,
 	U3CStartDelayU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m426610948,
 	U3CStartDelayU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m3444186264,
@@ -30176,6 +30225,15 @@ extern const methodPointerType g_MethodPointers[16290] =
 	GameFailDialog__ctor_m2736610275,
 	GameFailDialog_InitWithData_m3581889157,
 	GameFailDialog_OnRemove_m3499021188,
+	GameModel__ctor_m968531220,
+	GameModel__cctor_m3772567833,
+	GameModel_get_sweepCount_m2860013326,
+	GameModel_set_sweepCount_m2029286817,
+	GameModel_get_isGameOver_m1638125845,
+	GameModel_set_isGameOver_m4188364148,
+	GameModel_get_Instance_m4055778066,
+	GameModel_Reset_m2909931457,
+	GameModel_OnGameEvent_m817320463,
 	GameObjectRef__ctor_m443681481,
 	GameScreenMonoBehaviour__ctor_m1875208271,
 	GameScreenMonoBehaviour_OnGameEvent_m2365278580,
@@ -30183,7 +30241,9 @@ extern const methodPointerType g_MethodPointers[16290] =
 	GameSelectionScreen__cctor_m2869814472,
 	GameSelectionScreen_GetSweepCount_m2322534634,
 	GameSelectionScreen_GetEntryFees_m821613210,
+	GameSelectionScreen_GetSelectedGameIndex_m1091878272,
 	GameSelectionScreen_Init_m2238820911,
+	GameSelectionScreen_Reset_m4127736370,
 	GameSelectionScreen_OnGameEvent_m2265499518,
 	GameSelectionScreen_OnInGameEvent_m3171217288,
 	GameSelectionScreen_OnSetToView_m3351624198,
@@ -30210,6 +30270,8 @@ extern const methodPointerType g_MethodPointers[16290] =
 	GenericPopup_Init_m3805229198,
 	GenericPopup_UpdateData_m1128014861,
 	GenericPopup_OnRemove_m1415074689,
+	GrayColorToggle__ctor_m2144785367,
+	GrayColorToggle_SetGrayEffect_m3461180480,
 	HeaderVO__ctor_m3957647157,
 	HeaderVO_get_api_id_m1188521094,
 	HeaderVO_set_api_id_m2709656765,
@@ -30232,6 +30294,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	InGameEvent__ctor_m2728077114,
 	InGameEvent__ctor_m2522809309,
 	InGameEvent__ctor_m1354375670,
+	InGameEvent__ctor_m2639266667,
 	InGameEvent__ctor_m3208302044,
 	InGameEvent_get_playerId_m2478433726,
 	InGameEvent_set_playerId_m4245859309,
@@ -30239,6 +30302,8 @@ extern const methodPointerType g_MethodPointers[16290] =
 	InGameEvent_set_card_m1793598009,
 	InGameEvent_get_status_m20898569,
 	InGameEvent_set_status_m3406780060,
+	InGameEvent_get_player_m3780532458,
+	InGameEvent_set_player_m1548975449,
 	InGameInfoText__ctor_m801941993,
 	InGameInfoText_Hide_m1606563581,
 	InGameInfoText_ShowMessage_m3546954056,
@@ -30311,6 +30376,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	U3CStartSignInProcessU3Ec__IteratorC_Reset_m4201956037,
 	MatchSelectionScreen__ctor_m2494922568,
 	MatchSelectionScreen_findMatches_m277424448,
+	MatchSelectionScreen_OnSetToView_m4214244233,
 	MatchSelectionScreen_Init_m2110227980,
 	MatchSelectionScreen_CreateMultiplayerGame_m3784813110,
 	MatchSelectionScreen_OnClick_m288207406,
@@ -30323,6 +30389,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	MultiplayerMainGame__ctor_m3970443366,
 	MultiplayerMainGame_GetDPPath_m1101217716,
 	MultiplayerMainGame_Init_m3127656750,
+	MultiplayerMainGame_OnMoveOutOfView_m3913870558,
 	MultiplayerMainGame_InitGame_m1931109952,
 	MultiplayerMainGame_ShowWinDialog_m3274749579,
 	MultiplayerMainGame_ShowFailDialog_m1861354497,
@@ -30330,6 +30397,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	MultiplayerMainGame_DealCard_m747093444,
 	MultiplayerMainGame_OnDealComplete_m1518237874,
 	MultiplayerMainGame_OnAutoDealAnimationComplete_m3604132397,
+	MultiplayerMainGame_UpdateSweepCount_m4125627594,
 	MultiplayerMainGame_CheckWinnings_m3943219407,
 	MultiplayerMainGame_OnDistributeWinningCard_m2574405840,
 	MultiplayerMainGame_OnShiftComplete_m4273595235,
@@ -30352,6 +30420,9 @@ extern const methodPointerType g_MethodPointers[16290] =
 	MultiplayerMainGame_DispatchNextRound_m3515514821,
 	MultiplayerMainGame_OnRoundEnd_m3044907722,
 	MultiplayerMainGame_OnRoundResult_m1984846874,
+	MultiplayerMainGame_EndGame_m2560472305,
+	MultiplayerMainGame_CheckGameEnd_m2426142783,
+	MultiplayerMainGame_CleanPlayers_m1407908871,
 	U3COnShiftCompleteU3Ec__IteratorD__ctor_m1682827524,
 	U3COnShiftCompleteU3Ec__IteratorD_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3827810318,
 	U3COnShiftCompleteU3Ec__IteratorD_System_Collections_IEnumerator_get_Current_m516399010,
@@ -30379,6 +30450,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	Networking_GetPlayerByIdExcludeList_m3185995186,
 	Networking_RemovePlayer_m3493736096,
 	Networking_Init_m4091929965,
+	Networking_Reset_m1444574900,
 	Networking_OnSinglePlayerMode_m504645416,
 	Networking_GetNextPlayer_m972504375,
 	Networking_UpdateSinglePlayerData_m2490043865,
@@ -32385,6 +32457,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	Player_get_IsLocalPlayer_m840128861,
 	Player_OnRoundStart_m4031893565,
 	Player_UpdateDP_m4160431299,
+	Player_Reset_m2813106535,
 	Player_Init_m3304792154,
 	Player_EnableCountPip_m2105921196,
 	Player_AddCard_m2388479993,
@@ -32436,6 +32509,10 @@ extern const methodPointerType g_MethodPointers[16290] =
 	ResultVO_set_cards_m3628560153,
 	ResultVO_get_winningCards_m2091815133,
 	ResultVO_set_winningCards_m625555250,
+	ResultVO_get_isSweep_m2507918312,
+	ResultVO_set_isSweep_m635921055,
+	ResultVO_get_sweepCount_m3537692409,
+	ResultVO_set_sweepCount_m433594288,
 	ResultVO_GetCardWithValueType_m3773938007,
 	RoundHandler__ctor_m1935710239,
 	RoundHandler__cctor_m3690346350,
@@ -32445,6 +32522,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	RoundHandler_get_GetActivePlayerId_m3690731145,
 	RoundHandler_set_SetActivePlayerId_m367756958,
 	RoundHandler_get_IsActivePlayerLocal_m3242918010,
+	RoundHandler_Reset_m3877110476,
 	RoundHandler_Init_m2507830869,
 	RoundHandler_OnGameEvent_m2386591652,
 	RoundHandler_OnInGameEvent_m1941447854,
@@ -32473,6 +32551,10 @@ extern const methodPointerType g_MethodPointers[16290] =
 	RoundResultVO_set_winningCards_m1959232980,
 	RoundResultVO_get_cardsCount_m479974756,
 	RoundResultVO_set_cardsCount_m2969799671,
+	RoundResultVO_get_isSweep_m3187763058,
+	RoundResultVO_set_isSweep_m1082108097,
+	RoundResultVO_get_sweepCount_m1480831419,
+	RoundResultVO_set_sweepCount_m1380490702,
 	RoundVO__ctor_m143774372,
 	RoundVO_get_roundId_m1406987792,
 	RoundVO_set_roundId_m1649707231,
@@ -32499,6 +32581,7 @@ extern const methodPointerType g_MethodPointers[16290] =
 	SceneTransitionManager__ctor_m2716382351,
 	SceneTransitionManager_Init_m3225750501,
 	SceneTransitionManager_SetActiveScreen_m3383367968,
+	SceneTransitionManager_ShowGameSelectionScreen_m2506809590,
 	SceneTransitionManager_SetActiveScreen_m3079263841,
 	SceneTransitionManager_RearrangeScreens_m1562589827,
 	SharedMainGame__ctor_m1851912619,
@@ -32516,6 +32599,8 @@ extern const methodPointerType g_MethodPointers[16290] =
 	SinglePlayerMainGame_AutoPlay_m469515816,
 	SinglePlayerMainGame_DispatchNextRound_m2268102950,
 	SinglePlayerMainGame_OnRoundEnd_m4277269641,
+	SinglePlayerMainGame_UpdateSweepCount_m3669746505,
+	SinglePlayerMainGame_OnMoveOutOfView_m2375144063,
 	U3CAutoPlayU3Ec__IteratorE__ctor_m552212349,
 	U3CAutoPlayU3Ec__IteratorE_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2703116149,
 	U3CAutoPlayU3Ec__IteratorE_System_Collections_IEnumerator_get_Current_m2356139273,
@@ -32572,6 +32657,17 @@ extern const methodPointerType g_MethodPointers[16290] =
 	TextTest_Start_m2541343484,
 	TextTest_Update_m1478088849,
 	TextTest_RunNextTest_m1901701674,
+	Train__ctor_m1858104451,
+	Train_Awake_m2095709670,
+	Train_EnableCompartmentById_m1985356531,
+	Train_DisableCompartmentById_m3656144494,
+	Train_DisableAll_m67448762,
+	Trains__ctor_m2614031728,
+	Trains_Awake_m2851636947,
+	Trains_GetActiveTrain_m2915612267,
+	Trains_OnGameEvent_m416527923,
+	Trains_RemoveActiveTrain_m97481484,
+	Trains_EnableTrainById_m2530733590,
 	Utility__ctor_m2826353567,
 	Utility__cctor_m1235518446,
 	Utility_SinInterpolate_m2903343064,

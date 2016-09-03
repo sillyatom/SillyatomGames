@@ -31,8 +31,12 @@ extern "C"  void GameSelectionScreen__cctor_m2869814472 (Il2CppObject * __this /
 extern "C"  int32_t GameSelectionScreen_GetSweepCount_m2322534634 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 GameSelectionScreen::GetEntryFees()
 extern "C"  int32_t GameSelectionScreen_GetEntryFees_m821613210 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 GameSelectionScreen::GetSelectedGameIndex()
+extern "C"  int32_t GameSelectionScreen_GetSelectedGameIndex_m1091878272 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameSelectionScreen::Init()
 extern "C"  void GameSelectionScreen_Init_m2238820911 (GameSelectionScreen_t839734950 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameSelectionScreen::Reset()
+extern "C"  void GameSelectionScreen_Reset_m4127736370 (GameSelectionScreen_t839734950 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameSelectionScreen::OnGameEvent(GameEvent)
 extern "C"  void GameSelectionScreen_OnGameEvent_m2265499518 (GameSelectionScreen_t839734950 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameSelectionScreen::OnInGameEvent(InGameEvent)

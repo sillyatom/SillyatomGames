@@ -13,6 +13,10 @@
 #include <limits>
 #include <assert.h>
 
+// Newtonsoft.Json.JsonConstructorAttribute
+struct JsonConstructorAttribute_t1144657805;
+// Newtonsoft.Json.JsonContainerAttribute
+struct JsonContainerAttribute_t4246140134;
 // System.String
 struct String_t;
 // System.IO.TextWriter
@@ -471,16 +475,22 @@ struct IWrappedDictionary_t890148009;
 struct JsonFormatterConverter_t3202368087;
 // Newtonsoft.Json.Serialization.ObjectConstructor`1<System.Object>
 struct ObjectConstructor_1_t602487958;
-// Newtonsoft.Json.Serialization.JsonSerializerInternalBase
-struct JsonSerializerInternalBase_t1092275265;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConstructorA1144657805.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConstructorA1144657805MethodDeclarations.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Attribute498693649MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134MethodDeclarations.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_Nullable_1_gen3097043249MethodDeclarations.h"
+#include "mscorlib_System_Nullable_1_gen3097043249.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConvert748332590.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConvert748332590MethodDeclarations.h"
-#include "mscorlib_System_Void2779279689.h"
-#include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_Int642847414882.h"
 #include "mscorlib_System_DateTime339033936.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279MethodDeclarations.h"
@@ -498,7 +508,6 @@ struct JsonSerializerInternalBase_t1092275265;
 #include "mscorlib_System_TimeSpan763862892MethodDeclarations.h"
 #include "mscorlib_System_IO_TextWriter1689927879MethodDeclarations.h"
 #include "mscorlib_System_Math2778998461MethodDeclarations.h"
-#include "mscorlib_System_Boolean211005341.h"
 #include "mscorlib_System_Char2778706699.h"
 #include "mscorlib_System_Char2778706699MethodDeclarations.h"
 #include "mscorlib_System_Enum2778772662.h"
@@ -573,7 +582,6 @@ struct JsonSerializerInternalBase_t1092275265;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem4227645115.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterAtt3372878503.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterAtt3372878503MethodDeclarations.h"
-#include "mscorlib_System_Attribute498693649MethodDeclarations.h"
 #include "mscorlib_System_ArgumentNullException3214793280MethodDeclarations.h"
 #include "mscorlib_System_ArgumentNullException3214793280.h"
 #include "mscorlib_System_Activator690001546MethodDeclarations.h"
@@ -586,7 +594,6 @@ struct JsonSerializerInternalBase_t1092275265;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonIgnoreAttrib4251740517MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonObjectAttrib1059491480.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonObjectAttrib1059491480MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_MemberSerializat1745874425.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonPropertyAttr2402338498.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonPropertyAttr2402338498MethodDeclarations.h"
@@ -605,8 +612,6 @@ struct JsonSerializerInternalBase_t1092275265;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_TypeNameHandling2373316525.h"
 #include "mscorlib_System_Nullable_1_gen964387137MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen964387137.h"
-#include "mscorlib_System_Nullable_1_gen3097043249MethodDeclarations.h"
-#include "mscorlib_System_Nullable_1_gen3097043249.h"
 #include "mscorlib_System_Nullable_1_gen1438485399MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen1438485399.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Required3381566050.h"
@@ -905,7 +910,6 @@ struct JsonSerializerInternalBase_t1092275265;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema554744219.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchema554744219MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1197019735MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134.h"
 #include "System_System_ComponentModel_DescriptionAttribute2157409481.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect767490589.h"
 #include "System_System_ComponentModel_DescriptionAttribute2157409481MethodDeclarations.h"
@@ -1075,11 +1079,6 @@ struct JsonSerializerInternalBase_t1092275265;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Dictio3740544969.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3202368087.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3202368087MethodDeclarations.h"
-#include "mscorlib_System_Collections_ObjectModel_KeyedColle3899923451MethodDeclarations.h"
-#include "mscorlib_System_Collections_Generic_EqualityCompare402879552MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681MethodDeclarations.h"
-#include "mscorlib_System_Collections_Generic_EqualityCompare402879552.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681.h"
 
 // System.Boolean Newtonsoft.Json.Utilities.CollectionUtils::IsNullOrEmpty<System.Object>(System.Collections.Generic.ICollection`1<!!0>)
 extern "C"  bool CollectionUtils_IsNullOrEmpty_TisIl2CppObject_m1747191279_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
@@ -1352,6 +1351,143 @@ extern "C"  uint64_t JsonFormatterConverter_GetTokenValue_TisUInt64_t985925421_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void Newtonsoft.Json.JsonConstructorAttribute::.ctor()
+extern "C"  void JsonConstructorAttribute__ctor_m1427271196 (JsonConstructorAttribute_t1144657805 * __this, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Newtonsoft.Json.JsonContainerAttribute::.ctor()
+extern "C"  void JsonContainerAttribute__ctor_m2212919715 (JsonContainerAttribute_t4246140134 * __this, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Newtonsoft.Json.JsonContainerAttribute::.ctor(System.String)
+extern "C"  void JsonContainerAttribute__ctor_m4240385599 (JsonContainerAttribute_t4246140134 * __this, String_t* ___id, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___id;
+		JsonContainerAttribute_set_Id_m750389321(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.JsonContainerAttribute::get_Id()
+extern "C"  String_t* JsonContainerAttribute_get_Id_m3228482824 (JsonContainerAttribute_t4246140134 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CIdU3Ek__BackingField_1();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.JsonContainerAttribute::set_Id(System.String)
+extern "C"  void JsonContainerAttribute_set_Id_m750389321 (JsonContainerAttribute_t4246140134 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CIdU3Ek__BackingField_1(L_0);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.JsonContainerAttribute::get_Title()
+extern "C"  String_t* JsonContainerAttribute_get_Title_m3917184045 (JsonContainerAttribute_t4246140134 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CTitleU3Ek__BackingField_2();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.JsonContainerAttribute::set_Title(System.String)
+extern "C"  void JsonContainerAttribute_set_Title_m2521539654 (JsonContainerAttribute_t4246140134 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CTitleU3Ek__BackingField_2(L_0);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.JsonContainerAttribute::get_Description()
+extern "C"  String_t* JsonContainerAttribute_get_Description_m2674169297 (JsonContainerAttribute_t4246140134 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CDescriptionU3Ek__BackingField_3();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.JsonContainerAttribute::set_Description(System.String)
+extern "C"  void JsonContainerAttribute_set_Description_m2025133154 (JsonContainerAttribute_t4246140134 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CDescriptionU3Ek__BackingField_3(L_0);
+		return;
+	}
+}
+// System.Boolean Newtonsoft.Json.JsonContainerAttribute::get_IsReference()
+extern const MethodInfo* Nullable_1_get_HasValue_m3843350607_MethodInfo_var;
+extern const MethodInfo* Nullable_1_get_Value_m3854168437_MethodInfo_var;
+extern const uint32_t JsonContainerAttribute_get_IsReference_m3374168677_MetadataUsageId;
+extern "C"  bool JsonContainerAttribute_get_IsReference_m3374168677 (JsonContainerAttribute_t4246140134 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonContainerAttribute_get_IsReference_m3374168677_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Nullable_1_t3097043249  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	int32_t G_B3_0 = 0;
+	{
+		Nullable_1_t3097043249  L_0 = __this->get__isReference_0();
+		V_0 = L_0;
+		bool L_1 = Nullable_1_get_HasValue_m3843350607((&V_0), /*hidden argument*/Nullable_1_get_HasValue_m3843350607_MethodInfo_var);
+		if (!L_1)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		bool L_2 = Nullable_1_get_Value_m3854168437((&V_0), /*hidden argument*/Nullable_1_get_Value_m3854168437_MethodInfo_var);
+		G_B3_0 = ((int32_t)(L_2));
+		goto IL_0020;
+	}
+
+IL_001f:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0020:
+	{
+		return (bool)G_B3_0;
+	}
+}
+// System.Void Newtonsoft.Json.JsonContainerAttribute::set_IsReference(System.Boolean)
+extern const MethodInfo* Nullable_1__ctor_m3590787090_MethodInfo_var;
+extern const uint32_t JsonContainerAttribute_set_IsReference_m3130244956_MetadataUsageId;
+extern "C"  void JsonContainerAttribute_set_IsReference_m3130244956 (JsonContainerAttribute_t4246140134 * __this, bool ___value, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonContainerAttribute_set_IsReference_m3130244956_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		bool L_0 = ___value;
+		Nullable_1_t3097043249  L_1;
+		memset(&L_1, 0, sizeof(L_1));
+		Nullable_1__ctor_m3590787090(&L_1, L_0, /*hidden argument*/Nullable_1__ctor_m3590787090_MethodInfo_var);
+		__this->set__isReference_0(L_1);
+		return;
+	}
+}
 // System.Void Newtonsoft.Json.JsonConvert::.cctor()
 extern TypeInfo* JsonConvert_t748332590_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3569038;
@@ -54250,488 +54386,6 @@ extern "C"  String_t* JsonProperty_ToString_m2046350376 (JsonProperty_t184144440
 	{
 		String_t* L_0 = JsonProperty_get_PropertyName_m3204019141(__this, /*hidden argument*/NULL);
 		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonPropertyCollection::.ctor(System.Type)
-extern const MethodInfo* KeyedCollection_2__ctor_m2704525171_MethodInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3575610;
-extern const uint32_t JsonPropertyCollection__ctor_m2906839884_MetadataUsageId;
-extern "C"  void JsonPropertyCollection__ctor_m2906839884 (JsonPropertyCollection_t4151699636 * __this, Type_t * ___type, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonPropertyCollection__ctor_m2906839884_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		KeyedCollection_2__ctor_m2704525171(__this, /*hidden argument*/KeyedCollection_2__ctor_m2704525171_MethodInfo_var);
-		Type_t * L_0 = ___type;
-		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, L_0, _stringLiteral3575610, /*hidden argument*/NULL);
-		Type_t * L_1 = ___type;
-		__this->set__type_5(L_1);
-		return;
-	}
-}
-// System.String Newtonsoft.Json.Serialization.JsonPropertyCollection::GetKeyForItem(Newtonsoft.Json.Serialization.JsonProperty)
-extern "C"  String_t* JsonPropertyCollection_GetKeyForItem_m1638406699 (JsonPropertyCollection_t4151699636 * __this, JsonProperty_t1841444406 * ___item, const MethodInfo* method)
-{
-	{
-		JsonProperty_t1841444406 * L_0 = ___item;
-		NullCheck(L_0);
-		String_t* L_1 = JsonProperty_get_PropertyName_m3204019141(L_0, /*hidden argument*/NULL);
-		return L_1;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonPropertyCollection::AddProperty(Newtonsoft.Json.Serialization.JsonProperty)
-extern TypeInfo* CultureInfo_t3603717042_il2cpp_TypeInfo_var;
-extern TypeInfo* ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var;
-extern TypeInfo* JsonSerializationException_t90215434_il2cpp_TypeInfo_var;
-extern const MethodInfo* KeyedCollection_2_Contains_m4103320693_MethodInfo_var;
-extern const MethodInfo* KeyedCollection_2_get_Item_m2712163019_MethodInfo_var;
-extern Il2CppCodeGenString* _stringLiteral2918271218;
-extern const uint32_t JsonPropertyCollection_AddProperty_m350438961_MetadataUsageId;
-extern "C"  void JsonPropertyCollection_AddProperty_m350438961 (JsonPropertyCollection_t4151699636 * __this, JsonProperty_t1841444406 * ___property, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonPropertyCollection_AddProperty_m350438961_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	JsonProperty_t1841444406 * V_0 = NULL;
-	{
-		JsonProperty_t1841444406 * L_0 = ___property;
-		NullCheck(L_0);
-		String_t* L_1 = JsonProperty_get_PropertyName_m3204019141(L_0, /*hidden argument*/NULL);
-		bool L_2 = KeyedCollection_2_Contains_m4103320693(__this, L_1, /*hidden argument*/KeyedCollection_2_Contains_m4103320693_MethodInfo_var);
-		if (!L_2)
-		{
-			goto IL_006a;
-		}
-	}
-	{
-		JsonProperty_t1841444406 * L_3 = ___property;
-		NullCheck(L_3);
-		bool L_4 = JsonProperty_get_Ignored_m3044358814(L_3, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_001d;
-		}
-	}
-	{
-		return;
-	}
-
-IL_001d:
-	{
-		JsonProperty_t1841444406 * L_5 = ___property;
-		NullCheck(L_5);
-		String_t* L_6 = JsonProperty_get_PropertyName_m3204019141(L_5, /*hidden argument*/NULL);
-		JsonProperty_t1841444406 * L_7 = KeyedCollection_2_get_Item_m2712163019(__this, L_6, /*hidden argument*/KeyedCollection_2_get_Item_m2712163019_MethodInfo_var);
-		V_0 = L_7;
-		JsonProperty_t1841444406 * L_8 = V_0;
-		NullCheck(L_8);
-		bool L_9 = JsonProperty_get_Ignored_m3044358814(L_8, /*hidden argument*/NULL);
-		if (L_9)
-		{
-			goto IL_0062;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(CultureInfo_t3603717042_il2cpp_TypeInfo_var);
-		CultureInfo_t3603717042 * L_10 = CultureInfo_get_InvariantCulture_m764001524(NULL /*static, unused*/, /*hidden argument*/NULL);
-		ObjectU5BU5D_t11523773* L_11 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)2));
-		JsonProperty_t1841444406 * L_12 = ___property;
-		NullCheck(L_12);
-		String_t* L_13 = JsonProperty_get_PropertyName_m3204019141(L_12, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_11, 0);
-		ArrayElementTypeCheck (L_11, L_13);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_13);
-		ObjectU5BU5D_t11523773* L_14 = L_11;
-		Type_t * L_15 = __this->get__type_5();
-		NullCheck(L_14);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_14, 1);
-		ArrayElementTypeCheck (L_14, L_15);
-		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_15);
-		String_t* L_16 = StringUtils_FormatWith_m3260740632(NULL /*static, unused*/, _stringLiteral2918271218, L_10, L_14, /*hidden argument*/NULL);
-		JsonSerializationException_t90215434 * L_17 = (JsonSerializationException_t90215434 *)il2cpp_codegen_object_new(JsonSerializationException_t90215434_il2cpp_TypeInfo_var);
-		JsonSerializationException__ctor_m1435327459(L_17, L_16, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_17);
-	}
-
-IL_0062:
-	{
-		JsonProperty_t1841444406 * L_18 = V_0;
-		VirtFuncInvoker1< bool, JsonProperty_t1841444406 * >::Invoke(26 /* System.Boolean System.Collections.ObjectModel.Collection`1<Newtonsoft.Json.Serialization.JsonProperty>::Remove(!0) */, __this, L_18);
-	}
-
-IL_006a:
-	{
-		JsonProperty_t1841444406 * L_19 = ___property;
-		VirtActionInvoker1< JsonProperty_t1841444406 * >::Invoke(22 /* System.Void System.Collections.ObjectModel.Collection`1<Newtonsoft.Json.Serialization.JsonProperty>::Add(!0) */, __this, L_19);
-		return;
-	}
-}
-// Newtonsoft.Json.Serialization.JsonProperty Newtonsoft.Json.Serialization.JsonPropertyCollection::GetClosestMatchProperty(System.String)
-extern "C"  JsonProperty_t1841444406 * JsonPropertyCollection_GetClosestMatchProperty_m3585371245 (JsonPropertyCollection_t4151699636 * __this, String_t* ___propertyName, const MethodInfo* method)
-{
-	JsonProperty_t1841444406 * V_0 = NULL;
-	{
-		String_t* L_0 = ___propertyName;
-		JsonProperty_t1841444406 * L_1 = JsonPropertyCollection_GetProperty_m3848037100(__this, L_0, 4, /*hidden argument*/NULL);
-		V_0 = L_1;
-		JsonProperty_t1841444406 * L_2 = V_0;
-		if (L_2)
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		String_t* L_3 = ___propertyName;
-		JsonProperty_t1841444406 * L_4 = JsonPropertyCollection_GetProperty_m3848037100(__this, L_3, 5, /*hidden argument*/NULL);
-		V_0 = L_4;
-	}
-
-IL_0018:
-	{
-		JsonProperty_t1841444406 * L_5 = V_0;
-		return L_5;
-	}
-}
-// Newtonsoft.Json.Serialization.JsonProperty Newtonsoft.Json.Serialization.JsonPropertyCollection::GetProperty(System.String,System.StringComparison)
-extern TypeInfo* IEnumerator_1_t3324550854_il2cpp_TypeInfo_var;
-extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
-extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
-extern const uint32_t JsonPropertyCollection_GetProperty_m3848037100_MetadataUsageId;
-extern "C"  JsonProperty_t1841444406 * JsonPropertyCollection_GetProperty_m3848037100 (JsonPropertyCollection_t4151699636 * __this, String_t* ___propertyName, int32_t ___comparisonType, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonPropertyCollection_GetProperty_m3848037100_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	JsonProperty_t1841444406 * V_0 = NULL;
-	Il2CppObject* V_1 = NULL;
-	JsonProperty_t1841444406 * V_2 = NULL;
-	Exception_t1967233988 * __last_unhandled_exception = 0;
-	NO_UNUSED_WARNING (__last_unhandled_exception);
-	Exception_t1967233988 * __exception_local = 0;
-	NO_UNUSED_WARNING (__exception_local);
-	int32_t __leave_target = 0;
-	NO_UNUSED_WARNING (__leave_target);
-	{
-		Il2CppObject* L_0 = VirtFuncInvoker0< Il2CppObject* >::Invoke(27 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.ObjectModel.Collection`1<Newtonsoft.Json.Serialization.JsonProperty>::GetEnumerator() */, __this);
-		V_1 = L_0;
-	}
-
-IL_0007:
-	try
-	{ // begin try (depth: 1)
-		{
-			goto IL_002c;
-		}
-
-IL_000c:
-		{
-			Il2CppObject* L_1 = V_1;
-			NullCheck(L_1);
-			JsonProperty_t1841444406 * L_2 = InterfaceFuncInvoker0< JsonProperty_t1841444406 * >::Invoke(0 /* !0 System.Collections.Generic.IEnumerator`1<Newtonsoft.Json.Serialization.JsonProperty>::get_Current() */, IEnumerator_1_t3324550854_il2cpp_TypeInfo_var, L_1);
-			V_0 = L_2;
-			String_t* L_3 = ___propertyName;
-			JsonProperty_t1841444406 * L_4 = V_0;
-			NullCheck(L_4);
-			String_t* L_5 = JsonProperty_get_PropertyName_m3204019141(L_4, /*hidden argument*/NULL);
-			int32_t L_6 = ___comparisonType;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_7 = String_Equals_m2001218004(NULL /*static, unused*/, L_3, L_5, L_6, /*hidden argument*/NULL);
-			if (!L_7)
-			{
-				goto IL_002c;
-			}
-		}
-
-IL_0025:
-		{
-			JsonProperty_t1841444406 * L_8 = V_0;
-			V_2 = L_8;
-			IL2CPP_LEAVE(0x49, FINALLY_003c);
-		}
-
-IL_002c:
-		{
-			Il2CppObject* L_9 = V_1;
-			NullCheck(L_9);
-			bool L_10 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_9);
-			if (L_10)
-			{
-				goto IL_000c;
-			}
-		}
-
-IL_0037:
-		{
-			IL2CPP_LEAVE(0x47, FINALLY_003c);
-		}
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
-		goto FINALLY_003c;
-	}
-
-FINALLY_003c:
-	{ // begin finally (depth: 1)
-		{
-			Il2CppObject* L_11 = V_1;
-			if (L_11)
-			{
-				goto IL_0040;
-			}
-		}
-
-IL_003f:
-		{
-			IL2CPP_END_FINALLY(60)
-		}
-
-IL_0040:
-		{
-			Il2CppObject* L_12 = V_1;
-			NullCheck(L_12);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, L_12);
-			IL2CPP_END_FINALLY(60)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(60)
-	{
-		IL2CPP_JUMP_TBL(0x49, IL_0049)
-		IL2CPP_JUMP_TBL(0x47, IL_0047)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
-	}
-
-IL_0047:
-	{
-		return (JsonProperty_t1841444406 *)NULL;
-	}
-
-IL_0049:
-	{
-		JsonProperty_t1841444406 * L_13 = V_2;
-		return L_13;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase::.ctor(Newtonsoft.Json.JsonSerializer)
-extern Il2CppCodeGenString* _stringLiteral3696981394;
-extern const uint32_t JsonSerializerInternalBase__ctor_m270309585_MetadataUsageId;
-extern "C"  void JsonSerializerInternalBase__ctor_m270309585 (JsonSerializerInternalBase_t1092275265 * __this, JsonSerializer_t4019458909 * ___serializer, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonSerializerInternalBase__ctor_m270309585_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		JsonSerializer_t4019458909 * L_0 = ___serializer;
-		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, L_0, _stringLiteral3696981394, /*hidden argument*/NULL);
-		JsonSerializer_t4019458909 * L_1 = ___serializer;
-		JsonSerializerInternalBase_set_Serializer_m2116923300(__this, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// Newtonsoft.Json.JsonSerializer Newtonsoft.Json.Serialization.JsonSerializerInternalBase::get_Serializer()
-extern "C"  JsonSerializer_t4019458909 * JsonSerializerInternalBase_get_Serializer_m3359244333 (JsonSerializerInternalBase_t1092275265 * __this, const MethodInfo* method)
-{
-	{
-		JsonSerializer_t4019458909 * L_0 = __this->get_U3CSerializerU3Ek__BackingField_2();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase::set_Serializer(Newtonsoft.Json.JsonSerializer)
-extern "C"  void JsonSerializerInternalBase_set_Serializer_m2116923300 (JsonSerializerInternalBase_t1092275265 * __this, JsonSerializer_t4019458909 * ___value, const MethodInfo* method)
-{
-	{
-		JsonSerializer_t4019458909 * L_0 = ___value;
-		__this->set_U3CSerializerU3Ek__BackingField_2(L_0);
-		return;
-	}
-}
-// Newtonsoft.Json.Utilities.BidirectionalDictionary`2<System.String,System.Object> Newtonsoft.Json.Serialization.JsonSerializerInternalBase::get_DefaultReferenceMappings()
-extern TypeInfo* EqualityComparer_1_t402879552_il2cpp_TypeInfo_var;
-extern TypeInfo* ReferenceEqualsEqualityComparer_t56069681_il2cpp_TypeInfo_var;
-extern TypeInfo* BidirectionalDictionary_2_t2587161411_il2cpp_TypeInfo_var;
-extern const MethodInfo* EqualityComparer_1_get_Default_m2030521749_MethodInfo_var;
-extern const MethodInfo* BidirectionalDictionary_2__ctor_m4175545449_MethodInfo_var;
-extern const uint32_t JsonSerializerInternalBase_get_DefaultReferenceMappings_m2016463219_MetadataUsageId;
-extern "C"  BidirectionalDictionary_2_t2587161411 * JsonSerializerInternalBase_get_DefaultReferenceMappings_m2016463219 (JsonSerializerInternalBase_t1092275265 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_get_DefaultReferenceMappings_m2016463219_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		BidirectionalDictionary_2_t2587161411 * L_0 = __this->get__mappings_1();
-		if (L_0)
-		{
-			goto IL_0020;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(EqualityComparer_1_t402879552_il2cpp_TypeInfo_var);
-		EqualityComparer_1_t402879552 * L_1 = EqualityComparer_1_get_Default_m2030521749(NULL /*static, unused*/, /*hidden argument*/EqualityComparer_1_get_Default_m2030521749_MethodInfo_var);
-		ReferenceEqualsEqualityComparer_t56069681 * L_2 = (ReferenceEqualsEqualityComparer_t56069681 *)il2cpp_codegen_object_new(ReferenceEqualsEqualityComparer_t56069681_il2cpp_TypeInfo_var);
-		ReferenceEqualsEqualityComparer__ctor_m4065543358(L_2, /*hidden argument*/NULL);
-		BidirectionalDictionary_2_t2587161411 * L_3 = (BidirectionalDictionary_2_t2587161411 *)il2cpp_codegen_object_new(BidirectionalDictionary_2_t2587161411_il2cpp_TypeInfo_var);
-		BidirectionalDictionary_2__ctor_m4175545449(L_3, L_1, L_2, /*hidden argument*/BidirectionalDictionary_2__ctor_m4175545449_MethodInfo_var);
-		__this->set__mappings_1(L_3);
-	}
-
-IL_0020:
-	{
-		BidirectionalDictionary_2_t2587161411 * L_4 = __this->get__mappings_1();
-		return L_4;
-	}
-}
-// Newtonsoft.Json.Serialization.ErrorContext Newtonsoft.Json.Serialization.JsonSerializerInternalBase::GetErrorContext(System.Object,System.Object,System.Exception)
-extern TypeInfo* ErrorContext_t957583840_il2cpp_TypeInfo_var;
-extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3294539880;
-extern const uint32_t JsonSerializerInternalBase_GetErrorContext_m19753964_MetadataUsageId;
-extern "C"  ErrorContext_t957583840 * JsonSerializerInternalBase_GetErrorContext_m19753964 (JsonSerializerInternalBase_t1092275265 * __this, Il2CppObject * ___currentObject, Il2CppObject * ___member, Exception_t1967233988 * ___error, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_GetErrorContext_m19753964_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		ErrorContext_t957583840 * L_0 = __this->get__currentErrorContext_0();
-		if (L_0)
-		{
-			goto IL_0019;
-		}
-	}
-	{
-		Il2CppObject * L_1 = ___currentObject;
-		Il2CppObject * L_2 = ___member;
-		Exception_t1967233988 * L_3 = ___error;
-		ErrorContext_t957583840 * L_4 = (ErrorContext_t957583840 *)il2cpp_codegen_object_new(ErrorContext_t957583840_il2cpp_TypeInfo_var);
-		ErrorContext__ctor_m2500188981(L_4, L_1, L_2, L_3, /*hidden argument*/NULL);
-		__this->set__currentErrorContext_0(L_4);
-	}
-
-IL_0019:
-	{
-		ErrorContext_t957583840 * L_5 = __this->get__currentErrorContext_0();
-		NullCheck(L_5);
-		Exception_t1967233988 * L_6 = ErrorContext_get_Error_m3495269841(L_5, /*hidden argument*/NULL);
-		Exception_t1967233988 * L_7 = ___error;
-		if ((((Il2CppObject*)(Exception_t1967233988 *)L_6) == ((Il2CppObject*)(Exception_t1967233988 *)L_7)))
-		{
-			goto IL_0035;
-		}
-	}
-	{
-		InvalidOperationException_t2420574324 * L_8 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
-		InvalidOperationException__ctor_m1485483280(L_8, _stringLiteral3294539880, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8);
-	}
-
-IL_0035:
-	{
-		ErrorContext_t957583840 * L_9 = __this->get__currentErrorContext_0();
-		return L_9;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase::ClearErrorContext()
-extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral4020470972;
-extern const uint32_t JsonSerializerInternalBase_ClearErrorContext_m1251934386_MetadataUsageId;
-extern "C"  void JsonSerializerInternalBase_ClearErrorContext_m1251934386 (JsonSerializerInternalBase_t1092275265 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_ClearErrorContext_m1251934386_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		ErrorContext_t957583840 * L_0 = __this->get__currentErrorContext_0();
-		if (L_0)
-		{
-			goto IL_0016;
-		}
-	}
-	{
-		InvalidOperationException_t2420574324 * L_1 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
-		InvalidOperationException__ctor_m1485483280(L_1, _stringLiteral4020470972, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
-	}
-
-IL_0016:
-	{
-		__this->set__currentErrorContext_0((ErrorContext_t957583840 *)NULL);
-		return;
-	}
-}
-// System.Boolean Newtonsoft.Json.Serialization.JsonSerializerInternalBase::IsErrorHandled(System.Object,Newtonsoft.Json.Serialization.JsonContract,System.Object,System.Exception)
-extern TypeInfo* ErrorEventArgs_t1025956040_il2cpp_TypeInfo_var;
-extern const uint32_t JsonSerializerInternalBase_IsErrorHandled_m1948851277_MetadataUsageId;
-extern "C"  bool JsonSerializerInternalBase_IsErrorHandled_m1948851277 (JsonSerializerInternalBase_t1092275265 * __this, Il2CppObject * ___currentObject, JsonContract_t2267638131 * ___contract, Il2CppObject * ___keyValue, Exception_t1967233988 * ___ex, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_IsErrorHandled_m1948851277_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	ErrorContext_t957583840 * V_0 = NULL;
-	{
-		Il2CppObject * L_0 = ___currentObject;
-		Il2CppObject * L_1 = ___keyValue;
-		Exception_t1967233988 * L_2 = ___ex;
-		ErrorContext_t957583840 * L_3 = JsonSerializerInternalBase_GetErrorContext_m19753964(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		JsonContract_t2267638131 * L_4 = ___contract;
-		Il2CppObject * L_5 = ___currentObject;
-		JsonSerializer_t4019458909 * L_6 = JsonSerializerInternalBase_get_Serializer_m3359244333(__this, /*hidden argument*/NULL);
-		NullCheck(L_6);
-		StreamingContext_t986364934  L_7 = VirtFuncInvoker0< StreamingContext_t986364934  >::Invoke(31 /* System.Runtime.Serialization.StreamingContext Newtonsoft.Json.JsonSerializer::get_Context() */, L_6);
-		ErrorContext_t957583840 * L_8 = V_0;
-		NullCheck(L_4);
-		JsonContract_InvokeOnError_m4200927753(L_4, L_5, L_7, L_8, /*hidden argument*/NULL);
-		ErrorContext_t957583840 * L_9 = V_0;
-		NullCheck(L_9);
-		bool L_10 = ErrorContext_get_Handled_m1276804510(L_9, /*hidden argument*/NULL);
-		if (L_10)
-		{
-			goto IL_003b;
-		}
-	}
-	{
-		JsonSerializer_t4019458909 * L_11 = JsonSerializerInternalBase_get_Serializer_m3359244333(__this, /*hidden argument*/NULL);
-		Il2CppObject * L_12 = ___currentObject;
-		ErrorContext_t957583840 * L_13 = V_0;
-		ErrorEventArgs_t1025956040 * L_14 = (ErrorEventArgs_t1025956040 *)il2cpp_codegen_object_new(ErrorEventArgs_t1025956040_il2cpp_TypeInfo_var);
-		ErrorEventArgs__ctor_m880780977(L_14, L_12, L_13, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		JsonSerializer_OnError_m2358242801(L_11, L_14, /*hidden argument*/NULL);
-	}
-
-IL_003b:
-	{
-		ErrorContext_t957583840 * L_15 = V_0;
-		NullCheck(L_15);
-		bool L_16 = ErrorContext_get_Handled_m1276804510(L_15, /*hidden argument*/NULL);
-		return L_16;
 	}
 }
 #ifdef __clang__

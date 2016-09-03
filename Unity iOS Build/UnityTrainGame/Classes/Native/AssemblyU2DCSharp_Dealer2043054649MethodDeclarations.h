@@ -36,6 +36,8 @@ extern "C"  List_1_t799051817 * Dealer_get_Cards_m624206455 (Dealer_t2043054649 
 extern "C"  void Dealer_set_Cards_m320147516 (Dealer_t2043054649 * __this, List_1_t799051817 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Dealer::Init()
 extern "C"  void Dealer_Init_m425946002 (Dealer_t2043054649 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Dealer::Reset()
+extern "C"  void Dealer_Reset_m3763189039 (Dealer_t2043054649 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Dealer::GetDeckSize()
 extern "C"  int32_t Dealer_GetDeckSize_m1851388114 (Dealer_t2043054649 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Dealer::SetGrayEffect(System.Single)

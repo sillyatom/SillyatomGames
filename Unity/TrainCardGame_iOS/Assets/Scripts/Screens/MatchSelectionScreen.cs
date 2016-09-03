@@ -15,6 +15,16 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
     public Button inviteBtn;
     public Button singlePlayerBtn;
 
+    public override void OnSetToView()
+    {
+        base.OnSetToView();
+
+        hostMatch.enabled = true;
+        autoMatchBtn.enabled = true;
+        inviteBtn.enabled = true;
+        singlePlayerBtn.enabled = true;
+    }
+
     override public void Init()
     {
         base.Init();
@@ -47,7 +57,7 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
             {
                 throw(new UnityException("Multiple Dealers Found !!! "));
             }
-            game.dealer = gos[0].GetComponent<Dealer>();
+            game.dealer = gos[0].AddComponent<Dealer>();
         }
 
         game.network = SingletonManager.reference.network;
@@ -88,13 +98,14 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
                 {
                     throw(new UnityException("Multiple Dealers Found !!! "));
                 }
-                game.dealer = gos[0].GetComponent<Dealer>();
+                game.dealer = gos[0].AddComponent<Dealer>();
             }
 
             game.network = SingletonManager.reference.network;
 
             MoveToScene(TagConstants.TAG_MAIN_GAME);
         }
+
         btn.enabled = false;
     }
 

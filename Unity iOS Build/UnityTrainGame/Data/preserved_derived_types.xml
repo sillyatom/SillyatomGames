@@ -14,6 +14,8 @@
 <type fullname="Card" preserve="all"/>
 <type fullname="Dealer" preserve="all"/>
 <type fullname="Player" preserve="all"/>
+<type fullname="Train" preserve="all"/>
+<type fullname="Trains" preserve="all"/>
 <type fullname="HUD" preserve="all"/>
 <type fullname="CardSelectionHandler" preserve="all"/>
 <type fullname="ExecutionOrderManager" preserve="all"/>
@@ -35,6 +37,7 @@
 <type fullname="SharedMainGame" preserve="all"/>
 <type fullname="SinglePlayerMainGame" preserve="all"/>
 <type fullname="GameObjectRef" preserve="all"/>
+<type fullname="GrayColorToggle" preserve="all"/>
 <type fullname="InGameInfoText" preserve="all"/>
 <type fullname="SingletonManager" preserve="all"/>
 <type fullname="TestScript" preserve="all"/>

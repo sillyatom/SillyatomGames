@@ -10,8 +10,6 @@
 
 #include <stdint.h>
 
-// UnityEngine.UI.Button
-struct Button_t990034267;
 // UnityEngine.Transform
 struct Transform_t284553113;
 
@@ -28,49 +26,27 @@ struct Transform_t284553113;
 struct  BaseDialog_t735619993  : public ExtMonoBehaviour_t2624599193
 {
 public:
-	// UnityEngine.UI.Button BaseDialog::closeBtn
-	Button_t990034267 * ___closeBtn_3;
-	// UnityEngine.UI.Button BaseDialog::okBtn
-	Button_t990034267 * ___okBtn_4;
 	// UnityEngine.Vector3 BaseDialog::_initPosition
-	Vector3_t3525329789  ____initPosition_5;
+	Vector3_t3525329789  ____initPosition_3;
 	// UnityEngine.Transform BaseDialog::_parentTransform
-	Transform_t284553113 * ____parentTransform_6;
+	Transform_t284553113 * ____parentTransform_4;
 
 public:
-	inline static int32_t get_offset_of_closeBtn_3() { return static_cast<int32_t>(offsetof(BaseDialog_t735619993, ___closeBtn_3)); }
-	inline Button_t990034267 * get_closeBtn_3() const { return ___closeBtn_3; }
-	inline Button_t990034267 ** get_address_of_closeBtn_3() { return &___closeBtn_3; }
-	inline void set_closeBtn_3(Button_t990034267 * value)
+	inline static int32_t get_offset_of__initPosition_3() { return static_cast<int32_t>(offsetof(BaseDialog_t735619993, ____initPosition_3)); }
+	inline Vector3_t3525329789  get__initPosition_3() const { return ____initPosition_3; }
+	inline Vector3_t3525329789 * get_address_of__initPosition_3() { return &____initPosition_3; }
+	inline void set__initPosition_3(Vector3_t3525329789  value)
 	{
-		___closeBtn_3 = value;
-		Il2CppCodeGenWriteBarrier(&___closeBtn_3, value);
+		____initPosition_3 = value;
 	}
 
-	inline static int32_t get_offset_of_okBtn_4() { return static_cast<int32_t>(offsetof(BaseDialog_t735619993, ___okBtn_4)); }
-	inline Button_t990034267 * get_okBtn_4() const { return ___okBtn_4; }
-	inline Button_t990034267 ** get_address_of_okBtn_4() { return &___okBtn_4; }
-	inline void set_okBtn_4(Button_t990034267 * value)
+	inline static int32_t get_offset_of__parentTransform_4() { return static_cast<int32_t>(offsetof(BaseDialog_t735619993, ____parentTransform_4)); }
+	inline Transform_t284553113 * get__parentTransform_4() const { return ____parentTransform_4; }
+	inline Transform_t284553113 ** get_address_of__parentTransform_4() { return &____parentTransform_4; }
+	inline void set__parentTransform_4(Transform_t284553113 * value)
 	{
-		___okBtn_4 = value;
-		Il2CppCodeGenWriteBarrier(&___okBtn_4, value);
-	}
-
-	inline static int32_t get_offset_of__initPosition_5() { return static_cast<int32_t>(offsetof(BaseDialog_t735619993, ____initPosition_5)); }
-	inline Vector3_t3525329789  get__initPosition_5() const { return ____initPosition_5; }
-	inline Vector3_t3525329789 * get_address_of__initPosition_5() { return &____initPosition_5; }
-	inline void set__initPosition_5(Vector3_t3525329789  value)
-	{
-		____initPosition_5 = value;
-	}
-
-	inline static int32_t get_offset_of__parentTransform_6() { return static_cast<int32_t>(offsetof(BaseDialog_t735619993, ____parentTransform_6)); }
-	inline Transform_t284553113 * get__parentTransform_6() const { return ____parentTransform_6; }
-	inline Transform_t284553113 ** get_address_of__parentTransform_6() { return &____parentTransform_6; }
-	inline void set__parentTransform_6(Transform_t284553113 * value)
-	{
-		____parentTransform_6 = value;
-		Il2CppCodeGenWriteBarrier(&____parentTransform_6, value);
+		____parentTransform_4 = value;
+		Il2CppCodeGenWriteBarrier(&____parentTransform_4, value);
 	}
 };
 

@@ -181,6 +181,28 @@ public class Player : ExtMonoBehaviour
         }
     }
 
+    public override void Reset()
+    {
+        base.Reset();
+        _canDrag = false;
+        _cardsRewarded.Clear();
+        IsDistributionComplete = false;
+        for (int index = _cards.Count - 1; index >= 0; index--)
+        {
+            Destroy(_cards[index].gameObject);
+        }
+        _cards.Clear();
+       
+        Destroy(gameObject.GetComponent<CardSelectionHandler>());
+        
+        _cardSelectionHandler = gameObject.AddComponent<CardSelectionHandler>();
+        _cardSelectionHandler.Init();
+
+        UpdatePipCount();
+        countPip.SetActive(false);
+        SetTurnStatus(E_PLAYER_TURN.WAITING);
+    }
+
     override public void Init()
     {
         base.Init();

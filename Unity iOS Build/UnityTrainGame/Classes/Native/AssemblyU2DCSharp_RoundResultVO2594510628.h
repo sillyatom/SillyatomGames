@@ -37,6 +37,10 @@ public:
 	Dictionary_2_t3403145775 * ___U3CwinningCardsU3Ek__BackingField_7;
 	// System.Int32 RoundResultVO::<cardsCount>k__BackingField
 	int32_t ___U3CcardsCountU3Ek__BackingField_8;
+	// System.Boolean RoundResultVO::<isSweep>k__BackingField
+	bool ___U3CisSweepU3Ek__BackingField_9;
+	// System.Int32 RoundResultVO::<sweepCount>k__BackingField
+	int32_t ___U3CsweepCountU3Ek__BackingField_10;
 
 public:
 	inline static int32_t get_offset_of_U3CcardValueTypeU3Ek__BackingField_4() { return static_cast<int32_t>(offsetof(RoundResultVO_t2594510628, ___U3CcardValueTypeU3Ek__BackingField_4)); }
@@ -79,6 +83,22 @@ public:
 	inline void set_U3CcardsCountU3Ek__BackingField_8(int32_t value)
 	{
 		___U3CcardsCountU3Ek__BackingField_8 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CisSweepU3Ek__BackingField_9() { return static_cast<int32_t>(offsetof(RoundResultVO_t2594510628, ___U3CisSweepU3Ek__BackingField_9)); }
+	inline bool get_U3CisSweepU3Ek__BackingField_9() const { return ___U3CisSweepU3Ek__BackingField_9; }
+	inline bool* get_address_of_U3CisSweepU3Ek__BackingField_9() { return &___U3CisSweepU3Ek__BackingField_9; }
+	inline void set_U3CisSweepU3Ek__BackingField_9(bool value)
+	{
+		___U3CisSweepU3Ek__BackingField_9 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CsweepCountU3Ek__BackingField_10() { return static_cast<int32_t>(offsetof(RoundResultVO_t2594510628, ___U3CsweepCountU3Ek__BackingField_10)); }
+	inline int32_t get_U3CsweepCountU3Ek__BackingField_10() const { return ___U3CsweepCountU3Ek__BackingField_10; }
+	inline int32_t* get_address_of_U3CsweepCountU3Ek__BackingField_10() { return &___U3CsweepCountU3Ek__BackingField_10; }
+	inline void set_U3CsweepCountU3Ek__BackingField_10(int32_t value)
+	{
+		___U3CsweepCountU3Ek__BackingField_10 = value;
 	}
 };
 

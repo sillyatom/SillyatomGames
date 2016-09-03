@@ -47,6 +47,8 @@ extern "C"  String_t* RoundHandler_get_GetActivePlayerId_m3690731145 (RoundHandl
 extern "C"  void RoundHandler_set_SetActivePlayerId_m367756958 (RoundHandler_t2172802556 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean RoundHandler::get_IsActivePlayerLocal()
 extern "C"  bool RoundHandler_get_IsActivePlayerLocal_m3242918010 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void RoundHandler::Reset()
+extern "C"  void RoundHandler_Reset_m3877110476 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::Init()
 extern "C"  void RoundHandler_Init_m2507830869 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::OnGameEvent(GameEvent)

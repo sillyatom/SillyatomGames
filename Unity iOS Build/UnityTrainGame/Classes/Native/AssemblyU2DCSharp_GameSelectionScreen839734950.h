@@ -18,10 +18,6 @@ struct List_1_t514686775;
 struct List_1_t3644373756;
 // UnityEngine.RectTransform
 struct RectTransform_t3317474837;
-// UnityEngine.GameObject
-struct GameObject_t4012695102;
-// UnityEngine.UI.Text
-struct Text_t3286458198;
 
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 
@@ -45,10 +41,6 @@ public:
 	List_1_t514686775 * ____train_7;
 	// UnityEngine.RectTransform GameSelectionScreen::mask
 	RectTransform_t3317474837 * ___mask_11;
-	// UnityEngine.GameObject GameSelectionScreen::info
-	GameObject_t4012695102 * ___info_12;
-	// UnityEngine.UI.Text GameSelectionScreen::entryText
-	Text_t3286458198 * ___entryText_13;
 
 public:
 	inline static int32_t get_offset_of_next_4() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___next_4)); }
@@ -94,24 +86,6 @@ public:
 	{
 		___mask_11 = value;
 		Il2CppCodeGenWriteBarrier(&___mask_11, value);
-	}
-
-	inline static int32_t get_offset_of_info_12() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___info_12)); }
-	inline GameObject_t4012695102 * get_info_12() const { return ___info_12; }
-	inline GameObject_t4012695102 ** get_address_of_info_12() { return &___info_12; }
-	inline void set_info_12(GameObject_t4012695102 * value)
-	{
-		___info_12 = value;
-		Il2CppCodeGenWriteBarrier(&___info_12, value);
-	}
-
-	inline static int32_t get_offset_of_entryText_13() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___entryText_13)); }
-	inline Text_t3286458198 * get_entryText_13() const { return ___entryText_13; }
-	inline Text_t3286458198 ** get_address_of_entryText_13() { return &___entryText_13; }
-	inline void set_entryText_13(Text_t3286458198 * value)
-	{
-		___entryText_13 = value;
-		Il2CppCodeGenWriteBarrier(&___entryText_13, value);
 	}
 };
 

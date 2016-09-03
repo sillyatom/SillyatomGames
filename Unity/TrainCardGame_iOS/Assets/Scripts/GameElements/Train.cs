@@ -8,16 +8,26 @@ public class Train : MonoBehaviour
 
     void Awake()
     {
-        for (int index = 0; index < compartments.Count; index++)
-        {
-            compartments[index].GetComponent<GrayColorToggle>().SetGrayEffect(1.0f);
-            compartments[index].GetComponent<Animator>().SetBool("canAnimate", false);
-        }
+        DisableAll();
     }
 
     public void EnableCompartmentById(int index)
     {
         compartments[index].GetComponent<GrayColorToggle>().SetGrayEffect(0.0f);
         compartments[index].GetComponent<Animator>().SetBool("canAnimate", true);
+    }
+
+    public void DisableCompartmentById(int index)
+    {
+        compartments[index].GetComponent<GrayColorToggle>().SetGrayEffect(1.0f);
+        compartments[index].GetComponent<Animator>().SetBool("canAnimate", false);
+    }
+
+    public void DisableAll()
+    {
+        for (int index = 1; index < compartments.Count; index++)
+        {
+            DisableCompartmentById(index);
+        }
     }
 }

@@ -11,14 +11,13 @@ public class GrayColorToggle : MonoBehaviour
 {
     private Image _img;
 
-    void Awake()
-    {
-        _img = gameObject.GetComponent<Image>();
-        _img.material = Instantiate<Material>(Resources.Load<Material>("Materials/GrayMaterial"));
-    }
-
     public void SetGrayEffect(float amount)
     {
+        if (_img == null)
+        {
+            _img = gameObject.GetComponent<Image>();
+            _img.material = Instantiate<Material>(Resources.Load<Material>("Materials/GrayMaterial"));
+        }
         _img.material.SetFloat("_EffectAmount", amount); 
     }
 }

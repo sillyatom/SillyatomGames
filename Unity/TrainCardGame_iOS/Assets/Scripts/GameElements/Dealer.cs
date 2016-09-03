@@ -17,6 +17,17 @@ public class Dealer : ExtMonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
+    public override void Reset()
+    {
+        base.Reset();
+        foreach (var card in _cards)
+        {
+            Destroy(card.gameObject);
+        }
+        _cards.Clear();
+        _cards = null;
+    }
+
     public int GetDeckSize()
     {
         return _cards.Count;    
@@ -109,13 +120,9 @@ public class Dealer : ExtMonoBehaviour
 
         foreach (var type in CardConstants.CARD_TYPES)
         {
-            if (numOfPlayers == 0)
-            {
-                break;
-            }
             foreach (var value in CardConstants.CARD_VALUES)
             {
-                GameObject cardObj = Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Card"));
+                GameObject cardObj = Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Props/Card"));
                 cardObj.transform.SetParent(rectTransform);
                 cardObj.transform.localScale = Vector3.one;
                 cardObj.transform.localPosition = Vector3.zero;
@@ -123,7 +130,6 @@ public class Dealer : ExtMonoBehaviour
                 card.UpdateCard(value, type);
                 _cards.Add(card);
             }
-            numOfPlayers--;
         }
     }
 
@@ -196,6 +202,10 @@ public class ResultVO
     public List<Card> cards{ get; set; }
 
     public Dictionary<string, List<string>> winningCards{ get; set; }
+
+    public bool isSweep{ get; set; }
+
+    public int sweepCount{ get; set; }
 
     public Card GetCardWithValueType(string cardValueType)
     {

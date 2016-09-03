@@ -27,9 +27,21 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     {
         base.Init();
         network = SingletonManager.reference.network;
+        GameModel.Instance.Reset();
+        InitGame();
         transform.GetComponent<SharedMainGame>().DisableHud();
         transform.GetComponent<SharedMainGame>().trains.EnableTrainById(GameSelectionScreen.GetSelectedGameIndex());
-        InitGame();
+    }
+
+    public override void OnMoveOutOfView()
+    {
+        base.OnMoveOutOfView();
+        network.Reset();
+        dealer.Reset();
+        transform.GetComponent<SharedMainGame>().trains.RemoveActiveTrain();
+        Destroy(gameObject.GetComponentInChildren<Dealer>());
+        Destroy(gameObject.GetComponent<MultiplayerMainGame>());
+        network = null;
     }
 
     virtual public void InitGame()
@@ -43,7 +55,16 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
 
         //init Round Handler
         _roundHandler = GetComponent<RoundHandler>();
-        _roundHandler.Init();
+
+        if (!_roundHandler.isInitialized)
+        {
+            _roundHandler.Init();
+        }
+        else
+        {
+            _roundHandler.Reset();
+        }
+
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
         //if host
@@ -105,7 +126,10 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
                 break;
             case InGameEvent.DISPATCH_NEXT_ROUND:
                 {
-                    DispatchNextRound();
+                    if (!GameModel.Instance.isGameOver)
+                    {
+                        DispatchNextRound();
+                    }
                 }
                 break;
             case InGameEvent.ON_CARD_SELECTED:
@@ -165,6 +189,17 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         CheckWinnings();
     }
 
+    virtual protected void UpdateSweepCount()
+    {
+        Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
+        bool isLocal = (player.playerId == Networking.localId);
+        if (isLocal)
+        {
+            int count = GameModel.Instance.sweepCount + 1;
+            EventManager.instance.Raise(new GameEvent(GameEvent.UPDATE_SWEEP_COUNT, count));
+        }
+    }
+
     protected void CheckWinnings()
     {
         Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
@@ -176,6 +211,10 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         {
             dealer.SetGrayEffect(1.0f);
             vo = dealer.GetResult();
+            vo.isSweep = true;
+
+            UpdateSweepCount();
+            vo.sweepCount = GameModel.Instance.sweepCount;
             //animation
             float delay = 0.0f;
             foreach (var card in vo.cards)
@@ -289,6 +328,7 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
             //send the data before dealing with cleaning up
             ResultVO vo = (ResultVO)hArgs["VO"];
             DispatchRoundResult(vo);
+            CheckGameEnd();
         }
         else
         {
@@ -328,6 +368,8 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         vo.didPullOver = _players[0].DidPullOver;
         vo.winningCards = result.winningCards;
         vo.cardsCount = _players[0].CardsCount;
+        vo.isSweep = result.isSweep;
+        vo.sweepCount = result.sweepCount;
 
         string data = JsonConvert.SerializeObject(vo);
 
@@ -404,9 +446,18 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
                 Player player = gameObject.GetComponent<Player>();
                 if (player.index == index)
                 {
+                    if (player.isInitialized)
+                    {
+                        player.Reset();                        
+                    }
+                    else
+                    {
+                        player.Init();
+                    }
+
                     player.playerId = network.Players[index].PlayerId;
                     player.playerName.text = network.Players[index].Name;
-                    player.Init();
+
                     #if !UNITY_EDITOR
                     player.UpdateDP(GetDPPath(player.playerId));
                     #endif
@@ -672,5 +723,46 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         Player player = GetPlayerById(vo.player_id);
         player.OnRoundResult(vo.cardValueType, vo.didPullOver);
         DealCard(player, true);
+        //show sweep animation
+        if (GameModel.Instance.sweepCount < vo.sweepCount)
+        {
+            EventManager.instance.Raise(new GameEvent(GameEvent.UPDATE_SWEEP_COUNT, vo.sweepCount));
+        }
+
+        CheckGameEnd();
+    }
+
+    protected void EndGame()
+    {
+        string playerId = "";
+        int count = 0;
+        foreach (var player in _players)
+        {
+            if (player.CardsCount > count)
+            {
+                count = player.CardsCount;
+                playerId = player.playerId;
+            }
+        }
+        EventManager.instance.Raise(new InGameEvent(InGameEvent.SHOW_GAME_END_DIALOG, playerId));
+    }
+
+    protected void CheckGameEnd()
+    {
+        if (GameModel.Instance.sweepCount == GameSelectionScreen.GetSweepCount())
+        {
+            GameModel.Instance.isGameOver = true;
+            EndGame();
+        }
+    }
+
+    protected void CleanPlayers()
+    {
+        foreach (var player in _players)
+        {
+            player.Reset();
+        }
+        _players.Clear();
+        _players = null;
     }
 }

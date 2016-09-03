@@ -27,6 +27,8 @@ struct GameEvent_t2981166504;
 extern "C"  void MatchSelectionScreen__ctor_m2494922568 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MatchSelectionScreen::findMatches(System.Boolean,System.Int32)
 extern "C"  void MatchSelectionScreen_findMatches_m277424448 (Il2CppObject * __this /* static, unused */, bool ___isHost, int32_t ___matchType, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MatchSelectionScreen::OnSetToView()
+extern "C"  void MatchSelectionScreen_OnSetToView_m4214244233 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MatchSelectionScreen::Init()
 extern "C"  void MatchSelectionScreen_Init_m2110227980 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MatchSelectionScreen::CreateMultiplayerGame()

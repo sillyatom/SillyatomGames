@@ -43,6 +43,8 @@ extern "C"  void MultiplayerMainGame__ctor_m3970443366 (MultiplayerMainGame_t404
 extern "C"  String_t* MultiplayerMainGame_GetDPPath_m1101217716 (Il2CppObject * __this /* static, unused */, String_t* ___playerId, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::Init()
 extern "C"  void MultiplayerMainGame_Init_m3127656750 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::OnMoveOutOfView()
+extern "C"  void MultiplayerMainGame_OnMoveOutOfView_m3913870558 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::InitGame()
 extern "C"  void MultiplayerMainGame_InitGame_m1931109952 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::ShowWinDialog()
@@ -57,6 +59,8 @@ extern "C"  void MultiplayerMainGame_DealCard_m747093444 (MultiplayerMainGame_t4
 extern "C"  void MultiplayerMainGame_OnDealComplete_m1518237874 (MultiplayerMainGame_t4046083237 * __this, Il2CppObject * ___pArgs, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::OnAutoDealAnimationComplete(System.Object)
 extern "C"  void MultiplayerMainGame_OnAutoDealAnimationComplete_m3604132397 (MultiplayerMainGame_t4046083237 * __this, Il2CppObject * ___pArgs, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::UpdateSweepCount()
+extern "C"  void MultiplayerMainGame_UpdateSweepCount_m4125627594 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::CheckWinnings()
 extern "C"  void MultiplayerMainGame_CheckWinnings_m3943219407 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::OnDistributeWinningCard(System.Object)
@@ -101,3 +105,9 @@ extern "C"  void MultiplayerMainGame_DispatchNextRound_m3515514821 (MultiplayerM
 extern "C"  void MultiplayerMainGame_OnRoundEnd_m3044907722 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::OnRoundResult(GameEvent)
 extern "C"  void MultiplayerMainGame_OnRoundResult_m1984846874 (MultiplayerMainGame_t4046083237 * __this, GameEvent_t2981166504 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::EndGame()
+extern "C"  void MultiplayerMainGame_EndGame_m2560472305 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::CheckGameEnd()
+extern "C"  void MultiplayerMainGame_CheckGameEnd_m2426142783 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::CleanPlayers()
+extern "C"  void MultiplayerMainGame_CleanPlayers_m1407908871 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

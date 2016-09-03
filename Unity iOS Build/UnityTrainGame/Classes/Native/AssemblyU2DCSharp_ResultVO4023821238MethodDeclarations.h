@@ -46,5 +46,13 @@ extern "C"  void ResultVO_set_cards_m3628560153 (ResultVO_t4023821238 * __this, 
 extern "C"  Dictionary_2_t3403145775 * ResultVO_get_winningCards_m2091815133 (ResultVO_t4023821238 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void ResultVO::set_winningCards(System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>)
 extern "C"  void ResultVO_set_winningCards_m625555250 (ResultVO_t4023821238 * __this, Dictionary_2_t3403145775 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean ResultVO::get_isSweep()
+extern "C"  bool ResultVO_get_isSweep_m2507918312 (ResultVO_t4023821238 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ResultVO::set_isSweep(System.Boolean)
+extern "C"  void ResultVO_set_isSweep_m635921055 (ResultVO_t4023821238 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 ResultVO::get_sweepCount()
+extern "C"  int32_t ResultVO_get_sweepCount_m3537692409 (ResultVO_t4023821238 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ResultVO::set_sweepCount(System.Int32)
+extern "C"  void ResultVO_set_sweepCount_m433594288 (ResultVO_t4023821238 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Card ResultVO::GetCardWithValueType(System.String)
 extern "C"  Card_t2092848 * ResultVO_GetCardWithValueType_m3773938007 (ResultVO_t4023821238 * __this, String_t* ___cardValueType, const MethodInfo* method) IL2CPP_METHOD_ATTR;

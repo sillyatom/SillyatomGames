@@ -15,8 +15,13 @@ public class ExtMonoBehaviour : MonoBehaviour
         }
         else
         {
-            throw new UnityException(" SceneMono - Initializing Twice");
+            throw new UnityException(" SceneMono - Initializing Twice " + this);
         }
+    }
+
+    void OnDestroy()
+    {
+        RemoveListeners();
     }
 
     virtual public void AddListeners()
@@ -75,5 +80,10 @@ public class ExtMonoBehaviour : MonoBehaviour
     virtual public void OnSetToView()
     {
         AddListeners();
+    }
+
+    virtual public void Reset()
+    {
+        
     }
 }

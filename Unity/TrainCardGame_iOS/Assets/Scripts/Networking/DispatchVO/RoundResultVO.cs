@@ -13,4 +13,8 @@ public class RoundResultVO : HeaderVO
     public Dictionary<string, List<string>> winningCards{ get; set; }
 
     public int cardsCount{ get; set; }
+
+    public bool isSweep{ get; set; }
+
+    public int sweepCount{ get; set; }
 }

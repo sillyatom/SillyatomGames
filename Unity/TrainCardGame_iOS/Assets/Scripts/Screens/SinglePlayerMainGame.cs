@@ -10,15 +10,22 @@ public class SinglePlayerMainGame : MultiplayerMainGame
 
     override public void Init()
     {
-        BridgeDebugger.Log("[ SinglePlayerMainGame ] - Init()");
         network.OnSinglePlayerMode();
+        BridgeDebugger.Log("[ SinglePlayerMainGame ] - Init()");
         base.Init();
     }
 
     public override void InitGame()
     {
         _roundHandler = gameObject.GetComponent<RoundHandler>();
-        _roundHandler.Init();
+        if (!_roundHandler.isInitialized)
+        {
+            _roundHandler.Init();
+        }
+        else
+        {
+            _roundHandler.Reset();
+        }
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
         UpdatePlayers();
@@ -33,7 +40,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     override protected void UpdatePlayers()
     {
         _players = new List<Player>();
-
+        List<string> names = new List<string>(){ "_A", "_B", "_C", "_D" };
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         int count = GameConstants.MAX_PLAYERS;
         for (int index = 0; index < count; index++)
@@ -44,8 +51,22 @@ public class SinglePlayerMainGame : MultiplayerMainGame
                 if (player.index == index)
                 {
                     player.playerId = index.ToString();
-                    player.playerName.text = "Player " + index.ToString();
-                    player.Init();
+                    if (player.index == 0)
+                    {
+                        player.playerName.text = LocalPlayerModel.GetInstance().localPlayerName;                        
+                    }
+                    else
+                    {
+                        player.playerName.text = "Player" + names[index];
+                    }
+                    if (!player.isInitialized)
+                    {
+                        player.Init();
+                    }
+                    else
+                    {
+                        player.Reset();
+                    }
                     _players.Add(player);
                     break;
                 }
@@ -81,7 +102,11 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         //clear all round data
         player.OnRoundEnd();
         _roundHandler.OnRoundEnd();
-        DispatchNextRound();
+        CheckGameEnd();
+        if (!GameModel.Instance.isGameOver)
+        {
+            DispatchNextRound();
+        }
     }
 
     private int GetPrevPlayerIndex()
@@ -145,17 +170,23 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         string data = JsonConvert.SerializeObject(vo);
         NetworkResponse response = new NetworkResponse(NetworkConstants.API.NEXT_ROUND,
                                        -1, "", "", data);
+        //if no cards; remove player
         if (vo.cardsCount == 0)
         {
             network.RemovePlayer(vo.player_id);
             EventManager.instance.Raise(new InGameEvent(InGameEvent.REMOVE_PLAYER, vo.player_id));
         }
+        //if no players left, show game end dialog
         if (network.Players.Count == 1)
         {
             EventManager.instance.Raise(new InGameEvent(InGameEvent.SHOW_GAME_END_DIALOG, network.Players[0].PlayerId));
         }
-        GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
-        EventManager.instance.Raise(gEvent);
+        //if not game over, start next round
+        if (!GameModel.Instance.isGameOver)
+        {
+            GameEvent gEvent = new GameEvent(GameEvent.START_ROUND, response);
+            EventManager.instance.Raise(gEvent);
+        }
     }
 
     override protected void OnRoundEnd()
@@ -178,5 +209,22 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         {
             CheckWinnings();
         }
+    }
+
+    protected override void UpdateSweepCount()
+    {
+        int count = GameModel.Instance.sweepCount + 1;
+        EventManager.instance.Raise(new GameEvent(GameEvent.UPDATE_SWEEP_COUNT, count));
+    }
+
+    public override void OnMoveOutOfView()
+    {
+        CleanPlayers();
+        dealer.Reset();
+        network.Reset();
+        transform.GetComponent<SharedMainGame>().trains.RemoveActiveTrain();
+        Destroy(gameObject.GetComponentInChildren<Dealer>());
+        Destroy(gameObject.GetComponent<SinglePlayerMainGame>());
+        network = null;
     }
 }

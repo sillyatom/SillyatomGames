@@ -4,9 +4,6 @@ using System.Collections;
 
 public class BaseDialog : ExtMonoBehaviour
 {
-    public Button closeBtn;
-    public Button okBtn;
-
     protected Vector3 _initPosition;
     protected Transform _parentTransform;
 
@@ -16,26 +13,6 @@ public class BaseDialog : ExtMonoBehaviour
 
         _initPosition = transform.position;
         _parentTransform = transform.parent;
-
-        if (closeBtn != null)
-        {
-            closeBtn.onClick.AddListener(OnClickCloseBtn);
-        }
-
-        if (okBtn != null)
-        {
-            okBtn.onClick.AddListener(OnClickOkBtn);
-        }
-    }
-
-    virtual protected void OnClickCloseBtn()
-    {
-        SingletonManager.reference.popupManager.RemoveActivePopup();        
-    }
-
-    virtual protected void OnClickOkBtn()
-    {
-        SingletonManager.reference.popupManager.RemoveActivePopup();        
     }
 
     virtual public void OnRemove()

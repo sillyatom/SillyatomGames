@@ -28,7 +28,7 @@ public class PopupManager : ExtMonoBehaviour
 
     public void RemovePopup(GameObject popup)
     {
-        _popups.RemoveAt(_popups.IndexOf(popup));
+        _popups.RemoveAt(0);
         popup.GetComponent<BaseDialog>().OnRemove();
         blocker.gameObject.SetActive(false);
         _activePopup = null;
@@ -48,7 +48,7 @@ public class PopupManager : ExtMonoBehaviour
         if (_popups.Count > 0 && _activePopup == null)
         {
             blocker.gameObject.SetActive(true);
-            _activePopup = _popups[_popups.Count - 1];
+            _activePopup = _popups[0];
             _activePopup.SetActive(true);
 
             _activePopup.transform.SetParent(transform);

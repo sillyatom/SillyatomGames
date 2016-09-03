@@ -29,6 +29,7 @@ public class ExecutionOrderManager : MonoBehaviour
                 mono.Init();
             }
         }
+
         SingletonManager.reference.sceneTransitionManager.SetActiveScreen(TagConstants.TAG_MAIN_SCREEN);
 
         _vo = JsonConvert.DeserializeObject<GCStatusVO>(data);

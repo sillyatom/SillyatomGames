@@ -47,3 +47,7 @@ extern "C"  Il2CppObject * SinglePlayerMainGame_AutoPlay_m469515816 (SinglePlaye
 extern "C"  void SinglePlayerMainGame_DispatchNextRound_m2268102950 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::OnRoundEnd()
 extern "C"  void SinglePlayerMainGame_OnRoundEnd_m4277269641 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SinglePlayerMainGame::UpdateSweepCount()
+extern "C"  void SinglePlayerMainGame_UpdateSweepCount_m3669746505 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SinglePlayerMainGame::OnMoveOutOfView()
+extern "C"  void SinglePlayerMainGame_OnMoveOutOfView_m2375144063 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -13,34 +13,44 @@
 #include <limits>
 #include <assert.h>
 
-// Newtonsoft.Json.Serialization.JsonSerializerInternalBase/ReferenceEqualsEqualityComparer
-struct ReferenceEqualsEqualityComparer_t56069681;
-// System.Object
-struct Il2CppObject;
-// Newtonsoft.Json.Serialization.JsonSerializerInternalReader
-struct JsonSerializerInternalReader_t1638952051;
-// Newtonsoft.Json.JsonSerializer
-struct JsonSerializer_t4019458909;
-// Newtonsoft.Json.JsonReader
-struct JsonReader_t1817561742;
-// Newtonsoft.Json.Serialization.JsonContract
-struct JsonContract_t2267638131;
+// Newtonsoft.Json.Serialization.JsonPropertyCollection
+struct JsonPropertyCollection_t4151699636;
 // System.Type
 struct Type_t;
+// System.String
+struct String_t;
+// Newtonsoft.Json.Serialization.JsonProperty
+struct JsonProperty_t1841444406;
+// Newtonsoft.Json.Serialization.JsonSerializerInternalBase
+struct JsonSerializerInternalBase_t1092275265;
+// Newtonsoft.Json.JsonSerializer
+struct JsonSerializer_t4019458909;
+// Newtonsoft.Json.Utilities.BidirectionalDictionary`2<System.String,System.Object>
+struct BidirectionalDictionary_2_t2587161411;
+// Newtonsoft.Json.Serialization.ErrorContext
+struct ErrorContext_t957583840;
+// System.Object
+struct Il2CppObject;
+// System.Exception
+struct Exception_t1967233988;
+// Newtonsoft.Json.Serialization.JsonContract
+struct JsonContract_t2267638131;
+// Newtonsoft.Json.Serialization.JsonSerializerInternalBase/ReferenceEqualsEqualityComparer
+struct ReferenceEqualsEqualityComparer_t56069681;
+// Newtonsoft.Json.Serialization.JsonSerializerInternalReader
+struct JsonSerializerInternalReader_t1638952051;
+// Newtonsoft.Json.JsonReader
+struct JsonReader_t1817561742;
 // Newtonsoft.Json.Serialization.JsonSerializerProxy
 struct JsonSerializerProxy_t2629456141;
 // Newtonsoft.Json.Serialization.JsonFormatterConverter
 struct JsonFormatterConverter_t3202368087;
 // Newtonsoft.Json.Linq.JToken
 struct JToken_t2367600838;
-// Newtonsoft.Json.Serialization.JsonProperty
-struct JsonProperty_t1841444406;
 // Newtonsoft.Json.JsonConverter
 struct JsonConverter_t757201947;
 // Newtonsoft.Json.Serialization.JsonArrayContract
 struct JsonArrayContract_t1632130460;
-// System.String
-struct String_t;
 // System.Globalization.CultureInfo
 struct CultureInfo_t3603717042;
 // Newtonsoft.Json.Serialization.JsonDictionaryContract
@@ -129,8 +139,6 @@ struct JsonConverterCollection_t3995341017;
 struct IContractResolver_t1994304730;
 // System.Runtime.Serialization.SerializationBinder
 struct SerializationBinder_t3161036435;
-// Newtonsoft.Json.Serialization.JsonSerializerInternalBase
-struct JsonSerializerInternalBase_t1092275265;
 // Newtonsoft.Json.JsonContainerAttribute
 struct JsonContainerAttribute_t4246140134;
 // Newtonsoft.Json.JsonObjectAttribute
@@ -357,6 +365,8 @@ struct SceneTransitionManager_t1210711436;
 struct SharedMainGame_t2807228656;
 // SinglePlayerMainGame
 struct SinglePlayerMainGame_t3863033300;
+// Dealer
+struct Dealer_t2043054649;
 // SinglePlayerMainGame/<AutoPlay>c__IteratorE
 struct U3CAutoPlayU3Ec__IteratorE_t3593857299;
 // SingletonManager
@@ -375,6 +385,14 @@ struct TestScript_t3705514013;
 struct TextTest_t3355968383;
 // UnityEngine.TextMesh
 struct TextMesh_t583678247;
+// Train
+struct Train_t81068520;
+// GrayColorToggle
+struct GrayColorToggle_t580454932;
+// UnityEngine.Animator
+struct Animator_t792326996;
+// Trains
+struct Trains_t2513124235;
 // Utility
 struct Utility_t1549674828;
 // Vector2Converter
@@ -387,36 +405,57 @@ struct Vector4Converter_t1276662127;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636MethodDeclarations.h"
+#include "mscorlib_System_Type2779229935.h"
 #include "mscorlib_System_Void2779279689.h"
-#include "mscorlib_System_Object837106420MethodDeclarations.h"
+#include "mscorlib_System_Collections_ObjectModel_KeyedColle3899923451MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Validat272309903MethodDeclarations.h"
+#include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_Object837106420.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1841444406.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1841444406MethodDeclarations.h"
+#include "mscorlib_System_Globalization_CultureInfo3603717042MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializationE90215434MethodDeclarations.h"
 #include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_Globalization_CultureInfo3603717042.h"
+#include "mscorlib_ArrayTypes.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializationE90215434.h"
+#include "mscorlib_System_Collections_ObjectModel_Collection3810432136MethodDeclarations.h"
+#include "mscorlib_System_Collections_ObjectModel_Collection3810432136.h"
+#include "mscorlib_System_StringComparison1653470895.h"
+#include "mscorlib_System_String968488902MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializer4019458909.h"
+#include "mscorlib_System_Object837106420MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Bidire2587161411.h"
+#include "mscorlib_System_Collections_Generic_EqualityCompare402879552MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Bidire2587161411MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_EqualityCompare402879552.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681.h"
+#include "mscorlib_System_Exception1967233988.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Err957583840.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Err957583840MethodDeclarations.h"
+#include "mscorlib_System_InvalidOperationException2420574324MethodDeclarations.h"
+#include "mscorlib_System_InvalidOperationException2420574324.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2267638131.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2267638131MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Er1025956040MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializer4019458909MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Serialization_StreamingCont986364934.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Er1025956040.h"
 #include "mscorlib_System_Int322847414787.h"
 #include "mscorlib_System_Runtime_CompilerServices_RuntimeHe1695827251MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1638952051.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1638952051MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializer4019458909.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonReader1817561742.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Validat272309903MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Collec1402980234MethodDeclarations.h"
-#include "mscorlib_System_Globalization_CultureInfo3603717042MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializationE90215434MethodDeclarations.h"
-#include "mscorlib_System_String968488902MethodDeclarations.h"
-#include "mscorlib_System_Type2779229935.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2267638131.h"
-#include "mscorlib_System_String968488902.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializer4019458909MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonReader1817561742MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonToken326031476.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1632130460.h"
-#include "mscorlib_System_Globalization_CultureInfo3603717042.h"
-#include "mscorlib_ArrayTypes.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializationE90215434.h"
-#include "mscorlib_System_StringComparison1653470895.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Jso128316969.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3651158994.h"
 #include "mscorlib_System_ArgumentNullException3214793280MethodDeclarations.h"
@@ -427,7 +466,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3202368087.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3202368087MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Linq_JToken2367600838.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2267638131MethodDeclarations.h"
 #include "mscorlib_System_Type2779229935MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Linq_JRaw170341493MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Linq_JTokenWrite1418523161MethodDeclarations.h"
@@ -436,8 +474,6 @@ struct Vector4Converter_t1276662127;
 #include "mscorlib_System_RuntimeTypeHandle1864875887.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Linq_JRaw170341493.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonWriter1972966974.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1841444406.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1841444406MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverter757201947MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect767490589MethodDeclarations.h"
 #include "mscorlib_System_Convert1097883944MethodDeclarations.h"
@@ -447,7 +483,6 @@ struct Vector4Converter_t1276662127;
 #include "mscorlib_System_DBNull491814586MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen964387137MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Jso128316969MethodDeclarations.h"
-#include "mscorlib_System_Exception1967233988.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1219024426.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3363619915.h"
 #include "mscorlib_System_Nullable_1_gen964387137.h"
@@ -471,7 +506,6 @@ struct Vector4Converter_t1276662127;
 #include "System_Core_System_Func_1_gen1979887667MethodDeclarations.h"
 #include "System_Core_System_Func_1_gen1979887667.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ConstructorHandl2670794114.h"
-#include "mscorlib_System_Runtime_Serialization_StreamingCont986364934.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1236026528MethodDeclarations.h"
 #include "System_Core_System_Action_2_gen2664340510MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1236026528.h"
@@ -513,8 +547,6 @@ struct Vector4Converter_t1276662127;
 #include "System_Core_System_Func_2_gen1697540151.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279.h"
 #include "mscorlib_System_Collections_Generic_KeyValuePair_23312956448.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_MissingMemberHan1044222760.h"
 #include "mscorlib_System_Reflection_MemberInfo2843033814MethodDeclarations.h"
 #include "mscorlib_System_Reflection_MemberInfo2843033814.h"
@@ -545,19 +577,15 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_PreserveReferenc1434533308.h"
 #include "mscorlib_System_Nullable_1_gen319467179.h"
 #include "mscorlib_System_Nullable_1_gen319467179MethodDeclarations.h"
-#include "mscorlib_System_InvalidOperationException2420574324MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ReferenceLoopHan1728396567.h"
 #include "UnityEngine_UnityEngine_Vector23525329788.h"
 #include "UnityEngine_UnityEngine_Vector33525329789.h"
 #include "UnityEngine_UnityEngine_Vector43525329790.h"
 #include "UnityEngine_UnityEngine_Color1588175760.h"
 #include "UnityEngine_UnityEngine_Color324137084207.h"
-#include "mscorlib_System_InvalidOperationException2420574324.h"
 #include "System_System_ComponentModel_TypeConverter3398830607MethodDeclarations.h"
 #include "System_System_ComponentModel_TypeConverter3398830607.h"
 #include "System_System_ComponentModel_ComponentConverter1185010668.h"
-#include "mscorlib_System_Collections_ObjectModel_Collection3810432136MethodDeclarations.h"
-#include "mscorlib_System_Collections_ObjectModel_Collection3810432136.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_F3852587989.h"
 #include "mscorlib_System_Array2840145358MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_FormatterCon2436533519MethodDeclarations.h"
@@ -571,7 +599,6 @@ struct Vector4Converter_t1276662127;
 #include "mscorlib_System_Predicate_1_gen1408070318MethodDeclarations.h"
 #include "mscorlib_System_Predicate_1_gen1408070318.h"
 #include "mscorlib_System_EventHandler_1_gen1868533683.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2937851556MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1197019735.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1197019735MethodDeclarations.h"
@@ -807,16 +834,16 @@ struct Vector4Converter_t1276662127;
 #include "UnityEngine_UnityEngine_Texture1769722184.h"
 #include "UnityEngine_UnityEngine_Sprite4006040370.h"
 #include "UnityEngine_UnityEngine_Object3878351788MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_GameObject4012695102MethodDeclarations.h"
+#include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
+#include "UnityEngine_UnityEngine_GameObject4012695102.h"
+#include "UnityEngine_UnityEngine_Object3878351788.h"
 #include "UnityEngine_UI_UnityEngine_UI_Button990034267MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Events_UnityAction909267611MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Events_UnityEvent2938797301MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_GameObject4012695102MethodDeclarations.h"
-#include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
 #include "UnityEngine_UI_UnityEngine_UI_Button990034267.h"
-#include "UnityEngine_UnityEngine_Object3878351788.h"
 #include "UnityEngine_UI_UnityEngine_UI_Button_ButtonClickedE962981669.h"
 #include "UnityEngine_UnityEngine_Events_UnityAction909267611.h"
-#include "UnityEngine_UnityEngine_GameObject4012695102.h"
 #include "UnityEngine_UI_UnityEngine_UI_Text3286458198.h"
 #include "UnityEngine_UI_UnityEngine_UI_Text3286458198MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Quaternion1891715979MethodDeclarations.h"
@@ -903,6 +930,8 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_SceneMonoBehaviour4246217742MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SceneTransitionManager1210711436.h"
 #include "AssemblyU2DCSharp_SceneTransitionManager1210711436MethodDeclarations.h"
+#include "AssemblyU2DCSharp_TagConstants2563060469.h"
+#include "AssemblyU2DCSharp_TagConstants2563060469MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen4114433806MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_Enumera2200216798MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_Enumera2200216798.h"
@@ -920,8 +949,10 @@ struct Vector4Converter_t1276662127;
 #include "UnityEngine_ArrayTypes.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen3190040570.h"
 #include "AssemblyU2DCSharp_LocalPlayerModel1751900285.h"
+#include "AssemblyU2DCSharp_GameModel2988344887MethodDeclarations.h"
 #include "mscorlib_System_Collections_Hashtable3875263730.h"
 #include "mscorlib_System_Collections_Hashtable3875263730MethodDeclarations.h"
+#include "AssemblyU2DCSharp_GameModel2988344887.h"
 #include "mscorlib_System_Collections_Generic_List_1_Enumera1275823562MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_Enumera1275823562.h"
 #include "AssemblyU2DCSharp_SinglePlayerMainGame_U3CAutoPlay3593857299MethodDeclarations.h"
@@ -931,6 +962,8 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_NetworkConstants_API65018.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen555210632.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen555210632MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Trains2513124235MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Trains2513124235.h"
 #include "AssemblyU2DCSharp_Utility1549674828MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SpinHandler631124104.h"
 #include "AssemblyU2DCSharp_SpinHandler631124104MethodDeclarations.h"
@@ -942,8 +975,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_System_Runtime_Serialization_Dat3625462001MethodDeclarations.h"
 #include "AssemblyU2DCSharp_System_Runtime_Serialization_Enu2225818298.h"
 #include "AssemblyU2DCSharp_System_Runtime_Serialization_Enu2225818298MethodDeclarations.h"
-#include "AssemblyU2DCSharp_TagConstants2563060469.h"
-#include "AssemblyU2DCSharp_TagConstants2563060469MethodDeclarations.h"
 #include "AssemblyU2DCSharp_TestScript3705514013.h"
 #include "AssemblyU2DCSharp_TestScript3705514013MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Debug1588791936MethodDeclarations.h"
@@ -958,6 +989,14 @@ struct Vector4Converter_t1276662127;
 #include "mscorlib_System_DateTime339033936MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_TextMesh583678247.h"
 #include "AssemblyU2DCSharp_JsonTestScript2619432741.h"
+#include "AssemblyU2DCSharp_Train81068520.h"
+#include "AssemblyU2DCSharp_Train81068520MethodDeclarations.h"
+#include "AssemblyU2DCSharp_GrayColorToggle580454932MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Animator792326996MethodDeclarations.h"
+#include "AssemblyU2DCSharp_GrayColorToggle580454932.h"
+#include "UnityEngine_UnityEngine_Animator792326996.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen27321462.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen27321462MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Random3963434288MethodDeclarations.h"
 #include "mscorlib_System_Random922188920MethodDeclarations.h"
 #include "mscorlib_System_Random922188920.h"
@@ -1077,6 +1116,11 @@ extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_g
 #define GameObject_GetComponent_TisIl2CppObject_m2447772384(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<CardSelectionHandler>()
 #define GameObject_GetComponent_TisCardSelectionHandler_t2914958190_m1225589167(__this, method) ((  CardSelectionHandler_t2914958190 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::AddComponent<System.Object>()
+extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
+#define GameObject_AddComponent_TisIl2CppObject_m337943659(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::AddComponent<CardSelectionHandler>()
+#define GameObject_AddComponent_TisCardSelectionHandler_t2914958190_m1455205828(__this, method) ((  CardSelectionHandler_t2914958190 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<BaseDialog>()
 #define GameObject_GetComponent_TisBaseDialog_t735619993_m2768243492(__this, method) ((  BaseDialog_t735619993 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.Object::Instantiate<System.Object>(!!0)
@@ -1103,6 +1147,8 @@ extern "C"  void EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared 
 #define EventManager_RemoveListener_TisIl2CppObject_m844052978(__this, p0, method) ((  void (*) (EventManager_t1907836883 *, EventDelegate_1_t3301404201 *, const MethodInfo*))EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared)(__this, p0, method)
 // System.Void EventManager::RemoveListener<InGameEvent>(EventManager/EventDelegate`1<!!0>)
 #define EventManager_RemoveListener_TisInGameEvent_t511087107_m1408270167(__this, p0, method) ((  void (*) (EventManager_t1907836883 *, EventDelegate_1_t2975384888 *, const MethodInfo*))EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared)(__this, p0, method)
+// !!0 UnityEngine.Component::GetComponent<SceneMonoBehaviour>()
+#define Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895(__this, method) ((  SceneMonoBehaviour_t4246217742 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.RectTransform>()
 #define GameObject_GetComponent_TisRectTransform_t3317474837_m406276429(__this, method) ((  RectTransform_t3317474837 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<SceneMonoBehaviour>()
@@ -1111,6 +1157,15 @@ extern "C"  void EventManager_RemoveListener_TisIl2CppObject_m844052978_gshared 
 #define GameObject_GetComponent_TisRoundHandler_t2172802556_m856863329(__this, method) ((  RoundHandler_t2172802556 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<Player>()
 #define GameObject_GetComponent_TisPlayer_t2393081601_m920458684(__this, method) ((  Player_t2393081601 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.Component::GetComponent<SharedMainGame>()
+#define Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(__this, method) ((  SharedMainGame_t2807228656 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponentInChildren<System.Object>()
+extern "C"  Il2CppObject * GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
+#define GameObject_GetComponentInChildren_TisIl2CppObject_m782999868(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponentInChildren<Dealer>()
+#define GameObject_GetComponentInChildren_TisDealer_t2043054649_m2341390440(__this, method) ((  Dealer_t2043054649 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<SinglePlayerMainGame>()
+#define GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681(__this, method) ((  SinglePlayerMainGame_t3863033300 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<GameObjectRef>()
 #define GameObject_GetComponent_TisGameObjectRef_t4121474274_m512380223(__this, method) ((  GameObjectRef_t4121474274 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // System.Collections.Generic.List`1<!!0> Utility::DeepCloneList<System.Object>(System.Collections.Generic.List`1<!!0>)
@@ -1122,11 +1177,499 @@ extern "C"  List_1_t1634065389 * Utility_DeepCloneList_TisIl2CppObject_m11577837
 #define Component_GetComponent_TisPostURL_t1273431183_m2672707914(__this, method) ((  PostURL_t1273431183 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.TextMesh>()
 #define GameObject_GetComponent_TisTextMesh_t583678247_m1543870284(__this, method) ((  TextMesh_t583678247 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<GrayColorToggle>()
+#define GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757(__this, method) ((  GrayColorToggle_t580454932 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Animator>()
+#define GameObject_GetComponent_TisAnimator_t792326996_m2581074431(__this, method) ((  Animator_t792326996 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<Train>()
+#define GameObject_GetComponent_TisTrain_t81068520_m2335988857(__this, method) ((  Train_t81068520 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void Newtonsoft.Json.Serialization.JsonPropertyCollection::.ctor(System.Type)
+extern const MethodInfo* KeyedCollection_2__ctor_m2704525171_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3575610;
+extern const uint32_t JsonPropertyCollection__ctor_m2906839884_MetadataUsageId;
+extern "C"  void JsonPropertyCollection__ctor_m2906839884 (JsonPropertyCollection_t4151699636 * __this, Type_t * ___type, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonPropertyCollection__ctor_m2906839884_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		KeyedCollection_2__ctor_m2704525171(__this, /*hidden argument*/KeyedCollection_2__ctor_m2704525171_MethodInfo_var);
+		Type_t * L_0 = ___type;
+		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, L_0, _stringLiteral3575610, /*hidden argument*/NULL);
+		Type_t * L_1 = ___type;
+		__this->set__type_5(L_1);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.Serialization.JsonPropertyCollection::GetKeyForItem(Newtonsoft.Json.Serialization.JsonProperty)
+extern "C"  String_t* JsonPropertyCollection_GetKeyForItem_m1638406699 (JsonPropertyCollection_t4151699636 * __this, JsonProperty_t1841444406 * ___item, const MethodInfo* method)
+{
+	{
+		JsonProperty_t1841444406 * L_0 = ___item;
+		NullCheck(L_0);
+		String_t* L_1 = JsonProperty_get_PropertyName_m3204019141(L_0, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonPropertyCollection::AddProperty(Newtonsoft.Json.Serialization.JsonProperty)
+extern TypeInfo* CultureInfo_t3603717042_il2cpp_TypeInfo_var;
+extern TypeInfo* ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var;
+extern TypeInfo* JsonSerializationException_t90215434_il2cpp_TypeInfo_var;
+extern const MethodInfo* KeyedCollection_2_Contains_m4103320693_MethodInfo_var;
+extern const MethodInfo* KeyedCollection_2_get_Item_m2712163019_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2918271218;
+extern const uint32_t JsonPropertyCollection_AddProperty_m350438961_MetadataUsageId;
+extern "C"  void JsonPropertyCollection_AddProperty_m350438961 (JsonPropertyCollection_t4151699636 * __this, JsonProperty_t1841444406 * ___property, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonPropertyCollection_AddProperty_m350438961_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	JsonProperty_t1841444406 * V_0 = NULL;
+	{
+		JsonProperty_t1841444406 * L_0 = ___property;
+		NullCheck(L_0);
+		String_t* L_1 = JsonProperty_get_PropertyName_m3204019141(L_0, /*hidden argument*/NULL);
+		bool L_2 = KeyedCollection_2_Contains_m4103320693(__this, L_1, /*hidden argument*/KeyedCollection_2_Contains_m4103320693_MethodInfo_var);
+		if (!L_2)
+		{
+			goto IL_006a;
+		}
+	}
+	{
+		JsonProperty_t1841444406 * L_3 = ___property;
+		NullCheck(L_3);
+		bool L_4 = JsonProperty_get_Ignored_m3044358814(L_3, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		return;
+	}
+
+IL_001d:
+	{
+		JsonProperty_t1841444406 * L_5 = ___property;
+		NullCheck(L_5);
+		String_t* L_6 = JsonProperty_get_PropertyName_m3204019141(L_5, /*hidden argument*/NULL);
+		JsonProperty_t1841444406 * L_7 = KeyedCollection_2_get_Item_m2712163019(__this, L_6, /*hidden argument*/KeyedCollection_2_get_Item_m2712163019_MethodInfo_var);
+		V_0 = L_7;
+		JsonProperty_t1841444406 * L_8 = V_0;
+		NullCheck(L_8);
+		bool L_9 = JsonProperty_get_Ignored_m3044358814(L_8, /*hidden argument*/NULL);
+		if (L_9)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CultureInfo_t3603717042_il2cpp_TypeInfo_var);
+		CultureInfo_t3603717042 * L_10 = CultureInfo_get_InvariantCulture_m764001524(NULL /*static, unused*/, /*hidden argument*/NULL);
+		ObjectU5BU5D_t11523773* L_11 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)2));
+		JsonProperty_t1841444406 * L_12 = ___property;
+		NullCheck(L_12);
+		String_t* L_13 = JsonProperty_get_PropertyName_m3204019141(L_12, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_11, 0);
+		ArrayElementTypeCheck (L_11, L_13);
+		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_13);
+		ObjectU5BU5D_t11523773* L_14 = L_11;
+		Type_t * L_15 = __this->get__type_5();
+		NullCheck(L_14);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_14, 1);
+		ArrayElementTypeCheck (L_14, L_15);
+		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_15);
+		String_t* L_16 = StringUtils_FormatWith_m3260740632(NULL /*static, unused*/, _stringLiteral2918271218, L_10, L_14, /*hidden argument*/NULL);
+		JsonSerializationException_t90215434 * L_17 = (JsonSerializationException_t90215434 *)il2cpp_codegen_object_new(JsonSerializationException_t90215434_il2cpp_TypeInfo_var);
+		JsonSerializationException__ctor_m1435327459(L_17, L_16, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_17);
+	}
+
+IL_0062:
+	{
+		JsonProperty_t1841444406 * L_18 = V_0;
+		VirtFuncInvoker1< bool, JsonProperty_t1841444406 * >::Invoke(26 /* System.Boolean System.Collections.ObjectModel.Collection`1<Newtonsoft.Json.Serialization.JsonProperty>::Remove(!0) */, __this, L_18);
+	}
+
+IL_006a:
+	{
+		JsonProperty_t1841444406 * L_19 = ___property;
+		VirtActionInvoker1< JsonProperty_t1841444406 * >::Invoke(22 /* System.Void System.Collections.ObjectModel.Collection`1<Newtonsoft.Json.Serialization.JsonProperty>::Add(!0) */, __this, L_19);
+		return;
+	}
+}
+// Newtonsoft.Json.Serialization.JsonProperty Newtonsoft.Json.Serialization.JsonPropertyCollection::GetClosestMatchProperty(System.String)
+extern "C"  JsonProperty_t1841444406 * JsonPropertyCollection_GetClosestMatchProperty_m3585371245 (JsonPropertyCollection_t4151699636 * __this, String_t* ___propertyName, const MethodInfo* method)
+{
+	JsonProperty_t1841444406 * V_0 = NULL;
+	{
+		String_t* L_0 = ___propertyName;
+		JsonProperty_t1841444406 * L_1 = JsonPropertyCollection_GetProperty_m3848037100(__this, L_0, 4, /*hidden argument*/NULL);
+		V_0 = L_1;
+		JsonProperty_t1841444406 * L_2 = V_0;
+		if (L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		String_t* L_3 = ___propertyName;
+		JsonProperty_t1841444406 * L_4 = JsonPropertyCollection_GetProperty_m3848037100(__this, L_3, 5, /*hidden argument*/NULL);
+		V_0 = L_4;
+	}
+
+IL_0018:
+	{
+		JsonProperty_t1841444406 * L_5 = V_0;
+		return L_5;
+	}
+}
+// Newtonsoft.Json.Serialization.JsonProperty Newtonsoft.Json.Serialization.JsonPropertyCollection::GetProperty(System.String,System.StringComparison)
+extern TypeInfo* IEnumerator_1_t3324550854_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
+extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
+extern const uint32_t JsonPropertyCollection_GetProperty_m3848037100_MetadataUsageId;
+extern "C"  JsonProperty_t1841444406 * JsonPropertyCollection_GetProperty_m3848037100 (JsonPropertyCollection_t4151699636 * __this, String_t* ___propertyName, int32_t ___comparisonType, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonPropertyCollection_GetProperty_m3848037100_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	JsonProperty_t1841444406 * V_0 = NULL;
+	Il2CppObject* V_1 = NULL;
+	JsonProperty_t1841444406 * V_2 = NULL;
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		Il2CppObject* L_0 = VirtFuncInvoker0< Il2CppObject* >::Invoke(27 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.ObjectModel.Collection`1<Newtonsoft.Json.Serialization.JsonProperty>::GetEnumerator() */, __this);
+		V_1 = L_0;
+	}
+
+IL_0007:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_002c;
+		}
+
+IL_000c:
+		{
+			Il2CppObject* L_1 = V_1;
+			NullCheck(L_1);
+			JsonProperty_t1841444406 * L_2 = InterfaceFuncInvoker0< JsonProperty_t1841444406 * >::Invoke(0 /* !0 System.Collections.Generic.IEnumerator`1<Newtonsoft.Json.Serialization.JsonProperty>::get_Current() */, IEnumerator_1_t3324550854_il2cpp_TypeInfo_var, L_1);
+			V_0 = L_2;
+			String_t* L_3 = ___propertyName;
+			JsonProperty_t1841444406 * L_4 = V_0;
+			NullCheck(L_4);
+			String_t* L_5 = JsonProperty_get_PropertyName_m3204019141(L_4, /*hidden argument*/NULL);
+			int32_t L_6 = ___comparisonType;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_7 = String_Equals_m2001218004(NULL /*static, unused*/, L_3, L_5, L_6, /*hidden argument*/NULL);
+			if (!L_7)
+			{
+				goto IL_002c;
+			}
+		}
+
+IL_0025:
+		{
+			JsonProperty_t1841444406 * L_8 = V_0;
+			V_2 = L_8;
+			IL2CPP_LEAVE(0x49, FINALLY_003c);
+		}
+
+IL_002c:
+		{
+			Il2CppObject* L_9 = V_1;
+			NullCheck(L_9);
+			bool L_10 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_9);
+			if (L_10)
+			{
+				goto IL_000c;
+			}
+		}
+
+IL_0037:
+		{
+			IL2CPP_LEAVE(0x47, FINALLY_003c);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_003c;
+	}
+
+FINALLY_003c:
+	{ // begin finally (depth: 1)
+		{
+			Il2CppObject* L_11 = V_1;
+			if (L_11)
+			{
+				goto IL_0040;
+			}
+		}
+
+IL_003f:
+		{
+			IL2CPP_END_FINALLY(60)
+		}
+
+IL_0040:
+		{
+			Il2CppObject* L_12 = V_1;
+			NullCheck(L_12);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, L_12);
+			IL2CPP_END_FINALLY(60)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(60)
+	{
+		IL2CPP_JUMP_TBL(0x49, IL_0049)
+		IL2CPP_JUMP_TBL(0x47, IL_0047)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_0047:
+	{
+		return (JsonProperty_t1841444406 *)NULL;
+	}
+
+IL_0049:
+	{
+		JsonProperty_t1841444406 * L_13 = V_2;
+		return L_13;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase::.ctor(Newtonsoft.Json.JsonSerializer)
+extern Il2CppCodeGenString* _stringLiteral3696981394;
+extern const uint32_t JsonSerializerInternalBase__ctor_m270309585_MetadataUsageId;
+extern "C"  void JsonSerializerInternalBase__ctor_m270309585 (JsonSerializerInternalBase_t1092275265 * __this, JsonSerializer_t4019458909 * ___serializer, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonSerializerInternalBase__ctor_m270309585_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		JsonSerializer_t4019458909 * L_0 = ___serializer;
+		ValidationUtils_ArgumentNotNull_m3978868425(NULL /*static, unused*/, L_0, _stringLiteral3696981394, /*hidden argument*/NULL);
+		JsonSerializer_t4019458909 * L_1 = ___serializer;
+		JsonSerializerInternalBase_set_Serializer_m2116923300(__this, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Newtonsoft.Json.JsonSerializer Newtonsoft.Json.Serialization.JsonSerializerInternalBase::get_Serializer()
+extern "C"  JsonSerializer_t4019458909 * JsonSerializerInternalBase_get_Serializer_m3359244333 (JsonSerializerInternalBase_t1092275265 * __this, const MethodInfo* method)
+{
+	{
+		JsonSerializer_t4019458909 * L_0 = __this->get_U3CSerializerU3Ek__BackingField_2();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase::set_Serializer(Newtonsoft.Json.JsonSerializer)
+extern "C"  void JsonSerializerInternalBase_set_Serializer_m2116923300 (JsonSerializerInternalBase_t1092275265 * __this, JsonSerializer_t4019458909 * ___value, const MethodInfo* method)
+{
+	{
+		JsonSerializer_t4019458909 * L_0 = ___value;
+		__this->set_U3CSerializerU3Ek__BackingField_2(L_0);
+		return;
+	}
+}
+// Newtonsoft.Json.Utilities.BidirectionalDictionary`2<System.String,System.Object> Newtonsoft.Json.Serialization.JsonSerializerInternalBase::get_DefaultReferenceMappings()
+extern TypeInfo* EqualityComparer_1_t402879552_il2cpp_TypeInfo_var;
+extern TypeInfo* ReferenceEqualsEqualityComparer_t56069681_il2cpp_TypeInfo_var;
+extern TypeInfo* BidirectionalDictionary_2_t2587161411_il2cpp_TypeInfo_var;
+extern const MethodInfo* EqualityComparer_1_get_Default_m2030521749_MethodInfo_var;
+extern const MethodInfo* BidirectionalDictionary_2__ctor_m4175545449_MethodInfo_var;
+extern const uint32_t JsonSerializerInternalBase_get_DefaultReferenceMappings_m2016463219_MetadataUsageId;
+extern "C"  BidirectionalDictionary_2_t2587161411 * JsonSerializerInternalBase_get_DefaultReferenceMappings_m2016463219 (JsonSerializerInternalBase_t1092275265 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_get_DefaultReferenceMappings_m2016463219_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		BidirectionalDictionary_2_t2587161411 * L_0 = __this->get__mappings_1();
+		if (L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(EqualityComparer_1_t402879552_il2cpp_TypeInfo_var);
+		EqualityComparer_1_t402879552 * L_1 = EqualityComparer_1_get_Default_m2030521749(NULL /*static, unused*/, /*hidden argument*/EqualityComparer_1_get_Default_m2030521749_MethodInfo_var);
+		ReferenceEqualsEqualityComparer_t56069681 * L_2 = (ReferenceEqualsEqualityComparer_t56069681 *)il2cpp_codegen_object_new(ReferenceEqualsEqualityComparer_t56069681_il2cpp_TypeInfo_var);
+		ReferenceEqualsEqualityComparer__ctor_m4065543358(L_2, /*hidden argument*/NULL);
+		BidirectionalDictionary_2_t2587161411 * L_3 = (BidirectionalDictionary_2_t2587161411 *)il2cpp_codegen_object_new(BidirectionalDictionary_2_t2587161411_il2cpp_TypeInfo_var);
+		BidirectionalDictionary_2__ctor_m4175545449(L_3, L_1, L_2, /*hidden argument*/BidirectionalDictionary_2__ctor_m4175545449_MethodInfo_var);
+		__this->set__mappings_1(L_3);
+	}
+
+IL_0020:
+	{
+		BidirectionalDictionary_2_t2587161411 * L_4 = __this->get__mappings_1();
+		return L_4;
+	}
+}
+// Newtonsoft.Json.Serialization.ErrorContext Newtonsoft.Json.Serialization.JsonSerializerInternalBase::GetErrorContext(System.Object,System.Object,System.Exception)
+extern TypeInfo* ErrorContext_t957583840_il2cpp_TypeInfo_var;
+extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3294539880;
+extern const uint32_t JsonSerializerInternalBase_GetErrorContext_m19753964_MetadataUsageId;
+extern "C"  ErrorContext_t957583840 * JsonSerializerInternalBase_GetErrorContext_m19753964 (JsonSerializerInternalBase_t1092275265 * __this, Il2CppObject * ___currentObject, Il2CppObject * ___member, Exception_t1967233988 * ___error, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_GetErrorContext_m19753964_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		ErrorContext_t957583840 * L_0 = __this->get__currentErrorContext_0();
+		if (L_0)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		Il2CppObject * L_1 = ___currentObject;
+		Il2CppObject * L_2 = ___member;
+		Exception_t1967233988 * L_3 = ___error;
+		ErrorContext_t957583840 * L_4 = (ErrorContext_t957583840 *)il2cpp_codegen_object_new(ErrorContext_t957583840_il2cpp_TypeInfo_var);
+		ErrorContext__ctor_m2500188981(L_4, L_1, L_2, L_3, /*hidden argument*/NULL);
+		__this->set__currentErrorContext_0(L_4);
+	}
+
+IL_0019:
+	{
+		ErrorContext_t957583840 * L_5 = __this->get__currentErrorContext_0();
+		NullCheck(L_5);
+		Exception_t1967233988 * L_6 = ErrorContext_get_Error_m3495269841(L_5, /*hidden argument*/NULL);
+		Exception_t1967233988 * L_7 = ___error;
+		if ((((Il2CppObject*)(Exception_t1967233988 *)L_6) == ((Il2CppObject*)(Exception_t1967233988 *)L_7)))
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		InvalidOperationException_t2420574324 * L_8 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
+		InvalidOperationException__ctor_m1485483280(L_8, _stringLiteral3294539880, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8);
+	}
+
+IL_0035:
+	{
+		ErrorContext_t957583840 * L_9 = __this->get__currentErrorContext_0();
+		return L_9;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase::ClearErrorContext()
+extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral4020470972;
+extern const uint32_t JsonSerializerInternalBase_ClearErrorContext_m1251934386_MetadataUsageId;
+extern "C"  void JsonSerializerInternalBase_ClearErrorContext_m1251934386 (JsonSerializerInternalBase_t1092275265 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_ClearErrorContext_m1251934386_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		ErrorContext_t957583840 * L_0 = __this->get__currentErrorContext_0();
+		if (L_0)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		InvalidOperationException_t2420574324 * L_1 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
+		InvalidOperationException__ctor_m1485483280(L_1, _stringLiteral4020470972, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0016:
+	{
+		__this->set__currentErrorContext_0((ErrorContext_t957583840 *)NULL);
+		return;
+	}
+}
+// System.Boolean Newtonsoft.Json.Serialization.JsonSerializerInternalBase::IsErrorHandled(System.Object,Newtonsoft.Json.Serialization.JsonContract,System.Object,System.Exception)
+extern TypeInfo* ErrorEventArgs_t1025956040_il2cpp_TypeInfo_var;
+extern const uint32_t JsonSerializerInternalBase_IsErrorHandled_m1948851277_MetadataUsageId;
+extern "C"  bool JsonSerializerInternalBase_IsErrorHandled_m1948851277 (JsonSerializerInternalBase_t1092275265 * __this, Il2CppObject * ___currentObject, JsonContract_t2267638131 * ___contract, Il2CppObject * ___keyValue, Exception_t1967233988 * ___ex, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (JsonSerializerInternalBase_IsErrorHandled_m1948851277_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	ErrorContext_t957583840 * V_0 = NULL;
+	{
+		Il2CppObject * L_0 = ___currentObject;
+		Il2CppObject * L_1 = ___keyValue;
+		Exception_t1967233988 * L_2 = ___ex;
+		ErrorContext_t957583840 * L_3 = JsonSerializerInternalBase_GetErrorContext_m19753964(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		JsonContract_t2267638131 * L_4 = ___contract;
+		Il2CppObject * L_5 = ___currentObject;
+		JsonSerializer_t4019458909 * L_6 = JsonSerializerInternalBase_get_Serializer_m3359244333(__this, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		StreamingContext_t986364934  L_7 = VirtFuncInvoker0< StreamingContext_t986364934  >::Invoke(31 /* System.Runtime.Serialization.StreamingContext Newtonsoft.Json.JsonSerializer::get_Context() */, L_6);
+		ErrorContext_t957583840 * L_8 = V_0;
+		NullCheck(L_4);
+		JsonContract_InvokeOnError_m4200927753(L_4, L_5, L_7, L_8, /*hidden argument*/NULL);
+		ErrorContext_t957583840 * L_9 = V_0;
+		NullCheck(L_9);
+		bool L_10 = ErrorContext_get_Handled_m1276804510(L_9, /*hidden argument*/NULL);
+		if (L_10)
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		JsonSerializer_t4019458909 * L_11 = JsonSerializerInternalBase_get_Serializer_m3359244333(__this, /*hidden argument*/NULL);
+		Il2CppObject * L_12 = ___currentObject;
+		ErrorContext_t957583840 * L_13 = V_0;
+		ErrorEventArgs_t1025956040 * L_14 = (ErrorEventArgs_t1025956040 *)il2cpp_codegen_object_new(ErrorEventArgs_t1025956040_il2cpp_TypeInfo_var);
+		ErrorEventArgs__ctor_m880780977(L_14, L_12, L_13, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		JsonSerializer_OnError_m2358242801(L_11, L_14, /*hidden argument*/NULL);
+	}
+
+IL_003b:
+	{
+		ErrorContext_t957583840 * L_15 = V_0;
+		NullCheck(L_15);
+		bool L_16 = ErrorContext_get_Handled_m1276804510(L_15, /*hidden argument*/NULL);
+		return L_16;
+	}
+}
 // System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalBase/ReferenceEqualsEqualityComparer::.ctor()
 extern "C"  void ReferenceEqualsEqualityComparer__ctor_m4065543358 (ReferenceEqualsEqualityComparer_t56069681 * __this, const MethodInfo* method)
 {
@@ -24214,6 +24757,77 @@ IL_007e:
 		return;
 	}
 }
+// System.Void Player::Reset()
+extern const MethodInfo* GameObject_GetComponent_TisCardSelectionHandler_t2914958190_m1225589167_MethodInfo_var;
+extern const MethodInfo* GameObject_AddComponent_TisCardSelectionHandler_t2914958190_m1455205828_MethodInfo_var;
+extern const uint32_t Player_Reset_m2813106535_MetadataUsageId;
+extern "C"  void Player_Reset_m2813106535 (Player_t2393081601 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Player_Reset_m2813106535_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		ExtMonoBehaviour_Reset_m2826664143(__this, /*hidden argument*/NULL);
+		__this->set__canDrag_13((bool)0);
+		List_1_t1765447871 * L_0 = __this->get__cardsRewarded_15();
+		NullCheck(L_0);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<System.String>::Clear() */, L_0);
+		Player_set_IsDistributionComplete_m976958245(__this, (bool)0, /*hidden argument*/NULL);
+		List_1_t799051817 * L_1 = __this->get__cards_14();
+		NullCheck(L_1);
+		int32_t L_2 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<Card>::get_Count() */, L_1);
+		V_0 = ((int32_t)((int32_t)L_2-(int32_t)1));
+		goto IL_004c;
+	}
+
+IL_0032:
+	{
+		List_1_t799051817 * L_3 = __this->get__cards_14();
+		int32_t L_4 = V_0;
+		NullCheck(L_3);
+		Card_t2092848 * L_5 = VirtFuncInvoker1< Card_t2092848 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<Card>::get_Item(System.Int32) */, L_3, L_4);
+		NullCheck(L_5);
+		GameObject_t4012695102 * L_6 = Component_get_gameObject_m1170635899(L_5, /*hidden argument*/NULL);
+		Object_Destroy_m176400816(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
+		int32_t L_7 = V_0;
+		V_0 = ((int32_t)((int32_t)L_7-(int32_t)1));
+	}
+
+IL_004c:
+	{
+		int32_t L_8 = V_0;
+		if ((((int32_t)L_8) >= ((int32_t)0)))
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		List_1_t799051817 * L_9 = __this->get__cards_14();
+		NullCheck(L_9);
+		VirtActionInvoker0::Invoke(23 /* System.Void System.Collections.Generic.List`1<Card>::Clear() */, L_9);
+		GameObject_t4012695102 * L_10 = Component_get_gameObject_m1170635899(__this, /*hidden argument*/NULL);
+		NullCheck(L_10);
+		CardSelectionHandler_t2914958190 * L_11 = GameObject_GetComponent_TisCardSelectionHandler_t2914958190_m1225589167(L_10, /*hidden argument*/GameObject_GetComponent_TisCardSelectionHandler_t2914958190_m1225589167_MethodInfo_var);
+		Object_Destroy_m176400816(NULL /*static, unused*/, L_11, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_12 = Component_get_gameObject_m1170635899(__this, /*hidden argument*/NULL);
+		NullCheck(L_12);
+		CardSelectionHandler_t2914958190 * L_13 = GameObject_AddComponent_TisCardSelectionHandler_t2914958190_m1455205828(L_12, /*hidden argument*/GameObject_AddComponent_TisCardSelectionHandler_t2914958190_m1455205828_MethodInfo_var);
+		__this->set__cardSelectionHandler_18(L_13);
+		CardSelectionHandler_t2914958190 * L_14 = __this->get__cardSelectionHandler_18();
+		NullCheck(L_14);
+		VirtActionInvoker0::Invoke(4 /* System.Void CardSelectionHandler::Init() */, L_14);
+		Player_UpdatePipCount_m2208836971(__this, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_15 = __this->get_countPip_5();
+		NullCheck(L_15);
+		GameObject_SetActive_m3538205401(L_15, (bool)0, /*hidden argument*/NULL);
+		Player_SetTurnStatus_m1956600040(__this, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void Player::Init()
 extern TypeInfo* List_1_t799051817_il2cpp_TypeInfo_var;
 extern TypeInfo* List_1_t1765447871_il2cpp_TypeInfo_var;
@@ -25120,22 +25734,18 @@ extern "C"  void PopupManager_RemovePopup_m3955612184 (PopupManager_t2711269761 
 	}
 	{
 		List_1_t514686775 * L_0 = __this->get__popups_5();
-		List_1_t514686775 * L_1 = __this->get__popups_5();
-		GameObject_t4012695102 * L_2 = ___popup;
-		NullCheck(L_1);
-		int32_t L_3 = VirtFuncInvoker1< int32_t, GameObject_t4012695102 * >::Invoke(28 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::IndexOf(!0) */, L_1, L_2);
 		NullCheck(L_0);
-		VirtActionInvoker1< int32_t >::Invoke(30 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::RemoveAt(System.Int32) */, L_0, L_3);
-		GameObject_t4012695102 * L_4 = ___popup;
+		VirtActionInvoker1< int32_t >::Invoke(30 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::RemoveAt(System.Int32) */, L_0, 0);
+		GameObject_t4012695102 * L_1 = ___popup;
+		NullCheck(L_1);
+		BaseDialog_t735619993 * L_2 = GameObject_GetComponent_TisBaseDialog_t735619993_m2768243492(L_1, /*hidden argument*/GameObject_GetComponent_TisBaseDialog_t735619993_m2768243492_MethodInfo_var);
+		NullCheck(L_2);
+		VirtActionInvoker0::Invoke(11 /* System.Void BaseDialog::OnRemove() */, L_2);
+		Image_t3354615620 * L_3 = __this->get_blocker_3();
+		NullCheck(L_3);
+		GameObject_t4012695102 * L_4 = Component_get_gameObject_m1170635899(L_3, /*hidden argument*/NULL);
 		NullCheck(L_4);
-		BaseDialog_t735619993 * L_5 = GameObject_GetComponent_TisBaseDialog_t735619993_m2768243492(L_4, /*hidden argument*/GameObject_GetComponent_TisBaseDialog_t735619993_m2768243492_MethodInfo_var);
-		NullCheck(L_5);
-		VirtActionInvoker0::Invoke(12 /* System.Void BaseDialog::OnRemove() */, L_5);
-		Image_t3354615620 * L_6 = __this->get_blocker_3();
-		NullCheck(L_6);
-		GameObject_t4012695102 * L_7 = Component_get_gameObject_m1170635899(L_6, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		GameObject_SetActive_m3538205401(L_7, (bool)0, /*hidden argument*/NULL);
+		GameObject_SetActive_m3538205401(L_4, (bool)0, /*hidden argument*/NULL);
 		__this->set__activePopup_6((GameObject_t4012695102 *)NULL);
 		return;
 	}
@@ -25171,7 +25781,7 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count() */, L_0);
 		if ((((int32_t)L_1) <= ((int32_t)0)))
 		{
-			goto IL_009d;
+			goto IL_0091;
 		}
 	}
 	{
@@ -25179,7 +25789,7 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 		bool L_3 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_2, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
 		if (!L_3)
 		{
-			goto IL_009d;
+			goto IL_0091;
 		}
 	}
 	{
@@ -25189,36 +25799,33 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 		NullCheck(L_5);
 		GameObject_SetActive_m3538205401(L_5, (bool)1, /*hidden argument*/NULL);
 		List_1_t514686775 * L_6 = __this->get__popups_5();
-		List_1_t514686775 * L_7 = __this->get__popups_5();
-		NullCheck(L_7);
-		int32_t L_8 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count() */, L_7);
 		NullCheck(L_6);
-		GameObject_t4012695102 * L_9 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_6, ((int32_t)((int32_t)L_8-(int32_t)1)));
-		__this->set__activePopup_6(L_9);
-		GameObject_t4012695102 * L_10 = __this->get__activePopup_6();
+		GameObject_t4012695102 * L_7 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_6, 0);
+		__this->set__activePopup_6(L_7);
+		GameObject_t4012695102 * L_8 = __this->get__activePopup_6();
+		NullCheck(L_8);
+		GameObject_SetActive_m3538205401(L_8, (bool)1, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_9 = __this->get__activePopup_6();
+		NullCheck(L_9);
+		Transform_t284553113 * L_10 = GameObject_get_transform_m1278640159(L_9, /*hidden argument*/NULL);
+		Transform_t284553113 * L_11 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
 		NullCheck(L_10);
-		GameObject_SetActive_m3538205401(L_10, (bool)1, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_11 = __this->get__activePopup_6();
-		NullCheck(L_11);
-		Transform_t284553113 * L_12 = GameObject_get_transform_m1278640159(L_11, /*hidden argument*/NULL);
-		Transform_t284553113 * L_13 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		Transform_SetParent_m3449663462(L_10, L_11, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_12 = __this->get__activePopup_6();
 		NullCheck(L_12);
-		Transform_SetParent_m3449663462(L_12, L_13, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_14 = __this->get__activePopup_6();
-		NullCheck(L_14);
-		Transform_t284553113 * L_15 = GameObject_get_transform_m1278640159(L_14, /*hidden argument*/NULL);
-		Vector3_t3525329789  L_16 = Vector3_get_one_m886467710(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Transform_t284553113 * L_13 = GameObject_get_transform_m1278640159(L_12, /*hidden argument*/NULL);
+		Vector3_t3525329789  L_14 = Vector3_get_one_m886467710(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		Transform_set_localScale_m310756934(L_13, L_14, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_15 = __this->get__activePopup_6();
 		NullCheck(L_15);
-		Transform_set_localScale_m310756934(L_15, L_16, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_17 = __this->get__activePopup_6();
-		NullCheck(L_17);
-		Transform_t284553113 * L_18 = GameObject_get_transform_m1278640159(L_17, /*hidden argument*/NULL);
-		Vector3_t3525329789  L_19 = Vector3_get_zero_m2017759730(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_18);
-		Transform_set_localPosition_m3504330903(L_18, L_19, /*hidden argument*/NULL);
+		Transform_t284553113 * L_16 = GameObject_get_transform_m1278640159(L_15, /*hidden argument*/NULL);
+		Vector3_t3525329789  L_17 = Vector3_get_zero_m2017759730(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		Transform_set_localPosition_m3504330903(L_16, L_17, /*hidden argument*/NULL);
 	}
 
-IL_009d:
+IL_0091:
 	{
 		return;
 	}
@@ -25680,6 +26287,40 @@ extern "C"  void ResultVO_set_winningCards_m625555250 (ResultVO_t4023821238 * __
 		return;
 	}
 }
+// System.Boolean ResultVO::get_isSweep()
+extern "C"  bool ResultVO_get_isSweep_m2507918312 (ResultVO_t4023821238 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_U3CisSweepU3Ek__BackingField_4();
+		return L_0;
+	}
+}
+// System.Void ResultVO::set_isSweep(System.Boolean)
+extern "C"  void ResultVO_set_isSweep_m635921055 (ResultVO_t4023821238 * __this, bool ___value, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value;
+		__this->set_U3CisSweepU3Ek__BackingField_4(L_0);
+		return;
+	}
+}
+// System.Int32 ResultVO::get_sweepCount()
+extern "C"  int32_t ResultVO_get_sweepCount_m3537692409 (ResultVO_t4023821238 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_U3CsweepCountU3Ek__BackingField_5();
+		return L_0;
+	}
+}
+// System.Void ResultVO::set_sweepCount(System.Int32)
+extern "C"  void ResultVO_set_sweepCount_m433594288 (ResultVO_t4023821238 * __this, int32_t ___value, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___value;
+		__this->set_U3CsweepCountU3Ek__BackingField_5(L_0);
+		return;
+	}
+}
 // Card ResultVO::GetCardWithValueType(System.String)
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* Enumerator_t3179802105_il2cpp_TypeInfo_var;
@@ -25888,6 +26529,33 @@ extern "C"  bool RoundHandler_get_IsActivePlayerLocal_m3242918010 (RoundHandler_
 		return L_2;
 	}
 }
+// System.Void RoundHandler::Reset()
+extern TypeInfo* RoundHandler_t2172802556_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern const uint32_t RoundHandler_Reset_m3877110476_MetadataUsageId;
+extern "C"  void RoundHandler_Reset_m3877110476 (RoundHandler_t2172802556 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (RoundHandler_Reset_m3877110476_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		ExtMonoBehaviour_Reset_m2826664143(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
+		((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->set_currentRound_3(0);
+		__this->set__elapsedTime_4((0.0f));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_0 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		__this->set__activePlayerId_6(L_0);
+		__this->set__isRoundActive_5((bool)0);
+		Image_t3354615620 * L_1 = __this->get_progressBar_7();
+		NullCheck(L_1);
+		Image_set_fillAmount_m1583793743(L_1, (0.0f), /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void RoundHandler::Init()
 extern TypeInfo* EventManager_t1907836883_il2cpp_TypeInfo_var;
 extern TypeInfo* EventDelegate_1_t1150496989_il2cpp_TypeInfo_var;
@@ -25968,7 +26636,7 @@ extern "C"  void RoundHandler_OnGameEvent_m2386591652 (RoundHandler_t2172802556 
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
-		Dictionary_2_t190145395 * L_3 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map5_11();
+		Dictionary_2_t190145395 * L_3 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map6_11();
 		if (L_3)
 		{
 			goto IL_0030;
@@ -25983,13 +26651,13 @@ extern "C"  void RoundHandler_OnGameEvent_m2386591652 (RoundHandler_t2172802556 
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral2770438001, 0);
 		Dictionary_2_t190145395 * L_6 = V_2;
 		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
-		((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map5_11(L_6);
+		((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map6_11(L_6);
 	}
 
 IL_0030:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
-		Dictionary_2_t190145395 * L_7 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map5_11();
+		Dictionary_2_t190145395 * L_7 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map6_11();
 		String_t* L_8 = V_1;
 		NullCheck(L_7);
 		bool L_9 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_3));
@@ -26067,7 +26735,7 @@ extern "C"  void RoundHandler_OnInGameEvent_m1941447854 (RoundHandler_t217280255
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
-		Dictionary_2_t190145395 * L_3 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map6_12();
+		Dictionary_2_t190145395 * L_3 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map7_12();
 		if (L_3)
 		{
 			goto IL_0030;
@@ -26082,13 +26750,13 @@ extern "C"  void RoundHandler_OnInGameEvent_m1941447854 (RoundHandler_t217280255
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral202968943, 0);
 		Dictionary_2_t190145395 * L_6 = V_1;
 		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
-		((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map6_12(L_6);
+		((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map7_12(L_6);
 	}
 
 IL_0030:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(RoundHandler_t2172802556_il2cpp_TypeInfo_var);
-		Dictionary_2_t190145395 * L_7 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map6_12();
+		Dictionary_2_t190145395 * L_7 = ((RoundHandler_t2172802556_StaticFields*)RoundHandler_t2172802556_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map7_12();
 		String_t* L_8 = V_0;
 		NullCheck(L_7);
 		bool L_9 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_2));
@@ -26526,6 +27194,40 @@ extern "C"  void RoundResultVO_set_cardsCount_m2969799671 (RoundResultVO_t259451
 		return;
 	}
 }
+// System.Boolean RoundResultVO::get_isSweep()
+extern "C"  bool RoundResultVO_get_isSweep_m3187763058 (RoundResultVO_t2594510628 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_U3CisSweepU3Ek__BackingField_9();
+		return L_0;
+	}
+}
+// System.Void RoundResultVO::set_isSweep(System.Boolean)
+extern "C"  void RoundResultVO_set_isSweep_m1082108097 (RoundResultVO_t2594510628 * __this, bool ___value, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value;
+		__this->set_U3CisSweepU3Ek__BackingField_9(L_0);
+		return;
+	}
+}
+// System.Int32 RoundResultVO::get_sweepCount()
+extern "C"  int32_t RoundResultVO_get_sweepCount_m1480831419 (RoundResultVO_t2594510628 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_U3CsweepCountU3Ek__BackingField_10();
+		return L_0;
+	}
+}
+// System.Void RoundResultVO::set_sweepCount(System.Int32)
+extern "C"  void RoundResultVO_set_sweepCount_m1380490702 (RoundResultVO_t2594510628 * __this, int32_t ___value, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___value;
+		__this->set_U3CsweepCountU3Ek__BackingField_10(L_0);
+		return;
+	}
+}
 // System.Void RoundVO::.ctor()
 extern "C"  void RoundVO__ctor_m143774372 (RoundVO_t3050121383 * __this, const MethodInfo* method)
 {
@@ -26708,7 +27410,7 @@ extern "C"  void SceneMonoBehaviour_AddListeners_m2489556085 (SceneMonoBehaviour
 		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
 		EventManager_t1907836883 * L_0 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IntPtr_t L_1;
-		L_1.set_m_value_0((void*)GetVirtualMethodInfo(__this, 11));
+		L_1.set_m_value_0((void*)GetVirtualMethodInfo(__this, 12));
 		EventDelegate_1_t2975384888 * L_2 = (EventDelegate_1_t2975384888 *)il2cpp_codegen_object_new(EventDelegate_1_t2975384888_il2cpp_TypeInfo_var);
 		EventDelegate_1__ctor_m624689082(L_2, __this, L_1, /*hidden argument*/EventDelegate_1__ctor_m624689082_MethodInfo_var);
 		NullCheck(L_0);
@@ -26735,7 +27437,7 @@ extern "C"  void SceneMonoBehaviour_RemoveListeners_m4293273670 (SceneMonoBehavi
 		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
 		EventManager_t1907836883 * L_0 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IntPtr_t L_1;
-		L_1.set_m_value_0((void*)GetVirtualMethodInfo(__this, 11));
+		L_1.set_m_value_0((void*)GetVirtualMethodInfo(__this, 12));
 		EventDelegate_1_t2975384888 * L_2 = (EventDelegate_1_t2975384888 *)il2cpp_codegen_object_new(EventDelegate_1_t2975384888_il2cpp_TypeInfo_var);
 		EventDelegate_1__ctor_m624689082(L_2, __this, L_1, /*hidden argument*/EventDelegate_1__ctor_m624689082_MethodInfo_var);
 		NullCheck(L_0);
@@ -26797,6 +27499,33 @@ extern "C"  void SceneTransitionManager_SetActiveScreen_m3383367968 (SceneTransi
 		RectTransform_t3317474837 * L_0 = ___screen;
 		__this->set__activeScreen_4(L_0);
 		SceneTransitionManager_RearrangeScreens_m1562589827(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SceneTransitionManager::ShowGameSelectionScreen()
+extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
+extern const MethodInfo* Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895_MethodInfo_var;
+extern const uint32_t SceneTransitionManager_ShowGameSelectionScreen_m2506809590_MetadataUsageId;
+extern "C"  void SceneTransitionManager_ShowGameSelectionScreen_m2506809590 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (SceneTransitionManager_ShowGameSelectionScreen_m2506809590_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	SceneMonoBehaviour_t4246217742 * V_0 = NULL;
+	{
+		RectTransform_t3317474837 * L_0 = __this->get__activeScreen_4();
+		NullCheck(L_0);
+		SceneMonoBehaviour_t4246217742 * L_1 = Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895(L_0, /*hidden argument*/Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895_MethodInfo_var);
+		V_0 = L_1;
+		SceneMonoBehaviour_t4246217742 * L_2 = V_0;
+		NullCheck(L_2);
+		VirtActionInvoker0::Invoke(8 /* System.Void ExtMonoBehaviour::OnMoveOutOfView() */, L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
+		String_t* L_3 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_GAME_SELECTION_SCREEN_1();
+		SceneTransitionManager_SetActiveScreen_m3079263841(__this, L_3, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -27063,10 +27792,10 @@ extern "C"  void SinglePlayerMainGame_Init_m1637520941 (SinglePlayerMainGame_t38
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		BridgeDebugger_Log_m140064271(NULL /*static, unused*/, _stringLiteral2234538990, /*hidden argument*/NULL);
 		Networking_t1515242260 * L_0 = ((MultiplayerMainGame_t4046083237 *)__this)->get_network_5();
 		NullCheck(L_0);
 		Networking_OnSinglePlayerMode_m504645416(L_0, /*hidden argument*/NULL);
+		BridgeDebugger_Log_m140064271(NULL /*static, unused*/, _stringLiteral2234538990, /*hidden argument*/NULL);
 		MultiplayerMainGame_Init_m3127656750(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -27091,42 +27820,68 @@ extern "C"  void SinglePlayerMainGame_InitGame_m2164794303 (SinglePlayerMainGame
 		((MultiplayerMainGame_t4046083237 *)__this)->set__roundHandler_7(L_1);
 		RoundHandler_t2172802556 * L_2 = ((MultiplayerMainGame_t4046083237 *)__this)->get__roundHandler_7();
 		NullCheck(L_2);
-		VirtActionInvoker0::Invoke(4 /* System.Void RoundHandler::Init() */, L_2);
-		RoundHandler_t2172802556 * L_3 = ((MultiplayerMainGame_t4046083237 *)__this)->get__roundHandler_7();
-		IntPtr_t L_4;
-		L_4.set_m_value_0((void*)GetVirtualMethodInfo(__this, 22));
-		Action_t437523947 * L_5 = (Action_t437523947 *)il2cpp_codegen_object_new(Action_t437523947_il2cpp_TypeInfo_var);
-		Action__ctor_m2957240604(L_5, __this, L_4, /*hidden argument*/NULL);
-		NullCheck(L_3);
-		RoundHandler_set_OnRoundCompleteCallback_m3093727632(L_3, L_5, /*hidden argument*/NULL);
-		VirtActionInvoker0::Invoke(16 /* System.Void SinglePlayerMainGame::UpdatePlayers() */, __this);
-		Dealer_t2043054649 * L_6 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
+		bool L_3 = ExtMonoBehaviour_get_isInitialized_m952256653(L_2, /*hidden argument*/NULL);
+		if (L_3)
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		RoundHandler_t2172802556 * L_4 = ((MultiplayerMainGame_t4046083237 *)__this)->get__roundHandler_7();
+		NullCheck(L_4);
+		VirtActionInvoker0::Invoke(4 /* System.Void RoundHandler::Init() */, L_4);
+		goto IL_003c;
+	}
+
+IL_0031:
+	{
+		RoundHandler_t2172802556 * L_5 = ((MultiplayerMainGame_t4046083237 *)__this)->get__roundHandler_7();
+		NullCheck(L_5);
+		VirtActionInvoker0::Invoke(10 /* System.Void RoundHandler::Reset() */, L_5);
+	}
+
+IL_003c:
+	{
+		RoundHandler_t2172802556 * L_6 = ((MultiplayerMainGame_t4046083237 *)__this)->get__roundHandler_7();
+		IntPtr_t L_7;
+		L_7.set_m_value_0((void*)GetVirtualMethodInfo(__this, 24));
+		Action_t437523947 * L_8 = (Action_t437523947 *)il2cpp_codegen_object_new(Action_t437523947_il2cpp_TypeInfo_var);
+		Action__ctor_m2957240604(L_8, __this, L_7, /*hidden argument*/NULL);
 		NullCheck(L_6);
-		VirtActionInvoker0::Invoke(4 /* System.Void Dealer::Init() */, L_6);
-		Dealer_t2043054649 * L_7 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
-		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		int32_t L_8 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
-		NullCheck(L_7);
-		Dealer_CreateCards_m4016770360(L_7, L_8, /*hidden argument*/NULL);
+		RoundHandler_set_OnRoundCompleteCallback_m3093727632(L_6, L_8, /*hidden argument*/NULL);
+		VirtActionInvoker0::Invoke(18 /* System.Void SinglePlayerMainGame::UpdatePlayers() */, __this);
 		Dealer_t2043054649 * L_9 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
 		NullCheck(L_9);
-		Dealer_ShuffleCards_m452971244(L_9, /*hidden argument*/NULL);
-		int32_t L_10 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
-		VirtActionInvoker1< int32_t >::Invoke(15 /* System.Void MultiplayerMainGame::UpdatePlayerCards(System.Int32) */, __this, L_10);
+		VirtActionInvoker0::Invoke(4 /* System.Void Dealer::Init() */, L_9);
+		Dealer_t2043054649 * L_10 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
+		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
 		int32_t L_11 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
-		MultiplayerMainGame_DistributeCards_m772136855(__this, L_11, /*hidden argument*/NULL);
+		NullCheck(L_10);
+		Dealer_CreateCards_m4016770360(L_10, L_11, /*hidden argument*/NULL);
+		Dealer_t2043054649 * L_12 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
+		NullCheck(L_12);
+		Dealer_ShuffleCards_m452971244(L_12, /*hidden argument*/NULL);
+		int32_t L_13 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
+		VirtActionInvoker1< int32_t >::Invoke(17 /* System.Void MultiplayerMainGame::UpdatePlayerCards(System.Int32) */, __this, L_13);
+		int32_t L_14 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
+		MultiplayerMainGame_DistributeCards_m772136855(__this, L_14, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void SinglePlayerMainGame::UpdatePlayers()
 extern TypeInfo* List_1_t3190040570_il2cpp_TypeInfo_var;
+extern TypeInfo* List_1_t1765447871_il2cpp_TypeInfo_var;
 extern TypeInfo* GameConstants_t893838685_il2cpp_TypeInfo_var;
-extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern const MethodInfo* List_1__ctor_m4285309676_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m459821414_MethodInfo_var;
 extern const MethodInfo* GameObject_GetComponent_TisPlayer_t2393081601_m920458684_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3010;
+extern Il2CppCodeGenString* _stringLiteral3011;
+extern Il2CppCodeGenString* _stringLiteral3012;
+extern Il2CppCodeGenString* _stringLiteral3013;
 extern Il2CppCodeGenString* _stringLiteral2393081601;
-extern Il2CppCodeGenString* _stringLiteral1171085631;
 extern const uint32_t SinglePlayerMainGame_UpdatePlayers_m18221774_MetadataUsageId;
 extern "C"  void SinglePlayerMainGame_UpdatePlayers_m18221774 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method)
 {
@@ -27136,206 +27891,277 @@ extern "C"  void SinglePlayerMainGame_UpdatePlayers_m18221774 (SinglePlayerMainG
 		il2cpp_codegen_initialize_method (SinglePlayerMainGame_UpdatePlayers_m18221774_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
-	GameObjectU5BU5D_t3499186955* V_0 = NULL;
-	int32_t V_1 = 0;
+	List_1_t1765447871 * V_0 = NULL;
+	GameObjectU5BU5D_t3499186955* V_1 = NULL;
 	int32_t V_2 = 0;
-	GameObject_t4012695102 * V_3 = NULL;
-	GameObjectU5BU5D_t3499186955* V_4 = NULL;
-	int32_t V_5 = 0;
-	Player_t2393081601 * V_6 = NULL;
-	int32_t V_7 = 0;
-	GameObject_t4012695102 * V_8 = NULL;
-	GameObjectU5BU5D_t3499186955* V_9 = NULL;
-	int32_t V_10 = 0;
-	Player_t2393081601 * V_11 = NULL;
+	int32_t V_3 = 0;
+	GameObject_t4012695102 * V_4 = NULL;
+	GameObjectU5BU5D_t3499186955* V_5 = NULL;
+	int32_t V_6 = 0;
+	Player_t2393081601 * V_7 = NULL;
+	int32_t V_8 = 0;
+	GameObject_t4012695102 * V_9 = NULL;
+	GameObjectU5BU5D_t3499186955* V_10 = NULL;
+	int32_t V_11 = 0;
+	Player_t2393081601 * V_12 = NULL;
+	List_1_t1765447871 * V_13 = NULL;
 	{
 		List_1_t3190040570 * L_0 = (List_1_t3190040570 *)il2cpp_codegen_object_new(List_1_t3190040570_il2cpp_TypeInfo_var);
 		List_1__ctor_m4285309676(L_0, /*hidden argument*/List_1__ctor_m4285309676_MethodInfo_var);
 		((MultiplayerMainGame_t4046083237 *)__this)->set__players_6(L_0);
-		GameObjectU5BU5D_t3499186955* L_1 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2393081601, /*hidden argument*/NULL);
-		V_0 = L_1;
-		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		int32_t L_2 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
-		V_1 = L_2;
-		V_2 = 0;
-		goto IL_00a2;
-	}
-
-IL_0023:
-	{
-		GameObjectU5BU5D_t3499186955* L_3 = V_0;
-		V_4 = L_3;
-		V_5 = 0;
-		goto IL_0093;
-	}
-
-IL_002e:
-	{
-		GameObjectU5BU5D_t3499186955* L_4 = V_4;
-		int32_t L_5 = V_5;
+		List_1_t1765447871 * L_1 = (List_1_t1765447871 *)il2cpp_codegen_object_new(List_1_t1765447871_il2cpp_TypeInfo_var);
+		List_1__ctor_m459821414(L_1, /*hidden argument*/List_1__ctor_m459821414_MethodInfo_var);
+		V_13 = L_1;
+		List_1_t1765447871 * L_2 = V_13;
+		NullCheck(L_2);
+		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_2, _stringLiteral3010);
+		List_1_t1765447871 * L_3 = V_13;
+		NullCheck(L_3);
+		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_3, _stringLiteral3011);
+		List_1_t1765447871 * L_4 = V_13;
 		NullCheck(L_4);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_4, L_5);
-		int32_t L_6 = L_5;
-		V_3 = ((L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6)));
-		GameObject_t4012695102 * L_7 = V_3;
-		NullCheck(L_7);
-		Player_t2393081601 * L_8 = GameObject_GetComponent_TisPlayer_t2393081601_m920458684(L_7, /*hidden argument*/GameObject_GetComponent_TisPlayer_t2393081601_m920458684_MethodInfo_var);
-		V_6 = L_8;
-		Player_t2393081601 * L_9 = V_6;
-		NullCheck(L_9);
-		int32_t L_10 = L_9->get_index_3();
-		int32_t L_11 = V_2;
-		if ((!(((uint32_t)L_10) == ((uint32_t)L_11))))
-		{
-			goto IL_008d;
-		}
-	}
-	{
-		Player_t2393081601 * L_12 = V_6;
-		String_t* L_13 = Int32_ToString_m1286526384((&V_2), /*hidden argument*/NULL);
-		NullCheck(L_12);
-		L_12->set_playerId_4(L_13);
-		Player_t2393081601 * L_14 = V_6;
-		NullCheck(L_14);
-		Text_t3286458198 * L_15 = L_14->get_playerName_7();
-		String_t* L_16 = Int32_ToString_m1286526384((&V_2), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_17 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral1171085631, L_16, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_17);
-		Player_t2393081601 * L_18 = V_6;
-		NullCheck(L_18);
-		VirtActionInvoker0::Invoke(4 /* System.Void Player::Init() */, L_18);
-		List_1_t3190040570 * L_19 = ((MultiplayerMainGame_t4046083237 *)__this)->get__players_6();
-		Player_t2393081601 * L_20 = V_6;
-		NullCheck(L_19);
-		VirtActionInvoker1< Player_t2393081601 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Player>::Add(!0) */, L_19, L_20);
-		goto IL_009e;
-	}
-
-IL_008d:
-	{
-		int32_t L_21 = V_5;
-		V_5 = ((int32_t)((int32_t)L_21+(int32_t)1));
-	}
-
-IL_0093:
-	{
-		int32_t L_22 = V_5;
-		GameObjectU5BU5D_t3499186955* L_23 = V_4;
-		NullCheck(L_23);
-		if ((((int32_t)L_22) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_23)->max_length)))))))
-		{
-			goto IL_002e;
-		}
-	}
-
-IL_009e:
-	{
-		int32_t L_24 = V_2;
-		V_2 = ((int32_t)((int32_t)L_24+(int32_t)1));
-	}
-
-IL_00a2:
-	{
-		int32_t L_25 = V_2;
-		int32_t L_26 = V_1;
-		if ((((int32_t)L_25) < ((int32_t)L_26)))
-		{
-			goto IL_0023;
-		}
-	}
-	{
-		int32_t L_27 = V_1;
-		V_7 = L_27;
-		goto IL_00fe;
-	}
-
-IL_00b1:
-	{
-		GameObjectU5BU5D_t3499186955* L_28 = V_0;
-		V_9 = L_28;
-		V_10 = 0;
-		goto IL_00ed;
-	}
-
-IL_00bc:
-	{
-		GameObjectU5BU5D_t3499186955* L_29 = V_9;
-		int32_t L_30 = V_10;
-		NullCheck(L_29);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_29, L_30);
-		int32_t L_31 = L_30;
-		V_8 = ((L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_31)));
-		GameObject_t4012695102 * L_32 = V_8;
-		NullCheck(L_32);
-		Player_t2393081601 * L_33 = GameObject_GetComponent_TisPlayer_t2393081601_m920458684(L_32, /*hidden argument*/GameObject_GetComponent_TisPlayer_t2393081601_m920458684_MethodInfo_var);
-		V_11 = L_33;
-		Player_t2393081601 * L_34 = V_11;
-		NullCheck(L_34);
-		int32_t L_35 = L_34->get_index_3();
-		int32_t L_36 = V_7;
-		if ((!(((uint32_t)L_35) == ((uint32_t)L_36))))
-		{
-			goto IL_00e7;
-		}
-	}
-	{
-		Player_t2393081601 * L_37 = V_11;
-		NullCheck(L_37);
-		GameObject_t4012695102 * L_38 = Component_get_gameObject_m1170635899(L_37, /*hidden argument*/NULL);
-		NullCheck(L_38);
-		GameObject_SetActive_m3538205401(L_38, (bool)0, /*hidden argument*/NULL);
-	}
-
-IL_00e7:
-	{
-		int32_t L_39 = V_10;
-		V_10 = ((int32_t)((int32_t)L_39+(int32_t)1));
-	}
-
-IL_00ed:
-	{
-		int32_t L_40 = V_10;
-		GameObjectU5BU5D_t3499186955* L_41 = V_9;
-		NullCheck(L_41);
-		if ((((int32_t)L_40) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_41)->max_length)))))))
-		{
-			goto IL_00bc;
-		}
-	}
-	{
-		int32_t L_42 = V_7;
-		V_7 = ((int32_t)((int32_t)L_42+(int32_t)1));
-	}
-
-IL_00fe:
-	{
-		int32_t L_43 = V_7;
+		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_4, _stringLiteral3012);
+		List_1_t1765447871 * L_5 = V_13;
+		NullCheck(L_5);
+		VirtActionInvoker1< String_t* >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.String>::Add(!0) */, L_5, _stringLiteral3013);
+		List_1_t1765447871 * L_6 = V_13;
+		V_0 = L_6;
+		GameObjectU5BU5D_t3499186955* L_7 = GameObject_FindGameObjectsWithTag_m3058873418(NULL /*static, unused*/, _stringLiteral2393081601, /*hidden argument*/NULL);
+		V_1 = L_7;
 		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
-		int32_t L_44 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
-		if ((((int32_t)L_43) < ((int32_t)L_44)))
+		int32_t L_8 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
+		V_2 = L_8;
+		V_3 = 0;
+		goto IL_011d;
+	}
+
+IL_005d:
+	{
+		GameObjectU5BU5D_t3499186955* L_9 = V_1;
+		V_5 = L_9;
+		V_6 = 0;
+		goto IL_010e;
+	}
+
+IL_0068:
+	{
+		GameObjectU5BU5D_t3499186955* L_10 = V_5;
+		int32_t L_11 = V_6;
+		NullCheck(L_10);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_10, L_11);
+		int32_t L_12 = L_11;
+		V_4 = ((L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12)));
+		GameObject_t4012695102 * L_13 = V_4;
+		NullCheck(L_13);
+		Player_t2393081601 * L_14 = GameObject_GetComponent_TisPlayer_t2393081601_m920458684(L_13, /*hidden argument*/GameObject_GetComponent_TisPlayer_t2393081601_m920458684_MethodInfo_var);
+		V_7 = L_14;
+		Player_t2393081601 * L_15 = V_7;
+		NullCheck(L_15);
+		int32_t L_16 = L_15->get_index_3();
+		int32_t L_17 = V_3;
+		if ((!(((uint32_t)L_16) == ((uint32_t)L_17))))
 		{
-			goto IL_00b1;
+			goto IL_0108;
 		}
 	}
 	{
-		List_1_t3190040570 * L_45 = ((MultiplayerMainGame_t4046083237 *)__this)->get__players_6();
-		NullCheck(L_45);
-		Player_t2393081601 * L_46 = VirtFuncInvoker1< Player_t2393081601 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<Player>::get_Item(System.Int32) */, L_45, 0);
+		Player_t2393081601 * L_18 = V_7;
+		String_t* L_19 = Int32_ToString_m1286526384((&V_3), /*hidden argument*/NULL);
+		NullCheck(L_18);
+		L_18->set_playerId_4(L_19);
+		Player_t2393081601 * L_20 = V_7;
+		NullCheck(L_20);
+		int32_t L_21 = L_20->get_index_3();
+		if (L_21)
+		{
+			goto IL_00ba;
+		}
+	}
+	{
+		Player_t2393081601 * L_22 = V_7;
+		NullCheck(L_22);
+		Text_t3286458198 * L_23 = L_22->get_playerName_7();
 		IL2CPP_RUNTIME_CLASS_INIT(LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var);
-		LocalPlayerModel_t1751900285 * L_47 = LocalPlayerModel_GetInstance_m4081594375(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_47);
-		String_t* L_48 = LocalPlayerModel_get_localPlayerId_m3356930807(L_47, /*hidden argument*/NULL);
-		String_t* L_49 = MultiplayerMainGame_GetDPPath_m1101217716(NULL /*static, unused*/, L_48, /*hidden argument*/NULL);
+		LocalPlayerModel_t1751900285 * L_24 = LocalPlayerModel_GetInstance_m4081594375(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_24);
+		String_t* L_25 = LocalPlayerModel_get_localPlayerName_m632555943(L_24, /*hidden argument*/NULL);
+		NullCheck(L_23);
+		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_25);
+		goto IL_00d7;
+	}
+
+IL_00ba:
+	{
+		Player_t2393081601 * L_26 = V_7;
+		NullCheck(L_26);
+		Text_t3286458198 * L_27 = L_26->get_playerName_7();
+		List_1_t1765447871 * L_28 = V_0;
+		int32_t L_29 = V_3;
+		NullCheck(L_28);
+		String_t* L_30 = VirtFuncInvoker1< String_t*, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32) */, L_28, L_29);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_31 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral2393081601, L_30, /*hidden argument*/NULL);
+		NullCheck(L_27);
+		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_27, L_31);
+	}
+
+IL_00d7:
+	{
+		Player_t2393081601 * L_32 = V_7;
+		NullCheck(L_32);
+		bool L_33 = ExtMonoBehaviour_get_isInitialized_m952256653(L_32, /*hidden argument*/NULL);
+		if (L_33)
+		{
+			goto IL_00ef;
+		}
+	}
+	{
+		Player_t2393081601 * L_34 = V_7;
+		NullCheck(L_34);
+		VirtActionInvoker0::Invoke(4 /* System.Void Player::Init() */, L_34);
+		goto IL_00f6;
+	}
+
+IL_00ef:
+	{
+		Player_t2393081601 * L_35 = V_7;
+		NullCheck(L_35);
+		VirtActionInvoker0::Invoke(10 /* System.Void Player::Reset() */, L_35);
+	}
+
+IL_00f6:
+	{
+		List_1_t3190040570 * L_36 = ((MultiplayerMainGame_t4046083237 *)__this)->get__players_6();
+		Player_t2393081601 * L_37 = V_7;
+		NullCheck(L_36);
+		VirtActionInvoker1< Player_t2393081601 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<Player>::Add(!0) */, L_36, L_37);
+		goto IL_0119;
+	}
+
+IL_0108:
+	{
+		int32_t L_38 = V_6;
+		V_6 = ((int32_t)((int32_t)L_38+(int32_t)1));
+	}
+
+IL_010e:
+	{
+		int32_t L_39 = V_6;
+		GameObjectU5BU5D_t3499186955* L_40 = V_5;
+		NullCheck(L_40);
+		if ((((int32_t)L_39) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_40)->max_length)))))))
+		{
+			goto IL_0068;
+		}
+	}
+
+IL_0119:
+	{
+		int32_t L_41 = V_3;
+		V_3 = ((int32_t)((int32_t)L_41+(int32_t)1));
+	}
+
+IL_011d:
+	{
+		int32_t L_42 = V_3;
+		int32_t L_43 = V_2;
+		if ((((int32_t)L_42) < ((int32_t)L_43)))
+		{
+			goto IL_005d;
+		}
+	}
+	{
+		int32_t L_44 = V_2;
+		V_8 = L_44;
+		goto IL_0179;
+	}
+
+IL_012c:
+	{
+		GameObjectU5BU5D_t3499186955* L_45 = V_1;
+		V_10 = L_45;
+		V_11 = 0;
+		goto IL_0168;
+	}
+
+IL_0137:
+	{
+		GameObjectU5BU5D_t3499186955* L_46 = V_10;
+		int32_t L_47 = V_11;
 		NullCheck(L_46);
-		Player_UpdateDP_m4160431299(L_46, L_49, /*hidden argument*/NULL);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_46, L_47);
+		int32_t L_48 = L_47;
+		V_9 = ((L_46)->GetAt(static_cast<il2cpp_array_size_t>(L_48)));
+		GameObject_t4012695102 * L_49 = V_9;
+		NullCheck(L_49);
+		Player_t2393081601 * L_50 = GameObject_GetComponent_TisPlayer_t2393081601_m920458684(L_49, /*hidden argument*/GameObject_GetComponent_TisPlayer_t2393081601_m920458684_MethodInfo_var);
+		V_12 = L_50;
+		Player_t2393081601 * L_51 = V_12;
+		NullCheck(L_51);
+		int32_t L_52 = L_51->get_index_3();
+		int32_t L_53 = V_8;
+		if ((!(((uint32_t)L_52) == ((uint32_t)L_53))))
+		{
+			goto IL_0162;
+		}
+	}
+	{
+		Player_t2393081601 * L_54 = V_12;
+		NullCheck(L_54);
+		GameObject_t4012695102 * L_55 = Component_get_gameObject_m1170635899(L_54, /*hidden argument*/NULL);
+		NullCheck(L_55);
+		GameObject_SetActive_m3538205401(L_55, (bool)0, /*hidden argument*/NULL);
+	}
+
+IL_0162:
+	{
+		int32_t L_56 = V_11;
+		V_11 = ((int32_t)((int32_t)L_56+(int32_t)1));
+	}
+
+IL_0168:
+	{
+		int32_t L_57 = V_11;
+		GameObjectU5BU5D_t3499186955* L_58 = V_10;
+		NullCheck(L_58);
+		if ((((int32_t)L_57) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_58)->max_length)))))))
+		{
+			goto IL_0137;
+		}
+	}
+	{
+		int32_t L_59 = V_8;
+		V_8 = ((int32_t)((int32_t)L_59+(int32_t)1));
+	}
+
+IL_0179:
+	{
+		int32_t L_60 = V_8;
+		IL2CPP_RUNTIME_CLASS_INIT(GameConstants_t893838685_il2cpp_TypeInfo_var);
+		int32_t L_61 = ((GameConstants_t893838685_StaticFields*)GameConstants_t893838685_il2cpp_TypeInfo_var->static_fields)->get_MAX_PLAYERS_2();
+		if ((((int32_t)L_60) < ((int32_t)L_61)))
+		{
+			goto IL_012c;
+		}
+	}
+	{
+		List_1_t3190040570 * L_62 = ((MultiplayerMainGame_t4046083237 *)__this)->get__players_6();
+		NullCheck(L_62);
+		Player_t2393081601 * L_63 = VirtFuncInvoker1< Player_t2393081601 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<Player>::get_Item(System.Int32) */, L_62, 0);
+		IL2CPP_RUNTIME_CLASS_INIT(LocalPlayerModel_t1751900285_il2cpp_TypeInfo_var);
+		LocalPlayerModel_t1751900285 * L_64 = LocalPlayerModel_GetInstance_m4081594375(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_64);
+		String_t* L_65 = LocalPlayerModel_get_localPlayerId_m3356930807(L_64, /*hidden argument*/NULL);
+		String_t* L_66 = MultiplayerMainGame_GetDPPath_m1101217716(NULL /*static, unused*/, L_65, /*hidden argument*/NULL);
+		NullCheck(L_63);
+		Player_UpdateDP_m4160431299(L_63, L_66, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void SinglePlayerMainGame::OnDistributeAllWinningCards(System.Object)
 extern TypeInfo* Hashtable_t3875263730_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* GameModel_t2988344887_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2393081601;
 extern const uint32_t SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371_MetadataUsageId;
 extern "C"  void SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371 (SinglePlayerMainGame_t3863033300 * __this, Il2CppObject * ___args, const MethodInfo* method)
@@ -27362,7 +28188,7 @@ extern "C"  void SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371 (S
 		float L_5 = Dealer_ShiftCards_m1364653135(L_4, /*hidden argument*/NULL);
 		V_2 = L_5;
 		float L_6 = V_2;
-		Il2CppObject * L_7 = VirtFuncInvoker1< Il2CppObject *, float >::Invoke(13 /* System.Collections.IEnumerator MultiplayerMainGame::OnShiftComplete(System.Single) */, __this, L_6);
+		Il2CppObject * L_7 = VirtFuncInvoker1< Il2CppObject *, float >::Invoke(15 /* System.Collections.IEnumerator MultiplayerMainGame::OnShiftComplete(System.Single) */, __this, L_6);
 		MonoBehaviour_StartCoroutine_m2135303124(__this, L_7, /*hidden argument*/NULL);
 		Player_t2393081601 * L_8 = V_1;
 		NullCheck(L_8);
@@ -27391,7 +28217,22 @@ IL_0059:
 		RoundHandler_t2172802556 * L_15 = ((MultiplayerMainGame_t4046083237 *)__this)->get__roundHandler_7();
 		NullCheck(L_15);
 		RoundHandler_OnRoundEnd_m1197676209(L_15, /*hidden argument*/NULL);
-		VirtActionInvoker0::Invoke(21 /* System.Void SinglePlayerMainGame::DispatchNextRound() */, __this);
+		MultiplayerMainGame_CheckGameEnd_m2426142783(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(GameModel_t2988344887_il2cpp_TypeInfo_var);
+		GameModel_t2988344887 * L_16 = GameModel_get_Instance_m4055778066(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		bool L_17 = GameModel_get_isGameOver_m1638125845(L_16, /*hidden argument*/NULL);
+		if (L_17)
+		{
+			goto IL_0085;
+		}
+	}
+	{
+		VirtActionInvoker0::Invoke(23 /* System.Void SinglePlayerMainGame::DispatchNextRound() */, __this);
+	}
+
+IL_0085:
+	{
 		return;
 	}
 }
@@ -27562,7 +28403,7 @@ extern "C"  void SinglePlayerMainGame_OnGameEvent_m3147165564 (SinglePlayerMainG
 		}
 	}
 	{
-		Dictionary_2_t190145395 * L_3 = ((SinglePlayerMainGame_t3863033300_StaticFields*)SinglePlayerMainGame_t3863033300_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapC_12();
+		Dictionary_2_t190145395 * L_3 = ((SinglePlayerMainGame_t3863033300_StaticFields*)SinglePlayerMainGame_t3863033300_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapE_12();
 		if (L_3)
 		{
 			goto IL_0030;
@@ -27576,12 +28417,12 @@ extern "C"  void SinglePlayerMainGame_OnGameEvent_m3147165564 (SinglePlayerMainG
 		NullCheck(L_5);
 		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral2770438001, 0);
 		Dictionary_2_t190145395 * L_6 = V_3;
-		((SinglePlayerMainGame_t3863033300_StaticFields*)SinglePlayerMainGame_t3863033300_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24mapC_12(L_6);
+		((SinglePlayerMainGame_t3863033300_StaticFields*)SinglePlayerMainGame_t3863033300_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24mapE_12(L_6);
 	}
 
 IL_0030:
 	{
-		Dictionary_2_t190145395 * L_7 = ((SinglePlayerMainGame_t3863033300_StaticFields*)SinglePlayerMainGame_t3863033300_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapC_12();
+		Dictionary_2_t190145395 * L_7 = ((SinglePlayerMainGame_t3863033300_StaticFields*)SinglePlayerMainGame_t3863033300_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24mapE_12();
 		String_t* L_8 = V_2;
 		NullCheck(L_7);
 		bool L_9 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_4));
@@ -27672,6 +28513,7 @@ extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* NetworkResponse_t1683455087_il2cpp_TypeInfo_var;
 extern TypeInfo* EventManager_t1907836883_il2cpp_TypeInfo_var;
 extern TypeInfo* InGameEvent_t511087107_il2cpp_TypeInfo_var;
+extern TypeInfo* GameModel_t2988344887_il2cpp_TypeInfo_var;
 extern TypeInfo* GameEvent_t2981166504_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3512098981;
 extern Il2CppCodeGenString* _stringLiteral1387421204;
@@ -27815,15 +28657,29 @@ IL_00fc:
 
 IL_013c:
 	{
-		NetworkResponse_t1683455087 * L_54 = V_2;
-		GameEvent_t2981166504 * L_55 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
-		GameEvent__ctor_m685722812(L_55, _stringLiteral2770438001, L_54, /*hidden argument*/NULL);
-		V_3 = L_55;
+		IL2CPP_RUNTIME_CLASS_INIT(GameModel_t2988344887_il2cpp_TypeInfo_var);
+		GameModel_t2988344887 * L_54 = GameModel_get_Instance_m4055778066(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_54);
+		bool L_55 = GameModel_get_isGameOver_m1638125845(L_54, /*hidden argument*/NULL);
+		if (L_55)
+		{
+			goto IL_0162;
+		}
+	}
+	{
+		NetworkResponse_t1683455087 * L_56 = V_2;
+		GameEvent_t2981166504 * L_57 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m685722812(L_57, _stringLiteral2770438001, L_56, /*hidden argument*/NULL);
+		V_3 = L_57;
 		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
-		EventManager_t1907836883 * L_56 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
-		GameEvent_t2981166504 * L_57 = V_3;
-		NullCheck(L_56);
-		EventManager_Raise_m2130241432(L_56, L_57, /*hidden argument*/NULL);
+		EventManager_t1907836883 * L_58 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_59 = V_3;
+		NullCheck(L_58);
+		EventManager_Raise_m2130241432(L_58, L_59, /*hidden argument*/NULL);
+	}
+
+IL_0162:
+	{
 		return;
 	}
 }
@@ -27894,6 +28750,77 @@ IL_005f:
 
 IL_0065:
 	{
+		return;
+	}
+}
+// System.Void SinglePlayerMainGame::UpdateSweepCount()
+extern TypeInfo* GameModel_t2988344887_il2cpp_TypeInfo_var;
+extern TypeInfo* EventManager_t1907836883_il2cpp_TypeInfo_var;
+extern TypeInfo* GameEvent_t2981166504_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3351074636;
+extern const uint32_t SinglePlayerMainGame_UpdateSweepCount_m3669746505_MetadataUsageId;
+extern "C"  void SinglePlayerMainGame_UpdateSweepCount_m3669746505 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (SinglePlayerMainGame_UpdateSweepCount_m3669746505_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(GameModel_t2988344887_il2cpp_TypeInfo_var);
+		GameModel_t2988344887 * L_0 = GameModel_get_Instance_m4055778066(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		int32_t L_1 = GameModel_get_sweepCount_m2860013326(L_0, /*hidden argument*/NULL);
+		V_0 = ((int32_t)((int32_t)L_1+(int32_t)1));
+		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
+		EventManager_t1907836883 * L_2 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t L_3 = V_0;
+		GameEvent_t2981166504 * L_4 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m2474059800(L_4, _stringLiteral3351074636, L_3, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		EventManager_Raise_m2130241432(L_2, L_4, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SinglePlayerMainGame::OnMoveOutOfView()
+extern const MethodInfo* Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponentInChildren_TisDealer_t2043054649_m2341390440_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681_MethodInfo_var;
+extern const uint32_t SinglePlayerMainGame_OnMoveOutOfView_m2375144063_MetadataUsageId;
+extern "C"  void SinglePlayerMainGame_OnMoveOutOfView_m2375144063 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (SinglePlayerMainGame_OnMoveOutOfView_m2375144063_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		MultiplayerMainGame_CleanPlayers_m1407908871(__this, /*hidden argument*/NULL);
+		Dealer_t2043054649 * L_0 = ((MultiplayerMainGame_t4046083237 *)__this)->get_dealer_4();
+		NullCheck(L_0);
+		VirtActionInvoker0::Invoke(10 /* System.Void Dealer::Reset() */, L_0);
+		Networking_t1515242260 * L_1 = ((MultiplayerMainGame_t4046083237 *)__this)->get_network_5();
+		NullCheck(L_1);
+		VirtActionInvoker0::Invoke(10 /* System.Void Networking::Reset() */, L_1);
+		Transform_t284553113 * L_2 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		SharedMainGame_t2807228656 * L_3 = Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749(L_2, /*hidden argument*/Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var);
+		NullCheck(L_3);
+		Trains_t2513124235 * L_4 = L_3->get_trains_4();
+		NullCheck(L_4);
+		Trains_RemoveActiveTrain_m97481484(L_4, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_5 = Component_get_gameObject_m1170635899(__this, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		Dealer_t2043054649 * L_6 = GameObject_GetComponentInChildren_TisDealer_t2043054649_m2341390440(L_5, /*hidden argument*/GameObject_GetComponentInChildren_TisDealer_t2043054649_m2341390440_MethodInfo_var);
+		Object_Destroy_m176400816(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_7 = Component_get_gameObject_m1170635899(__this, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		SinglePlayerMainGame_t3863033300 * L_8 = GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681(L_7, /*hidden argument*/GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681_MethodInfo_var);
+		Object_Destroy_m176400816(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		((MultiplayerMainGame_t4046083237 *)__this)->set_network_5((Networking_t1515242260 *)NULL);
 		return;
 	}
 }
@@ -29932,6 +30859,310 @@ IL_0078:
 
 IL_0094:
 	{
+		return;
+	}
+}
+// System.Void Train::.ctor()
+extern "C"  void Train__ctor_m1858104451 (Train_t81068520 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2022291967(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Train::Awake()
+extern "C"  void Train_Awake_m2095709670 (Train_t81068520 * __this, const MethodInfo* method)
+{
+	{
+		Train_DisableAll_m67448762(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Train::EnableCompartmentById(System.Int32)
+extern const MethodInfo* GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisAnimator_t792326996_m2581074431_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2033901809;
+extern const uint32_t Train_EnableCompartmentById_m1985356531_MetadataUsageId;
+extern "C"  void Train_EnableCompartmentById_m1985356531 (Train_t81068520 * __this, int32_t ___index, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Train_EnableCompartmentById_m1985356531_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		List_1_t514686775 * L_0 = __this->get_compartments_2();
+		int32_t L_1 = ___index;
+		NullCheck(L_0);
+		GameObject_t4012695102 * L_2 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_0, L_1);
+		NullCheck(L_2);
+		GrayColorToggle_t580454932 * L_3 = GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757(L_2, /*hidden argument*/GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757_MethodInfo_var);
+		NullCheck(L_3);
+		GrayColorToggle_SetGrayEffect_m3461180480(L_3, (0.0f), /*hidden argument*/NULL);
+		List_1_t514686775 * L_4 = __this->get_compartments_2();
+		int32_t L_5 = ___index;
+		NullCheck(L_4);
+		GameObject_t4012695102 * L_6 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_4, L_5);
+		NullCheck(L_6);
+		Animator_t792326996 * L_7 = GameObject_GetComponent_TisAnimator_t792326996_m2581074431(L_6, /*hidden argument*/GameObject_GetComponent_TisAnimator_t792326996_m2581074431_MethodInfo_var);
+		NullCheck(L_7);
+		Animator_SetBool_m2336836203(L_7, _stringLiteral2033901809, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Train::DisableCompartmentById(System.Int32)
+extern const MethodInfo* GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisAnimator_t792326996_m2581074431_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2033901809;
+extern const uint32_t Train_DisableCompartmentById_m3656144494_MetadataUsageId;
+extern "C"  void Train_DisableCompartmentById_m3656144494 (Train_t81068520 * __this, int32_t ___index, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Train_DisableCompartmentById_m3656144494_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		List_1_t514686775 * L_0 = __this->get_compartments_2();
+		int32_t L_1 = ___index;
+		NullCheck(L_0);
+		GameObject_t4012695102 * L_2 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_0, L_1);
+		NullCheck(L_2);
+		GrayColorToggle_t580454932 * L_3 = GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757(L_2, /*hidden argument*/GameObject_GetComponent_TisGrayColorToggle_t580454932_m3552391757_MethodInfo_var);
+		NullCheck(L_3);
+		GrayColorToggle_SetGrayEffect_m3461180480(L_3, (1.0f), /*hidden argument*/NULL);
+		List_1_t514686775 * L_4 = __this->get_compartments_2();
+		int32_t L_5 = ___index;
+		NullCheck(L_4);
+		GameObject_t4012695102 * L_6 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_4, L_5);
+		NullCheck(L_6);
+		Animator_t792326996 * L_7 = GameObject_GetComponent_TisAnimator_t792326996_m2581074431(L_6, /*hidden argument*/GameObject_GetComponent_TisAnimator_t792326996_m2581074431_MethodInfo_var);
+		NullCheck(L_7);
+		Animator_SetBool_m2336836203(L_7, _stringLiteral2033901809, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Train::DisableAll()
+extern "C"  void Train_DisableAll_m67448762 (Train_t81068520 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		V_0 = 1;
+		goto IL_0012;
+	}
+
+IL_0007:
+	{
+		int32_t L_0 = V_0;
+		Train_DisableCompartmentById_m3656144494(__this, L_0, /*hidden argument*/NULL);
+		int32_t L_1 = V_0;
+		V_0 = ((int32_t)((int32_t)L_1+(int32_t)1));
+	}
+
+IL_0012:
+	{
+		int32_t L_2 = V_0;
+		List_1_t514686775 * L_3 = __this->get_compartments_2();
+		NullCheck(L_3);
+		int32_t L_4 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count() */, L_3);
+		if ((((int32_t)L_2) < ((int32_t)L_4)))
+		{
+			goto IL_0007;
+		}
+	}
+	{
+		return;
+	}
+}
+// System.Void Trains::.ctor()
+extern "C"  void Trains__ctor_m2614031728 (Trains_t2513124235 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2022291967(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Trains::Awake()
+extern TypeInfo* EventManager_t1907836883_il2cpp_TypeInfo_var;
+extern TypeInfo* EventDelegate_1_t1150496989_il2cpp_TypeInfo_var;
+extern const MethodInfo* Trains_OnGameEvent_m416527923_MethodInfo_var;
+extern const MethodInfo* EventDelegate_1__ctor_m1495015221_MethodInfo_var;
+extern const MethodInfo* EventManager_AddListener_TisGameEvent_t2981166504_m4084308675_MethodInfo_var;
+extern const uint32_t Trains_Awake_m2851636947_MetadataUsageId;
+extern "C"  void Trains_Awake_m2851636947 (Trains_t2513124235 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Trains_Awake_m2851636947_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
+		EventManager_t1907836883 * L_0 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IntPtr_t L_1;
+		L_1.set_m_value_0((void*)Trains_OnGameEvent_m416527923_MethodInfo_var);
+		EventDelegate_1_t1150496989 * L_2 = (EventDelegate_1_t1150496989 *)il2cpp_codegen_object_new(EventDelegate_1_t1150496989_il2cpp_TypeInfo_var);
+		EventDelegate_1__ctor_m1495015221(L_2, __this, L_1, /*hidden argument*/EventDelegate_1__ctor_m1495015221_MethodInfo_var);
+		NullCheck(L_0);
+		EventManager_AddListener_TisGameEvent_t2981166504_m4084308675(L_0, L_2, /*hidden argument*/EventManager_AddListener_TisGameEvent_t2981166504_m4084308675_MethodInfo_var);
+		return;
+	}
+}
+// Train Trains::GetActiveTrain()
+extern "C"  Train_t81068520 * Trains_GetActiveTrain_m2915612267 (Trains_t2513124235 * __this, const MethodInfo* method)
+{
+	{
+		Train_t81068520 * L_0 = __this->get__activeTrain_3();
+		return L_0;
+	}
+}
+// System.Void Trains::OnGameEvent(GameEvent)
+extern TypeInfo* Trains_t2513124235_il2cpp_TypeInfo_var;
+extern TypeInfo* Dictionary_2_t190145395_il2cpp_TypeInfo_var;
+extern const MethodInfo* Dictionary_2__ctor_m1958628151_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3859628312;
+extern const uint32_t Trains_OnGameEvent_m416527923_MetadataUsageId;
+extern "C"  void Trains_OnGameEvent_m416527923 (Trains_t2513124235 * __this, GameEvent_t2981166504 * ___gEvent, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Trains_OnGameEvent_m416527923_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	String_t* V_0 = NULL;
+	Dictionary_2_t190145395 * V_1 = NULL;
+	int32_t V_2 = 0;
+	{
+		GameEvent_t2981166504 * L_0 = ___gEvent;
+		NullCheck(L_0);
+		String_t* L_1 = GameEvent_get_type_m3917904769(L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		String_t* L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0063;
+		}
+	}
+	{
+		Dictionary_2_t190145395 * L_3 = ((Trains_t2513124235_StaticFields*)Trains_t2513124235_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map4_6();
+		if (L_3)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		Dictionary_2_t190145395 * L_4 = (Dictionary_2_t190145395 *)il2cpp_codegen_object_new(Dictionary_2_t190145395_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m1958628151(L_4, 1, /*hidden argument*/Dictionary_2__ctor_m1958628151_MethodInfo_var);
+		V_1 = L_4;
+		Dictionary_2_t190145395 * L_5 = V_1;
+		NullCheck(L_5);
+		VirtActionInvoker2< String_t*, int32_t >::Invoke(18 /* System.Void System.Collections.Generic.Dictionary`2<System.String,System.Int32>::Add(!0,!1) */, L_5, _stringLiteral3859628312, 0);
+		Dictionary_2_t190145395 * L_6 = V_1;
+		((Trains_t2513124235_StaticFields*)Trains_t2513124235_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__switchU24map4_6(L_6);
+	}
+
+IL_0030:
+	{
+		Dictionary_2_t190145395 * L_7 = ((Trains_t2513124235_StaticFields*)Trains_t2513124235_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__switchU24map4_6();
+		String_t* L_8 = V_0;
+		NullCheck(L_7);
+		bool L_9 = VirtFuncInvoker2< bool, String_t*, int32_t* >::Invoke(21 /* System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.Int32>::TryGetValue(!0,!1&) */, L_7, L_8, (&V_2));
+		if (!L_9)
+		{
+			goto IL_0063;
+		}
+	}
+	{
+		int32_t L_10 = V_2;
+		if (!L_10)
+		{
+			goto IL_004d;
+		}
+	}
+	{
+		goto IL_0063;
+	}
+
+IL_004d:
+	{
+		Train_t81068520 * L_11 = Trains_GetActiveTrain_m2915612267(__this, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_12 = ___gEvent;
+		NullCheck(L_12);
+		int32_t L_13 = GameEvent_get_val_m2575248839(L_12, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		Train_EnableCompartmentById_m1985356531(L_11, L_13, /*hidden argument*/NULL);
+		goto IL_0063;
+	}
+
+IL_0063:
+	{
+		return;
+	}
+}
+// System.Void Trains::RemoveActiveTrain()
+extern "C"  void Trains_RemoveActiveTrain_m97481484 (Trains_t2513124235 * __this, const MethodInfo* method)
+{
+	{
+		Train_t81068520 * L_0 = __this->get__activeTrain_3();
+		NullCheck(L_0);
+		GameObject_t4012695102 * L_1 = Component_get_gameObject_m1170635899(L_0, /*hidden argument*/NULL);
+		Object_Destroy_m176400816(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		__this->set__activeTrain_3((Train_t81068520 *)NULL);
+		return;
+	}
+}
+// System.Void Trains::EnableTrainById(System.Int32)
+extern const MethodInfo* Object_Instantiate_TisGameObject_t4012695102_m3917608929_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisTrain_t81068520_m2335988857_MethodInfo_var;
+extern const uint32_t Trains_EnableTrainById_m2530733590_MetadataUsageId;
+extern "C"  void Trains_EnableTrainById_m2530733590 (Trains_t2513124235 * __this, int32_t ___selectedIndex, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Trains_EnableTrainById_m2530733590_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	GameObject_t4012695102 * V_0 = NULL;
+	{
+		List_1_t514686775 * L_0 = __this->get_trains_2();
+		int32_t L_1 = ___selectedIndex;
+		NullCheck(L_0);
+		GameObject_t4012695102 * L_2 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_0, L_1);
+		GameObject_t4012695102 * L_3 = Object_Instantiate_TisGameObject_t4012695102_m3917608929(NULL /*static, unused*/, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t4012695102_m3917608929_MethodInfo_var);
+		V_0 = L_3;
+		GameObject_t4012695102 * L_4 = V_0;
+		NullCheck(L_4);
+		Train_t81068520 * L_5 = GameObject_GetComponent_TisTrain_t81068520_m2335988857(L_4, /*hidden argument*/GameObject_GetComponent_TisTrain_t81068520_m2335988857_MethodInfo_var);
+		__this->set__activeTrain_3(L_5);
+		GameObject_t4012695102 * L_6 = V_0;
+		NullCheck(L_6);
+		Transform_t284553113 * L_7 = GameObject_get_transform_m1278640159(L_6, /*hidden argument*/NULL);
+		Transform_t284553113 * L_8 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Transform_SetParent_m3449663462(L_7, L_8, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_9 = V_0;
+		NullCheck(L_9);
+		Transform_t284553113 * L_10 = GameObject_get_transform_m1278640159(L_9, /*hidden argument*/NULL);
+		List_1_t27321462 * L_11 = __this->get_scale_5();
+		int32_t L_12 = ___selectedIndex;
+		NullCheck(L_11);
+		Vector3_t3525329789  L_13 = VirtFuncInvoker1< Vector3_t3525329789 , int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Item(System.Int32) */, L_11, L_12);
+		NullCheck(L_10);
+		Transform_set_localScale_m310756934(L_10, L_13, /*hidden argument*/NULL);
+		GameObject_t4012695102 * L_14 = V_0;
+		NullCheck(L_14);
+		Transform_t284553113 * L_15 = GameObject_get_transform_m1278640159(L_14, /*hidden argument*/NULL);
+		List_1_t27321462 * L_16 = __this->get_positions_4();
+		int32_t L_17 = ___selectedIndex;
+		NullCheck(L_16);
+		Vector3_t3525329789  L_18 = VirtFuncInvoker1< Vector3_t3525329789 , int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Item(System.Int32) */, L_16, L_17);
+		NullCheck(L_15);
+		Transform_set_localPosition_m3504330903(L_15, L_18, /*hidden argument*/NULL);
 		return;
 	}
 }

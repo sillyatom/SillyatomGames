@@ -13,8 +13,6 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     private static int selectedIndex = 0;
     private static List<int> matchTypes = new List<int>(){ 0, 3, 5, 10 };
     public RectTransform mask;
-    public GameObject info;
-    public Text entryText;
 
     public static int GetSweepCount()
     {
@@ -34,7 +32,11 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     public override void Init()
     {
         base.Init();
+    }
 
+    override public void Reset()
+    {
+        base.Reset();
         for (int index = 0; index < _train.Count; index++)
         {
             Vector3 pos = _train[index].transform.localPosition;
@@ -42,6 +44,7 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
             _train[index].transform.localPosition = pos;
         }
 
+        selectedIndex = 0;
         UpdateInteractivity();
     }
 
@@ -58,7 +61,7 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     public override void OnSetToView()
     {
         base.OnSetToView();
-        selectedIndex = 0;
+        Reset();
     }
 
     private bool UpdateIndex(int del)
@@ -75,8 +78,6 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
             selectedIndex = 0;
             return false;
         }
-        info.SetActive((selectedIndex != 0));
-        entryText.text = entryFees[selectedIndex].ToString();
 
         return true;
     }

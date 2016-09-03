@@ -1,23 +1,47 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class Trains : MonoBehaviour
 {
-    public List<Train> trains;
+    public List<GameObject> trains;
+    private Train _activeTrain;
+
+    public List<Vector3> positions;
+    public List<Vector3> scale;
 
     void Awake()
     {
-        for (int index = 1; index < trains.Count; index++)
+        EventManager.instance.AddListener<GameEvent>(OnGameEvent);
+    }
+
+    private Train GetActiveTrain()
+    {
+        return _activeTrain;
+    }
+
+    private void OnGameEvent(GameEvent gEvent)
+    {
+        switch (gEvent.type)
         {
-            trains[index].gameObject.SetActive(false);
+            case GameEvent.SWEEP_COUNT_UPDATED:
+                GetActiveTrain().EnableCompartmentById(gEvent.val);
+                break;
         }
+    }
+
+    public void RemoveActiveTrain()
+    {
+        Destroy(_activeTrain.gameObject);
+        _activeTrain = null;        
     }
 
     public void EnableTrainById(int selectedIndex)
     {
-        for (int index = 1; index < trains.Count; index++)
-        {
-            trains[index].gameObject.SetActive((selectedIndex == index));
-        }
+        GameObject trainObj = Instantiate<GameObject>(trains[selectedIndex]);
+        _activeTrain = trainObj.GetComponent<Train>();
+        trainObj.transform.SetParent(transform);
+        trainObj.transform.localScale = scale[selectedIndex];
+        trainObj.transform.localPosition = positions[selectedIndex];
     }
 }
