@@ -42,6 +42,7 @@ BOOL _matchStarted;
     isHost = false;
     _signingStatus = -1;
     _gcStatus = -1;
+    _playersDP = [[NSMutableDictionary alloc]init];
     return self;
 }
 
@@ -148,6 +149,42 @@ BOOL _matchStarted;
     NSError * error = nil;
     NSData * data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
     NSString * dataStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    
+    GKPlayer * player = [GKLocalPlayer localPlayer];
+    {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString * filename = [NSString stringWithFormat:@"PlayerDP_%@.png", player.playerID];
+        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:filename]; //Add the file name
+        if ([fileManager fileExistsAtPath:filePath])
+        {
+            [_playersDP setObject:filePath forKey:player.playerID];
+        }
+    }
+    [player loadPhotoForSize:GKPhotoSizeSmall withCompletionHandler:^(UIImage *photo, NSError *error)
+     {
+         dispatch_async(dispatch_get_main_queue(),
+                        ^{
+                            if (photo != nil)
+                            {
+                                NSData *imageData = UIImagePNGRepresentation(photo);
+                                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                                NSString *documentsDirectory = [paths objectAtIndex:0];
+                                NSString * filename = [NSString stringWithFormat:@"PlayerDP_%@.png", player.playerID];
+                                NSString *filePath = [documentsDirectory stringByAppendingPathComponent:filename]; //Add the file name
+                                [imageData writeToFile:filePath atomically:YES];
+                                [_playersDP setObject:filePath forKey:player.playerID];
+                                NSLog(@"Load DP Success for %@ at %@",player.alias,filePath);
+                            }
+                            if (error != nil)
+                            {
+                                NSLog(@"Load DP Failed %@ ",player.alias);
+                                [_playersDP setObject:@"" forKey:player.playerID];
+                            }
+                        });
+     }];
+
 
     UnitySendMessage("ExecutionOrder", "Init", [dataStr UTF8String]);
 }
@@ -310,7 +347,6 @@ BOOL _matchStarted;
          else
          {
              _playersDict = [[NSMutableDictionary alloc]init];
-             _playersDP = [[NSMutableDictionary alloc]init];
              
              for (GKPlayer * player in players)
              {
