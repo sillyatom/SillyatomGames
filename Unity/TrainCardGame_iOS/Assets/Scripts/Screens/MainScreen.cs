@@ -38,6 +38,12 @@ public class MainScreen : GameScreenMonoBehaviour
         }
     }
 
+    public override void OnSetToView()
+    {
+        base.OnSetToView();
+        SingletonManager.reference.hud.gameObject.SetActive(true);
+    }
+
     private void OnPlay()
     {
         BridgeDebugger.Log("status : " + _signingStatus);

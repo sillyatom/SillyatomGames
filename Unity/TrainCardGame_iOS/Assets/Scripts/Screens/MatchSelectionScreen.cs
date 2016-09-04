@@ -23,6 +23,7 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
         autoMatchBtn.enabled = true;
         inviteBtn.enabled = true;
         singlePlayerBtn.enabled = true;
+        SingletonManager.reference.hud.gameObject.SetActive(false);
     }
 
     override public void Init()

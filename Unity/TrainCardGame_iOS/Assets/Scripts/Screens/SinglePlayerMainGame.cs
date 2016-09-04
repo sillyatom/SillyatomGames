@@ -15,6 +15,12 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         base.Init();
     }
 
+    public override void OnSetToView()
+    {
+        base.OnSetToView();
+        SingletonManager.reference.hud.gameObject.SetActive(false);
+    }
+
     public override void InitGame()
     {
         _roundHandler = gameObject.GetComponent<RoundHandler>();

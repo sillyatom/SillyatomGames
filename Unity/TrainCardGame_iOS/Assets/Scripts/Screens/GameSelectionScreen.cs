@@ -46,6 +46,7 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
 
         selectedIndex = 0;
         UpdateInteractivity();
+        SingletonManager.reference.hud.gameObject.SetActive(true);
     }
 
     protected override void OnGameEvent(GameEvent gEvent)

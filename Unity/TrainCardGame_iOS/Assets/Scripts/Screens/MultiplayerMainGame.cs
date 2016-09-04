@@ -756,6 +756,12 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         }
     }
 
+    public override void OnSetToView()
+    {
+        base.OnSetToView();
+        SingletonManager.reference.hud.gameObject.SetActive(false);
+    }
+
     protected void CleanPlayers()
     {
         foreach (var player in _players)

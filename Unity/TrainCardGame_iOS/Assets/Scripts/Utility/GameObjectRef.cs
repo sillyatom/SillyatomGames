@@ -19,6 +19,9 @@ public class GameObjectRef : MonoBehaviour
     public PopupManager popupManager;
 
     [SerializeField]
+    public HUD hud;
+
+    [SerializeField]
     public SceneTransitionManager sceneTransitionManager;
 
     [SerializeField]
