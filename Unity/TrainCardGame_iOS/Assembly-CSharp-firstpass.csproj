@@ -55,6 +55,7 @@
      <None Include="Assets\Resources\Shaders\GlowShader.shader" />
      <None Include="Assets\JsonDotNet\ReadMe.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Particle Ribbon\readme_Simple_Particle_Ribbon.txt" />
      <None Include="Assets\Resources\Fonts\comic-andy\1001fonts-comic-andy-eula.txt" />
      <None Include="Assets\Resources\Images\GUI\README.txt" />
  <Reference Include="UnityEngine.Networking">
