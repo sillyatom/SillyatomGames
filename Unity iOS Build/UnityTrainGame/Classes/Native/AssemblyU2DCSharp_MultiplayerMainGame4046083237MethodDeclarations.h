@@ -109,5 +109,7 @@ extern "C"  void MultiplayerMainGame_OnRoundResult_m1984846874 (MultiplayerMainG
 extern "C"  void MultiplayerMainGame_EndGame_m2560472305 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::CheckGameEnd()
 extern "C"  void MultiplayerMainGame_CheckGameEnd_m2426142783 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::OnSetToView()
+extern "C"  void MultiplayerMainGame_OnSetToView_m1169890855 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::CleanPlayers()
 extern "C"  void MultiplayerMainGame_CleanPlayers_m1407908871 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

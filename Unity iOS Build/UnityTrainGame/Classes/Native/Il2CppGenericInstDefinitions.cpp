@@ -3033,6 +3033,9 @@ extern const Il2CppGenericInst GenInst_BaseDialog_t735619993_0_0_0 = { 1, GenIns
 extern const Il2CppType GenericPopup_t4182595893_0_0_0;
 static const Il2CppType* GenInst_GenericPopup_t4182595893_0_0_0_Types[] = { &GenericPopup_t4182595893_0_0_0 };
 extern const Il2CppGenericInst GenInst_GenericPopup_t4182595893_0_0_0 = { 1, GenInst_GenericPopup_t4182595893_0_0_0_Types };
+extern const Il2CppType MeshCollider_t1080724846_0_0_0;
+static const Il2CppType* GenInst_MeshCollider_t1080724846_0_0_0_Types[] = { &MeshCollider_t1080724846_0_0_0 };
+extern const Il2CppGenericInst GenInst_MeshCollider_t1080724846_0_0_0 = { 1, GenInst_MeshCollider_t1080724846_0_0_0_Types };
 extern const Il2CppType GameObjectRef_t4121474274_0_0_0;
 static const Il2CppType* GenInst_GameObjectRef_t4121474274_0_0_0_Types[] = { &GameObjectRef_t4121474274_0_0_0 };
 extern const Il2CppGenericInst GenInst_GameObjectRef_t4121474274_0_0_0 = { 1, GenInst_GameObjectRef_t4121474274_0_0_0_Types };
@@ -3120,7 +3123,7 @@ static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_KeyValuePair_2_t1028297519_0_0_0_Types };
 static const Il2CppType* GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types[] = { &KeyValuePair_2_t1028297519_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_KeyValuePair_2_t1028297519_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1133] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1134] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Attribute_t498693649_0_0_0,
@@ -4214,6 +4217,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1133] =
 	&GenInst_CardSelectionHandler_t2914958190_0_0_0,
 	&GenInst_BaseDialog_t735619993_0_0_0,
 	&GenInst_GenericPopup_t4182595893_0_0_0,
+	&GenInst_MeshCollider_t1080724846_0_0_0,
 	&GenInst_GameObjectRef_t4121474274_0_0_0,
 	&GenInst_PostURL_t1273431183_0_0_0,
 	&GenInst_TextMesh_t583678247_0_0_0,

@@ -16,8 +16,6 @@ struct Button_t990034267;
 struct List_1_t514686775;
 // System.Collections.Generic.List`1<System.Int32>
 struct List_1_t3644373756;
-// UnityEngine.RectTransform
-struct RectTransform_t3317474837;
 
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
 
@@ -39,8 +37,10 @@ public:
 	Button_t990034267 * ___previous_6;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> GameSelectionScreen::_train
 	List_1_t514686775 * ____train_7;
-	// UnityEngine.RectTransform GameSelectionScreen::mask
-	RectTransform_t3317474837 * ___mask_11;
+	// System.Single GameSelectionScreen::maskWidth
+	float ___maskWidth_11;
+	// System.Single GameSelectionScreen::xOffset
+	float ___xOffset_12;
 
 public:
 	inline static int32_t get_offset_of_next_4() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___next_4)); }
@@ -79,13 +79,20 @@ public:
 		Il2CppCodeGenWriteBarrier(&____train_7, value);
 	}
 
-	inline static int32_t get_offset_of_mask_11() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___mask_11)); }
-	inline RectTransform_t3317474837 * get_mask_11() const { return ___mask_11; }
-	inline RectTransform_t3317474837 ** get_address_of_mask_11() { return &___mask_11; }
-	inline void set_mask_11(RectTransform_t3317474837 * value)
+	inline static int32_t get_offset_of_maskWidth_11() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___maskWidth_11)); }
+	inline float get_maskWidth_11() const { return ___maskWidth_11; }
+	inline float* get_address_of_maskWidth_11() { return &___maskWidth_11; }
+	inline void set_maskWidth_11(float value)
 	{
-		___mask_11 = value;
-		Il2CppCodeGenWriteBarrier(&___mask_11, value);
+		___maskWidth_11 = value;
+	}
+
+	inline static int32_t get_offset_of_xOffset_12() { return static_cast<int32_t>(offsetof(GameSelectionScreen_t839734950, ___xOffset_12)); }
+	inline float get_xOffset_12() const { return ___xOffset_12; }
+	inline float* get_address_of_xOffset_12() { return &___xOffset_12; }
+	inline void set_xOffset_12(float value)
+	{
+		___xOffset_12 = value;
 	}
 };
 

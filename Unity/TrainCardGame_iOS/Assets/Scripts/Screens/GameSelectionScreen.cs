@@ -12,7 +12,8 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     private static List<int> entryFees = new List<int>(){ 0, 100, 150, 300 };
     private static int selectedIndex = 0;
     private static List<int> matchTypes = new List<int>(){ 0, 3, 5, 10 };
-    public RectTransform mask;
+    public float maskWidth = 600;
+    float xOffset = 0.0f;
 
     public static int GetSweepCount()
     {
@@ -37,10 +38,15 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     override public void Reset()
     {
         base.Reset();
+        if (xOffset == 0.0f)
+        {
+            xOffset = _train[0].transform.localPosition.x;
+        }
         for (int index = 0; index < _train.Count; index++)
         {
             Vector3 pos = _train[index].transform.localPosition;
-            pos.x = index * mask.rect.width;
+            pos.x = index * maskWidth;
+            pos.x += xOffset;
             _train[index].transform.localPosition = pos;
         }
 
@@ -94,7 +100,7 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     {
         if (UpdateIndex(1))
         {
-            MoveBy(-mask.rect.width);
+            MoveBy(-maskWidth);
         }
         UpdateInteractivity();
     }
@@ -103,7 +109,7 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     {
         if (UpdateIndex(-1))
         {
-            MoveBy(mask.rect.width);
+            MoveBy(maskWidth);
         }
         UpdateInteractivity();
     }

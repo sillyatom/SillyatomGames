@@ -20,6 +20,8 @@ struct Networking_t1515242260;
 struct APIHandler_t2277647344;
 // PopupManager
 struct PopupManager_t2711269761;
+// HUD
+struct HUD_t71895;
 // SceneTransitionManager
 struct SceneTransitionManager_t1210711436;
 // UnityEngine.GameObject
@@ -49,14 +51,16 @@ public:
 	APIHandler_t2277647344 * ___apiHandler_5;
 	// PopupManager GameObjectRef::popupManager
 	PopupManager_t2711269761 * ___popupManager_6;
+	// HUD GameObjectRef::hud
+	HUD_t71895 * ___hud_7;
 	// SceneTransitionManager GameObjectRef::sceneTransitionManager
-	SceneTransitionManager_t1210711436 * ___sceneTransitionManager_7;
+	SceneTransitionManager_t1210711436 * ___sceneTransitionManager_8;
 	// UnityEngine.GameObject GameObjectRef::gameWinDialog
-	GameObject_t4012695102 * ___gameWinDialog_8;
+	GameObject_t4012695102 * ___gameWinDialog_9;
 	// UnityEngine.GameObject GameObjectRef::gameFailDialog
-	GameObject_t4012695102 * ___gameFailDialog_9;
+	GameObject_t4012695102 * ___gameFailDialog_10;
 	// PostURL GameObjectRef::postMethod
-	PostURL_t1273431183 * ___postMethod_10;
+	PostURL_t1273431183 * ___postMethod_11;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -104,40 +108,49 @@ public:
 		Il2CppCodeGenWriteBarrier(&___popupManager_6, value);
 	}
 
-	inline static int32_t get_offset_of_sceneTransitionManager_7() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___sceneTransitionManager_7)); }
-	inline SceneTransitionManager_t1210711436 * get_sceneTransitionManager_7() const { return ___sceneTransitionManager_7; }
-	inline SceneTransitionManager_t1210711436 ** get_address_of_sceneTransitionManager_7() { return &___sceneTransitionManager_7; }
-	inline void set_sceneTransitionManager_7(SceneTransitionManager_t1210711436 * value)
+	inline static int32_t get_offset_of_hud_7() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___hud_7)); }
+	inline HUD_t71895 * get_hud_7() const { return ___hud_7; }
+	inline HUD_t71895 ** get_address_of_hud_7() { return &___hud_7; }
+	inline void set_hud_7(HUD_t71895 * value)
 	{
-		___sceneTransitionManager_7 = value;
-		Il2CppCodeGenWriteBarrier(&___sceneTransitionManager_7, value);
+		___hud_7 = value;
+		Il2CppCodeGenWriteBarrier(&___hud_7, value);
 	}
 
-	inline static int32_t get_offset_of_gameWinDialog_8() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___gameWinDialog_8)); }
-	inline GameObject_t4012695102 * get_gameWinDialog_8() const { return ___gameWinDialog_8; }
-	inline GameObject_t4012695102 ** get_address_of_gameWinDialog_8() { return &___gameWinDialog_8; }
-	inline void set_gameWinDialog_8(GameObject_t4012695102 * value)
+	inline static int32_t get_offset_of_sceneTransitionManager_8() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___sceneTransitionManager_8)); }
+	inline SceneTransitionManager_t1210711436 * get_sceneTransitionManager_8() const { return ___sceneTransitionManager_8; }
+	inline SceneTransitionManager_t1210711436 ** get_address_of_sceneTransitionManager_8() { return &___sceneTransitionManager_8; }
+	inline void set_sceneTransitionManager_8(SceneTransitionManager_t1210711436 * value)
 	{
-		___gameWinDialog_8 = value;
-		Il2CppCodeGenWriteBarrier(&___gameWinDialog_8, value);
+		___sceneTransitionManager_8 = value;
+		Il2CppCodeGenWriteBarrier(&___sceneTransitionManager_8, value);
 	}
 
-	inline static int32_t get_offset_of_gameFailDialog_9() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___gameFailDialog_9)); }
-	inline GameObject_t4012695102 * get_gameFailDialog_9() const { return ___gameFailDialog_9; }
-	inline GameObject_t4012695102 ** get_address_of_gameFailDialog_9() { return &___gameFailDialog_9; }
-	inline void set_gameFailDialog_9(GameObject_t4012695102 * value)
+	inline static int32_t get_offset_of_gameWinDialog_9() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___gameWinDialog_9)); }
+	inline GameObject_t4012695102 * get_gameWinDialog_9() const { return ___gameWinDialog_9; }
+	inline GameObject_t4012695102 ** get_address_of_gameWinDialog_9() { return &___gameWinDialog_9; }
+	inline void set_gameWinDialog_9(GameObject_t4012695102 * value)
 	{
-		___gameFailDialog_9 = value;
-		Il2CppCodeGenWriteBarrier(&___gameFailDialog_9, value);
+		___gameWinDialog_9 = value;
+		Il2CppCodeGenWriteBarrier(&___gameWinDialog_9, value);
 	}
 
-	inline static int32_t get_offset_of_postMethod_10() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___postMethod_10)); }
-	inline PostURL_t1273431183 * get_postMethod_10() const { return ___postMethod_10; }
-	inline PostURL_t1273431183 ** get_address_of_postMethod_10() { return &___postMethod_10; }
-	inline void set_postMethod_10(PostURL_t1273431183 * value)
+	inline static int32_t get_offset_of_gameFailDialog_10() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___gameFailDialog_10)); }
+	inline GameObject_t4012695102 * get_gameFailDialog_10() const { return ___gameFailDialog_10; }
+	inline GameObject_t4012695102 ** get_address_of_gameFailDialog_10() { return &___gameFailDialog_10; }
+	inline void set_gameFailDialog_10(GameObject_t4012695102 * value)
 	{
-		___postMethod_10 = value;
-		Il2CppCodeGenWriteBarrier(&___postMethod_10, value);
+		___gameFailDialog_10 = value;
+		Il2CppCodeGenWriteBarrier(&___gameFailDialog_10, value);
+	}
+
+	inline static int32_t get_offset_of_postMethod_11() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___postMethod_11)); }
+	inline PostURL_t1273431183 * get_postMethod_11() const { return ___postMethod_11; }
+	inline PostURL_t1273431183 ** get_address_of_postMethod_11() { return &___postMethod_11; }
+	inline void set_postMethod_11(PostURL_t1273431183 * value)
+	{
+		___postMethod_11 = value;
+		Il2CppCodeGenWriteBarrier(&___postMethod_11, value);
 	}
 };
 

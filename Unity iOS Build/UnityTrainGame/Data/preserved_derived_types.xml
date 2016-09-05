@@ -7,6 +7,7 @@
 </assembly>
 <assembly fullname="Assembly-CSharp">
 <type fullname="TextTest" preserve="all"/>
+<type fullname="ReverseNormals" preserve="all"/>
 <type fullname="ButtonComponent" preserve="all"/>
 <type fullname="ExtMonoBehaviour" preserve="all"/>
 <type fullname="GameScreenMonoBehaviour" preserve="all"/>

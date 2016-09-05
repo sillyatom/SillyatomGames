@@ -440,6 +440,7 @@
      <None Include="Assets\Resources\Images\GUI\Button.png.txt" />
      <None Include="Assets\Resources\Fonts\chlorinar\1001fonts-chlorinar-eula.txt" />
      <None Include="Assets\Resources\Shaders\GrayScale.shader" />
+     <None Include="Assets\Resources\Fonts\GoodDog-Regular\Fonthead Standard EULA.txt" />
      <None Include="Assets\Resources\Shaders\GlowShader.shader" />
      <None Include="Assets\JsonDotNet\ReadMe.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />

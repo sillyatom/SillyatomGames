@@ -335,6 +335,10 @@ struct RemoteInitVO_t4123121615;
 struct ResultVO_t4023821238;
 // System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.String>>
 struct Dictionary_2_t3403145775;
+// ReverseNormals
+struct ReverseNormals_t4264251210;
+// UnityEngine.MeshCollider
+struct MeshCollider_t1080724846;
 // RoundHandler
 struct RoundHandler_t2172802556;
 // System.Action
@@ -887,6 +891,15 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_ResultVO4023821238.h"
 #include "AssemblyU2DCSharp_ResultVO4023821238MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_g3403145775.h"
+#include "AssemblyU2DCSharp_ReverseNormals4264251210.h"
+#include "AssemblyU2DCSharp_ReverseNormals4264251210MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_MeshFilter4177078322MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Mesh1525280346MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_MeshCollider1080724846MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_MeshFilter4177078322.h"
+#include "UnityEngine_UnityEngine_Mesh1525280346.h"
+#include "UnityEngine_ArrayTypes.h"
+#include "UnityEngine_UnityEngine_MeshCollider1080724846.h"
 #include "AssemblyU2DCSharp_RoundHandler2172802556.h"
 #include "AssemblyU2DCSharp_RoundHandler2172802556MethodDeclarations.h"
 #include "System_Core_System_Action437523947.h"
@@ -942,11 +955,11 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_SinglePlayerMainGame3863033300MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MultiplayerMainGame4046083237MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MultiplayerMainGame4046083237.h"
+#include "AssemblyU2DCSharp_HUD71895.h"
 #include "AssemblyU2DCSharp_Dealer2043054649MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Dealer2043054649.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen3190040570MethodDeclarations.h"
 #include "AssemblyU2DCSharp_LocalPlayerModel1751900285MethodDeclarations.h"
-#include "UnityEngine_ArrayTypes.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen3190040570.h"
 #include "AssemblyU2DCSharp_LocalPlayerModel1751900285.h"
 #include "AssemblyU2DCSharp_GameModel2988344887MethodDeclarations.h"
@@ -1130,6 +1143,8 @@ extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m3133387403_gshare
 #define Object_Instantiate_TisGameObject_t4012695102_m3917608929(__this /* static, unused */, p0, method) ((  GameObject_t4012695102 * (*) (Il2CppObject * /* static, unused */, GameObject_t4012695102 *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m3133387403_gshared)(__this /* static, unused */, p0, method)
 // !!0 UnityEngine.GameObject::GetComponent<GenericPopup>()
 #define GameObject_GetComponent_TisGenericPopup_t4182595893_m2766059656(__this, method) ((  GenericPopup_t4182595893 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.MeshCollider>()
+#define Component_GetComponent_TisMeshCollider_t1080724846_m2182714317(__this, method) ((  MeshCollider_t1080724846 * (*) (Component_t2126946602 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m267839954_gshared)(__this, method)
 // System.Void EventManager::AddListener<System.Object>(EventManager/EventDelegate`1<!!0>)
 extern "C"  void EventManager_AddListener_TisIl2CppObject_m2531195641_gshared (EventManager_t1907836883 * __this, EventDelegate_1_t3301404201 * p0, const MethodInfo* method);
 #define EventManager_AddListener_TisIl2CppObject_m2531195641(__this, p0, method) ((  void (*) (EventManager_t1907836883 *, EventDelegate_1_t3301404201 *, const MethodInfo*))EventManager_AddListener_TisIl2CppObject_m2531195641_gshared)(__this, p0, method)
@@ -26431,6 +26446,178 @@ IL_0050:
 		return L_12;
 	}
 }
+// System.Void ReverseNormals::.ctor()
+extern "C"  void ReverseNormals__ctor_m1869484177 (ReverseNormals_t4264251210 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2022291967(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void ReverseNormals::Start()
+extern const Il2CppType* MeshFilter_t4177078322_0_0_0_var;
+extern TypeInfo* Type_t_il2cpp_TypeInfo_var;
+extern TypeInfo* MeshFilter_t4177078322_il2cpp_TypeInfo_var;
+extern const MethodInfo* Component_GetComponent_TisMeshCollider_t1080724846_m2182714317_MethodInfo_var;
+extern const uint32_t ReverseNormals_Start_m816621969_MetadataUsageId;
+extern "C"  void ReverseNormals_Start_m816621969 (ReverseNormals_t4264251210 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (ReverseNormals_Start_m816621969_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	MeshFilter_t4177078322 * V_0 = NULL;
+	Mesh_t1525280346 * V_1 = NULL;
+	Vector3U5BU5D_t3227571696* V_2 = NULL;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	Int32U5BU5D_t1809983122* V_5 = NULL;
+	int32_t V_6 = 0;
+	int32_t V_7 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_0 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(MeshFilter_t4177078322_0_0_0_var), /*hidden argument*/NULL);
+		Component_t2126946602 * L_1 = Component_GetComponent_m936021879(__this, L_0, /*hidden argument*/NULL);
+		V_0 = ((MeshFilter_t4177078322 *)IsInstSealed(L_1, MeshFilter_t4177078322_il2cpp_TypeInfo_var));
+		MeshFilter_t4177078322 * L_2 = V_0;
+		bool L_3 = Object_op_Inequality_m1296218211(NULL /*static, unused*/, L_2, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
+		if (!L_3)
+		{
+			goto IL_00cc;
+		}
+	}
+	{
+		MeshFilter_t4177078322 * L_4 = V_0;
+		NullCheck(L_4);
+		Mesh_t1525280346 * L_5 = MeshFilter_get_mesh_m484001117(L_4, /*hidden argument*/NULL);
+		V_1 = L_5;
+		Mesh_t1525280346 * L_6 = V_1;
+		NullCheck(L_6);
+		Vector3U5BU5D_t3227571696* L_7 = Mesh_get_normals_m3396909641(L_6, /*hidden argument*/NULL);
+		V_2 = L_7;
+		V_3 = 0;
+		goto IL_0058;
+	}
+
+IL_0037:
+	{
+		Vector3U5BU5D_t3227571696* L_8 = V_2;
+		int32_t L_9 = V_3;
+		NullCheck(L_8);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_8, L_9);
+		Vector3U5BU5D_t3227571696* L_10 = V_2;
+		int32_t L_11 = V_3;
+		NullCheck(L_10);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_10, L_11);
+		Vector3_t3525329789  L_12 = Vector3_op_UnaryNegation_m3293197314(NULL /*static, unused*/, (*(Vector3_t3525329789 *)((L_10)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_11)))), /*hidden argument*/NULL);
+		(*(Vector3_t3525329789 *)((L_8)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_9)))) = L_12;
+		int32_t L_13 = V_3;
+		V_3 = ((int32_t)((int32_t)L_13+(int32_t)1));
+	}
+
+IL_0058:
+	{
+		int32_t L_14 = V_3;
+		Vector3U5BU5D_t3227571696* L_15 = V_2;
+		NullCheck(L_15);
+		if ((((int32_t)L_14) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_15)->max_length)))))))
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		Mesh_t1525280346 * L_16 = V_1;
+		Vector3U5BU5D_t3227571696* L_17 = V_2;
+		NullCheck(L_16);
+		Mesh_set_normals_m3763698282(L_16, L_17, /*hidden argument*/NULL);
+		V_4 = 0;
+		goto IL_00bf;
+	}
+
+IL_0070:
+	{
+		Mesh_t1525280346 * L_18 = V_1;
+		int32_t L_19 = V_4;
+		NullCheck(L_18);
+		Int32U5BU5D_t1809983122* L_20 = Mesh_GetTriangles_m3189498632(L_18, L_19, /*hidden argument*/NULL);
+		V_5 = L_20;
+		V_6 = 0;
+		goto IL_00a4;
+	}
+
+IL_0082:
+	{
+		Int32U5BU5D_t1809983122* L_21 = V_5;
+		int32_t L_22 = V_6;
+		NullCheck(L_21);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_21, L_22);
+		int32_t L_23 = L_22;
+		V_7 = ((L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23)));
+		Int32U5BU5D_t1809983122* L_24 = V_5;
+		int32_t L_25 = V_6;
+		Int32U5BU5D_t1809983122* L_26 = V_5;
+		int32_t L_27 = V_6;
+		NullCheck(L_26);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_26, ((int32_t)((int32_t)L_27+(int32_t)1)));
+		int32_t L_28 = ((int32_t)((int32_t)L_27+(int32_t)1));
+		NullCheck(L_24);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_24, L_25);
+		(L_24)->SetAt(static_cast<il2cpp_array_size_t>(L_25), (int32_t)((L_26)->GetAt(static_cast<il2cpp_array_size_t>(L_28))));
+		Int32U5BU5D_t1809983122* L_29 = V_5;
+		int32_t L_30 = V_6;
+		int32_t L_31 = V_7;
+		NullCheck(L_29);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_29, ((int32_t)((int32_t)L_30+(int32_t)1)));
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)((int32_t)L_30+(int32_t)1))), (int32_t)L_31);
+		int32_t L_32 = V_6;
+		V_6 = ((int32_t)((int32_t)L_32+(int32_t)3));
+	}
+
+IL_00a4:
+	{
+		int32_t L_33 = V_6;
+		Int32U5BU5D_t1809983122* L_34 = V_5;
+		NullCheck(L_34);
+		if ((((int32_t)L_33) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_34)->max_length)))))))
+		{
+			goto IL_0082;
+		}
+	}
+	{
+		Mesh_t1525280346 * L_35 = V_1;
+		Int32U5BU5D_t1809983122* L_36 = V_5;
+		int32_t L_37 = V_4;
+		NullCheck(L_35);
+		Mesh_SetTriangles_m636210907(L_35, L_36, L_37, /*hidden argument*/NULL);
+		int32_t L_38 = V_4;
+		V_4 = ((int32_t)((int32_t)L_38+(int32_t)1));
+	}
+
+IL_00bf:
+	{
+		int32_t L_39 = V_4;
+		Mesh_t1525280346 * L_40 = V_1;
+		NullCheck(L_40);
+		int32_t L_41 = Mesh_get_subMeshCount_m4159827535(L_40, /*hidden argument*/NULL);
+		if ((((int32_t)L_39) < ((int32_t)L_41)))
+		{
+			goto IL_0070;
+		}
+	}
+
+IL_00cc:
+	{
+		MeshCollider_t1080724846 * L_42 = Component_GetComponent_TisMeshCollider_t1080724846_m2182714317(__this, /*hidden argument*/Component_GetComponent_TisMeshCollider_t1080724846_m2182714317_MethodInfo_var);
+		MeshFilter_t4177078322 * L_43 = V_0;
+		NullCheck(L_43);
+		Mesh_t1525280346 * L_44 = MeshFilter_get_mesh_m484001117(L_43, /*hidden argument*/NULL);
+		NullCheck(L_42);
+		MeshCollider_set_sharedMesh_m3062685539(L_42, L_44, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void RoundHandler::.ctor()
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern const uint32_t RoundHandler__ctor_m1935710239_MetadataUsageId;
@@ -27386,7 +27573,7 @@ extern "C"  void SceneMonoBehaviour_Init_m1859798119 (SceneMonoBehaviour_t424621
 		ExtMonoBehaviour_Init_m949924850(__this, /*hidden argument*/NULL);
 		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_0);
-		SceneTransitionManager_t1210711436 * L_1 = L_0->get_sceneTransitionManager_7();
+		SceneTransitionManager_t1210711436 * L_1 = L_0->get_sceneTransitionManager_8();
 		__this->set_sceneTransitionManager_3(L_1);
 		return;
 	}
@@ -27499,6 +27686,60 @@ extern "C"  void SceneTransitionManager_SetActiveScreen_m3383367968 (SceneTransi
 		RectTransform_t3317474837 * L_0 = ___screen;
 		__this->set__activeScreen_4(L_0);
 		SceneTransitionManager_RearrangeScreens_m1562589827(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SceneTransitionManager::ShowMainScreen()
+extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
+extern const MethodInfo* Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895_MethodInfo_var;
+extern const uint32_t SceneTransitionManager_ShowMainScreen_m1058931639_MetadataUsageId;
+extern "C"  void SceneTransitionManager_ShowMainScreen_m1058931639 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (SceneTransitionManager_ShowMainScreen_m1058931639_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	SceneMonoBehaviour_t4246217742 * V_0 = NULL;
+	{
+		RectTransform_t3317474837 * L_0 = __this->get__activeScreen_4();
+		NullCheck(L_0);
+		SceneMonoBehaviour_t4246217742 * L_1 = Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895(L_0, /*hidden argument*/Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895_MethodInfo_var);
+		V_0 = L_1;
+		SceneMonoBehaviour_t4246217742 * L_2 = V_0;
+		NullCheck(L_2);
+		VirtActionInvoker0::Invoke(8 /* System.Void ExtMonoBehaviour::OnMoveOutOfView() */, L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
+		String_t* L_3 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MAIN_SCREEN_0();
+		SceneTransitionManager_SetActiveScreen_m3079263841(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SceneTransitionManager::ShowMatchSelectionScreen()
+extern TypeInfo* TagConstants_t2563060469_il2cpp_TypeInfo_var;
+extern const MethodInfo* Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895_MethodInfo_var;
+extern const uint32_t SceneTransitionManager_ShowMatchSelectionScreen_m2443140101_MetadataUsageId;
+extern "C"  void SceneTransitionManager_ShowMatchSelectionScreen_m2443140101 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (SceneTransitionManager_ShowMatchSelectionScreen_m2443140101_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	SceneMonoBehaviour_t4246217742 * V_0 = NULL;
+	{
+		RectTransform_t3317474837 * L_0 = __this->get__activeScreen_4();
+		NullCheck(L_0);
+		SceneMonoBehaviour_t4246217742 * L_1 = Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895(L_0, /*hidden argument*/Component_GetComponent_TisSceneMonoBehaviour_t4246217742_m1664931895_MethodInfo_var);
+		V_0 = L_1;
+		SceneMonoBehaviour_t4246217742 * L_2 = V_0;
+		NullCheck(L_2);
+		VirtActionInvoker0::Invoke(8 /* System.Void ExtMonoBehaviour::OnMoveOutOfView() */, L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
+		String_t* L_3 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MATCH_SELECTION_SCREEN_2();
+		SceneTransitionManager_SetActiveScreen_m3079263841(__this, L_3, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -27797,6 +28038,29 @@ extern "C"  void SinglePlayerMainGame_Init_m1637520941 (SinglePlayerMainGame_t38
 		Networking_OnSinglePlayerMode_m504645416(L_0, /*hidden argument*/NULL);
 		BridgeDebugger_Log_m140064271(NULL /*static, unused*/, _stringLiteral2234538990, /*hidden argument*/NULL);
 		MultiplayerMainGame_Init_m3127656750(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SinglePlayerMainGame::OnSetToView()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const uint32_t SinglePlayerMainGame_OnSetToView_m718404680_MetadataUsageId;
+extern "C"  void SinglePlayerMainGame_OnSetToView_m718404680 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (SinglePlayerMainGame_OnSetToView_m718404680_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		MultiplayerMainGame_OnSetToView_m1169890855(__this, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_0);
+		HUD_t71895 * L_1 = L_0->get_hud_7();
+		NullCheck(L_1);
+		GameObject_t4012695102 * L_2 = Component_get_gameObject_m1170635899(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		GameObject_SetActive_m3538205401(L_2, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }

@@ -32,5 +32,7 @@ extern "C"  void MainScreen_AuthGC_m3239920690 (MainScreen_t2442698661 * __this,
 extern "C"  Il2CppObject * MainScreen_StartSignInProcess_m1885858753 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MainScreen::OnInGameEvent(InGameEvent)
 extern "C"  void MainScreen_OnInGameEvent_m349397207 (MainScreen_t2442698661 * __this, InGameEvent_t511087107 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MainScreen::OnSetToView()
+extern "C"  void MainScreen_OnSetToView_m2205045847 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MainScreen::OnPlay()
 extern "C"  void MainScreen_OnPlay_m3220741537 (MainScreen_t2442698661 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

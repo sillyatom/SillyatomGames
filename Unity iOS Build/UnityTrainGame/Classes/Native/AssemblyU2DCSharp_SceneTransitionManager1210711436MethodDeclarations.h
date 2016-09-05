@@ -29,6 +29,10 @@ extern "C"  void SceneTransitionManager__ctor_m2716382351 (SceneTransitionManage
 extern "C"  void SceneTransitionManager_Init_m3225750501 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneTransitionManager::SetActiveScreen(UnityEngine.RectTransform)
 extern "C"  void SceneTransitionManager_SetActiveScreen_m3383367968 (SceneTransitionManager_t1210711436 * __this, RectTransform_t3317474837 * ___screen, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneTransitionManager::ShowMainScreen()
+extern "C"  void SceneTransitionManager_ShowMainScreen_m1058931639 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneTransitionManager::ShowMatchSelectionScreen()
+extern "C"  void SceneTransitionManager_ShowMatchSelectionScreen_m2443140101 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneTransitionManager::ShowGameSelectionScreen()
 extern "C"  void SceneTransitionManager_ShowGameSelectionScreen_m2506809590 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneTransitionManager::SetActiveScreen(System.String)

@@ -608,6 +608,7 @@ struct JsonArrayAttribute_t2894116366;
 #include "AssemblyU2DCSharp_GameSelectionScreen839734950.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen514686775MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen514686775.h"
+#include "AssemblyU2DCSharp_HUD71895.h"
 #include "UnityEngine_UI_UnityEngine_UI_Selectable3621744255MethodDeclarations.h"
 #include "UnityEngine_UI_UnityEngine_UI_Button990034267.h"
 #include "AssemblyU2DCSharp_GameWinDialog176796754.h"
@@ -626,7 +627,6 @@ struct JsonArrayAttribute_t2894116366;
 #include "AssemblyU2DCSharp_HeaderVO3244352038MethodDeclarations.h"
 #include "AssemblyU2DCSharp_HostSelectedVO4056182396.h"
 #include "AssemblyU2DCSharp_HostSelectedVO4056182396MethodDeclarations.h"
-#include "AssemblyU2DCSharp_HUD71895.h"
 #include "AssemblyU2DCSharp_HUD71895MethodDeclarations.h"
 #include "AssemblyU2DCSharp_InGameInfoText36852466.h"
 #include "AssemblyU2DCSharp_InGameInfoText36852466MethodDeclarations.h"
@@ -5473,7 +5473,7 @@ IL_008a:
 	{
 		GameObjectRef_t4121474274 * L_17 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_17);
-		SceneTransitionManager_t1210711436 * L_18 = L_17->get_sceneTransitionManager_7();
+		SceneTransitionManager_t1210711436 * L_18 = L_17->get_sceneTransitionManager_8();
 		IL2CPP_RUNTIME_CLASS_INIT(TagConstants_t2563060469_il2cpp_TypeInfo_var);
 		String_t* L_19 = ((TagConstants_t2563060469_StaticFields*)TagConstants_t2563060469_il2cpp_TypeInfo_var->static_fields)->get_TAG_MAIN_SCREEN_0();
 		NullCheck(L_18);
@@ -5514,7 +5514,7 @@ IL_008a:
 		WWWForm_AddField_m2890504319(L_33, L_34, L_36, /*hidden argument*/NULL);
 		GameObjectRef_t4121474274 * L_37 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_37);
-		PostURL_t1273431183 * L_38 = L_37->get_postMethod_10();
+		PostURL_t1273431183 * L_38 = L_37->get_postMethod_11();
 		WWWForm_t3999572776 * L_39 = V_4;
 		IntPtr_t L_40;
 		L_40.set_m_value_0((void*)ExecutionOrderManager_OnDataReceived_m285443949_MethodInfo_var);
@@ -6483,6 +6483,7 @@ extern "C"  void GameSelectionScreen__ctor_m2186336133 (GameSelectionScreen_t839
 		List_1_t514686775 * L_0 = (List_1_t514686775 *)il2cpp_codegen_object_new(List_1_t514686775_il2cpp_TypeInfo_var);
 		List_1__ctor_m2397334390(L_0, /*hidden argument*/List_1__ctor_m2397334390_MethodInfo_var);
 		__this->set__train_7(L_0);
+		__this->set_maskWidth_11((600.0f));
 		GameScreenMonoBehaviour__ctor_m1875208271(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -6607,6 +6608,7 @@ extern "C"  void GameSelectionScreen_Init_m2238820911 (GameSelectionScreen_t8397
 }
 // System.Void GameSelectionScreen::Reset()
 extern TypeInfo* GameSelectionScreen_t839734950_il2cpp_TypeInfo_var;
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
 extern const uint32_t GameSelectionScreen_Reset_m4127736370_MetadataUsageId;
 extern "C"  void GameSelectionScreen_Reset_m4127736370 (GameSelectionScreen_t839734950 * __this, const MethodInfo* method)
 {
@@ -6619,60 +6621,88 @@ extern "C"  void GameSelectionScreen_Reset_m4127736370 (GameSelectionScreen_t839
 	int32_t V_0 = 0;
 	Vector3_t3525329789  V_1;
 	memset(&V_1, 0, sizeof(V_1));
-	Rect_t1525428817  V_2;
+	Vector3_t3525329789  V_2;
 	memset(&V_2, 0, sizeof(V_2));
 	{
 		ExtMonoBehaviour_Reset_m2826664143(__this, /*hidden argument*/NULL);
-		V_0 = 0;
-		goto IL_005c;
+		float L_0 = __this->get_xOffset_12();
+		if ((!(((float)L_0) == ((float)(0.0f)))))
+		{
+			goto IL_003a;
+		}
 	}
-
-IL_000d:
 	{
-		List_1_t514686775 * L_0 = __this->get__train_7();
-		int32_t L_1 = V_0;
-		NullCheck(L_0);
-		GameObject_t4012695102 * L_2 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_0, L_1);
+		List_1_t514686775 * L_1 = __this->get__train_7();
+		NullCheck(L_1);
+		GameObject_t4012695102 * L_2 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_1, 0);
 		NullCheck(L_2);
 		Transform_t284553113 * L_3 = GameObject_get_transform_m1278640159(L_2, /*hidden argument*/NULL);
 		NullCheck(L_3);
 		Vector3_t3525329789  L_4 = Transform_get_localPosition_m668140784(L_3, /*hidden argument*/NULL);
-		V_1 = L_4;
-		int32_t L_5 = V_0;
-		RectTransform_t3317474837 * L_6 = __this->get_mask_11();
-		NullCheck(L_6);
-		Rect_t1525428817  L_7 = RectTransform_get_rect_m1566017036(L_6, /*hidden argument*/NULL);
-		V_2 = L_7;
-		float L_8 = Rect_get_width_m2824209432((&V_2), /*hidden argument*/NULL);
-		(&V_1)->set_x_1(((float)((float)(((float)((float)L_5)))*(float)L_8)));
-		List_1_t514686775 * L_9 = __this->get__train_7();
-		int32_t L_10 = V_0;
-		NullCheck(L_9);
-		GameObject_t4012695102 * L_11 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_9, L_10);
-		NullCheck(L_11);
-		Transform_t284553113 * L_12 = GameObject_get_transform_m1278640159(L_11, /*hidden argument*/NULL);
-		Vector3_t3525329789  L_13 = V_1;
-		NullCheck(L_12);
-		Transform_set_localPosition_m3504330903(L_12, L_13, /*hidden argument*/NULL);
-		int32_t L_14 = V_0;
-		V_0 = ((int32_t)((int32_t)L_14+(int32_t)1));
+		V_2 = L_4;
+		float L_5 = (&V_2)->get_x_1();
+		__this->set_xOffset_12(L_5);
 	}
 
-IL_005c:
+IL_003a:
 	{
-		int32_t L_15 = V_0;
+		V_0 = 0;
+		goto IL_0097;
+	}
+
+IL_0041:
+	{
+		List_1_t514686775 * L_6 = __this->get__train_7();
+		int32_t L_7 = V_0;
+		NullCheck(L_6);
+		GameObject_t4012695102 * L_8 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_6, L_7);
+		NullCheck(L_8);
+		Transform_t284553113 * L_9 = GameObject_get_transform_m1278640159(L_8, /*hidden argument*/NULL);
+		NullCheck(L_9);
+		Vector3_t3525329789  L_10 = Transform_get_localPosition_m668140784(L_9, /*hidden argument*/NULL);
+		V_1 = L_10;
+		int32_t L_11 = V_0;
+		float L_12 = __this->get_maskWidth_11();
+		(&V_1)->set_x_1(((float)((float)(((float)((float)L_11)))*(float)L_12)));
+		Vector3_t3525329789 * L_13 = (&V_1);
+		float L_14 = L_13->get_x_1();
+		float L_15 = __this->get_xOffset_12();
+		L_13->set_x_1(((float)((float)L_14+(float)L_15)));
 		List_1_t514686775 * L_16 = __this->get__train_7();
+		int32_t L_17 = V_0;
 		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count() */, L_16);
-		if ((((int32_t)L_15) < ((int32_t)L_17)))
+		GameObject_t4012695102 * L_18 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_16, L_17);
+		NullCheck(L_18);
+		Transform_t284553113 * L_19 = GameObject_get_transform_m1278640159(L_18, /*hidden argument*/NULL);
+		Vector3_t3525329789  L_20 = V_1;
+		NullCheck(L_19);
+		Transform_set_localPosition_m3504330903(L_19, L_20, /*hidden argument*/NULL);
+		int32_t L_21 = V_0;
+		V_0 = ((int32_t)((int32_t)L_21+(int32_t)1));
+	}
+
+IL_0097:
+	{
+		int32_t L_22 = V_0;
+		List_1_t514686775 * L_23 = __this->get__train_7();
+		NullCheck(L_23);
+		int32_t L_24 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count() */, L_23);
+		if ((((int32_t)L_22) < ((int32_t)L_24)))
 		{
-			goto IL_000d;
+			goto IL_0041;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GameSelectionScreen_t839734950_il2cpp_TypeInfo_var);
 		((GameSelectionScreen_t839734950_StaticFields*)GameSelectionScreen_t839734950_il2cpp_TypeInfo_var->static_fields)->set_selectedIndex_9(0);
 		GameSelectionScreen_UpdateInteractivity_m3450296901(__this, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_25 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_25);
+		HUD_t71895 * L_26 = L_25->get_hud_7();
+		NullCheck(L_26);
+		GameObject_t4012695102 * L_27 = Component_get_gameObject_m1170635899(L_26, /*hidden argument*/NULL);
+		NullCheck(L_27);
+		GameObject_SetActive_m3538205401(L_27, (bool)1, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -6791,25 +6821,19 @@ extern "C"  void GameSelectionScreen_UpdateInteractivity_m3450296901 (GameSelect
 // System.Void GameSelectionScreen::Next()
 extern "C"  void GameSelectionScreen_Next_m2374101842 (GameSelectionScreen_t839734950 * __this, const MethodInfo* method)
 {
-	Rect_t1525428817  V_0;
-	memset(&V_0, 0, sizeof(V_0));
 	{
 		bool L_0 = GameSelectionScreen_UpdateIndex_m50862449(__this, 1, /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0026;
+			goto IL_0019;
 		}
 	}
 	{
-		RectTransform_t3317474837 * L_1 = __this->get_mask_11();
-		NullCheck(L_1);
-		Rect_t1525428817  L_2 = RectTransform_get_rect_m1566017036(L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		float L_3 = Rect_get_width_m2824209432((&V_0), /*hidden argument*/NULL);
-		GameSelectionScreen_MoveBy_m1352856932(__this, ((-L_3)), /*hidden argument*/NULL);
+		float L_1 = __this->get_maskWidth_11();
+		GameSelectionScreen_MoveBy_m1352856932(__this, ((-L_1)), /*hidden argument*/NULL);
 	}
 
-IL_0026:
+IL_0019:
 	{
 		GameSelectionScreen_UpdateInteractivity_m3450296901(__this, /*hidden argument*/NULL);
 		return;
@@ -6818,25 +6842,19 @@ IL_0026:
 // System.Void GameSelectionScreen::Previous()
 extern "C"  void GameSelectionScreen_Previous_m1882647382 (GameSelectionScreen_t839734950 * __this, const MethodInfo* method)
 {
-	Rect_t1525428817  V_0;
-	memset(&V_0, 0, sizeof(V_0));
 	{
 		bool L_0 = GameSelectionScreen_UpdateIndex_m50862449(__this, (-1), /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0025;
+			goto IL_0018;
 		}
 	}
 	{
-		RectTransform_t3317474837 * L_1 = __this->get_mask_11();
-		NullCheck(L_1);
-		Rect_t1525428817  L_2 = RectTransform_get_rect_m1566017036(L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		float L_3 = Rect_get_width_m2824209432((&V_0), /*hidden argument*/NULL);
-		GameSelectionScreen_MoveBy_m1352856932(__this, L_3, /*hidden argument*/NULL);
+		float L_1 = __this->get_maskWidth_11();
+		GameSelectionScreen_MoveBy_m1352856932(__this, L_1, /*hidden argument*/NULL);
 	}
 
-IL_0025:
+IL_0018:
 	{
 		GameSelectionScreen_UpdateInteractivity_m3450296901(__this, /*hidden argument*/NULL);
 		return;
@@ -9901,7 +9919,7 @@ extern "C"  void LocalPlayerModel_PostTokens_m2062522080 (LocalPlayerModel_t1751
 		WWWForm_AddField_m355604532(L_10, L_11, L_12, /*hidden argument*/NULL);
 		GameObjectRef_t4121474274 * L_13 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_13);
-		PostURL_t1273431183 * L_14 = L_13->get_postMethod_10();
+		PostURL_t1273431183 * L_14 = L_13->get_postMethod_11();
 		WWWForm_t3999572776 * L_15 = V_0;
 		NullCheck(L_14);
 		PostURL_StartRequest_m3272825833(L_14, L_15, (Action_2_t3735278643 *)NULL, /*hidden argument*/NULL);
@@ -10137,6 +10155,29 @@ IL_007a:
 		return;
 	}
 }
+// System.Void MainScreen::OnSetToView()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const uint32_t MainScreen_OnSetToView_m2205045847_MetadataUsageId;
+extern "C"  void MainScreen_OnSetToView_m2205045847 (MainScreen_t2442698661 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MainScreen_OnSetToView_m2205045847_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		ExtMonoBehaviour_OnSetToView_m2578106083(__this, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_0);
+		HUD_t71895 * L_1 = L_0->get_hud_7();
+		NullCheck(L_1);
+		GameObject_t4012695102 * L_2 = Component_get_gameObject_m1170635899(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		GameObject_SetActive_m3538205401(L_2, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void MainScreen::OnPlay()
 extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
@@ -10353,8 +10394,16 @@ extern "C"  void MatchSelectionScreen_findMatches_m277424448 (Il2CppObject * __t
 
 }
 // System.Void MatchSelectionScreen::OnSetToView()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const uint32_t MatchSelectionScreen_OnSetToView_m4214244233_MetadataUsageId;
 extern "C"  void MatchSelectionScreen_OnSetToView_m4214244233 (MatchSelectionScreen_t3589239987 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MatchSelectionScreen_OnSetToView_m4214244233_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
 	{
 		ExtMonoBehaviour_OnSetToView_m2578106083(__this, /*hidden argument*/NULL);
 		Button_t990034267 * L_0 = __this->get_hostMatch_5();
@@ -10369,6 +10418,13 @@ extern "C"  void MatchSelectionScreen_OnSetToView_m4214244233 (MatchSelectionScr
 		Button_t990034267 * L_3 = __this->get_singlePlayerBtn_8();
 		NullCheck(L_3);
 		Behaviour_set_enabled_m2046806933(L_3, (bool)1, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_4 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_4);
+		HUD_t71895 * L_5 = L_4->get_hud_7();
+		NullCheck(L_5);
+		GameObject_t4012695102 * L_6 = Component_get_gameObject_m1170635899(L_5, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		GameObject_SetActive_m3538205401(L_6, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -10949,7 +11005,7 @@ extern "C"  void MultiplayerMainGame_ShowWinDialog_m3274749579 (MultiplayerMainG
 	{
 		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_0);
-		GameObject_t4012695102 * L_1 = L_0->get_gameWinDialog_8();
+		GameObject_t4012695102 * L_1 = L_0->get_gameWinDialog_9();
 		V_0 = L_1;
 		GameObject_t4012695102 * L_2 = V_0;
 		NullCheck(L_2);
@@ -10981,7 +11037,7 @@ extern "C"  void MultiplayerMainGame_ShowFailDialog_m1861354497 (MultiplayerMain
 	{
 		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
 		NullCheck(L_0);
-		GameObject_t4012695102 * L_1 = L_0->get_gameFailDialog_9();
+		GameObject_t4012695102 * L_1 = L_0->get_gameFailDialog_10();
 		V_0 = L_1;
 		GameObject_t4012695102 * L_2 = V_0;
 		NullCheck(L_2);
@@ -15120,6 +15176,29 @@ extern "C"  void MultiplayerMainGame_CheckGameEnd_m2426142783 (MultiplayerMainGa
 
 IL_0025:
 	{
+		return;
+	}
+}
+// System.Void MultiplayerMainGame::OnSetToView()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const uint32_t MultiplayerMainGame_OnSetToView_m1169890855_MetadataUsageId;
+extern "C"  void MultiplayerMainGame_OnSetToView_m1169890855 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MultiplayerMainGame_OnSetToView_m1169890855_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		ExtMonoBehaviour_OnSetToView_m2578106083(__this, /*hidden argument*/NULL);
+		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_0);
+		HUD_t71895 * L_1 = L_0->get_hud_7();
+		NullCheck(L_1);
+		GameObject_t4012695102 * L_2 = Component_get_gameObject_m1170635899(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		GameObject_SetActive_m3538205401(L_2, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }

@@ -1,5 +1,10 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="GameSelectionScreen">
+			<method name="Play"/>
+			<method name="Next"/>
+			<method name="Previous"/>
+		</type>
 		<type fullname="PopupManager">
 			<method name="RemoveActivePopup"/>
 			<method name="RemoveActivePopup"/>
@@ -11,15 +16,14 @@
 		<type fullname="SceneTransitionManager">
 			<method name="ShowGameSelectionScreen"/>
 			<method name="ShowGameSelectionScreen"/>
+			<method name="ShowMainScreen"/>
 			<method name="ShowGameSelectionScreen"/>
 			<method name="ShowGameSelectionScreen"/>
 			<method name="ShowGameSelectionScreen"/>
 			<method name="ShowGameSelectionScreen"/>
-		</type>
-		<type fullname="GameSelectionScreen">
-			<method name="Next"/>
-			<method name="Previous"/>
-			<method name="Play"/>
+			<method name="ShowMainScreen"/>
+			<method name="ShowMainScreen"/>
+			<method name="ShowGameSelectionScreen"/>
 		</type>
 	</assembly>
 </linker>

@@ -1849,6 +1849,7 @@
 #include "UnityEngine_UnityEngine_WaitForEndOfFrame1917318876.h"
 #include "UnityEngine_UnityEngine_ScriptableObject184905905.h"
 #include "UnityEngine_UnityEngine_UnhandledExceptionHandler991098059.h"
+#include "UnityEngine_UnityEngine_MeshFilter4177078322.h"
 #include "UnityEngine_UnityEngine_Mesh1525280346.h"
 #include "UnityEngine_UnityEngine_Renderer1092684080.h"
 #include "UnityEngine_UnityEngine_Screen3994030297.h"
@@ -1897,6 +1898,7 @@
 #include "UnityEngine_UnityEngine_Physics2601443956.h"
 #include "UnityEngine_UnityEngine_Rigidbody1972007546.h"
 #include "UnityEngine_UnityEngine_Collider955670625.h"
+#include "UnityEngine_UnityEngine_MeshCollider1080724846.h"
 #include "UnityEngine_UnityEngine_CharacterController2029520850.h"
 #include "UnityEngine_UnityEngine_Rigidbody2D3632243084.h"
 #include "UnityEngine_UnityEngine_Collider2D1890038195.h"
@@ -2082,6 +2084,7 @@
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Miscel2000562298.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Reflect267368177.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String3845092202.h"
+#include "AssemblyU2DCSharp_ReverseNormals4264251210.h"
 #include "AssemblyU2DCSharp_EventManager_EventDelegate4004424223.h"
 #include "AssemblyU2DCSharp_ButtonComponent2676344267.h"
 #include "AssemblyU2DCSharp_GameScreenMonoBehaviour3269764764.h"
@@ -2100,7 +2103,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9511] = 
+extern const int32_t g_FieldOffsetTable[9513] = 
 {
 	0,
 	0,
@@ -11559,7 +11562,8 @@ extern const int32_t g_FieldOffsetTable[9511] =
 	GameSelectionScreen_t839734950_StaticFields::get_offset_of_entryFees_8(),
 	GameSelectionScreen_t839734950_StaticFields::get_offset_of_selectedIndex_9(),
 	GameSelectionScreen_t839734950_StaticFields::get_offset_of_matchTypes_10(),
-	GameSelectionScreen_t839734950::get_offset_of_mask_11(),
+	GameSelectionScreen_t839734950::get_offset_of_maskWidth_11(),
+	GameSelectionScreen_t839734950::get_offset_of_xOffset_12(),
 	MainScreen_t2442698661::get_offset_of_playBtn_4(),
 	MainScreen_t2442698661::get_offset_of_network_5(),
 	MainScreen_t2442698661::get_offset_of__signingStatus_6(),
@@ -11596,10 +11600,11 @@ extern const int32_t g_FieldOffsetTable[9511] =
 	GameObjectRef_t4121474274::get_offset_of_network_4(),
 	GameObjectRef_t4121474274::get_offset_of_apiHandler_5(),
 	GameObjectRef_t4121474274::get_offset_of_popupManager_6(),
-	GameObjectRef_t4121474274::get_offset_of_sceneTransitionManager_7(),
-	GameObjectRef_t4121474274::get_offset_of_gameWinDialog_8(),
-	GameObjectRef_t4121474274::get_offset_of_gameFailDialog_9(),
-	GameObjectRef_t4121474274::get_offset_of_postMethod_10(),
+	GameObjectRef_t4121474274::get_offset_of_hud_7(),
+	GameObjectRef_t4121474274::get_offset_of_sceneTransitionManager_8(),
+	GameObjectRef_t4121474274::get_offset_of_gameWinDialog_9(),
+	GameObjectRef_t4121474274::get_offset_of_gameFailDialog_10(),
+	GameObjectRef_t4121474274::get_offset_of_postMethod_11(),
 	GrayColorToggle_t580454932::get_offset_of__img_2(),
 	InGameInfoText_t36852466::get_offset_of_text_3(),
 	InGameInfoText_t36852466::get_offset_of__removeCoroutine_4(),
@@ -11617,7 +11622,7 @@ extern const int32_t g_FieldOffsetTable[9511] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2391] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2394] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -13031,6 +13036,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2391] =
 	sizeof (UnhandledExceptionHandler_t991098059), -1, 0, 0,
 	sizeof (GameCenterPlatform_t899915837), -1, sizeof(GameCenterPlatform_t899915837_StaticFields), 0,
 	sizeof (GcLeaderboard_t3894999172), -1, 0, 0,
+	sizeof (MeshFilter_t4177078322), -1, 0, 0,
 	sizeof (Mesh_t1525280346), -1, 0, 0,
 	sizeof (Renderer_t1092684080), -1, 0, 0,
 	sizeof (Screen_t3994030297), -1, 0, 0,
@@ -13140,6 +13146,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2391] =
 	sizeof (ContactPoint_t2951122365)+ sizeof (Il2CppObject), sizeof(ContactPoint_t2951122365_marshaled_pinvoke), 0, 0,
 	sizeof (Rigidbody_t1972007546), -1, 0, 0,
 	sizeof (Collider_t955670625), -1, 0, 0,
+	sizeof (MeshCollider_t1080724846), -1, 0, 0,
 	sizeof (RaycastHit_t46221527)+ sizeof (Il2CppObject), -1, 0, 0,
 	sizeof (CharacterController_t2029520850), -1, 0, 0,
 	sizeof (Physics2D_t2930244358), -1, sizeof(Physics2D_t2930244358_StaticFields), 0,
@@ -13922,6 +13929,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[2391] =
 	0, 0, 0, 0,
 	0, 0, 0, 0,
 	sizeof (ValidationUtils_t272309903), -1, 0, 0,
+	sizeof (ReverseNormals_t4264251210), -1, 0, 0,
 	sizeof (CardConstants_t1869142015), -1, sizeof(CardConstants_t1869142015_StaticFields), 0,
 	sizeof (GameConstants_t893838685), -1, sizeof(GameConstants_t893838685_StaticFields), 0,
 	sizeof (NetworkConstants_t2185309921), -1, sizeof(NetworkConstants_t2185309921_StaticFields), 0,

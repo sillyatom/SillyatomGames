@@ -13,6 +13,10 @@
 #include <limits>
 #include <assert.h>
 
+// UnityEngine.SocialPlatforms.Impl.Achievement
+struct Achievement_t581285621;
+// UnityEngine.SocialPlatforms.Impl.AchievementDescription
+struct AchievementDescription_t3784099155;
 // UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard
 struct GcLeaderboard_t3894999172;
 // UnityEngine.SocialPlatforms.Impl.Leaderboard
@@ -29,10 +33,6 @@ struct Score_t1540476504;
 struct UserProfile_t2517340964;
 // UnityEngine.SocialPlatforms.Impl.UserProfile[]
 struct UserProfileU5BU5D_t1345038285;
-// UnityEngine.SocialPlatforms.Impl.Achievement
-struct Achievement_t581285621;
-// UnityEngine.SocialPlatforms.Impl.AchievementDescription
-struct AchievementDescription_t3784099155;
 // UnityEngine.Texture2D
 struct Texture2D_t2509538522;
 // UnityEngine.SocialPlatforms.IScore
@@ -144,39 +144,43 @@ struct TypeInferenceRuleAttribute_t471424957;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter1317012096.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter1317012096MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achiev581285621.h"
+#include "mscorlib_System_DateTime339033936MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achiev581285621MethodDeclarations.h"
+#include "mscorlib_System_DateTime339033936.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Double534516614.h"
+#include "mscorlib_System_Int322847414787.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter1714018390.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter1714018390MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achie3784099155.h"
+#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achie3784099155MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Texture2D2509538522.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter3894999172.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter3894999172MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Leade1422561091.h"
-#include "mscorlib_System_Void2779279689.h"
 #include "mscorlib_System_Object837106420MethodDeclarations.h"
 #include "mscorlib_System_Object837106420.h"
-#include "mscorlib_System_Boolean211005341.h"
 #include "UnityEngine_ArrayTypes.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter2223678307.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter2223678307MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Leade1422561091MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Score1540476504.h"
-#include "mscorlib_System_Int322847414787.h"
 #include "mscorlib_System_UInt32985925326.h"
-#include "mscorlib_System_String968488902.h"
 #include "mscorlib_ArrayTypes.h"
-#include "mscorlib_System_DateTime339033936MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Score1540476504MethodDeclarations.h"
-#include "mscorlib_System_DateTime339033936.h"
-#include "mscorlib_System_Double534516614.h"
 #include "mscorlib_System_Int642847414882.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter2788044591.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter2788044591MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_UserP2517340964.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_UserP2517340964MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Texture2D2509538522.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_UserState3192499994.h"
 #include "UnityEngine_UnityEngine_Debug1588791936MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achiev581285621.h"
-#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achiev581285621MethodDeclarations.h"
 #include "mscorlib_System_String968488902MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achie3784099155.h"
-#include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Achie3784099155MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Range938821841MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Range938821841.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_UserScope3192006877.h"
@@ -393,6 +397,242 @@ struct TypeInferenceRuleAttribute_t471424957;
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.SocialPlatforms.Impl.Achievement UnityEngine.SocialPlatforms.GameCenter.GcAchievementData::ToAchievement()
+extern TypeInfo* Achievement_t581285621_il2cpp_TypeInfo_var;
+extern const uint32_t GcAchievementData_ToAchievement_m3239514930_MetadataUsageId;
+extern "C"  Achievement_t581285621 * GcAchievementData_ToAchievement_m3239514930 (GcAchievementData_t1317012096 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GcAchievementData_ToAchievement_m3239514930_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	DateTime_t339033936  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	double G_B2_0 = 0.0;
+	String_t* G_B2_1 = NULL;
+	double G_B1_0 = 0.0;
+	String_t* G_B1_1 = NULL;
+	int32_t G_B3_0 = 0;
+	double G_B3_1 = 0.0;
+	String_t* G_B3_2 = NULL;
+	int32_t G_B5_0 = 0;
+	double G_B5_1 = 0.0;
+	String_t* G_B5_2 = NULL;
+	int32_t G_B4_0 = 0;
+	double G_B4_1 = 0.0;
+	String_t* G_B4_2 = NULL;
+	int32_t G_B6_0 = 0;
+	int32_t G_B6_1 = 0;
+	double G_B6_2 = 0.0;
+	String_t* G_B6_3 = NULL;
+	{
+		String_t* L_0 = __this->get_m_Identifier_0();
+		double L_1 = __this->get_m_PercentCompleted_1();
+		int32_t L_2 = __this->get_m_Completed_2();
+		G_B1_0 = L_1;
+		G_B1_1 = L_0;
+		if (L_2)
+		{
+			G_B2_0 = L_1;
+			G_B2_1 = L_0;
+			goto IL_001d;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B1_0;
+		G_B3_2 = G_B1_1;
+		goto IL_001e;
+	}
+
+IL_001d:
+	{
+		G_B3_0 = 1;
+		G_B3_1 = G_B2_0;
+		G_B3_2 = G_B2_1;
+	}
+
+IL_001e:
+	{
+		int32_t L_3 = __this->get_m_Hidden_3();
+		G_B4_0 = G_B3_0;
+		G_B4_1 = G_B3_1;
+		G_B4_2 = G_B3_2;
+		if (L_3)
+		{
+			G_B5_0 = G_B3_0;
+			G_B5_1 = G_B3_1;
+			G_B5_2 = G_B3_2;
+			goto IL_002f;
+		}
+	}
+	{
+		G_B6_0 = 0;
+		G_B6_1 = G_B4_0;
+		G_B6_2 = G_B4_1;
+		G_B6_3 = G_B4_2;
+		goto IL_0030;
+	}
+
+IL_002f:
+	{
+		G_B6_0 = 1;
+		G_B6_1 = G_B5_0;
+		G_B6_2 = G_B5_1;
+		G_B6_3 = G_B5_2;
+	}
+
+IL_0030:
+	{
+		DateTime__ctor_m1594789867((&V_0), ((int32_t)1970), 1, 1, 0, 0, 0, 0, /*hidden argument*/NULL);
+		int32_t L_4 = __this->get_m_LastReportedDate_4();
+		DateTime_t339033936  L_5 = DateTime_AddSeconds_m2515640243((&V_0), (((double)((double)L_4))), /*hidden argument*/NULL);
+		Achievement_t581285621 * L_6 = (Achievement_t581285621 *)il2cpp_codegen_object_new(Achievement_t581285621_il2cpp_TypeInfo_var);
+		Achievement__ctor_m377036415(L_6, G_B6_3, G_B6_2, (bool)G_B6_1, (bool)G_B6_0, L_5, /*hidden argument*/NULL);
+		return L_6;
+	}
+}
+// Conversion methods for marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
+extern "C" void GcAchievementData_t1317012096_marshal_pinvoke(const GcAchievementData_t1317012096& unmarshaled, GcAchievementData_t1317012096_marshaled_pinvoke& marshaled)
+{
+	marshaled.___m_Identifier_0 = il2cpp_codegen_marshal_string(unmarshaled.get_m_Identifier_0());
+	marshaled.___m_PercentCompleted_1 = unmarshaled.get_m_PercentCompleted_1();
+	marshaled.___m_Completed_2 = unmarshaled.get_m_Completed_2();
+	marshaled.___m_Hidden_3 = unmarshaled.get_m_Hidden_3();
+	marshaled.___m_LastReportedDate_4 = unmarshaled.get_m_LastReportedDate_4();
+}
+extern "C" void GcAchievementData_t1317012096_marshal_pinvoke_back(const GcAchievementData_t1317012096_marshaled_pinvoke& marshaled, GcAchievementData_t1317012096& unmarshaled)
+{
+	unmarshaled.set_m_Identifier_0(il2cpp_codegen_marshal_string_result(marshaled.___m_Identifier_0));
+	double unmarshaled_m_PercentCompleted_temp = 0.0;
+	unmarshaled_m_PercentCompleted_temp = marshaled.___m_PercentCompleted_1;
+	unmarshaled.set_m_PercentCompleted_1(unmarshaled_m_PercentCompleted_temp);
+	int32_t unmarshaled_m_Completed_temp = 0;
+	unmarshaled_m_Completed_temp = marshaled.___m_Completed_2;
+	unmarshaled.set_m_Completed_2(unmarshaled_m_Completed_temp);
+	int32_t unmarshaled_m_Hidden_temp = 0;
+	unmarshaled_m_Hidden_temp = marshaled.___m_Hidden_3;
+	unmarshaled.set_m_Hidden_3(unmarshaled_m_Hidden_temp);
+	int32_t unmarshaled_m_LastReportedDate_temp = 0;
+	unmarshaled_m_LastReportedDate_temp = marshaled.___m_LastReportedDate_4;
+	unmarshaled.set_m_LastReportedDate_4(unmarshaled_m_LastReportedDate_temp);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
+extern "C" void GcAchievementData_t1317012096_marshal_pinvoke_cleanup(GcAchievementData_t1317012096_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_marshal_free(marshaled.___m_Identifier_0);
+	marshaled.___m_Identifier_0 = NULL;
+}
+// Conversion methods for marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
+extern "C" void GcAchievementData_t1317012096_marshal_com(const GcAchievementData_t1317012096& unmarshaled, GcAchievementData_t1317012096_marshaled_com& marshaled)
+{
+	marshaled.___m_Identifier_0 = il2cpp_codegen_marshal_bstring(unmarshaled.get_m_Identifier_0());
+	marshaled.___m_PercentCompleted_1 = unmarshaled.get_m_PercentCompleted_1();
+	marshaled.___m_Completed_2 = unmarshaled.get_m_Completed_2();
+	marshaled.___m_Hidden_3 = unmarshaled.get_m_Hidden_3();
+	marshaled.___m_LastReportedDate_4 = unmarshaled.get_m_LastReportedDate_4();
+}
+extern "C" void GcAchievementData_t1317012096_marshal_com_back(const GcAchievementData_t1317012096_marshaled_com& marshaled, GcAchievementData_t1317012096& unmarshaled)
+{
+	unmarshaled.set_m_Identifier_0(il2cpp_codegen_marshal_bstring_result(marshaled.___m_Identifier_0));
+	double unmarshaled_m_PercentCompleted_temp = 0.0;
+	unmarshaled_m_PercentCompleted_temp = marshaled.___m_PercentCompleted_1;
+	unmarshaled.set_m_PercentCompleted_1(unmarshaled_m_PercentCompleted_temp);
+	int32_t unmarshaled_m_Completed_temp = 0;
+	unmarshaled_m_Completed_temp = marshaled.___m_Completed_2;
+	unmarshaled.set_m_Completed_2(unmarshaled_m_Completed_temp);
+	int32_t unmarshaled_m_Hidden_temp = 0;
+	unmarshaled_m_Hidden_temp = marshaled.___m_Hidden_3;
+	unmarshaled.set_m_Hidden_3(unmarshaled_m_Hidden_temp);
+	int32_t unmarshaled_m_LastReportedDate_temp = 0;
+	unmarshaled_m_LastReportedDate_temp = marshaled.___m_LastReportedDate_4;
+	unmarshaled.set_m_LastReportedDate_4(unmarshaled_m_LastReportedDate_temp);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
+extern "C" void GcAchievementData_t1317012096_marshal_com_cleanup(GcAchievementData_t1317012096_marshaled_com& marshaled)
+{
+	il2cpp_codegen_marshal_free_bstring(marshaled.___m_Identifier_0);
+	marshaled.___m_Identifier_0 = NULL;
+}
+// UnityEngine.SocialPlatforms.Impl.AchievementDescription UnityEngine.SocialPlatforms.GameCenter.GcAchievementDescriptionData::ToAchievementDescription()
+extern TypeInfo* AchievementDescription_t3784099155_il2cpp_TypeInfo_var;
+extern const uint32_t GcAchievementDescriptionData_ToAchievementDescription_m3125480712_MetadataUsageId;
+extern "C"  AchievementDescription_t3784099155 * GcAchievementDescriptionData_ToAchievementDescription_m3125480712 (GcAchievementDescriptionData_t1714018390 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GcAchievementDescriptionData_ToAchievementDescription_m3125480712_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	String_t* G_B2_0 = NULL;
+	String_t* G_B2_1 = NULL;
+	Texture2D_t2509538522 * G_B2_2 = NULL;
+	String_t* G_B2_3 = NULL;
+	String_t* G_B2_4 = NULL;
+	String_t* G_B1_0 = NULL;
+	String_t* G_B1_1 = NULL;
+	Texture2D_t2509538522 * G_B1_2 = NULL;
+	String_t* G_B1_3 = NULL;
+	String_t* G_B1_4 = NULL;
+	int32_t G_B3_0 = 0;
+	String_t* G_B3_1 = NULL;
+	String_t* G_B3_2 = NULL;
+	Texture2D_t2509538522 * G_B3_3 = NULL;
+	String_t* G_B3_4 = NULL;
+	String_t* G_B3_5 = NULL;
+	{
+		String_t* L_0 = __this->get_m_Identifier_0();
+		String_t* L_1 = __this->get_m_Title_1();
+		Texture2D_t2509538522 * L_2 = __this->get_m_Image_2();
+		String_t* L_3 = __this->get_m_AchievedDescription_3();
+		String_t* L_4 = __this->get_m_UnachievedDescription_4();
+		int32_t L_5 = __this->get_m_Hidden_5();
+		G_B1_0 = L_4;
+		G_B1_1 = L_3;
+		G_B1_2 = L_2;
+		G_B1_3 = L_1;
+		G_B1_4 = L_0;
+		if (L_5)
+		{
+			G_B2_0 = L_4;
+			G_B2_1 = L_3;
+			G_B2_2 = L_2;
+			G_B2_3 = L_1;
+			G_B2_4 = L_0;
+			goto IL_002f;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B1_0;
+		G_B3_2 = G_B1_1;
+		G_B3_3 = G_B1_2;
+		G_B3_4 = G_B1_3;
+		G_B3_5 = G_B1_4;
+		goto IL_0030;
+	}
+
+IL_002f:
+	{
+		G_B3_0 = 1;
+		G_B3_1 = G_B2_0;
+		G_B3_2 = G_B2_1;
+		G_B3_3 = G_B2_2;
+		G_B3_4 = G_B2_3;
+		G_B3_5 = G_B2_4;
+	}
+
+IL_0030:
+	{
+		int32_t L_6 = __this->get_m_Points_6();
+		AchievementDescription_t3784099155 * L_7 = (AchievementDescription_t3784099155 *)il2cpp_codegen_object_new(AchievementDescription_t3784099155_il2cpp_TypeInfo_var);
+		AchievementDescription__ctor_m3032164909(L_7, G_B3_5, G_B3_4, G_B3_3, G_B3_2, G_B3_1, (bool)G_B3_0, L_6, /*hidden argument*/NULL);
+		return L_7;
+	}
+}
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::.ctor(UnityEngine.SocialPlatforms.Impl.Leaderboard)
 extern "C"  void GcLeaderboard__ctor_m4042810199 (GcLeaderboard_t3894999172 * __this, Leaderboard_t1422561091 * ___board, const MethodInfo* method)
 {

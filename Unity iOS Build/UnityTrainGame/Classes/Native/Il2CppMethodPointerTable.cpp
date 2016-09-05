@@ -10188,6 +10188,7 @@ extern "C" void Mesh_get_vertices_m3685486174 ();
 extern "C" void Mesh_SetVertices_m701834806 ();
 extern "C" void Mesh_SetVerticesInternal_m1274639230 ();
 extern "C" void Mesh_get_normals_m3396909641 ();
+extern "C" void Mesh_set_normals_m3763698282 ();
 extern "C" void Mesh_SetNormals_m2039144779 ();
 extern "C" void Mesh_SetNormalsInternal_m1710845385 ();
 extern "C" void Mesh_get_tangents_m3235865682 ();
@@ -10202,9 +10203,14 @@ extern "C" void Mesh_get_colors32_m192356802 ();
 extern "C" void Mesh_SetColors_m3313707935 ();
 extern "C" void Mesh_SetColors32Internal_m1830241000 ();
 extern "C" void Mesh_RecalculateBounds_m3754336742 ();
+extern "C" void Mesh_GetTriangles_m3189498632 ();
+extern "C" void Mesh_SetTriangles_m636210907 ();
 extern "C" void Mesh_SetTriangles_m456382467 ();
 extern "C" void Mesh_SetTrianglesInternal_m2955775213 ();
 extern "C" void Mesh_GetIndices_m637494532 ();
+extern "C" void Mesh_get_subMeshCount_m4159827535 ();
+extern "C" void MeshCollider_set_sharedMesh_m3062685539 ();
+extern "C" void MeshFilter_get_mesh_m484001117 ();
 extern "C" void MonoBehaviour__ctor_m2022291967 ();
 extern "C" void MonoBehaviour_Internal_CancelInvokeAll_m972795186 ();
 extern "C" void MonoBehaviour_Internal_IsInvokingAll_m3154030143 ();
@@ -14027,6 +14033,7 @@ extern "C" void MainScreen_Init_m3193217278 ();
 extern "C" void MainScreen_AuthGC_m3239920690 ();
 extern "C" void MainScreen_StartSignInProcess_m1885858753 ();
 extern "C" void MainScreen_OnInGameEvent_m349397207 ();
+extern "C" void MainScreen_OnSetToView_m2205045847 ();
 extern "C" void MainScreen_OnPlay_m3220741537 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC__ctor_m2260555800 ();
 extern "C" void U3CStartSignInProcessU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1735963066 ();
@@ -14082,6 +14089,7 @@ extern "C" void MultiplayerMainGame_OnRoundEnd_m3044907722 ();
 extern "C" void MultiplayerMainGame_OnRoundResult_m1984846874 ();
 extern "C" void MultiplayerMainGame_EndGame_m2560472305 ();
 extern "C" void MultiplayerMainGame_CheckGameEnd_m2426142783 ();
+extern "C" void MultiplayerMainGame_OnSetToView_m1169890855 ();
 extern "C" void MultiplayerMainGame_CleanPlayers_m1407908871 ();
 extern "C" void U3COnShiftCompleteU3Ec__IteratorD__ctor_m1682827524 ();
 extern "C" void U3COnShiftCompleteU3Ec__IteratorD_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3827810318 ();
@@ -16174,6 +16182,8 @@ extern "C" void ResultVO_set_isSweep_m635921055 ();
 extern "C" void ResultVO_get_sweepCount_m3537692409 ();
 extern "C" void ResultVO_set_sweepCount_m433594288 ();
 extern "C" void ResultVO_GetCardWithValueType_m3773938007 ();
+extern "C" void ReverseNormals__ctor_m1869484177 ();
+extern "C" void ReverseNormals_Start_m816621969 ();
 extern "C" void RoundHandler__ctor_m1935710239 ();
 extern "C" void RoundHandler__cctor_m3690346350 ();
 extern "C" void RoundHandler_get_OnRoundCompleteCallback_m3342306211 ();
@@ -16241,6 +16251,8 @@ extern "C" void SceneMonoBehaviour_OnInGameEvent_m3756406208 ();
 extern "C" void SceneTransitionManager__ctor_m2716382351 ();
 extern "C" void SceneTransitionManager_Init_m3225750501 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3383367968 ();
+extern "C" void SceneTransitionManager_ShowMainScreen_m1058931639 ();
+extern "C" void SceneTransitionManager_ShowMatchSelectionScreen_m2443140101 ();
 extern "C" void SceneTransitionManager_ShowGameSelectionScreen_m2506809590 ();
 extern "C" void SceneTransitionManager_SetActiveScreen_m3079263841 ();
 extern "C" void SceneTransitionManager_RearrangeScreens_m1562589827 ();
@@ -16250,6 +16262,7 @@ extern "C" void SharedMainGame_DisableHud_m3661054312 ();
 extern "C" void SharedMainGame_EnableHud_m1748585021 ();
 extern "C" void SinglePlayerMainGame__ctor_m725906247 ();
 extern "C" void SinglePlayerMainGame_Init_m1637520941 ();
+extern "C" void SinglePlayerMainGame_OnSetToView_m718404680 ();
 extern "C" void SinglePlayerMainGame_InitGame_m2164794303 ();
 extern "C" void SinglePlayerMainGame_UpdatePlayers_m18221774 ();
 extern "C" void SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371 ();
@@ -16349,7 +16362,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16338] = 
+extern const methodPointerType g_MethodPointers[16351] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -26528,6 +26541,7 @@ extern const methodPointerType g_MethodPointers[16338] =
 	Mesh_SetVertices_m701834806,
 	Mesh_SetVerticesInternal_m1274639230,
 	Mesh_get_normals_m3396909641,
+	Mesh_set_normals_m3763698282,
 	Mesh_SetNormals_m2039144779,
 	Mesh_SetNormalsInternal_m1710845385,
 	Mesh_get_tangents_m3235865682,
@@ -26542,9 +26556,14 @@ extern const methodPointerType g_MethodPointers[16338] =
 	Mesh_SetColors_m3313707935,
 	Mesh_SetColors32Internal_m1830241000,
 	Mesh_RecalculateBounds_m3754336742,
+	Mesh_GetTriangles_m3189498632,
+	Mesh_SetTriangles_m636210907,
 	Mesh_SetTriangles_m456382467,
 	Mesh_SetTrianglesInternal_m2955775213,
 	Mesh_GetIndices_m637494532,
+	Mesh_get_subMeshCount_m4159827535,
+	MeshCollider_set_sharedMesh_m3062685539,
+	MeshFilter_get_mesh_m484001117,
 	MonoBehaviour__ctor_m2022291967,
 	MonoBehaviour_Internal_CancelInvokeAll_m972795186,
 	MonoBehaviour_Internal_IsInvokingAll_m3154030143,
@@ -30367,6 +30386,7 @@ extern const methodPointerType g_MethodPointers[16338] =
 	MainScreen_AuthGC_m3239920690,
 	MainScreen_StartSignInProcess_m1885858753,
 	MainScreen_OnInGameEvent_m349397207,
+	MainScreen_OnSetToView_m2205045847,
 	MainScreen_OnPlay_m3220741537,
 	U3CStartSignInProcessU3Ec__IteratorC__ctor_m2260555800,
 	U3CStartSignInProcessU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1735963066,
@@ -30422,6 +30442,7 @@ extern const methodPointerType g_MethodPointers[16338] =
 	MultiplayerMainGame_OnRoundResult_m1984846874,
 	MultiplayerMainGame_EndGame_m2560472305,
 	MultiplayerMainGame_CheckGameEnd_m2426142783,
+	MultiplayerMainGame_OnSetToView_m1169890855,
 	MultiplayerMainGame_CleanPlayers_m1407908871,
 	U3COnShiftCompleteU3Ec__IteratorD__ctor_m1682827524,
 	U3COnShiftCompleteU3Ec__IteratorD_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3827810318,
@@ -32514,6 +32535,8 @@ extern const methodPointerType g_MethodPointers[16338] =
 	ResultVO_get_sweepCount_m3537692409,
 	ResultVO_set_sweepCount_m433594288,
 	ResultVO_GetCardWithValueType_m3773938007,
+	ReverseNormals__ctor_m1869484177,
+	ReverseNormals_Start_m816621969,
 	RoundHandler__ctor_m1935710239,
 	RoundHandler__cctor_m3690346350,
 	RoundHandler_get_OnRoundCompleteCallback_m3342306211,
@@ -32581,6 +32604,8 @@ extern const methodPointerType g_MethodPointers[16338] =
 	SceneTransitionManager__ctor_m2716382351,
 	SceneTransitionManager_Init_m3225750501,
 	SceneTransitionManager_SetActiveScreen_m3383367968,
+	SceneTransitionManager_ShowMainScreen_m1058931639,
+	SceneTransitionManager_ShowMatchSelectionScreen_m2443140101,
 	SceneTransitionManager_ShowGameSelectionScreen_m2506809590,
 	SceneTransitionManager_SetActiveScreen_m3079263841,
 	SceneTransitionManager_RearrangeScreens_m1562589827,
@@ -32590,6 +32615,7 @@ extern const methodPointerType g_MethodPointers[16338] =
 	SharedMainGame_EnableHud_m1748585021,
 	SinglePlayerMainGame__ctor_m725906247,
 	SinglePlayerMainGame_Init_m1637520941,
+	SinglePlayerMainGame_OnSetToView_m718404680,
 	SinglePlayerMainGame_InitGame_m2164794303,
 	SinglePlayerMainGame_UpdatePlayers_m18221774,
 	SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371,

@@ -121,10 +121,14 @@ struct List_1_t27321461;
 struct Color32U5BU5D_t1677970742;
 // System.Collections.Generic.List`1<UnityEngine.Color32>
 struct List_1_t639075880;
-// System.Collections.Generic.List`1<System.Int32>
-struct List_1_t3644373756;
 // System.Int32[]
 struct Int32U5BU5D_t1809983122;
+// System.Collections.Generic.List`1<System.Int32>
+struct List_1_t3644373756;
+// UnityEngine.MeshCollider
+struct MeshCollider_t1080724846;
+// UnityEngine.MeshFilter
+struct MeshFilter_t4177078322;
 // UnityEngine.MonoBehaviour
 struct MonoBehaviour_t3012272455;
 // UnityEngine.Coroutine
@@ -217,10 +221,6 @@ struct Action_1_t2465425429;
 struct UserProfileU5BU5D_t1345038285;
 // UnityEngine.SocialPlatforms.IAchievement
 struct IAchievement_t813719258;
-// UnityEngine.SocialPlatforms.Impl.Achievement
-struct Achievement_t581285621;
-// UnityEngine.SocialPlatforms.Impl.AchievementDescription
-struct AchievementDescription_t3784099155;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
@@ -401,6 +401,10 @@ struct AchievementDescription_t3784099155;
 #include "UnityEngine_UnityEngine_Color324137084207.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen639075880.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen3644373756.h"
+#include "UnityEngine_UnityEngine_MeshCollider1080724846.h"
+#include "UnityEngine_UnityEngine_MeshCollider1080724846MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_MeshFilter4177078322.h"
+#include "UnityEngine_UnityEngine_MeshFilter4177078322MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Behaviour3120504042MethodDeclarations.h"
@@ -9167,6 +9171,15 @@ extern "C"  Vector3U5BU5D_t3227571696* Mesh_get_normals_m3396909641 (Mesh_t15252
 	_il2cpp_icall_func = (Mesh_get_normals_m3396909641_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::get_normals()");
 	return _il2cpp_icall_func(__this);
 }
+// System.Void UnityEngine.Mesh::set_normals(UnityEngine.Vector3[])
+extern "C"  void Mesh_set_normals_m3763698282 (Mesh_t1525280346 * __this, Vector3U5BU5D_t3227571696* ___value, const MethodInfo* method)
+{
+	typedef void (*Mesh_set_normals_m3763698282_ftn) (Mesh_t1525280346 *, Vector3U5BU5D_t3227571696*);
+	static Mesh_set_normals_m3763698282_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Mesh_set_normals_m3763698282_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::set_normals(UnityEngine.Vector3[])");
+	_il2cpp_icall_func(__this, ___value);
+}
 // System.Void UnityEngine.Mesh::SetNormals(System.Collections.Generic.List`1<UnityEngine.Vector3>)
 extern "C"  void Mesh_SetNormals_m2039144779 (Mesh_t1525280346 * __this, List_1_t27321462 * ___inNormals, const MethodInfo* method)
 {
@@ -9298,6 +9311,24 @@ extern "C"  void Mesh_RecalculateBounds_m3754336742 (Mesh_t1525280346 * __this, 
 	_il2cpp_icall_func = (Mesh_RecalculateBounds_m3754336742_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::RecalculateBounds()");
 	_il2cpp_icall_func(__this);
 }
+// System.Int32[] UnityEngine.Mesh::GetTriangles(System.Int32)
+extern "C"  Int32U5BU5D_t1809983122* Mesh_GetTriangles_m3189498632 (Mesh_t1525280346 * __this, int32_t ___submesh, const MethodInfo* method)
+{
+	typedef Int32U5BU5D_t1809983122* (*Mesh_GetTriangles_m3189498632_ftn) (Mesh_t1525280346 *, int32_t);
+	static Mesh_GetTriangles_m3189498632_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Mesh_GetTriangles_m3189498632_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::GetTriangles(System.Int32)");
+	return _il2cpp_icall_func(__this, ___submesh);
+}
+// System.Void UnityEngine.Mesh::SetTriangles(System.Int32[],System.Int32)
+extern "C"  void Mesh_SetTriangles_m636210907 (Mesh_t1525280346 * __this, Int32U5BU5D_t1809983122* ___triangles, int32_t ___submesh, const MethodInfo* method)
+{
+	typedef void (*Mesh_SetTriangles_m636210907_ftn) (Mesh_t1525280346 *, Int32U5BU5D_t1809983122*, int32_t);
+	static Mesh_SetTriangles_m636210907_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Mesh_SetTriangles_m636210907_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::SetTriangles(System.Int32[],System.Int32)");
+	_il2cpp_icall_func(__this, ___triangles, ___submesh);
+}
 // System.Void UnityEngine.Mesh::SetTriangles(System.Collections.Generic.List`1<System.Int32>,System.Int32)
 extern "C"  void Mesh_SetTriangles_m456382467 (Mesh_t1525280346 * __this, List_1_t3644373756 * ___inTriangles, int32_t ___submesh, const MethodInfo* method)
 {
@@ -9325,6 +9356,33 @@ extern "C"  Int32U5BU5D_t1809983122* Mesh_GetIndices_m637494532 (Mesh_t152528034
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Mesh_GetIndices_m637494532_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::GetIndices(System.Int32)");
 	return _il2cpp_icall_func(__this, ___submesh);
+}
+// System.Int32 UnityEngine.Mesh::get_subMeshCount()
+extern "C"  int32_t Mesh_get_subMeshCount_m4159827535 (Mesh_t1525280346 * __this, const MethodInfo* method)
+{
+	typedef int32_t (*Mesh_get_subMeshCount_m4159827535_ftn) (Mesh_t1525280346 *);
+	static Mesh_get_subMeshCount_m4159827535_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Mesh_get_subMeshCount_m4159827535_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::get_subMeshCount()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)
+extern "C"  void MeshCollider_set_sharedMesh_m3062685539 (MeshCollider_t1080724846 * __this, Mesh_t1525280346 * ___value, const MethodInfo* method)
+{
+	typedef void (*MeshCollider_set_sharedMesh_m3062685539_ftn) (MeshCollider_t1080724846 *, Mesh_t1525280346 *);
+	static MeshCollider_set_sharedMesh_m3062685539_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_set_sharedMesh_m3062685539_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)");
+	_il2cpp_icall_func(__this, ___value);
+}
+// UnityEngine.Mesh UnityEngine.MeshFilter::get_mesh()
+extern "C"  Mesh_t1525280346 * MeshFilter_get_mesh_m484001117 (MeshFilter_t4177078322 * __this, const MethodInfo* method)
+{
+	typedef Mesh_t1525280346 * (*MeshFilter_get_mesh_m484001117_ftn) (MeshFilter_t4177078322 *);
+	static MeshFilter_get_mesh_m484001117_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshFilter_get_mesh_m484001117_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshFilter::get_mesh()");
+	return _il2cpp_icall_func(__this);
 }
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 extern "C"  void MonoBehaviour__ctor_m2022291967 (MonoBehaviour_t3012272455 * __this, const MethodInfo* method)
@@ -17296,242 +17354,6 @@ extern "C"  void GameCenterPlatform_TriggerResetAchievementCallback_m1285257317 
 IL_0015:
 	{
 		return;
-	}
-}
-// UnityEngine.SocialPlatforms.Impl.Achievement UnityEngine.SocialPlatforms.GameCenter.GcAchievementData::ToAchievement()
-extern TypeInfo* Achievement_t581285621_il2cpp_TypeInfo_var;
-extern const uint32_t GcAchievementData_ToAchievement_m3239514930_MetadataUsageId;
-extern "C"  Achievement_t581285621 * GcAchievementData_ToAchievement_m3239514930 (GcAchievementData_t1317012096 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (GcAchievementData_ToAchievement_m3239514930_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	DateTime_t339033936  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	double G_B2_0 = 0.0;
-	String_t* G_B2_1 = NULL;
-	double G_B1_0 = 0.0;
-	String_t* G_B1_1 = NULL;
-	int32_t G_B3_0 = 0;
-	double G_B3_1 = 0.0;
-	String_t* G_B3_2 = NULL;
-	int32_t G_B5_0 = 0;
-	double G_B5_1 = 0.0;
-	String_t* G_B5_2 = NULL;
-	int32_t G_B4_0 = 0;
-	double G_B4_1 = 0.0;
-	String_t* G_B4_2 = NULL;
-	int32_t G_B6_0 = 0;
-	int32_t G_B6_1 = 0;
-	double G_B6_2 = 0.0;
-	String_t* G_B6_3 = NULL;
-	{
-		String_t* L_0 = __this->get_m_Identifier_0();
-		double L_1 = __this->get_m_PercentCompleted_1();
-		int32_t L_2 = __this->get_m_Completed_2();
-		G_B1_0 = L_1;
-		G_B1_1 = L_0;
-		if (L_2)
-		{
-			G_B2_0 = L_1;
-			G_B2_1 = L_0;
-			goto IL_001d;
-		}
-	}
-	{
-		G_B3_0 = 0;
-		G_B3_1 = G_B1_0;
-		G_B3_2 = G_B1_1;
-		goto IL_001e;
-	}
-
-IL_001d:
-	{
-		G_B3_0 = 1;
-		G_B3_1 = G_B2_0;
-		G_B3_2 = G_B2_1;
-	}
-
-IL_001e:
-	{
-		int32_t L_3 = __this->get_m_Hidden_3();
-		G_B4_0 = G_B3_0;
-		G_B4_1 = G_B3_1;
-		G_B4_2 = G_B3_2;
-		if (L_3)
-		{
-			G_B5_0 = G_B3_0;
-			G_B5_1 = G_B3_1;
-			G_B5_2 = G_B3_2;
-			goto IL_002f;
-		}
-	}
-	{
-		G_B6_0 = 0;
-		G_B6_1 = G_B4_0;
-		G_B6_2 = G_B4_1;
-		G_B6_3 = G_B4_2;
-		goto IL_0030;
-	}
-
-IL_002f:
-	{
-		G_B6_0 = 1;
-		G_B6_1 = G_B5_0;
-		G_B6_2 = G_B5_1;
-		G_B6_3 = G_B5_2;
-	}
-
-IL_0030:
-	{
-		DateTime__ctor_m1594789867((&V_0), ((int32_t)1970), 1, 1, 0, 0, 0, 0, /*hidden argument*/NULL);
-		int32_t L_4 = __this->get_m_LastReportedDate_4();
-		DateTime_t339033936  L_5 = DateTime_AddSeconds_m2515640243((&V_0), (((double)((double)L_4))), /*hidden argument*/NULL);
-		Achievement_t581285621 * L_6 = (Achievement_t581285621 *)il2cpp_codegen_object_new(Achievement_t581285621_il2cpp_TypeInfo_var);
-		Achievement__ctor_m377036415(L_6, G_B6_3, G_B6_2, (bool)G_B6_1, (bool)G_B6_0, L_5, /*hidden argument*/NULL);
-		return L_6;
-	}
-}
-// Conversion methods for marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
-extern "C" void GcAchievementData_t1317012096_marshal_pinvoke(const GcAchievementData_t1317012096& unmarshaled, GcAchievementData_t1317012096_marshaled_pinvoke& marshaled)
-{
-	marshaled.___m_Identifier_0 = il2cpp_codegen_marshal_string(unmarshaled.get_m_Identifier_0());
-	marshaled.___m_PercentCompleted_1 = unmarshaled.get_m_PercentCompleted_1();
-	marshaled.___m_Completed_2 = unmarshaled.get_m_Completed_2();
-	marshaled.___m_Hidden_3 = unmarshaled.get_m_Hidden_3();
-	marshaled.___m_LastReportedDate_4 = unmarshaled.get_m_LastReportedDate_4();
-}
-extern "C" void GcAchievementData_t1317012096_marshal_pinvoke_back(const GcAchievementData_t1317012096_marshaled_pinvoke& marshaled, GcAchievementData_t1317012096& unmarshaled)
-{
-	unmarshaled.set_m_Identifier_0(il2cpp_codegen_marshal_string_result(marshaled.___m_Identifier_0));
-	double unmarshaled_m_PercentCompleted_temp = 0.0;
-	unmarshaled_m_PercentCompleted_temp = marshaled.___m_PercentCompleted_1;
-	unmarshaled.set_m_PercentCompleted_1(unmarshaled_m_PercentCompleted_temp);
-	int32_t unmarshaled_m_Completed_temp = 0;
-	unmarshaled_m_Completed_temp = marshaled.___m_Completed_2;
-	unmarshaled.set_m_Completed_2(unmarshaled_m_Completed_temp);
-	int32_t unmarshaled_m_Hidden_temp = 0;
-	unmarshaled_m_Hidden_temp = marshaled.___m_Hidden_3;
-	unmarshaled.set_m_Hidden_3(unmarshaled_m_Hidden_temp);
-	int32_t unmarshaled_m_LastReportedDate_temp = 0;
-	unmarshaled_m_LastReportedDate_temp = marshaled.___m_LastReportedDate_4;
-	unmarshaled.set_m_LastReportedDate_4(unmarshaled_m_LastReportedDate_temp);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
-extern "C" void GcAchievementData_t1317012096_marshal_pinvoke_cleanup(GcAchievementData_t1317012096_marshaled_pinvoke& marshaled)
-{
-	il2cpp_codegen_marshal_free(marshaled.___m_Identifier_0);
-	marshaled.___m_Identifier_0 = NULL;
-}
-// Conversion methods for marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
-extern "C" void GcAchievementData_t1317012096_marshal_com(const GcAchievementData_t1317012096& unmarshaled, GcAchievementData_t1317012096_marshaled_com& marshaled)
-{
-	marshaled.___m_Identifier_0 = il2cpp_codegen_marshal_bstring(unmarshaled.get_m_Identifier_0());
-	marshaled.___m_PercentCompleted_1 = unmarshaled.get_m_PercentCompleted_1();
-	marshaled.___m_Completed_2 = unmarshaled.get_m_Completed_2();
-	marshaled.___m_Hidden_3 = unmarshaled.get_m_Hidden_3();
-	marshaled.___m_LastReportedDate_4 = unmarshaled.get_m_LastReportedDate_4();
-}
-extern "C" void GcAchievementData_t1317012096_marshal_com_back(const GcAchievementData_t1317012096_marshaled_com& marshaled, GcAchievementData_t1317012096& unmarshaled)
-{
-	unmarshaled.set_m_Identifier_0(il2cpp_codegen_marshal_bstring_result(marshaled.___m_Identifier_0));
-	double unmarshaled_m_PercentCompleted_temp = 0.0;
-	unmarshaled_m_PercentCompleted_temp = marshaled.___m_PercentCompleted_1;
-	unmarshaled.set_m_PercentCompleted_1(unmarshaled_m_PercentCompleted_temp);
-	int32_t unmarshaled_m_Completed_temp = 0;
-	unmarshaled_m_Completed_temp = marshaled.___m_Completed_2;
-	unmarshaled.set_m_Completed_2(unmarshaled_m_Completed_temp);
-	int32_t unmarshaled_m_Hidden_temp = 0;
-	unmarshaled_m_Hidden_temp = marshaled.___m_Hidden_3;
-	unmarshaled.set_m_Hidden_3(unmarshaled_m_Hidden_temp);
-	int32_t unmarshaled_m_LastReportedDate_temp = 0;
-	unmarshaled_m_LastReportedDate_temp = marshaled.___m_LastReportedDate_4;
-	unmarshaled.set_m_LastReportedDate_4(unmarshaled_m_LastReportedDate_temp);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
-extern "C" void GcAchievementData_t1317012096_marshal_com_cleanup(GcAchievementData_t1317012096_marshaled_com& marshaled)
-{
-	il2cpp_codegen_marshal_free_bstring(marshaled.___m_Identifier_0);
-	marshaled.___m_Identifier_0 = NULL;
-}
-// UnityEngine.SocialPlatforms.Impl.AchievementDescription UnityEngine.SocialPlatforms.GameCenter.GcAchievementDescriptionData::ToAchievementDescription()
-extern TypeInfo* AchievementDescription_t3784099155_il2cpp_TypeInfo_var;
-extern const uint32_t GcAchievementDescriptionData_ToAchievementDescription_m3125480712_MetadataUsageId;
-extern "C"  AchievementDescription_t3784099155 * GcAchievementDescriptionData_ToAchievementDescription_m3125480712 (GcAchievementDescriptionData_t1714018390 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (GcAchievementDescriptionData_ToAchievementDescription_m3125480712_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	String_t* G_B2_0 = NULL;
-	String_t* G_B2_1 = NULL;
-	Texture2D_t2509538522 * G_B2_2 = NULL;
-	String_t* G_B2_3 = NULL;
-	String_t* G_B2_4 = NULL;
-	String_t* G_B1_0 = NULL;
-	String_t* G_B1_1 = NULL;
-	Texture2D_t2509538522 * G_B1_2 = NULL;
-	String_t* G_B1_3 = NULL;
-	String_t* G_B1_4 = NULL;
-	int32_t G_B3_0 = 0;
-	String_t* G_B3_1 = NULL;
-	String_t* G_B3_2 = NULL;
-	Texture2D_t2509538522 * G_B3_3 = NULL;
-	String_t* G_B3_4 = NULL;
-	String_t* G_B3_5 = NULL;
-	{
-		String_t* L_0 = __this->get_m_Identifier_0();
-		String_t* L_1 = __this->get_m_Title_1();
-		Texture2D_t2509538522 * L_2 = __this->get_m_Image_2();
-		String_t* L_3 = __this->get_m_AchievedDescription_3();
-		String_t* L_4 = __this->get_m_UnachievedDescription_4();
-		int32_t L_5 = __this->get_m_Hidden_5();
-		G_B1_0 = L_4;
-		G_B1_1 = L_3;
-		G_B1_2 = L_2;
-		G_B1_3 = L_1;
-		G_B1_4 = L_0;
-		if (L_5)
-		{
-			G_B2_0 = L_4;
-			G_B2_1 = L_3;
-			G_B2_2 = L_2;
-			G_B2_3 = L_1;
-			G_B2_4 = L_0;
-			goto IL_002f;
-		}
-	}
-	{
-		G_B3_0 = 0;
-		G_B3_1 = G_B1_0;
-		G_B3_2 = G_B1_1;
-		G_B3_3 = G_B1_2;
-		G_B3_4 = G_B1_3;
-		G_B3_5 = G_B1_4;
-		goto IL_0030;
-	}
-
-IL_002f:
-	{
-		G_B3_0 = 1;
-		G_B3_1 = G_B2_0;
-		G_B3_2 = G_B2_1;
-		G_B3_3 = G_B2_2;
-		G_B3_4 = G_B2_3;
-		G_B3_5 = G_B2_4;
-	}
-
-IL_0030:
-	{
-		int32_t L_6 = __this->get_m_Points_6();
-		AchievementDescription_t3784099155 * L_7 = (AchievementDescription_t3784099155 *)il2cpp_codegen_object_new(AchievementDescription_t3784099155_il2cpp_TypeInfo_var);
-		AchievementDescription__ctor_m3032164909(L_7, G_B3_5, G_B3_4, G_B3_3, G_B3_2, G_B3_1, (bool)G_B3_0, L_6, /*hidden argument*/NULL);
-		return L_7;
 	}
 }
 #ifdef __clang__

@@ -31,292 +31,300 @@ void RegisterStaticallyLinkedModulesGranular()
 
 void RegisterAllClasses()
 {
-	//Total: 72 classes
-	//0. Mesh
-	void RegisterClass_Mesh();
-	RegisterClass_Mesh();
+	//Total: 74 classes
+	//0. MeshFilter
+	void RegisterClass_MeshFilter();
+	RegisterClass_MeshFilter();
 
-	//1. NamedObject
-	void RegisterClass_NamedObject();
-	RegisterClass_NamedObject();
+	//1. Component
+	void RegisterClass_Component();
+	RegisterClass_Component();
 
 	//2. EditorExtension
 	void RegisterClass_EditorExtension();
 	RegisterClass_EditorExtension();
 
-	//3. Renderer
+	//3. Mesh
+	void RegisterClass_Mesh();
+	RegisterClass_Mesh();
+
+	//4. NamedObject
+	void RegisterClass_NamedObject();
+	RegisterClass_NamedObject();
+
+	//5. Renderer
 	void RegisterClass_Renderer();
 	RegisterClass_Renderer();
 
-	//4. Component
-	void RegisterClass_Component();
-	RegisterClass_Component();
-
-	//5. GUITexture
+	//6. GUITexture
 	void RegisterClass_GUITexture();
 	RegisterClass_GUITexture();
 
-	//6. GUIElement
+	//7. GUIElement
 	void RegisterClass_GUIElement();
 	RegisterClass_GUIElement();
 
-	//7. Behaviour
+	//8. Behaviour
 	void RegisterClass_Behaviour();
 	RegisterClass_Behaviour();
 
-	//8. GUILayer
+	//9. GUILayer
 	void RegisterClass_GUILayer();
 	RegisterClass_GUILayer();
 
-	//9. Texture
+	//10. Texture
 	void RegisterClass_Texture();
 	RegisterClass_Texture();
 
-	//10. Texture2D
+	//11. Texture2D
 	void RegisterClass_Texture2D();
 	RegisterClass_Texture2D();
 
-	//11. RenderTexture
+	//12. RenderTexture
 	void RegisterClass_RenderTexture();
 	RegisterClass_RenderTexture();
 
-	//12. NetworkView
+	//13. NetworkView
 	void RegisterClass_NetworkView();
 	RegisterClass_NetworkView();
 
-	//13. RectTransform
+	//14. RectTransform
 	void RegisterClass_RectTransform();
 	RegisterClass_RectTransform();
 
-	//14. Transform
+	//15. Transform
 	void RegisterClass_Transform();
 	RegisterClass_Transform();
 
-	//15. Shader
+	//16. Shader
 	void RegisterClass_Shader();
 	RegisterClass_Shader();
 
-	//16. TextAsset
+	//17. TextAsset
 	void RegisterClass_TextAsset();
 	RegisterClass_TextAsset();
 
-	//17. Material
+	//18. Material
 	void RegisterClass_Material();
 	RegisterClass_Material();
 
-	//18. Sprite
+	//19. Sprite
 	void RegisterClass_Sprite();
 	RegisterClass_Sprite();
 
-	//19. Camera
+	//20. Camera
 	void RegisterClass_Camera();
 	RegisterClass_Camera();
 
-	//20. MonoBehaviour
+	//21. MonoBehaviour
 	void RegisterClass_MonoBehaviour();
 	RegisterClass_MonoBehaviour();
 
-	//21. Light
+	//22. Light
 	void RegisterClass_Light();
 	RegisterClass_Light();
 
-	//22. GameObject
+	//23. GameObject
 	void RegisterClass_GameObject();
 	RegisterClass_GameObject();
 
-	//23. Rigidbody
+	//24. Rigidbody
 	void RegisterClass_Rigidbody();
 	RegisterClass_Rigidbody();
 
-	//24. Collider
+	//25. Collider
 	void RegisterClass_Collider();
 	RegisterClass_Collider();
 
-	//25. Collider2D
+	//26. MeshCollider
+	void RegisterClass_MeshCollider();
+	RegisterClass_MeshCollider();
+
+	//27. Collider2D
 	void RegisterClass_Collider2D();
 	RegisterClass_Collider2D();
 
-	//26. AudioClip
+	//28. AudioClip
 	void RegisterClass_AudioClip();
 	RegisterClass_AudioClip();
 
-	//27. SampleClip
+	//29. SampleClip
 	void RegisterClass_SampleClip();
 	RegisterClass_SampleClip();
 
-	//28. AudioSource
+	//30. AudioSource
 	void RegisterClass_AudioSource();
 	RegisterClass_AudioSource();
 
-	//29. AudioBehaviour
+	//31. AudioBehaviour
 	void RegisterClass_AudioBehaviour();
 	RegisterClass_AudioBehaviour();
 
-	//30. Animator
+	//32. Animator
 	void RegisterClass_Animator();
 	RegisterClass_Animator();
 
-	//31. DirectorPlayer
+	//33. DirectorPlayer
 	void RegisterClass_DirectorPlayer();
 	RegisterClass_DirectorPlayer();
 
-	//32. GUIText
+	//34. GUIText
 	void RegisterClass_GUIText();
 	RegisterClass_GUIText();
 
-	//33. TextMesh
+	//35. TextMesh
 	void RegisterClass_TextMesh();
 	RegisterClass_TextMesh();
 
-	//34. Font
+	//36. Font
 	void RegisterClass_Font();
 	RegisterClass_Font();
 
-	//35. Canvas
+	//37. Canvas
 	void RegisterClass_Canvas();
 	RegisterClass_Canvas();
 
-	//36. CanvasGroup
+	//38. CanvasGroup
 	void RegisterClass_CanvasGroup();
 	RegisterClass_CanvasGroup();
 
-	//37. CanvasRenderer
+	//39. CanvasRenderer
 	void RegisterClass_CanvasRenderer();
 	RegisterClass_CanvasRenderer();
 
-	//38. SpriteRenderer
+	//40. SpriteRenderer
 	void RegisterClass_SpriteRenderer();
 	RegisterClass_SpriteRenderer();
 
-	//39. RuntimeAnimatorController
+	//41. RuntimeAnimatorController
 	void RegisterClass_RuntimeAnimatorController();
 	RegisterClass_RuntimeAnimatorController();
 
-	//40. PreloadData
+	//42. PreloadData
 	void RegisterClass_PreloadData();
 	RegisterClass_PreloadData();
 
-	//41. Cubemap
+	//43. Cubemap
 	void RegisterClass_Cubemap();
 	RegisterClass_Cubemap();
 
-	//42. Texture3D
+	//44. Texture3D
 	void RegisterClass_Texture3D();
 	RegisterClass_Texture3D();
 
-	//43. LevelGameManager
+	//45. LevelGameManager
 	void RegisterClass_LevelGameManager();
 	RegisterClass_LevelGameManager();
 
-	//44. GameManager
+	//46. GameManager
 	void RegisterClass_GameManager();
 	RegisterClass_GameManager();
 
-	//45. TimeManager
+	//47. TimeManager
 	void RegisterClass_TimeManager();
 	RegisterClass_TimeManager();
 
-	//46. GlobalGameManager
+	//48. GlobalGameManager
 	void RegisterClass_GlobalGameManager();
 	RegisterClass_GlobalGameManager();
 
-	//47. AudioManager
+	//49. AudioManager
 	void RegisterClass_AudioManager();
 	RegisterClass_AudioManager();
 
-	//48. InputManager
+	//50. InputManager
 	void RegisterClass_InputManager();
 	RegisterClass_InputManager();
 
-	//49. Physics2DSettings
+	//51. Physics2DSettings
 	void RegisterClass_Physics2DSettings();
 	RegisterClass_Physics2DSettings();
 
-	//50. GraphicsSettings
+	//52. GraphicsSettings
 	void RegisterClass_GraphicsSettings();
 	RegisterClass_GraphicsSettings();
 
-	//51. QualitySettings
+	//53. QualitySettings
 	void RegisterClass_QualitySettings();
 	RegisterClass_QualitySettings();
 
-	//52. PhysicsManager
+	//54. PhysicsManager
 	void RegisterClass_PhysicsManager();
 	RegisterClass_PhysicsManager();
 
-	//53. AnimationClip
+	//55. AnimationClip
 	void RegisterClass_AnimationClip();
 	RegisterClass_AnimationClip();
 
-	//54. Motion
+	//56. Motion
 	void RegisterClass_Motion();
 	RegisterClass_Motion();
 
-	//55. TagManager
+	//57. TagManager
 	void RegisterClass_TagManager();
 	RegisterClass_TagManager();
 
-	//56. AudioListener
+	//58. AudioListener
 	void RegisterClass_AudioListener();
 	RegisterClass_AudioListener();
 
-	//57. AnimatorController
+	//59. AnimatorController
 	void RegisterClass_AnimatorController();
 	RegisterClass_AnimatorController();
 
-	//58. ScriptMapper
+	//60. ScriptMapper
 	void RegisterClass_ScriptMapper();
 	RegisterClass_ScriptMapper();
 
-	//59. DelayedCallManager
+	//61. DelayedCallManager
 	void RegisterClass_DelayedCallManager();
 	RegisterClass_DelayedCallManager();
 
-	//60. RenderSettings
+	//62. RenderSettings
 	void RegisterClass_RenderSettings();
 	RegisterClass_RenderSettings();
 
-	//61. Animation
+	//63. Animation
 	void RegisterClass_Animation();
 	RegisterClass_Animation();
 
-	//62. MonoScript
+	//64. MonoScript
 	void RegisterClass_MonoScript();
 	RegisterClass_MonoScript();
 
-	//63. MonoManager
+	//65. MonoManager
 	void RegisterClass_MonoManager();
 	RegisterClass_MonoManager();
 
-	//64. FlareLayer
+	//66. FlareLayer
 	void RegisterClass_FlareLayer();
 	RegisterClass_FlareLayer();
 
-	//65. PlayerSettings
+	//67. PlayerSettings
 	void RegisterClass_PlayerSettings();
 	RegisterClass_PlayerSettings();
 
-	//66. BuildSettings
+	//68. BuildSettings
 	void RegisterClass_BuildSettings();
 	RegisterClass_BuildSettings();
 
-	//67. ResourceManager
+	//69. ResourceManager
 	void RegisterClass_ResourceManager();
 	RegisterClass_ResourceManager();
 
-	//68. NetworkManager
+	//70. NetworkManager
 	void RegisterClass_NetworkManager();
 	RegisterClass_NetworkManager();
 
-	//69. MasterServerInterface
+	//71. MasterServerInterface
 	void RegisterClass_MasterServerInterface();
 	RegisterClass_MasterServerInterface();
 
-	//70. LightmapSettings
+	//72. LightmapSettings
 	void RegisterClass_LightmapSettings();
 	RegisterClass_LightmapSettings();
 
-	//71. RuntimeInitializeOnLoadManager
+	//73. RuntimeInitializeOnLoadManager
 	void RegisterClass_RuntimeInitializeOnLoadManager();
 	RegisterClass_RuntimeInitializeOnLoadManager();
 

@@ -1,4 +1,4 @@
-//Generated on : 03-09-2016 19:12:57
+//Generated on : 05-09-2016 15:53:29
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.AnimationCurve
@@ -1415,9 +1415,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_ExtractListData();
 		Register_UnityEngine_Mesh_ExtractListData();
 
+		//System.Int32 UnityEngine.Mesh::get_subMeshCount()
+		void Register_UnityEngine_Mesh_get_subMeshCount();
+		Register_UnityEngine_Mesh_get_subMeshCount();
+
 		//System.Int32[] UnityEngine.Mesh::GetIndices(System.Int32)
 		void Register_UnityEngine_Mesh_GetIndices();
 		Register_UnityEngine_Mesh_GetIndices();
+
+		//System.Int32[] UnityEngine.Mesh::GetTriangles(System.Int32)
+		void Register_UnityEngine_Mesh_GetTriangles();
+		Register_UnityEngine_Mesh_GetTriangles();
 
 		//System.Void UnityEngine.Mesh::Clear(System.Boolean)
 		void Register_UnityEngine_Mesh_Clear();
@@ -1443,6 +1451,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_SetTangentsInternal();
 		Register_UnityEngine_Mesh_SetTangentsInternal();
 
+		//System.Void UnityEngine.Mesh::SetTriangles(System.Int32[],System.Int32)
+		void Register_UnityEngine_Mesh_SetTriangles();
+		Register_UnityEngine_Mesh_SetTriangles();
+
 		//System.Void UnityEngine.Mesh::SetTrianglesInternal(System.Object,System.Int32)
 		void Register_UnityEngine_Mesh_SetTrianglesInternal();
 		Register_UnityEngine_Mesh_SetTrianglesInternal();
@@ -1454,6 +1466,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Mesh::SetVerticesInternal(System.Object)
 		void Register_UnityEngine_Mesh_SetVerticesInternal();
 		Register_UnityEngine_Mesh_SetVerticesInternal();
+
+		//System.Void UnityEngine.Mesh::set_normals(UnityEngine.Vector3[])
+		void Register_UnityEngine_Mesh_set_normals();
+		Register_UnityEngine_Mesh_set_normals();
 
 		//UnityEngine.Color32[] UnityEngine.Mesh::get_colors32()
 		void Register_UnityEngine_Mesh_get_colors32();
@@ -1480,6 +1496,22 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Mesh_get_tangents();
 
 	//End Registrations for type : UnityEngine.Mesh
+
+	//Start Registrations for type : UnityEngine.MeshCollider
+
+		//System.Void UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)
+		void Register_UnityEngine_MeshCollider_set_sharedMesh();
+		Register_UnityEngine_MeshCollider_set_sharedMesh();
+
+	//End Registrations for type : UnityEngine.MeshCollider
+
+	//Start Registrations for type : UnityEngine.MeshFilter
+
+		//UnityEngine.Mesh UnityEngine.MeshFilter::get_mesh()
+		void Register_UnityEngine_MeshFilter_get_mesh();
+		Register_UnityEngine_MeshFilter_get_mesh();
+
+	//End Registrations for type : UnityEngine.MeshFilter
 
 	//Start Registrations for type : UnityEngine.MonoBehaviour
 
