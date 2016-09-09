@@ -31,12 +31,14 @@ struct  PopupManager_t2711269761  : public ExtMonoBehaviour_t2624599193
 public:
 	// UnityEngine.UI.Image PopupManager::blocker
 	Image_t3354615620 * ___blocker_3;
-	// UnityEngine.GameObject PopupManager::genericPopup
-	GameObject_t4012695102 * ___genericPopup_4;
+	// UnityEngine.GameObject PopupManager::connectingPopup
+	GameObject_t4012695102 * ___connectingPopup_4;
+	// UnityEngine.GameObject PopupManager::determiningHostPopup
+	GameObject_t4012695102 * ___determiningHostPopup_5;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> PopupManager::_popups
-	List_1_t514686775 * ____popups_5;
+	List_1_t514686775 * ____popups_6;
 	// UnityEngine.GameObject PopupManager::_activePopup
-	GameObject_t4012695102 * ____activePopup_6;
+	GameObject_t4012695102 * ____activePopup_7;
 
 public:
 	inline static int32_t get_offset_of_blocker_3() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ___blocker_3)); }
@@ -48,31 +50,40 @@ public:
 		Il2CppCodeGenWriteBarrier(&___blocker_3, value);
 	}
 
-	inline static int32_t get_offset_of_genericPopup_4() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ___genericPopup_4)); }
-	inline GameObject_t4012695102 * get_genericPopup_4() const { return ___genericPopup_4; }
-	inline GameObject_t4012695102 ** get_address_of_genericPopup_4() { return &___genericPopup_4; }
-	inline void set_genericPopup_4(GameObject_t4012695102 * value)
+	inline static int32_t get_offset_of_connectingPopup_4() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ___connectingPopup_4)); }
+	inline GameObject_t4012695102 * get_connectingPopup_4() const { return ___connectingPopup_4; }
+	inline GameObject_t4012695102 ** get_address_of_connectingPopup_4() { return &___connectingPopup_4; }
+	inline void set_connectingPopup_4(GameObject_t4012695102 * value)
 	{
-		___genericPopup_4 = value;
-		Il2CppCodeGenWriteBarrier(&___genericPopup_4, value);
+		___connectingPopup_4 = value;
+		Il2CppCodeGenWriteBarrier(&___connectingPopup_4, value);
 	}
 
-	inline static int32_t get_offset_of__popups_5() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ____popups_5)); }
-	inline List_1_t514686775 * get__popups_5() const { return ____popups_5; }
-	inline List_1_t514686775 ** get_address_of__popups_5() { return &____popups_5; }
-	inline void set__popups_5(List_1_t514686775 * value)
+	inline static int32_t get_offset_of_determiningHostPopup_5() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ___determiningHostPopup_5)); }
+	inline GameObject_t4012695102 * get_determiningHostPopup_5() const { return ___determiningHostPopup_5; }
+	inline GameObject_t4012695102 ** get_address_of_determiningHostPopup_5() { return &___determiningHostPopup_5; }
+	inline void set_determiningHostPopup_5(GameObject_t4012695102 * value)
 	{
-		____popups_5 = value;
-		Il2CppCodeGenWriteBarrier(&____popups_5, value);
+		___determiningHostPopup_5 = value;
+		Il2CppCodeGenWriteBarrier(&___determiningHostPopup_5, value);
 	}
 
-	inline static int32_t get_offset_of__activePopup_6() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ____activePopup_6)); }
-	inline GameObject_t4012695102 * get__activePopup_6() const { return ____activePopup_6; }
-	inline GameObject_t4012695102 ** get_address_of__activePopup_6() { return &____activePopup_6; }
-	inline void set__activePopup_6(GameObject_t4012695102 * value)
+	inline static int32_t get_offset_of__popups_6() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ____popups_6)); }
+	inline List_1_t514686775 * get__popups_6() const { return ____popups_6; }
+	inline List_1_t514686775 ** get_address_of__popups_6() { return &____popups_6; }
+	inline void set__popups_6(List_1_t514686775 * value)
 	{
-		____activePopup_6 = value;
-		Il2CppCodeGenWriteBarrier(&____activePopup_6, value);
+		____popups_6 = value;
+		Il2CppCodeGenWriteBarrier(&____popups_6, value);
+	}
+
+	inline static int32_t get_offset_of__activePopup_7() { return static_cast<int32_t>(offsetof(PopupManager_t2711269761, ____activePopup_7)); }
+	inline GameObject_t4012695102 * get__activePopup_7() const { return ____activePopup_7; }
+	inline GameObject_t4012695102 ** get_address_of__activePopup_7() { return &____activePopup_7; }
+	inline void set__activePopup_7(GameObject_t4012695102 * value)
+	{
+		____activePopup_7 = value;
+		Il2CppCodeGenWriteBarrier(&____activePopup_7, value);
 	}
 };
 

@@ -1,29 +1,20 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="SceneTransitionManager">
+			<method name="Ref_ShowGameSelectionScreen"/>
+			<method name="Ref_ShowMainScreen"/>
+			<method name="ShowGameSelectionScreen"/>
+			<method name="ShowMainScreen"/>
+			<method name="Ref_ShowMatchSelectionScreen"/>
+			<method name="Ref_ShowMainScreen"/>
+			<method name="Ref_ShowGameSelectionScreen"/>
+			<method name="Ref_ShowMatchSelectionScreen"/>
+			<method name="ShowMainScreen"/>
+		</type>
 		<type fullname="GameSelectionScreen">
 			<method name="Play"/>
 			<method name="Next"/>
 			<method name="Previous"/>
-		</type>
-		<type fullname="PopupManager">
-			<method name="RemoveActivePopup"/>
-			<method name="RemoveActivePopup"/>
-			<method name="RemoveActivePopup"/>
-			<method name="RemoveActivePopup"/>
-			<method name="RemoveActivePopup"/>
-			<method name="RemoveActivePopup"/>
-		</type>
-		<type fullname="SceneTransitionManager">
-			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowMainScreen"/>
-			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowMainScreen"/>
-			<method name="ShowMainScreen"/>
-			<method name="ShowGameSelectionScreen"/>
 		</type>
 	</assembly>
 </linker>

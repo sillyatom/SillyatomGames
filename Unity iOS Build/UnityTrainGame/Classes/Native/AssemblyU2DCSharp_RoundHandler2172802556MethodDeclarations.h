@@ -53,6 +53,8 @@ extern "C"  void RoundHandler_Reset_m3877110476 (RoundHandler_t2172802556 * __th
 extern "C"  void RoundHandler_Init_m2507830869 (RoundHandler_t2172802556 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::OnGameEvent(GameEvent)
 extern "C"  void RoundHandler_OnGameEvent_m2386591652 (RoundHandler_t2172802556 * __this, GameEvent_t2981166504 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void RoundHandler::UpdateSweepCount(System.Int32,System.Int32)
+extern "C"  void RoundHandler_UpdateSweepCount_m3744931029 (RoundHandler_t2172802556 * __this, int32_t ___val1, int32_t ___val2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::OnInGameEvent(InGameEvent)
 extern "C"  void RoundHandler_OnInGameEvent_m1941447854 (RoundHandler_t2172802556 * __this, InGameEvent_t511087107 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void RoundHandler::StartMatch()

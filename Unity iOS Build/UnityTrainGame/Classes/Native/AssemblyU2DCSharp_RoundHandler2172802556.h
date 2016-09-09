@@ -47,8 +47,10 @@ public:
 	Text_t3286458198 * ___currentPlayerName_8;
 	// InGameInfoText RoundHandler::roundMessage
 	InGameInfoText_t36852466 * ___roundMessage_9;
+	// UnityEngine.UI.Text RoundHandler::sweepCountText
+	Text_t3286458198 * ___sweepCountText_10;
 	// System.Action RoundHandler::<OnRoundCompleteCallback>k__BackingField
-	Action_t437523947 * ___U3COnRoundCompleteCallbackU3Ek__BackingField_10;
+	Action_t437523947 * ___U3COnRoundCompleteCallbackU3Ek__BackingField_11;
 
 public:
 	inline static int32_t get_offset_of__elapsedTime_4() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556, ____elapsedTime_4)); }
@@ -103,13 +105,22 @@ public:
 		Il2CppCodeGenWriteBarrier(&___roundMessage_9, value);
 	}
 
-	inline static int32_t get_offset_of_U3COnRoundCompleteCallbackU3Ek__BackingField_10() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556, ___U3COnRoundCompleteCallbackU3Ek__BackingField_10)); }
-	inline Action_t437523947 * get_U3COnRoundCompleteCallbackU3Ek__BackingField_10() const { return ___U3COnRoundCompleteCallbackU3Ek__BackingField_10; }
-	inline Action_t437523947 ** get_address_of_U3COnRoundCompleteCallbackU3Ek__BackingField_10() { return &___U3COnRoundCompleteCallbackU3Ek__BackingField_10; }
-	inline void set_U3COnRoundCompleteCallbackU3Ek__BackingField_10(Action_t437523947 * value)
+	inline static int32_t get_offset_of_sweepCountText_10() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556, ___sweepCountText_10)); }
+	inline Text_t3286458198 * get_sweepCountText_10() const { return ___sweepCountText_10; }
+	inline Text_t3286458198 ** get_address_of_sweepCountText_10() { return &___sweepCountText_10; }
+	inline void set_sweepCountText_10(Text_t3286458198 * value)
 	{
-		___U3COnRoundCompleteCallbackU3Ek__BackingField_10 = value;
-		Il2CppCodeGenWriteBarrier(&___U3COnRoundCompleteCallbackU3Ek__BackingField_10, value);
+		___sweepCountText_10 = value;
+		Il2CppCodeGenWriteBarrier(&___sweepCountText_10, value);
+	}
+
+	inline static int32_t get_offset_of_U3COnRoundCompleteCallbackU3Ek__BackingField_11() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556, ___U3COnRoundCompleteCallbackU3Ek__BackingField_11)); }
+	inline Action_t437523947 * get_U3COnRoundCompleteCallbackU3Ek__BackingField_11() const { return ___U3COnRoundCompleteCallbackU3Ek__BackingField_11; }
+	inline Action_t437523947 ** get_address_of_U3COnRoundCompleteCallbackU3Ek__BackingField_11() { return &___U3COnRoundCompleteCallbackU3Ek__BackingField_11; }
+	inline void set_U3COnRoundCompleteCallbackU3Ek__BackingField_11(Action_t437523947 * value)
+	{
+		___U3COnRoundCompleteCallbackU3Ek__BackingField_11 = value;
+		Il2CppCodeGenWriteBarrier(&___U3COnRoundCompleteCallbackU3Ek__BackingField_11, value);
 	}
 };
 
@@ -119,9 +130,9 @@ public:
 	// System.Int32 RoundHandler::currentRound
 	int32_t ___currentRound_3;
 	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> RoundHandler::<>f__switch$map6
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map6_11;
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map6_12;
 	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> RoundHandler::<>f__switch$map7
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map7_12;
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map7_13;
 
 public:
 	inline static int32_t get_offset_of_currentRound_3() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556_StaticFields, ___currentRound_3)); }
@@ -132,22 +143,22 @@ public:
 		___currentRound_3 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map6_11() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556_StaticFields, ___U3CU3Ef__switchU24map6_11)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map6_11() const { return ___U3CU3Ef__switchU24map6_11; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map6_11() { return &___U3CU3Ef__switchU24map6_11; }
-	inline void set_U3CU3Ef__switchU24map6_11(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map6_12() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556_StaticFields, ___U3CU3Ef__switchU24map6_12)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map6_12() const { return ___U3CU3Ef__switchU24map6_12; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map6_12() { return &___U3CU3Ef__switchU24map6_12; }
+	inline void set_U3CU3Ef__switchU24map6_12(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map6_11 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map6_11, value);
+		___U3CU3Ef__switchU24map6_12 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map6_12, value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map7_12() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556_StaticFields, ___U3CU3Ef__switchU24map7_12)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map7_12() const { return ___U3CU3Ef__switchU24map7_12; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map7_12() { return &___U3CU3Ef__switchU24map7_12; }
-	inline void set_U3CU3Ef__switchU24map7_12(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map7_13() { return static_cast<int32_t>(offsetof(RoundHandler_t2172802556_StaticFields, ___U3CU3Ef__switchU24map7_13)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map7_13() const { return ___U3CU3Ef__switchU24map7_13; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map7_13() { return &___U3CU3Ef__switchU24map7_13; }
+	inline void set_U3CU3Ef__switchU24map7_13(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map7_12 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map7_12, value);
+		___U3CU3Ef__switchU24map7_13 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map7_13, value);
 	}
 };
 

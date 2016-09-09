@@ -116,7 +116,7 @@ public class MatchSelectionScreen : GameScreenMonoBehaviour
 
         if (gEvent.type == GameEvent.DETERMINING_HOST)
         {
-            SingletonManager.reference.popupManager.CreateGenericPopup("Host Selection", "Determining Host...");
+//            SingletonManager.reference.popupManager.AddDeterminingHostPopup();
         }
         else if (gEvent.type == GameEvent.MATCH_STARTED)
         {

@@ -1,0 +1,28 @@
+﻿#pragma once
+
+#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+#include <stdint.h>
+#include <assert.h>
+#include <exception>
+
+// Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateGet>c__AnonStorey29`1<System.Object>
+struct U3CCreateGetU3Ec__AnonStorey29_1_t3210625120;
+// System.Object
+struct Il2CppObject;
+
+#include "codegen/il2cpp-codegen.h"
+#include "mscorlib_System_Object837106420.h"
+
+// System.Void Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateGet>c__AnonStorey29`1<System.Object>::.ctor()
+extern "C"  void U3CCreateGetU3Ec__AnonStorey29_1__ctor_m2132606322_gshared (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 * __this, const MethodInfo* method);
+#define U3CCreateGetU3Ec__AnonStorey29_1__ctor_m2132606322(__this, method) ((  void (*) (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 *, const MethodInfo*))U3CCreateGetU3Ec__AnonStorey29_1__ctor_m2132606322_gshared)(__this, method)
+// System.Object Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateGet>c__AnonStorey29`1<System.Object>::<>m__3E(T)
+extern "C"  Il2CppObject * U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3E_m2219469190_gshared (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 * __this, Il2CppObject * ___o, const MethodInfo* method);
+#define U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3E_m2219469190(__this, ___o, method) ((  Il2CppObject * (*) (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 *, Il2CppObject *, const MethodInfo*))U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3E_m2219469190_gshared)(__this, ___o, method)

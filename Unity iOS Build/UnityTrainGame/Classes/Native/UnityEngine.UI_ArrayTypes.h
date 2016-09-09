@@ -49,8 +49,6 @@ struct Toggle_t1499417981;
 struct IClipper_t4185560397;
 // UnityEngine.UI.LayoutRebuilder
 struct LayoutRebuilder_t1563460583;
-// UnityEngine.UI.Image
-struct Image_t3354615620;
 
 #include "mscorlib_System_Array2840145358.h"
 #include "UnityEngine_UI_UnityEngine_EventSystems_BaseInputM3800378272.h"
@@ -71,7 +69,6 @@ struct Image_t3354615620;
 #include "UnityEngine_UI_UnityEngine_UI_StencilMaterial_MatEn334050066.h"
 #include "UnityEngine_UI_UnityEngine_UI_Toggle1499417981.h"
 #include "UnityEngine_UI_UnityEngine_UI_LayoutRebuilder1563460583.h"
-#include "UnityEngine_UI_UnityEngine_UI_Image3354615620.h"
 
 #pragma once
 // UnityEngine.EventSystems.BaseInputModule[]
@@ -397,21 +394,6 @@ public:
 	inline LayoutRebuilder_t1563460583 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
 	inline LayoutRebuilder_t1563460583 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
 	inline void SetAt(il2cpp_array_size_t index, LayoutRebuilder_t1563460583 * value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-};
-// UnityEngine.UI.Image[]
-struct ImageU5BU5D_t2279835437  : public Il2CppArray
-{
-public:
-	ALIGN_TYPE (8) Image_t3354615620 * m_Items[1];
-
-public:
-	inline Image_t3354615620 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
-	inline Image_t3354615620 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
-	inline void SetAt(il2cpp_array_size_t index, Image_t3354615620 * value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);

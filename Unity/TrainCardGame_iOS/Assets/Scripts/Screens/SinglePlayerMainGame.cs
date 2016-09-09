@@ -19,6 +19,38 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     {
         base.OnSetToView();
         SingletonManager.reference.hud.gameObject.SetActive(false);
+        foreach (var player in _players)
+        {
+            player.transform.localScale = Vector3.zero;
+        }
+
+        PlayPlayersAnim();
+    }
+
+    private void PlayPlayersAnim()
+    {
+        float delay = 0.2f;
+        int runningIndex = 0;
+        foreach (var player in _players)
+        {
+            DelayedCallWithArgs<GameObject>(delay * runningIndex, PlayPlayerAnim, player.gameObject);
+            runningIndex++;
+        }
+        DelayedCall(1.0f, StartGame);
+    }
+
+    private void PlayPlayerAnim(GameObject player)
+    {
+        player.GetComponent<Animation>().Play("bounceOut");
+    }
+
+    private void StartGame()
+    {
+        dealer.Init();
+        dealer.CreateCards(GameConstants.MAX_PLAYERS);
+        dealer.ShuffleCards();
+        UpdatePlayerCards(GameConstants.MAX_PLAYERS);
+        DistributeCards(GameConstants.MAX_PLAYERS);
     }
 
     public override void InitGame()
@@ -35,12 +67,6 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
         UpdatePlayers();
-
-        dealer.Init();
-        dealer.CreateCards(GameConstants.MAX_PLAYERS);
-        dealer.ShuffleCards();
-        UpdatePlayerCards(GameConstants.MAX_PLAYERS);
-        DistributeCards(GameConstants.MAX_PLAYERS);
     }
 
     override protected void UpdatePlayers()

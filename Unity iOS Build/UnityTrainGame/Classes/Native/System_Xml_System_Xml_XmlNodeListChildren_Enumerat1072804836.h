@@ -24,7 +24,7 @@ struct XmlLinkedNode_t3253021914;
 #endif
 
 // System.Xml.XmlNodeListChildren/Enumerator
-struct  Enumerator_t1072804842  : public Il2CppObject
+struct  Enumerator_t1072804843  : public Il2CppObject
 {
 public:
 	// System.Xml.IHasXmlChildNode System.Xml.XmlNodeListChildren/Enumerator::parent
@@ -35,7 +35,7 @@ public:
 	bool ___passedLastNode_2;
 
 public:
-	inline static int32_t get_offset_of_parent_0() { return static_cast<int32_t>(offsetof(Enumerator_t1072804842, ___parent_0)); }
+	inline static int32_t get_offset_of_parent_0() { return static_cast<int32_t>(offsetof(Enumerator_t1072804843, ___parent_0)); }
 	inline Il2CppObject * get_parent_0() const { return ___parent_0; }
 	inline Il2CppObject ** get_address_of_parent_0() { return &___parent_0; }
 	inline void set_parent_0(Il2CppObject * value)
@@ -44,7 +44,7 @@ public:
 		Il2CppCodeGenWriteBarrier(&___parent_0, value);
 	}
 
-	inline static int32_t get_offset_of_currentChild_1() { return static_cast<int32_t>(offsetof(Enumerator_t1072804842, ___currentChild_1)); }
+	inline static int32_t get_offset_of_currentChild_1() { return static_cast<int32_t>(offsetof(Enumerator_t1072804843, ___currentChild_1)); }
 	inline XmlLinkedNode_t3253021914 * get_currentChild_1() const { return ___currentChild_1; }
 	inline XmlLinkedNode_t3253021914 ** get_address_of_currentChild_1() { return &___currentChild_1; }
 	inline void set_currentChild_1(XmlLinkedNode_t3253021914 * value)
@@ -53,7 +53,7 @@ public:
 		Il2CppCodeGenWriteBarrier(&___currentChild_1, value);
 	}
 
-	inline static int32_t get_offset_of_passedLastNode_2() { return static_cast<int32_t>(offsetof(Enumerator_t1072804842, ___passedLastNode_2)); }
+	inline static int32_t get_offset_of_passedLastNode_2() { return static_cast<int32_t>(offsetof(Enumerator_t1072804843, ___passedLastNode_2)); }
 	inline bool get_passedLastNode_2() const { return ___passedLastNode_2; }
 	inline bool* get_address_of_passedLastNode_2() { return &___passedLastNode_2; }
 	inline void set_passedLastNode_2(bool value)

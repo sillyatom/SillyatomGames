@@ -245,7 +245,7 @@ BOOL _matchStarted;
     }
     else
     {
-        gkMatchRequest.playerAttributes = 0xFFFFFFFF;
+        gkMatchRequest.playerAttributes = 0x0000FFFF;
     }
     
     gkMatchRequest.playerGroup = matchType;

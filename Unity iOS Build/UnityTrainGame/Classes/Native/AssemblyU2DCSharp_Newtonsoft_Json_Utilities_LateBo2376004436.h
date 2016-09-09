@@ -10,8 +10,8 @@
 
 #include <stdint.h>
 
-// System.Reflection.PropertyInfo
-struct PropertyInfo_t;
+// System.Reflection.FieldInfo
+struct FieldInfo_t;
 
 #include "mscorlib_System_Object837106420.h"
 
@@ -25,17 +25,17 @@ struct PropertyInfo_t;
 struct  U3CCreateSetU3Ec__AnonStorey2A_1_t2376004436  : public Il2CppObject
 {
 public:
-	// System.Reflection.PropertyInfo Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateSet>c__AnonStorey2A`1::propertyInfo
-	PropertyInfo_t * ___propertyInfo_0;
+	// System.Reflection.FieldInfo Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateSet>c__AnonStorey2A`1::fieldInfo
+	FieldInfo_t * ___fieldInfo_0;
 
 public:
-	inline static int32_t get_offset_of_propertyInfo_0() { return static_cast<int32_t>(offsetof(U3CCreateSetU3Ec__AnonStorey2A_1_t2376004436, ___propertyInfo_0)); }
-	inline PropertyInfo_t * get_propertyInfo_0() const { return ___propertyInfo_0; }
-	inline PropertyInfo_t ** get_address_of_propertyInfo_0() { return &___propertyInfo_0; }
-	inline void set_propertyInfo_0(PropertyInfo_t * value)
+	inline static int32_t get_offset_of_fieldInfo_0() { return static_cast<int32_t>(offsetof(U3CCreateSetU3Ec__AnonStorey2A_1_t2376004436, ___fieldInfo_0)); }
+	inline FieldInfo_t * get_fieldInfo_0() const { return ___fieldInfo_0; }
+	inline FieldInfo_t ** get_address_of_fieldInfo_0() { return &___fieldInfo_0; }
+	inline void set_fieldInfo_0(FieldInfo_t * value)
 	{
-		___propertyInfo_0 = value;
-		Il2CppCodeGenWriteBarrier(&___propertyInfo_0, value);
+		___fieldInfo_0 = value;
+		Il2CppCodeGenWriteBarrier(&___fieldInfo_0, value);
 	}
 };
 

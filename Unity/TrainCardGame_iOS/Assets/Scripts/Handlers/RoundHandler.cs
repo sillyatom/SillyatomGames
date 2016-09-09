@@ -27,6 +27,8 @@ public class RoundHandler : ExtMonoBehaviour
 
     public bool IsActivePlayerLocal{ get { return (_activePlayerId == Networking.localId); } }
 
+    public Text sweepCountText;
+
     override public void Reset()
     {
         base.Reset();
@@ -58,7 +60,16 @@ public class RoundHandler : ExtMonoBehaviour
                 BridgeDebugger.SillyLog(" On received next player : " + _activePlayerId);
                 StartCoroutine(WaitAndStartRound());
                 break;
+
+            case GameEvent.UPDATE_SWEEP_COUNT:
+                UpdateSweepCount(evt.val, GameSelectionScreen.GetSweepCount());
+                break;
         }
+    }
+
+    private void UpdateSweepCount(int val1, int val2)
+    {
+        sweepCountText.text = val1.ToString() + "/" + val2.ToString();
     }
 
     protected void OnInGameEvent(InGameEvent evt)
@@ -77,6 +88,7 @@ public class RoundHandler : ExtMonoBehaviour
         currentRound = 0;
         _activePlayerId = Networking.hostId;
         roundMessage.ShowMessage("Match Started!!!", StartRound);
+        UpdateSweepCount(0, GameSelectionScreen.GetSweepCount());
     }
 
     private IEnumerator WaitAndStartRound()

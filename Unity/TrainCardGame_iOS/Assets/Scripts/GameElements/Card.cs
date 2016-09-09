@@ -30,7 +30,6 @@ public class Card : ButtonComponent
     private void UpdateSkin()
     {
         Front.sprite = Resources.Load<Sprite>("Images/Cards/" + this.ValueType);    
-        Back.sprite = Resources.Load<Sprite>("Images/Cards/Back");
 
         Front.material = Instantiate<Material>(Resources.Load<Material>("Materials/GrayMaterial"));
         Back.material = Instantiate<Material>(Resources.Load<Material>("Materials/GrayMaterial"));

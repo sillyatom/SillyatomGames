@@ -17,6 +17,7 @@ public class BaseDialog : ExtMonoBehaviour
 
     virtual public void OnRemove()
     {
-        
+        transform.SetParent(_parentTransform);
+        transform.position = _initPosition;
     }
 }

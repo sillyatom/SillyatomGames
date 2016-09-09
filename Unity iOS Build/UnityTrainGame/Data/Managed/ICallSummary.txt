@@ -1,3 +1,6 @@
+UnityEngine.Animation::Play
+UnityEngine.Animation::GetStateCount
+UnityEngine.Animation::GetStateAtIndex
 UnityEngine.AnimationCurve::Cleanup
 UnityEngine.AnimationCurve::Init
 UnityEngine.Animator::StringToHash

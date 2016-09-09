@@ -13,16 +13,17 @@ public class MainScreen : GameScreenMonoBehaviour
     {
         base.Init();
         network = SingletonManager.reference.network;
+        SingletonManager.reference.popupManager.AddConnectingPopup();
     }
 
     private void AuthGC()
     {
-        SingletonManager.reference.popupManager.CreateGenericPopup("Connecting", "Signing in Game Center");
         StartCoroutine(StartSignInProcess());
     }
 
     private IEnumerator StartSignInProcess()
     {
+        SingletonManager.reference.popupManager.AddConnectingPopup();
         yield return new WaitForSeconds(1.0f);
         network.SignInGC();
     }
@@ -33,6 +34,7 @@ public class MainScreen : GameScreenMonoBehaviour
         {
             case InGameEvent.GC_STATUS:
                 _signingStatus = evt.status;
+                SingletonManager.reference.popupManager.RemoveActivePopup();
                 playBtn.onClick.AddListener(OnPlay);
                 break;
         }
@@ -46,7 +48,6 @@ public class MainScreen : GameScreenMonoBehaviour
 
     private void OnPlay()
     {
-        BridgeDebugger.Log("status : " + _signingStatus);
         if (_signingStatus == NetworkConstants.GC_SIGNING_STATUS_SUCCEEDED)
         {
             SingletonManager.reference.popupManager.RemoveActivePopup();
@@ -58,7 +59,7 @@ public class MainScreen : GameScreenMonoBehaviour
         }
         else
         {
-            BridgeDebugger.Log("Missed Case Main Screen");
+            BridgeDebugger.Log("[ Missed Case Main Screen ] ");
         }
     }
 }

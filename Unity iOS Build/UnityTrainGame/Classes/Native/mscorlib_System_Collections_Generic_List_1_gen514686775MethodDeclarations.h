@@ -79,7 +79,7 @@
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::GetIndex(System.Int32,System.Int32,System.Predicate`1<T>)
 #define List_1_GetIndex_m1153842093(__this, ___startIndex, ___count, ___match, method) ((  int32_t (*) (List_1_t514686775 *, int32_t, int32_t, Predicate_1_t288691704 *, const MethodInfo*))List_1_GetIndex_m4275988045_gshared)(__this, ___startIndex, ___count, ___match, method)
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<UnityEngine.GameObject>::GetEnumerator()
-#define List_1_GetEnumerator_m2098669206(__this, method) ((  Enumerator_t2895437063  (*) (List_1_t514686775 *, const MethodInfo*))List_1_GetEnumerator_m1919240000_gshared)(__this, method)
+#define List_1_GetEnumerator_m3839587264(__this, method) ((  Enumerator_t2895437063  (*) (List_1_t514686775 *, const MethodInfo*))List_1_GetEnumerator_m1919240000_gshared)(__this, method)
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::IndexOf(T)
 #define List_1_IndexOf_m3444088191(__this, ___item, method) ((  int32_t (*) (List_1_t514686775 *, GameObject_t4012695102 *, const MethodInfo*))List_1_IndexOf_m1752303327_gshared)(__this, ___item, method)
 // System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Shift(System.Int32,System.Int32)

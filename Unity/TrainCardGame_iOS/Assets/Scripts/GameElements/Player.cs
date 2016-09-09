@@ -40,7 +40,7 @@ public class Player : ExtMonoBehaviour
     public Image dimYellow;
     public Image dimGreen;
 
-    public List<Image> grayShaderImages;
+    //    public List<Image> grayShaderImages;
 
     public List<Card> Cards
     {
@@ -124,10 +124,10 @@ public class Player : ExtMonoBehaviour
 
     private void SetGrayEffectAmount(float amount)
     {
-        foreach (var image in grayShaderImages)
-        {
-            image.material.SetFloat("_EffectAmount", amount);
-        }
+//        foreach (var image in grayShaderImages)
+//        {
+//            image.material.SetFloat("_EffectAmount", amount);
+//        }
     }
 
     public List<string> GetCardsValueType

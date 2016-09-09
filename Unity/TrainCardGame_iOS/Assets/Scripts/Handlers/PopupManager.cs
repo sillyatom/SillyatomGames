@@ -6,10 +6,21 @@ using System.Collections.Generic;
 public class PopupManager : ExtMonoBehaviour
 {
     public Image blocker;
-    public GameObject genericPopup;
+    public GameObject connectingPopup;
+    public GameObject determiningHostPopup;
 
     private List<GameObject> _popups;
     private GameObject _activePopup;
+
+    public void AddConnectingPopup()
+    {
+        AddPopup(connectingPopup);
+    }
+
+    public void AddDeterminingHostPopup()
+    {
+        AddPopup(determiningHostPopup);
+    }
 
     public override void Init()
     {
@@ -22,6 +33,7 @@ public class PopupManager : ExtMonoBehaviour
     public void AddPopup(GameObject popup)
     {
         _popups.Add(popup);
+        popup.transform.localScale = Vector3.zero;
         popup.SetActive(false);
         ShowPopup();
     }
@@ -29,7 +41,11 @@ public class PopupManager : ExtMonoBehaviour
     public void RemovePopup(GameObject popup)
     {
         _popups.RemoveAt(0);
-        popup.GetComponent<BaseDialog>().OnRemove();
+        BaseDialog dialog = popup.GetComponent<BaseDialog>();
+        if (dialog != null)
+        {
+            dialog.OnRemove();
+        }
         blocker.gameObject.SetActive(false);
         _activePopup = null;
     }
@@ -38,9 +54,16 @@ public class PopupManager : ExtMonoBehaviour
     {
         if (_activePopup != null)
         {
-            RemovePopup(_activePopup);
-            ShowPopup();
+            StartCoroutine(RemovePopupAfterAnim());
         }
+    }
+
+    private IEnumerator RemovePopupAfterAnim()
+    {
+        _activePopup.GetComponent<Animation>().Play("popup_popIn");
+        yield return new WaitForSeconds(1.1f);
+        RemovePopup(_activePopup);
+        ShowPopup();
     }
 
     private void ShowPopup()
@@ -50,18 +73,10 @@ public class PopupManager : ExtMonoBehaviour
             blocker.gameObject.SetActive(true);
             _activePopup = _popups[0];
             _activePopup.SetActive(true);
-
+            _activePopup.GetComponent<Animation>().Play("popup_popOut");
             _activePopup.transform.SetParent(transform);
             _activePopup.transform.localScale = Vector3.one;
             _activePopup.transform.localPosition = Vector3.zero;
         }
-    }
-
-    public GameObject CreateGenericPopup(string header, string body)
-    {
-        GameObject popup = Instantiate<GameObject>(genericPopup);
-        popup.GetComponent<GenericPopup>().UpdateData(header, body);
-        AddPopup(popup);
-        return popup;
     }
 }

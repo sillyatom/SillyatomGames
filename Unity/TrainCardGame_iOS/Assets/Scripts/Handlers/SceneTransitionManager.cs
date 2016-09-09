@@ -85,4 +85,23 @@ public class SceneTransitionManager : SceneMonoBehaviour
             }
         }
     }
+
+    //---------------------------------------------------------------------------------
+    public void Ref_ShowMainScreen()
+    {
+        SingletonManager.reference.popupManager.RemoveActivePopup();
+        DelayedCall(1.2f, ShowMainScreen);
+    }
+
+    public void Ref_ShowMatchSelectionScreen()
+    {
+        SingletonManager.reference.popupManager.RemoveActivePopup();
+        DelayedCall(1.2f, ShowMatchSelectionScreen);
+    }
+
+    public void Ref_ShowGameSelectionScreen()
+    {
+        SingletonManager.reference.popupManager.RemoveActivePopup();
+        DelayedCall(1.2f, ShowGameSelectionScreen);
+    }
 }

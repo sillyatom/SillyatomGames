@@ -148,7 +148,7 @@ struct XmlNodeListChildren_t91357118;
 // System.Xml.IHasXmlChildNode
 struct IHasXmlChildNode_t3292830944;
 // System.Xml.XmlNodeListChildren/Enumerator
-struct Enumerator_t1072804842;
+struct Enumerator_t1072804843;
 // System.Xml.XmlNotation
 struct XmlNotation_t126967521;
 // System.Xml.XmlParserContext
@@ -18643,7 +18643,7 @@ IL_004b:
 	}
 }
 // System.Collections.IEnumerator System.Xml.XmlNodeListChildren::GetEnumerator()
-extern TypeInfo* Enumerator_t1072804842_il2cpp_TypeInfo_var;
+extern TypeInfo* Enumerator_t1072804843_il2cpp_TypeInfo_var;
 extern const uint32_t XmlNodeListChildren_GetEnumerator_m90577857_MetadataUsageId;
 extern "C"  Il2CppObject * XmlNodeListChildren_GetEnumerator_m90577857 (XmlNodeListChildren_t91357118 * __this, const MethodInfo* method)
 {
@@ -18655,7 +18655,7 @@ extern "C"  Il2CppObject * XmlNodeListChildren_GetEnumerator_m90577857 (XmlNodeL
 	}
 	{
 		Il2CppObject * L_0 = __this->get_parent_0();
-		Enumerator_t1072804842 * L_1 = (Enumerator_t1072804842 *)il2cpp_codegen_object_new(Enumerator_t1072804842_il2cpp_TypeInfo_var);
+		Enumerator_t1072804843 * L_1 = (Enumerator_t1072804843 *)il2cpp_codegen_object_new(Enumerator_t1072804843_il2cpp_TypeInfo_var);
 		Enumerator__ctor_m1583025462(L_1, L_0, /*hidden argument*/NULL);
 		return L_1;
 	}
@@ -18767,7 +18767,7 @@ IL_0070:
 	}
 }
 // System.Void System.Xml.XmlNodeListChildren/Enumerator::.ctor(System.Xml.IHasXmlChildNode)
-extern "C"  void Enumerator__ctor_m1583025462 (Enumerator_t1072804842 * __this, Il2CppObject * ___parent, const MethodInfo* method)
+extern "C"  void Enumerator__ctor_m1583025462 (Enumerator_t1072804843 * __this, Il2CppObject * ___parent, const MethodInfo* method)
 {
 	{
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
@@ -18782,7 +18782,7 @@ extern "C"  void Enumerator__ctor_m1583025462 (Enumerator_t1072804842 * __this, 
 extern TypeInfo* IHasXmlChildNode_t3292830944_il2cpp_TypeInfo_var;
 extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
 extern const uint32_t Enumerator_get_Current_m1942501873_MetadataUsageId;
-extern "C"  Il2CppObject * Enumerator_get_Current_m1942501873 (Enumerator_t1072804842 * __this, const MethodInfo* method)
+extern "C"  Il2CppObject * Enumerator_get_Current_m1942501873 (Enumerator_t1072804843 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
@@ -18830,7 +18830,7 @@ IL_002c:
 // System.Boolean System.Xml.XmlNodeListChildren/Enumerator::MoveNext()
 extern TypeInfo* IHasXmlChildNode_t3292830944_il2cpp_TypeInfo_var;
 extern const uint32_t Enumerator_MoveNext_m2489713170_MetadataUsageId;
-extern "C"  bool Enumerator_MoveNext_m2489713170 (Enumerator_t1072804842 * __this, const MethodInfo* method)
+extern "C"  bool Enumerator_MoveNext_m2489713170 (Enumerator_t1072804843 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
@@ -18905,7 +18905,7 @@ IL_0079:
 	}
 }
 // System.Void System.Xml.XmlNodeListChildren/Enumerator::Reset()
-extern "C"  void Enumerator_Reset_m3781311995 (Enumerator_t1072804842 * __this, const MethodInfo* method)
+extern "C"  void Enumerator_Reset_m3781311995 (Enumerator_t1072804843 * __this, const MethodInfo* method)
 {
 	{
 		__this->set_currentChild_1((XmlLinkedNode_t3253021914 *)NULL);

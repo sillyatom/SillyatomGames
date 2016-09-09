@@ -39,3 +39,9 @@ extern "C"  void SceneTransitionManager_ShowGameSelectionScreen_m2506809590 (Sce
 extern "C"  void SceneTransitionManager_SetActiveScreen_m3079263841 (SceneTransitionManager_t1210711436 * __this, String_t* ___tag, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SceneTransitionManager::RearrangeScreens()
 extern "C"  void SceneTransitionManager_RearrangeScreens_m1562589827 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneTransitionManager::Ref_ShowMainScreen()
+extern "C"  void SceneTransitionManager_Ref_ShowMainScreen_m2364227587 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneTransitionManager::Ref_ShowMatchSelectionScreen()
+extern "C"  void SceneTransitionManager_Ref_ShowMatchSelectionScreen_m2432084305 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SceneTransitionManager::Ref_ShowGameSelectionScreen()
+extern "C"  void SceneTransitionManager_Ref_ShowGameSelectionScreen_m982432298 (SceneTransitionManager_t1210711436 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
