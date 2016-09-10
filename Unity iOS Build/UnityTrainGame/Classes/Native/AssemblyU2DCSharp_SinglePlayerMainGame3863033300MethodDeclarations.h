@@ -31,6 +31,8 @@ extern "C"  void SinglePlayerMainGame__ctor_m725906247 (SinglePlayerMainGame_t38
 extern "C"  void SinglePlayerMainGame_Init_m1637520941 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::OnSetToView()
 extern "C"  void SinglePlayerMainGame_OnSetToView_m718404680 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SinglePlayerMainGame::StartGame()
+extern "C"  void SinglePlayerMainGame_StartGame_m3627285721 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::InitGame()
 extern "C"  void SinglePlayerMainGame_InitGame_m2164794303 (SinglePlayerMainGame_t3863033300 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void SinglePlayerMainGame::UpdatePlayers()

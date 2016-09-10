@@ -615,6 +615,10 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         {
             player.IsDistributionComplete = true;
             player.EnableCountPip(true);
+            if (network.HostId != player.playerId)
+            {
+                player.SetGrayEffectForAllCards(1.0f);
+            }
         }
             
         if (!Networking.IsHost)

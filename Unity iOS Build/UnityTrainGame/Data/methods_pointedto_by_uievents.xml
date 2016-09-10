@@ -8,13 +8,13 @@
 			<method name="Ref_ShowMatchSelectionScreen"/>
 			<method name="Ref_ShowMainScreen"/>
 			<method name="Ref_ShowGameSelectionScreen"/>
-			<method name="Ref_ShowMatchSelectionScreen"/>
 			<method name="ShowMainScreen"/>
+			<method name="Ref_ShowMatchSelectionScreen"/>
 		</type>
 		<type fullname="GameSelectionScreen">
-			<method name="Play"/>
 			<method name="Next"/>
 			<method name="Previous"/>
+			<method name="Play"/>
 		</type>
 	</assembly>
 </linker>

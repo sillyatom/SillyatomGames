@@ -16130,6 +16130,7 @@ extern "C" void Player_get_SelectedCardValueType_m3899190188 ();
 extern "C" void Player_get_SelectedCard_m249687851 ();
 extern "C" void Player_get_HasCards_m704772400 ();
 extern "C" void Player_get_CardsCount_m2813266637 ();
+extern "C" void Player_SetGrayEffectForAllCards_m1980917772 ();
 extern "C" void Player_SetTurnStatus_m1956600040 ();
 extern "C" void Player_SetGrayEffectAmount_m533122949 ();
 extern "C" void Player_get_GetCardsValueType_m1254267132 ();
@@ -16287,6 +16288,7 @@ extern "C" void SharedMainGame_EnableHud_m1748585021 ();
 extern "C" void SinglePlayerMainGame__ctor_m725906247 ();
 extern "C" void SinglePlayerMainGame_Init_m1637520941 ();
 extern "C" void SinglePlayerMainGame_OnSetToView_m718404680 ();
+extern "C" void SinglePlayerMainGame_StartGame_m3627285721 ();
 extern "C" void SinglePlayerMainGame_InitGame_m2164794303 ();
 extern "C" void SinglePlayerMainGame_UpdatePlayers_m18221774 ();
 extern "C" void SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371 ();
@@ -16386,7 +16388,7 @@ extern "C" void Vector4Converter_WriteJson_m905876936 ();
 extern "C" void Vector4Converter_CanConvert_m3695854826 ();
 extern "C" void Vector4Converter_ReadJson_m2611328459 ();
 extern "C" void Vector4Converter_get_CanRead_m1021444499 ();
-extern const methodPointerType g_MethodPointers[16375] = 
+extern const methodPointerType g_MethodPointers[16377] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -32507,6 +32509,7 @@ extern const methodPointerType g_MethodPointers[16375] =
 	Player_get_SelectedCard_m249687851,
 	Player_get_HasCards_m704772400,
 	Player_get_CardsCount_m2813266637,
+	Player_SetGrayEffectForAllCards_m1980917772,
 	Player_SetTurnStatus_m1956600040,
 	Player_SetGrayEffectAmount_m533122949,
 	Player_get_GetCardsValueType_m1254267132,
@@ -32664,6 +32667,7 @@ extern const methodPointerType g_MethodPointers[16375] =
 	SinglePlayerMainGame__ctor_m725906247,
 	SinglePlayerMainGame_Init_m1637520941,
 	SinglePlayerMainGame_OnSetToView_m718404680,
+	SinglePlayerMainGame_StartGame_m3627285721,
 	SinglePlayerMainGame_InitGame_m2164794303,
 	SinglePlayerMainGame_UpdatePlayers_m18221774,
 	SinglePlayerMainGame_OnDistributeAllWinningCards_m3377081371,

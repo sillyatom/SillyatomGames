@@ -57,6 +57,8 @@ extern "C"  Card_t2092848 * Player_get_SelectedCard_m249687851 (Player_t23930816
 extern "C"  bool Player_get_HasCards_m704772400 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Player::get_CardsCount()
 extern "C"  int32_t Player_get_CardsCount_m2813266637 (Player_t2393081601 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Player::SetGrayEffectForAllCards(System.Single)
+extern "C"  void Player_SetGrayEffectForAllCards_m1980917772 (Player_t2393081601 * __this, float ___val, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::SetTurnStatus(E_PLAYER_TURN)
 extern "C"  void Player_SetTurnStatus_m1956600040 (Player_t2393081601 * __this, int32_t ___status, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Player::SetGrayEffectAmount(System.Single)

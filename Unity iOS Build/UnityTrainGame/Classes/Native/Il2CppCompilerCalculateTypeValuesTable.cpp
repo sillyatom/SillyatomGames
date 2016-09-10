@@ -2107,7 +2107,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[9522] = 
+extern const int32_t g_FieldOffsetTable[9524] = 
 {
 	0,
 	0,
@@ -11423,8 +11423,10 @@ extern const int32_t g_FieldOffsetTable[9522] =
 	Player_t2393081601::get_offset_of_dimRed_19(),
 	Player_t2393081601::get_offset_of_dimYellow_20(),
 	Player_t2393081601::get_offset_of_dimGreen_21(),
-	Player_t2393081601::get_offset_of_U3CIsDistributionCompleteU3Ek__BackingField_22(),
-	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_23(),
+	Player_t2393081601::get_offset_of_redColor_22(),
+	Player_t2393081601::get_offset_of_grayColor_23(),
+	Player_t2393081601::get_offset_of_U3CIsDistributionCompleteU3Ek__BackingField_24(),
+	Player_t2393081601::get_offset_of_U3CDidPullOverU3Ek__BackingField_25(),
 	Train_t81068520::get_offset_of_compartments_2(),
 	Trains_t2513124235::get_offset_of_trains_2(),
 	Trains_t2513124235::get_offset_of__activeTrain_3(),

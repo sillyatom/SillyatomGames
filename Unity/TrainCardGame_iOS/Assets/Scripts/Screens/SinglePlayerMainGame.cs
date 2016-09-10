@@ -19,29 +19,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     {
         base.OnSetToView();
         SingletonManager.reference.hud.gameObject.SetActive(false);
-        foreach (var player in _players)
-        {
-            player.transform.localScale = Vector3.zero;
-        }
-
-        PlayPlayersAnim();
-    }
-
-    private void PlayPlayersAnim()
-    {
-        float delay = 0.2f;
-        int runningIndex = 0;
-        foreach (var player in _players)
-        {
-            DelayedCallWithArgs<GameObject>(delay * runningIndex, PlayPlayerAnim, player.gameObject);
-            runningIndex++;
-        }
-        DelayedCall(1.0f, StartGame);
-    }
-
-    private void PlayPlayerAnim(GameObject player)
-    {
-        player.GetComponent<Animation>().Play("bounceOut");
+        DelayedCall(0.25f, StartGame);
     }
 
     private void StartGame()
@@ -154,7 +132,10 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         {
             player.IsDistributionComplete = true;
             player.EnableCountPip(true);
+            player.SetGrayEffectForAllCards(1.0f);
         }
+        _players[0].SetGrayEffectForAllCards(0.0f);
+
         _currentPlayerIndex = 0;
         _roundHandler.StartMatch();
     }

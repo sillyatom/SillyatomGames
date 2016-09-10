@@ -40,7 +40,8 @@ public class Player : ExtMonoBehaviour
     public Image dimYellow;
     public Image dimGreen;
 
-    //    public List<Image> grayShaderImages;
+    public Color redColor;
+    public Color grayColor;
 
     public List<Card> Cards
     {
@@ -96,26 +97,47 @@ public class Player : ExtMonoBehaviour
         }
     }
 
+    public void SetGrayEffectForAllCards(float val)
+    {
+        foreach (var card in _cards)
+        {
+            card.SetGrayEffect(val);
+        }
+        if (val == 1.0f)
+        {
+            countPip.GetComponent<Image>().color = grayColor;
+        }
+        else if (val == 0.0f)
+        {
+            countPip.GetComponent<Image>().color = redColor;
+        }
+
+    }
+
+
     public void SetTurnStatus(E_PLAYER_TURN status)
     {
         switch (status)
         {
             case E_PLAYER_TURN.WAITING:
-                dimRed.enabled = true;
+                dimRed.enabled = false;
                 dimYellow.enabled = true;
                 dimGreen.enabled = true;
+                SetGrayEffectForAllCards(1.0f);
                 break;
 
             case E_PLAYER_TURN.PLAYING:
                 dimRed.enabled = true;
                 dimYellow.enabled = true;
                 dimGreen.enabled = false;
+                SetGrayEffectForAllCards(0.0f);
                 break;
 
             case E_PLAYER_TURN.GET_READY:
                 dimRed.enabled = true;
                 dimYellow.enabled = false;
                 dimGreen.enabled = true;
+                SetGrayEffectForAllCards(1.0f);
                 break;
         }
 
@@ -124,10 +146,6 @@ public class Player : ExtMonoBehaviour
 
     private void SetGrayEffectAmount(float amount)
     {
-//        foreach (var image in grayShaderImages)
-//        {
-//            image.material.SetFloat("_EffectAmount", amount);
-//        }
     }
 
     public List<string> GetCardsValueType

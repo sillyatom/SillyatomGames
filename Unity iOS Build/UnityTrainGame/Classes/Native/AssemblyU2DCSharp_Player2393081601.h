@@ -32,6 +32,7 @@ struct CardSelectionHandler_t2914958190;
 #include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193.h"
 #include "UnityEngine_UnityEngine_Vector33525329789.h"
 #include "UnityEngine_UnityEngine_Vector23525329788.h"
+#include "UnityEngine_UnityEngine_Color1588175760.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -81,10 +82,14 @@ public:
 	Image_t3354615620 * ___dimYellow_20;
 	// UnityEngine.UI.Image Player::dimGreen
 	Image_t3354615620 * ___dimGreen_21;
+	// UnityEngine.Color Player::redColor
+	Color_t1588175760  ___redColor_22;
+	// UnityEngine.Color Player::grayColor
+	Color_t1588175760  ___grayColor_23;
 	// System.Boolean Player::<IsDistributionComplete>k__BackingField
-	bool ___U3CIsDistributionCompleteU3Ek__BackingField_22;
+	bool ___U3CIsDistributionCompleteU3Ek__BackingField_24;
 	// System.Boolean Player::<DidPullOver>k__BackingField
-	bool ___U3CDidPullOverU3Ek__BackingField_23;
+	bool ___U3CDidPullOverU3Ek__BackingField_25;
 
 public:
 	inline static int32_t get_offset_of_index_3() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___index_3)); }
@@ -252,20 +257,36 @@ public:
 		Il2CppCodeGenWriteBarrier(&___dimGreen_21, value);
 	}
 
-	inline static int32_t get_offset_of_U3CIsDistributionCompleteU3Ek__BackingField_22() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___U3CIsDistributionCompleteU3Ek__BackingField_22)); }
-	inline bool get_U3CIsDistributionCompleteU3Ek__BackingField_22() const { return ___U3CIsDistributionCompleteU3Ek__BackingField_22; }
-	inline bool* get_address_of_U3CIsDistributionCompleteU3Ek__BackingField_22() { return &___U3CIsDistributionCompleteU3Ek__BackingField_22; }
-	inline void set_U3CIsDistributionCompleteU3Ek__BackingField_22(bool value)
+	inline static int32_t get_offset_of_redColor_22() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___redColor_22)); }
+	inline Color_t1588175760  get_redColor_22() const { return ___redColor_22; }
+	inline Color_t1588175760 * get_address_of_redColor_22() { return &___redColor_22; }
+	inline void set_redColor_22(Color_t1588175760  value)
 	{
-		___U3CIsDistributionCompleteU3Ek__BackingField_22 = value;
+		___redColor_22 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CDidPullOverU3Ek__BackingField_23() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___U3CDidPullOverU3Ek__BackingField_23)); }
-	inline bool get_U3CDidPullOverU3Ek__BackingField_23() const { return ___U3CDidPullOverU3Ek__BackingField_23; }
-	inline bool* get_address_of_U3CDidPullOverU3Ek__BackingField_23() { return &___U3CDidPullOverU3Ek__BackingField_23; }
-	inline void set_U3CDidPullOverU3Ek__BackingField_23(bool value)
+	inline static int32_t get_offset_of_grayColor_23() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___grayColor_23)); }
+	inline Color_t1588175760  get_grayColor_23() const { return ___grayColor_23; }
+	inline Color_t1588175760 * get_address_of_grayColor_23() { return &___grayColor_23; }
+	inline void set_grayColor_23(Color_t1588175760  value)
 	{
-		___U3CDidPullOverU3Ek__BackingField_23 = value;
+		___grayColor_23 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CIsDistributionCompleteU3Ek__BackingField_24() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___U3CIsDistributionCompleteU3Ek__BackingField_24)); }
+	inline bool get_U3CIsDistributionCompleteU3Ek__BackingField_24() const { return ___U3CIsDistributionCompleteU3Ek__BackingField_24; }
+	inline bool* get_address_of_U3CIsDistributionCompleteU3Ek__BackingField_24() { return &___U3CIsDistributionCompleteU3Ek__BackingField_24; }
+	inline void set_U3CIsDistributionCompleteU3Ek__BackingField_24(bool value)
+	{
+		___U3CIsDistributionCompleteU3Ek__BackingField_24 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CDidPullOverU3Ek__BackingField_25() { return static_cast<int32_t>(offsetof(Player_t2393081601, ___U3CDidPullOverU3Ek__BackingField_25)); }
+	inline bool get_U3CDidPullOverU3Ek__BackingField_25() const { return ___U3CDidPullOverU3Ek__BackingField_25; }
+	inline bool* get_address_of_U3CDidPullOverU3Ek__BackingField_25() { return &___U3CDidPullOverU3Ek__BackingField_25; }
+	inline void set_U3CDidPullOverU3Ek__BackingField_25(bool value)
+	{
+		___U3CDidPullOverU3Ek__BackingField_25 = value;
 	}
 };
 

@@ -6678,7 +6678,7 @@ IL_0059:
 }
 // System.Void GameScreenMonoBehaviour::PlayBtnAnim(UnityEngine.GameObject)
 extern const MethodInfo* GameObject_GetComponent_TisAnimation_t350396337_m2530801684_MethodInfo_var;
-extern Il2CppCodeGenString* _stringLiteral2171563604;
+extern Il2CppCodeGenString* _stringLiteral3143979942;
 extern const uint32_t GameScreenMonoBehaviour_PlayBtnAnim_m3883930078_MetadataUsageId;
 extern "C"  void GameScreenMonoBehaviour_PlayBtnAnim_m3883930078 (GameScreenMonoBehaviour_t3269764764 * __this, GameObject_t4012695102 * ___btn, const MethodInfo* method)
 {
@@ -6693,7 +6693,7 @@ extern "C"  void GameScreenMonoBehaviour_PlayBtnAnim_m3883930078 (GameScreenMono
 		NullCheck(L_0);
 		Animation_t350396337 * L_1 = GameObject_GetComponent_TisAnimation_t350396337_m2530801684(L_0, /*hidden argument*/GameObject_GetComponent_TisAnimation_t350396337_m2530801684_MethodInfo_var);
 		NullCheck(L_1);
-		Animation_Play_m900498501(L_1, _stringLiteral2171563604, /*hidden argument*/NULL);
+		Animation_Play_m900498501(L_1, _stringLiteral3143979942, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -6759,7 +6759,7 @@ extern "C"  void GameSelectionScreen__cctor_m2869814472 (Il2CppObject * __this /
 		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_7, 0);
 		List_1_t3644373756 * L_8 = V_0;
 		NullCheck(L_8);
-		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_8, 1);
+		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_8, 3);
 		List_1_t3644373756 * L_9 = V_0;
 		NullCheck(L_9);
 		VirtActionInvoker1< int32_t >::Invoke(22 /* System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0) */, L_9, 5);
@@ -14724,7 +14724,7 @@ IL_0043:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_005e;
+			goto IL_0084;
 		}
 
 IL_0048:
@@ -14737,68 +14737,87 @@ IL_0048:
 			Player_t2393081601 * L_12 = V_0;
 			NullCheck(L_12);
 			Player_EnableCountPip_m2105921196(L_12, (bool)1, /*hidden argument*/NULL);
+			Networking_t1515242260 * L_13 = __this->get_network_6();
+			NullCheck(L_13);
+			String_t* L_14 = Networking_get_HostId_m3636325228(L_13, /*hidden argument*/NULL);
+			Player_t2393081601 * L_15 = V_0;
+			NullCheck(L_15);
+			String_t* L_16 = L_15->get_playerId_4();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_17 = String_op_Inequality_m2125462205(NULL /*static, unused*/, L_14, L_16, /*hidden argument*/NULL);
+			if (!L_17)
+			{
+				goto IL_0084;
+			}
 		}
 
-IL_005e:
+IL_0079:
 		{
-			bool L_13 = Enumerator_MoveNext_m3041717207((&V_1), /*hidden argument*/Enumerator_MoveNext_m3041717207_MethodInfo_var);
-			if (L_13)
+			Player_t2393081601 * L_18 = V_0;
+			NullCheck(L_18);
+			Player_SetGrayEffectForAllCards_m1980917772(L_18, (1.0f), /*hidden argument*/NULL);
+		}
+
+IL_0084:
+		{
+			bool L_19 = Enumerator_MoveNext_m3041717207((&V_1), /*hidden argument*/Enumerator_MoveNext_m3041717207_MethodInfo_var);
+			if (L_19)
 			{
 				goto IL_0048;
 			}
 		}
 
-IL_006a:
+IL_0090:
 		{
-			IL2CPP_LEAVE(0x7B, FINALLY_006f);
+			IL2CPP_LEAVE(0xA1, FINALLY_0095);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
-		goto FINALLY_006f;
+		goto FINALLY_0095;
 	}
 
-FINALLY_006f:
+FINALLY_0095:
 	{ // begin finally (depth: 1)
-		Enumerator_t1275823562  L_14 = V_1;
-		Enumerator_t1275823562  L_15 = L_14;
-		Il2CppObject * L_16 = Box(Enumerator_t1275823562_il2cpp_TypeInfo_var, &L_15);
-		NullCheck((Il2CppObject *)L_16);
-		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_16);
-		IL2CPP_END_FINALLY(111)
+		Enumerator_t1275823562  L_20 = V_1;
+		Enumerator_t1275823562  L_21 = L_20;
+		Il2CppObject * L_22 = Box(Enumerator_t1275823562_il2cpp_TypeInfo_var, &L_21);
+		NullCheck((Il2CppObject *)L_22);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, (Il2CppObject *)L_22);
+		IL2CPP_END_FINALLY(149)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(111)
+	IL2CPP_CLEANUP(149)
 	{
-		IL2CPP_JUMP_TBL(0x7B, IL_007b)
+		IL2CPP_JUMP_TBL(0xA1, IL_00a1)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
 	}
 
-IL_007b:
+IL_00a1:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Networking_t1515242260_il2cpp_TypeInfo_var);
-		bool L_17 = ((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->get_IsHost_9();
-		if (L_17)
+		bool L_23 = ((Networking_t1515242260_StaticFields*)Networking_t1515242260_il2cpp_TypeInfo_var->static_fields)->get_IsHost_9();
+		if (L_23)
 		{
-			goto IL_00ac;
+			goto IL_00d2;
 		}
 	}
 	{
-		NetworkResponse_t1683455087 * L_18 = __this->get__lastResponse_9();
-		GameEvent_t2981166504 * L_19 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
-		GameEvent__ctor_m685722812(L_19, _stringLiteral1064297116, L_18, /*hidden argument*/NULL);
-		V_2 = L_19;
+		NetworkResponse_t1683455087 * L_24 = __this->get__lastResponse_9();
+		GameEvent_t2981166504 * L_25 = (GameEvent_t2981166504 *)il2cpp_codegen_object_new(GameEvent_t2981166504_il2cpp_TypeInfo_var);
+		GameEvent__ctor_m685722812(L_25, _stringLiteral1064297116, L_24, /*hidden argument*/NULL);
+		V_2 = L_25;
 		IL2CPP_RUNTIME_CLASS_INIT(EventManager_t1907836883_il2cpp_TypeInfo_var);
-		EventManager_t1907836883 * L_20 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
-		GameEvent_t2981166504 * L_21 = V_2;
-		NullCheck(L_20);
-		EventManager_Raise_m2130241432(L_20, L_21, /*hidden argument*/NULL);
-		RoundHandler_t2172802556 * L_22 = __this->get__roundHandler_8();
-		NullCheck(L_22);
-		RoundHandler_StartMatch_m3028602888(L_22, /*hidden argument*/NULL);
+		EventManager_t1907836883 * L_26 = EventManager_get_instance_m1155482276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameEvent_t2981166504 * L_27 = V_2;
+		NullCheck(L_26);
+		EventManager_Raise_m2130241432(L_26, L_27, /*hidden argument*/NULL);
+		RoundHandler_t2172802556 * L_28 = __this->get__roundHandler_8();
+		NullCheck(L_28);
+		RoundHandler_StartMatch_m3028602888(L_28, /*hidden argument*/NULL);
 	}
 
-IL_00ac:
+IL_00d2:
 	{
 		return;
 	}
