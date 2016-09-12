@@ -22,6 +22,7 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     protected RoundHandler _roundHandler;
 
     private NetworkResponse _lastResponse;
+    public int WinAmount;
 
     override public void Init()
     {
@@ -67,6 +68,34 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
 
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
+        WinAmount = GameSelectionScreen.GetEntryFees() * network.numPlayers;
+        float scale;
+        int runningIndex = 0;
+        foreach (var player in _players)
+        {
+            if (player.IsLocalPlayer)
+            {
+                scale = 1.0f;
+            }
+            else
+            {
+                scale = 0.7f;
+            }
+            Hashtable args = new Hashtable();
+            args["x"] = scale;
+            args["y"] = scale;
+            args["z"] = scale;
+            args["easeType"] = "easeInOutBack";
+            args["time"] = 0.2f;
+            args["delay"] = runningIndex * 0.1f;
+            iTween.ScaleTo(player.gameObject, args);
+            runningIndex++;
+        }
+        DelayedCall(1.0f, StartGame);
+    }
+
+    virtual protected void StartGame()
+    {
         //if host
         if (Networking.IsHost)
         {
@@ -75,18 +104,62 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         }
     }
 
-    private void ShowWinDialog()
+    virtual protected void ShowWinDialog()
     {
         GameObject dialog = SingletonManager.reference.gameWinDialog;
-        dialog.GetComponent<GameWinDialog>().InitWithData(2, 200);
+        dialog.GetComponent<GameWinDialog>().InitWithData(1, WinAmount);
         SingletonManager.reference.popupManager.AddPopup(dialog);
+        DelayedCallWithArgs<GameWinDialog>(1.0f, OnShowWinDialog, dialog.GetComponent<GameWinDialog>());
     }
 
-    private void ShowFailDialog()
+    private void OnShowWinDialog(GameWinDialog dialog)
+    {
+        SingletonManager.reference.utility.PlayCoinAnimation(dialog.coinImage.GetComponent<RectTransform>(), SingletonManager.reference.hud.tokenText.GetComponent<RectTransform>(), 20);
+    }
+
+    virtual protected void ShowFailDialog()
     {
         GameObject dialog = SingletonManager.reference.gameFailDialog;
         dialog.GetComponent<GameFailDialog>().InitWithData(2, 200);
         SingletonManager.reference.popupManager.AddPopup(dialog);
+    }
+
+    protected void PlayEndAnimation(bool isWin)
+    {
+        float scale = 0.0f;
+        int runningIndex = 0;
+        foreach (var player in _players)
+        {
+            if (player.IsLocalPlayer)
+            {
+                continue;
+            }
+            Hashtable args = new Hashtable();
+            args["x"] = scale;
+            args["y"] = scale;
+            args["z"] = scale;
+            args["easeType"] = "easeInOutBack";
+            args["time"] = 0.2f;
+            args["delay"] = runningIndex * 0.1f;
+            iTween.ScaleTo(player.gameObject, args);
+            runningIndex++;
+        }
+
+        DelayedCallWithArgs<bool>(1.0f, OnCompleteEndAnimation, isWin);
+    }
+
+    protected void OnCompleteEndAnimation(bool isWin)
+    {
+        transform.GetComponent<SharedMainGame>().EnableHud();
+
+        if (isWin)
+        {
+            ShowWinDialog();
+        }
+        else
+        {
+            ShowFailDialog();
+        }
     }
 
     override protected void OnInGameEvent(InGameEvent evt)
@@ -99,11 +172,11 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
                 {
                     if (evt.playerId == network.LocalId)
                     {
-                        ShowWinDialog();
+                        PlayEndAnimation(true);
                     }
                     else
                     {
-                        ShowFailDialog();
+                        PlayEndAnimation(false);
                     }
                 }
                 break;
@@ -764,6 +837,10 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     {
         base.OnSetToView();
         SingletonManager.reference.hud.gameObject.SetActive(false);
+        foreach (var player in _players)
+        {
+            player.gameObject.transform.localScale = Vector3.zero;
+        }
     }
 
     protected void CleanPlayers()

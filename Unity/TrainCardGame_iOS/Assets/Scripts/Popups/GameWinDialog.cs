@@ -7,6 +7,8 @@ public class GameWinDialog : BaseDialog
 {
     public Text totalStarsEarned;
     public Text tokensEarned;
+    public Image coinImage;
+    public Image starImage;
 
     public void InitWithData(int starsEarned, int tokensEarned)
     {

@@ -32,4 +32,13 @@ public class GameObjectRef : MonoBehaviour
 
     [SerializeField]
     public PostURL postMethod;
+
+    [SerializeField]
+    public GameObject coin;
+
+    [SerializeField]
+    public Transform overlay;
+
+    [SerializeField]
+    public Utility utility;
 }

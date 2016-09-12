@@ -10,7 +10,7 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
     public List<GameObject> _train = new List<GameObject>();
     private static List<int> entryFees = new List<int>(){ 0, 100, 150, 300 };
     private static int selectedIndex = 0;
-    private static List<int> matchTypes = new List<int>(){ 0, 3, 5, 10 };
+    private static List<int> matchTypes = new List<int>(){ 0, 1, 5, 10 };
     public float maskWidth = 600;
     float xOffset = 0.0f;
 

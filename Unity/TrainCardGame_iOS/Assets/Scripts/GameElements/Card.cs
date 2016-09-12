@@ -46,6 +46,7 @@ public class Card : ButtonComponent
     {
         Front.gameObject.SetActive(false);
         Back.gameObject.SetActive(true);
+        ShowFrontFace();
     }
 
     public override void OnPointerClick(UnityEngine.EventSystems.PointerEventData eventData)

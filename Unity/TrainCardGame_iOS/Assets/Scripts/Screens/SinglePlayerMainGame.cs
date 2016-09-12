@@ -18,11 +18,37 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     public override void OnSetToView()
     {
         base.OnSetToView();
+        foreach (var player in _players)
+        {
+            player.gameObject.transform.localScale = Vector3.zero;
+        }
         SingletonManager.reference.hud.gameObject.SetActive(false);
-        DelayedCall(0.25f, StartGame);
+        float scale;
+        int runningIndex = 0;
+        foreach (var player in _players)
+        {
+            if (player.IsLocalPlayer)
+            {
+                scale = 1.0f;
+            }
+            else
+            {
+                scale = 0.7f;
+            }
+            Hashtable args = new Hashtable();
+            args["x"] = scale;
+            args["y"] = scale;
+            args["z"] = scale;
+            args["easeType"] = "easeInOutBack";
+            args["time"] = 0.2f;
+            args["delay"] = runningIndex * 0.1f;
+            iTween.ScaleTo(player.gameObject, args);
+            runningIndex++;
+        }
+        DelayedCall(1.0f, StartGame);
     }
 
-    private void StartGame()
+    override protected void StartGame()
     {
         dealer.Init();
         dealer.CreateCards(GameConstants.MAX_PLAYERS);
@@ -45,6 +71,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         _roundHandler.OnRoundCompleteCallback = OnRoundEnd;
 
         UpdatePlayers();
+        WinAmount = GameSelectionScreen.GetEntryFees() * network.numPlayers;
     }
 
     override protected void UpdatePlayers()
@@ -207,7 +234,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         Player player = GetPlayerById(_roundHandler.GetActivePlayerId);
         if (_roundHandler.GetActivePlayerId != network.LocalId)
         {
-            player.DidPullOver = true;//(Utility.GetRandomNumber(0, 100) <= 90);
+            player.DidPullOver = false;//(Utility.GetRandomNumber(0, 100) <= 90);
         }
 
         Card selectedCard = player.SelectedCard;

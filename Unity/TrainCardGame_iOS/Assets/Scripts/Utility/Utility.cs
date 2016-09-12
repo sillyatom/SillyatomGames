@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Utility
+public class Utility : MonoBehaviour
 {
     private static readonly System.Random random = new System.Random(
                                                        "com.sillyatomgames".GetHashCode() + UnityEngine.Random.Range(0, 1000000)
@@ -43,5 +43,28 @@ public class Utility
         }
 
         return retList;
+    }
+
+    public void PlayCoinAnimation(RectTransform from, RectTransform to, int amount)
+    {
+        for (int index = 0; index < amount; index++)
+        {
+            GameObject go = Instantiate<GameObject>(SingletonManager.reference.coin);
+            go.transform.SetParent(SingletonManager.reference.overlay);
+            go.transform.position = Vector3.zero;
+            go.transform.localScale = Vector3.one;
+            go.transform.position = from.transform.position;
+            Hashtable cArgs = new Hashtable();
+            cArgs.Add("go", go);
+            iTween.MoveTo(go, iTween.Hash("x", to.transform.position.x, "y", to.transform.position.y, "time", 0.5f, "delay", index * 0.2f,
+                    "OnComplete", "OnReachDestination", "OnCompleteTarget", gameObject, "OnCompleteParams", cArgs));
+        }
+    }
+
+    private void OnReachDestination(object cArgs)
+    {
+        Hashtable table = (Hashtable)cArgs;
+        GameObject go = (GameObject)table["go"];
+        Destroy(go);
     }
 }
