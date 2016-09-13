@@ -115,7 +115,14 @@ public class GameSelectionScreen : GameScreenMonoBehaviour
 
     public void Play()
     {
-        MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
+        if (LocalPlayerModel.GetInstance().tokens >= GetEntryFees())
+        {
+            MoveToScene(TagConstants.TAG_MATCH_SELECTION_SCREEN);
+        }
+        else
+        {
+            SingletonManager.reference.popupManager.ShowOutOfTokensPopup();
+        }
     }
 
     private void MoveBy(float distance)

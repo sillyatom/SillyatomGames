@@ -59,8 +59,6 @@ struct List_1_t953880252;
 struct List_1_t3057020574;
 // System.Collections.Generic.List`1<UnityEngine.Vector2>
 struct List_1_t27321461;
-// System.Collections.Generic.List`1<UnityEngine.Vector3>
-struct List_1_t27321462;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
@@ -174,10 +172,6 @@ struct List_1_t27321462;
 #include "mscorlib_System_Collections_Generic_List_1_Enumera2408071749MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen27321461.h"
 #include "UnityEngine_UnityEngine_Vector23525329788.h"
-#include "mscorlib_System_Collections_Generic_List_1_Enumera2408071750.h"
-#include "mscorlib_System_Collections_Generic_List_1_Enumera2408071750MethodDeclarations.h"
-#include "mscorlib_System_Collections_Generic_List_1_gen27321462.h"
-#include "UnityEngine_UnityEngine_Vector33525329789.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -5114,180 +5108,6 @@ extern "C"  Vector2_t3525329788  Enumerator_get_Current_m3369998132_gshared (Enu
 {
 	{
 		Vector2_t3525329788  L_0 = (Vector2_t3525329788 )__this->get_current_3();
-		return L_0;
-	}
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::.ctor(System.Collections.Generic.List`1<T>)
-extern "C"  void Enumerator__ctor_m3441507808_gshared (Enumerator_t2408071750 * __this, List_1_t27321462 * ___l, const MethodInfo* method)
-{
-	{
-		List_1_t27321462 * L_0 = ___l;
-		__this->set_l_0(L_0);
-		List_1_t27321462 * L_1 = ___l;
-		NullCheck(L_1);
-		int32_t L_2 = (int32_t)L_1->get__version_3();
-		__this->set_ver_2(L_2);
-		return;
-	}
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::System.Collections.IEnumerator.Reset()
-extern "C"  void Enumerator_System_Collections_IEnumerator_Reset_m4139166322_gshared (Enumerator_t2408071750 * __this, const MethodInfo* method)
-{
-	{
-		((  void (*) (Enumerator_t2408071750 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0)->method)((Enumerator_t2408071750 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0));
-		__this->set_next_1(0);
-		return;
-	}
-}
-// System.Object System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::System.Collections.IEnumerator.get_Current()
-extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
-extern const uint32_t Enumerator_System_Collections_IEnumerator_get_Current_m3716809182_MetadataUsageId;
-extern "C"  Il2CppObject * Enumerator_System_Collections_IEnumerator_get_Current_m3716809182_gshared (Enumerator_t2408071750 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (Enumerator_System_Collections_IEnumerator_get_Current_m3716809182_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		((  void (*) (Enumerator_t2408071750 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0)->method)((Enumerator_t2408071750 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0));
-		int32_t L_0 = (int32_t)__this->get_next_1();
-		if ((((int32_t)L_0) > ((int32_t)0)))
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		InvalidOperationException_t2420574324 * L_1 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
-		InvalidOperationException__ctor_m355676978(L_1, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
-	}
-
-IL_0018:
-	{
-		Vector3_t3525329789  L_2 = (Vector3_t3525329789 )__this->get_current_3();
-		Vector3_t3525329789  L_3 = L_2;
-		Il2CppObject * L_4 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->declaring_type)->rgctx_data, 1), &L_3);
-		return L_4;
-	}
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::Dispose()
-extern "C"  void Enumerator_Dispose_m1109607365_gshared (Enumerator_t2408071750 * __this, const MethodInfo* method)
-{
-	{
-		__this->set_l_0((List_1_t27321462 *)NULL);
-		return;
-	}
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::VerifyState()
-extern TypeInfo* ObjectDisposedException_t973246880_il2cpp_TypeInfo_var;
-extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3238255034;
-extern const uint32_t Enumerator_VerifyState_m2631243902_MetadataUsageId;
-extern "C"  void Enumerator_VerifyState_m2631243902_gshared (Enumerator_t2408071750 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (Enumerator_VerifyState_m2631243902_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		List_1_t27321462 * L_0 = (List_1_t27321462 *)__this->get_l_0();
-		if (L_0)
-		{
-			goto IL_0026;
-		}
-	}
-	{
-		Enumerator_t2408071750  L_1 = (*(Enumerator_t2408071750 *)__this);
-		Il2CppObject * L_2 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->declaring_type)->rgctx_data, 2), &L_1);
-		NullCheck((Il2CppObject *)L_2);
-		Type_t * L_3 = Object_GetType_m2022236990((Il2CppObject *)L_2, /*hidden argument*/NULL);
-		NullCheck((Type_t *)L_3);
-		String_t* L_4 = VirtFuncInvoker0< String_t* >::Invoke(18 /* System.String System.Type::get_FullName() */, (Type_t *)L_3);
-		ObjectDisposedException_t973246880 * L_5 = (ObjectDisposedException_t973246880 *)il2cpp_codegen_object_new(ObjectDisposedException_t973246880_il2cpp_TypeInfo_var);
-		ObjectDisposedException__ctor_m1180707260(L_5, (String_t*)L_4, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
-	}
-
-IL_0026:
-	{
-		int32_t L_6 = (int32_t)__this->get_ver_2();
-		List_1_t27321462 * L_7 = (List_1_t27321462 *)__this->get_l_0();
-		NullCheck(L_7);
-		int32_t L_8 = (int32_t)L_7->get__version_3();
-		if ((((int32_t)L_6) == ((int32_t)L_8)))
-		{
-			goto IL_0047;
-		}
-	}
-	{
-		InvalidOperationException_t2420574324 * L_9 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
-		InvalidOperationException__ctor_m1485483280(L_9, (String_t*)_stringLiteral3238255034, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_9);
-	}
-
-IL_0047:
-	{
-		return;
-	}
-}
-// System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::MoveNext()
-extern "C"  bool Enumerator_MoveNext_m3134255838_gshared (Enumerator_t2408071750 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		((  void (*) (Enumerator_t2408071750 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0)->method)((Enumerator_t2408071750 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0));
-		int32_t L_0 = (int32_t)__this->get_next_1();
-		if ((((int32_t)L_0) >= ((int32_t)0)))
-		{
-			goto IL_0014;
-		}
-	}
-	{
-		return (bool)0;
-	}
-
-IL_0014:
-	{
-		int32_t L_1 = (int32_t)__this->get_next_1();
-		List_1_t27321462 * L_2 = (List_1_t27321462 *)__this->get_l_0();
-		NullCheck(L_2);
-		int32_t L_3 = (int32_t)L_2->get__size_2();
-		if ((((int32_t)L_1) >= ((int32_t)L_3)))
-		{
-			goto IL_0053;
-		}
-	}
-	{
-		List_1_t27321462 * L_4 = (List_1_t27321462 *)__this->get_l_0();
-		NullCheck(L_4);
-		Vector3U5BU5D_t3227571696* L_5 = (Vector3U5BU5D_t3227571696*)L_4->get__items_1();
-		int32_t L_6 = (int32_t)__this->get_next_1();
-		int32_t L_7 = (int32_t)L_6;
-		V_0 = (int32_t)L_7;
-		__this->set_next_1(((int32_t)((int32_t)L_7+(int32_t)1)));
-		int32_t L_8 = V_0;
-		NullCheck(L_5);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_5, L_8);
-		int32_t L_9 = L_8;
-		__this->set_current_3(((L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_9))));
-		return (bool)1;
-	}
-
-IL_0053:
-	{
-		__this->set_next_1((-1));
-		return (bool)0;
-	}
-}
-// T System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector3>::get_Current()
-extern "C"  Vector3_t3525329789  Enumerator_get_Current_m428340533_gshared (Enumerator_t2408071750 * __this, const MethodInfo* method)
-{
-	{
-		Vector3_t3525329789  L_0 = (Vector3_t3525329789 )__this->get_current_3();
 		return L_0;
 	}
 }

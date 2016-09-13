@@ -170,20 +170,24 @@ struct ObjectPool_1_t2954595302;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
-#include "mscorlib_System_Nullable_1_gen1438485341.h"
-#include "mscorlib_System_Nullable_1_gen1438485341MethodDeclarations.h"
+#include "mscorlib_System_Nullable_1_gen1369909202.h"
+#include "mscorlib_System_Nullable_1_gen1369909202MethodDeclarations.h"
+#include "mscorlib_System_Guid2778838590.h"
 #include "mscorlib_System_Void2779279689.h"
-#include "mscorlib_System_Int162847414729.h"
 #include "mscorlib_System_Boolean211005341.h"
 #include "mscorlib_System_InvalidOperationException2420574324MethodDeclarations.h"
 #include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_InvalidOperationException2420574324.h"
 #include "mscorlib_System_Object837106420.h"
-#include "mscorlib_System_Int162847414729MethodDeclarations.h"
+#include "mscorlib_System_Guid2778838590MethodDeclarations.h"
 #include "mscorlib_System_ValueType4014882752MethodDeclarations.h"
 #include "mscorlib_System_ValueType4014882752.h"
 #include "mscorlib_System_Int322847414787.h"
 #include "mscorlib_System_String968488902MethodDeclarations.h"
+#include "mscorlib_System_Nullable_1_gen1438485341.h"
+#include "mscorlib_System_Nullable_1_gen1438485341MethodDeclarations.h"
+#include "mscorlib_System_Int162847414729.h"
+#include "mscorlib_System_Int162847414729MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen1438485399.h"
 #include "mscorlib_System_Nullable_1_gen1438485399MethodDeclarations.h"
 #include "mscorlib_System_Int322847414787MethodDeclarations.h"
@@ -473,6 +477,249 @@ extern "C"  Il2CppObject * Activator_CreateInstance_TisIl2CppObject_m1443760614_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Nullable`1<System.Guid>::.ctor(T)
+extern "C"  void Nullable_1__ctor_m1464594829_gshared (Nullable_1_t1369909202 * __this, Guid_t2778838590  ___value, const MethodInfo* method)
+{
+	{
+		__this->set_has_value_1((bool)1);
+		Guid_t2778838590  L_0 = ___value;
+		__this->set_value_0(L_0);
+		return;
+	}
+}
+// System.Boolean System.Nullable`1<System.Guid>::get_HasValue()
+extern "C"  bool Nullable_1_get_HasValue_m403466462_gshared (Nullable_1_t1369909202 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = (bool)__this->get_has_value_1();
+		return L_0;
+	}
+}
+// T System.Nullable`1<System.Guid>::get_Value()
+extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral78850559;
+extern const uint32_t Nullable_1_get_Value_m2548406674_MetadataUsageId;
+extern "C"  Guid_t2778838590  Nullable_1_get_Value_m2548406674_gshared (Nullable_1_t1369909202 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Nullable_1_get_Value_m2548406674_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		bool L_0 = (bool)__this->get_has_value_1();
+		if (L_0)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		InvalidOperationException_t2420574324 * L_1 = (InvalidOperationException_t2420574324 *)il2cpp_codegen_object_new(InvalidOperationException_t2420574324_il2cpp_TypeInfo_var);
+		InvalidOperationException__ctor_m1485483280(L_1, (String_t*)_stringLiteral78850559, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0016:
+	{
+		Guid_t2778838590  L_2 = (Guid_t2778838590 )__this->get_value_0();
+		return L_2;
+	}
+}
+// System.Boolean System.Nullable`1<System.Guid>::Equals(System.Object)
+extern "C"  bool Nullable_1_Equals_m3339505760_gshared (Nullable_1_t1369909202 * __this, Il2CppObject * ___other, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = ___other;
+		if (L_0)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		bool L_1 = (bool)__this->get_has_value_1();
+		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
+	}
+
+IL_0010:
+	{
+		Il2CppObject * L_2 = ___other;
+		if (((Il2CppObject *)IsInst(L_2, IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0))))
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_001d:
+	{
+		Il2CppObject * L_3 = ___other;
+		void* L_4 = alloca(sizeof(Nullable_1_t1369909202 ));
+		UnBoxNullable(L_3, IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0), L_4);
+		bool L_5 = ((  bool (*) (Nullable_1_t1369909202 *, Nullable_1_t1369909202 , const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 1)->method)((Nullable_1_t1369909202 *)__this, (Nullable_1_t1369909202 )((*(Nullable_1_t1369909202 *)((Nullable_1_t1369909202 *)L_4))), /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 1));
+		return L_5;
+	}
+}
+// System.Boolean System.Nullable`1<System.Guid>::Equals(System.Nullable`1<T>)
+extern "C"  bool Nullable_1_Equals_m2950403807_gshared (Nullable_1_t1369909202 * __this, Nullable_1_t1369909202  ___other, const MethodInfo* method)
+{
+	{
+		bool L_0 = (bool)(&___other)->get_has_value_1();
+		bool L_1 = (bool)__this->get_has_value_1();
+		if ((((int32_t)L_0) == ((int32_t)L_1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0014:
+	{
+		bool L_2 = (bool)__this->get_has_value_1();
+		if (L_2)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_0021:
+	{
+		Guid_t2778838590 * L_3 = (Guid_t2778838590 *)(&___other)->get_address_of_value_0();
+		Guid_t2778838590  L_4 = (Guid_t2778838590 )__this->get_value_0();
+		Guid_t2778838590  L_5 = L_4;
+		Il2CppObject * L_6 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->declaring_type)->rgctx_data, 2), &L_5);
+		bool L_7 = Guid_Equals_m1613304319((Guid_t2778838590 *)L_3, (Il2CppObject *)L_6, /*hidden argument*/NULL);
+		return L_7;
+	}
+}
+// System.Int32 System.Nullable`1<System.Guid>::GetHashCode()
+extern "C"  int32_t Nullable_1_GetHashCode_m3813908292_gshared (Nullable_1_t1369909202 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = (bool)__this->get_has_value_1();
+		if (L_0)
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_000d:
+	{
+		Guid_t2778838590 * L_1 = (Guid_t2778838590 *)__this->get_address_of_value_0();
+		int32_t L_2 = Guid_GetHashCode_m885349207((Guid_t2778838590 *)L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
+// T System.Nullable`1<System.Guid>::GetValueOrDefault()
+extern TypeInfo* Guid_t2778838590_il2cpp_TypeInfo_var;
+extern const uint32_t Nullable_1_GetValueOrDefault_m1676531091_MetadataUsageId;
+extern "C"  Guid_t2778838590  Nullable_1_GetValueOrDefault_m1676531091_gshared (Nullable_1_t1369909202 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Nullable_1_GetValueOrDefault_m1676531091_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Guid_t2778838590  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Guid_t2778838590  G_B3_0;
+	memset(&G_B3_0, 0, sizeof(G_B3_0));
+	{
+		bool L_0 = (bool)__this->get_has_value_1();
+		if (!L_0)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		Guid_t2778838590  L_1 = (Guid_t2778838590 )__this->get_value_0();
+		G_B3_0 = L_1;
+		goto IL_001f;
+	}
+
+IL_0016:
+	{
+		Initobj (Guid_t2778838590_il2cpp_TypeInfo_var, (&V_0));
+		Guid_t2778838590  L_2 = V_0;
+		G_B3_0 = L_2;
+	}
+
+IL_001f:
+	{
+		return G_B3_0;
+	}
+}
+// T System.Nullable`1<System.Guid>::GetValueOrDefault(T)
+extern "C"  Guid_t2778838590  Nullable_1_GetValueOrDefault_m432857643_gshared (Nullable_1_t1369909202 * __this, Guid_t2778838590  ___defaultValue, const MethodInfo* method)
+{
+	Guid_t2778838590  G_B3_0;
+	memset(&G_B3_0, 0, sizeof(G_B3_0));
+	{
+		bool L_0 = (bool)__this->get_has_value_1();
+		if (!L_0)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		Guid_t2778838590  L_1 = (Guid_t2778838590 )__this->get_value_0();
+		G_B3_0 = L_1;
+		goto IL_0017;
+	}
+
+IL_0016:
+	{
+		Guid_t2778838590  L_2 = ___defaultValue;
+		G_B3_0 = L_2;
+	}
+
+IL_0017:
+	{
+		return G_B3_0;
+	}
+}
+// System.String System.Nullable`1<System.Guid>::ToString()
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern const uint32_t Nullable_1_ToString_m2800437186_MetadataUsageId;
+extern "C"  String_t* Nullable_1_ToString_m2800437186_gshared (Nullable_1_t1369909202 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Nullable_1_ToString_m2800437186_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		bool L_0 = (bool)__this->get_has_value_1();
+		if (!L_0)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		Guid_t2778838590 * L_1 = (Guid_t2778838590 *)__this->get_address_of_value_0();
+		String_t* L_2 = Guid_ToString_m2528531937((Guid_t2778838590 *)L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+
+IL_001d:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_3 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		return L_3;
+	}
+}
 // System.Void System.Nullable`1<System.Int16>::.ctor(T)
 extern "C"  void Nullable_1__ctor_m782064958_gshared (Nullable_1_t1438485341 * __this, int16_t ___value, const MethodInfo* method)
 {

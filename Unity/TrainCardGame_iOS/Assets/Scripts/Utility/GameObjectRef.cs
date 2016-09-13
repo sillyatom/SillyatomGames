@@ -41,4 +41,7 @@ public class GameObjectRef : MonoBehaviour
 
     [SerializeField]
     public Utility utility;
+
+    [SerializeField]
+    public AdManager adsManager;
 }

@@ -1,14 +1,14 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="SceneTransitionManager">
+			<method name="Ref_ShowMainScreen"/>
 			<method name="Ref_ShowGameSelectionScreen"/>
 			<method name="Ref_ShowMainScreen"/>
 			<method name="ShowGameSelectionScreen"/>
-			<method name="ShowMainScreen"/>
-			<method name="Ref_ShowMatchSelectionScreen"/>
-			<method name="Ref_ShowMainScreen"/>
 			<method name="Ref_ShowGameSelectionScreen"/>
 			<method name="ShowMainScreen"/>
+			<method name="ShowMainScreen"/>
+			<method name="Ref_ShowMatchSelectionScreen"/>
 			<method name="Ref_ShowMatchSelectionScreen"/>
 		</type>
 		<type fullname="GameSelectionScreen">

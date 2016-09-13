@@ -7,10 +7,28 @@ public class PopupManager : ExtMonoBehaviour
 {
     public Image blocker;
     public GameObject connectingPopup;
+    public GameObject outOfTokensPopup;
     public GameObject determiningHostPopup;
 
     private List<GameObject> _popups;
     private GameObject _activePopup;
+
+    public void ShowPurchasePopup()
+    {
+        RemoveActivePopup();
+        BridgeDebugger.Log(" Show Purchase Popup ");
+    }
+
+    public void ShowRewardAds()
+    {
+        RemoveActivePopup();
+        DelayedCall(1.0f, TriggerRewardAds);
+    }
+
+    private void TriggerRewardAds()
+    {
+        SingletonManager.reference.adsManager.ShowRewardedAd();
+    }
 
     public void AddConnectingPopup()
     {
@@ -78,5 +96,10 @@ public class PopupManager : ExtMonoBehaviour
             _activePopup.transform.localScale = Vector3.one;
             _activePopup.transform.localPosition = Vector3.zero;
         }
+    }
+
+    public void ShowOutOfTokensPopup()
+    {
+        AddPopup(outOfTokensPopup);
     }
 }

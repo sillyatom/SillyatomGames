@@ -45,8 +45,14 @@ public class ExecutionOrderManager : MonoBehaviour
 
         SingletonManager.reference.postMethod.StartRequest(form, OnDataReceived);
         #else
-        InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, _vo.SigningStatus);
-        EventManager.instance.Raise(evt);
+        {
+            InGameEvent evt = new InGameEvent(InGameEvent.GC_STATUS, _vo.SigningStatus);
+            EventManager.instance.Raise(evt);
+        }
+        {
+            GameEvent evt = new GameEvent(GameEvent.UPDATE_PLAYER_MODEL, new LocalPlayerModelVO(100, 10));
+            EventManager.instance.Raise(evt);
+        }
         #endif
     }
 

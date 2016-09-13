@@ -11161,12 +11161,12 @@ extern "C"  void Random__ctor_m4002613091 (Random_t922188920 * __this, int32_t _
 	int32_t V_4 = 0;
 	int32_t V_5 = 0;
 	{
-		__this->set_SeedArray_2(((Int32U5BU5D_t1809983122*)SZArrayNew(Int32U5BU5D_t1809983122_il2cpp_TypeInfo_var, (uint32_t)((int32_t)56))));
+		__this->set_SeedArray_5(((Int32U5BU5D_t1809983122*)SZArrayNew(Int32U5BU5D_t1809983122_il2cpp_TypeInfo_var, (uint32_t)((int32_t)56))));
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
 		int32_t L_0 = ___Seed;
 		int32_t L_1 = abs(L_0);
 		V_1 = ((int32_t)((int32_t)((int32_t)161803398)-(int32_t)L_1));
-		Int32U5BU5D_t1809983122* L_2 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_2 = __this->get_SeedArray_5();
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_2, ((int32_t)55));
@@ -11180,7 +11180,7 @@ IL_0033:
 	{
 		int32_t L_4 = V_3;
 		V_0 = ((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)21)*(int32_t)L_4))%(int32_t)((int32_t)55)));
-		Int32U5BU5D_t1809983122* L_5 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_5 = __this->get_SeedArray_5();
 		int32_t L_6 = V_0;
 		int32_t L_7 = V_2;
 		NullCheck(L_5);
@@ -11202,7 +11202,7 @@ IL_0033:
 
 IL_0057:
 	{
-		Int32U5BU5D_t1809983122* L_12 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_12 = __this->get_SeedArray_5();
 		int32_t L_13 = V_0;
 		NullCheck(L_12);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_12, L_13);
@@ -11233,18 +11233,18 @@ IL_0074:
 
 IL_007c:
 	{
-		Int32U5BU5D_t1809983122* L_17 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_17 = __this->get_SeedArray_5();
 		int32_t L_18 = V_5;
 		NullCheck(L_17);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_17, L_18);
 		int32_t* L_19 = ((L_17)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_18)));
-		Int32U5BU5D_t1809983122* L_20 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_20 = __this->get_SeedArray_5();
 		int32_t L_21 = V_5;
 		NullCheck(L_20);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_20, ((int32_t)((int32_t)1+(int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_21+(int32_t)((int32_t)30)))%(int32_t)((int32_t)55))))));
 		int32_t L_22 = ((int32_t)((int32_t)1+(int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_21+(int32_t)((int32_t)30)))%(int32_t)((int32_t)55)))));
 		*((int32_t*)(L_19)) = (int32_t)((int32_t)((int32_t)(*((int32_t*)L_19))-(int32_t)((L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22)))));
-		Int32U5BU5D_t1809983122* L_23 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_23 = __this->get_SeedArray_5();
 		int32_t L_24 = V_5;
 		NullCheck(L_23);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_23, L_24);
@@ -11255,7 +11255,7 @@ IL_007c:
 		}
 	}
 	{
-		Int32U5BU5D_t1809983122* L_26 = __this->get_SeedArray_2();
+		Int32U5BU5D_t1809983122* L_26 = __this->get_SeedArray_5();
 		int32_t L_27 = V_5;
 		NullCheck(L_26);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_26, L_27);
@@ -11291,8 +11291,8 @@ IL_00d8:
 		}
 	}
 	{
-		__this->set_inext_0(0);
-		__this->set_inextp_1(((int32_t)31));
+		__this->set_inext_3(0);
+		__this->set_inextp_4(((int32_t)31));
 		return;
 	}
 }
@@ -11302,10 +11302,10 @@ extern "C"  double Random_Sample_m3542077785 (Random_t922188920 * __this, const 
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		int32_t L_0 = __this->get_inext_0();
+		int32_t L_0 = __this->get_inext_3();
 		int32_t L_1 = ((int32_t)((int32_t)L_0+(int32_t)1));
 		V_1 = L_1;
-		__this->set_inext_0(L_1);
+		__this->set_inext_3(L_1);
 		int32_t L_2 = V_1;
 		if ((((int32_t)L_2) < ((int32_t)((int32_t)56))))
 		{
@@ -11313,15 +11313,15 @@ extern "C"  double Random_Sample_m3542077785 (Random_t922188920 * __this, const 
 		}
 	}
 	{
-		__this->set_inext_0(1);
+		__this->set_inext_3(1);
 	}
 
 IL_001f:
 	{
-		int32_t L_3 = __this->get_inextp_1();
+		int32_t L_3 = __this->get_inextp_4();
 		int32_t L_4 = ((int32_t)((int32_t)L_3+(int32_t)1));
 		V_1 = L_4;
-		__this->set_inextp_1(L_4);
+		__this->set_inextp_4(L_4);
 		int32_t L_5 = V_1;
 		if ((((int32_t)L_5) < ((int32_t)((int32_t)56))))
 		{
@@ -11329,18 +11329,18 @@ IL_001f:
 		}
 	}
 	{
-		__this->set_inextp_1(1);
+		__this->set_inextp_4(1);
 	}
 
 IL_003e:
 	{
-		Int32U5BU5D_t1809983122* L_6 = __this->get_SeedArray_2();
-		int32_t L_7 = __this->get_inext_0();
+		Int32U5BU5D_t1809983122* L_6 = __this->get_SeedArray_5();
+		int32_t L_7 = __this->get_inext_3();
 		NullCheck(L_6);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_6, L_7);
 		int32_t L_8 = L_7;
-		Int32U5BU5D_t1809983122* L_9 = __this->get_SeedArray_2();
-		int32_t L_10 = __this->get_inextp_1();
+		Int32U5BU5D_t1809983122* L_9 = __this->get_SeedArray_5();
+		int32_t L_10 = __this->get_inextp_4();
 		NullCheck(L_9);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_9, L_10);
 		int32_t L_11 = L_10;
@@ -11358,8 +11358,8 @@ IL_003e:
 
 IL_0069:
 	{
-		Int32U5BU5D_t1809983122* L_14 = __this->get_SeedArray_2();
-		int32_t L_15 = __this->get_inext_0();
+		Int32U5BU5D_t1809983122* L_14 = __this->get_SeedArray_5();
+		int32_t L_15 = __this->get_inext_3();
 		int32_t L_16 = V_0;
 		NullCheck(L_14);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_14, L_15);

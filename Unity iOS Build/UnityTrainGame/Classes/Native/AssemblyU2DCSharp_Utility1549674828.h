@@ -13,7 +13,7 @@
 // System.Random
 struct Random_t922188920;
 
-#include "mscorlib_System_Object837106420.h"
+#include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -22,7 +22,7 @@ struct Random_t922188920;
 #endif
 
 // Utility
-struct  Utility_t1549674828  : public Il2CppObject
+struct  Utility_t1549674828  : public MonoBehaviour_t3012272455
 {
 public:
 
@@ -33,16 +33,16 @@ struct Utility_t1549674828_StaticFields
 {
 public:
 	// System.Random Utility::random
-	Random_t922188920 * ___random_0;
+	Random_t922188920 * ___random_2;
 
 public:
-	inline static int32_t get_offset_of_random_0() { return static_cast<int32_t>(offsetof(Utility_t1549674828_StaticFields, ___random_0)); }
-	inline Random_t922188920 * get_random_0() const { return ___random_0; }
-	inline Random_t922188920 ** get_address_of_random_0() { return &___random_0; }
-	inline void set_random_0(Random_t922188920 * value)
+	inline static int32_t get_offset_of_random_2() { return static_cast<int32_t>(offsetof(Utility_t1549674828_StaticFields, ___random_2)); }
+	inline Random_t922188920 * get_random_2() const { return ___random_2; }
+	inline Random_t922188920 ** get_address_of_random_2() { return &___random_2; }
+	inline void set_random_2(Random_t922188920 * value)
 	{
-		___random_0 = value;
-		Il2CppCodeGenWriteBarrier(&___random_0, value);
+		___random_2 = value;
+		Il2CppCodeGenWriteBarrier(&___random_2, value);
 	}
 };
 

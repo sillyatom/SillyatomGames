@@ -1547,6 +1547,9 @@ extern const Il2CppGenericInst GenInst_NetworkResponse_t1683455087_0_0_0 = { 1, 
 extern const Il2CppType Player_t2393081601_0_0_0;
 static const Il2CppType* GenInst_Player_t2393081601_0_0_0_Types[] = { &Player_t2393081601_0_0_0 };
 extern const Il2CppGenericInst GenInst_Player_t2393081601_0_0_0 = { 1, GenInst_Player_t2393081601_0_0_0_Types };
+extern const Il2CppType GameWinDialog_t176796754_0_0_0;
+static const Il2CppType* GenInst_GameWinDialog_t176796754_0_0_0_Types[] = { &GameWinDialog_t176796754_0_0_0 };
+extern const Il2CppGenericInst GenInst_GameWinDialog_t176796754_0_0_0 = { 1, GenInst_GameWinDialog_t176796754_0_0_0_Types };
 extern const Il2CppType IEnumerable_1_t2707313927_gp_0_0_0_0;
 static const Il2CppType* GenInst_IEnumerable_1_t2707313927_gp_0_0_0_0_Types[] = { &IEnumerable_1_t2707313927_gp_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_IEnumerable_1_t2707313927_gp_0_0_0_0 = { 1, GenInst_IEnumerable_1_t2707313927_gp_0_0_0_0_Types };
@@ -2585,9 +2588,9 @@ extern const Il2CppGenericInst GenInst_CollectionUtils_IndexOf_m976776081_gp_0_0
 extern const Il2CppType CollectionUtils_IndexOf_m2375295748_gp_0_0_0_0;
 static const Il2CppType* GenInst_CollectionUtils_IndexOf_m2375295748_gp_0_0_0_0_Types[] = { &CollectionUtils_IndexOf_m2375295748_gp_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_CollectionUtils_IndexOf_m2375295748_gp_0_0_0_0 = { 1, GenInst_CollectionUtils_IndexOf_m2375295748_gp_0_0_0_0_Types };
-extern const Il2CppType U3CTryGetSingleItemU3Ec__AnonStorey1C_1_t930278494_gp_0_0_0_0;
-static const Il2CppType* GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1C_1_t930278494_gp_0_0_0_0_Types[] = { &U3CTryGetSingleItemU3Ec__AnonStorey1C_1_t930278494_gp_0_0_0_0 };
-extern const Il2CppGenericInst GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1C_1_t930278494_gp_0_0_0_0 = { 1, GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1C_1_t930278494_gp_0_0_0_0_Types };
+extern const Il2CppType U3CTryGetSingleItemU3Ec__AnonStorey1D_1_t930279455_gp_0_0_0_0;
+static const Il2CppType* GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1D_1_t930279455_gp_0_0_0_0_Types[] = { &U3CTryGetSingleItemU3Ec__AnonStorey1D_1_t930279455_gp_0_0_0_0 };
+extern const Il2CppGenericInst GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1D_1_t930279455_gp_0_0_0_0 = { 1, GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1D_1_t930279455_gp_0_0_0_0_Types };
 extern const Il2CppType CollectionWrapper_1_t2499194237_gp_0_0_0_0;
 static const Il2CppType* GenInst_CollectionWrapper_1_t2499194237_gp_0_0_0_0_Types[] = { &CollectionWrapper_1_t2499194237_gp_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_CollectionWrapper_1_t2499194237_gp_0_0_0_0 = { 1, GenInst_CollectionWrapper_1_t2499194237_gp_0_0_0_0_Types };
@@ -2659,9 +2662,9 @@ extern const Il2CppGenericInst GenInst_EnumUtils_GetValues_m592667072_gp_0_0_0_0
 extern const Il2CppType EnumUtils_GetMaximumValue_m2890205148_gp_0_0_0_0;
 static const Il2CppType* GenInst_EnumUtils_GetMaximumValue_m2890205148_gp_0_0_0_0_Types[] = { &EnumUtils_GetMaximumValue_m2890205148_gp_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_EnumUtils_GetMaximumValue_m2890205148_gp_0_0_0_0 = { 1, GenInst_EnumUtils_GetMaximumValue_m2890205148_gp_0_0_0_0_Types };
-extern const Il2CppType U3CTryParseU3Ec__AnonStorey25_1_t2857608177_gp_0_0_0_0;
-static const Il2CppType* GenInst_U3CTryParseU3Ec__AnonStorey25_1_t2857608177_gp_0_0_0_0_Types[] = { &U3CTryParseU3Ec__AnonStorey25_1_t2857608177_gp_0_0_0_0 };
-extern const Il2CppGenericInst GenInst_U3CTryParseU3Ec__AnonStorey25_1_t2857608177_gp_0_0_0_0 = { 1, GenInst_U3CTryParseU3Ec__AnonStorey25_1_t2857608177_gp_0_0_0_0_Types };
+extern const Il2CppType U3CTryParseU3Ec__AnonStorey26_1_t2857609138_gp_0_0_0_0;
+static const Il2CppType* GenInst_U3CTryParseU3Ec__AnonStorey26_1_t2857609138_gp_0_0_0_0_Types[] = { &U3CTryParseU3Ec__AnonStorey26_1_t2857609138_gp_0_0_0_0 };
+extern const Il2CppGenericInst GenInst_U3CTryParseU3Ec__AnonStorey26_1_t2857609138_gp_0_0_0_0 = { 1, GenInst_U3CTryParseU3Ec__AnonStorey26_1_t2857609138_gp_0_0_0_0_Types };
 extern const Il2CppType EnumValue_1_t1077529161_0_0_0;
 static const Il2CppType* GenInst_String_t_0_0_0_EnumValue_1_t1077529161_0_0_0_Types[] = { &String_t_0_0_0, &EnumValue_1_t1077529161_0_0_0 };
 extern const Il2CppGenericInst GenInst_String_t_0_0_0_EnumValue_1_t1077529161_0_0_0 = { 2, GenInst_String_t_0_0_0_EnumValue_1_t1077529161_0_0_0_Types };
@@ -2748,9 +2751,9 @@ static const Il2CppType* GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400
 extern const Il2CppGenericInst GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_String_t_0_0_0 = { 2, GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_String_t_0_0_0_Types };
 static const Il2CppType* GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_Boolean_t211005341_0_0_0_Types[] = { &StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0, &Boolean_t211005341_0_0_0 };
 extern const Il2CppGenericInst GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_Boolean_t211005341_0_0_0 = { 2, GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_Boolean_t211005341_0_0_0_Types };
-extern const Il2CppType U3CForgivingCaseSensitiveFindU3Ec__AnonStorey30_1_t632284187_gp_0_0_0_0;
-static const Il2CppType* GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey30_1_t632284187_gp_0_0_0_0_String_t_0_0_0_Types[] = { &U3CForgivingCaseSensitiveFindU3Ec__AnonStorey30_1_t632284187_gp_0_0_0_0, &String_t_0_0_0 };
-extern const Il2CppGenericInst GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey30_1_t632284187_gp_0_0_0_0_String_t_0_0_0 = { 2, GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey30_1_t632284187_gp_0_0_0_0_String_t_0_0_0_Types };
+extern const Il2CppType U3CForgivingCaseSensitiveFindU3Ec__AnonStorey31_1_t632285148_gp_0_0_0_0;
+static const Il2CppType* GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey31_1_t632285148_gp_0_0_0_0_String_t_0_0_0_Types[] = { &U3CForgivingCaseSensitiveFindU3Ec__AnonStorey31_1_t632285148_gp_0_0_0_0, &String_t_0_0_0 };
+extern const Il2CppGenericInst GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey31_1_t632285148_gp_0_0_0_0_String_t_0_0_0 = { 2, GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey31_1_t632285148_gp_0_0_0_0_String_t_0_0_0_Types };
 extern const Il2CppType ThreadSafeStore_2_t3298867859_gp_0_0_0_0;
 extern const Il2CppType ThreadSafeStore_2_t3298867859_gp_1_0_0_0;
 static const Il2CppType* GenInst_ThreadSafeStore_2_t3298867859_gp_0_0_0_0_ThreadSafeStore_2_t3298867859_gp_1_0_0_0_Types[] = { &ThreadSafeStore_2_t3298867859_gp_0_0_0_0, &ThreadSafeStore_2_t3298867859_gp_1_0_0_0 };
@@ -2770,9 +2773,9 @@ extern const Il2CppGenericInst GenInst_EventManager_AddListener_m4081956965_gp_0
 extern const Il2CppType EventManager_RemoveListener_m842785868_gp_0_0_0_0;
 static const Il2CppType* GenInst_EventManager_RemoveListener_m842785868_gp_0_0_0_0_Types[] = { &EventManager_RemoveListener_m842785868_gp_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_EventManager_RemoveListener_m842785868_gp_0_0_0_0 = { 1, GenInst_EventManager_RemoveListener_m842785868_gp_0_0_0_0_Types };
-extern const Il2CppType U3CAddListenerU3Ec__AnonStorey31_1_t3612999313_gp_0_0_0_0;
-static const Il2CppType* GenInst_U3CAddListenerU3Ec__AnonStorey31_1_t3612999313_gp_0_0_0_0_Types[] = { &U3CAddListenerU3Ec__AnonStorey31_1_t3612999313_gp_0_0_0_0 };
-extern const Il2CppGenericInst GenInst_U3CAddListenerU3Ec__AnonStorey31_1_t3612999313_gp_0_0_0_0 = { 1, GenInst_U3CAddListenerU3Ec__AnonStorey31_1_t3612999313_gp_0_0_0_0_Types };
+extern const Il2CppType U3CAddListenerU3Ec__AnonStorey32_1_t3613000274_gp_0_0_0_0;
+static const Il2CppType* GenInst_U3CAddListenerU3Ec__AnonStorey32_1_t3613000274_gp_0_0_0_0_Types[] = { &U3CAddListenerU3Ec__AnonStorey32_1_t3613000274_gp_0_0_0_0 };
+extern const Il2CppGenericInst GenInst_U3CAddListenerU3Ec__AnonStorey32_1_t3613000274_gp_0_0_0_0 = { 1, GenInst_U3CAddListenerU3Ec__AnonStorey32_1_t3613000274_gp_0_0_0_0_Types };
 extern const Il2CppType ExtMonoBehaviour_DelayedCallWithArgs_m1739332438_gp_0_0_0_0;
 static const Il2CppType* GenInst_ExtMonoBehaviour_DelayedCallWithArgs_m1739332438_gp_0_0_0_0_Types[] = { &ExtMonoBehaviour_DelayedCallWithArgs_m1739332438_gp_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_ExtMonoBehaviour_DelayedCallWithArgs_m1739332438_gp_0_0_0_0 = { 1, GenInst_ExtMonoBehaviour_DelayedCallWithArgs_m1739332438_gp_0_0_0_0_Types };
@@ -2982,9 +2985,6 @@ extern const Il2CppGenericInst GenInst_SharedMainGame_t2807228656_0_0_0 = { 1, G
 extern const Il2CppType RoundHandler_t2172802556_0_0_0;
 static const Il2CppType* GenInst_RoundHandler_t2172802556_0_0_0_Types[] = { &RoundHandler_t2172802556_0_0_0 };
 extern const Il2CppGenericInst GenInst_RoundHandler_t2172802556_0_0_0 = { 1, GenInst_RoundHandler_t2172802556_0_0_0_Types };
-extern const Il2CppType GameWinDialog_t176796754_0_0_0;
-static const Il2CppType* GenInst_GameWinDialog_t176796754_0_0_0_Types[] = { &GameWinDialog_t176796754_0_0_0 };
-extern const Il2CppGenericInst GenInst_GameWinDialog_t176796754_0_0_0 = { 1, GenInst_GameWinDialog_t176796754_0_0_0_Types };
 extern const Il2CppType GameFailDialog_t1770299320_0_0_0;
 static const Il2CppType* GenInst_GameFailDialog_t1770299320_0_0_0_Types[] = { &GameFailDialog_t1770299320_0_0_0 };
 extern const Il2CppGenericInst GenInst_GameFailDialog_t1770299320_0_0_0 = { 1, GenInst_GameFailDialog_t1770299320_0_0_0_Types };
@@ -3696,6 +3696,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1134] =
 	&GenInst_NetworkPlayer_t4053218959_0_0_0,
 	&GenInst_NetworkResponse_t1683455087_0_0_0,
 	&GenInst_Player_t2393081601_0_0_0,
+	&GenInst_GameWinDialog_t176796754_0_0_0,
 	&GenInst_IEnumerable_1_t2707313927_gp_0_0_0_0,
 	&GenInst_Array_InternalArray__IEnumerable_GetEnumerator_m850548632_gp_0_0_0_0,
 	&GenInst_Array_Sort_m1181603442_gp_0_0_0_0_Array_Sort_m1181603442_gp_0_0_0_0,
@@ -4063,7 +4064,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1134] =
 	&GenInst_CollectionUtils_IndexOf_m3489316655_gp_0_0_0_0_Boolean_t211005341_0_0_0,
 	&GenInst_CollectionUtils_IndexOf_m976776081_gp_0_0_0_0,
 	&GenInst_CollectionUtils_IndexOf_m2375295748_gp_0_0_0_0,
-	&GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1C_1_t930278494_gp_0_0_0_0,
+	&GenInst_U3CTryGetSingleItemU3Ec__AnonStorey1D_1_t930279455_gp_0_0_0_0,
 	&GenInst_CollectionWrapper_1_t2499194237_gp_0_0_0_0,
 	&GenInst_ConvertUtils_Convert_m1802680766_gp_0_0_0_0,
 	&GenInst_ConvertUtils_TryConvert_m2847050604_gp_0_0_0_0,
@@ -4088,7 +4089,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1134] =
 	&GenInst_EnumValue_1_t1795002187_0_0_0,
 	&GenInst_EnumUtils_GetValues_m592667072_gp_0_0_0_0,
 	&GenInst_EnumUtils_GetMaximumValue_m2890205148_gp_0_0_0_0,
-	&GenInst_U3CTryParseU3Ec__AnonStorey25_1_t2857608177_gp_0_0_0_0,
+	&GenInst_U3CTryParseU3Ec__AnonStorey26_1_t2857609138_gp_0_0_0_0,
 	&GenInst_String_t_0_0_0_EnumValue_1_t1077529161_0_0_0,
 	&GenInst_EnumValues_1_t3557543851_gp_0_0_0_0,
 	&GenInst_EnumValue_1_t1077529161_0_0_0,
@@ -4121,14 +4122,14 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1134] =
 	&GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0,
 	&GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_String_t_0_0_0,
 	&GenInst_StringUtils_ForgivingCaseSensitiveFind_m2184400090_gp_0_0_0_0_Boolean_t211005341_0_0_0,
-	&GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey30_1_t632284187_gp_0_0_0_0_String_t_0_0_0,
+	&GenInst_U3CForgivingCaseSensitiveFindU3Ec__AnonStorey31_1_t632285148_gp_0_0_0_0_String_t_0_0_0,
 	&GenInst_ThreadSafeStore_2_t3298867859_gp_0_0_0_0_ThreadSafeStore_2_t3298867859_gp_1_0_0_0,
 	&GenInst_ValidationUtils_ArgumentNotNullOrEmpty_m2640603084_gp_0_0_0_0,
 	&GenInst_ValidationUtils_ArgumentNotNullOrEmpty_m1366686472_gp_0_0_0_0,
 	&GenInst_ValidationUtils_ArgumentIsPositive_m2984960578_gp_0_0_0_0,
 	&GenInst_EventManager_AddListener_m4081956965_gp_0_0_0_0,
 	&GenInst_EventManager_RemoveListener_m842785868_gp_0_0_0_0,
-	&GenInst_U3CAddListenerU3Ec__AnonStorey31_1_t3612999313_gp_0_0_0_0,
+	&GenInst_U3CAddListenerU3Ec__AnonStorey32_1_t3613000274_gp_0_0_0_0,
 	&GenInst_ExtMonoBehaviour_DelayedCallWithArgs_m1739332438_gp_0_0_0_0,
 	&GenInst_ExtMonoBehaviour_StartDelayWithArgs_m1536994081_gp_0_0_0_0,
 	&GenInst_ExtMonoBehaviour_DelayedCallWithArgs_m3449294967_gp_0_0_0_0_ExtMonoBehaviour_DelayedCallWithArgs_m3449294967_gp_1_0_0_0,
@@ -4198,7 +4199,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1134] =
 	&GenInst_SinglePlayerMainGame_t3863033300_0_0_0,
 	&GenInst_SharedMainGame_t2807228656_0_0_0,
 	&GenInst_RoundHandler_t2172802556_0_0_0,
-	&GenInst_GameWinDialog_t176796754_0_0_0,
 	&GenInst_GameFailDialog_t1770299320_0_0_0,
 	&GenInst_InitCardsDataVO_t1547396566_0_0_0,
 	&GenInst_RoundResultVO_t2594510628_0_0_0,

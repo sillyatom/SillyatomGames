@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Advertisements;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -266,5 +267,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         Destroy(gameObject.GetComponentInChildren<Dealer>());
         Destroy(gameObject.GetComponent<SinglePlayerMainGame>());
         network = null;
+
+        SingletonManager.reference.adsManager.ShowAds();
     }
 }

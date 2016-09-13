@@ -41,6 +41,7 @@
 <type fullname="GrayColorToggle" preserve="all"/>
 <type fullname="InGameInfoText" preserve="all"/>
 <type fullname="SingletonManager" preserve="all"/>
+<type fullname="Utility" preserve="all"/>
 <type fullname="TestScript" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">

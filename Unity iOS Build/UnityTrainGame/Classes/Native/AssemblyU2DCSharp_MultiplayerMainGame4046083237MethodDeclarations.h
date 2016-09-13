@@ -16,6 +16,8 @@
 struct MultiplayerMainGame_t4046083237;
 // System.String
 struct String_t;
+// GameWinDialog
+struct GameWinDialog_t176796754;
 // InGameEvent
 struct InGameEvent_t511087107;
 // Player
@@ -31,6 +33,7 @@ struct GameEvent_t2981166504;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_String968488902.h"
+#include "AssemblyU2DCSharp_GameWinDialog176796754.h"
 #include "AssemblyU2DCSharp_InGameEvent511087107.h"
 #include "AssemblyU2DCSharp_Player2393081601.h"
 #include "mscorlib_System_Object837106420.h"
@@ -47,10 +50,18 @@ extern "C"  void MultiplayerMainGame_Init_m3127656750 (MultiplayerMainGame_t4046
 extern "C"  void MultiplayerMainGame_OnMoveOutOfView_m3913870558 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::InitGame()
 extern "C"  void MultiplayerMainGame_InitGame_m1931109952 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::StartGame()
+extern "C"  void MultiplayerMainGame_StartGame_m678038136 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::ShowWinDialog()
 extern "C"  void MultiplayerMainGame_ShowWinDialog_m3274749579 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::OnShowWinDialog(GameWinDialog)
+extern "C"  void MultiplayerMainGame_OnShowWinDialog_m3366738228 (MultiplayerMainGame_t4046083237 * __this, GameWinDialog_t176796754 * ___dialog, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::ShowFailDialog()
 extern "C"  void MultiplayerMainGame_ShowFailDialog_m1861354497 (MultiplayerMainGame_t4046083237 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::PlayEndAnimation(System.Boolean)
+extern "C"  void MultiplayerMainGame_PlayEndAnimation_m659256786 (MultiplayerMainGame_t4046083237 * __this, bool ___isWin, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MultiplayerMainGame::OnCompleteEndAnimation(System.Boolean)
+extern "C"  void MultiplayerMainGame_OnCompleteEndAnimation_m2443147030 (MultiplayerMainGame_t4046083237 * __this, bool ___isWin, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::OnInGameEvent(InGameEvent)
 extern "C"  void MultiplayerMainGame_OnInGameEvent_m361302279 (MultiplayerMainGame_t4046083237 * __this, InGameEvent_t511087107 * ___evt, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MultiplayerMainGame::DealCard(Player,System.Boolean)

@@ -12,6 +12,8 @@
 
 // UnityEngine.UI.Text
 struct Text_t3286458198;
+// UnityEngine.RectTransform
+struct RectTransform_t3317474837;
 // System.Collections.Generic.Dictionary`2<System.String,System.Int32>
 struct Dictionary_2_t190145395;
 
@@ -31,6 +33,10 @@ public:
 	Text_t3286458198 * ___tokenText_3;
 	// UnityEngine.UI.Text HUD::xpText
 	Text_t3286458198 * ___xpText_4;
+	// UnityEngine.RectTransform HUD::coinPos
+	RectTransform_t3317474837 * ___coinPos_5;
+	// UnityEngine.RectTransform HUD::starPos
+	RectTransform_t3317474837 * ___starPos_6;
 
 public:
 	inline static int32_t get_offset_of_tokenText_3() { return static_cast<int32_t>(offsetof(HUD_t71895, ___tokenText_3)); }
@@ -50,22 +56,40 @@ public:
 		___xpText_4 = value;
 		Il2CppCodeGenWriteBarrier(&___xpText_4, value);
 	}
+
+	inline static int32_t get_offset_of_coinPos_5() { return static_cast<int32_t>(offsetof(HUD_t71895, ___coinPos_5)); }
+	inline RectTransform_t3317474837 * get_coinPos_5() const { return ___coinPos_5; }
+	inline RectTransform_t3317474837 ** get_address_of_coinPos_5() { return &___coinPos_5; }
+	inline void set_coinPos_5(RectTransform_t3317474837 * value)
+	{
+		___coinPos_5 = value;
+		Il2CppCodeGenWriteBarrier(&___coinPos_5, value);
+	}
+
+	inline static int32_t get_offset_of_starPos_6() { return static_cast<int32_t>(offsetof(HUD_t71895, ___starPos_6)); }
+	inline RectTransform_t3317474837 * get_starPos_6() const { return ___starPos_6; }
+	inline RectTransform_t3317474837 ** get_address_of_starPos_6() { return &___starPos_6; }
+	inline void set_starPos_6(RectTransform_t3317474837 * value)
+	{
+		___starPos_6 = value;
+		Il2CppCodeGenWriteBarrier(&___starPos_6, value);
+	}
 };
 
 struct HUD_t71895_StaticFields
 {
 public:
 	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> HUD::<>f__switch$map5
-	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map5_5;
+	Dictionary_2_t190145395 * ___U3CU3Ef__switchU24map5_7;
 
 public:
-	inline static int32_t get_offset_of_U3CU3Ef__switchU24map5_5() { return static_cast<int32_t>(offsetof(HUD_t71895_StaticFields, ___U3CU3Ef__switchU24map5_5)); }
-	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map5_5() const { return ___U3CU3Ef__switchU24map5_5; }
-	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map5_5() { return &___U3CU3Ef__switchU24map5_5; }
-	inline void set_U3CU3Ef__switchU24map5_5(Dictionary_2_t190145395 * value)
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map5_7() { return static_cast<int32_t>(offsetof(HUD_t71895_StaticFields, ___U3CU3Ef__switchU24map5_7)); }
+	inline Dictionary_2_t190145395 * get_U3CU3Ef__switchU24map5_7() const { return ___U3CU3Ef__switchU24map5_7; }
+	inline Dictionary_2_t190145395 ** get_address_of_U3CU3Ef__switchU24map5_7() { return &___U3CU3Ef__switchU24map5_7; }
+	inline void set_U3CU3Ef__switchU24map5_7(Dictionary_2_t190145395 * value)
 	{
-		___U3CU3Ef__switchU24map5_5 = value;
-		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map5_5, value);
+		___U3CU3Ef__switchU24map5_7 = value;
+		Il2CppCodeGenWriteBarrier(&___U3CU3Ef__switchU24map5_7, value);
 	}
 };
 

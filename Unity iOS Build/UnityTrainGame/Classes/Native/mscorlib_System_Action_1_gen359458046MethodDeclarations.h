@@ -27,8 +27,8 @@ struct AsyncCallback_t1363551830;
 #include "mscorlib_System_AsyncCallback1363551830.h"
 
 // System.Void System.Action`1<System.Boolean>::.ctor(System.Object,System.IntPtr)
-extern "C"  void Action_1__ctor_m88247757_gshared (Action_1_t359458046 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method);
-#define Action_1__ctor_m88247757(__this, ___object, ___method, method) ((  void (*) (Action_1_t359458046 *, Il2CppObject *, IntPtr_t, const MethodInfo*))Action_1__ctor_m88247757_gshared)(__this, ___object, ___method, method)
+extern "C"  void Action_1__ctor_m377969142_gshared (Action_1_t359458046 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method);
+#define Action_1__ctor_m377969142(__this, ___object, ___method, method) ((  void (*) (Action_1_t359458046 *, Il2CppObject *, IntPtr_t, const MethodInfo*))Action_1__ctor_m377969142_gshared)(__this, ___object, ___method, method)
 // System.Void System.Action`1<System.Boolean>::Invoke(T)
 extern "C"  void Action_1_Invoke_m3594021162_gshared (Action_1_t359458046 * __this, bool ___obj, const MethodInfo* method);
 #define Action_1_Invoke_m3594021162(__this, ___obj, method) ((  void (*) (Action_1_t359458046 *, bool, const MethodInfo*))Action_1_Invoke_m3594021162_gshared)(__this, ___obj, method)

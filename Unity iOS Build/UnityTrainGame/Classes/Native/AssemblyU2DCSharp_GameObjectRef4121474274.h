@@ -28,6 +28,10 @@ struct SceneTransitionManager_t1210711436;
 struct GameObject_t4012695102;
 // PostURL
 struct PostURL_t1273431183;
+// UnityEngine.Transform
+struct Transform_t284553113;
+// Utility
+struct Utility_t1549674828;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -61,6 +65,12 @@ public:
 	GameObject_t4012695102 * ___gameFailDialog_10;
 	// PostURL GameObjectRef::postMethod
 	PostURL_t1273431183 * ___postMethod_11;
+	// UnityEngine.GameObject GameObjectRef::coin
+	GameObject_t4012695102 * ___coin_12;
+	// UnityEngine.Transform GameObjectRef::overlay
+	Transform_t284553113 * ___overlay_13;
+	// Utility GameObjectRef::utility
+	Utility_t1549674828 * ___utility_14;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -151,6 +161,33 @@ public:
 	{
 		___postMethod_11 = value;
 		Il2CppCodeGenWriteBarrier(&___postMethod_11, value);
+	}
+
+	inline static int32_t get_offset_of_coin_12() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___coin_12)); }
+	inline GameObject_t4012695102 * get_coin_12() const { return ___coin_12; }
+	inline GameObject_t4012695102 ** get_address_of_coin_12() { return &___coin_12; }
+	inline void set_coin_12(GameObject_t4012695102 * value)
+	{
+		___coin_12 = value;
+		Il2CppCodeGenWriteBarrier(&___coin_12, value);
+	}
+
+	inline static int32_t get_offset_of_overlay_13() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___overlay_13)); }
+	inline Transform_t284553113 * get_overlay_13() const { return ___overlay_13; }
+	inline Transform_t284553113 ** get_address_of_overlay_13() { return &___overlay_13; }
+	inline void set_overlay_13(Transform_t284553113 * value)
+	{
+		___overlay_13 = value;
+		Il2CppCodeGenWriteBarrier(&___overlay_13, value);
+	}
+
+	inline static int32_t get_offset_of_utility_14() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___utility_14)); }
+	inline Utility_t1549674828 * get_utility_14() const { return ___utility_14; }
+	inline Utility_t1549674828 ** get_address_of_utility_14() { return &___utility_14; }
+	inline void set_utility_14(Utility_t1549674828 * value)
+	{
+		___utility_14 = value;
+		Il2CppCodeGenWriteBarrier(&___utility_14, value);
 	}
 };
 

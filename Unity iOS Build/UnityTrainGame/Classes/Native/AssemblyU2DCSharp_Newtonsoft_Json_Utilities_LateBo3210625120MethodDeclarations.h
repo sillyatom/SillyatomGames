@@ -23,6 +23,6 @@ struct Il2CppObject;
 // System.Void Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateGet>c__AnonStorey29`1<System.Object>::.ctor()
 extern "C"  void U3CCreateGetU3Ec__AnonStorey29_1__ctor_m2132606322_gshared (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 * __this, const MethodInfo* method);
 #define U3CCreateGetU3Ec__AnonStorey29_1__ctor_m2132606322(__this, method) ((  void (*) (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 *, const MethodInfo*))U3CCreateGetU3Ec__AnonStorey29_1__ctor_m2132606322_gshared)(__this, method)
-// System.Object Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateGet>c__AnonStorey29`1<System.Object>::<>m__3E(T)
-extern "C"  Il2CppObject * U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3E_m2219469190_gshared (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 * __this, Il2CppObject * ___o, const MethodInfo* method);
-#define U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3E_m2219469190(__this, ___o, method) ((  Il2CppObject * (*) (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 *, Il2CppObject *, const MethodInfo*))U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3E_m2219469190_gshared)(__this, ___o, method)
+// System.Object Newtonsoft.Json.Utilities.LateBoundReflectionDelegateFactory/<CreateGet>c__AnonStorey29`1<System.Object>::<>m__3D(T)
+extern "C"  Il2CppObject * U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3D_m2219439399_gshared (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 * __this, Il2CppObject * ___o, const MethodInfo* method);
+#define U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3D_m2219439399(__this, ___o, method) ((  Il2CppObject * (*) (U3CCreateGetU3Ec__AnonStorey29_1_t3210625120 *, Il2CppObject *, const MethodInfo*))U3CCreateGetU3Ec__AnonStorey29_1_U3CU3Em__3D_m2219439399_gshared)(__this, ___o, method)
