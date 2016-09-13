@@ -91,7 +91,7 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
             iTween.ScaleTo(player.gameObject, args);
             runningIndex++;
         }
-        DelayedCall(1.0f, StartGame);
+        DelayedCall(0.5f, StartGame);
     }
 
     virtual protected void StartGame()
@@ -114,7 +114,8 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
 
     private void OnShowWinDialog(GameWinDialog dialog)
     {
-        SingletonManager.reference.utility.PlayCoinAnimation(dialog.coinImage.GetComponent<RectTransform>(), SingletonManager.reference.hud.tokenText.GetComponent<RectTransform>(), 20);
+        SingletonManager.reference.utility.PlayCoinAnimation(dialog.coinImage.GetComponent<RectTransform>(), SingletonManager.reference.hud.coinPos, 20, 0.5f);
+        SingletonManager.reference.utility.RollNumbers(SingletonManager.reference.hud.tokenText, LocalPlayerModel.GetInstance().tokens, LocalPlayerModel.GetInstance().tokens + WinAmount, 0.5f);
     }
 
     virtual protected void ShowFailDialog()
@@ -130,10 +131,6 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         int runningIndex = 0;
         foreach (var player in _players)
         {
-            if (player.IsLocalPlayer)
-            {
-                continue;
-            }
             Hashtable args = new Hashtable();
             args["x"] = scale;
             args["y"] = scale;
@@ -150,6 +147,11 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
 
     protected void OnCompleteEndAnimation(bool isWin)
     {
+        foreach (var player in _players)
+        {
+            player.Reset();
+        }
+        dealer.Reset();
         transform.GetComponent<SharedMainGame>().EnableHud();
 
         if (isWin)
@@ -387,7 +389,10 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
     virtual protected IEnumerator OnShiftComplete(float delay)
     {
         yield return new WaitForSeconds(delay);
-        dealer.SetGrayEffect(0);
+        if (!GameModel.Instance.isGameOver)
+        {
+            dealer.SetGrayEffect(0);
+        }
     }
 
     virtual protected void OnDistributeAllWinningCards(object args)
@@ -396,6 +401,12 @@ public class MultiplayerMainGame : GameScreenMonoBehaviour
         Player player = GetPlayerById((string)hArgs["Player"]);
         float delay = dealer.ShiftCards();
         StartCoroutine(OnShiftComplete(delay));
+
+        if (player.playerId == network.LocalId)
+        {
+//            player.Cards.Shuffle<Card>();
+            player.UpdateCardsPosition();
+        }
         if (_roundHandler.IsActivePlayerLocal)
         {
             //send the data before dealing with cleaning up

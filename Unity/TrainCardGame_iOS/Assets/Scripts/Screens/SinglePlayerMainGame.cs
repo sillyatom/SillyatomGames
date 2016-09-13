@@ -45,7 +45,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
             iTween.ScaleTo(player.gameObject, args);
             runningIndex++;
         }
-        DelayedCall(1.0f, StartGame);
+        DelayedCall(0.5f, StartGame);
     }
 
     override protected void StartGame()
@@ -134,6 +134,7 @@ public class SinglePlayerMainGame : MultiplayerMainGame
         StartCoroutine(OnShiftComplete(delay));
         if (player.playerId == network.LocalId)
         {
+//            player.Cards.Shuffle<Card>();
             player.UpdateCardsPosition();
         }
         //clear all round data
@@ -260,7 +261,6 @@ public class SinglePlayerMainGame : MultiplayerMainGame
     public override void OnMoveOutOfView()
     {
         CleanPlayers();
-        dealer.Reset();
         network.Reset();
         transform.GetComponent<SharedMainGame>().trains.RemoveActiveTrain();
         Destroy(gameObject.GetComponentInChildren<Dealer>());

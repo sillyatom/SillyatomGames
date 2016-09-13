@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Reflection;
 using System.Collections;
@@ -45,7 +46,7 @@ public class Utility : MonoBehaviour
         return retList;
     }
 
-    public void PlayCoinAnimation(RectTransform from, RectTransform to, int amount)
+    public void PlayCoinAnimation(RectTransform from, RectTransform to, int amount, float time)
     {
         for (int index = 0; index < amount; index++)
         {
@@ -56,9 +57,28 @@ public class Utility : MonoBehaviour
             go.transform.position = from.transform.position;
             Hashtable cArgs = new Hashtable();
             cArgs.Add("go", go);
-            iTween.MoveTo(go, iTween.Hash("x", to.transform.position.x, "y", to.transform.position.y, "time", 0.5f, "delay", index * 0.2f,
+            iTween.MoveTo(go, iTween.Hash("x", to.transform.position.x, "y", to.transform.position.y, "time", time, "delay", index * 0.2f,
                     "OnComplete", "OnReachDestination", "OnCompleteTarget", gameObject, "OnCompleteParams", cArgs));
         }
+    }
+
+    public void RollNumbers(Text textField, long frm, long to, float time)
+    {
+        StartCoroutine(UpdateText(textField, frm, to, time));
+    }
+
+    private IEnumerator UpdateText(Text textField, long frm, long to, float time)
+    {
+        long start = frm;
+
+        while (start <= to)
+        {
+            textField.text = start.ToString();
+            start++;
+            yield return null;
+        }
+
+        yield break;
     }
 
     private void OnReachDestination(object cArgs)

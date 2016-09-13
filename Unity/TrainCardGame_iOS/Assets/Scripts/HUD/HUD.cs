@@ -6,6 +6,8 @@ public class HUD : ExtMonoBehaviour
 {
     public Text tokenText;
     public Text xpText;
+    public RectTransform coinPos;
+    public RectTransform starPos;
 
     public override void Init()
     {
