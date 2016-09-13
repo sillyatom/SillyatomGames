@@ -34,8 +34,8 @@ struct BaseInvokableCall_t1733537956;
 extern "C"  void UnityEvent_1__ctor_m7858823_gshared (UnityEvent_1_t1789869598 * __this, const MethodInfo* method);
 #define UnityEvent_1__ctor_m7858823(__this, method) ((  void (*) (UnityEvent_1_t1789869598 *, const MethodInfo*))UnityEvent_1__ctor_m7858823_gshared)(__this, method)
 // System.Void UnityEngine.Events.UnityEvent`1<System.Int32>::AddListener(UnityEngine.Events.UnityAction`1<T0>)
-extern "C"  void UnityEvent_1_AddListener_m482909706_gshared (UnityEvent_1_t1789869598 * __this, UnityAction_1_t2827876692 * ___call, const MethodInfo* method);
-#define UnityEvent_1_AddListener_m482909706(__this, ___call, method) ((  void (*) (UnityEvent_1_t1789869598 *, UnityAction_1_t2827876692 *, const MethodInfo*))UnityEvent_1_AddListener_m482909706_gshared)(__this, ___call, method)
+extern "C"  void UnityEvent_1_AddListener_m2066362018_gshared (UnityEvent_1_t1789869598 * __this, UnityAction_1_t2827876692 * ___call, const MethodInfo* method);
+#define UnityEvent_1_AddListener_m2066362018(__this, ___call, method) ((  void (*) (UnityEvent_1_t1789869598 *, UnityAction_1_t2827876692 *, const MethodInfo*))UnityEvent_1_AddListener_m2066362018_gshared)(__this, ___call, method)
 // System.Void UnityEngine.Events.UnityEvent`1<System.Int32>::RemoveListener(UnityEngine.Events.UnityAction`1<T0>)
 extern "C"  void UnityEvent_1_RemoveListener_m356723581_gshared (UnityEvent_1_t1789869598 * __this, UnityAction_1_t2827876692 * ___call, const MethodInfo* method);
 #define UnityEvent_1_RemoveListener_m356723581(__this, ___call, method) ((  void (*) (UnityEvent_1_t1789869598 *, UnityAction_1_t2827876692 *, const MethodInfo*))UnityEvent_1_RemoveListener_m356723581_gshared)(__this, ___call, method)

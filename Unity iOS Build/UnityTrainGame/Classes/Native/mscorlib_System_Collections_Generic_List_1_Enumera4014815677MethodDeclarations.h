@@ -36,8 +36,8 @@ extern "C"  void Enumerator_Dispose_m2904289642_gshared (Enumerator_t4014815677 
 extern "C"  void Enumerator_VerifyState_m1522854819_gshared (Enumerator_t4014815677 * __this, const MethodInfo* method);
 #define Enumerator_VerifyState_m1522854819(__this, method) ((  void (*) (Enumerator_t4014815677 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
-extern "C"  bool Enumerator_MoveNext_m4284703760_gshared (Enumerator_t4014815677 * __this, const MethodInfo* method);
-#define Enumerator_MoveNext_m4284703760(__this, method) ((  bool (*) (Enumerator_t4014815677 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+extern "C"  bool Enumerator_MoveNext_m3396518092_gshared (Enumerator_t4014815677 * __this, const MethodInfo* method);
+#define Enumerator_MoveNext_m3396518092(__this, method) ((  bool (*) (Enumerator_t4014815677 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
-extern "C"  Il2CppObject * Enumerator_get_Current_m396252160_gshared (Enumerator_t4014815677 * __this, const MethodInfo* method);
-#define Enumerator_get_Current_m396252160(__this, method) ((  Il2CppObject * (*) (Enumerator_t4014815677 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+extern "C"  Il2CppObject * Enumerator_get_Current_m1799123908_gshared (Enumerator_t4014815677 * __this, const MethodInfo* method);
+#define Enumerator_get_Current_m1799123908(__this, method) ((  Il2CppObject * (*) (Enumerator_t4014815677 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

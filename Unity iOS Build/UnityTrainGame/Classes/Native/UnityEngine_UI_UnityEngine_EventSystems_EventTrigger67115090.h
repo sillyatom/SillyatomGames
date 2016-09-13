@@ -23,7 +23,7 @@ struct TriggerEvent_t516183010;
 #endif
 
 // UnityEngine.EventSystems.EventTrigger/Entry
-struct  Entry_t67115090  : public Il2CppObject
+struct  Entry_t67115091  : public Il2CppObject
 {
 public:
 	// UnityEngine.EventSystems.EventTriggerType UnityEngine.EventSystems.EventTrigger/Entry::eventID
@@ -32,7 +32,7 @@ public:
 	TriggerEvent_t516183010 * ___callback_1;
 
 public:
-	inline static int32_t get_offset_of_eventID_0() { return static_cast<int32_t>(offsetof(Entry_t67115090, ___eventID_0)); }
+	inline static int32_t get_offset_of_eventID_0() { return static_cast<int32_t>(offsetof(Entry_t67115091, ___eventID_0)); }
 	inline int32_t get_eventID_0() const { return ___eventID_0; }
 	inline int32_t* get_address_of_eventID_0() { return &___eventID_0; }
 	inline void set_eventID_0(int32_t value)
@@ -40,7 +40,7 @@ public:
 		___eventID_0 = value;
 	}
 
-	inline static int32_t get_offset_of_callback_1() { return static_cast<int32_t>(offsetof(Entry_t67115090, ___callback_1)); }
+	inline static int32_t get_offset_of_callback_1() { return static_cast<int32_t>(offsetof(Entry_t67115091, ___callback_1)); }
 	inline TriggerEvent_t516183010 * get_callback_1() const { return ___callback_1; }
 	inline TriggerEvent_t516183010 ** get_address_of_callback_1() { return &___callback_1; }
 	inline void set_callback_1(TriggerEvent_t516183010 * value)

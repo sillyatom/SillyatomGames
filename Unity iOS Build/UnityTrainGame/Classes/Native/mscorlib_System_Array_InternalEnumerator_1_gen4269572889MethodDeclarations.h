@@ -27,4 +27,4 @@
 // System.Boolean System.Array/InternalEnumerator`1<System.Xml.NameTable/Entry>::MoveNext()
 #define InternalEnumerator_1_MoveNext_m208069195(__this, method) ((  bool (*) (InternalEnumerator_1_t4269572889 *, const MethodInfo*))InternalEnumerator_1_MoveNext_m3716548237_gshared)(__this, method)
 // T System.Array/InternalEnumerator`1<System.Xml.NameTable/Entry>::get_Current()
-#define InternalEnumerator_1_get_Current_m3153697064(__this, method) ((  Entry_t67115091 * (*) (InternalEnumerator_1_t4269572889 *, const MethodInfo*))InternalEnumerator_1_get_Current_m2178852364_gshared)(__this, method)
+#define InternalEnumerator_1_get_Current_m3153697064(__this, method) ((  Entry_t67115090 * (*) (InternalEnumerator_1_t4269572889 *, const MethodInfo*))InternalEnumerator_1_get_Current_m2178852364_gshared)(__this, method)

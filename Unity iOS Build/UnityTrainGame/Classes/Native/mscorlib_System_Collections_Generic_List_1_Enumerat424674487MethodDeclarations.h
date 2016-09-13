@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<System.Net.Cookie>::VerifyState()
 #define Enumerator_VerifyState_m2065610713(__this, method) ((  void (*) (Enumerator_t424674487 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.Net.Cookie>::MoveNext()
-#define Enumerator_MoveNext_m2345435363(__this, method) ((  bool (*) (Enumerator_t424674487 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m2345435363(__this, method) ((  bool (*) (Enumerator_t424674487 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<System.Net.Cookie>::get_Current()
-#define Enumerator_get_Current_m1081555024(__this, method) ((  Cookie_t1541932526 * (*) (Enumerator_t424674487 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1081555024(__this, method) ((  Cookie_t1541932526 * (*) (Enumerator_t424674487 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

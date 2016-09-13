@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<API>::VerifyState()
 #define Enumerator_VerifyState_m2178582079(__this, method) ((  void (*) (Enumerator_t3177774275 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<API>::MoveNext()
-#define Enumerator_MoveNext_m186502452(__this, method) ((  bool (*) (Enumerator_t3177774275 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m186502452(__this, method) ((  bool (*) (Enumerator_t3177774275 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<API>::get_Current()
-#define Enumerator_get_Current_m1504393436(__this, method) ((  API_t65019 * (*) (Enumerator_t3177774275 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1504393436(__this, method) ((  API_t65019 * (*) (Enumerator_t3177774275 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

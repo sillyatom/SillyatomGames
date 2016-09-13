@@ -83,6 +83,8 @@ extern "C"  uint32_t UInt32_Parse_m1474004442 (Il2CppObject * __this /* static, 
 extern "C"  uint32_t UInt32_Parse_m1670428837 (Il2CppObject * __this /* static, unused */, String_t* ___s, int32_t ___style, Il2CppObject * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.UInt32 System.UInt32::Parse(System.String,System.IFormatProvider)
 extern "C"  uint32_t UInt32_Parse_m3087278554 (Il2CppObject * __this /* static, unused */, String_t* ___s, Il2CppObject * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.UInt32 System.UInt32::Parse(System.String,System.Globalization.NumberStyles)
+extern "C"  uint32_t UInt32_Parse_m3754424175 (Il2CppObject * __this /* static, unused */, String_t* ___s, int32_t ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.UInt32::TryParse(System.String,System.UInt32&)
 extern "C"  bool UInt32_TryParse_m537116052 (Il2CppObject * __this /* static, unused */, String_t* ___s, uint32_t* ___result, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.UInt32::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.UInt32&)

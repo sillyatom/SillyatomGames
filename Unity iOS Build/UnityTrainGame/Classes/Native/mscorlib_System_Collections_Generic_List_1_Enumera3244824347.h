@@ -13,7 +13,7 @@
 // System.Collections.Generic.List`1<UnityEngine.EventSystems.EventTrigger/Entry>
 struct List_1_t864074059;
 // UnityEngine.EventSystems.EventTrigger/Entry
-struct Entry_t67115090;
+struct Entry_t67115091;
 
 #include "mscorlib_System_ValueType4014882752.h"
 
@@ -34,7 +34,7 @@ public:
 	// System.Int32 System.Collections.Generic.List`1/Enumerator::ver
 	int32_t ___ver_2;
 	// T System.Collections.Generic.List`1/Enumerator::current
-	Entry_t67115090 * ___current_3;
+	Entry_t67115091 * ___current_3;
 
 public:
 	inline static int32_t get_offset_of_l_0() { return static_cast<int32_t>(offsetof(Enumerator_t3244824347, ___l_0)); }
@@ -63,9 +63,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_current_3() { return static_cast<int32_t>(offsetof(Enumerator_t3244824347, ___current_3)); }
-	inline Entry_t67115090 * get_current_3() const { return ___current_3; }
-	inline Entry_t67115090 ** get_address_of_current_3() { return &___current_3; }
-	inline void set_current_3(Entry_t67115090 * value)
+	inline Entry_t67115091 * get_current_3() const { return ___current_3; }
+	inline Entry_t67115091 ** get_address_of_current_3() { return &___current_3; }
+	inline void set_current_3(Entry_t67115091 * value)
 	{
 		___current_3 = value;
 		Il2CppCodeGenWriteBarrier(&___current_3, value);

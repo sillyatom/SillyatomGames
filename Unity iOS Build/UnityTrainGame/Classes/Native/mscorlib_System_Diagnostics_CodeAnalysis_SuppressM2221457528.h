@@ -29,8 +29,10 @@ public:
 	String_t* ___category_0;
 	// System.String System.Diagnostics.CodeAnalysis.SuppressMessageAttribute::checkId
 	String_t* ___checkId_1;
+	// System.String System.Diagnostics.CodeAnalysis.SuppressMessageAttribute::justification
+	String_t* ___justification_2;
 	// System.String System.Diagnostics.CodeAnalysis.SuppressMessageAttribute::messageId
-	String_t* ___messageId_2;
+	String_t* ___messageId_3;
 
 public:
 	inline static int32_t get_offset_of_category_0() { return static_cast<int32_t>(offsetof(SuppressMessageAttribute_t2221457528, ___category_0)); }
@@ -51,13 +53,22 @@ public:
 		Il2CppCodeGenWriteBarrier(&___checkId_1, value);
 	}
 
-	inline static int32_t get_offset_of_messageId_2() { return static_cast<int32_t>(offsetof(SuppressMessageAttribute_t2221457528, ___messageId_2)); }
-	inline String_t* get_messageId_2() const { return ___messageId_2; }
-	inline String_t** get_address_of_messageId_2() { return &___messageId_2; }
-	inline void set_messageId_2(String_t* value)
+	inline static int32_t get_offset_of_justification_2() { return static_cast<int32_t>(offsetof(SuppressMessageAttribute_t2221457528, ___justification_2)); }
+	inline String_t* get_justification_2() const { return ___justification_2; }
+	inline String_t** get_address_of_justification_2() { return &___justification_2; }
+	inline void set_justification_2(String_t* value)
 	{
-		___messageId_2 = value;
-		Il2CppCodeGenWriteBarrier(&___messageId_2, value);
+		___justification_2 = value;
+		Il2CppCodeGenWriteBarrier(&___justification_2, value);
+	}
+
+	inline static int32_t get_offset_of_messageId_3() { return static_cast<int32_t>(offsetof(SuppressMessageAttribute_t2221457528, ___messageId_3)); }
+	inline String_t* get_messageId_3() const { return ___messageId_3; }
+	inline String_t** get_address_of_messageId_3() { return &___messageId_3; }
+	inline void set_messageId_3(String_t* value)
+	{
+		___messageId_3 = value;
+		Il2CppCodeGenWriteBarrier(&___messageId_3, value);
 	}
 };
 

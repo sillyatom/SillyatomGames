@@ -27,6 +27,8 @@ struct Encoding_t180559927;
 extern "C"  void WWWTranscoder__cctor_m1486747496 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Byte[] UnityEngine.WWWTranscoder::Byte2Hex(System.Byte,System.Byte[])
 extern "C"  ByteU5BU5D_t58506160* WWWTranscoder_Byte2Hex_m2414999496 (Il2CppObject * __this /* static, unused */, uint8_t ___b, ByteU5BU5D_t58506160* ___hexChars, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.WWWTranscoder::URLEncode(System.String,System.Text.Encoding)
+extern "C"  String_t* WWWTranscoder_URLEncode_m3301913818 (Il2CppObject * __this /* static, unused */, String_t* ___toEncode, Encoding_t180559927 * ___e, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Byte[] UnityEngine.WWWTranscoder::URLEncode(System.Byte[])
 extern "C"  ByteU5BU5D_t58506160* WWWTranscoder_URLEncode_m4039667511 (Il2CppObject * __this /* static, unused */, ByteU5BU5D_t58506160* ___toEncode, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.WWWTranscoder::QPEncode(System.String,System.Text.Encoding)

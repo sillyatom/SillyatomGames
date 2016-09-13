@@ -13,12 +13,14 @@
 #include <limits>
 #include <assert.h>
 
+// Newtonsoft.Json.JsonArrayAttribute
+struct JsonArrayAttribute_t2894116366;
+// System.String
+struct String_t;
 // Newtonsoft.Json.JsonConstructorAttribute
 struct JsonConstructorAttribute_t1144657805;
 // Newtonsoft.Json.JsonContainerAttribute
 struct JsonContainerAttribute_t4246140134;
-// System.String
-struct String_t;
 // System.IO.TextWriter
 struct TextWriter_t1689927879;
 // System.Enum
@@ -479,14 +481,16 @@ struct ObjectConstructor_1_t602487958;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonArrayAttribu2894116366.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonArrayAttribu2894116366MethodDeclarations.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134MethodDeclarations.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_String968488902.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConstructorA1144657805.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConstructorA1144657805MethodDeclarations.h"
-#include "mscorlib_System_Void2779279689.h"
 #include "mscorlib_System_Attribute498693649MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonContainerAtt4246140134MethodDeclarations.h"
-#include "mscorlib_System_String968488902.h"
-#include "mscorlib_System_Boolean211005341.h"
 #include "mscorlib_System_Nullable_1_gen3097043249MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen3097043249.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConvert748332590.h"
@@ -916,11 +920,9 @@ struct ObjectConstructor_1_t602487958;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1856914844MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen1835856702MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2267638131MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonArrayAttribu2894116366MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_EnumUt3585396487MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_EnumVa4014735039MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2267638131.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonArrayAttribu2894116366.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_EnumVa2706854490.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_EnumVa4014735039.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Schema_JsonSchem1856914844.h"
@@ -1108,10 +1110,10 @@ extern "C"  Il2CppObject* Enumerable_Where_TisIl2CppObject_m3480373697_gshared (
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Where<Newtonsoft.Json.Schema.JsonSchemaModel>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Boolean>)
 #define Enumerable_Where_TisJsonSchemaModel_t3130009042_m2092100942(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t295654475 *, const MethodInfo*))Enumerable_Where_TisIl2CppObject_m3480373697_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
-extern "C"  List_1_t1634065389 * Enumerable_ToList_TisIl2CppObject_m1075343207_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
-#define Enumerable_ToList_TisIl2CppObject_m1075343207(__this /* static, unused */, p0, method) ((  List_1_t1634065389 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+extern "C"  List_1_t1634065389 * Enumerable_ToList_TisIl2CppObject_m3660158798_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
+#define Enumerable_ToList_TisIl2CppObject_m3660158798(__this /* static, unused */, p0, method) ((  List_1_t1634065389 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<Newtonsoft.Json.Schema.JsonSchemaModel>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToList_TisJsonSchemaModel_t3130009042_m3126228535(__this /* static, unused */, p0, method) ((  List_1_t3926968011 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToList_TisJsonSchemaModel_t3130009042_m3126228535(__this /* static, unused */, p0, method) ((  List_1_t3926968011 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Where<System.Collections.Generic.KeyValuePair`2<System.Object,System.Boolean>>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Boolean>)
 extern "C"  Il2CppObject* Enumerable_Where_TisKeyValuePair_2_t2686855369_m1954194974_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t1342843800 * p1, const MethodInfo* method);
 #define Enumerable_Where_TisKeyValuePair_2_t2686855369_m1954194974(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t1342843800 *, const MethodInfo*))Enumerable_Where_TisKeyValuePair_2_t2686855369_m1954194974_gshared)(__this /* static, unused */, p0, p1, method)
@@ -1123,7 +1125,7 @@ extern "C"  Il2CppObject* Enumerable_Select_TisKeyValuePair_2_t2686855369_TisIl2
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Collections.Generic.KeyValuePair`2<System.String,System.Boolean>,System.String>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
 #define Enumerable_Select_TisKeyValuePair_2_t1337234543_TisString_t_m3296524656(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t339842755 *, const MethodInfo*))Enumerable_Select_TisKeyValuePair_2_t2686855369_TisIl2CppObject_m4159309844_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<System.String>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToList_TisString_t_m2078638137(__this /* static, unused */, p0, method) ((  List_1_t1765447871 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToList_TisString_t_m2078638137(__this /* static, unused */, p0, method) ((  List_1_t1765447871 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::SelectMany<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Collections.Generic.IEnumerable`1<!!1>>)
 extern "C"  Il2CppObject* Enumerable_SelectMany_TisIl2CppObject_TisIl2CppObject_m2900030484_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t712970412 * p1, const MethodInfo* method);
 #define Enumerable_SelectMany_TisIl2CppObject_TisIl2CppObject_m2900030484(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t712970412 *, const MethodInfo*))Enumerable_SelectMany_TisIl2CppObject_TisIl2CppObject_m2900030484_gshared)(__this /* static, unused */, p0, p1, method)
@@ -1172,10 +1174,10 @@ extern "C"  Il2CppObject* Enumerable_Cast_TisIl2CppObject_m3904275306_gshared (I
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Cast<Newtonsoft.Json.Linq.JProperty>(System.Collections.IEnumerable)
 #define Enumerable_Cast_TisJProperty_t2926881078_m4188992222(__this /* static, unused */, p0, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject *, const MethodInfo*))Enumerable_Cast_TisIl2CppObject_m3904275306_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-extern "C"  Il2CppObject* Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t2135783352 * p1, const MethodInfo* method);
-#define Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2135783352 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared)(__this /* static, unused */, p0, p1, method)
+extern "C"  Il2CppObject* Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t2135783352 * p1, const MethodInfo* method);
+#define Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2135783352 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<Newtonsoft.Json.Linq.JProperty,Newtonsoft.Json.Linq.JToken>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-#define Enumerable_Select_TisJProperty_t2926881078_TisJToken_t2367600838_m3601729044(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t292817920 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared)(__this /* static, unused */, p0, p1, method)
+#define Enumerable_Select_TisJProperty_t2926881078_TisJToken_t2367600838_m3601729044(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t292817920 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::SelectMany<Newtonsoft.Json.Linq.JObject,Newtonsoft.Json.Linq.JProperty>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Collections.Generic.IEnumerable`1<!!1>>)
 #define Enumerable_SelectMany_TisJObject_t3774284064_TisJProperty_t2926881078_m2223524194(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t27451026 *, const MethodInfo*))Enumerable_SelectMany_TisIl2CppObject_TisIl2CppObject_m2900030484_gshared)(__this /* static, unused */, p0, p1, method)
 // Newtonsoft.Json.Linq.IJEnumerable`1<!!0> Newtonsoft.Json.Linq.LinqExtensions::AsJEnumerable<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
@@ -1228,19 +1230,19 @@ extern "C"  Il2CppObject* Enumerable_Union_TisIl2CppObject_m58545383_gshared (Il
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Union<Newtonsoft.Json.Schema.JsonSchema>(System.Collections.Generic.IEnumerable`1<!!0>,System.Collections.Generic.IEnumerable`1<!!0>)
 #define Enumerable_Union_TisJsonSchema_t4227645115_m2864382986(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Il2CppObject*, const MethodInfo*))Enumerable_Union_TisIl2CppObject_m58545383_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<Newtonsoft.Json.Schema.JsonSchema>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToList_TisJsonSchema_t4227645115_m946734922(__this /* static, unused */, p0, method) ((  List_1_t729636788 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToList_TisJsonSchema_t4227645115_m946734922(__this /* static, unused */, p0, method) ((  List_1_t729636788 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<Newtonsoft.Json.Schema.JsonSchema,System.String>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-#define Enumerable_Select_TisJsonSchema_t4227645115_TisString_t_m466535161(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t3204046279 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared)(__this /* static, unused */, p0, p1, method)
+#define Enumerable_Select_TisJsonSchema_t4227645115_TisString_t_m466535161(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t3204046279 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Linq.IOrderedEnumerable`1<!!0> System.Linq.Enumerable::OrderBy<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>,System.Collections.Generic.IComparer`1<!!1>)
 extern "C"  Il2CppObject* Enumerable_OrderBy_TisIl2CppObject_TisIl2CppObject_m1311541200_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t2135783352 * p1, Il2CppObject* p2, const MethodInfo* method);
 #define Enumerable_OrderBy_TisIl2CppObject_TisIl2CppObject_m1311541200(__this /* static, unused */, p0, p1, p2, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2135783352 *, Il2CppObject*, const MethodInfo*))Enumerable_OrderBy_TisIl2CppObject_TisIl2CppObject_m1311541200_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // System.Linq.IOrderedEnumerable`1<!!0> System.Linq.Enumerable::OrderBy<System.String,System.String>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>,System.Collections.Generic.IComparer`1<!!1>)
 #define Enumerable_OrderBy_TisString_t_TisString_t_m20740908(__this /* static, unused */, p0, p1, p2, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t917545008 *, Il2CppObject*, const MethodInfo*))Enumerable_OrderBy_TisIl2CppObject_TisIl2CppObject_m1311541200_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // !!0[] System.Linq.Enumerable::ToArray<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
-extern "C"  ObjectU5BU5D_t11523773* Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
-#define Enumerable_ToArray_TisIl2CppObject_m1195909660(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t11523773* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared)(__this /* static, unused */, p0, method)
+extern "C"  ObjectU5BU5D_t11523773* Enumerable_ToArray_TisIl2CppObject_m914007555_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
+#define Enumerable_ToArray_TisIl2CppObject_m914007555(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t11523773* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m914007555_gshared)(__this /* static, unused */, p0, method)
 // !!0[] System.Linq.Enumerable::ToArray<System.String>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToArray_TisString_t_m2199204590(__this /* static, unused */, p0, method) ((  StringU5BU5D_t2956870243* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToArray_TisString_t_m4223362994(__this /* static, unused */, p0, method) ((  StringU5BU5D_t2956870243* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m914007555_gshared)(__this /* static, unused */, p0, method)
 // !!0 System.Linq.Enumerable::SingleOrDefault<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Boolean>)
 extern "C"  Il2CppObject * Enumerable_SingleOrDefault_TisIl2CppObject_m2251858732_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t1509682273 * p1, const MethodInfo* method);
 #define Enumerable_SingleOrDefault_TisIl2CppObject_m2251858732(__this /* static, unused */, p0, p1, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t1509682273 *, const MethodInfo*))Enumerable_SingleOrDefault_TisIl2CppObject_m2251858732_gshared)(__this /* static, unused */, p0, p1, method)
@@ -1260,7 +1262,7 @@ extern "C"  List_1_t3053966990 * Enumerable_ToList_TisJsonSchemaType_t2257008021
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Where<System.Reflection.MemberInfo>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Boolean>)
 #define Enumerable_Where_TisMemberInfo_t_m763053202(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t1016985783 *, const MethodInfo*))Enumerable_Where_TisIl2CppObject_m3480373697_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<System.Reflection.MemberInfo>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToList_TisMemberInfo_t_m3299739195(__this /* static, unused */, p0, method) ((  List_1_t3639992783 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToList_TisMemberInfo_t_m3299739195(__this /* static, unused */, p0, method) ((  List_1_t3639992783 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // !!0 Newtonsoft.Json.Serialization.JsonTypeReflector::GetAttribute<System.Object>(System.Reflection.ICustomAttributeProvider)
 extern "C"  Il2CppObject * JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method);
 #define JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368(__this /* static, unused */, p0, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, Il2CppObject *, const MethodInfo*))JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368_gshared)(__this /* static, unused */, p0, method)
@@ -1275,7 +1277,7 @@ extern "C"  Il2CppObject * JsonTypeReflector_GetAttribute_TisIl2CppObject_m91803
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Where<System.Reflection.ConstructorInfo>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.Boolean>)
 #define Enumerable_Where_TisConstructorInfo_t3542137334_m963787402(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t775214871 *, const MethodInfo*))Enumerable_Where_TisIl2CppObject_m3480373697_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<System.Reflection.ConstructorInfo>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToList_TisConstructorInfo_t3542137334_m1134197261(__this /* static, unused */, p0, method) ((  List_1_t44129007 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToList_TisConstructorInfo_t3542137334_m1134197261(__this /* static, unused */, p0, method) ((  List_1_t44129007 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // System.Func`1<!!0> Newtonsoft.Json.Utilities.ReflectionDelegateFactory::CreateDefaultConstructor<System.Object>(System.Type)
 extern "C"  Func_1_t1979887667 * ReflectionDelegateFactory_CreateDefaultConstructor_TisIl2CppObject_m579580419_gshared (ReflectionDelegateFactory_t267368177 * __this, Type_t * p0, const MethodInfo* method);
 #define ReflectionDelegateFactory_CreateDefaultConstructor_TisIl2CppObject_m579580419(__this, p0, method) ((  Func_1_t1979887667 * (*) (ReflectionDelegateFactory_t267368177 *, Type_t *, const MethodInfo*))ReflectionDelegateFactory_CreateDefaultConstructor_TisIl2CppObject_m579580419_gshared)(__this, p0, method)
@@ -1288,7 +1290,7 @@ extern "C"  Il2CppObject* Enumerable_OrderBy_TisIl2CppObject_TisInt32_t284741478
 // System.Linq.IOrderedEnumerable`1<!!0> System.Linq.Enumerable::OrderBy<Newtonsoft.Json.Serialization.JsonProperty,System.Int32>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
 #define Enumerable_OrderBy_TisJsonProperty_t1841444406_TisInt32_t2847414787_m3637796218(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2594114621 *, const MethodInfo*))Enumerable_OrderBy_TisIl2CppObject_TisInt32_t2847414787_m4229321362_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<Newtonsoft.Json.Serialization.JsonProperty>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToList_TisJsonProperty_t1841444406_m1794993375(__this /* static, unused */, p0, method) ((  List_1_t2638403375 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m1075343207_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToList_TisJsonProperty_t1841444406_m1794993375(__this /* static, unused */, p0, method) ((  List_1_t2638403375 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToList_TisIl2CppObject_m3660158798_gshared)(__this /* static, unused */, p0, method)
 // !!0 Newtonsoft.Json.Serialization.JsonTypeReflector::GetAttribute<Newtonsoft.Json.JsonIgnoreAttribute>(System.Reflection.ICustomAttributeProvider)
 #define JsonTypeReflector_GetAttribute_TisJsonIgnoreAttribute_t4251740517_m3244506193(__this /* static, unused */, p0, method) ((  JsonIgnoreAttribute_t4251740517 * (*) (Il2CppObject * /* static, unused */, Il2CppObject *, const MethodInfo*))JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368_gshared)(__this /* static, unused */, p0, method)
 // !!0 Newtonsoft.Json.Serialization.JsonTypeReflector::GetAttribute<System.ComponentModel.DefaultValueAttribute>(System.Reflection.ICustomAttributeProvider)
@@ -1351,6 +1353,50 @@ extern "C"  uint64_t JsonFormatterConverter_GetTokenValue_TisUInt64_t985925421_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void Newtonsoft.Json.JsonArrayAttribute::.ctor()
+extern "C"  void JsonArrayAttribute__ctor_m3004038907 (JsonArrayAttribute_t2894116366 * __this, const MethodInfo* method)
+{
+	{
+		JsonContainerAttribute__ctor_m2212919715(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Newtonsoft.Json.JsonArrayAttribute::.ctor(System.Boolean)
+extern "C"  void JsonArrayAttribute__ctor_m2822857010 (JsonArrayAttribute_t2894116366 * __this, bool ___allowNullItems, const MethodInfo* method)
+{
+	{
+		JsonContainerAttribute__ctor_m2212919715(__this, /*hidden argument*/NULL);
+		bool L_0 = ___allowNullItems;
+		__this->set__allowNullItems_4(L_0);
+		return;
+	}
+}
+// System.Void Newtonsoft.Json.JsonArrayAttribute::.ctor(System.String)
+extern "C"  void JsonArrayAttribute__ctor_m3270840295 (JsonArrayAttribute_t2894116366 * __this, String_t* ___id, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___id;
+		JsonContainerAttribute__ctor_m4240385599(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean Newtonsoft.Json.JsonArrayAttribute::get_AllowNullItems()
+extern "C"  bool JsonArrayAttribute_get_AllowNullItems_m4072540822 (JsonArrayAttribute_t2894116366 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get__allowNullItems_4();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.JsonArrayAttribute::set_AllowNullItems(System.Boolean)
+extern "C"  void JsonArrayAttribute_set_AllowNullItems_m3498523469 (JsonArrayAttribute_t2894116366 * __this, bool ___value, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value;
+		__this->set__allowNullItems_4(L_0);
+		return;
+	}
+}
 // System.Void Newtonsoft.Json.JsonConstructorAttribute::.ctor()
 extern "C"  void JsonConstructorAttribute__ctor_m1427271196 (JsonConstructorAttribute_t1144657805 * __this, const MethodInfo* method)
 {
@@ -8778,7 +8824,7 @@ IL_00c1:
 // System.Boolean Newtonsoft.Json.JsonTextReader::ReadInternal()
 extern TypeInfo* Nullable_1_t1369777311_il2cpp_TypeInfo_var;
 extern TypeInfo* ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var;
-extern TypeInfo* State_t80204914_il2cpp_TypeInfo_var;
+extern TypeInfo* State_t80204915_il2cpp_TypeInfo_var;
 extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
 extern const MethodInfo* Nullable_1_get_HasValue_m1964507057_MethodInfo_var;
 extern const MethodInfo* Nullable_1_get_Value_m1248766879_MethodInfo_var;
@@ -8954,7 +9000,7 @@ IL_00c1:
 		ObjectU5BU5D_t11523773* L_16 = ((ObjectU5BU5D_t11523773*)SZArrayNew(ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var, (uint32_t)3));
 		int32_t L_17 = JsonReader_get_CurrentState_m2983480069(__this, /*hidden argument*/NULL);
 		int32_t L_18 = L_17;
-		Il2CppObject * L_19 = Box(State_t80204914_il2cpp_TypeInfo_var, &L_18);
+		Il2CppObject * L_19 = Box(State_t80204915_il2cpp_TypeInfo_var, &L_18);
 		NullCheck(L_16);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_16, 0);
 		ArrayElementTypeCheck (L_16, L_19);
@@ -17834,7 +17880,7 @@ extern "C"  int32_t JsonWriter_get_Top_m75893639 (JsonWriter_t1972966974 * __thi
 	}
 }
 // Newtonsoft.Json.WriteState Newtonsoft.Json.JsonWriter::get_WriteState()
-extern TypeInfo* State_t80204915_il2cpp_TypeInfo_var;
+extern TypeInfo* State_t80204916_il2cpp_TypeInfo_var;
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern TypeInfo* JsonWriterException_t1233309079_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral4294593070;
@@ -17940,7 +17986,7 @@ IL_004c:
 	{
 		int32_t L_2 = __this->get__currentState_3();
 		int32_t L_3 = L_2;
-		Il2CppObject * L_4 = Box(State_t80204915_il2cpp_TypeInfo_var, &L_3);
+		Il2CppObject * L_4 = Box(State_t80204916_il2cpp_TypeInfo_var, &L_3);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_5 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral4294593070, L_4, /*hidden argument*/NULL);
 		JsonWriterException_t1233309079 * L_6 = (JsonWriterException_t1233309079 *)il2cpp_codegen_object_new(JsonWriterException_t1233309079_il2cpp_TypeInfo_var);
@@ -19157,7 +19203,7 @@ extern TypeInfo* JsonWriter_t1972966974_il2cpp_TypeInfo_var;
 extern TypeInfo* CultureInfo_t3603717042_il2cpp_TypeInfo_var;
 extern TypeInfo* ObjectU5BU5D_t11523773_il2cpp_TypeInfo_var;
 extern TypeInfo* JsonToken_t326031476_il2cpp_TypeInfo_var;
-extern TypeInfo* State_t80204915_il2cpp_TypeInfo_var;
+extern TypeInfo* State_t80204916_il2cpp_TypeInfo_var;
 extern TypeInfo* JsonWriterException_t1233309079_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2722955217;
 extern const uint32_t JsonWriter_AutoComplete_m1699166389_MetadataUsageId;
@@ -19274,7 +19320,7 @@ IL_0049:
 		ObjectU5BU5D_t11523773* L_15 = L_10;
 		int32_t L_16 = __this->get__currentState_3();
 		int32_t L_17 = L_16;
-		Il2CppObject * L_18 = Box(State_t80204915_il2cpp_TypeInfo_var, &L_17);
+		Il2CppObject * L_18 = Box(State_t80204916_il2cpp_TypeInfo_var, &L_17);
 		NullCheck((Enum_t2778772662 *)L_18);
 		String_t* L_19 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Enum::ToString() */, (Enum_t2778772662 *)L_18);
 		NullCheck(L_15);
@@ -27356,7 +27402,7 @@ extern "C"  Il2CppObject* JPropertKeyedCollection_get_Dictionary_m2532271602 (JP
 }
 // System.Void Newtonsoft.Json.Linq.JPath::.ctor(System.String)
 extern TypeInfo* List_1_t1634065389_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2499515032;
 extern const uint32_t JPath__ctor_m1958037821_MetadataUsageId;
 extern "C"  void JPath__ctor_m1958037821 (JPath_t238875782 * __this, String_t* ___expression, const MethodInfo* method)
@@ -27374,7 +27420,7 @@ extern "C"  void JPath__ctor_m1958037821 (JPath_t238875782 * __this, String_t* _
 		String_t* L_1 = ___expression;
 		__this->set__expression_0(L_1);
 		List_1_t1634065389 * L_2 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_2, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_2, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		JPath_set_Parts_m1797060072(__this, L_2, /*hidden argument*/NULL);
 		JPath_ParseMain_m611855(__this, /*hidden argument*/NULL);
 		return;
@@ -27805,9 +27851,9 @@ extern TypeInfo* JArray_t2350149926_il2cpp_TypeInfo_var;
 extern TypeInfo* IndexOutOfRangeException_t3760259642_il2cpp_TypeInfo_var;
 extern TypeInfo* Enumerator_t4014815677_il2cpp_TypeInfo_var;
 extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1_GetEnumerator_m1919240000_MethodInfo_var;
-extern const MethodInfo* Enumerator_get_Current_m396252160_MethodInfo_var;
-extern const MethodInfo* Enumerator_MoveNext_m4284703760_MethodInfo_var;
+extern const MethodInfo* List_1_GetEnumerator_m767455740_MethodInfo_var;
+extern const MethodInfo* Enumerator_get_Current_m1799123908_MethodInfo_var;
+extern const MethodInfo* Enumerator_MoveNext_m3396518092_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1645940622;
 extern Il2CppCodeGenString* _stringLiteral3228268242;
 extern Il2CppCodeGenString* _stringLiteral2720836273;
@@ -27841,7 +27887,7 @@ extern "C"  JToken_t2367600838 * JPath_Evaluate_m1768163318 (JPath_t238875782 * 
 		V_0 = L_0;
 		List_1_t1634065389 * L_1 = JPath_get_Parts_m288212603(__this, /*hidden argument*/NULL);
 		NullCheck(L_1);
-		Enumerator_t4014815677  L_2 = List_1_GetEnumerator_m1919240000(L_1, /*hidden argument*/List_1_GetEnumerator_m1919240000_MethodInfo_var);
+		Enumerator_t4014815677  L_2 = List_1_GetEnumerator_m767455740(L_1, /*hidden argument*/List_1_GetEnumerator_m767455740_MethodInfo_var);
 		V_2 = L_2;
 	}
 
@@ -27854,7 +27900,7 @@ IL_000e:
 
 IL_0013:
 		{
-			Il2CppObject * L_3 = Enumerator_get_Current_m396252160((&V_2), /*hidden argument*/Enumerator_get_Current_m396252160_MethodInfo_var);
+			Il2CppObject * L_3 = Enumerator_get_Current_m1799123908((&V_2), /*hidden argument*/Enumerator_get_Current_m1799123908_MethodInfo_var);
 			V_1 = L_3;
 			Il2CppObject * L_4 = V_1;
 			V_3 = ((String_t*)IsInstSealed(L_4, String_t_il2cpp_TypeInfo_var));
@@ -28079,7 +28125,7 @@ IL_0150:
 
 IL_0158:
 		{
-			bool L_57 = Enumerator_MoveNext_m4284703760((&V_2), /*hidden argument*/Enumerator_MoveNext_m4284703760_MethodInfo_var);
+			bool L_57 = Enumerator_MoveNext_m3396518092((&V_2), /*hidden argument*/Enumerator_MoveNext_m3396518092_MethodInfo_var);
 			if (L_57)
 			{
 				goto IL_0013;
@@ -38028,7 +38074,7 @@ extern "C"  void NotifyCollectionChangedEventArgs__ctor_m4058174091 (NotifyColle
 }
 // System.Void Newtonsoft.Json.ObservableSupport.NotifyCollectionChangedEventArgs::.ctor(Newtonsoft.Json.ObservableSupport.NotifyCollectionChangedAction,System.Object)
 extern TypeInfo* List_1_t1634065389_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern const uint32_t NotifyCollectionChangedEventArgs__ctor_m1083884346_MetadataUsageId;
 extern "C"  void NotifyCollectionChangedEventArgs__ctor_m1083884346 (NotifyCollectionChangedEventArgs_t1292868855 * __this, int32_t ___action, Il2CppObject * ___changedItem, const MethodInfo* method)
 {
@@ -38043,7 +38089,7 @@ extern "C"  void NotifyCollectionChangedEventArgs__ctor_m1083884346 (NotifyColle
 		int32_t L_0 = ___action;
 		NotifyCollectionChangedEventArgs__ctor_m3211289964(__this, L_0, /*hidden argument*/NULL);
 		List_1_t1634065389 * L_1 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_1, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_1, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_0 = L_1;
 		List_1_t1634065389 * L_2 = V_0;
 		Il2CppObject * L_3 = ___changedItem;
@@ -38092,7 +38138,7 @@ extern "C"  void NotifyCollectionChangedEventArgs__ctor_m362604509 (NotifyCollec
 }
 // System.Void Newtonsoft.Json.ObservableSupport.NotifyCollectionChangedEventArgs::.ctor(Newtonsoft.Json.ObservableSupport.NotifyCollectionChangedAction,System.Object,System.Object)
 extern TypeInfo* List_1_t1634065389_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern const uint32_t NotifyCollectionChangedEventArgs__ctor_m3329613960_MetadataUsageId;
 extern "C"  void NotifyCollectionChangedEventArgs__ctor_m3329613960 (NotifyCollectionChangedEventArgs_t1292868855 * __this, int32_t ___action, Il2CppObject * ___newItem, Il2CppObject * ___oldItem, const MethodInfo* method)
 {
@@ -38108,7 +38154,7 @@ extern "C"  void NotifyCollectionChangedEventArgs__ctor_m3329613960 (NotifyColle
 		Il2CppObject * L_1 = ___newItem;
 		NotifyCollectionChangedEventArgs__ctor_m1083884346(__this, L_0, L_1, /*hidden argument*/NULL);
 		List_1_t1634065389 * L_2 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_2, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_2, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_0 = L_2;
 		List_1_t1634065389 * L_3 = V_0;
 		Il2CppObject * L_4 = ___oldItem;
@@ -45650,7 +45696,7 @@ extern const MethodInfo* Enumerable_Select_TisJsonSchema_t4227645115_TisString_t
 extern const MethodInfo* JsonSchemaNode_U3CGetIdU3Em__18_m3159768926_MethodInfo_var;
 extern const MethodInfo* Func_2__ctor_m1547295832_MethodInfo_var;
 extern const MethodInfo* Enumerable_OrderBy_TisString_t_TisString_t_m20740908_MethodInfo_var;
-extern const MethodInfo* Enumerable_ToArray_TisString_t_m2199204590_MethodInfo_var;
+extern const MethodInfo* Enumerable_ToArray_TisString_t_m4223362994_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral45;
 extern const uint32_t JsonSchemaNode_GetId_m3957288242_MetadataUsageId;
 extern "C"  String_t* JsonSchemaNode_GetId_m3957288242 (Il2CppObject * __this /* static, unused */, Il2CppObject* ___schemata, const MethodInfo* method)
@@ -45721,7 +45767,7 @@ IL_0040:
 		IL2CPP_RUNTIME_CLASS_INIT(StringComparer_t4058118931_il2cpp_TypeInfo_var);
 		StringComparer_t4058118931 * L_10 = StringComparer_get_Ordinal_m2543279027(NULL /*static, unused*/, /*hidden argument*/NULL);
 		Il2CppObject* L_11 = Enumerable_OrderBy_TisString_t_TisString_t_m20740908(NULL /*static, unused*/, G_B4_0, L_9, L_10, /*hidden argument*/Enumerable_OrderBy_TisString_t_TisString_t_m20740908_MethodInfo_var);
-		StringU5BU5D_t2956870243* L_12 = Enumerable_ToArray_TisString_t_m2199204590(NULL /*static, unused*/, L_11, /*hidden argument*/Enumerable_ToArray_TisString_t_m2199204590_MethodInfo_var);
+		StringU5BU5D_t2956870243* L_12 = Enumerable_ToArray_TisString_t_m4223362994(NULL /*static, unused*/, L_11, /*hidden argument*/Enumerable_ToArray_TisString_t_m4223362994_MethodInfo_var);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_13 = String_Join_m2789530325(NULL /*static, unused*/, G_B4_1, L_12, /*hidden argument*/NULL);
 		return L_13;
@@ -52442,7 +52488,7 @@ extern TypeInfo* ICollection_t3761522009_il2cpp_TypeInfo_var;
 extern const MethodInfo* CollectionWrapper_1__ctor_m1056963549_MethodInfo_var;
 extern const MethodInfo* MethodCall_2_Invoke_m393306683_MethodInfo_var;
 extern const MethodInfo* Enumerable_Cast_TisIl2CppObject_m3904275306_MethodInfo_var;
-extern const MethodInfo* Enumerable_ToList_TisIl2CppObject_m1075343207_MethodInfo_var;
+extern const MethodInfo* Enumerable_ToList_TisIl2CppObject_m3660158798_MethodInfo_var;
 extern const uint32_t JsonArrayContract_CreateWrapper_m1607256922_MetadataUsageId;
 extern "C"  Il2CppObject * JsonArrayContract_CreateWrapper_m1607256922 (JsonArrayContract_t1632130460 * __this, Il2CppObject * ___list, const MethodInfo* method)
 {
@@ -52522,7 +52568,7 @@ IL_006a:
 	{
 		Il2CppObject * L_12 = ___list;
 		Il2CppObject* L_13 = Enumerable_Cast_TisIl2CppObject_m3904275306(NULL /*static, unused*/, ((Il2CppObject *)Castclass(L_12, IEnumerable_t287189635_il2cpp_TypeInfo_var)), /*hidden argument*/Enumerable_Cast_TisIl2CppObject_m3904275306_MethodInfo_var);
-		List_1_t1634065389 * L_14 = Enumerable_ToList_TisIl2CppObject_m1075343207(NULL /*static, unused*/, L_13, /*hidden argument*/Enumerable_ToList_TisIl2CppObject_m1075343207_MethodInfo_var);
+		List_1_t1634065389 * L_14 = Enumerable_ToList_TisIl2CppObject_m3660158798(NULL /*static, unused*/, L_13, /*hidden argument*/Enumerable_ToList_TisIl2CppObject_m3660158798_MethodInfo_var);
 		V_0 = L_14;
 		Type_t * L_15 = JsonArrayContract_get_CollectionItemType_m1741250691(__this, /*hidden argument*/NULL);
 		if (!L_15)
@@ -54013,379 +54059,6 @@ extern "C"  void JsonPrimitiveContract__ctor_m494320108 (JsonPrimitiveContract_t
 		Type_t * L_0 = ___underlyingType;
 		JsonContract__ctor_m4039967819(__this, L_0, /*hidden argument*/NULL);
 		return;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::.ctor()
-extern "C"  void JsonProperty__ctor_m838248715 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.String Newtonsoft.Json.Serialization.JsonProperty::get_PropertyName()
-extern "C"  String_t* JsonProperty_get_PropertyName_m3204019141 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = __this->get_U3CPropertyNameU3Ek__BackingField_0();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_PropertyName(System.String)
-extern "C"  void JsonProperty_set_PropertyName_m2432916588 (JsonProperty_t1841444406 * __this, String_t* ___value, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = ___value;
-		__this->set_U3CPropertyNameU3Ek__BackingField_0(L_0);
-		return;
-	}
-}
-// System.Nullable`1<System.Int32> Newtonsoft.Json.Serialization.JsonProperty::get_Order()
-extern "C"  Nullable_1_t1438485399  JsonProperty_get_Order_m405679167 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t1438485399  L_0 = __this->get_U3COrderU3Ek__BackingField_1();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Order(System.Nullable`1<System.Int32>)
-extern "C"  void JsonProperty_set_Order_m3005805556 (JsonProperty_t1841444406 * __this, Nullable_1_t1438485399  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t1438485399  L_0 = ___value;
-		__this->set_U3COrderU3Ek__BackingField_1(L_0);
-		return;
-	}
-}
-// System.String Newtonsoft.Json.Serialization.JsonProperty::get_UnderlyingName()
-extern "C"  String_t* JsonProperty_get_UnderlyingName_m1594652237 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = __this->get_U3CUnderlyingNameU3Ek__BackingField_2();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_UnderlyingName(System.String)
-extern "C"  void JsonProperty_set_UnderlyingName_m2731585316 (JsonProperty_t1841444406 * __this, String_t* ___value, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = ___value;
-		__this->set_U3CUnderlyingNameU3Ek__BackingField_2(L_0);
-		return;
-	}
-}
-// Newtonsoft.Json.Serialization.IValueProvider Newtonsoft.Json.Serialization.JsonProperty::get_ValueProvider()
-extern "C"  Il2CppObject * JsonProperty_get_ValueProvider_m184459761 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Il2CppObject * L_0 = __this->get_U3CValueProviderU3Ek__BackingField_3();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ValueProvider(Newtonsoft.Json.Serialization.IValueProvider)
-extern "C"  void JsonProperty_set_ValueProvider_m669931970 (JsonProperty_t1841444406 * __this, Il2CppObject * ___value, const MethodInfo* method)
-{
-	{
-		Il2CppObject * L_0 = ___value;
-		__this->set_U3CValueProviderU3Ek__BackingField_3(L_0);
-		return;
-	}
-}
-// System.Type Newtonsoft.Json.Serialization.JsonProperty::get_PropertyType()
-extern "C"  Type_t * JsonProperty_get_PropertyType_m3384045419 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Type_t * L_0 = __this->get_U3CPropertyTypeU3Ek__BackingField_4();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_PropertyType(System.Type)
-extern "C"  void JsonProperty_set_PropertyType_m2543013652 (JsonProperty_t1841444406 * __this, Type_t * ___value, const MethodInfo* method)
-{
-	{
-		Type_t * L_0 = ___value;
-		__this->set_U3CPropertyTypeU3Ek__BackingField_4(L_0);
-		return;
-	}
-}
-// Newtonsoft.Json.JsonConverter Newtonsoft.Json.Serialization.JsonProperty::get_Converter()
-extern "C"  JsonConverter_t757201947 * JsonProperty_get_Converter_m4115912016 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		JsonConverter_t757201947 * L_0 = __this->get_U3CConverterU3Ek__BackingField_5();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Converter(Newtonsoft.Json.JsonConverter)
-extern "C"  void JsonProperty_set_Converter_m4168865283 (JsonProperty_t1841444406 * __this, JsonConverter_t757201947 * ___value, const MethodInfo* method)
-{
-	{
-		JsonConverter_t757201947 * L_0 = ___value;
-		__this->set_U3CConverterU3Ek__BackingField_5(L_0);
-		return;
-	}
-}
-// Newtonsoft.Json.JsonConverter Newtonsoft.Json.Serialization.JsonProperty::get_MemberConverter()
-extern "C"  JsonConverter_t757201947 * JsonProperty_get_MemberConverter_m1774595862 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		JsonConverter_t757201947 * L_0 = __this->get_U3CMemberConverterU3Ek__BackingField_6();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_MemberConverter(Newtonsoft.Json.JsonConverter)
-extern "C"  void JsonProperty_set_MemberConverter_m1519107837 (JsonProperty_t1841444406 * __this, JsonConverter_t757201947 * ___value, const MethodInfo* method)
-{
-	{
-		JsonConverter_t757201947 * L_0 = ___value;
-		__this->set_U3CMemberConverterU3Ek__BackingField_6(L_0);
-		return;
-	}
-}
-// System.Boolean Newtonsoft.Json.Serialization.JsonProperty::get_Ignored()
-extern "C"  bool JsonProperty_get_Ignored_m3044358814 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		bool L_0 = __this->get_U3CIgnoredU3Ek__BackingField_7();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Ignored(System.Boolean)
-extern "C"  void JsonProperty_set_Ignored_m780750293 (JsonProperty_t1841444406 * __this, bool ___value, const MethodInfo* method)
-{
-	{
-		bool L_0 = ___value;
-		__this->set_U3CIgnoredU3Ek__BackingField_7(L_0);
-		return;
-	}
-}
-// System.Boolean Newtonsoft.Json.Serialization.JsonProperty::get_Readable()
-extern "C"  bool JsonProperty_get_Readable_m3183624454 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		bool L_0 = __this->get_U3CReadableU3Ek__BackingField_8();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Readable(System.Boolean)
-extern "C"  void JsonProperty_set_Readable_m1472311741 (JsonProperty_t1841444406 * __this, bool ___value, const MethodInfo* method)
-{
-	{
-		bool L_0 = ___value;
-		__this->set_U3CReadableU3Ek__BackingField_8(L_0);
-		return;
-	}
-}
-// System.Boolean Newtonsoft.Json.Serialization.JsonProperty::get_Writable()
-extern "C"  bool JsonProperty_get_Writable_m2551723190 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		bool L_0 = __this->get_U3CWritableU3Ek__BackingField_9();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Writable(System.Boolean)
-extern "C"  void JsonProperty_set_Writable_m101413229 (JsonProperty_t1841444406 * __this, bool ___value, const MethodInfo* method)
-{
-	{
-		bool L_0 = ___value;
-		__this->set_U3CWritableU3Ek__BackingField_9(L_0);
-		return;
-	}
-}
-// System.Object Newtonsoft.Json.Serialization.JsonProperty::get_DefaultValue()
-extern "C"  Il2CppObject * JsonProperty_get_DefaultValue_m2243659911 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Il2CppObject * L_0 = __this->get_U3CDefaultValueU3Ek__BackingField_10();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_DefaultValue(System.Object)
-extern "C"  void JsonProperty_set_DefaultValue_m2024814414 (JsonProperty_t1841444406 * __this, Il2CppObject * ___value, const MethodInfo* method)
-{
-	{
-		Il2CppObject * L_0 = ___value;
-		__this->set_U3CDefaultValueU3Ek__BackingField_10(L_0);
-		return;
-	}
-}
-// Newtonsoft.Json.Required Newtonsoft.Json.Serialization.JsonProperty::get_Required()
-extern "C"  int32_t JsonProperty_get_Required_m2136426250 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		int32_t L_0 = __this->get_U3CRequiredU3Ek__BackingField_11();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Required(Newtonsoft.Json.Required)
-extern "C"  void JsonProperty_set_Required_m3485786369 (JsonProperty_t1841444406 * __this, int32_t ___value, const MethodInfo* method)
-{
-	{
-		int32_t L_0 = ___value;
-		__this->set_U3CRequiredU3Ek__BackingField_11(L_0);
-		return;
-	}
-}
-// System.Nullable`1<System.Boolean> Newtonsoft.Json.Serialization.JsonProperty::get_IsReference()
-extern "C"  Nullable_1_t3097043249  JsonProperty_get_IsReference_m2980617816 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t3097043249  L_0 = __this->get_U3CIsReferenceU3Ek__BackingField_12();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_IsReference(System.Nullable`1<System.Boolean>)
-extern "C"  void JsonProperty_set_IsReference_m2855740859 (JsonProperty_t1841444406 * __this, Nullable_1_t3097043249  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t3097043249  L_0 = ___value;
-		__this->set_U3CIsReferenceU3Ek__BackingField_12(L_0);
-		return;
-	}
-}
-// System.Nullable`1<Newtonsoft.Json.NullValueHandling> Newtonsoft.Json.Serialization.JsonProperty::get_NullValueHandling()
-extern "C"  Nullable_1_t1779445574  JsonProperty_get_NullValueHandling_m1339160097 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t1779445574  L_0 = __this->get_U3CNullValueHandlingU3Ek__BackingField_13();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_NullValueHandling(System.Nullable`1<Newtonsoft.Json.NullValueHandling>)
-extern "C"  void JsonProperty_set_NullValueHandling_m3246714444 (JsonProperty_t1841444406 * __this, Nullable_1_t1779445574  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t1779445574  L_0 = ___value;
-		__this->set_U3CNullValueHandlingU3Ek__BackingField_13(L_0);
-		return;
-	}
-}
-// System.Nullable`1<Newtonsoft.Json.DefaultValueHandling> Newtonsoft.Json.Serialization.JsonProperty::get_DefaultValueHandling()
-extern "C"  Nullable_1_t1928302860  JsonProperty_get_DefaultValueHandling_m2477507009 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t1928302860  L_0 = __this->get_U3CDefaultValueHandlingU3Ek__BackingField_14();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_DefaultValueHandling(System.Nullable`1<Newtonsoft.Json.DefaultValueHandling>)
-extern "C"  void JsonProperty_set_DefaultValueHandling_m723588126 (JsonProperty_t1841444406 * __this, Nullable_1_t1928302860  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t1928302860  L_0 = ___value;
-		__this->set_U3CDefaultValueHandlingU3Ek__BackingField_14(L_0);
-		return;
-	}
-}
-// System.Nullable`1<Newtonsoft.Json.ReferenceLoopHandling> Newtonsoft.Json.Serialization.JsonProperty::get_ReferenceLoopHandling()
-extern "C"  Nullable_1_t319467179  JsonProperty_get_ReferenceLoopHandling_m3595109505 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t319467179  L_0 = __this->get_U3CReferenceLoopHandlingU3Ek__BackingField_15();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ReferenceLoopHandling(System.Nullable`1<Newtonsoft.Json.ReferenceLoopHandling>)
-extern "C"  void JsonProperty_set_ReferenceLoopHandling_m449726742 (JsonProperty_t1841444406 * __this, Nullable_1_t319467179  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t319467179  L_0 = ___value;
-		__this->set_U3CReferenceLoopHandlingU3Ek__BackingField_15(L_0);
-		return;
-	}
-}
-// System.Nullable`1<Newtonsoft.Json.ObjectCreationHandling> Newtonsoft.Json.Serialization.JsonProperty::get_ObjectCreationHandling()
-extern "C"  Nullable_1_t975689370  JsonProperty_get_ObjectCreationHandling_m3387899485 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t975689370  L_0 = __this->get_U3CObjectCreationHandlingU3Ek__BackingField_16();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ObjectCreationHandling(System.Nullable`1<Newtonsoft.Json.ObjectCreationHandling>)
-extern "C"  void JsonProperty_set_ObjectCreationHandling_m3299715486 (JsonProperty_t1841444406 * __this, Nullable_1_t975689370  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t975689370  L_0 = ___value;
-		__this->set_U3CObjectCreationHandlingU3Ek__BackingField_16(L_0);
-		return;
-	}
-}
-// System.Nullable`1<Newtonsoft.Json.TypeNameHandling> Newtonsoft.Json.Serialization.JsonProperty::get_TypeNameHandling()
-extern "C"  Nullable_1_t964387137  JsonProperty_get_TypeNameHandling_m2920599915 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Nullable_1_t964387137  L_0 = __this->get_U3CTypeNameHandlingU3Ek__BackingField_17();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_TypeNameHandling(System.Nullable`1<Newtonsoft.Json.TypeNameHandling>)
-extern "C"  void JsonProperty_set_TypeNameHandling_m1061207678 (JsonProperty_t1841444406 * __this, Nullable_1_t964387137  ___value, const MethodInfo* method)
-{
-	{
-		Nullable_1_t964387137  L_0 = ___value;
-		__this->set_U3CTypeNameHandlingU3Ek__BackingField_17(L_0);
-		return;
-	}
-}
-// System.Predicate`1<System.Object> Newtonsoft.Json.Serialization.JsonProperty::get_ShouldSerialize()
-extern "C"  Predicate_1_t1408070318 * JsonProperty_get_ShouldSerialize_m765152429 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Predicate_1_t1408070318 * L_0 = __this->get_U3CShouldSerializeU3Ek__BackingField_18();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ShouldSerialize(System.Predicate`1<System.Object>)
-extern "C"  void JsonProperty_set_ShouldSerialize_m2201931334 (JsonProperty_t1841444406 * __this, Predicate_1_t1408070318 * ___value, const MethodInfo* method)
-{
-	{
-		Predicate_1_t1408070318 * L_0 = ___value;
-		__this->set_U3CShouldSerializeU3Ek__BackingField_18(L_0);
-		return;
-	}
-}
-// System.Predicate`1<System.Object> Newtonsoft.Json.Serialization.JsonProperty::get_GetIsSpecified()
-extern "C"  Predicate_1_t1408070318 * JsonProperty_get_GetIsSpecified_m4141211410 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Predicate_1_t1408070318 * L_0 = __this->get_U3CGetIsSpecifiedU3Ek__BackingField_19();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_GetIsSpecified(System.Predicate`1<System.Object>)
-extern "C"  void JsonProperty_set_GetIsSpecified_m1272462105 (JsonProperty_t1841444406 * __this, Predicate_1_t1408070318 * ___value, const MethodInfo* method)
-{
-	{
-		Predicate_1_t1408070318 * L_0 = ___value;
-		__this->set_U3CGetIsSpecifiedU3Ek__BackingField_19(L_0);
-		return;
-	}
-}
-// System.Action`2<System.Object,System.Object> Newtonsoft.Json.Serialization.JsonProperty::get_SetIsSpecified()
-extern "C"  Action_2_t4105459918 * JsonProperty_get_SetIsSpecified_m1732768832 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		Action_2_t4105459918 * L_0 = __this->get_U3CSetIsSpecifiedU3Ek__BackingField_20();
-		return L_0;
-	}
-}
-// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_SetIsSpecified(System.Action`2<System.Object,System.Object>)
-extern "C"  void JsonProperty_set_SetIsSpecified_m840109303 (JsonProperty_t1841444406 * __this, Action_2_t4105459918 * ___value, const MethodInfo* method)
-{
-	{
-		Action_2_t4105459918 * L_0 = ___value;
-		__this->set_U3CSetIsSpecifiedU3Ek__BackingField_20(L_0);
-		return;
-	}
-}
-// System.String Newtonsoft.Json.Serialization.JsonProperty::ToString()
-extern "C"  String_t* JsonProperty_ToString_m2046350376 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = JsonProperty_get_PropertyName_m3204019141(__this, /*hidden argument*/NULL);
-		return L_0;
 	}
 }
 #ifdef __clang__

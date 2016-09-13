@@ -4,10 +4,12 @@
 <type fullname="RotateSample" preserve="all"/>
 <type fullname="SampleInfo" preserve="all"/>
 <type fullname="iTween" preserve="all"/>
+<type fullname="IAPDemo" preserve="all"/>
 </assembly>
 <assembly fullname="Assembly-CSharp">
 <type fullname="TextTest" preserve="all"/>
 <type fullname="ReverseNormals" preserve="all"/>
+<type fullname="AdManager" preserve="all"/>
 <type fullname="ButtonComponent" preserve="all"/>
 <type fullname="ExtMonoBehaviour" preserve="all"/>
 <type fullname="GameScreenMonoBehaviour" preserve="all"/>
@@ -31,6 +33,7 @@
 <type fullname="GameFailDialog" preserve="all"/>
 <type fullname="GameWinDialog" preserve="all"/>
 <type fullname="GenericPopup" preserve="all"/>
+<type fullname="OutOfTokensDialog" preserve="all"/>
 <type fullname="GameSelectionScreen" preserve="all"/>
 <type fullname="MainScreen" preserve="all"/>
 <type fullname="MatchSelectionScreen" preserve="all"/>
@@ -86,5 +89,17 @@
 <type fullname="UnityEngine.UI.Outline" preserve="all"/>
 <type fullname="UnityEngine.UI.PositionAsUV1" preserve="all"/>
 <type fullname="UnityEngine.UI.Shadow" preserve="all"/>
+</assembly>
+<assembly fullname="UnityEngine.Advertisements">
+<type fullname="UnityEngine.Advertisements.Advertisement" preserve="all"/>
+<type fullname="UnityEngine.Advertisements.UnityAdsEditorPlaceholder" preserve="all"/>
+</assembly>
+<assembly fullname="UnityEngine.Analytics">
+<type fullname="UnityEngine.Analytics.Analytics" preserve="all"/>
+<type fullname="UnityEngine.Analytics.GameObserver" preserve="all"/>
+</assembly>
+<assembly fullname="Stores">
+<type fullname="UnityEngine.Purchasing.UIFakeStore/LifecycleNotifier" preserve="all"/>
+<type fullname="UnityEngine.Purchasing.Extension.UnityUtil" preserve="all"/>
 </assembly>
 </linker>

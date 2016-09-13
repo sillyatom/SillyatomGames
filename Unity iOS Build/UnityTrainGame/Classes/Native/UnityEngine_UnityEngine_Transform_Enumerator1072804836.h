@@ -22,7 +22,7 @@ struct Transform_t284553113;
 #endif
 
 // UnityEngine.Transform/Enumerator
-struct  Enumerator_t1072804841  : public Il2CppObject
+struct  Enumerator_t1072804842  : public Il2CppObject
 {
 public:
 	// UnityEngine.Transform UnityEngine.Transform/Enumerator::outer
@@ -31,7 +31,7 @@ public:
 	int32_t ___currentIndex_1;
 
 public:
-	inline static int32_t get_offset_of_outer_0() { return static_cast<int32_t>(offsetof(Enumerator_t1072804841, ___outer_0)); }
+	inline static int32_t get_offset_of_outer_0() { return static_cast<int32_t>(offsetof(Enumerator_t1072804842, ___outer_0)); }
 	inline Transform_t284553113 * get_outer_0() const { return ___outer_0; }
 	inline Transform_t284553113 ** get_address_of_outer_0() { return &___outer_0; }
 	inline void set_outer_0(Transform_t284553113 * value)
@@ -40,7 +40,7 @@ public:
 		Il2CppCodeGenWriteBarrier(&___outer_0, value);
 	}
 
-	inline static int32_t get_offset_of_currentIndex_1() { return static_cast<int32_t>(offsetof(Enumerator_t1072804841, ___currentIndex_1)); }
+	inline static int32_t get_offset_of_currentIndex_1() { return static_cast<int32_t>(offsetof(Enumerator_t1072804842, ___currentIndex_1)); }
 	inline int32_t get_currentIndex_1() const { return ___currentIndex_1; }
 	inline int32_t* get_address_of_currentIndex_1() { return &___currentIndex_1; }
 	inline void set_currentIndex_1(int32_t value)

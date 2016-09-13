@@ -23,6 +23,8 @@ struct ByteU5BU5D_t58506160;
 struct IntPtrU5BU5D_t2131596413;
 // Mono.Security.X509.X509CertificateCollection
 struct X509CertificateCollection_t3336811651;
+// System.CodeDom.Compiler.GeneratedCodeAttribute
+struct GeneratedCodeAttribute_t785805933;
 // System.Collections.Specialized.HybridDictionary
 struct HybridDictionary_t370358365;
 // System.Collections.IEnumerator
@@ -198,7 +200,7 @@ struct WriteMethod_t2894535040;
 // System.IO.Compression.GZipStream
 struct GZipStream_t4282284777;
 // System.MonoTODOAttribute
-struct MonoTODOAttribute_t1287393897;
+struct MonoTODOAttribute_t1287393898;
 // System.Net.Authorization
 struct Authorization_t3226214339;
 // System.Net.WebRequest
@@ -269,8 +271,6 @@ struct WebResponse_t2411292415;
 struct FileWebStream_t3298491832;
 // System.Net.FileWebRequest/GetResponseCallback
 struct GetResponseCallback_t786822908;
-// System.Net.FileWebRequestCreator
-struct FileWebRequestCreator_t153025599;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
@@ -309,6 +309,9 @@ struct FileWebRequestCreator_t153025599;
 #include "Mono_Security_Mono_Security_X509_X509Certificate273828612MethodDeclarations.h"
 #include "mscorlib_System_Boolean211005341.h"
 #include "System_Mono_Security_X509_OSX509Certificates_SecTr3917437860MethodDeclarations.h"
+#include "System_System_CodeDom_Compiler_GeneratedCodeAttribu785805933.h"
+#include "System_System_CodeDom_Compiler_GeneratedCodeAttribu785805933MethodDeclarations.h"
+#include "mscorlib_System_Attribute498693649MethodDeclarations.h"
 #include "System_System_Collections_Specialized_HybridDiction370358365.h"
 #include "System_System_Collections_Specialized_HybridDiction370358365MethodDeclarations.h"
 #include "mscorlib_System_Object837106420MethodDeclarations.h"
@@ -378,7 +381,6 @@ struct FileWebRequestCreator_t153025599;
 #include "mscorlib_System_Reflection_BindingFlags2090192240.h"
 #include "mscorlib_System_Reflection_FieldInfo1164929782.h"
 #include "mscorlib_System_Reflection_ConstructorInfo3542137334.h"
-#include "mscorlib_System_Attribute498693649MethodDeclarations.h"
 #include "mscorlib_System_Reflection_FieldInfo1164929782MethodDeclarations.h"
 #include "System_System_ComponentModel_BaseNumberConverter3180956623.h"
 #include "System_System_ComponentModel_BaseNumberConverter3180956623MethodDeclarations.h"
@@ -671,8 +673,6 @@ struct FileWebRequestCreator_t153025599;
 #include "mscorlib_System_IO_FileShare2703391818.h"
 #include "mscorlib_System_Threading_EventWaitHandle1233883898MethodDeclarations.h"
 #include "mscorlib_System_IO_FileStream1527309539MethodDeclarations.h"
-#include "System_System_Net_FileWebRequestCreator153025599.h"
-#include "System_System_Net_FileWebRequestCreator153025599MethodDeclarations.h"
 
 // System.Int32 System.Array::IndexOf<System.Int32>(!!0[],!!0)
 extern "C"  int32_t Array_IndexOf_TisInt32_t2847414787_m1482877264_gshared (Il2CppObject * __this /* static, unused */, Int32U5BU5D_t1809983122* p0, int32_t p1, const MethodInfo* method);
@@ -688,25 +688,25 @@ extern "C"  int32_t Array_IndexOf_TisIl2CppObject_m2661005505_gshared (Il2CppObj
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_pinvoke(const U24ArrayTypeU2412_t214874487& unmarshaled, U24ArrayTypeU2412_t214874487_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_pinvoke(const U24ArrayTypeU2412_t214874488& unmarshaled, U24ArrayTypeU2412_t214874488_marshaled_pinvoke& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_pinvoke_back(const U24ArrayTypeU2412_t214874487_marshaled_pinvoke& marshaled, U24ArrayTypeU2412_t214874487& unmarshaled)
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_pinvoke_back(const U24ArrayTypeU2412_t214874488_marshaled_pinvoke& marshaled, U24ArrayTypeU2412_t214874488& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_pinvoke_cleanup(U24ArrayTypeU2412_t214874487_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_pinvoke_cleanup(U24ArrayTypeU2412_t214874488_marshaled_pinvoke& marshaled)
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_com(const U24ArrayTypeU2412_t214874487& unmarshaled, U24ArrayTypeU2412_t214874487_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_com(const U24ArrayTypeU2412_t214874488& unmarshaled, U24ArrayTypeU2412_t214874488_marshaled_com& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_com_back(const U24ArrayTypeU2412_t214874487_marshaled_com& marshaled, U24ArrayTypeU2412_t214874487& unmarshaled)
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_com_back(const U24ArrayTypeU2412_t214874488_marshaled_com& marshaled, U24ArrayTypeU2412_t214874488& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_com_cleanup(U24ArrayTypeU2412_t214874487_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_com_cleanup(U24ArrayTypeU2412_t214874488_marshaled_com& marshaled)
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$128
@@ -732,25 +732,25 @@ extern "C" void U24ArrayTypeU24128_t2366141827_marshal_com_cleanup(U24ArrayTypeU
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$16
-extern "C" void U24ArrayTypeU2416_t214874491_marshal_pinvoke(const U24ArrayTypeU2416_t214874491& unmarshaled, U24ArrayTypeU2416_t214874491_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU2416_t214874492_marshal_pinvoke(const U24ArrayTypeU2416_t214874492& unmarshaled, U24ArrayTypeU2416_t214874492_marshaled_pinvoke& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU2416_t214874491_marshal_pinvoke_back(const U24ArrayTypeU2416_t214874491_marshaled_pinvoke& marshaled, U24ArrayTypeU2416_t214874491& unmarshaled)
+extern "C" void U24ArrayTypeU2416_t214874492_marshal_pinvoke_back(const U24ArrayTypeU2416_t214874492_marshaled_pinvoke& marshaled, U24ArrayTypeU2416_t214874492& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$16
-extern "C" void U24ArrayTypeU2416_t214874491_marshal_pinvoke_cleanup(U24ArrayTypeU2416_t214874491_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU2416_t214874492_marshal_pinvoke_cleanup(U24ArrayTypeU2416_t214874492_marshaled_pinvoke& marshaled)
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$16
-extern "C" void U24ArrayTypeU2416_t214874491_marshal_com(const U24ArrayTypeU2416_t214874491& unmarshaled, U24ArrayTypeU2416_t214874491_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU2416_t214874492_marshal_com(const U24ArrayTypeU2416_t214874492& unmarshaled, U24ArrayTypeU2416_t214874492_marshaled_com& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU2416_t214874491_marshal_com_back(const U24ArrayTypeU2416_t214874491_marshaled_com& marshaled, U24ArrayTypeU2416_t214874491& unmarshaled)
+extern "C" void U24ArrayTypeU2416_t214874492_marshal_com_back(const U24ArrayTypeU2416_t214874492_marshaled_com& marshaled, U24ArrayTypeU2416_t214874492& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$16
-extern "C" void U24ArrayTypeU2416_t214874491_marshal_com_cleanup(U24ArrayTypeU2416_t214874491_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU2416_t214874492_marshal_com_cleanup(U24ArrayTypeU2416_t214874492_marshaled_com& marshaled)
 {
 }
 // System.String Locale::GetText(System.String)
@@ -1264,7 +1264,7 @@ IL_0034:
 			X509CertificateCollection_t3336811651 * L_9 = ___certificates;
 			int32_t L_10 = V_4;
 			NullCheck(L_9);
-			X509Certificate_t273828613 * L_11 = X509CertificateCollection_get_Item_m1107000690(L_9, L_10, /*hidden argument*/NULL);
+			X509Certificate_t273828613 * L_11 = X509CertificateCollection_get_Item_m1446680334(L_9, L_10, /*hidden argument*/NULL);
 			NullCheck(L_11);
 			ByteU5BU5D_t58506160* L_12 = VirtFuncInvoker0< ByteU5BU5D_t58506160* >::Invoke(12 /* System.Byte[] Mono.Security.X509.X509Certificate::get_RawData() */, L_11);
 			IL2CPP_RUNTIME_CLASS_INIT(OSX509Certificates_t2916261721_il2cpp_TypeInfo_var);
@@ -1534,6 +1534,18 @@ IL_0181:
 	{
 		int32_t L_69 = V_11;
 		return L_69;
+	}
+}
+// System.Void System.CodeDom.Compiler.GeneratedCodeAttribute::.ctor(System.String,System.String)
+extern "C"  void GeneratedCodeAttribute__ctor_m3690080601 (GeneratedCodeAttribute_t785805933 * __this, String_t* ___tool, String_t* ___version, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___tool;
+		__this->set_tool_0(L_0);
+		String_t* L_1 = ___version;
+		__this->set_version_1(L_1);
+		return;
 	}
 }
 // System.Void System.Collections.Specialized.HybridDictionary::.ctor()
@@ -17045,7 +17057,7 @@ extern "C"  void GZipStream_set_Position_m2891315819 (GZipStream_t4282284777 * _
 	}
 }
 // System.Void System.MonoTODOAttribute::.ctor()
-extern "C"  void MonoTODOAttribute__ctor_m754636072 (MonoTODOAttribute_t1287393897 * __this, const MethodInfo* method)
+extern "C"  void MonoTODOAttribute__ctor_m754636072 (MonoTODOAttribute_t1287393898 * __this, const MethodInfo* method)
 {
 	{
 		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
@@ -17053,7 +17065,7 @@ extern "C"  void MonoTODOAttribute__ctor_m754636072 (MonoTODOAttribute_t12873938
 	}
 }
 // System.Void System.MonoTODOAttribute::.ctor(System.String)
-extern "C"  void MonoTODOAttribute__ctor_m3809503962 (MonoTODOAttribute_t1287393897 * __this, String_t* ___comment, const MethodInfo* method)
+extern "C"  void MonoTODOAttribute__ctor_m3809503962 (MonoTODOAttribute_t1287393898 * __this, String_t* ___comment, const MethodInfo* method)
 {
 	{
 		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
@@ -19422,7 +19434,7 @@ extern "C"  void Cookie__ctor_m473882888 (Cookie_t1541932526 * __this, String_t*
 // System.Void System.Net.Cookie::.cctor()
 extern TypeInfo* CharU5BU5D_t3416858730_il2cpp_TypeInfo_var;
 extern TypeInfo* Cookie_t1541932526_il2cpp_TypeInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238934____U24U24fieldU2D1_0_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238936____U24U24fieldU2D1_0_FieldInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3872537190;
 extern const uint32_t Cookie__cctor_m1291999607_MetadataUsageId;
 extern "C"  void Cookie__cctor_m1291999607 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
@@ -19435,7 +19447,7 @@ extern "C"  void Cookie__cctor_m1291999607 (Il2CppObject * __this /* static, unu
 	}
 	{
 		CharU5BU5D_t3416858730* L_0 = ((CharU5BU5D_t3416858730*)SZArrayNew(CharU5BU5D_t3416858730_il2cpp_TypeInfo_var, (uint32_t)7));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_0, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238934____U24U24fieldU2D1_0_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_0, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238936____U24U24fieldU2D1_0_FieldInfo_var), /*hidden argument*/NULL);
 		((Cookie_t1541932526_StaticFields*)Cookie_t1541932526_il2cpp_TypeInfo_var->static_fields)->set_reservedCharsName_14(L_0);
 		CharU5BU5D_t3416858730* L_1 = ((CharU5BU5D_t3416858730*)SZArrayNew(CharU5BU5D_t3416858730_il2cpp_TypeInfo_var, (uint32_t)2));
 		NullCheck(L_1);
@@ -20445,7 +20457,7 @@ IL_00ce:
 	{
 		Uri_t2776692961 * L_29 = ___uri;
 		NullCheck(L_29);
-		String_t* L_30 = Uri_get_Host_m1446697833(L_29, /*hidden argument*/NULL);
+		String_t* L_30 = Uri_get_Host_m3136333645(L_29, /*hidden argument*/NULL);
 		String_t* L_31 = __this->get_domain_3();
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_32 = String_op_Inequality_m2125462205(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);
@@ -21564,7 +21576,7 @@ IL_0031:
 		Cookie_t1541932526 * L_12 = ___cookie;
 		Uri_t2776692961 * L_13 = ___uri;
 		NullCheck(L_13);
-		String_t* L_14 = Uri_get_Host_m1446697833(L_13, /*hidden argument*/NULL);
+		String_t* L_14 = Uri_get_Host_m3136333645(L_13, /*hidden argument*/NULL);
 		NullCheck(L_12);
 		Cookie_set_Domain_m1439537299(L_12, L_14, /*hidden argument*/NULL);
 	}
@@ -22108,7 +22120,7 @@ IL_0041:
 			String_t* L_12 = V_3;
 			Uri_t2776692961 * L_13 = ___uri;
 			NullCheck(L_13);
-			String_t* L_14 = Uri_get_Host_m1446697833(L_13, /*hidden argument*/NULL);
+			String_t* L_14 = Uri_get_Host_m3136333645(L_13, /*hidden argument*/NULL);
 			Cookie_t1541932526 * L_15 = V_1;
 			NullCheck(L_15);
 			bool L_16 = Cookie_get_ExactDomain_m3630794404(L_15, /*hidden argument*/NULL);
@@ -22905,7 +22917,7 @@ extern "C"  bool DefaultCertificatePolicy_CheckValidationResult_m4124026463 (Def
 	int32_t V_0 = 0;
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ServicePointManager_t3601037980_il2cpp_TypeInfo_var);
-		RemoteCertificateValidationCallback_t4087051103 * L_0 = ServicePointManager_get_ServerCertificateValidationCallback_m258265119(NULL /*static, unused*/, /*hidden argument*/NULL);
+		RemoteCertificateValidationCallback_t4087051103 * L_0 = ServicePointManager_get_ServerCertificateValidationCallback_m451731131(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (!L_0)
 		{
 			goto IL_000c;
@@ -23409,7 +23421,7 @@ IL_003c:
 	{
 		HttpWebRequest_t171953869 * L_9 = V_1;
 		NullCheck(L_9);
-		Uri_t2776692961 * L_10 = HttpWebRequest_get_Address_m3157794738(L_9, /*hidden argument*/NULL);
+		Uri_t2776692961 * L_10 = HttpWebRequest_get_Address_m1203539790(L_9, /*hidden argument*/NULL);
 		NullCheck(L_10);
 		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(2 /* System.Int32 System.Uri::GetHashCode() */, L_10);
 		Il2CppObject * L_12 = ___credentials;
@@ -23528,7 +23540,7 @@ IL_0017:
 	{
 		HttpWebRequest_t171953869 * L_3 = V_0;
 		NullCheck(L_3);
-		Uri_t2776692961 * L_4 = HttpWebRequest_get_Address_m3157794738(L_3, /*hidden argument*/NULL);
+		Uri_t2776692961 * L_4 = HttpWebRequest_get_Address_m1203539790(L_3, /*hidden argument*/NULL);
 		NullCheck(L_4);
 		int32_t L_5 = VirtFuncInvoker0< int32_t >::Invoke(2 /* System.Int32 System.Uri::GetHashCode() */, L_4);
 		Il2CppObject * L_6 = ___credentials;
@@ -24776,7 +24788,7 @@ IL_0064:
 		StringBuilder_t3822575854 * L_25 = V_4;
 		HttpWebRequest_t171953869 * L_26 = V_0;
 		NullCheck(L_26);
-		Uri_t2776692961 * L_27 = HttpWebRequest_get_Address_m3157794738(L_26, /*hidden argument*/NULL);
+		Uri_t2776692961 * L_27 = HttpWebRequest_get_Address_m1203539790(L_26, /*hidden argument*/NULL);
 		NullCheck(L_27);
 		String_t* L_28 = Uri_get_PathAndQuery_m3621173943(L_27, /*hidden argument*/NULL);
 		NullCheck(L_25);
@@ -25998,32 +26010,6 @@ extern "C"  WebResponse_t2411292415 * GetResponseCallback_EndInvoke_m3391029122 
 {
 	Il2CppObject *__result = il2cpp_delegate_end_invoke((Il2CppAsyncResult*) ___result, 0);
 	return (WebResponse_t2411292415 *)__result;
-}
-// System.Void System.Net.FileWebRequestCreator::.ctor()
-extern "C"  void FileWebRequestCreator__ctor_m349516791 (FileWebRequestCreator_t153025599 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Net.WebRequest System.Net.FileWebRequestCreator::Create(System.Uri)
-extern TypeInfo* FileWebRequest_t1669470913_il2cpp_TypeInfo_var;
-extern const uint32_t FileWebRequestCreator_Create_m2860446468_MetadataUsageId;
-extern "C"  WebRequest_t3488810021 * FileWebRequestCreator_Create_m2860446468 (FileWebRequestCreator_t153025599 * __this, Uri_t2776692961 * ___uri, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (FileWebRequestCreator_Create_m2860446468_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Uri_t2776692961 * L_0 = ___uri;
-		FileWebRequest_t1669470913 * L_1 = (FileWebRequest_t1669470913 *)il2cpp_codegen_object_new(FileWebRequest_t1669470913_il2cpp_TypeInfo_var);
-		FileWebRequest__ctor_m1190066806(L_1, L_0, /*hidden argument*/NULL);
-		return L_1;
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

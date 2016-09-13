@@ -36,8 +36,8 @@ struct StringU5BU5D_t2956870243;
 #include "mscorlib_System_TypeCode2164429820.h"
 #include "mscorlib_System_Object837106420.h"
 #include "mscorlib_System_Array2840145358.h"
-#include "mscorlib_System_Collections_Hashtable3875263730.h"
 #include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Collections_Hashtable3875263730.h"
 
 // System.Void System.Enum::.ctor()
 extern "C"  void Enum__ctor_m701753108 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
@@ -91,6 +91,8 @@ extern "C"  bool Enum_IsDefined_m2781598580 (Il2CppObject * __this /* static, un
 extern "C"  Type_t * Enum_get_underlying_type_m3481337786 (Il2CppObject * __this /* static, unused */, Type_t * ___enumType, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Type System.Enum::GetUnderlyingType(System.Type)
 extern "C"  Type_t * Enum_GetUnderlyingType_m2468052512 (Il2CppObject * __this /* static, unused */, Type_t * ___enumType, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Object System.Enum::Parse(System.Type,System.String)
+extern "C"  Il2CppObject * Enum_Parse_m2929309979 (Il2CppObject * __this /* static, unused */, Type_t * ___enumType, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Enum::FindName(System.Collections.Hashtable,System.String[],System.String,System.Boolean)
 extern "C"  int32_t Enum_FindName_m1872558967 (Il2CppObject * __this /* static, unused */, Hashtable_t3875263730 * ___name_hash, StringU5BU5D_t2956870243* ___names, String_t* ___name, bool ___ignoreCase, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.UInt64 System.Enum::GetValue(System.Object,System.TypeCode)

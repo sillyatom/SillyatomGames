@@ -17,17 +17,17 @@
 
 
 // Methods for marshaling
-struct U24ArrayTypeU2412_t214874487;
-struct U24ArrayTypeU2412_t214874487_marshaled_pinvoke;
+struct U24ArrayTypeU2412_t214874488;
+struct U24ArrayTypeU2412_t214874488_marshaled_pinvoke;
 
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_pinvoke(const U24ArrayTypeU2412_t214874487& unmarshaled, U24ArrayTypeU2412_t214874487_marshaled_pinvoke& marshaled);
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_pinvoke_back(const U24ArrayTypeU2412_t214874487_marshaled_pinvoke& marshaled, U24ArrayTypeU2412_t214874487& unmarshaled);
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_pinvoke_cleanup(U24ArrayTypeU2412_t214874487_marshaled_pinvoke& marshaled);
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_pinvoke(const U24ArrayTypeU2412_t214874488& unmarshaled, U24ArrayTypeU2412_t214874488_marshaled_pinvoke& marshaled);
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_pinvoke_back(const U24ArrayTypeU2412_t214874488_marshaled_pinvoke& marshaled, U24ArrayTypeU2412_t214874488& unmarshaled);
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_pinvoke_cleanup(U24ArrayTypeU2412_t214874488_marshaled_pinvoke& marshaled);
 
 // Methods for marshaling
-struct U24ArrayTypeU2412_t214874487;
-struct U24ArrayTypeU2412_t214874487_marshaled_com;
+struct U24ArrayTypeU2412_t214874488;
+struct U24ArrayTypeU2412_t214874488_marshaled_com;
 
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_com(const U24ArrayTypeU2412_t214874487& unmarshaled, U24ArrayTypeU2412_t214874487_marshaled_com& marshaled);
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_com_back(const U24ArrayTypeU2412_t214874487_marshaled_com& marshaled, U24ArrayTypeU2412_t214874487& unmarshaled);
-extern "C" void U24ArrayTypeU2412_t214874487_marshal_com_cleanup(U24ArrayTypeU2412_t214874487_marshaled_com& marshaled);
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_com(const U24ArrayTypeU2412_t214874488& unmarshaled, U24ArrayTypeU2412_t214874488_marshaled_com& marshaled);
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_com_back(const U24ArrayTypeU2412_t214874488_marshaled_com& marshaled, U24ArrayTypeU2412_t214874488& unmarshaled);
+extern "C" void U24ArrayTypeU2412_t214874488_marshal_com_cleanup(U24ArrayTypeU2412_t214874488_marshaled_com& marshaled);

@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Canvas>::VerifyState()
 #define Enumerator_VerifyState_m1256751168(__this, method) ((  void (*) (Enumerator_t2416755854 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.Canvas>::MoveNext()
-#define Enumerator_MoveNext_m1447897632(__this, method) ((  bool (*) (Enumerator_t2416755854 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m1447897632(__this, method) ((  bool (*) (Enumerator_t2416755854 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<UnityEngine.Canvas>::get_Current()
-#define Enumerator_get_Current_m1845219225(__this, method) ((  Canvas_t3534013893 * (*) (Enumerator_t2416755854 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1845219225(__this, method) ((  Canvas_t3534013893 * (*) (Enumerator_t2416755854 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

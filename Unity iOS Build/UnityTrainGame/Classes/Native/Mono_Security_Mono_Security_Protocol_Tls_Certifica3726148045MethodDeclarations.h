@@ -34,7 +34,7 @@ struct AsyncCallback_t1363551830;
 #include "mscorlib_System_AsyncCallback1363551830.h"
 
 // System.Void Mono.Security.Protocol.Tls.CertificateValidationCallback::.ctor(System.Object,System.IntPtr)
-extern "C"  void CertificateValidationCallback__ctor_m752675221 (CertificateValidationCallback_t3726148045 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void CertificateValidationCallback__ctor_m2692809593 (CertificateValidationCallback_t3726148045 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.Protocol.Tls.CertificateValidationCallback::Invoke(System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32[])
 extern "C"  bool CertificateValidationCallback_Invoke_m481730652 (CertificateValidationCallback_t3726148045 * __this, X509Certificate_t3432067208 * ___certificate, Int32U5BU5D_t1809983122* ___certificateErrors, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C" bool pinvoke_delegate_wrapper_CertificateValidationCallback_t3726148045(Il2CppObject* delegate, X509Certificate_t3432067208 * ___certificate, Int32U5BU5D_t1809983122* ___certificateErrors);

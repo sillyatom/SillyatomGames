@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.EventSystems.PointerInputModule/ButtonState>::VerifyState()
 #define Enumerator_VerifyState_m2675237819(__this, method) ((  void (*) (Enumerator_t3075081000 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.EventSystems.PointerInputModule/ButtonState>::MoveNext()
-#define Enumerator_MoveNext_m1546252737(__this, method) ((  bool (*) (Enumerator_t3075081000 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m1546252737(__this, method) ((  bool (*) (Enumerator_t3075081000 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<UnityEngine.EventSystems.PointerInputModule/ButtonState>::get_Current()
-#define Enumerator_get_Current_m1708133618(__this, method) ((  ButtonState_t4192339039 * (*) (Enumerator_t3075081000 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1708133618(__this, method) ((  ButtonState_t4192339039 * (*) (Enumerator_t3075081000 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

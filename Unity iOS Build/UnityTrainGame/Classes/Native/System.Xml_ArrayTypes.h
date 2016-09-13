@@ -10,7 +10,7 @@
 
 
 // System.Xml.NameTable/Entry
-struct Entry_t67115091;
+struct Entry_t67115090;
 // System.Xml.XmlNode
 struct XmlNode_t3592213601;
 // System.Xml.XPath.IXPathNavigable
@@ -37,12 +37,12 @@ struct XmlNodeInfo_t92768999;
 struct EntryU5BU5D_t864858663  : public Il2CppArray
 {
 public:
-	ALIGN_TYPE (8) Entry_t67115091 * m_Items[1];
+	ALIGN_TYPE (8) Entry_t67115090 * m_Items[1];
 
 public:
-	inline Entry_t67115091 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
-	inline Entry_t67115091 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
-	inline void SetAt(il2cpp_array_size_t index, Entry_t67115091 * value)
+	inline Entry_t67115090 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline Entry_t67115090 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, Entry_t67115090 * value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);

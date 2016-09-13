@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m363528986_gshared (List_1_t27321462 * __this, con
 // System.Boolean System.Collections.Generic.List`1<UnityEngine.Vector3>::Contains(T)
 extern "C"  bool List_1_Contains_m4183555272_gshared (List_1_t27321462 * __this, Vector3_t3525329789  ___item, const MethodInfo* method);
 #define List_1_Contains_m4183555272(__this, ___item, method) ((  bool (*) (List_1_t27321462 *, Vector3_t3525329789 , const MethodInfo*))List_1_Contains_m4183555272_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<UnityEngine.Vector3>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m3004157591_gshared (List_1_t27321462 * __this, Vector3U5BU5D_t3227571696* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m3004157591(__this, ___array, method) ((  void (*) (List_1_t27321462 *, Vector3U5BU5D_t3227571696*, const MethodInfo*))List_1_CopyTo_m3004157591_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector3>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m2659449760_gshared (List_1_t27321462 * __this, Vector3U5BU5D_t3227571696* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m2659449760(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t27321462 *, Vector3U5BU5D_t3227571696*, int32_t, const MethodInfo*))List_1_CopyTo_m2659449760_gshared)(__this, ___array, ___arrayIndex, method)

@@ -70,6 +70,8 @@
 #define List_1_Clear_m1674614304(__this, method) ((  void (*) (List_1_t3656612197 *, const MethodInfo*))List_1_Clear_m1492409980_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.String,Mono.Xml.DTDNode>>::Contains(T)
 #define List_1_Contains_m2066162254(__this, ___item, method) ((  bool (*) (List_1_t3656612197 *, KeyValuePair_2_t2859653228 , const MethodInfo*))List_1_Contains_m417879790_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.String,Mono.Xml.DTDNode>>::CopyTo(T[])
+#define List_1_CopyTo_m2122870429(__this, ___array, method) ((  void (*) (List_1_t3656612197 *, KeyValuePair_2U5BU5D_t2796256357*, const MethodInfo*))List_1_CopyTo_m832088313_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.String,Mono.Xml.DTDNode>>::CopyTo(T[],System.Int32)
 #define List_1_CopyTo_m524424538(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t3656612197 *, KeyValuePair_2U5BU5D_t2796256357*, int32_t, const MethodInfo*))List_1_CopyTo_m1368690814_gshared)(__this, ___array, ___arrayIndex, method)
 // T System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.String,Mono.Xml.DTDNode>>::Find(System.Predicate`1<T>)

@@ -403,6 +403,7 @@
      <Compile Include="Assets\Scripts\Handlers\RoundHandler.cs" />
      <Compile Include="Assets\Scripts\Handlers\SceneTransitionManager.cs" />
      <Compile Include="Assets\Scripts\Handlers\SpinHandler.cs" />
+     <Compile Include="Assets\Scripts\IAP\IAPManager.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
      <Compile Include="Assets\Scripts\Models\GameModel.cs" />
      <Compile Include="Assets\Scripts\Models\LocalPlayerModel.cs" />

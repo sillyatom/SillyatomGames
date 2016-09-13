@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.UI.StencilMaterial/MatEntry>::VerifyState()
 #define Enumerator_VerifyState_m3505736870(__this, method) ((  void (*) (Enumerator_t3511759323 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.UI.StencilMaterial/MatEntry>::MoveNext()
-#define Enumerator_MoveNext_m2918409398(__this, method) ((  bool (*) (Enumerator_t3511759323 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m2918409398(__this, method) ((  bool (*) (Enumerator_t3511759323 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<UnityEngine.UI.StencilMaterial/MatEntry>::get_Current()
-#define Enumerator_get_Current_m1806750685(__this, method) ((  MatEntry_t334050066 * (*) (Enumerator_t3511759323 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1806750685(__this, method) ((  MatEntry_t334050066 * (*) (Enumerator_t3511759323 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

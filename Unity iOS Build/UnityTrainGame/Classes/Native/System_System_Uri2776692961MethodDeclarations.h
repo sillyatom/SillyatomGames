@@ -64,7 +64,7 @@ extern "C"  String_t* Uri_get_AbsoluteUri_m2228269430 (Uri_t2776692961 * __this,
 // System.String System.Uri::get_Authority()
 extern "C"  String_t* Uri_get_Authority_m1914393796 (Uri_t2776692961 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Uri::get_Host()
-extern "C"  String_t* Uri_get_Host_m1446697833 (Uri_t2776692961 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  String_t* Uri_get_Host_m3136333645 (Uri_t2776692961 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.UriHostNameType System.Uri::get_HostNameType()
 extern "C"  int32_t Uri_get_HostNameType_m3669497072 (Uri_t2776692961 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Uri::get_IsDefaultPort()

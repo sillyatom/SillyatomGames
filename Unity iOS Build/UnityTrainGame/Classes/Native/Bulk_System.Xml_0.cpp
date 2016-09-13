@@ -200,7 +200,7 @@ struct DTDReader_t4257441119;
 // System.Xml.NameTable
 struct NameTable_t2805661099;
 // System.Xml.NameTable/Entry
-struct Entry_t67115091;
+struct Entry_t67115090;
 // System.Xml.NonBlockingStreamReader
 struct NonBlockingStreamReader_t19630413;
 // System.Text.Encoding
@@ -537,25 +537,25 @@ struct XmlQualifiedName_t176365656;
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874493_marshal_pinvoke(const U24ArrayTypeU2412_t214874493& unmarshaled, U24ArrayTypeU2412_t214874493_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_pinvoke(const U24ArrayTypeU2412_t214874489& unmarshaled, U24ArrayTypeU2412_t214874489_marshaled_pinvoke& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU2412_t214874493_marshal_pinvoke_back(const U24ArrayTypeU2412_t214874493_marshaled_pinvoke& marshaled, U24ArrayTypeU2412_t214874493& unmarshaled)
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_pinvoke_back(const U24ArrayTypeU2412_t214874489_marshaled_pinvoke& marshaled, U24ArrayTypeU2412_t214874489& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874493_marshal_pinvoke_cleanup(U24ArrayTypeU2412_t214874493_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_pinvoke_cleanup(U24ArrayTypeU2412_t214874489_marshaled_pinvoke& marshaled)
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874493_marshal_com(const U24ArrayTypeU2412_t214874493& unmarshaled, U24ArrayTypeU2412_t214874493_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_com(const U24ArrayTypeU2412_t214874489& unmarshaled, U24ArrayTypeU2412_t214874489_marshaled_com& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU2412_t214874493_marshal_com_back(const U24ArrayTypeU2412_t214874493_marshaled_com& marshaled, U24ArrayTypeU2412_t214874493& unmarshaled)
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_com_back(const U24ArrayTypeU2412_t214874489_marshaled_com& marshaled, U24ArrayTypeU2412_t214874489& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$12
-extern "C" void U24ArrayTypeU2412_t214874493_marshal_com_cleanup(U24ArrayTypeU2412_t214874493_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU2412_t214874489_marshal_com_cleanup(U24ArrayTypeU2412_t214874489_marshaled_com& marshaled)
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$1280
@@ -20902,7 +20902,7 @@ extern "C"  String_t* NameTable_Add_m850607719 (NameTable_t2805661099 * __this, 
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	Entry_t67115091 * V_3 = NULL;
+	Entry_t67115090 * V_3 = NULL;
 	{
 		int32_t L_0 = ___start;
 		if ((((int32_t)0) <= ((int32_t)L_0)))
@@ -21009,7 +21009,7 @@ IL_0054:
 
 IL_0078:
 	{
-		Entry_t67115091 * L_26 = V_3;
+		Entry_t67115090 * L_26 = V_3;
 		NullCheck(L_26);
 		int32_t L_27 = L_26->get_hash_1();
 		int32_t L_28 = V_0;
@@ -21019,7 +21019,7 @@ IL_0078:
 		}
 	}
 	{
-		Entry_t67115091 * L_29 = V_3;
+		Entry_t67115090 * L_29 = V_3;
 		NullCheck(L_29);
 		int32_t L_30 = L_29->get_len_2();
 		int32_t L_31 = ___len;
@@ -21029,7 +21029,7 @@ IL_0078:
 		}
 	}
 	{
-		Entry_t67115091 * L_32 = V_3;
+		Entry_t67115090 * L_32 = V_3;
 		NullCheck(L_32);
 		String_t* L_33 = L_32->get_str_0();
 		CharU5BU5D_t3416858730* L_34 = ___key;
@@ -21041,7 +21041,7 @@ IL_0078:
 		}
 	}
 	{
-		Entry_t67115091 * L_37 = V_3;
+		Entry_t67115090 * L_37 = V_3;
 		NullCheck(L_37);
 		String_t* L_38 = L_37->get_str_0();
 		return L_38;
@@ -21049,15 +21049,15 @@ IL_0078:
 
 IL_00a9:
 	{
-		Entry_t67115091 * L_39 = V_3;
+		Entry_t67115090 * L_39 = V_3;
 		NullCheck(L_39);
-		Entry_t67115091 * L_40 = L_39->get_next_3();
+		Entry_t67115090 * L_40 = L_39->get_next_3();
 		V_3 = L_40;
 	}
 
 IL_00b0:
 	{
-		Entry_t67115091 * L_41 = V_3;
+		Entry_t67115090 * L_41 = V_3;
 		if (L_41)
 		{
 			goto IL_0078;
@@ -21089,7 +21089,7 @@ extern "C"  String_t* NameTable_Add_m683458574 (NameTable_t2805661099 * __this, 
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	Entry_t67115091 * V_3 = NULL;
+	Entry_t67115090 * V_3 = NULL;
 	{
 		String_t* L_0 = ___key;
 		if (L_0)
@@ -21165,7 +21165,7 @@ IL_003f:
 
 IL_0063:
 	{
-		Entry_t67115091 * L_19 = V_3;
+		Entry_t67115090 * L_19 = V_3;
 		NullCheck(L_19);
 		int32_t L_20 = L_19->get_hash_1();
 		int32_t L_21 = V_1;
@@ -21175,7 +21175,7 @@ IL_0063:
 		}
 	}
 	{
-		Entry_t67115091 * L_22 = V_3;
+		Entry_t67115090 * L_22 = V_3;
 		NullCheck(L_22);
 		int32_t L_23 = L_22->get_len_2();
 		String_t* L_24 = ___key;
@@ -21187,7 +21187,7 @@ IL_0063:
 		}
 	}
 	{
-		Entry_t67115091 * L_26 = V_3;
+		Entry_t67115090 * L_26 = V_3;
 		NullCheck(L_26);
 		String_t* L_27 = L_26->get_str_0();
 		String_t* L_28 = ___key;
@@ -21199,7 +21199,7 @@ IL_0063:
 		}
 	}
 	{
-		Entry_t67115091 * L_30 = V_3;
+		Entry_t67115090 * L_30 = V_3;
 		NullCheck(L_30);
 		String_t* L_31 = L_30->get_str_0();
 		return L_31;
@@ -21207,15 +21207,15 @@ IL_0063:
 
 IL_0098:
 	{
-		Entry_t67115091 * L_32 = V_3;
+		Entry_t67115090 * L_32 = V_3;
 		NullCheck(L_32);
-		Entry_t67115091 * L_33 = L_32->get_next_3();
+		Entry_t67115090 * L_33 = L_32->get_next_3();
 		V_3 = L_33;
 	}
 
 IL_009f:
 	{
-		Entry_t67115091 * L_34 = V_3;
+		Entry_t67115090 * L_34 = V_3;
 		if (L_34)
 		{
 			goto IL_0063;
@@ -21244,7 +21244,7 @@ extern "C"  String_t* NameTable_Get_m770689209 (NameTable_t2805661099 * __this, 
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	Entry_t67115091 * V_3 = NULL;
+	Entry_t67115090 * V_3 = NULL;
 	{
 		String_t* L_0 = ___value;
 		if (L_0)
@@ -21320,7 +21320,7 @@ IL_003f:
 
 IL_0063:
 	{
-		Entry_t67115091 * L_19 = V_3;
+		Entry_t67115090 * L_19 = V_3;
 		NullCheck(L_19);
 		int32_t L_20 = L_19->get_hash_1();
 		int32_t L_21 = V_1;
@@ -21330,7 +21330,7 @@ IL_0063:
 		}
 	}
 	{
-		Entry_t67115091 * L_22 = V_3;
+		Entry_t67115090 * L_22 = V_3;
 		NullCheck(L_22);
 		int32_t L_23 = L_22->get_len_2();
 		String_t* L_24 = ___value;
@@ -21342,7 +21342,7 @@ IL_0063:
 		}
 	}
 	{
-		Entry_t67115091 * L_26 = V_3;
+		Entry_t67115090 * L_26 = V_3;
 		NullCheck(L_26);
 		String_t* L_27 = L_26->get_str_0();
 		String_t* L_28 = ___value;
@@ -21354,7 +21354,7 @@ IL_0063:
 		}
 	}
 	{
-		Entry_t67115091 * L_30 = V_3;
+		Entry_t67115090 * L_30 = V_3;
 		NullCheck(L_30);
 		String_t* L_31 = L_30->get_str_0();
 		return L_31;
@@ -21362,15 +21362,15 @@ IL_0063:
 
 IL_0098:
 	{
-		Entry_t67115091 * L_32 = V_3;
+		Entry_t67115090 * L_32 = V_3;
 		NullCheck(L_32);
-		Entry_t67115091 * L_33 = L_32->get_next_3();
+		Entry_t67115090 * L_33 = L_32->get_next_3();
 		V_3 = L_33;
 	}
 
 IL_009f:
 	{
-		Entry_t67115091 * L_34 = V_3;
+		Entry_t67115090 * L_34 = V_3;
 		if (L_34)
 		{
 			goto IL_0063;
@@ -21381,7 +21381,7 @@ IL_009f:
 	}
 }
 // System.String System.Xml.NameTable::AddEntry(System.String,System.Int32)
-extern TypeInfo* Entry_t67115091_il2cpp_TypeInfo_var;
+extern TypeInfo* Entry_t67115090_il2cpp_TypeInfo_var;
 extern TypeInfo* EntryU5BU5D_t864858663_il2cpp_TypeInfo_var;
 extern const uint32_t NameTable_AddEntry_m12675925_MetadataUsageId;
 extern "C"  String_t* NameTable_AddEntry_m12675925 (NameTable_t2805661099 * __this, String_t* ___str, int32_t ___hash, const MethodInfo* method)
@@ -21396,10 +21396,10 @@ extern "C"  String_t* NameTable_AddEntry_m12675925 (NameTable_t2805661099 * __th
 	int32_t V_1 = 0;
 	EntryU5BU5D_t864858663* V_2 = NULL;
 	int32_t V_3 = 0;
-	Entry_t67115091 * V_4 = NULL;
-	Entry_t67115091 * V_5 = NULL;
+	Entry_t67115090 * V_4 = NULL;
+	Entry_t67115090 * V_5 = NULL;
 	int32_t V_6 = 0;
-	Entry_t67115091 * V_7 = NULL;
+	Entry_t67115090 * V_7 = NULL;
 	int32_t V_8 = 0;
 	{
 		int32_t L_0 = ___hash;
@@ -21414,12 +21414,12 @@ extern "C"  String_t* NameTable_AddEntry_m12675925 (NameTable_t2805661099 * __th
 		NullCheck(L_6);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_6, L_7);
 		int32_t L_8 = L_7;
-		Entry_t67115091 * L_9 = (Entry_t67115091 *)il2cpp_codegen_object_new(Entry_t67115091_il2cpp_TypeInfo_var);
+		Entry_t67115090 * L_9 = (Entry_t67115090 *)il2cpp_codegen_object_new(Entry_t67115090_il2cpp_TypeInfo_var);
 		Entry__ctor_m2305624780(L_9, L_4, L_5, ((L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8))), /*hidden argument*/NULL);
 		NullCheck(L_2);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_2, L_3);
 		ArrayElementTypeCheck (L_2, L_9);
-		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (Entry_t67115091 *)L_9);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (Entry_t67115090 *)L_9);
 		int32_t L_10 = __this->get_size_2();
 		int32_t L_11 = L_10;
 		V_8 = L_11;
@@ -21450,23 +21450,23 @@ IL_0068:
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_17, L_18);
 		int32_t L_19 = L_18;
 		V_4 = ((L_17)->GetAt(static_cast<il2cpp_array_size_t>(L_19)));
-		Entry_t67115091 * L_20 = V_4;
+		Entry_t67115090 * L_20 = V_4;
 		V_5 = L_20;
 		goto IL_00a4;
 	}
 
 IL_007b:
 	{
-		Entry_t67115091 * L_21 = V_5;
+		Entry_t67115090 * L_21 = V_5;
 		NullCheck(L_21);
 		int32_t L_22 = L_21->get_hash_1();
 		int32_t L_23 = V_1;
 		V_6 = ((int32_t)((int32_t)L_22&(int32_t)L_23));
-		Entry_t67115091 * L_24 = V_5;
+		Entry_t67115090 * L_24 = V_5;
 		NullCheck(L_24);
-		Entry_t67115091 * L_25 = L_24->get_next_3();
+		Entry_t67115090 * L_25 = L_24->get_next_3();
 		V_7 = L_25;
-		Entry_t67115091 * L_26 = V_5;
+		Entry_t67115090 * L_26 = V_5;
 		EntryU5BU5D_t864858663* L_27 = V_2;
 		int32_t L_28 = V_6;
 		NullCheck(L_27);
@@ -21476,18 +21476,18 @@ IL_007b:
 		L_26->set_next_3(((L_27)->GetAt(static_cast<il2cpp_array_size_t>(L_29))));
 		EntryU5BU5D_t864858663* L_30 = V_2;
 		int32_t L_31 = V_6;
-		Entry_t67115091 * L_32 = V_5;
+		Entry_t67115090 * L_32 = V_5;
 		NullCheck(L_30);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_30, L_31);
 		ArrayElementTypeCheck (L_30, L_32);
-		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(L_31), (Entry_t67115091 *)L_32);
-		Entry_t67115091 * L_33 = V_7;
+		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(L_31), (Entry_t67115090 *)L_32);
+		Entry_t67115090 * L_33 = V_7;
 		V_5 = L_33;
 	}
 
 IL_00a4:
 	{
-		Entry_t67115091 * L_34 = V_5;
+		Entry_t67115090 * L_34 = V_5;
 		if (L_34)
 		{
 			goto IL_007b;
@@ -21572,7 +21572,7 @@ IL_0021:
 	}
 }
 // System.Void System.Xml.NameTable/Entry::.ctor(System.String,System.Int32,System.Xml.NameTable/Entry)
-extern "C"  void Entry__ctor_m2305624780 (Entry_t67115091 * __this, String_t* ___str, int32_t ___hash, Entry_t67115091 * ___next, const MethodInfo* method)
+extern "C"  void Entry__ctor_m2305624780 (Entry_t67115090 * __this, String_t* ___str, int32_t ___hash, Entry_t67115090 * ___next, const MethodInfo* method)
 {
 	{
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
@@ -21584,7 +21584,7 @@ extern "C"  void Entry__ctor_m2305624780 (Entry_t67115091 * __this, String_t* __
 		__this->set_len_2(L_2);
 		int32_t L_3 = ___hash;
 		__this->set_hash_1(L_3);
-		Entry_t67115091 * L_4 = ___next;
+		Entry_t67115090 * L_4 = ___next;
 		__this->set_next_3(L_4);
 		return;
 	}
@@ -22512,7 +22512,7 @@ extern TypeInfo* XdtAnyAtomicType_t941707450_il2cpp_TypeInfo_var;
 extern TypeInfo* XdtUntypedAtomic_t3803926693_il2cpp_TypeInfo_var;
 extern TypeInfo* XdtDayTimeDuration_t2689613030_il2cpp_TypeInfo_var;
 extern TypeInfo* XdtYearMonthDuration_t3115315360_il2cpp_TypeInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D23_0_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D23_0_FieldInfo_var;
 extern const uint32_t XmlSchemaDatatype__cctor_m2241333137_MetadataUsageId;
 extern "C"  void XmlSchemaDatatype__cctor_m2241333137 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
@@ -22524,7 +22524,7 @@ extern "C"  void XmlSchemaDatatype__cctor_m2241333137 (Il2CppObject * __this /* 
 	}
 	{
 		CharU5BU5D_t3416858730* L_0 = ((CharU5BU5D_t3416858730*)SZArrayNew(CharU5BU5D_t3416858730_il2cpp_TypeInfo_var, (uint32_t)4));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_0, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D23_0_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_0, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D23_0_FieldInfo_var), /*hidden argument*/NULL);
 		((XmlSchemaDatatype_t2590121_StaticFields*)XmlSchemaDatatype_t2590121_il2cpp_TypeInfo_var->static_fields)->set_wsChars_1(L_0);
 		IL2CPP_RUNTIME_CLASS_INIT(XsdAnySimpleType_t8663200_il2cpp_TypeInfo_var);
 		XsdAnySimpleType_t8663200 * L_1 = XsdAnySimpleType_get_Instance_m4236154734(NULL /*static, unused*/, /*hidden argument*/NULL);

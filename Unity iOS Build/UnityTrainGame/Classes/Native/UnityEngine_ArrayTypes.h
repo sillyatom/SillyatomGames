@@ -42,6 +42,8 @@ struct Component_t2126946602;
 struct Display_t564335855;
 // UnityEngine.GameObject
 struct GameObject_t4012695102;
+// UnityEngine.AndroidJavaObject
+struct AndroidJavaObject_t1906659325;
 // UnityEngine.Experimental.Director.Playable
 struct Playable_t3404354247;
 // UnityEngine.Rigidbody2D
@@ -54,6 +56,10 @@ struct LayoutCache_t3653031512;
 struct GUILayoutEntry_t1011928986;
 // UnityEngine.GUIStyle
 struct GUIStyle_t1006925219;
+// SimpleJson.Reflection.ReflectionUtils/ConstructorDelegate
+struct ConstructorDelegate_t4072949631;
+// SimpleJson.Reflection.ReflectionUtils/GetDelegate
+struct GetDelegate_t270123739;
 // UnityEngine.DisallowMultipleComponent
 struct DisallowMultipleComponent_t3647875775;
 // UnityEngine.ExecuteInEditMode
@@ -76,6 +82,8 @@ struct Font_t1525081276;
 struct CanvasGroup_t1295922228;
 // UnityEngine.RectTransform
 struct RectTransform_t3317474837;
+// UnityEngine.MonoBehaviour
+struct MonoBehaviour_t3012272455;
 
 #include "mscorlib_System_Array2840145358.h"
 #include "UnityEngine_UnityEngine_Object3878351788.h"
@@ -97,7 +105,10 @@ struct RectTransform_t3317474837;
 #include "UnityEngine_UnityEngine_Behaviour3120504042.h"
 #include "UnityEngine_UnityEngine_Component2126946602.h"
 #include "UnityEngine_UnityEngine_Display564335855.h"
+#include "UnityEngine_UnityEngine_Touch1603883884.h"
 #include "UnityEngine_UnityEngine_GameObject4012695102.h"
+#include "UnityEngine_UnityEngine_jvalue374581140.h"
+#include "UnityEngine_UnityEngine_AndroidJavaObject1906659325.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Play3404354247.h"
 #include "UnityEngine_UnityEngine_ContactPoint2951122365.h"
 #include "UnityEngine_UnityEngine_RaycastHit46221527.h"
@@ -111,6 +122,8 @@ struct RectTransform_t3317474837;
 #include "UnityEngine_UnityEngine_GUILayoutUtility_LayoutCac3653031512.h"
 #include "UnityEngine_UnityEngine_GUILayoutEntry1011928986.h"
 #include "UnityEngine_UnityEngine_GUIStyle1006925219.h"
+#include "UnityEngine_SimpleJson_Reflection_ReflectionUtils_4072949631.h"
+#include "UnityEngine_SimpleJson_Reflection_ReflectionUtils_G270123739.h"
 #include "UnityEngine_UnityEngine_DisallowMultipleComponent3647875775.h"
 #include "UnityEngine_UnityEngine_ExecuteInEditMode2676812948.h"
 #include "UnityEngine_UnityEngine_RequireComponent3196495237.h"
@@ -123,6 +136,8 @@ struct RectTransform_t3317474837;
 #include "UnityEngine_UnityEngine_Font1525081276.h"
 #include "UnityEngine_UnityEngine_CanvasGroup1295922228.h"
 #include "UnityEngine_UnityEngine_RectTransform3317474837.h"
+#include "UnityEngine_UnityEngine_RuntimePlatform1574985880.h"
+#include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 #include "UnityEngine_UnityEngine_Rect1525428817.h"
 
 #pragma once
@@ -463,6 +478,20 @@ public:
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
 	}
 };
+// UnityEngine.Touch[]
+struct TouchU5BU5D_t376223077  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) Touch_t1603883884  m_Items[1];
+
+public:
+	inline Touch_t1603883884  GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline Touch_t1603883884 * GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, Touch_t1603883884  value)
+	{
+		m_Items[index] = value;
+	}
+};
 // UnityEngine.GameObject[]
 struct GameObjectU5BU5D_t3499186955  : public Il2CppArray
 {
@@ -473,6 +502,35 @@ public:
 	inline GameObject_t4012695102 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
 	inline GameObject_t4012695102 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
 	inline void SetAt(il2cpp_array_size_t index, GameObject_t4012695102 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// UnityEngine.jvalue[]
+struct jvalueU5BU5D_t3760456605  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) jvalue_t374581140  m_Items[1];
+
+public:
+	inline jvalue_t374581140  GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline jvalue_t374581140 * GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, jvalue_t374581140  value)
+	{
+		m_Items[index] = value;
+	}
+};
+// UnityEngine.AndroidJavaObject[]
+struct AndroidJavaObjectU5BU5D_t2652604272  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) AndroidJavaObject_t1906659325 * m_Items[1];
+
+public:
+	inline AndroidJavaObject_t1906659325 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline AndroidJavaObject_t1906659325 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, AndroidJavaObject_t1906659325 * value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
@@ -666,6 +724,36 @@ public:
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
 	}
 };
+// SimpleJson.Reflection.ReflectionUtils/ConstructorDelegate[]
+struct ConstructorDelegateU5BU5D_t2569897894  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) ConstructorDelegate_t4072949631 * m_Items[1];
+
+public:
+	inline ConstructorDelegate_t4072949631 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline ConstructorDelegate_t4072949631 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, ConstructorDelegate_t4072949631 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// SimpleJson.Reflection.ReflectionUtils/GetDelegate[]
+struct GetDelegateU5BU5D_t1362511706  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) GetDelegate_t270123739 * m_Items[1];
+
+public:
+	inline GetDelegate_t270123739 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline GetDelegate_t270123739 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, GetDelegate_t270123739 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
 // UnityEngine.DisallowMultipleComponent[]
 struct DisallowMultipleComponentU5BU5D_t1523674982  : public Il2CppArray
 {
@@ -840,6 +928,35 @@ public:
 	inline RectTransform_t3317474837 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
 	inline RectTransform_t3317474837 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
 	inline void SetAt(il2cpp_array_size_t index, RectTransform_t3317474837 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// UnityEngine.RuntimePlatform[]
+struct RuntimePlatformU5BU5D_t1082315273  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) int32_t m_Items[1];
+
+public:
+	inline int32_t GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline int32_t* GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, int32_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+// UnityEngine.MonoBehaviour[]
+struct MonoBehaviourU5BU5D_t936895934  : public Il2CppArray
+{
+public:
+	ALIGN_TYPE (8) MonoBehaviour_t3012272455 * m_Items[1];
+
+public:
+	inline MonoBehaviour_t3012272455 * GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline MonoBehaviour_t3012272455 ** GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, MonoBehaviour_t3012272455 * value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);

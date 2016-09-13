@@ -38,11 +38,11 @@ extern "C"  void X509Extension_Decode_m4266869134 (X509Extension_t1510964269 * _
 // System.Void Mono.Security.X509.X509Extension::Encode()
 extern "C"  void X509Extension_Encode_m1112310710 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String Mono.Security.X509.X509Extension::get_Oid()
-extern "C"  String_t* X509Extension_get_Oid_m1309247492 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  String_t* X509Extension_get_Oid_m915067552 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.X509.X509Extension::get_Critical()
-extern "C"  bool X509Extension_get_Critical_m3010458874 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  bool X509Extension_get_Critical_m1084086934 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Mono.Security.ASN1 Mono.Security.X509.X509Extension::get_Value()
-extern "C"  ASN1_t1254135647 * X509Extension_get_Value_m1722264871 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  ASN1_t1254135647 * X509Extension_get_Value_m2134276875 (X509Extension_t1510964269 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.X509.X509Extension::Equals(System.Object)
 extern "C"  bool X509Extension_Equals_m131878599 (X509Extension_t1510964269 * __this, Il2CppObject * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Mono.Security.X509.X509Extension::GetHashCode()

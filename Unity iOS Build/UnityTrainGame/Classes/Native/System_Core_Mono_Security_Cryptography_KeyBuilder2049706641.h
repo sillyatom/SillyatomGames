@@ -22,21 +22,21 @@ struct RandomNumberGenerator_t2174318432;
 #endif
 
 // Mono.Security.Cryptography.KeyBuilder
-struct  KeyBuilder_t2049706642  : public Il2CppObject
+struct  KeyBuilder_t2049706643  : public Il2CppObject
 {
 public:
 
 public:
 };
 
-struct KeyBuilder_t2049706642_StaticFields
+struct KeyBuilder_t2049706643_StaticFields
 {
 public:
 	// System.Security.Cryptography.RandomNumberGenerator Mono.Security.Cryptography.KeyBuilder::rng
 	RandomNumberGenerator_t2174318432 * ___rng_0;
 
 public:
-	inline static int32_t get_offset_of_rng_0() { return static_cast<int32_t>(offsetof(KeyBuilder_t2049706642_StaticFields, ___rng_0)); }
+	inline static int32_t get_offset_of_rng_0() { return static_cast<int32_t>(offsetof(KeyBuilder_t2049706643_StaticFields, ___rng_0)); }
 	inline RandomNumberGenerator_t2174318432 * get_rng_0() const { return ___rng_0; }
 	inline RandomNumberGenerator_t2174318432 ** get_address_of_rng_0() { return &___rng_0; }
 	inline void set_rng_0(RandomNumberGenerator_t2174318432 * value)

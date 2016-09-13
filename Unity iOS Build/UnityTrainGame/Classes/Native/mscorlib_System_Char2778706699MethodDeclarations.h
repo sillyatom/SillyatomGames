@@ -73,6 +73,8 @@ extern "C"  int32_t Char_CompareTo_m3049402459 (uint16_t* __this, Il2CppObject *
 extern "C"  bool Char_Equals_m158269074 (uint16_t* __this, Il2CppObject * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Char::CompareTo(System.Char)
 extern "C"  int32_t Char_CompareTo_m2003432292 (uint16_t* __this, uint16_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.Char::ConvertFromUtf32(System.Int32)
+extern "C"  String_t* Char_ConvertFromUtf32_m567781788 (Il2CppObject * __this /* static, unused */, int32_t ___utf32, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Char::Equals(System.Char)
 extern "C"  bool Char_Equals_m2979193691 (uint16_t* __this, uint16_t ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Char::GetHashCode()

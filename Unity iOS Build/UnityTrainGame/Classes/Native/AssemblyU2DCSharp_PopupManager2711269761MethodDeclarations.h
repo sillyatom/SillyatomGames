@@ -24,6 +24,12 @@ struct IEnumerator_t287207039;
 
 // System.Void PopupManager::.ctor()
 extern "C"  void PopupManager__ctor_m4087767610 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PopupManager::ShowPurchasePopup()
+extern "C"  void PopupManager_ShowPurchasePopup_m3543790982 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PopupManager::ShowRewardAds()
+extern "C"  void PopupManager_ShowRewardAds_m296906716 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PopupManager::TriggerRewardAds()
+extern "C"  void PopupManager_TriggerRewardAds_m2034710579 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void PopupManager::AddConnectingPopup()
 extern "C"  void PopupManager_AddConnectingPopup_m3990459709 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void PopupManager::AddDeterminingHostPopup()
@@ -40,3 +46,5 @@ extern "C"  void PopupManager_RemoveActivePopup_m4117325434 (PopupManager_t27112
 extern "C"  Il2CppObject * PopupManager_RemovePopupAfterAnim_m2787117879 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void PopupManager::ShowPopup()
 extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PopupManager::ShowOutOfTokensPopup()
+extern "C"  void PopupManager_ShowOutOfTokensPopup_m669506708 (PopupManager_t2711269761 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

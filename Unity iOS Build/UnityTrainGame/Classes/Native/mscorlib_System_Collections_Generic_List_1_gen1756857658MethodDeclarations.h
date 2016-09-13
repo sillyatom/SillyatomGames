@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m2604323032_gshared (List_1_t1756857658 * __this, 
 // System.Boolean System.Collections.Generic.List`1<UnityEngine.EventSystems.RaycastResult>::Contains(T)
 extern "C"  bool List_1_Contains_m158122826_gshared (List_1_t1756857658 * __this, RaycastResult_t959898689  ___item, const MethodInfo* method);
 #define List_1_Contains_m158122826(__this, ___item, method) ((  bool (*) (List_1_t1756857658 *, RaycastResult_t959898689 , const MethodInfo*))List_1_Contains_m158122826_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<UnityEngine.EventSystems.RaycastResult>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m744918357_gshared (List_1_t1756857658 * __this, RaycastResultU5BU5D_t2984273308* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m744918357(__this, ___array, method) ((  void (*) (List_1_t1756857658 *, RaycastResultU5BU5D_t2984273308*, const MethodInfo*))List_1_CopyTo_m744918357_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<UnityEngine.EventSystems.RaycastResult>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m3207438754_gshared (List_1_t1756857658 * __this, RaycastResultU5BU5D_t2984273308* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m3207438754(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t1756857658 *, RaycastResultU5BU5D_t2984273308*, int32_t, const MethodInfo*))List_1_CopyTo_m3207438754_gshared)(__this, ___array, ___arrayIndex, method)

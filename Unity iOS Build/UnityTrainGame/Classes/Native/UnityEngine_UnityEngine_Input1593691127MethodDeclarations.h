@@ -14,6 +14,8 @@
 
 // System.String
 struct String_t;
+// UnityEngine.Touch[]
+struct TouchU5BU5D_t376223077;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_String968488902.h"
@@ -44,6 +46,8 @@ extern "C"  Vector2_t3525329788  Input_get_mouseScrollDelta_m3050122505 (Il2CppO
 extern "C"  void Input_INTERNAL_get_mouseScrollDelta_m2726147504 (Il2CppObject * __this /* static, unused */, Vector2_t3525329788 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Input::get_mousePresent()
 extern "C"  bool Input_get_mousePresent_m3235491246 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Touch[] UnityEngine.Input::get_touches()
+extern "C"  TouchU5BU5D_t376223077* Input_get_touches_m300368858 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Touch UnityEngine.Input::GetTouch(System.Int32)
 extern "C"  Touch_t1603883884  Input_GetTouch_m2282421092 (Il2CppObject * __this /* static, unused */, int32_t ___index, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Input::get_touchCount()

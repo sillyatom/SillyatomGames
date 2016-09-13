@@ -29,7 +29,7 @@ extern "C"  int32_t Capture_get_Index_m2179527098 (Capture_t1645813025 * __this,
 // System.Int32 System.Text.RegularExpressions.Capture::get_Length()
 extern "C"  int32_t Capture_get_Length_m669809376 (Capture_t1645813025 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.RegularExpressions.Capture::get_Value()
-extern "C"  String_t* Capture_get_Value_m2353629574 (Capture_t1645813025 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  String_t* Capture_get_Value_m2241099810 (Capture_t1645813025 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.RegularExpressions.Capture::ToString()
 extern "C"  String_t* Capture_ToString_m1009743248 (Capture_t1645813025 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.RegularExpressions.Capture::get_Text()

@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<NetworkResponse>::VerifyState()
 #define Enumerator_VerifyState_m3488365492(__this, method) ((  void (*) (Enumerator_t566197048 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<NetworkResponse>::MoveNext()
-#define Enumerator_MoveNext_m826923624(__this, method) ((  bool (*) (Enumerator_t566197048 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m826923624(__this, method) ((  bool (*) (Enumerator_t566197048 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<NetworkResponse>::get_Current()
-#define Enumerator_get_Current_m1151389675(__this, method) ((  NetworkResponse_t1683455087 * (*) (Enumerator_t566197048 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1151389675(__this, method) ((  NetworkResponse_t1683455087 * (*) (Enumerator_t566197048 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

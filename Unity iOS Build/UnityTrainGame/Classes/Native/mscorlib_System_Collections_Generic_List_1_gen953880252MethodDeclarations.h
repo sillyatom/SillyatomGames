@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m1872531500_gshared (List_1_t953880252 * __this, c
 // System.Boolean System.Collections.Generic.List`1<UnityEngine.UILineInfo>::Contains(T)
 extern "C"  bool List_1_Contains_m383646878_gshared (List_1_t953880252 * __this, UILineInfo_t156921283  ___item, const MethodInfo* method);
 #define List_1_Contains_m383646878(__this, ___item, method) ((  bool (*) (List_1_t953880252 *, UILineInfo_t156921283 , const MethodInfo*))List_1_Contains_m383646878_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<UnityEngine.UILineInfo>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m1886421673_gshared (List_1_t953880252 * __this, UILineInfoU5BU5D_t3191819218* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m1886421673(__this, ___array, method) ((  void (*) (List_1_t953880252 *, UILineInfoU5BU5D_t3191819218*, const MethodInfo*))List_1_CopyTo_m1886421673_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<UnityEngine.UILineInfo>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m1887433934_gshared (List_1_t953880252 * __this, UILineInfoU5BU5D_t3191819218* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m1887433934(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t953880252 *, UILineInfoU5BU5D_t3191819218*, int32_t, const MethodInfo*))List_1_CopyTo_m1887433934_gshared)(__this, ___array, ___arrayIndex, method)

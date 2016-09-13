@@ -19,7 +19,7 @@ struct IEnumerator_t287207039;
 // Mono.Security.X509.X509Certificate
 struct X509Certificate_t273828613;
 // Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator
-struct X509CertificateEnumerator_t3569011383;
+struct X509CertificateEnumerator_t3569011382;
 // System.Byte[]
 struct ByteU5BU5D_t58506160;
 
@@ -34,7 +34,7 @@ extern "C"  void X509CertificateCollection__ctor_m1273937252 (X509CertificateCol
 // System.Collections.IEnumerator Mono.Security.X509.X509CertificateCollection::System.Collections.IEnumerable.GetEnumerator()
 extern "C"  Il2CppObject * X509CertificateCollection_System_Collections_IEnumerable_GetEnumerator_m4286050429 (X509CertificateCollection_t3336811651 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Mono.Security.X509.X509Certificate Mono.Security.X509.X509CertificateCollection::get_Item(System.Int32)
-extern "C"  X509Certificate_t273828613 * X509CertificateCollection_get_Item_m1107000690 (X509CertificateCollection_t3336811651 * __this, int32_t ___index, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  X509Certificate_t273828613 * X509CertificateCollection_get_Item_m1446680334 (X509CertificateCollection_t3336811651 * __this, int32_t ___index, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Mono.Security.X509.X509CertificateCollection::Add(Mono.Security.X509.X509Certificate)
 extern "C"  int32_t X509CertificateCollection_Add_m1585739833 (X509CertificateCollection_t3336811651 * __this, X509Certificate_t273828613 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Mono.Security.X509.X509CertificateCollection::AddRange(Mono.Security.X509.X509CertificateCollection)
@@ -42,7 +42,7 @@ extern "C"  void X509CertificateCollection_AddRange_m2353463272 (X509Certificate
 // System.Boolean Mono.Security.X509.X509CertificateCollection::Contains(Mono.Security.X509.X509Certificate)
 extern "C"  bool X509CertificateCollection_Contains_m1747801975 (X509CertificateCollection_t3336811651 * __this, X509Certificate_t273828613 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator Mono.Security.X509.X509CertificateCollection::GetEnumerator()
-extern "C"  X509CertificateEnumerator_t3569011383 * X509CertificateCollection_GetEnumerator_m2226643995 (X509CertificateCollection_t3336811651 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  X509CertificateEnumerator_t3569011382 * X509CertificateCollection_GetEnumerator_m1926496255 (X509CertificateCollection_t3336811651 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Mono.Security.X509.X509CertificateCollection::GetHashCode()
 extern "C"  int32_t X509CertificateCollection_GetHashCode_m2363682709 (X509CertificateCollection_t3336811651 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Mono.Security.X509.X509CertificateCollection::IndexOf(Mono.Security.X509.X509Certificate)

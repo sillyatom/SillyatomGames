@@ -24,5 +24,7 @@ struct Type_t;
 #include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_Type2779229935.h"
 
+// UnityEngine.Object UnityEngine.Resources::Load(System.String)
+extern "C"  Object_t3878351788 * Resources_Load_m2187391845 (Il2CppObject * __this /* static, unused */, String_t* ___path, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object UnityEngine.Resources::Load(System.String,System.Type)
 extern "C"  Object_t3878351788 * Resources_Load_m3601699608 (Il2CppObject * __this /* static, unused */, String_t* ___path, Type_t * ___systemTypeInstance, const MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<ExtMonoBehaviour>::VerifyState()
 #define Enumerator_VerifyState_m2206227722(__this, method) ((  void (*) (Enumerator_t1507341154 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<ExtMonoBehaviour>::MoveNext()
-#define Enumerator_MoveNext_m3116308223(__this, method) ((  bool (*) (Enumerator_t1507341154 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m3116308223(__this, method) ((  bool (*) (Enumerator_t1507341154 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<ExtMonoBehaviour>::get_Current()
-#define Enumerator_get_Current_m476028541(__this, method) ((  ExtMonoBehaviour_t2624599193 * (*) (Enumerator_t1507341154 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m476028541(__this, method) ((  ExtMonoBehaviour_t2624599193 * (*) (Enumerator_t1507341154 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

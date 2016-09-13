@@ -148,7 +148,7 @@ struct XmlNodeListChildren_t91357118;
 // System.Xml.IHasXmlChildNode
 struct IHasXmlChildNode_t3292830944;
 // System.Xml.XmlNodeListChildren/Enumerator
-struct Enumerator_t1072804843;
+struct Enumerator_t1072804841;
 // System.Xml.XmlNotation
 struct XmlNotation_t126967521;
 // System.Xml.XmlParserContext
@@ -3552,10 +3552,10 @@ extern TypeInfo* CharU5BU5D_t3416858730_il2cpp_TypeInfo_var;
 extern TypeInfo* XmlChar_t3591879093_il2cpp_TypeInfo_var;
 extern TypeInfo* ByteU5BU5D_t58506160_il2cpp_TypeInfo_var;
 extern TypeInfo* UInt32U5BU5D_t2133601851_il2cpp_TypeInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D26_1_FieldInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D27_2_FieldInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D28_3_FieldInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D29_4_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D26_1_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D27_2_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D28_3_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D29_4_FieldInfo_var;
 extern const uint32_t XmlChar__cctor_m502262015_MetadataUsageId;
 extern "C"  void XmlChar__cctor_m502262015 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
@@ -3567,16 +3567,16 @@ extern "C"  void XmlChar__cctor_m502262015 (Il2CppObject * __this /* static, unu
 	}
 	{
 		CharU5BU5D_t3416858730* L_0 = ((CharU5BU5D_t3416858730*)SZArrayNew(CharU5BU5D_t3416858730_il2cpp_TypeInfo_var, (uint32_t)4));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_0, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D26_1_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_0, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D26_1_FieldInfo_var), /*hidden argument*/NULL);
 		((XmlChar_t3591879093_StaticFields*)XmlChar_t3591879093_il2cpp_TypeInfo_var->static_fields)->set_WhitespaceChars_0(L_0);
 		ByteU5BU5D_t58506160* L_1 = ((ByteU5BU5D_t58506160*)SZArrayNew(ByteU5BU5D_t58506160_il2cpp_TypeInfo_var, (uint32_t)((int32_t)256)));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_1, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D27_2_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_1, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D27_2_FieldInfo_var), /*hidden argument*/NULL);
 		((XmlChar_t3591879093_StaticFields*)XmlChar_t3591879093_il2cpp_TypeInfo_var->static_fields)->set_firstNamePages_1(L_1);
 		ByteU5BU5D_t58506160* L_2 = ((ByteU5BU5D_t58506160*)SZArrayNew(ByteU5BU5D_t58506160_il2cpp_TypeInfo_var, (uint32_t)((int32_t)256)));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_2, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D28_3_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_2, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D28_3_FieldInfo_var), /*hidden argument*/NULL);
 		((XmlChar_t3591879093_StaticFields*)XmlChar_t3591879093_il2cpp_TypeInfo_var->static_fields)->set_namePages_2(L_2);
 		UInt32U5BU5D_t2133601851* L_3 = ((UInt32U5BU5D_t2133601851*)SZArrayNew(UInt32U5BU5D_t2133601851_il2cpp_TypeInfo_var, (uint32_t)((int32_t)320)));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_3, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D29_4_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_3, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D29_4_FieldInfo_var), /*hidden argument*/NULL);
 		((XmlChar_t3591879093_StaticFields*)XmlChar_t3591879093_il2cpp_TypeInfo_var->static_fields)->set_nameBitmap_3(L_3);
 		return;
 	}
@@ -18643,7 +18643,7 @@ IL_004b:
 	}
 }
 // System.Collections.IEnumerator System.Xml.XmlNodeListChildren::GetEnumerator()
-extern TypeInfo* Enumerator_t1072804843_il2cpp_TypeInfo_var;
+extern TypeInfo* Enumerator_t1072804841_il2cpp_TypeInfo_var;
 extern const uint32_t XmlNodeListChildren_GetEnumerator_m90577857_MetadataUsageId;
 extern "C"  Il2CppObject * XmlNodeListChildren_GetEnumerator_m90577857 (XmlNodeListChildren_t91357118 * __this, const MethodInfo* method)
 {
@@ -18655,7 +18655,7 @@ extern "C"  Il2CppObject * XmlNodeListChildren_GetEnumerator_m90577857 (XmlNodeL
 	}
 	{
 		Il2CppObject * L_0 = __this->get_parent_0();
-		Enumerator_t1072804843 * L_1 = (Enumerator_t1072804843 *)il2cpp_codegen_object_new(Enumerator_t1072804843_il2cpp_TypeInfo_var);
+		Enumerator_t1072804841 * L_1 = (Enumerator_t1072804841 *)il2cpp_codegen_object_new(Enumerator_t1072804841_il2cpp_TypeInfo_var);
 		Enumerator__ctor_m1583025462(L_1, L_0, /*hidden argument*/NULL);
 		return L_1;
 	}
@@ -18767,7 +18767,7 @@ IL_0070:
 	}
 }
 // System.Void System.Xml.XmlNodeListChildren/Enumerator::.ctor(System.Xml.IHasXmlChildNode)
-extern "C"  void Enumerator__ctor_m1583025462 (Enumerator_t1072804843 * __this, Il2CppObject * ___parent, const MethodInfo* method)
+extern "C"  void Enumerator__ctor_m1583025462 (Enumerator_t1072804841 * __this, Il2CppObject * ___parent, const MethodInfo* method)
 {
 	{
 		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
@@ -18782,7 +18782,7 @@ extern "C"  void Enumerator__ctor_m1583025462 (Enumerator_t1072804843 * __this, 
 extern TypeInfo* IHasXmlChildNode_t3292830944_il2cpp_TypeInfo_var;
 extern TypeInfo* InvalidOperationException_t2420574324_il2cpp_TypeInfo_var;
 extern const uint32_t Enumerator_get_Current_m1942501873_MetadataUsageId;
-extern "C"  Il2CppObject * Enumerator_get_Current_m1942501873 (Enumerator_t1072804843 * __this, const MethodInfo* method)
+extern "C"  Il2CppObject * Enumerator_get_Current_m1942501873 (Enumerator_t1072804841 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
@@ -18830,7 +18830,7 @@ IL_002c:
 // System.Boolean System.Xml.XmlNodeListChildren/Enumerator::MoveNext()
 extern TypeInfo* IHasXmlChildNode_t3292830944_il2cpp_TypeInfo_var;
 extern const uint32_t Enumerator_MoveNext_m2489713170_MetadataUsageId;
-extern "C"  bool Enumerator_MoveNext_m2489713170 (Enumerator_t1072804843 * __this, const MethodInfo* method)
+extern "C"  bool Enumerator_MoveNext_m2489713170 (Enumerator_t1072804841 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
@@ -18905,7 +18905,7 @@ IL_0079:
 	}
 }
 // System.Void System.Xml.XmlNodeListChildren/Enumerator::Reset()
-extern "C"  void Enumerator_Reset_m3781311995 (Enumerator_t1072804843 * __this, const MethodInfo* method)
+extern "C"  void Enumerator_Reset_m3781311995 (Enumerator_t1072804841 * __this, const MethodInfo* method)
 {
 	{
 		__this->set_currentChild_1((XmlLinkedNode_t3253021914 *)NULL);
@@ -23270,8 +23270,8 @@ extern TypeInfo* StreamWriter_t872970458_il2cpp_TypeInfo_var;
 extern TypeInfo* XmlNamespaceManager_t1861067185_il2cpp_TypeInfo_var;
 extern TypeInfo* CharU5BU5D_t3416858730_il2cpp_TypeInfo_var;
 extern TypeInfo* XmlTextWriter_t3874527519_il2cpp_TypeInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D43_5_FieldInfo_var;
-extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D44_6_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D43_5_FieldInfo_var;
+extern FieldInfo* U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D44_6_FieldInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3515393139;
 extern const uint32_t XmlTextWriter_Initialize_m2936707559_MetadataUsageId;
 extern "C"  void XmlTextWriter_Initialize_m2936707559 (XmlTextWriter_t3874527519 * __this, TextWriter_t1689927879 * ___writer, const MethodInfo* method)
@@ -23337,7 +23337,7 @@ IL_003a:
 	}
 	{
 		CharU5BU5D_t3416858730* L_13 = ((CharU5BU5D_t3416858730*)SZArrayNew(CharU5BU5D_t3416858730_il2cpp_TypeInfo_var, (uint32_t)5));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_13, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D43_5_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_13, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D43_5_FieldInfo_var), /*hidden argument*/NULL);
 		G_B7_0 = L_13;
 		goto IL_0090;
 	}
@@ -23364,7 +23364,7 @@ IL_0090:
 		IL2CPP_RUNTIME_CLASS_INIT(XmlTextWriter_t3874527519_il2cpp_TypeInfo_var);
 		((XmlTextWriter_t3874527519_StaticFields*)XmlTextWriter_t3874527519_il2cpp_TypeInfo_var->static_fields)->set_escaped_text_chars_1(G_B7_0);
 		CharU5BU5D_t3416858730* L_17 = ((CharU5BU5D_t3416858730*)SZArrayNew(CharU5BU5D_t3416858730_il2cpp_TypeInfo_var, (uint32_t)6));
-		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_17, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238938____U24U24fieldU2D44_6_FieldInfo_var), /*hidden argument*/NULL);
+		RuntimeHelpers_InitializeArray_m2058365049(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_17, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t3053238937____U24U24fieldU2D44_6_FieldInfo_var), /*hidden argument*/NULL);
 		((XmlTextWriter_t3874527519_StaticFields*)XmlTextWriter_t3874527519_il2cpp_TypeInfo_var->static_fields)->set_escaped_attr_chars_2(L_17);
 		return;
 	}

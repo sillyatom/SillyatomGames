@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m210443331_gshared (List_1_t1453383065 * __this, c
 // System.Boolean System.Collections.Generic.List`1<Newtonsoft.Json.Linq.JTokenType>::Contains(T)
 extern "C"  bool List_1_Contains_m3187321969_gshared (List_1_t1453383065 * __this, int32_t ___item, const MethodInfo* method);
 #define List_1_Contains_m3187321969(__this, ___item, method) ((  bool (*) (List_1_t1453383065 *, int32_t, const MethodInfo*))List_1_Contains_m3187321969_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<Newtonsoft.Json.Linq.JTokenType>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m2625448768_gshared (List_1_t1453383065 * __this, JTokenTypeU5BU5D_t2469469409* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m2625448768(__this, ___array, method) ((  void (*) (List_1_t1453383065 *, JTokenTypeU5BU5D_t2469469409*, const MethodInfo*))List_1_CopyTo_m2625448768_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<Newtonsoft.Json.Linq.JTokenType>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m4262869399_gshared (List_1_t1453383065 * __this, JTokenTypeU5BU5D_t2469469409* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m4262869399(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t1453383065 *, JTokenTypeU5BU5D_t2469469409*, int32_t, const MethodInfo*))List_1_CopyTo_m4262869399_gshared)(__this, ___array, ___arrayIndex, method)

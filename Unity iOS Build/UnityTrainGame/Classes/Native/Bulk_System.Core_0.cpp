@@ -34,7 +34,7 @@ struct IAsyncResult_t537683269;
 // System.AsyncCallback
 struct AsyncCallback_t1363551830;
 // System.MonoTODOAttribute
-struct MonoTODOAttribute_t1287393898;
+struct MonoTODOAttribute_t1287393897;
 // System.Runtime.CompilerServices.ExtensionAttribute
 struct ExtensionAttribute_t795512515;
 // System.Security.Cryptography.Aes
@@ -203,25 +203,25 @@ extern "C" void U24ArrayTypeU24136_t2366141856_marshal_com_cleanup(U24ArrayTypeU
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$256
-extern "C" void U24ArrayTypeU24256_t2366142879_marshal_pinvoke(const U24ArrayTypeU24256_t2366142879& unmarshaled, U24ArrayTypeU24256_t2366142879_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU24256_t2366142880_marshal_pinvoke(const U24ArrayTypeU24256_t2366142880& unmarshaled, U24ArrayTypeU24256_t2366142880_marshaled_pinvoke& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU24256_t2366142879_marshal_pinvoke_back(const U24ArrayTypeU24256_t2366142879_marshaled_pinvoke& marshaled, U24ArrayTypeU24256_t2366142879& unmarshaled)
+extern "C" void U24ArrayTypeU24256_t2366142880_marshal_pinvoke_back(const U24ArrayTypeU24256_t2366142880_marshaled_pinvoke& marshaled, U24ArrayTypeU24256_t2366142880& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$256
-extern "C" void U24ArrayTypeU24256_t2366142879_marshal_pinvoke_cleanup(U24ArrayTypeU24256_t2366142879_marshaled_pinvoke& marshaled)
+extern "C" void U24ArrayTypeU24256_t2366142880_marshal_pinvoke_cleanup(U24ArrayTypeU24256_t2366142880_marshaled_pinvoke& marshaled)
 {
 }
 // Conversion methods for marshalling of: <PrivateImplementationDetails>/$ArrayType$256
-extern "C" void U24ArrayTypeU24256_t2366142879_marshal_com(const U24ArrayTypeU24256_t2366142879& unmarshaled, U24ArrayTypeU24256_t2366142879_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU24256_t2366142880_marshal_com(const U24ArrayTypeU24256_t2366142880& unmarshaled, U24ArrayTypeU24256_t2366142880_marshaled_com& marshaled)
 {
 }
-extern "C" void U24ArrayTypeU24256_t2366142879_marshal_com_back(const U24ArrayTypeU24256_t2366142879_marshaled_com& marshaled, U24ArrayTypeU24256_t2366142879& unmarshaled)
+extern "C" void U24ArrayTypeU24256_t2366142880_marshal_com_back(const U24ArrayTypeU24256_t2366142880_marshaled_com& marshaled, U24ArrayTypeU24256_t2366142880& unmarshaled)
 {
 }
 // Conversion method for clean up from marshalling of: <PrivateImplementationDetails>/$ArrayType$256
-extern "C" void U24ArrayTypeU24256_t2366142879_marshal_com_cleanup(U24ArrayTypeU24256_t2366142879_marshaled_com& marshaled)
+extern "C" void U24ArrayTypeU24256_t2366142880_marshal_com_cleanup(U24ArrayTypeU24256_t2366142880_marshaled_com& marshaled)
 {
 }
 // System.String Locale::GetText(System.String)
@@ -252,7 +252,7 @@ extern "C"  String_t* Locale_GetText_m2138526911 (Il2CppObject * __this /* stati
 	}
 }
 // System.Security.Cryptography.RandomNumberGenerator Mono.Security.Cryptography.KeyBuilder::get_Rng()
-extern TypeInfo* KeyBuilder_t2049706642_il2cpp_TypeInfo_var;
+extern TypeInfo* KeyBuilder_t2049706643_il2cpp_TypeInfo_var;
 extern const uint32_t KeyBuilder_get_Rng_m1224245225_MetadataUsageId;
 extern "C"  RandomNumberGenerator_t2174318432 * KeyBuilder_get_Rng_m1224245225 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
@@ -263,7 +263,7 @@ extern "C"  RandomNumberGenerator_t2174318432 * KeyBuilder_get_Rng_m1224245225 (
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		RandomNumberGenerator_t2174318432 * L_0 = ((KeyBuilder_t2049706642_StaticFields*)KeyBuilder_t2049706642_il2cpp_TypeInfo_var->static_fields)->get_rng_0();
+		RandomNumberGenerator_t2174318432 * L_0 = ((KeyBuilder_t2049706643_StaticFields*)KeyBuilder_t2049706643_il2cpp_TypeInfo_var->static_fields)->get_rng_0();
 		if (L_0)
 		{
 			goto IL_0014;
@@ -271,12 +271,12 @@ extern "C"  RandomNumberGenerator_t2174318432 * KeyBuilder_get_Rng_m1224245225 (
 	}
 	{
 		RandomNumberGenerator_t2174318432 * L_1 = RandomNumberGenerator_Create_m2029084057(NULL /*static, unused*/, /*hidden argument*/NULL);
-		((KeyBuilder_t2049706642_StaticFields*)KeyBuilder_t2049706642_il2cpp_TypeInfo_var->static_fields)->set_rng_0(L_1);
+		((KeyBuilder_t2049706643_StaticFields*)KeyBuilder_t2049706643_il2cpp_TypeInfo_var->static_fields)->set_rng_0(L_1);
 	}
 
 IL_0014:
 	{
-		RandomNumberGenerator_t2174318432 * L_2 = ((KeyBuilder_t2049706642_StaticFields*)KeyBuilder_t2049706642_il2cpp_TypeInfo_var->static_fields)->get_rng_0();
+		RandomNumberGenerator_t2174318432 * L_2 = ((KeyBuilder_t2049706643_StaticFields*)KeyBuilder_t2049706643_il2cpp_TypeInfo_var->static_fields)->get_rng_0();
 		return L_2;
 	}
 }
@@ -2603,7 +2603,7 @@ IL_0033:
 	}
 }
 // System.Void System.MonoTODOAttribute::.ctor()
-extern "C"  void MonoTODOAttribute__ctor_m1033053463 (MonoTODOAttribute_t1287393898 * __this, const MethodInfo* method)
+extern "C"  void MonoTODOAttribute__ctor_m1033053463 (MonoTODOAttribute_t1287393897 * __this, const MethodInfo* method)
 {
 	{
 		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);

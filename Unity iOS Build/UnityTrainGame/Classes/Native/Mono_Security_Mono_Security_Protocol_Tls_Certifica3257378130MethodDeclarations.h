@@ -36,7 +36,7 @@ struct AsyncCallback_t1363551830;
 #include "mscorlib_System_AsyncCallback1363551830.h"
 
 // System.Void Mono.Security.Protocol.Tls.CertificateSelectionCallback::.ctor(System.Object,System.IntPtr)
-extern "C"  void CertificateSelectionCallback__ctor_m2454322488 (CertificateSelectionCallback_t3257378130 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void CertificateSelectionCallback__ctor_m2794002132 (CertificateSelectionCallback_t3257378130 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Security.Cryptography.X509Certificates.X509Certificate Mono.Security.Protocol.Tls.CertificateSelectionCallback::Invoke(System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Cryptography.X509Certificates.X509Certificate,System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection)
 extern "C"  X509Certificate_t3432067208 * CertificateSelectionCallback_Invoke_m1413516687 (CertificateSelectionCallback_t3257378130 * __this, X509CertificateCollection_t2200082950 * ___clientCertificates, X509Certificate_t3432067208 * ___serverCertificate, String_t* ___targetHost, X509CertificateCollection_t2200082950 * ___serverRequestedCertificates, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C" X509Certificate_t3432067208 * pinvoke_delegate_wrapper_CertificateSelectionCallback_t3257378130(Il2CppObject* delegate, X509CertificateCollection_t2200082950 * ___clientCertificates, X509Certificate_t3432067208 * ___serverCertificate, String_t* ___targetHost, X509CertificateCollection_t2200082950 * ___serverRequestedCertificates);

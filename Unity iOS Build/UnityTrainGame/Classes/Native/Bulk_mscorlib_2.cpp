@@ -13,18 +13,20 @@
 #include <limits>
 #include <assert.h>
 
-// System.Globalization.CultureInfo
-struct CultureInfo_t3603717042;
-// System.String
-struct String_t;
-// System.Globalization.TextInfo
-struct TextInfo_t1829318641;
-// System.Object
-struct Il2CppObject;
-// System.Globalization.CultureInfo[]
-struct CultureInfoU5BU5D_t380441927;
 // System.Globalization.CompareInfo
 struct CompareInfo_t4023832425;
+// System.Globalization.CultureInfo
+struct CultureInfo_t3603717042;
+// System.Object
+struct Il2CppObject;
+// System.String
+struct String_t;
+// System.Globalization.SortKey
+struct SortKey_t2408679447;
+// System.Globalization.TextInfo
+struct TextInfo_t1829318641;
+// System.Globalization.CultureInfo[]
+struct CultureInfoU5BU5D_t380441927;
 // System.Globalization.NumberFormatInfo
 struct NumberFormatInfo_t3411951076;
 // System.Globalization.DateTimeFormatInfo
@@ -43,8 +45,6 @@ struct DaylightTime_t3128077661;
 struct GregorianCalendar_t4078054522;
 // System.Int32[]
 struct Int32U5BU5D_t1809983122;
-// System.Globalization.SortKey
-struct SortKey_t2408679447;
 // System.Byte[]
 struct ByteU5BU5D_t58506160;
 // System.Text.StringBuilder
@@ -239,33 +239,45 @@ struct NonSerializedAttribute_t3281987872;
 struct NotImplementedException_t1091014741;
 // System.NotSupportedException
 struct NotSupportedException_t1374155497;
-// System.NullReferenceException
-struct NullReferenceException_t3216235232;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
-#include "mscorlib_System_Globalization_CompareOptions1115053679.h"
-#include "mscorlib_System_Globalization_CompareOptions1115053679MethodDeclarations.h"
-#include "mscorlib_System_Globalization_CultureInfo3603717042.h"
-#include "mscorlib_System_Globalization_CultureInfo3603717042MethodDeclarations.h"
-#include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Globalization_CCMath456089566.h"
+#include "mscorlib_System_Globalization_CCMath456089566MethodDeclarations.h"
 #include "mscorlib_System_Int322847414787.h"
-#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_Math2778998461MethodDeclarations.h"
+#include "mscorlib_System_Double534516614.h"
+#include "mscorlib_System_Globalization_CompareInfo4023832425.h"
+#include "mscorlib_System_Globalization_CompareInfo4023832425MethodDeclarations.h"
+#include "mscorlib_System_Void2779279689.h"
 #include "mscorlib_System_Object837106420MethodDeclarations.h"
-#include "mscorlib_System_ArgumentOutOfRangeException3479058991MethodDeclarations.h"
-#include "mscorlib_System_String968488902MethodDeclarations.h"
-#include "mscorlib_System_ArgumentException124305799MethodDeclarations.h"
-#include "mscorlib_System_String968488902.h"
-#include "mscorlib_System_ArgumentOutOfRangeException3479058991.h"
+#include "mscorlib_System_Globalization_CultureInfo3603717042.h"
+#include "mscorlib_System_Threading_Monitor2071304733MethodDeclarations.h"
+#include "mscorlib_System_Collections_Hashtable3875263730MethodDeclarations.h"
+#include "mscorlib_Mono_Globalization_Unicode_SimpleCollator2066475675MethodDeclarations.h"
+#include "mscorlib_System_Globalization_CultureInfo3603717042MethodDeclarations.h"
 #include "mscorlib_System_Object837106420.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_Collections_Hashtable3875263730.h"
+#include "mscorlib_Mono_Globalization_Unicode_SimpleCollator2066475675.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Environment63604104MethodDeclarations.h"
+#include "mscorlib_System_String968488902MethodDeclarations.h"
+#include "mscorlib_Mono_Globalization_Unicode_MSCompatUnicod3581769792MethodDeclarations.h"
+#include "mscorlib_System_Globalization_CompareOptions1115053679.h"
+#include "mscorlib_System_ArgumentException124305799MethodDeclarations.h"
 #include "mscorlib_System_ArgumentException124305799.h"
+#include "mscorlib_System_ArgumentOutOfRangeException3479058991MethodDeclarations.h"
+#include "mscorlib_System_ArgumentOutOfRangeException3479058991.h"
+#include "mscorlib_System_Globalization_SortKey2408679447.h"
+#include "mscorlib_System_Globalization_SortKey2408679447MethodDeclarations.h"
 #include "mscorlib_System_ArgumentNullException3214793280MethodDeclarations.h"
 #include "mscorlib_System_ArgumentNullException3214793280.h"
+#include "mscorlib_System_Globalization_CompareOptions1115053679MethodDeclarations.h"
 #include "mscorlib_System_Threading_Thread1674723085MethodDeclarations.h"
 #include "mscorlib_System_Threading_Thread1674723085.h"
 #include "mscorlib_System_Globalization_TextInfo1829318641.h"
-#include "mscorlib_System_Threading_Monitor2071304733MethodDeclarations.h"
 #include "mscorlib_System_Globalization_NumberFormatInfo3411951076MethodDeclarations.h"
 #include "mscorlib_System_Globalization_DateTimeFormatInfo2504543158MethodDeclarations.h"
 #include "mscorlib_ArrayTypes.h"
@@ -273,8 +285,6 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_Globalization_NumberFormatInfo3411951076.h"
 #include "mscorlib_System_Globalization_DateTimeFormatInfo2504543158.h"
 #include "mscorlib_System_Globalization_CultureTypes2896809953.h"
-#include "mscorlib_System_Globalization_CompareInfo4023832425.h"
-#include "mscorlib_System_Globalization_CompareInfo4023832425MethodDeclarations.h"
 #include "mscorlib_System_NotSupportedException1374155497MethodDeclarations.h"
 #include "mscorlib_System_NotSupportedException1374155497.h"
 #include "mscorlib_System_InvalidOperationException2420574324MethodDeclarations.h"
@@ -310,8 +320,6 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_Globalization_GregorianCalendarType466930443MethodDeclarations.h"
 #include "mscorlib_System_Globalization_NumberStyles3988678145.h"
 #include "mscorlib_System_Globalization_NumberStyles3988678145MethodDeclarations.h"
-#include "mscorlib_System_Globalization_SortKey2408679447.h"
-#include "mscorlib_System_Globalization_SortKey2408679447MethodDeclarations.h"
 #include "mscorlib_System_Globalization_TextInfo_Data2122698.h"
 #include "mscorlib_System_Char2778706699MethodDeclarations.h"
 #include "mscorlib_System_Runtime_CompilerServices_RuntimeHe1695827251MethodDeclarations.h"
@@ -348,7 +356,6 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_Int162847414729MethodDeclarations.h"
 #include "mscorlib_System_Convert1097883944MethodDeclarations.h"
 #include "mscorlib_System_Decimal1688557254.h"
-#include "mscorlib_System_Double534516614.h"
 #include "mscorlib_System_Int642847414882.h"
 #include "mscorlib_System_SByte2855346064.h"
 #include "mscorlib_System_Single958209021.h"
@@ -359,7 +366,6 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_OverflowException3216083426.h"
 #include "mscorlib_System_NumberFormatter719190774MethodDeclarations.h"
 #include "mscorlib_System_TypeCode2164429820.h"
-#include "mscorlib_System_Math2778998461MethodDeclarations.h"
 #include "mscorlib_System_Int642847414882MethodDeclarations.h"
 #include "mscorlib_System_IntPtr676692020.h"
 #include "mscorlib_System_IntPtr676692020MethodDeclarations.h"
@@ -402,7 +408,6 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_IO_DirectoryNotFoundException1466949242.h"
 #include "mscorlib_System_IO_FileSystemInfo2843833056MethodDeclarations.h"
 #include "mscorlib_System_IO_FileSystemInfo2843833056.h"
-#include "mscorlib_System_Environment63604104MethodDeclarations.h"
 #include "mscorlib_System_IO_MonoIOStat1346274820.h"
 #include "mscorlib_System_IO_MonoIO42526736.h"
 #include "mscorlib_System_IO_File2029342275.h"
@@ -533,9 +538,7 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_Attribute498693649.h"
 #include "mscorlib_System_Reflection_AmbiguousMatchException3876538212MethodDeclarations.h"
 #include "mscorlib_System_Reflection_AmbiguousMatchException3876538212.h"
-#include "mscorlib_System_Collections_Hashtable3875263730MethodDeclarations.h"
 #include "mscorlib_System_MonoCustomAttrs_AttributeInfo3644523850MethodDeclarations.h"
-#include "mscorlib_System_Collections_Hashtable3875263730.h"
 #include "mscorlib_System_MonoCustomAttrs_AttributeInfo3644523850.h"
 #include "mscorlib_System_Reflection_CustomAttributeData2584644259.h"
 #include "mscorlib_System_Collections_ObjectModel_ReadOnlyCo1452822311.h"
@@ -595,10 +598,6 @@ struct NullReferenceException_t3216235232;
 #include "mscorlib_System_NonSerializedAttribute3281987872MethodDeclarations.h"
 #include "mscorlib_System_NotImplementedException1091014741.h"
 #include "mscorlib_System_NotImplementedException1091014741MethodDeclarations.h"
-#include "mscorlib_System_Nullable935284502.h"
-#include "mscorlib_System_Nullable935284502MethodDeclarations.h"
-#include "mscorlib_System_NullReferenceException3216235232.h"
-#include "mscorlib_System_NullReferenceException3216235232MethodDeclarations.h"
 
 // System.Collections.ObjectModel.ReadOnlyCollection`1<!!0> System.Array::AsReadOnly<System.Object>(!!0[])
 extern "C"  ReadOnlyCollection_1_t4000251768 * Array_AsReadOnly_TisIl2CppObject_m3222156752_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t11523773* p0, const MethodInfo* method);
@@ -610,6 +609,1584 @@ extern "C"  ReadOnlyCollection_1_t4000251768 * Array_AsReadOnly_TisIl2CppObject_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Int32 System.Globalization.CCMath::div(System.Int32,System.Int32)
+extern "C"  int32_t CCMath_div_m3921680315 (Il2CppObject * __this /* static, unused */, int32_t ___x, int32_t ___y, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___x;
+		int32_t L_1 = ___y;
+		double L_2 = floor(((double)((double)(((double)((double)L_0)))/(double)(((double)((double)L_1))))));
+		return (((int32_t)((int32_t)L_2)));
+	}
+}
+// System.Int32 System.Globalization.CCMath::mod(System.Int32,System.Int32)
+extern "C"  int32_t CCMath_mod_m4177458858 (Il2CppObject * __this /* static, unused */, int32_t ___x, int32_t ___y, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___x;
+		int32_t L_1 = ___y;
+		int32_t L_2 = ___x;
+		int32_t L_3 = ___y;
+		int32_t L_4 = CCMath_div_m3921680315(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
+		return ((int32_t)((int32_t)L_0-(int32_t)((int32_t)((int32_t)L_1*(int32_t)L_4))));
+	}
+}
+// System.Int32 System.Globalization.CCMath::div_mod(System.Int32&,System.Int32,System.Int32)
+extern "C"  int32_t CCMath_div_mod_m3137892397 (Il2CppObject * __this /* static, unused */, int32_t* ___remainder, int32_t ___x, int32_t ___y, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = ___x;
+		int32_t L_1 = ___y;
+		int32_t L_2 = CCMath_div_m3921680315(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		int32_t* L_3 = ___remainder;
+		int32_t L_4 = ___x;
+		int32_t L_5 = ___y;
+		int32_t L_6 = V_0;
+		*((int32_t*)(L_3)) = (int32_t)((int32_t)((int32_t)L_4-(int32_t)((int32_t)((int32_t)L_5*(int32_t)L_6))));
+		int32_t L_7 = V_0;
+		return L_7;
+	}
+}
+// System.Void System.Globalization.CompareInfo::.ctor()
+extern "C"  void CompareInfo__ctor_m2717172747 (CompareInfo_t4023832425 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.Globalization.CompareInfo::.ctor(System.Globalization.CultureInfo)
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern TypeInfo* Hashtable_t3875263730_il2cpp_TypeInfo_var;
+extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
+extern TypeInfo* SimpleCollator_t2066475675_il2cpp_TypeInfo_var;
+extern const uint32_t CompareInfo__ctor_m4083915963_MetadataUsageId;
+extern "C"  void CompareInfo__ctor_m4083915963 (CompareInfo_t4023832425 * __this, CultureInfo_t3603717042 * ___ci, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo__ctor_m4083915963_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Il2CppObject * V_0 = NULL;
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		CultureInfo_t3603717042 * L_0 = ___ci;
+		NullCheck(L_0);
+		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 System.Globalization.CultureInfo::get_LCID() */, L_0);
+		__this->set_culture_1(L_1);
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_2 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_009f;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		Il2CppObject * L_3 = ((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->get_monitor_5();
+		V_0 = L_3;
+		Il2CppObject * L_4 = V_0;
+		Monitor_Enter_m476686225(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+	}
+
+IL_0028:
+	try
+	{ // begin try (depth: 1)
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+			Hashtable_t3875263730 * L_5 = ((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->get_collators_4();
+			if (L_5)
+			{
+				goto IL_003c;
+			}
+		}
+
+IL_0032:
+		{
+			Hashtable_t3875263730 * L_6 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
+			Hashtable__ctor_m1514037738(L_6, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+			((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->set_collators_4(L_6);
+		}
+
+IL_003c:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+			Hashtable_t3875263730 * L_7 = ((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->get_collators_4();
+			CultureInfo_t3603717042 * L_8 = ___ci;
+			NullCheck(L_8);
+			int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 System.Globalization.CultureInfo::get_LCID() */, L_8);
+			int32_t L_10 = L_9;
+			Il2CppObject * L_11 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_10);
+			NullCheck(L_7);
+			Il2CppObject * L_12 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(30 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_7, L_11);
+			__this->set_collator_3(((SimpleCollator_t2066475675 *)CastclassClass(L_12, SimpleCollator_t2066475675_il2cpp_TypeInfo_var)));
+			SimpleCollator_t2066475675 * L_13 = __this->get_collator_3();
+			if (L_13)
+			{
+				goto IL_008e;
+			}
+		}
+
+IL_0067:
+		{
+			CultureInfo_t3603717042 * L_14 = ___ci;
+			SimpleCollator_t2066475675 * L_15 = (SimpleCollator_t2066475675 *)il2cpp_codegen_object_new(SimpleCollator_t2066475675_il2cpp_TypeInfo_var);
+			SimpleCollator__ctor_m3894313767(L_15, L_14, /*hidden argument*/NULL);
+			__this->set_collator_3(L_15);
+			IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+			Hashtable_t3875263730 * L_16 = ((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->get_collators_4();
+			CultureInfo_t3603717042 * L_17 = ___ci;
+			NullCheck(L_17);
+			int32_t L_18 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 System.Globalization.CultureInfo::get_LCID() */, L_17);
+			int32_t L_19 = L_18;
+			Il2CppObject * L_20 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_19);
+			SimpleCollator_t2066475675 * L_21 = __this->get_collator_3();
+			NullCheck(L_16);
+			VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(31 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_16, L_20, L_21);
+		}
+
+IL_008e:
+		{
+			IL2CPP_LEAVE(0x9A, FINALLY_0093);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_0093;
+	}
+
+FINALLY_0093:
+	{ // begin finally (depth: 1)
+		Il2CppObject * L_22 = V_0;
+		Monitor_Exit_m2088237919(NULL /*static, unused*/, L_22, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(147)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(147)
+	{
+		IL2CPP_JUMP_TBL(0x9A, IL_009a)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_009a:
+	{
+		goto IL_00b7;
+	}
+
+IL_009f:
+	{
+		CultureInfo_t3603717042 * L_23 = ___ci;
+		NullCheck(L_23);
+		String_t* L_24 = CultureInfo_get_IcuName_m794066458(L_23, /*hidden argument*/NULL);
+		__this->set_icu_name_2(L_24);
+		String_t* L_25 = __this->get_icu_name_2();
+		CompareInfo_construct_compareinfo_m2022101582(__this, L_25, /*hidden argument*/NULL);
+	}
+
+IL_00b7:
+	{
+		return;
+	}
+}
+// System.Void System.Globalization.CompareInfo::.cctor()
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* MSCompatUnicodeTable_t3581769792_il2cpp_TypeInfo_var;
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern TypeInfo* Il2CppObject_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral226127510;
+extern Il2CppCodeGenString* _stringLiteral119527;
+extern const uint32_t CompareInfo__cctor_m2145880322_MetadataUsageId;
+extern "C"  void CompareInfo__cctor_m2145880322 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo__cctor_m2145880322_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t G_B3_0 = 0;
+	{
+		String_t* L_0 = Environment_internalGetEnvironmentVariable_m1433380067(NULL /*static, unused*/, _stringLiteral226127510, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_1 = String_op_Inequality_m2125462205(NULL /*static, unused*/, L_0, _stringLiteral119527, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(MSCompatUnicodeTable_t3581769792_il2cpp_TypeInfo_var);
+		bool L_2 = MSCompatUnicodeTable_get_IsReady_m989669506(NULL /*static, unused*/, /*hidden argument*/NULL);
+		G_B3_0 = ((int32_t)(L_2));
+		goto IL_0021;
+	}
+
+IL_0020:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0021:
+	{
+		((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->set_useManagedCollation_0((bool)G_B3_0);
+		Il2CppObject * L_3 = (Il2CppObject *)il2cpp_codegen_object_new(Il2CppObject_il2cpp_TypeInfo_var);
+		Object__ctor_m1772956182(L_3, /*hidden argument*/NULL);
+		((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->set_monitor_5(L_3);
+		return;
+	}
+}
+// System.Void System.Globalization.CompareInfo::System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(System.Object)
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern TypeInfo* CultureInfo_t3603717042_il2cpp_TypeInfo_var;
+extern TypeInfo* SimpleCollator_t2066475675_il2cpp_TypeInfo_var;
+extern TypeInfo* Il2CppObject_il2cpp_TypeInfo_var;
+extern const uint32_t CompareInfo_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m3454540043_MetadataUsageId;
+extern "C"  void CompareInfo_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m3454540043 (CompareInfo_t4023832425 * __this, Il2CppObject * ___sender, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m3454540043_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_0 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_0)
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		int32_t L_1 = __this->get_culture_1();
+		CultureInfo_t3603717042 * L_2 = (CultureInfo_t3603717042 *)il2cpp_codegen_object_new(CultureInfo_t3603717042_il2cpp_TypeInfo_var);
+		CultureInfo__ctor_m3984190515(L_2, L_1, /*hidden argument*/NULL);
+		SimpleCollator_t2066475675 * L_3 = (SimpleCollator_t2066475675 *)il2cpp_codegen_object_new(SimpleCollator_t2066475675_il2cpp_TypeInfo_var);
+		SimpleCollator__ctor_m3894313767(L_3, L_2, /*hidden argument*/NULL);
+		__this->set_collator_3(L_3);
+		goto IL_003c;
+	}
+
+IL_0025:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_4 = __this->get_icu_name_2();
+		CompareInfo_construct_compareinfo_m2022101582(__this, L_4, /*hidden argument*/NULL);
+		goto IL_003c;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1967233988 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Il2CppObject_il2cpp_TypeInfo_var, e.ex->object.klass))
+			goto CATCH_0036;
+		throw e;
+	}
+
+CATCH_0036:
+	{ // begin catch(System.Object)
+		goto IL_003c;
+	} // end catch (depth: 1)
+
+IL_003c:
+	{
+		return;
+	}
+}
+// System.Boolean System.Globalization.CompareInfo::get_UseManagedCollation()
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern const uint32_t CompareInfo_get_UseManagedCollation_m2323857615_MetadataUsageId;
+extern "C"  bool CompareInfo_get_UseManagedCollation_m2323857615 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_get_UseManagedCollation_m2323857615_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_0 = ((CompareInfo_t4023832425_StaticFields*)CompareInfo_t4023832425_il2cpp_TypeInfo_var->static_fields)->get_useManagedCollation_0();
+		return L_0;
+	}
+}
+// System.Void System.Globalization.CompareInfo::construct_compareinfo(System.String)
+extern "C"  void CompareInfo_construct_compareinfo_m2022101582 (CompareInfo_t4023832425 * __this, String_t* ___locale, const MethodInfo* method)
+{
+	using namespace il2cpp::icalls;
+	typedef void (*CompareInfo_construct_compareinfo_m2022101582_ftn) (CompareInfo_t4023832425 *, String_t*);
+	 ((CompareInfo_construct_compareinfo_m2022101582_ftn)mscorlib::System::Globalization::CompareInfo::construct_compareinfo) (__this, ___locale);
+}
+// System.Void System.Globalization.CompareInfo::free_internal_collator()
+extern "C"  void CompareInfo_free_internal_collator_m1379817450 (CompareInfo_t4023832425 * __this, const MethodInfo* method)
+{
+	using namespace il2cpp::icalls;
+	typedef void (*CompareInfo_free_internal_collator_m1379817450_ftn) (CompareInfo_t4023832425 *);
+	 ((CompareInfo_free_internal_collator_m1379817450_ftn)mscorlib::System::Globalization::CompareInfo::free_internal_collator) (__this);
+}
+// System.Int32 System.Globalization.CompareInfo::internal_compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+extern "C"  int32_t CompareInfo_internal_compare_m4086146477 (CompareInfo_t4023832425 * __this, String_t* ___str1, int32_t ___offset1, int32_t ___length1, String_t* ___str2, int32_t ___offset2, int32_t ___length2, int32_t ___options, const MethodInfo* method)
+{
+	using namespace il2cpp::icalls;
+	typedef int32_t (*CompareInfo_internal_compare_m4086146477_ftn) (CompareInfo_t4023832425 *, String_t*, int32_t, int32_t, String_t*, int32_t, int32_t, int32_t);
+	return  ((CompareInfo_internal_compare_m4086146477_ftn)mscorlib::System::Globalization::CompareInfo::internal_compare) (__this, ___str1, ___offset1, ___length1, ___str2, ___offset2, ___length2, ___options);
+}
+// System.Void System.Globalization.CompareInfo::assign_sortkey(System.Object,System.String,System.Globalization.CompareOptions)
+extern "C"  void CompareInfo_assign_sortkey_m1948194573 (CompareInfo_t4023832425 * __this, Il2CppObject * ___key, String_t* ___source, int32_t ___options, const MethodInfo* method)
+{
+	using namespace il2cpp::icalls;
+	typedef void (*CompareInfo_assign_sortkey_m1948194573_ftn) (CompareInfo_t4023832425 *, Il2CppObject *, String_t*, int32_t);
+	 ((CompareInfo_assign_sortkey_m1948194573_ftn)mscorlib::System::Globalization::CompareInfo::assign_sortkey) (__this, ___key, ___source, ___options);
+}
+// System.Int32 System.Globalization.CompareInfo::internal_index(System.String,System.Int32,System.Int32,System.String,System.Globalization.CompareOptions,System.Boolean)
+extern "C"  int32_t CompareInfo_internal_index_m2497885245 (CompareInfo_t4023832425 * __this, String_t* ___source, int32_t ___sindex, int32_t ___count, String_t* ___value, int32_t ___options, bool ___first, const MethodInfo* method)
+{
+	using namespace il2cpp::icalls;
+	typedef int32_t (*CompareInfo_internal_index_m2497885245_ftn) (CompareInfo_t4023832425 *, String_t*, int32_t, int32_t, String_t*, int32_t, bool);
+	return  ((CompareInfo_internal_index_m2497885245_ftn)mscorlib::System::Globalization::CompareInfo::internal_index) (__this, ___source, ___sindex, ___count, ___value, ___options, ___first);
+}
+// System.Void System.Globalization.CompareInfo::Finalize()
+extern "C"  void CompareInfo_Finalize_m147184759 (CompareInfo_t4023832425 * __this, const MethodInfo* method)
+{
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		CompareInfo_free_internal_collator_m1379817450(__this, /*hidden argument*/NULL);
+		IL2CPP_LEAVE(0x12, FINALLY_000b);
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_000b;
+	}
+
+FINALLY_000b:
+	{ // begin finally (depth: 1)
+		Object_Finalize_m3027285644(__this, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(11)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(11)
+	{
+		IL2CPP_JUMP_TBL(0x12, IL_0012)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_0012:
+	{
+		return;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::internal_compare_managed(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+extern "C"  int32_t CompareInfo_internal_compare_managed_m564523597 (CompareInfo_t4023832425 * __this, String_t* ___str1, int32_t ___offset1, int32_t ___length1, String_t* ___str2, int32_t ___offset2, int32_t ___length2, int32_t ___options, const MethodInfo* method)
+{
+	{
+		SimpleCollator_t2066475675 * L_0 = __this->get_collator_3();
+		String_t* L_1 = ___str1;
+		int32_t L_2 = ___offset1;
+		int32_t L_3 = ___length1;
+		String_t* L_4 = ___str2;
+		int32_t L_5 = ___offset2;
+		int32_t L_6 = ___length2;
+		int32_t L_7 = ___options;
+		NullCheck(L_0);
+		int32_t L_8 = SimpleCollator_Compare_m1335009039(L_0, L_1, L_2, L_3, L_4, L_5, L_6, L_7, /*hidden argument*/NULL);
+		return L_8;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::internal_compare_switch(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern const uint32_t CompareInfo_internal_compare_switch_m1799621832_MetadataUsageId;
+extern "C"  int32_t CompareInfo_internal_compare_switch_m1799621832 (CompareInfo_t4023832425 * __this, String_t* ___str1, int32_t ___offset1, int32_t ___length1, String_t* ___str2, int32_t ___offset2, int32_t ___length2, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_internal_compare_switch_m1799621832_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t G_B3_0 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_0 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		String_t* L_1 = ___str1;
+		int32_t L_2 = ___offset1;
+		int32_t L_3 = ___length1;
+		String_t* L_4 = ___str2;
+		int32_t L_5 = ___offset2;
+		int32_t L_6 = ___length2;
+		int32_t L_7 = ___options;
+		int32_t L_8 = CompareInfo_internal_compare_managed_m564523597(__this, L_1, L_2, L_3, L_4, L_5, L_6, L_7, /*hidden argument*/NULL);
+		G_B3_0 = L_8;
+		goto IL_0031;
+	}
+
+IL_0020:
+	{
+		String_t* L_9 = ___str1;
+		int32_t L_10 = ___offset1;
+		int32_t L_11 = ___length1;
+		String_t* L_12 = ___str2;
+		int32_t L_13 = ___offset2;
+		int32_t L_14 = ___length2;
+		int32_t L_15 = ___options;
+		int32_t L_16 = CompareInfo_internal_compare_m4086146477(__this, L_9, L_10, L_11, L_12, L_13, L_14, L_15, /*hidden argument*/NULL);
+		G_B3_0 = L_16;
+	}
+
+IL_0031:
+	{
+		return G_B3_0;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.String)
+extern "C"  int32_t CompareInfo_Compare_m163670860 (CompareInfo_t4023832425 * __this, String_t* ___string1, String_t* ___string2, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___string1;
+		String_t* L_1 = ___string2;
+		int32_t L_2 = VirtFuncInvoker3< int32_t, String_t*, String_t*, int32_t >::Invoke(6 /* System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.String,System.Globalization.CompareOptions) */, __this, L_0, L_1, 0);
+		return L_2;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.String,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentException_t124305799_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3045492382;
+extern const uint32_t CompareInfo_Compare_m3716808947_MetadataUsageId;
+extern "C"  int32_t CompareInfo_Compare_m3716808947 (CompareInfo_t4023832425 * __this, String_t* ___string1, String_t* ___string2, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_Compare_m3716808947_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = ___options;
+		int32_t L_1 = ___options;
+		if ((((int32_t)((int32_t)((int32_t)L_0&(int32_t)((int32_t)1879048223)))) == ((int32_t)L_1)))
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		ArgumentException_t124305799 * L_2 = (ArgumentException_t124305799 *)il2cpp_codegen_object_new(ArgumentException_t124305799_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m3544856547(L_2, _stringLiteral3045492382, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+
+IL_0018:
+	{
+		String_t* L_3 = ___string1;
+		if (L_3)
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		String_t* L_4 = ___string2;
+		if (L_4)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_0026:
+	{
+		return (-1);
+	}
+
+IL_0028:
+	{
+		String_t* L_5 = ___string2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		return 1;
+	}
+
+IL_0030:
+	{
+		String_t* L_6 = ___string1;
+		NullCheck(L_6);
+		int32_t L_7 = String_get_Length_m2979997331(L_6, /*hidden argument*/NULL);
+		if (L_7)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		String_t* L_8 = ___string2;
+		NullCheck(L_8);
+		int32_t L_9 = String_get_Length_m2979997331(L_8, /*hidden argument*/NULL);
+		if (L_9)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_0048:
+	{
+		String_t* L_10 = ___string1;
+		String_t* L_11 = ___string1;
+		NullCheck(L_11);
+		int32_t L_12 = String_get_Length_m2979997331(L_11, /*hidden argument*/NULL);
+		String_t* L_13 = ___string2;
+		String_t* L_14 = ___string2;
+		NullCheck(L_14);
+		int32_t L_15 = String_get_Length_m2979997331(L_14, /*hidden argument*/NULL);
+		int32_t L_16 = ___options;
+		int32_t L_17 = CompareInfo_internal_compare_switch_m1799621832(__this, L_10, 0, L_12, L_13, 0, L_15, L_16, /*hidden argument*/NULL);
+		return L_17;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentException_t124305799_il2cpp_TypeInfo_var;
+extern TypeInfo* ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3045492382;
+extern Il2CppCodeGenString* _stringLiteral3316535605;
+extern Il2CppCodeGenString* _stringLiteral1274338817;
+extern Il2CppCodeGenString* _stringLiteral2407529411;
+extern Il2CppCodeGenString* _stringLiteral3529304373;
+extern Il2CppCodeGenString* _stringLiteral492634360;
+extern const uint32_t CompareInfo_Compare_m2372235443_MetadataUsageId;
+extern "C"  int32_t CompareInfo_Compare_m2372235443 (CompareInfo_t4023832425 * __this, String_t* ___string1, int32_t ___offset1, int32_t ___length1, String_t* ___string2, int32_t ___offset2, int32_t ___length2, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_Compare_m2372235443_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = ___options;
+		int32_t L_1 = ___options;
+		if ((((int32_t)((int32_t)((int32_t)L_0&(int32_t)((int32_t)1879048223)))) == ((int32_t)L_1)))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		ArgumentException_t124305799 * L_2 = (ArgumentException_t124305799 *)il2cpp_codegen_object_new(ArgumentException_t124305799_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m3544856547(L_2, _stringLiteral3045492382, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+
+IL_001a:
+	{
+		String_t* L_3 = ___string1;
+		if (L_3)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		String_t* L_4 = ___string2;
+		if (L_4)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_0029:
+	{
+		return (-1);
+	}
+
+IL_002b:
+	{
+		String_t* L_5 = ___string2;
+		if (L_5)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		return 1;
+	}
+
+IL_0034:
+	{
+		String_t* L_6 = ___string1;
+		NullCheck(L_6);
+		int32_t L_7 = String_get_Length_m2979997331(L_6, /*hidden argument*/NULL);
+		if (!L_7)
+		{
+			goto IL_0051;
+		}
+	}
+	{
+		int32_t L_8 = ___offset1;
+		String_t* L_9 = ___string1;
+		NullCheck(L_9);
+		int32_t L_10 = String_get_Length_m2979997331(L_9, /*hidden argument*/NULL);
+		if ((((int32_t)L_8) == ((int32_t)L_10)))
+		{
+			goto IL_0051;
+		}
+	}
+	{
+		int32_t L_11 = ___length1;
+		if (L_11)
+		{
+			goto IL_0074;
+		}
+	}
+
+IL_0051:
+	{
+		String_t* L_12 = ___string2;
+		NullCheck(L_12);
+		int32_t L_13 = String_get_Length_m2979997331(L_12, /*hidden argument*/NULL);
+		if (!L_13)
+		{
+			goto IL_0072;
+		}
+	}
+	{
+		int32_t L_14 = ___offset2;
+		String_t* L_15 = ___string2;
+		NullCheck(L_15);
+		int32_t L_16 = String_get_Length_m2979997331(L_15, /*hidden argument*/NULL);
+		if ((((int32_t)L_14) == ((int32_t)L_16)))
+		{
+			goto IL_0072;
+		}
+	}
+	{
+		int32_t L_17 = ___length2;
+		if (L_17)
+		{
+			goto IL_0074;
+		}
+	}
+
+IL_0072:
+	{
+		return 0;
+	}
+
+IL_0074:
+	{
+		int32_t L_18 = ___offset1;
+		if ((((int32_t)L_18) < ((int32_t)0)))
+		{
+			goto IL_0092;
+		}
+	}
+	{
+		int32_t L_19 = ___length1;
+		if ((((int32_t)L_19) < ((int32_t)0)))
+		{
+			goto IL_0092;
+		}
+	}
+	{
+		int32_t L_20 = ___offset2;
+		if ((((int32_t)L_20) < ((int32_t)0)))
+		{
+			goto IL_0092;
+		}
+	}
+	{
+		int32_t L_21 = ___length2;
+		if ((((int32_t)L_21) >= ((int32_t)0)))
+		{
+			goto IL_009d;
+		}
+	}
+
+IL_0092:
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_22 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_22, _stringLiteral3316535605, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_22);
+	}
+
+IL_009d:
+	{
+		int32_t L_23 = ___offset1;
+		String_t* L_24 = ___string1;
+		NullCheck(L_24);
+		int32_t L_25 = String_get_Length_m2979997331(L_24, /*hidden argument*/NULL);
+		if ((((int32_t)L_23) <= ((int32_t)L_25)))
+		{
+			goto IL_00b4;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_26 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_26, _stringLiteral1274338817, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_26);
+	}
+
+IL_00b4:
+	{
+		int32_t L_27 = ___offset2;
+		String_t* L_28 = ___string2;
+		NullCheck(L_28);
+		int32_t L_29 = String_get_Length_m2979997331(L_28, /*hidden argument*/NULL);
+		if ((((int32_t)L_27) <= ((int32_t)L_29)))
+		{
+			goto IL_00cd;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_30 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_30, _stringLiteral2407529411, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_30);
+	}
+
+IL_00cd:
+	{
+		int32_t L_31 = ___length1;
+		String_t* L_32 = ___string1;
+		NullCheck(L_32);
+		int32_t L_33 = String_get_Length_m2979997331(L_32, /*hidden argument*/NULL);
+		int32_t L_34 = ___offset1;
+		if ((((int32_t)L_31) <= ((int32_t)((int32_t)((int32_t)L_33-(int32_t)L_34)))))
+		{
+			goto IL_00e6;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_35 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_35, _stringLiteral3529304373, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_35);
+	}
+
+IL_00e6:
+	{
+		int32_t L_36 = ___length2;
+		String_t* L_37 = ___string2;
+		NullCheck(L_37);
+		int32_t L_38 = String_get_Length_m2979997331(L_37, /*hidden argument*/NULL);
+		int32_t L_39 = ___offset2;
+		if ((((int32_t)L_36) <= ((int32_t)((int32_t)((int32_t)L_38-(int32_t)L_39)))))
+		{
+			goto IL_0102;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_40 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_40, _stringLiteral492634360, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_40);
+	}
+
+IL_0102:
+	{
+		String_t* L_41 = ___string1;
+		int32_t L_42 = ___offset1;
+		int32_t L_43 = ___length1;
+		String_t* L_44 = ___string2;
+		int32_t L_45 = ___offset2;
+		int32_t L_46 = ___length2;
+		int32_t L_47 = ___options;
+		int32_t L_48 = CompareInfo_internal_compare_switch_m1799621832(__this, L_41, L_42, L_43, L_44, L_45, L_46, L_47, /*hidden argument*/NULL);
+		return L_48;
+	}
+}
+// System.Boolean System.Globalization.CompareInfo::Equals(System.Object)
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern const uint32_t CompareInfo_Equals_m3684038010_MetadataUsageId;
+extern "C"  bool CompareInfo_Equals_m3684038010 (CompareInfo_t4023832425 * __this, Il2CppObject * ___value, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_Equals_m3684038010_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	CompareInfo_t4023832425 * V_0 = NULL;
+	{
+		Il2CppObject * L_0 = ___value;
+		V_0 = ((CompareInfo_t4023832425 *)IsInstClass(L_0, CompareInfo_t4023832425_il2cpp_TypeInfo_var));
+		CompareInfo_t4023832425 * L_1 = V_0;
+		if (L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_000f:
+	{
+		CompareInfo_t4023832425 * L_2 = V_0;
+		NullCheck(L_2);
+		int32_t L_3 = L_2->get_culture_1();
+		int32_t L_4 = __this->get_culture_1();
+		return (bool)((((int32_t)L_3) == ((int32_t)L_4))? 1 : 0);
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::GetHashCode()
+extern "C"  int32_t CompareInfo_GetHashCode_m2323369182 (CompareInfo_t4023832425 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = CompareInfo_get_LCID_m2545212208(__this, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// System.Globalization.SortKey System.Globalization.CompareInfo::GetSortKey(System.String,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentException_t124305799_il2cpp_TypeInfo_var;
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern TypeInfo* SortKey_t2408679447_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3228511059;
+extern Il2CppCodeGenString* _stringLiteral3045492382;
+extern const uint32_t CompareInfo_GetSortKey_m3202721135_MetadataUsageId;
+extern "C"  SortKey_t2408679447 * CompareInfo_GetSortKey_m3202721135 (CompareInfo_t4023832425 * __this, String_t* ___source, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_GetSortKey_m3202721135_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	SortKey_t2408679447 * V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = ___options;
+		V_1 = L_0;
+		int32_t L_1 = V_1;
+		if ((((int32_t)L_1) == ((int32_t)((int32_t)268435456))))
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		int32_t L_2 = V_1;
+		if ((((int32_t)L_2) == ((int32_t)((int32_t)1073741824))))
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		goto IL_002d;
+	}
+
+IL_001d:
+	{
+		ArgumentException_t124305799 * L_3 = (ArgumentException_t124305799 *)il2cpp_codegen_object_new(ArgumentException_t124305799_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m732321503(L_3, _stringLiteral3228511059, _stringLiteral3045492382, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_002d:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_4 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_0045;
+		}
+	}
+	{
+		SimpleCollator_t2066475675 * L_5 = __this->get_collator_3();
+		String_t* L_6 = ___source;
+		int32_t L_7 = ___options;
+		NullCheck(L_5);
+		SortKey_t2408679447 * L_8 = SimpleCollator_GetSortKey_m1379820039(L_5, L_6, L_7, /*hidden argument*/NULL);
+		return L_8;
+	}
+
+IL_0045:
+	{
+		int32_t L_9 = __this->get_culture_1();
+		String_t* L_10 = ___source;
+		int32_t L_11 = ___options;
+		SortKey_t2408679447 * L_12 = (SortKey_t2408679447 *)il2cpp_codegen_object_new(SortKey_t2408679447_il2cpp_TypeInfo_var);
+		SortKey__ctor_m1693041873(L_12, L_9, L_10, L_11, /*hidden argument*/NULL);
+		V_0 = L_12;
+		SortKey_t2408679447 * L_13 = V_0;
+		String_t* L_14 = ___source;
+		int32_t L_15 = ___options;
+		CompareInfo_assign_sortkey_m1948194573(__this, L_13, L_14, L_15, /*hidden argument*/NULL);
+		SortKey_t2408679447 * L_16 = V_0;
+		return L_16;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::IndexOf(System.String,System.String)
+extern "C"  int32_t CompareInfo_IndexOf_m791678056 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___source;
+		String_t* L_1 = ___value;
+		String_t* L_2 = ___source;
+		NullCheck(L_2);
+		int32_t L_3 = String_get_Length_m2979997331(L_2, /*hidden argument*/NULL);
+		int32_t L_4 = VirtFuncInvoker5< int32_t, String_t*, String_t*, int32_t, int32_t, int32_t >::Invoke(11 /* System.Int32 System.Globalization.CompareInfo::IndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions) */, __this, L_0, L_1, 0, L_3, 0);
+		return L_4;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::IndexOf(System.String,System.String,System.Int32,System.Int32)
+extern "C"  int32_t CompareInfo_IndexOf_m2367270856 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___value, int32_t ___startIndex, int32_t ___count, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___source;
+		String_t* L_1 = ___value;
+		int32_t L_2 = ___startIndex;
+		int32_t L_3 = ___count;
+		int32_t L_4 = VirtFuncInvoker5< int32_t, String_t*, String_t*, int32_t, int32_t, int32_t >::Invoke(11 /* System.Int32 System.Globalization.CompareInfo::IndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions) */, __this, L_0, L_1, L_2, L_3, 0);
+		return L_4;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::internal_index_managed(System.String,System.Int32,System.Int32,System.String,System.Globalization.CompareOptions,System.Boolean)
+extern "C"  int32_t CompareInfo_internal_index_managed_m3605761693 (CompareInfo_t4023832425 * __this, String_t* ___s1, int32_t ___sindex, int32_t ___count, String_t* ___s2, int32_t ___opt, bool ___first, const MethodInfo* method)
+{
+	int32_t G_B3_0 = 0;
+	{
+		bool L_0 = ___first;
+		if (!L_0)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		SimpleCollator_t2066475675 * L_1 = __this->get_collator_3();
+		String_t* L_2 = ___s1;
+		String_t* L_3 = ___s2;
+		int32_t L_4 = ___sindex;
+		int32_t L_5 = ___count;
+		int32_t L_6 = ___opt;
+		NullCheck(L_1);
+		int32_t L_7 = SimpleCollator_IndexOf_m3062309067(L_1, L_2, L_3, L_4, L_5, L_6, /*hidden argument*/NULL);
+		G_B3_0 = L_7;
+		goto IL_0030;
+	}
+
+IL_001e:
+	{
+		SimpleCollator_t2066475675 * L_8 = __this->get_collator_3();
+		String_t* L_9 = ___s1;
+		String_t* L_10 = ___s2;
+		int32_t L_11 = ___sindex;
+		int32_t L_12 = ___count;
+		int32_t L_13 = ___opt;
+		NullCheck(L_8);
+		int32_t L_14 = SimpleCollator_LastIndexOf_m2017636865(L_8, L_9, L_10, L_11, L_12, L_13, /*hidden argument*/NULL);
+		G_B3_0 = L_14;
+	}
+
+IL_0030:
+	{
+		return G_B3_0;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::internal_index_switch(System.String,System.Int32,System.Int32,System.String,System.Globalization.CompareOptions,System.Boolean)
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern const uint32_t CompareInfo_internal_index_switch_m2905236232_MetadataUsageId;
+extern "C"  int32_t CompareInfo_internal_index_switch_m2905236232 (CompareInfo_t4023832425 * __this, String_t* ___s1, int32_t ___sindex, int32_t ___count, String_t* ___s2, int32_t ___opt, bool ___first, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_internal_index_switch_m2905236232_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t G_B5_0 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_0 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_0)
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		bool L_1 = ___first;
+		if (!L_1)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		int32_t L_2 = ___opt;
+		if ((((int32_t)L_2) == ((int32_t)((int32_t)1073741824))))
+		{
+			goto IL_0031;
+		}
+	}
+
+IL_001d:
+	{
+		String_t* L_3 = ___s1;
+		int32_t L_4 = ___sindex;
+		int32_t L_5 = ___count;
+		String_t* L_6 = ___s2;
+		int32_t L_7 = ___opt;
+		bool L_8 = ___first;
+		int32_t L_9 = CompareInfo_internal_index_managed_m3605761693(__this, L_3, L_4, L_5, L_6, L_7, L_8, /*hidden argument*/NULL);
+		G_B5_0 = L_9;
+		goto IL_0040;
+	}
+
+IL_0031:
+	{
+		String_t* L_10 = ___s1;
+		int32_t L_11 = ___sindex;
+		int32_t L_12 = ___count;
+		String_t* L_13 = ___s2;
+		int32_t L_14 = ___opt;
+		bool L_15 = ___first;
+		int32_t L_16 = CompareInfo_internal_index_m2497885245(__this, L_10, L_11, L_12, L_13, L_14, L_15, /*hidden argument*/NULL);
+		G_B5_0 = L_16;
+	}
+
+IL_0040:
+	{
+		return G_B5_0;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::IndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
+extern TypeInfo* ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var;
+extern TypeInfo* ArgumentException_t124305799_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3398461467;
+extern Il2CppCodeGenString* _stringLiteral111972721;
+extern Il2CppCodeGenString* _stringLiteral2701320592;
+extern Il2CppCodeGenString* _stringLiteral94851343;
+extern Il2CppCodeGenString* _stringLiteral3045492382;
+extern const uint32_t CompareInfo_IndexOf_m2925180783_MetadataUsageId;
+extern "C"  int32_t CompareInfo_IndexOf_m2925180783 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___value, int32_t ___startIndex, int32_t ___count, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_IndexOf_m2925180783_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		String_t* L_0 = ___source;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral3398461467, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		String_t* L_2 = ___value;
+		if (L_2)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_3 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_3, _stringLiteral111972721, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_0022:
+	{
+		int32_t L_4 = ___startIndex;
+		if ((((int32_t)L_4) >= ((int32_t)0)))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_5 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_5, _stringLiteral2701320592, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_0034:
+	{
+		int32_t L_6 = ___count;
+		if ((((int32_t)L_6) < ((int32_t)0)))
+		{
+			goto IL_004b;
+		}
+	}
+	{
+		String_t* L_7 = ___source;
+		NullCheck(L_7);
+		int32_t L_8 = String_get_Length_m2979997331(L_7, /*hidden argument*/NULL);
+		int32_t L_9 = ___startIndex;
+		int32_t L_10 = ___count;
+		if ((((int32_t)((int32_t)((int32_t)L_8-(int32_t)L_9))) >= ((int32_t)L_10)))
+		{
+			goto IL_0056;
+		}
+	}
+
+IL_004b:
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_11 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_11, _stringLiteral94851343, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_11);
+	}
+
+IL_0056:
+	{
+		int32_t L_12 = ___options;
+		int32_t L_13 = ___options;
+		if ((((int32_t)((int32_t)((int32_t)L_12&(int32_t)((int32_t)1342177311)))) == ((int32_t)L_13)))
+		{
+			goto IL_0070;
+		}
+	}
+	{
+		ArgumentException_t124305799 * L_14 = (ArgumentException_t124305799 *)il2cpp_codegen_object_new(ArgumentException_t124305799_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m3544856547(L_14, _stringLiteral3045492382, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_14);
+	}
+
+IL_0070:
+	{
+		String_t* L_15 = ___value;
+		NullCheck(L_15);
+		int32_t L_16 = String_get_Length_m2979997331(L_15, /*hidden argument*/NULL);
+		if (L_16)
+		{
+			goto IL_007d;
+		}
+	}
+	{
+		int32_t L_17 = ___startIndex;
+		return L_17;
+	}
+
+IL_007d:
+	{
+		int32_t L_18 = ___count;
+		if (L_18)
+		{
+			goto IL_0086;
+		}
+	}
+	{
+		return (-1);
+	}
+
+IL_0086:
+	{
+		String_t* L_19 = ___source;
+		int32_t L_20 = ___startIndex;
+		int32_t L_21 = ___count;
+		String_t* L_22 = ___value;
+		int32_t L_23 = ___options;
+		int32_t L_24 = CompareInfo_internal_index_switch_m2905236232(__this, L_19, L_20, L_21, L_22, L_23, (bool)1, /*hidden argument*/NULL);
+		return L_24;
+	}
+}
+// System.Boolean System.Globalization.CompareInfo::IsPrefix(System.String,System.String,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3398461467;
+extern Il2CppCodeGenString* _stringLiteral3314856594;
+extern const uint32_t CompareInfo_IsPrefix_m376759374_MetadataUsageId;
+extern "C"  bool CompareInfo_IsPrefix_m376759374 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___prefix, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_IsPrefix_m376759374_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		String_t* L_0 = ___source;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral3398461467, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		String_t* L_2 = ___prefix;
+		if (L_2)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_3 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_3, _stringLiteral3314856594, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_0022:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_4 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		SimpleCollator_t2066475675 * L_5 = __this->get_collator_3();
+		String_t* L_6 = ___source;
+		String_t* L_7 = ___prefix;
+		int32_t L_8 = ___options;
+		NullCheck(L_5);
+		bool L_9 = SimpleCollator_IsPrefix_m3203677694(L_5, L_6, L_7, L_8, /*hidden argument*/NULL);
+		return L_9;
+	}
+
+IL_003b:
+	{
+		String_t* L_10 = ___source;
+		NullCheck(L_10);
+		int32_t L_11 = String_get_Length_m2979997331(L_10, /*hidden argument*/NULL);
+		String_t* L_12 = ___prefix;
+		NullCheck(L_12);
+		int32_t L_13 = String_get_Length_m2979997331(L_12, /*hidden argument*/NULL);
+		if ((((int32_t)L_11) >= ((int32_t)L_13)))
+		{
+			goto IL_004e;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_004e:
+	{
+		String_t* L_14 = ___source;
+		String_t* L_15 = ___prefix;
+		NullCheck(L_15);
+		int32_t L_16 = String_get_Length_m2979997331(L_15, /*hidden argument*/NULL);
+		String_t* L_17 = ___prefix;
+		String_t* L_18 = ___prefix;
+		NullCheck(L_18);
+		int32_t L_19 = String_get_Length_m2979997331(L_18, /*hidden argument*/NULL);
+		int32_t L_20 = ___options;
+		int32_t L_21 = VirtFuncInvoker7< int32_t, String_t*, int32_t, int32_t, String_t*, int32_t, int32_t, int32_t >::Invoke(7 /* System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions) */, __this, L_14, 0, L_16, L_17, 0, L_19, L_20);
+		return (bool)((((int32_t)L_21) == ((int32_t)0))? 1 : 0);
+	}
+}
+// System.Boolean System.Globalization.CompareInfo::IsSuffix(System.String,System.String,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
+extern TypeInfo* CompareInfo_t4023832425_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3398461467;
+extern Il2CppCodeGenString* _stringLiteral3403544401;
+extern const uint32_t CompareInfo_IsSuffix_m1542106991_MetadataUsageId;
+extern "C"  bool CompareInfo_IsSuffix_m1542106991 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___suffix, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_IsSuffix_m1542106991_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		String_t* L_0 = ___source;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral3398461467, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		String_t* L_2 = ___suffix;
+		if (L_2)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_3 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_3, _stringLiteral3403544401, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_0022:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(CompareInfo_t4023832425_il2cpp_TypeInfo_var);
+		bool L_4 = CompareInfo_get_UseManagedCollation_m2323857615(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		SimpleCollator_t2066475675 * L_5 = __this->get_collator_3();
+		String_t* L_6 = ___source;
+		String_t* L_7 = ___suffix;
+		int32_t L_8 = ___options;
+		NullCheck(L_5);
+		bool L_9 = SimpleCollator_IsSuffix_m74058015(L_5, L_6, L_7, L_8, /*hidden argument*/NULL);
+		return L_9;
+	}
+
+IL_003b:
+	{
+		String_t* L_10 = ___source;
+		NullCheck(L_10);
+		int32_t L_11 = String_get_Length_m2979997331(L_10, /*hidden argument*/NULL);
+		String_t* L_12 = ___suffix;
+		NullCheck(L_12);
+		int32_t L_13 = String_get_Length_m2979997331(L_12, /*hidden argument*/NULL);
+		if ((((int32_t)L_11) >= ((int32_t)L_13)))
+		{
+			goto IL_004e;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_004e:
+	{
+		String_t* L_14 = ___source;
+		String_t* L_15 = ___source;
+		NullCheck(L_15);
+		int32_t L_16 = String_get_Length_m2979997331(L_15, /*hidden argument*/NULL);
+		String_t* L_17 = ___suffix;
+		NullCheck(L_17);
+		int32_t L_18 = String_get_Length_m2979997331(L_17, /*hidden argument*/NULL);
+		String_t* L_19 = ___suffix;
+		NullCheck(L_19);
+		int32_t L_20 = String_get_Length_m2979997331(L_19, /*hidden argument*/NULL);
+		String_t* L_21 = ___suffix;
+		String_t* L_22 = ___suffix;
+		NullCheck(L_22);
+		int32_t L_23 = String_get_Length_m2979997331(L_22, /*hidden argument*/NULL);
+		int32_t L_24 = ___options;
+		int32_t L_25 = VirtFuncInvoker7< int32_t, String_t*, int32_t, int32_t, String_t*, int32_t, int32_t, int32_t >::Invoke(7 /* System.Int32 System.Globalization.CompareInfo::Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions) */, __this, L_14, ((int32_t)((int32_t)L_16-(int32_t)L_18)), L_20, L_21, 0, L_23, L_24);
+		return (bool)((((int32_t)L_25) == ((int32_t)0))? 1 : 0);
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::LastIndexOf(System.String,System.String,System.Int32,System.Int32)
+extern "C"  int32_t CompareInfo_LastIndexOf_m2014556670 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___value, int32_t ___startIndex, int32_t ___count, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___source;
+		String_t* L_1 = ___value;
+		int32_t L_2 = ___startIndex;
+		int32_t L_3 = ___count;
+		int32_t L_4 = VirtFuncInvoker5< int32_t, String_t*, String_t*, int32_t, int32_t, int32_t >::Invoke(15 /* System.Int32 System.Globalization.CompareInfo::LastIndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions) */, __this, L_0, L_1, L_2, L_3, 0);
+		return L_4;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::LastIndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
+extern TypeInfo* ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var;
+extern TypeInfo* ArgumentException_t124305799_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3398461467;
+extern Il2CppCodeGenString* _stringLiteral111972721;
+extern Il2CppCodeGenString* _stringLiteral2701320592;
+extern Il2CppCodeGenString* _stringLiteral94851343;
+extern Il2CppCodeGenString* _stringLiteral3045492382;
+extern const uint32_t CompareInfo_LastIndexOf_m2573358757_MetadataUsageId;
+extern "C"  int32_t CompareInfo_LastIndexOf_m2573358757 (CompareInfo_t4023832425 * __this, String_t* ___source, String_t* ___value, int32_t ___startIndex, int32_t ___count, int32_t ___options, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_LastIndexOf_m2573358757_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		String_t* L_0 = ___source;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral3398461467, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		String_t* L_2 = ___value;
+		if (L_2)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_3 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_3, _stringLiteral111972721, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_0022:
+	{
+		int32_t L_4 = ___startIndex;
+		if ((((int32_t)L_4) >= ((int32_t)0)))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_5 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_5, _stringLiteral2701320592, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_0034:
+	{
+		int32_t L_6 = ___count;
+		if ((((int32_t)L_6) < ((int32_t)0)))
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		int32_t L_7 = ___startIndex;
+		int32_t L_8 = ___count;
+		if ((((int32_t)((int32_t)((int32_t)L_7-(int32_t)L_8))) >= ((int32_t)(-1))))
+		{
+			goto IL_0051;
+		}
+	}
+
+IL_0046:
+	{
+		ArgumentOutOfRangeException_t3479058991 * L_9 = (ArgumentOutOfRangeException_t3479058991 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3479058991_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_9, _stringLiteral94851343, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_9);
+	}
+
+IL_0051:
+	{
+		int32_t L_10 = ___options;
+		int32_t L_11 = ___options;
+		if ((((int32_t)((int32_t)((int32_t)L_10&(int32_t)((int32_t)1342177311)))) == ((int32_t)L_11)))
+		{
+			goto IL_006b;
+		}
+	}
+	{
+		ArgumentException_t124305799 * L_12 = (ArgumentException_t124305799 *)il2cpp_codegen_object_new(ArgumentException_t124305799_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m3544856547(L_12, _stringLiteral3045492382, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_12);
+	}
+
+IL_006b:
+	{
+		int32_t L_13 = ___count;
+		if (L_13)
+		{
+			goto IL_0074;
+		}
+	}
+	{
+		return (-1);
+	}
+
+IL_0074:
+	{
+		String_t* L_14 = ___value;
+		NullCheck(L_14);
+		int32_t L_15 = String_get_Length_m2979997331(L_14, /*hidden argument*/NULL);
+		V_0 = L_15;
+		int32_t L_16 = V_0;
+		if (L_16)
+		{
+			goto IL_0083;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_0083:
+	{
+		String_t* L_17 = ___source;
+		int32_t L_18 = ___startIndex;
+		int32_t L_19 = ___count;
+		String_t* L_20 = ___value;
+		int32_t L_21 = ___options;
+		int32_t L_22 = CompareInfo_internal_index_switch_m2905236232(__this, L_17, L_18, L_19, L_20, L_21, (bool)0, /*hidden argument*/NULL);
+		return L_22;
+	}
+}
+// System.String System.Globalization.CompareInfo::ToString()
+extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1541242304;
+extern const uint32_t CompareInfo_ToString_m1329064616_MetadataUsageId;
+extern "C"  String_t* CompareInfo_ToString_m1329064616 (CompareInfo_t4023832425 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (CompareInfo_ToString_m1329064616_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = __this->get_culture_1();
+		int32_t L_1 = L_0;
+		Il2CppObject * L_2 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_1);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_3 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral1541242304, L_2, /*hidden argument*/NULL);
+		return L_3;
+	}
+}
+// System.Int32 System.Globalization.CompareInfo::get_LCID()
+extern "C"  int32_t CompareInfo_get_LCID_m2545212208 (CompareInfo_t4023832425 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_culture_1();
+		return L_0;
+	}
+}
 // System.Void System.Globalization.CultureInfo::.ctor(System.Int32)
 extern "C"  void CultureInfo__ctor_m3984190515 (CultureInfo_t3603717042 * __this, int32_t ___culture, const MethodInfo* method)
 {
@@ -44466,107 +46043,6 @@ extern "C"  void NotSupportedException__ctor_m133757637 (NotSupportedException_t
 }
 // System.Void System.NotSupportedException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C"  void NotSupportedException__ctor_m1093508894 (NotSupportedException_t1374155497 * __this, SerializationInfo_t2995724695 * ___info, StreamingContext_t986364934  ___context, const MethodInfo* method)
-{
-	{
-		SerializationInfo_t2995724695 * L_0 = ___info;
-		StreamingContext_t986364934  L_1 = ___context;
-		SystemException__ctor_m2083527090(__this, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Type System.Nullable::GetUnderlyingType(System.Type)
-extern const Il2CppType* Nullable_1_t2791603879_0_0_0_var;
-extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
-extern TypeInfo* Type_t_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral1361881659;
-extern const uint32_t Nullable_GetUnderlyingType_m3559493248_MetadataUsageId;
-extern "C"  Type_t * Nullable_GetUnderlyingType_m3559493248 (Il2CppObject * __this /* static, unused */, Type_t * ___nullableType, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (Nullable_GetUnderlyingType_m3559493248_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Type_t * L_0 = ___nullableType;
-		if (L_0)
-		{
-			goto IL_0011;
-		}
-	}
-	{
-		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral1361881659, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
-	}
-
-IL_0011:
-	{
-		Type_t * L_2 = ___nullableType;
-		NullCheck(L_2);
-		bool L_3 = VirtFuncInvoker0< bool >::Invoke(89 /* System.Boolean System.Type::get_IsGenericType() */, L_2);
-		if (!L_3)
-		{
-			goto IL_003a;
-		}
-	}
-	{
-		Type_t * L_4 = ___nullableType;
-		NullCheck(L_4);
-		Type_t * L_5 = VirtFuncInvoker0< Type_t * >::Invoke(88 /* System.Type System.Type::GetGenericTypeDefinition() */, L_4);
-		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		Type_t * L_6 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(Nullable_1_t2791603879_0_0_0_var), /*hidden argument*/NULL);
-		if ((!(((Il2CppObject*)(Type_t *)L_5) == ((Il2CppObject*)(Type_t *)L_6))))
-		{
-			goto IL_003a;
-		}
-	}
-	{
-		Type_t * L_7 = ___nullableType;
-		NullCheck(L_7);
-		TypeU5BU5D_t3431720054* L_8 = VirtFuncInvoker0< TypeU5BU5D_t3431720054* >::Invoke(85 /* System.Type[] System.Type::GetGenericArguments() */, L_7);
-		NullCheck(L_8);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_8, 0);
-		int32_t L_9 = 0;
-		return ((L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_9)));
-	}
-
-IL_003a:
-	{
-		return (Type_t *)NULL;
-	}
-}
-// System.Void System.NullReferenceException::.ctor()
-extern Il2CppCodeGenString* _stringLiteral513538418;
-extern const uint32_t NullReferenceException__ctor_m622546858_MetadataUsageId;
-extern "C"  void NullReferenceException__ctor_m622546858 (NullReferenceException_t3216235232 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (NullReferenceException__ctor_m622546858_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		String_t* L_0 = Locale_GetText_m2389348044(NULL /*static, unused*/, _stringLiteral513538418, /*hidden argument*/NULL);
-		SystemException__ctor_m3697314481(__this, L_0, /*hidden argument*/NULL);
-		Exception_set_HResult_m3566571225(__this, ((int32_t)-2147467261), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void System.NullReferenceException::.ctor(System.String)
-extern "C"  void NullReferenceException__ctor_m2208732056 (NullReferenceException_t3216235232 * __this, String_t* ___message, const MethodInfo* method)
-{
-	{
-		String_t* L_0 = ___message;
-		SystemException__ctor_m3697314481(__this, L_0, /*hidden argument*/NULL);
-		Exception_set_HResult_m3566571225(__this, ((int32_t)-2147467261), /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void System.NullReferenceException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-extern "C"  void NullReferenceException__ctor_m2985950699 (NullReferenceException_t3216235232 * __this, SerializationInfo_t2995724695 * ___info, StreamingContext_t986364934  ___context, const MethodInfo* method)
 {
 	{
 		SerializationInfo_t2995724695 * L_0 = ___info;

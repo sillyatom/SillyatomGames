@@ -13,7 +13,7 @@
 // System.String
 struct String_t;
 // System.Xml.NameTable/Entry
-struct Entry_t67115091;
+struct Entry_t67115090;
 
 #include "mscorlib_System_Object837106420.h"
 
@@ -24,7 +24,7 @@ struct Entry_t67115091;
 #endif
 
 // System.Xml.NameTable/Entry
-struct  Entry_t67115091  : public Il2CppObject
+struct  Entry_t67115090  : public Il2CppObject
 {
 public:
 	// System.String System.Xml.NameTable/Entry::str
@@ -34,10 +34,10 @@ public:
 	// System.Int32 System.Xml.NameTable/Entry::len
 	int32_t ___len_2;
 	// System.Xml.NameTable/Entry System.Xml.NameTable/Entry::next
-	Entry_t67115091 * ___next_3;
+	Entry_t67115090 * ___next_3;
 
 public:
-	inline static int32_t get_offset_of_str_0() { return static_cast<int32_t>(offsetof(Entry_t67115091, ___str_0)); }
+	inline static int32_t get_offset_of_str_0() { return static_cast<int32_t>(offsetof(Entry_t67115090, ___str_0)); }
 	inline String_t* get_str_0() const { return ___str_0; }
 	inline String_t** get_address_of_str_0() { return &___str_0; }
 	inline void set_str_0(String_t* value)
@@ -46,7 +46,7 @@ public:
 		Il2CppCodeGenWriteBarrier(&___str_0, value);
 	}
 
-	inline static int32_t get_offset_of_hash_1() { return static_cast<int32_t>(offsetof(Entry_t67115091, ___hash_1)); }
+	inline static int32_t get_offset_of_hash_1() { return static_cast<int32_t>(offsetof(Entry_t67115090, ___hash_1)); }
 	inline int32_t get_hash_1() const { return ___hash_1; }
 	inline int32_t* get_address_of_hash_1() { return &___hash_1; }
 	inline void set_hash_1(int32_t value)
@@ -54,7 +54,7 @@ public:
 		___hash_1 = value;
 	}
 
-	inline static int32_t get_offset_of_len_2() { return static_cast<int32_t>(offsetof(Entry_t67115091, ___len_2)); }
+	inline static int32_t get_offset_of_len_2() { return static_cast<int32_t>(offsetof(Entry_t67115090, ___len_2)); }
 	inline int32_t get_len_2() const { return ___len_2; }
 	inline int32_t* get_address_of_len_2() { return &___len_2; }
 	inline void set_len_2(int32_t value)
@@ -62,10 +62,10 @@ public:
 		___len_2 = value;
 	}
 
-	inline static int32_t get_offset_of_next_3() { return static_cast<int32_t>(offsetof(Entry_t67115091, ___next_3)); }
-	inline Entry_t67115091 * get_next_3() const { return ___next_3; }
-	inline Entry_t67115091 ** get_address_of_next_3() { return &___next_3; }
-	inline void set_next_3(Entry_t67115091 * value)
+	inline static int32_t get_offset_of_next_3() { return static_cast<int32_t>(offsetof(Entry_t67115090, ___next_3)); }
+	inline Entry_t67115090 * get_next_3() const { return ___next_3; }
+	inline Entry_t67115090 ** get_address_of_next_3() { return &___next_3; }
+	inline void set_next_3(Entry_t67115090 * value)
 	{
 		___next_3 = value;
 		Il2CppCodeGenWriteBarrier(&___next_3, value);

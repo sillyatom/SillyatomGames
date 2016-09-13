@@ -62,5 +62,5 @@ extern "C"  void Stack_1_Push_m3350166104_gshared (Stack_1_t3407512455 * __this,
 extern "C"  int32_t Stack_1_get_Count_m3631765324_gshared (Stack_1_t3407512455 * __this, const MethodInfo* method);
 #define Stack_1_get_Count_m3631765324(__this, method) ((  int32_t (*) (Stack_1_t3407512455 *, const MethodInfo*))Stack_1_get_Count_m3631765324_gshared)(__this, method)
 // System.Collections.Generic.Stack`1/Enumerator<T> System.Collections.Generic.Stack`1<System.Object>::GetEnumerator()
-extern "C"  Enumerator_t4014815679  Stack_1_GetEnumerator_m202302354_gshared (Stack_1_t3407512455 * __this, const MethodInfo* method);
-#define Stack_1_GetEnumerator_m202302354(__this, method) ((  Enumerator_t4014815679  (*) (Stack_1_t3407512455 *, const MethodInfo*))Stack_1_GetEnumerator_m202302354_gshared)(__this, method)
+extern "C"  Enumerator_t4014815680  Stack_1_GetEnumerator_m202302354_gshared (Stack_1_t3407512455 * __this, const MethodInfo* method);
+#define Stack_1_GetEnumerator_m202302354(__this, method) ((  Enumerator_t4014815680  (*) (Stack_1_t3407512455 *, const MethodInfo*))Stack_1_GetEnumerator_m202302354_gshared)(__this, method)

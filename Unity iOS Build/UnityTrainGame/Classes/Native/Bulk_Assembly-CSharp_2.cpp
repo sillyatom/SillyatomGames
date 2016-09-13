@@ -13,14 +13,24 @@
 #include <limits>
 #include <assert.h>
 
-// Newtonsoft.Json.Serialization.JsonPropertyCollection
-struct JsonPropertyCollection_t4151699636;
-// System.Type
-struct Type_t;
-// System.String
-struct String_t;
 // Newtonsoft.Json.Serialization.JsonProperty
 struct JsonProperty_t1841444406;
+// System.String
+struct String_t;
+// Newtonsoft.Json.Serialization.IValueProvider
+struct IValueProvider_t408994802;
+// System.Type
+struct Type_t;
+// Newtonsoft.Json.JsonConverter
+struct JsonConverter_t757201947;
+// System.Object
+struct Il2CppObject;
+// System.Predicate`1<System.Object>
+struct Predicate_1_t1408070318;
+// System.Action`2<System.Object,System.Object>
+struct Action_2_t4105459918;
+// Newtonsoft.Json.Serialization.JsonPropertyCollection
+struct JsonPropertyCollection_t4151699636;
 // Newtonsoft.Json.Serialization.JsonSerializerInternalBase
 struct JsonSerializerInternalBase_t1092275265;
 // Newtonsoft.Json.JsonSerializer
@@ -29,8 +39,6 @@ struct JsonSerializer_t4019458909;
 struct BidirectionalDictionary_2_t2587161411;
 // Newtonsoft.Json.Serialization.ErrorContext
 struct ErrorContext_t957583840;
-// System.Object
-struct Il2CppObject;
 // System.Exception
 struct Exception_t1967233988;
 // Newtonsoft.Json.Serialization.JsonContract
@@ -47,8 +55,6 @@ struct JsonSerializerProxy_t2629456141;
 struct JsonFormatterConverter_t3202368087;
 // Newtonsoft.Json.Linq.JToken
 struct JToken_t2367600838;
-// Newtonsoft.Json.JsonConverter
-struct JsonConverter_t757201947;
 // Newtonsoft.Json.Serialization.JsonArrayContract
 struct JsonArrayContract_t1632130460;
 // System.Globalization.CultureInfo
@@ -295,6 +301,8 @@ struct StringWriter_t2384730283;
 struct U3CIndentU3Ec__AnonStorey2F_t2072168997;
 // Newtonsoft.Json.Utilities.StringUtils/<NumberLines>c__AnonStorey30
 struct U3CNumberLinesU3Ec__AnonStorey30_t1159182720;
+// OutOfTokensDialog
+struct OutOfTokensDialog_t4269442503;
 // Player
 struct Player_t2393081601;
 // CardSelectionHandler
@@ -417,20 +425,32 @@ struct Vector4Converter_t1276662127;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636MethodDeclarations.h"
-#include "mscorlib_System_Type2779229935.h"
-#include "mscorlib_System_Void2779279689.h"
-#include "mscorlib_System_Collections_ObjectModel_KeyedColle3899923451MethodDeclarations.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Validat272309903MethodDeclarations.h"
-#include "mscorlib_System_String968488902.h"
-#include "mscorlib_System_Object837106420.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1841444406.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1841444406MethodDeclarations.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Object837106420MethodDeclarations.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Nullable_1_gen1438485399.h"
+#include "mscorlib_System_Type2779229935.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverter757201947.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_Object837106420.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Required3381566050.h"
+#include "mscorlib_System_Nullable_1_gen3097043249.h"
+#include "mscorlib_System_Nullable_1_gen1779445574.h"
+#include "mscorlib_System_Nullable_1_gen1928302860.h"
+#include "mscorlib_System_Nullable_1_gen319467179.h"
+#include "mscorlib_System_Nullable_1_gen975689370.h"
+#include "mscorlib_System_Nullable_1_gen964387137.h"
+#include "mscorlib_System_Predicate_1_gen1408070318.h"
+#include "System_Core_System_Action_2_gen4105459918.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js4151699636MethodDeclarations.h"
+#include "mscorlib_System_Collections_ObjectModel_KeyedColle3899923451MethodDeclarations.h"
+#include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Validat272309903MethodDeclarations.h"
 #include "mscorlib_System_Globalization_CultureInfo3603717042MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_String1497036279MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializationE90215434MethodDeclarations.h"
-#include "mscorlib_System_Boolean211005341.h"
 #include "mscorlib_System_Globalization_CultureInfo3603717042.h"
 #include "mscorlib_ArrayTypes.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializationE90215434.h"
@@ -441,7 +461,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1092275265MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonSerializer4019458909.h"
-#include "mscorlib_System_Object837106420MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Bidire2587161411.h"
 #include "mscorlib_System_Collections_Generic_EqualityCompare402879552MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Json56069681MethodDeclarations.h"
@@ -472,7 +491,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3651158994.h"
 #include "mscorlib_System_ArgumentNullException3214793280MethodDeclarations.h"
 #include "mscorlib_System_ArgumentNullException3214793280.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverter757201947.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2629456141.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2629456141MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3202368087.h"
@@ -497,7 +515,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Jso128316969MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1219024426.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js3363619915.h"
-#include "mscorlib_System_Nullable_1_gen964387137.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_TypeNameHandling2373316525.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio3161036435.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio3161036435MethodDeclarations.h"
@@ -509,12 +526,8 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_Miscel2000562298MethodDeclarations.h"
 #include "System_Core_System_Action_2_gen4105459918MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ObjectCreationHa2384618758.h"
-#include "mscorlib_System_Nullable_1_gen975689370.h"
-#include "mscorlib_System_Nullable_1_gen1779445574.h"
-#include "mscorlib_System_Nullable_1_gen1928302860.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_NullValueHandlin3188374962.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_DefaultValueHand3337232248.h"
-#include "System_Core_System_Action_2_gen4105459918.h"
 #include "System_Core_System_Func_1_gen1979887667MethodDeclarations.h"
 #include "System_Core_System_Func_1_gen1979887667.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ConstructorHandl2670794114.h"
@@ -575,7 +588,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728.h"
 #include "System_Core_System_Func_2_gen1588144240.h"
 #include "System_Core_System_Func_2_gen2399039562.h"
-#include "AssemblyU2DCSharp_Newtonsoft_Json_Required3381566050.h"
 #include "mscorlib_System_Reflection_ParameterInfo2610273829MethodDeclarations.h"
 #include "mscorlib_System_Reflection_MethodInfo3461221277.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2652339728MethodDeclarations.h"
@@ -585,9 +597,7 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConverterCol3995341017.h"
 #include "Assembly-CSharp_ArrayTypes.h"
 #include "mscorlib_System_Nullable_1_gen3097043249MethodDeclarations.h"
-#include "mscorlib_System_Nullable_1_gen3097043249.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_PreserveReferenc1434533308.h"
-#include "mscorlib_System_Nullable_1_gen319467179.h"
 #include "mscorlib_System_Nullable_1_gen319467179MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_ReferenceLoopHan1728396567.h"
 #include "UnityEngine_UnityEngine_Vector23525329788.h"
@@ -609,7 +619,6 @@ struct Vector4Converter_t1276662127;
 #include "System_Core_System_Func_2_gen917545008MethodDeclarations.h"
 #include "System_Core_System_Func_2_gen917545008.h"
 #include "mscorlib_System_Predicate_1_gen1408070318MethodDeclarations.h"
-#include "mscorlib_System_Predicate_1_gen1408070318.h"
 #include "mscorlib_System_EventHandler_1_gen1868533683.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js2937851556MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Serialization_Js1197019735.h"
@@ -734,7 +743,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_JavaScr159428091MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen1438485399MethodDeclarations.h"
 #include "mscorlib_System_IO_StringWriter2384730283.h"
-#include "mscorlib_System_Nullable_1_gen1438485399.h"
 #include "mscorlib_System_IO_StringWriter2384730283MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_LateBo1497004953.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_Utilities_MathUt4093282656.h"
@@ -803,6 +811,13 @@ struct Vector4Converter_t1276662127;
 #include "mscorlib_System_ObjectDisposedException973246880.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_WriteState761362101.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_WriteState761362101MethodDeclarations.h"
+#include "AssemblyU2DCSharp_OutOfTokensDialog4269442503.h"
+#include "AssemblyU2DCSharp_OutOfTokensDialog4269442503MethodDeclarations.h"
+#include "AssemblyU2DCSharp_BaseDialog735619993MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Component2126946602MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Transform284553113MethodDeclarations.h"
+#include "AssemblyU2DCSharp_BaseDialog735619993.h"
+#include "UnityEngine_UnityEngine_Transform284553113.h"
 #include "AssemblyU2DCSharp_Player2393081601.h"
 #include "AssemblyU2DCSharp_Player2393081601MethodDeclarations.h"
 #include "AssemblyU2DCSharp_ExtMonoBehaviour2624599193MethodDeclarations.h"
@@ -825,7 +840,6 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_SingletonManager825254210MethodDeclarations.h"
 #include "AssemblyU2DCSharp_GameObjectRef4121474274.h"
 #include "AssemblyU2DCSharp_Networking1515242260.h"
-#include "UnityEngine_UnityEngine_Component2126946602MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_RectTransform3317474837MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Rect1525428817MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Texture2D2509538522MethodDeclarations.h"
@@ -852,9 +866,7 @@ struct Vector4Converter_t1276662127;
 #include "UnityEngine_UI_UnityEngine_UI_Text3286458198.h"
 #include "UnityEngine_UI_UnityEngine_UI_Text3286458198MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Quaternion1891715979MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Transform284553113MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Vector33525329789MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Transform284553113.h"
 #include "UnityEngine_UnityEngine_Quaternion1891715979.h"
 #include "UnityEngine_UnityEngine_Input1593691127MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Touch1603883884MethodDeclarations.h"
@@ -865,10 +877,13 @@ struct Vector4Converter_t1276662127;
 #include "UnityEngine_UnityEngine_Camera3533968274.h"
 #include "AssemblyU2DCSharp_PopupManager2711269761.h"
 #include "AssemblyU2DCSharp_PopupManager2711269761MethodDeclarations.h"
+#include "AssemblyU2DCSharp_BridgeDebugger2949066474MethodDeclarations.h"
+#include "System_Core_System_Action437523947MethodDeclarations.h"
+#include "System_Core_System_Action437523947.h"
+#include "AssemblyU2DCSharp_AdManager3461832170MethodDeclarations.h"
+#include "AssemblyU2DCSharp_AdManager3461832170.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen514686775MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen514686775.h"
-#include "AssemblyU2DCSharp_BaseDialog735619993.h"
-#include "AssemblyU2DCSharp_BaseDialog735619993MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Coroutine2246592261.h"
 #include "AssemblyU2DCSharp_PopupManager_U3CRemovePopupAfter2929939309MethodDeclarations.h"
@@ -907,7 +922,6 @@ struct Vector4Converter_t1276662127;
 #include "UnityEngine_UnityEngine_MeshCollider1080724846.h"
 #include "AssemblyU2DCSharp_RoundHandler2172802556.h"
 #include "AssemblyU2DCSharp_RoundHandler2172802556MethodDeclarations.h"
-#include "System_Core_System_Action437523947.h"
 #include "AssemblyU2DCSharp_InGameInfoText36852466MethodDeclarations.h"
 #include "AssemblyU2DCSharp_EventManager1907836883MethodDeclarations.h"
 #include "AssemblyU2DCSharp_EventManager_EventDelegate_1_gen1150496989MethodDeclarations.h"
@@ -923,14 +937,12 @@ struct Vector4Converter_t1276662127;
 #include "AssemblyU2DCSharp_NetworkResponse1683455087MethodDeclarations.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConvert748332590MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundVO3050121383MethodDeclarations.h"
-#include "AssemblyU2DCSharp_BridgeDebugger2949066474MethodDeclarations.h"
 #include "AssemblyU2DCSharp_GameSelectionScreen839734950MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundVO3050121383.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395.h"
 #include "AssemblyU2DCSharp_NetworkResponse1683455087.h"
 #include "AssemblyU2DCSharp_Newtonsoft_Json_JsonConvert748332590.h"
 #include "AssemblyU2DCSharp_InGameEvent511087107MethodDeclarations.h"
-#include "System_Core_System_Action437523947MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundHandler_U3CWaitAndStartRoun3781753501MethodDeclarations.h"
 #include "AssemblyU2DCSharp_RoundHandler_U3CWaitAndStartRoun3781753501.h"
 #include "AssemblyU2DCSharp_NetworkPlayer4053218959MethodDeclarations.h"
@@ -1041,15 +1053,15 @@ extern "C"  KeyValuePair_2_t3312956448  StringUtils_ForgivingCaseSensitiveFind_T
 // !!0 Newtonsoft.Json.Utilities.StringUtils::ForgivingCaseSensitiveFind<System.Collections.Generic.KeyValuePair`2<System.Reflection.ParameterInfo,System.Object>>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,System.String>,System.String)
 #define StringUtils_ForgivingCaseSensitiveFind_TisKeyValuePair_2_t133927179_m2715232981(__this /* static, unused */, p0, p1, p2, method) ((  KeyValuePair_2_t133927179  (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t1697540151 *, String_t*, const MethodInfo*))StringUtils_ForgivingCaseSensitiveFind_TisKeyValuePair_2_t3312956448_m2522409344_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // !!0[] System.Linq.Enumerable::ToArray<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
-extern "C"  ObjectU5BU5D_t11523773* Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
-#define Enumerable_ToArray_TisIl2CppObject_m1195909660(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t11523773* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared)(__this /* static, unused */, p0, method)
+extern "C"  ObjectU5BU5D_t11523773* Enumerable_ToArray_TisIl2CppObject_m914007555_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
+#define Enumerable_ToArray_TisIl2CppObject_m914007555(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t11523773* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m914007555_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.Dictionary`2<!!1,!!2> System.Linq.Enumerable::ToDictionary<System.Object,System.Object,Newtonsoft.Json.Serialization.JsonSerializerInternalReader/PropertyPresence>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>,System.Func`2<!!0,!!2>)
 extern "C"  Dictionary_2_t1344691162 * Enumerable_ToDictionary_TisIl2CppObject_TisIl2CppObject_TisPropertyPresence_t2652339728_m1488378648_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t2135783352 * p1, Func_2_t3951016660 * p2, const MethodInfo* method);
 #define Enumerable_ToDictionary_TisIl2CppObject_TisIl2CppObject_TisPropertyPresence_t2652339728_m1488378648(__this /* static, unused */, p0, p1, p2, method) ((  Dictionary_2_t1344691162 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2135783352 *, Func_2_t3951016660 *, const MethodInfo*))Enumerable_ToDictionary_TisIl2CppObject_TisIl2CppObject_TisPropertyPresence_t2652339728_m1488378648_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // System.Collections.Generic.Dictionary`2<!!1,!!2> System.Linq.Enumerable::ToDictionary<Newtonsoft.Json.Serialization.JsonProperty,Newtonsoft.Json.Serialization.JsonProperty,Newtonsoft.Json.Serialization.JsonSerializerInternalReader/PropertyPresence>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>,System.Func`2<!!0,!!2>)
 #define Enumerable_ToDictionary_TisJsonProperty_t1841444406_TisJsonProperty_t1841444406_TisPropertyPresence_t2652339728_m1939500148(__this /* static, unused */, p0, p1, p2, method) ((  Dictionary_2_t4087681360 * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t1588144240 *, Func_2_t2399039562 *, const MethodInfo*))Enumerable_ToDictionary_TisIl2CppObject_TisIl2CppObject_TisPropertyPresence_t2652339728_m1488378648_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // !!0[] System.Linq.Enumerable::ToArray<Newtonsoft.Json.JsonConverter>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToArray_TisJsonConverter_t757201947_m2932791905(__this /* static, unused */, p0, method) ((  JsonConverterU5BU5D_t1140441370* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToArray_TisJsonConverter_t757201947_m2932791905(__this /* static, unused */, p0, method) ((  JsonConverterU5BU5D_t1140441370* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m914007555_gshared)(__this /* static, unused */, p0, method)
 // !!0 Newtonsoft.Json.Serialization.JsonTypeReflector::GetAttribute<System.Object>(System.Reflection.ICustomAttributeProvider)
 extern "C"  Il2CppObject * JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method);
 #define JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368(__this /* static, unused */, p0, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, Il2CppObject *, const MethodInfo*))JsonTypeReflector_GetAttribute_TisIl2CppObject_m918034368_gshared)(__this /* static, unused */, p0, method)
@@ -1089,10 +1101,10 @@ extern "C"  Il2CppObject* Enumerable_GroupBy_TisIl2CppObject_TisIl2CppObject_m16
 // System.Collections.Generic.IEnumerable`1<System.Linq.IGrouping`2<!!1,!!0>> System.Linq.Enumerable::GroupBy<System.Reflection.MemberInfo,System.String>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
 #define Enumerable_GroupBy_TisMemberInfo_t_TisString_t_m1575144487(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t1774469344 *, const MethodInfo*))Enumerable_GroupBy_TisIl2CppObject_TisIl2CppObject_m1610065133_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-extern "C"  Il2CppObject* Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t2135783352 * p1, const MethodInfo* method);
-#define Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2135783352 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared)(__this /* static, unused */, p0, p1, method)
+extern "C"  Il2CppObject* Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, Func_2_t2135783352 * p1, const MethodInfo* method);
+#define Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2135783352 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared)(__this /* static, unused */, p0, p1, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Linq.IGrouping`2<System.String,System.Reflection.MemberInfo>,<>__AnonType0`2<System.Int32,System.Collections.Generic.IEnumerable`1<System.Reflection.MemberInfo>>>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-#define Enumerable_Select_TisIGrouping_2_t2575698408_TisU3CU3E__AnonType0_2_t675844848_m686580569(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2843755120 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared)(__this /* static, unused */, p0, p1, method)
+#define Enumerable_Select_TisIGrouping_2_t2575698408_TisU3CU3E__AnonType0_2_t675844848_m686580569(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t2843755120 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared)(__this /* static, unused */, p0, p1, method)
 // !!0 System.Linq.Enumerable::First<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
 extern "C"  Il2CppObject * Enumerable_First_TisIl2CppObject_m4153369996_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject* p0, const MethodInfo* method);
 #define Enumerable_First_TisIl2CppObject_m4153369996(__this /* static, unused */, p0, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_First_TisIl2CppObject_m4153369996_gshared)(__this /* static, unused */, p0, method)
@@ -1106,9 +1118,9 @@ extern "C"  void ValidationUtils_ArgumentNotNullOrEmpty_TisIl2CppObject_m6851720
 // System.Void Newtonsoft.Json.Utilities.ValidationUtils::ArgumentNotNullOrEmpty<System.Type>(System.Collections.Generic.ICollection`1<!!0>,System.String)
 #define ValidationUtils_ArgumentNotNullOrEmpty_TisType_t_m1681998255(__this /* static, unused */, p0, p1, method) ((  void (*) (Il2CppObject * /* static, unused */, Il2CppObject*, String_t*, const MethodInfo*))ValidationUtils_ArgumentNotNullOrEmpty_TisIl2CppObject_m685172020_gshared)(__this /* static, unused */, p0, p1, method)
 // !!0[] System.Linq.Enumerable::ToArray<System.Type>(System.Collections.Generic.IEnumerable`1<!!0>)
-#define Enumerable_ToArray_TisType_t_m1350031447(__this /* static, unused */, p0, method) ((  TypeU5BU5D_t3431720054* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m1195909660_gshared)(__this /* static, unused */, p0, method)
+#define Enumerable_ToArray_TisType_t_m1350031447(__this /* static, unused */, p0, method) ((  TypeU5BU5D_t3431720054* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_ToArray_TisIl2CppObject_m914007555_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Reflection.ParameterInfo,System.Type>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-#define Enumerable_Select_TisParameterInfo_t2610273829_TisType_t_m3597248382(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t898877598 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m1162332302_gshared)(__this /* static, unused */, p0, p1, method)
+#define Enumerable_Select_TisParameterInfo_t2610273829_TisType_t_m3597248382(__this /* static, unused */, p0, p1, method) ((  Il2CppObject* (*) (Il2CppObject * /* static, unused */, Il2CppObject*, Func_2_t898877598 *, const MethodInfo*))Enumerable_Select_TisIl2CppObject_TisIl2CppObject_m3465146869_gshared)(__this /* static, unused */, p0, p1, method)
 // !!0 System.Linq.Enumerable::SingleOrDefault<System.Reflection.MemberInfo>(System.Collections.Generic.IEnumerable`1<!!0>)
 #define Enumerable_SingleOrDefault_TisMemberInfo_t_m1718340592(__this /* static, unused */, p0, method) ((  MemberInfo_t * (*) (Il2CppObject * /* static, unused */, Il2CppObject*, const MethodInfo*))Enumerable_SingleOrDefault_TisIl2CppObject_m3274741330_gshared)(__this /* static, unused */, p0, method)
 // System.Collections.Generic.IEnumerable`1<!!0> System.Linq.Enumerable::Cast<System.Reflection.FieldInfo>(System.Collections.IEnumerable)
@@ -1213,6 +1225,379 @@ extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m3133387403_gshare
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::.ctor()
+extern "C"  void JsonProperty__ctor_m838248715 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.Serialization.JsonProperty::get_PropertyName()
+extern "C"  String_t* JsonProperty_get_PropertyName_m3204019141 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CPropertyNameU3Ek__BackingField_0();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_PropertyName(System.String)
+extern "C"  void JsonProperty_set_PropertyName_m2432916588 (JsonProperty_t1841444406 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CPropertyNameU3Ek__BackingField_0(L_0);
+		return;
+	}
+}
+// System.Nullable`1<System.Int32> Newtonsoft.Json.Serialization.JsonProperty::get_Order()
+extern "C"  Nullable_1_t1438485399  JsonProperty_get_Order_m405679167 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t1438485399  L_0 = __this->get_U3COrderU3Ek__BackingField_1();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Order(System.Nullable`1<System.Int32>)
+extern "C"  void JsonProperty_set_Order_m3005805556 (JsonProperty_t1841444406 * __this, Nullable_1_t1438485399  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t1438485399  L_0 = ___value;
+		__this->set_U3COrderU3Ek__BackingField_1(L_0);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.Serialization.JsonProperty::get_UnderlyingName()
+extern "C"  String_t* JsonProperty_get_UnderlyingName_m1594652237 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_U3CUnderlyingNameU3Ek__BackingField_2();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_UnderlyingName(System.String)
+extern "C"  void JsonProperty_set_UnderlyingName_m2731585316 (JsonProperty_t1841444406 * __this, String_t* ___value, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value;
+		__this->set_U3CUnderlyingNameU3Ek__BackingField_2(L_0);
+		return;
+	}
+}
+// Newtonsoft.Json.Serialization.IValueProvider Newtonsoft.Json.Serialization.JsonProperty::get_ValueProvider()
+extern "C"  Il2CppObject * JsonProperty_get_ValueProvider_m184459761 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = __this->get_U3CValueProviderU3Ek__BackingField_3();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ValueProvider(Newtonsoft.Json.Serialization.IValueProvider)
+extern "C"  void JsonProperty_set_ValueProvider_m669931970 (JsonProperty_t1841444406 * __this, Il2CppObject * ___value, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = ___value;
+		__this->set_U3CValueProviderU3Ek__BackingField_3(L_0);
+		return;
+	}
+}
+// System.Type Newtonsoft.Json.Serialization.JsonProperty::get_PropertyType()
+extern "C"  Type_t * JsonProperty_get_PropertyType_m3384045419 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Type_t * L_0 = __this->get_U3CPropertyTypeU3Ek__BackingField_4();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_PropertyType(System.Type)
+extern "C"  void JsonProperty_set_PropertyType_m2543013652 (JsonProperty_t1841444406 * __this, Type_t * ___value, const MethodInfo* method)
+{
+	{
+		Type_t * L_0 = ___value;
+		__this->set_U3CPropertyTypeU3Ek__BackingField_4(L_0);
+		return;
+	}
+}
+// Newtonsoft.Json.JsonConverter Newtonsoft.Json.Serialization.JsonProperty::get_Converter()
+extern "C"  JsonConverter_t757201947 * JsonProperty_get_Converter_m4115912016 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		JsonConverter_t757201947 * L_0 = __this->get_U3CConverterU3Ek__BackingField_5();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Converter(Newtonsoft.Json.JsonConverter)
+extern "C"  void JsonProperty_set_Converter_m4168865283 (JsonProperty_t1841444406 * __this, JsonConverter_t757201947 * ___value, const MethodInfo* method)
+{
+	{
+		JsonConverter_t757201947 * L_0 = ___value;
+		__this->set_U3CConverterU3Ek__BackingField_5(L_0);
+		return;
+	}
+}
+// Newtonsoft.Json.JsonConverter Newtonsoft.Json.Serialization.JsonProperty::get_MemberConverter()
+extern "C"  JsonConverter_t757201947 * JsonProperty_get_MemberConverter_m1774595862 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		JsonConverter_t757201947 * L_0 = __this->get_U3CMemberConverterU3Ek__BackingField_6();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_MemberConverter(Newtonsoft.Json.JsonConverter)
+extern "C"  void JsonProperty_set_MemberConverter_m1519107837 (JsonProperty_t1841444406 * __this, JsonConverter_t757201947 * ___value, const MethodInfo* method)
+{
+	{
+		JsonConverter_t757201947 * L_0 = ___value;
+		__this->set_U3CMemberConverterU3Ek__BackingField_6(L_0);
+		return;
+	}
+}
+// System.Boolean Newtonsoft.Json.Serialization.JsonProperty::get_Ignored()
+extern "C"  bool JsonProperty_get_Ignored_m3044358814 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_U3CIgnoredU3Ek__BackingField_7();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Ignored(System.Boolean)
+extern "C"  void JsonProperty_set_Ignored_m780750293 (JsonProperty_t1841444406 * __this, bool ___value, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value;
+		__this->set_U3CIgnoredU3Ek__BackingField_7(L_0);
+		return;
+	}
+}
+// System.Boolean Newtonsoft.Json.Serialization.JsonProperty::get_Readable()
+extern "C"  bool JsonProperty_get_Readable_m3183624454 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_U3CReadableU3Ek__BackingField_8();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Readable(System.Boolean)
+extern "C"  void JsonProperty_set_Readable_m1472311741 (JsonProperty_t1841444406 * __this, bool ___value, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value;
+		__this->set_U3CReadableU3Ek__BackingField_8(L_0);
+		return;
+	}
+}
+// System.Boolean Newtonsoft.Json.Serialization.JsonProperty::get_Writable()
+extern "C"  bool JsonProperty_get_Writable_m2551723190 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_U3CWritableU3Ek__BackingField_9();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Writable(System.Boolean)
+extern "C"  void JsonProperty_set_Writable_m101413229 (JsonProperty_t1841444406 * __this, bool ___value, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value;
+		__this->set_U3CWritableU3Ek__BackingField_9(L_0);
+		return;
+	}
+}
+// System.Object Newtonsoft.Json.Serialization.JsonProperty::get_DefaultValue()
+extern "C"  Il2CppObject * JsonProperty_get_DefaultValue_m2243659911 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = __this->get_U3CDefaultValueU3Ek__BackingField_10();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_DefaultValue(System.Object)
+extern "C"  void JsonProperty_set_DefaultValue_m2024814414 (JsonProperty_t1841444406 * __this, Il2CppObject * ___value, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = ___value;
+		__this->set_U3CDefaultValueU3Ek__BackingField_10(L_0);
+		return;
+	}
+}
+// Newtonsoft.Json.Required Newtonsoft.Json.Serialization.JsonProperty::get_Required()
+extern "C"  int32_t JsonProperty_get_Required_m2136426250 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_U3CRequiredU3Ek__BackingField_11();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_Required(Newtonsoft.Json.Required)
+extern "C"  void JsonProperty_set_Required_m3485786369 (JsonProperty_t1841444406 * __this, int32_t ___value, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___value;
+		__this->set_U3CRequiredU3Ek__BackingField_11(L_0);
+		return;
+	}
+}
+// System.Nullable`1<System.Boolean> Newtonsoft.Json.Serialization.JsonProperty::get_IsReference()
+extern "C"  Nullable_1_t3097043249  JsonProperty_get_IsReference_m2980617816 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t3097043249  L_0 = __this->get_U3CIsReferenceU3Ek__BackingField_12();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_IsReference(System.Nullable`1<System.Boolean>)
+extern "C"  void JsonProperty_set_IsReference_m2855740859 (JsonProperty_t1841444406 * __this, Nullable_1_t3097043249  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t3097043249  L_0 = ___value;
+		__this->set_U3CIsReferenceU3Ek__BackingField_12(L_0);
+		return;
+	}
+}
+// System.Nullable`1<Newtonsoft.Json.NullValueHandling> Newtonsoft.Json.Serialization.JsonProperty::get_NullValueHandling()
+extern "C"  Nullable_1_t1779445574  JsonProperty_get_NullValueHandling_m1339160097 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t1779445574  L_0 = __this->get_U3CNullValueHandlingU3Ek__BackingField_13();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_NullValueHandling(System.Nullable`1<Newtonsoft.Json.NullValueHandling>)
+extern "C"  void JsonProperty_set_NullValueHandling_m3246714444 (JsonProperty_t1841444406 * __this, Nullable_1_t1779445574  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t1779445574  L_0 = ___value;
+		__this->set_U3CNullValueHandlingU3Ek__BackingField_13(L_0);
+		return;
+	}
+}
+// System.Nullable`1<Newtonsoft.Json.DefaultValueHandling> Newtonsoft.Json.Serialization.JsonProperty::get_DefaultValueHandling()
+extern "C"  Nullable_1_t1928302860  JsonProperty_get_DefaultValueHandling_m2477507009 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t1928302860  L_0 = __this->get_U3CDefaultValueHandlingU3Ek__BackingField_14();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_DefaultValueHandling(System.Nullable`1<Newtonsoft.Json.DefaultValueHandling>)
+extern "C"  void JsonProperty_set_DefaultValueHandling_m723588126 (JsonProperty_t1841444406 * __this, Nullable_1_t1928302860  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t1928302860  L_0 = ___value;
+		__this->set_U3CDefaultValueHandlingU3Ek__BackingField_14(L_0);
+		return;
+	}
+}
+// System.Nullable`1<Newtonsoft.Json.ReferenceLoopHandling> Newtonsoft.Json.Serialization.JsonProperty::get_ReferenceLoopHandling()
+extern "C"  Nullable_1_t319467179  JsonProperty_get_ReferenceLoopHandling_m3595109505 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t319467179  L_0 = __this->get_U3CReferenceLoopHandlingU3Ek__BackingField_15();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ReferenceLoopHandling(System.Nullable`1<Newtonsoft.Json.ReferenceLoopHandling>)
+extern "C"  void JsonProperty_set_ReferenceLoopHandling_m449726742 (JsonProperty_t1841444406 * __this, Nullable_1_t319467179  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t319467179  L_0 = ___value;
+		__this->set_U3CReferenceLoopHandlingU3Ek__BackingField_15(L_0);
+		return;
+	}
+}
+// System.Nullable`1<Newtonsoft.Json.ObjectCreationHandling> Newtonsoft.Json.Serialization.JsonProperty::get_ObjectCreationHandling()
+extern "C"  Nullable_1_t975689370  JsonProperty_get_ObjectCreationHandling_m3387899485 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t975689370  L_0 = __this->get_U3CObjectCreationHandlingU3Ek__BackingField_16();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ObjectCreationHandling(System.Nullable`1<Newtonsoft.Json.ObjectCreationHandling>)
+extern "C"  void JsonProperty_set_ObjectCreationHandling_m3299715486 (JsonProperty_t1841444406 * __this, Nullable_1_t975689370  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t975689370  L_0 = ___value;
+		__this->set_U3CObjectCreationHandlingU3Ek__BackingField_16(L_0);
+		return;
+	}
+}
+// System.Nullable`1<Newtonsoft.Json.TypeNameHandling> Newtonsoft.Json.Serialization.JsonProperty::get_TypeNameHandling()
+extern "C"  Nullable_1_t964387137  JsonProperty_get_TypeNameHandling_m2920599915 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Nullable_1_t964387137  L_0 = __this->get_U3CTypeNameHandlingU3Ek__BackingField_17();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_TypeNameHandling(System.Nullable`1<Newtonsoft.Json.TypeNameHandling>)
+extern "C"  void JsonProperty_set_TypeNameHandling_m1061207678 (JsonProperty_t1841444406 * __this, Nullable_1_t964387137  ___value, const MethodInfo* method)
+{
+	{
+		Nullable_1_t964387137  L_0 = ___value;
+		__this->set_U3CTypeNameHandlingU3Ek__BackingField_17(L_0);
+		return;
+	}
+}
+// System.Predicate`1<System.Object> Newtonsoft.Json.Serialization.JsonProperty::get_ShouldSerialize()
+extern "C"  Predicate_1_t1408070318 * JsonProperty_get_ShouldSerialize_m765152429 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Predicate_1_t1408070318 * L_0 = __this->get_U3CShouldSerializeU3Ek__BackingField_18();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_ShouldSerialize(System.Predicate`1<System.Object>)
+extern "C"  void JsonProperty_set_ShouldSerialize_m2201931334 (JsonProperty_t1841444406 * __this, Predicate_1_t1408070318 * ___value, const MethodInfo* method)
+{
+	{
+		Predicate_1_t1408070318 * L_0 = ___value;
+		__this->set_U3CShouldSerializeU3Ek__BackingField_18(L_0);
+		return;
+	}
+}
+// System.Predicate`1<System.Object> Newtonsoft.Json.Serialization.JsonProperty::get_GetIsSpecified()
+extern "C"  Predicate_1_t1408070318 * JsonProperty_get_GetIsSpecified_m4141211410 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Predicate_1_t1408070318 * L_0 = __this->get_U3CGetIsSpecifiedU3Ek__BackingField_19();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_GetIsSpecified(System.Predicate`1<System.Object>)
+extern "C"  void JsonProperty_set_GetIsSpecified_m1272462105 (JsonProperty_t1841444406 * __this, Predicate_1_t1408070318 * ___value, const MethodInfo* method)
+{
+	{
+		Predicate_1_t1408070318 * L_0 = ___value;
+		__this->set_U3CGetIsSpecifiedU3Ek__BackingField_19(L_0);
+		return;
+	}
+}
+// System.Action`2<System.Object,System.Object> Newtonsoft.Json.Serialization.JsonProperty::get_SetIsSpecified()
+extern "C"  Action_2_t4105459918 * JsonProperty_get_SetIsSpecified_m1732768832 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		Action_2_t4105459918 * L_0 = __this->get_U3CSetIsSpecifiedU3Ek__BackingField_20();
+		return L_0;
+	}
+}
+// System.Void Newtonsoft.Json.Serialization.JsonProperty::set_SetIsSpecified(System.Action`2<System.Object,System.Object>)
+extern "C"  void JsonProperty_set_SetIsSpecified_m840109303 (JsonProperty_t1841444406 * __this, Action_2_t4105459918 * ___value, const MethodInfo* method)
+{
+	{
+		Action_2_t4105459918 * L_0 = ___value;
+		__this->set_U3CSetIsSpecifiedU3Ek__BackingField_20(L_0);
+		return;
+	}
+}
+// System.String Newtonsoft.Json.Serialization.JsonProperty::ToString()
+extern "C"  String_t* JsonProperty_ToString_m2046350376 (JsonProperty_t1841444406 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = JsonProperty_get_PropertyName_m3204019141(__this, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
 // System.Void Newtonsoft.Json.Serialization.JsonPropertyCollection::.ctor(System.Type)
 extern const MethodInfo* KeyedCollection_2__ctor_m2704525171_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3575610;
@@ -5231,7 +5616,7 @@ extern const MethodInfo* Stack_1__ctor_m478027230_MethodInfo_var;
 extern const MethodInfo* Stack_1_Push_m4112811057_MethodInfo_var;
 extern const MethodInfo* Stack_1_Pop_m3681897183_MethodInfo_var;
 extern const MethodInfo* Stack_1_Peek_m2460164463_MethodInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral495288715;
 extern Il2CppCodeGenString* _stringLiteral885864395;
 extern const uint32_t JsonSerializerInternalReader_PopulateMultidimensionalArray_m1969988895_MetadataUsageId;
@@ -5501,7 +5886,7 @@ IL_0144:
 IL_0152:
 	{
 		List_1_t1634065389 * L_57 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_57, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_57, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_7 = L_57;
 		Il2CppObject * L_58 = V_2;
 		Il2CppObject * L_59 = V_7;
@@ -6095,7 +6480,7 @@ extern const MethodInfo* KeyValuePair_2_get_Key_m3520743136_MethodInfo_var;
 extern const MethodInfo* StringUtils_ForgivingCaseSensitiveFind_TisKeyValuePair_2_t133927179_m2715232981_MethodInfo_var;
 extern const MethodInfo* KeyValuePair_2_get_Key_m384620249_MethodInfo_var;
 extern const MethodInfo* KeyValuePair_2_get_Value_m3196787601_MethodInfo_var;
-extern const MethodInfo* Enumerable_ToArray_TisIl2CppObject_m1195909660_MethodInfo_var;
+extern const MethodInfo* Enumerable_ToArray_TisIl2CppObject_m914007555_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral2348098504;
 extern const uint32_t JsonSerializerInternalReader_CreateObjectFromNonDefaultConstructor_m1226450854_MetadataUsageId;
 extern "C"  Il2CppObject * JsonSerializerInternalReader_CreateObjectFromNonDefaultConstructor_m1226450854 (JsonSerializerInternalReader_t1638952051 * __this, JsonReader_t1817561742 * ___reader, JsonObjectContract_t3651158994 * ___contract, ConstructorInfo_t3542137334 * ___constructorInfo, String_t* ___id, const MethodInfo* method)
@@ -6346,7 +6731,7 @@ IL_00f9:
 		Il2CppObject* L_43 = V_2;
 		NullCheck(L_43);
 		Il2CppObject* L_44 = InterfaceFuncInvoker0< Il2CppObject* >::Invoke(7 /* System.Collections.Generic.ICollection`1<!1> System.Collections.Generic.IDictionary`2<System.Reflection.ParameterInfo,System.Object>::get_Values() */, IDictionary_2_t1821061668_il2cpp_TypeInfo_var, L_43);
-		ObjectU5BU5D_t11523773* L_45 = Enumerable_ToArray_TisIl2CppObject_m1195909660(NULL /*static, unused*/, L_44, /*hidden argument*/Enumerable_ToArray_TisIl2CppObject_m1195909660_MethodInfo_var);
+		ObjectU5BU5D_t11523773* L_45 = Enumerable_ToArray_TisIl2CppObject_m914007555(NULL /*static, unused*/, L_44, /*hidden argument*/Enumerable_ToArray_TisIl2CppObject_m914007555_MethodInfo_var);
 		NullCheck(L_42);
 		Il2CppObject * L_46 = ConstructorInfo_Invoke_m759007899(L_42, L_45, /*hidden argument*/NULL);
 		V_7 = L_46;
@@ -8102,7 +8487,7 @@ extern "C"  void JsonSerializerInternalWriter__ctor_m1848814959 (JsonSerializerI
 }
 // System.Collections.Generic.List`1<System.Object> Newtonsoft.Json.Serialization.JsonSerializerInternalWriter::get_SerializeStack()
 extern TypeInfo* List_1_t1634065389_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern const uint32_t JsonSerializerInternalWriter_get_SerializeStack_m1412853750_MetadataUsageId;
 extern "C"  List_1_t1634065389 * JsonSerializerInternalWriter_get_SerializeStack_m1412853750 (JsonSerializerInternalWriter_t1794357283 * __this, const MethodInfo* method)
 {
@@ -8121,7 +8506,7 @@ extern "C"  List_1_t1634065389 * JsonSerializerInternalWriter_get_SerializeStack
 	}
 	{
 		List_1_t1634065389 * L_1 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_1, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_1, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		__this->set__serializeStack_4(L_1);
 	}
 
@@ -14154,7 +14539,7 @@ extern TypeInfo* ICollection_t3761522009_il2cpp_TypeInfo_var;
 extern TypeInfo* BitArray_t2687322878_il2cpp_TypeInfo_var;
 extern TypeInfo* Boolean_t211005341_il2cpp_TypeInfo_var;
 extern TypeInfo* IWrappedCollection_t2996753073_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern const MethodInfo* Action_2_Invoke_m2022997207_MethodInfo_var;
 extern const MethodInfo* List_1_ToArray_m1046025517_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1345664248;
@@ -14198,7 +14583,7 @@ extern "C"  Il2CppObject * CollectionUtils_CreateAndPopulateList_m3338216615 (Il
 	}
 	{
 		List_1_t1634065389 * L_4 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_4, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_4, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_0 = L_4;
 		V_2 = (bool)1;
 		goto IL_01b0;
@@ -14375,7 +14760,7 @@ IL_0137:
 	}
 	{
 		List_1_t1634065389 * L_51 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_51, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_51, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_0 = L_51;
 		goto IL_0154;
 	}
@@ -14439,7 +14824,7 @@ IL_0191:
 	}
 	{
 		List_1_t1634065389 * L_62 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_62, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_62, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_0 = L_62;
 		V_2 = (bool)1;
 		goto IL_01b0;
@@ -16794,7 +17179,7 @@ extern TypeInfo* IEnumerable_1_t4037084138_il2cpp_TypeInfo_var;
 extern TypeInfo* IEnumerator_1_t2648036230_il2cpp_TypeInfo_var;
 extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
 extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1__ctor_m574172797_MethodInfo_var;
+extern const MethodInfo* List_1__ctor_m3149421882_MethodInfo_var;
 extern const MethodInfo* EnumUtils_U3CGetValuesU3Em__37_m2864116035_MethodInfo_var;
 extern const MethodInfo* Func_2__ctor_m3085140765_MethodInfo_var;
 extern const MethodInfo* Enumerable_Where_TisFieldInfo_t_m107125898_MethodInfo_var;
@@ -16845,7 +17230,7 @@ extern "C"  Il2CppObject* EnumUtils_GetValues_m3157139055 (Il2CppObject * __this
 IL_0026:
 	{
 		List_1_t1634065389 * L_6 = (List_1_t1634065389 *)il2cpp_codegen_object_new(List_1_t1634065389_il2cpp_TypeInfo_var);
-		List_1__ctor_m574172797(L_6, /*hidden argument*/List_1__ctor_m574172797_MethodInfo_var);
+		List_1__ctor_m3149421882(L_6, /*hidden argument*/List_1__ctor_m3149421882_MethodInfo_var);
 		V_0 = L_6;
 		Type_t * L_7 = ___enumType;
 		NullCheck(L_7);
@@ -22114,7 +22499,7 @@ extern "C"  U3CU3E__AnonType0_2_t675844848 * ReflectionUtils_U3CGetFieldsAndProp
 	}
 }
 // System.Object Newtonsoft.Json.Utilities.ReflectionUtils::<CreateGeneric>m__44(System.Type,System.Collections.Generic.IList`1<System.Object>)
-extern const MethodInfo* Enumerable_ToArray_TisIl2CppObject_m1195909660_MethodInfo_var;
+extern const MethodInfo* Enumerable_ToArray_TisIl2CppObject_m914007555_MethodInfo_var;
 extern const uint32_t ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851_MetadataUsageId;
 extern "C"  Il2CppObject * ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851 (Il2CppObject * __this /* static, unused */, Type_t * ___t, Il2CppObject* ___a, const MethodInfo* method)
 {
@@ -22127,7 +22512,7 @@ extern "C"  Il2CppObject * ReflectionUtils_U3CCreateGenericU3Em__44_m2515076851 
 	{
 		Type_t * L_0 = ___t;
 		Il2CppObject* L_1 = ___a;
-		ObjectU5BU5D_t11523773* L_2 = Enumerable_ToArray_TisIl2CppObject_m1195909660(NULL /*static, unused*/, L_1, /*hidden argument*/Enumerable_ToArray_TisIl2CppObject_m1195909660_MethodInfo_var);
+		ObjectU5BU5D_t11523773* L_2 = Enumerable_ToArray_TisIl2CppObject_m914007555(NULL /*static, unused*/, L_1, /*hidden argument*/Enumerable_ToArray_TisIl2CppObject_m914007555_MethodInfo_var);
 		Il2CppObject * L_3 = ReflectionUtils_CreateInstance_m2555227011(NULL /*static, unused*/, L_0, L_2, /*hidden argument*/NULL);
 		return L_3;
 	}
@@ -22758,7 +23143,7 @@ extern "C"  void StringUtils_IfNotNullOrEmpty_m4284518285 (Il2CppObject * __this
 }
 // System.Void Newtonsoft.Json.Utilities.StringUtils::IfNotNullOrEmpty(System.String,System.Action`1<System.String>,System.Action`1<System.String>)
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
-extern const MethodInfo* Action_1_Invoke_m3709300246_MethodInfo_var;
+extern const MethodInfo* Action_1_Invoke_m3051928274_MethodInfo_var;
 extern const uint32_t StringUtils_IfNotNullOrEmpty_m2348658805_MetadataUsageId;
 extern "C"  void StringUtils_IfNotNullOrEmpty_m2348658805 (Il2CppObject * __this /* static, unused */, String_t* ___value, Action_1_t1116941607 * ___trueAction, Action_1_t1116941607 * ___falseAction, const MethodInfo* method)
 {
@@ -22788,7 +23173,7 @@ extern "C"  void StringUtils_IfNotNullOrEmpty_m2348658805 (Il2CppObject * __this
 		Action_1_t1116941607 * L_3 = ___trueAction;
 		String_t* L_4 = ___value;
 		NullCheck(L_3);
-		Action_1_Invoke_m3709300246(L_3, L_4, /*hidden argument*/Action_1_Invoke_m3709300246_MethodInfo_var);
+		Action_1_Invoke_m3051928274(L_3, L_4, /*hidden argument*/Action_1_Invoke_m3051928274_MethodInfo_var);
 	}
 
 IL_0018:
@@ -22808,7 +23193,7 @@ IL_001d:
 		Action_1_t1116941607 * L_6 = ___falseAction;
 		String_t* L_7 = ___value;
 		NullCheck(L_6);
-		Action_1_Invoke_m3709300246(L_6, L_7, /*hidden argument*/Action_1_Invoke_m3709300246_MethodInfo_var);
+		Action_1_Invoke_m3051928274(L_6, L_7, /*hidden argument*/Action_1_Invoke_m3051928274_MethodInfo_var);
 	}
 
 IL_002a:
@@ -24144,6 +24529,30 @@ extern "C"  void ValidationUtils_ArgumentConditionTrue_m3530257957 (Il2CppObject
 
 IL_000e:
 	{
+		return;
+	}
+}
+// System.Void OutOfTokensDialog::.ctor()
+extern "C"  void OutOfTokensDialog__ctor_m1333114756 (OutOfTokensDialog_t4269442503 * __this, const MethodInfo* method)
+{
+	{
+		BaseDialog__ctor_m1365764386(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void OutOfTokensDialog::OnRemove()
+extern "C"  void OutOfTokensDialog_OnRemove_m3470641219 (OutOfTokensDialog_t4269442503 * __this, const MethodInfo* method)
+{
+	{
+		BaseDialog_OnRemove_m1178192357(__this, /*hidden argument*/NULL);
+		Transform_t284553113 * L_0 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		Transform_t284553113 * L_1 = ((BaseDialog_t735619993 *)__this)->get__parentTransform_4();
+		NullCheck(L_0);
+		Transform_SetParent_m3449663462(L_0, L_1, /*hidden argument*/NULL);
+		Transform_t284553113 * L_2 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
+		Vector3_t3525329789  L_3 = ((BaseDialog_t735619993 *)__this)->get__initPosition_3();
+		NullCheck(L_2);
+		Transform_set_position_m3111394108(L_2, L_3, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -25748,6 +26157,65 @@ extern "C"  void PopupManager__ctor_m4087767610 (PopupManager_t2711269761 * __th
 		return;
 	}
 }
+// System.Void PopupManager::ShowPurchasePopup()
+extern Il2CppCodeGenString* _stringLiteral1948850704;
+extern const uint32_t PopupManager_ShowPurchasePopup_m3543790982_MetadataUsageId;
+extern "C"  void PopupManager_ShowPurchasePopup_m3543790982 (PopupManager_t2711269761 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (PopupManager_ShowPurchasePopup_m3543790982_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		PopupManager_RemoveActivePopup_m4117325434(__this, /*hidden argument*/NULL);
+		BridgeDebugger_Log_m140064271(NULL /*static, unused*/, _stringLiteral1948850704, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void PopupManager::ShowRewardAds()
+extern TypeInfo* Action_t437523947_il2cpp_TypeInfo_var;
+extern const MethodInfo* PopupManager_TriggerRewardAds_m2034710579_MethodInfo_var;
+extern const uint32_t PopupManager_ShowRewardAds_m296906716_MetadataUsageId;
+extern "C"  void PopupManager_ShowRewardAds_m296906716 (PopupManager_t2711269761 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (PopupManager_ShowRewardAds_m296906716_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		PopupManager_RemoveActivePopup_m4117325434(__this, /*hidden argument*/NULL);
+		IntPtr_t L_0;
+		L_0.set_m_value_0((void*)PopupManager_TriggerRewardAds_m2034710579_MethodInfo_var);
+		Action_t437523947 * L_1 = (Action_t437523947 *)il2cpp_codegen_object_new(Action_t437523947_il2cpp_TypeInfo_var);
+		Action__ctor_m2957240604(L_1, __this, L_0, /*hidden argument*/NULL);
+		ExtMonoBehaviour_DelayedCall_m1718849090(__this, (1.0f), L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void PopupManager::TriggerRewardAds()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
+extern const uint32_t PopupManager_TriggerRewardAds_m2034710579_MetadataUsageId;
+extern "C"  void PopupManager_TriggerRewardAds_m2034710579 (PopupManager_t2711269761 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (PopupManager_TriggerRewardAds_m2034710579_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GameObjectRef_t4121474274 * L_0 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_0);
+		AdManager_t3461832170 * L_1 = L_0->get_adsManager_15();
+		NullCheck(L_1);
+		AdManager_ShowRewardedAd_m3237934097(L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void PopupManager::AddConnectingPopup()
 extern "C"  void PopupManager_AddConnectingPopup_m3990459709 (PopupManager_t2711269761 * __this, const MethodInfo* method)
 {
@@ -25761,7 +26229,7 @@ extern "C"  void PopupManager_AddConnectingPopup_m3990459709 (PopupManager_t2711
 extern "C"  void PopupManager_AddDeterminingHostPopup_m1278965261 (PopupManager_t2711269761 * __this, const MethodInfo* method)
 {
 	{
-		GameObject_t4012695102 * L_0 = __this->get_determiningHostPopup_5();
+		GameObject_t4012695102 * L_0 = __this->get_determiningHostPopup_6();
 		PopupManager_AddPopup_m2875530957(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
@@ -25787,8 +26255,8 @@ extern "C"  void PopupManager_Init_m2023062746 (PopupManager_t2711269761 * __thi
 		GameObject_SetActive_m3538205401(L_1, (bool)0, /*hidden argument*/NULL);
 		List_1_t514686775 * L_2 = (List_1_t514686775 *)il2cpp_codegen_object_new(List_1_t514686775_il2cpp_TypeInfo_var);
 		List_1__ctor_m2397334390(L_2, /*hidden argument*/List_1__ctor_m2397334390_MethodInfo_var);
-		__this->set__popups_6(L_2);
-		__this->set__activePopup_7((GameObject_t4012695102 *)NULL);
+		__this->set__popups_7(L_2);
+		__this->set__activePopup_8((GameObject_t4012695102 *)NULL);
 		return;
 	}
 }
@@ -25796,7 +26264,7 @@ extern "C"  void PopupManager_Init_m2023062746 (PopupManager_t2711269761 * __thi
 extern "C"  void PopupManager_AddPopup_m2875530957 (PopupManager_t2711269761 * __this, GameObject_t4012695102 * ___popup, const MethodInfo* method)
 {
 	{
-		List_1_t514686775 * L_0 = __this->get__popups_6();
+		List_1_t514686775 * L_0 = __this->get__popups_7();
 		GameObject_t4012695102 * L_1 = ___popup;
 		NullCheck(L_0);
 		VirtActionInvoker1< GameObject_t4012695102 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0) */, L_0, L_1);
@@ -25826,7 +26294,7 @@ extern "C"  void PopupManager_RemovePopup_m3955612184 (PopupManager_t2711269761 
 	}
 	BaseDialog_t735619993 * V_0 = NULL;
 	{
-		List_1_t514686775 * L_0 = __this->get__popups_6();
+		List_1_t514686775 * L_0 = __this->get__popups_7();
 		NullCheck(L_0);
 		VirtActionInvoker1< int32_t >::Invoke(30 /* System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::RemoveAt(System.Int32) */, L_0, 0);
 		GameObject_t4012695102 * L_1 = ___popup;
@@ -25853,7 +26321,7 @@ IL_0025:
 		GameObject_t4012695102 * L_7 = Component_get_gameObject_m1170635899(L_6, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		GameObject_SetActive_m3538205401(L_7, (bool)0, /*hidden argument*/NULL);
-		__this->set__activePopup_7((GameObject_t4012695102 *)NULL);
+		__this->set__activePopup_8((GameObject_t4012695102 *)NULL);
 		return;
 	}
 }
@@ -25861,7 +26329,7 @@ IL_0025:
 extern "C"  void PopupManager_RemoveActivePopup_m4117325434 (PopupManager_t2711269761 * __this, const MethodInfo* method)
 {
 	{
-		GameObject_t4012695102 * L_0 = __this->get__activePopup_7();
+		GameObject_t4012695102 * L_0 = __this->get__activePopup_8();
 		bool L_1 = Object_op_Inequality_m1296218211(NULL /*static, unused*/, L_0, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
 		if (!L_1)
 		{
@@ -25914,7 +26382,7 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		List_1_t514686775 * L_0 = __this->get__popups_6();
+		List_1_t514686775 * L_0 = __this->get__popups_7();
 		NullCheck(L_0);
 		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(20 /* System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count() */, L_0);
 		if ((((int32_t)L_1) <= ((int32_t)0)))
@@ -25923,7 +26391,7 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 		}
 	}
 	{
-		GameObject_t4012695102 * L_2 = __this->get__activePopup_7();
+		GameObject_t4012695102 * L_2 = __this->get__activePopup_8();
 		bool L_3 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_2, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
 		if (!L_3)
 		{
@@ -25936,31 +26404,31 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 		GameObject_t4012695102 * L_5 = Component_get_gameObject_m1170635899(L_4, /*hidden argument*/NULL);
 		NullCheck(L_5);
 		GameObject_SetActive_m3538205401(L_5, (bool)1, /*hidden argument*/NULL);
-		List_1_t514686775 * L_6 = __this->get__popups_6();
+		List_1_t514686775 * L_6 = __this->get__popups_7();
 		NullCheck(L_6);
 		GameObject_t4012695102 * L_7 = VirtFuncInvoker1< GameObject_t4012695102 *, int32_t >::Invoke(31 /* !0 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Item(System.Int32) */, L_6, 0);
-		__this->set__activePopup_7(L_7);
-		GameObject_t4012695102 * L_8 = __this->get__activePopup_7();
+		__this->set__activePopup_8(L_7);
+		GameObject_t4012695102 * L_8 = __this->get__activePopup_8();
 		NullCheck(L_8);
 		GameObject_SetActive_m3538205401(L_8, (bool)1, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_9 = __this->get__activePopup_7();
+		GameObject_t4012695102 * L_9 = __this->get__activePopup_8();
 		NullCheck(L_9);
 		Animation_t350396337 * L_10 = GameObject_GetComponent_TisAnimation_t350396337_m2530801684(L_9, /*hidden argument*/GameObject_GetComponent_TisAnimation_t350396337_m2530801684_MethodInfo_var);
 		NullCheck(L_10);
 		Animation_Play_m900498501(L_10, _stringLiteral1772931632, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_11 = __this->get__activePopup_7();
+		GameObject_t4012695102 * L_11 = __this->get__activePopup_8();
 		NullCheck(L_11);
 		Transform_t284553113 * L_12 = GameObject_get_transform_m1278640159(L_11, /*hidden argument*/NULL);
 		Transform_t284553113 * L_13 = Component_get_transform_m4257140443(__this, /*hidden argument*/NULL);
 		NullCheck(L_12);
 		Transform_SetParent_m3449663462(L_12, L_13, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_14 = __this->get__activePopup_7();
+		GameObject_t4012695102 * L_14 = __this->get__activePopup_8();
 		NullCheck(L_14);
 		Transform_t284553113 * L_15 = GameObject_get_transform_m1278640159(L_14, /*hidden argument*/NULL);
 		Vector3_t3525329789  L_16 = Vector3_get_one_m886467710(NULL /*static, unused*/, /*hidden argument*/NULL);
 		NullCheck(L_15);
 		Transform_set_localScale_m310756934(L_15, L_16, /*hidden argument*/NULL);
-		GameObject_t4012695102 * L_17 = __this->get__activePopup_7();
+		GameObject_t4012695102 * L_17 = __this->get__activePopup_8();
 		NullCheck(L_17);
 		Transform_t284553113 * L_18 = GameObject_get_transform_m1278640159(L_17, /*hidden argument*/NULL);
 		Vector3_t3525329789  L_19 = Vector3_get_zero_m2017759730(NULL /*static, unused*/, /*hidden argument*/NULL);
@@ -25970,6 +26438,15 @@ extern "C"  void PopupManager_ShowPopup_m867864519 (PopupManager_t2711269761 * _
 
 IL_00a7:
 	{
+		return;
+	}
+}
+// System.Void PopupManager::ShowOutOfTokensPopup()
+extern "C"  void PopupManager_ShowOutOfTokensPopup_m669506708 (PopupManager_t2711269761 * __this, const MethodInfo* method)
+{
+	{
+		GameObject_t4012695102 * L_0 = __this->get_outOfTokensPopup_5();
+		PopupManager_AddPopup_m2875530957(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -26034,7 +26511,7 @@ IL_0021:
 	{
 		PopupManager_t2711269761 * L_2 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_2);
-		GameObject_t4012695102 * L_3 = L_2->get__activePopup_7();
+		GameObject_t4012695102 * L_3 = L_2->get__activePopup_8();
 		NullCheck(L_3);
 		Animation_t350396337 * L_4 = GameObject_GetComponent_TisAnimation_t350396337_m2530801684(L_3, /*hidden argument*/GameObject_GetComponent_TisAnimation_t350396337_m2530801684_MethodInfo_var);
 		NullCheck(L_4);
@@ -26051,7 +26528,7 @@ IL_0058:
 		PopupManager_t2711269761 * L_6 = __this->get_U3CU3Ef__this_2();
 		PopupManager_t2711269761 * L_7 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_7);
-		GameObject_t4012695102 * L_8 = L_7->get__activePopup_7();
+		GameObject_t4012695102 * L_8 = L_7->get__activePopup_8();
 		NullCheck(L_6);
 		PopupManager_RemovePopup_m3955612184(L_6, L_8, /*hidden argument*/NULL);
 		PopupManager_t2711269761 * L_9 = __this->get_U3CU3Ef__this_2();
@@ -29652,6 +30129,7 @@ extern "C"  void SinglePlayerMainGame_UpdateSweepCount_m3669746505 (SinglePlayer
 	}
 }
 // System.Void SinglePlayerMainGame::OnMoveOutOfView()
+extern TypeInfo* SingletonManager_t825254210_il2cpp_TypeInfo_var;
 extern const MethodInfo* Component_GetComponent_TisSharedMainGame_t2807228656_m2246697749_MethodInfo_var;
 extern const MethodInfo* GameObject_GetComponentInChildren_TisDealer_t2043054649_m2341390440_MethodInfo_var;
 extern const MethodInfo* GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681_MethodInfo_var;
@@ -29685,6 +30163,11 @@ extern "C"  void SinglePlayerMainGame_OnMoveOutOfView_m2375144063 (SinglePlayerM
 		SinglePlayerMainGame_t3863033300 * L_7 = GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681(L_6, /*hidden argument*/GameObject_GetComponent_TisSinglePlayerMainGame_t3863033300_m1626252681_MethodInfo_var);
 		Object_Destroy_m176400816(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
 		((MultiplayerMainGame_t4046083237 *)__this)->set_network_6((Networking_t1515242260 *)NULL);
+		GameObjectRef_t4121474274 * L_8 = ((SingletonManager_t825254210_StaticFields*)SingletonManager_t825254210_il2cpp_TypeInfo_var->static_fields)->get_reference_3();
+		NullCheck(L_8);
+		AdManager_t3461832170 * L_9 = L_8->get_adsManager_15();
+		NullCheck(L_9);
+		AdManager_ShowAds_m1363442706(L_9, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -31127,9 +31610,9 @@ extern TypeInfo* Enumerator_t4146198159_il2cpp_TypeInfo_var;
 extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
 extern const MethodInfo* List_1__ctor_m2301170921_MethodInfo_var;
 extern const MethodInfo* Utility_DeepCloneList_TisString_t_m2142681155_MethodInfo_var;
-extern const MethodInfo* List_1_GetEnumerator_m2194092946_MethodInfo_var;
-extern const MethodInfo* Enumerator_get_Current_m3788713170_MethodInfo_var;
-extern const MethodInfo* Enumerator_MoveNext_m2014284926_MethodInfo_var;
+extern const MethodInfo* List_1_GetEnumerator_m1042308686_MethodInfo_var;
+extern const MethodInfo* Enumerator_get_Current_m896617622_MethodInfo_var;
+extern const MethodInfo* Enumerator_MoveNext_m1126099258_MethodInfo_var;
 extern Il2CppCodeGenString* _stringLiteral65;
 extern Il2CppCodeGenString* _stringLiteral66;
 extern Il2CppCodeGenString* _stringLiteral67;
@@ -31197,7 +31680,7 @@ extern "C"  void TestScript_Awake_m3561378433 (TestScript_t3705514013 * __this, 
 		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral2684033718, /*hidden argument*/NULL);
 		List_1_t1765447871 * L_7 = V_1;
 		NullCheck(L_7);
-		Enumerator_t4146198159  L_8 = List_1_GetEnumerator_m2194092946(L_7, /*hidden argument*/List_1_GetEnumerator_m2194092946_MethodInfo_var);
+		Enumerator_t4146198159  L_8 = List_1_GetEnumerator_m1042308686(L_7, /*hidden argument*/List_1_GetEnumerator_m1042308686_MethodInfo_var);
 		V_3 = L_8;
 	}
 
@@ -31210,7 +31693,7 @@ IL_0047:
 
 IL_004c:
 		{
-			String_t* L_9 = Enumerator_get_Current_m3788713170((&V_3), /*hidden argument*/Enumerator_get_Current_m3788713170_MethodInfo_var);
+			String_t* L_9 = Enumerator_get_Current_m896617622((&V_3), /*hidden argument*/Enumerator_get_Current_m896617622_MethodInfo_var);
 			V_2 = L_9;
 			String_t* L_10 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
@@ -31219,7 +31702,7 @@ IL_004c:
 
 IL_005a:
 		{
-			bool L_11 = Enumerator_MoveNext_m2014284926((&V_3), /*hidden argument*/Enumerator_MoveNext_m2014284926_MethodInfo_var);
+			bool L_11 = Enumerator_MoveNext_m1126099258((&V_3), /*hidden argument*/Enumerator_MoveNext_m1126099258_MethodInfo_var);
 			if (L_11)
 			{
 				goto IL_004c;
@@ -31265,7 +31748,7 @@ IL_0077:
 		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral1658821191, /*hidden argument*/NULL);
 		List_1_t1765447871 * L_17 = V_0;
 		NullCheck(L_17);
-		Enumerator_t4146198159  L_18 = List_1_GetEnumerator_m2194092946(L_17, /*hidden argument*/List_1_GetEnumerator_m2194092946_MethodInfo_var);
+		Enumerator_t4146198159  L_18 = List_1_GetEnumerator_m1042308686(L_17, /*hidden argument*/List_1_GetEnumerator_m1042308686_MethodInfo_var);
 		V_5 = L_18;
 	}
 
@@ -31278,7 +31761,7 @@ IL_00a1:
 
 IL_00a6:
 		{
-			String_t* L_19 = Enumerator_get_Current_m3788713170((&V_5), /*hidden argument*/Enumerator_get_Current_m3788713170_MethodInfo_var);
+			String_t* L_19 = Enumerator_get_Current_m896617622((&V_5), /*hidden argument*/Enumerator_get_Current_m896617622_MethodInfo_var);
 			V_4 = L_19;
 			String_t* L_20 = V_4;
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
@@ -31287,7 +31770,7 @@ IL_00a6:
 
 IL_00b6:
 		{
-			bool L_21 = Enumerator_MoveNext_m2014284926((&V_5), /*hidden argument*/Enumerator_MoveNext_m2014284926_MethodInfo_var);
+			bool L_21 = Enumerator_MoveNext_m1126099258((&V_5), /*hidden argument*/Enumerator_MoveNext_m1126099258_MethodInfo_var);
 			if (L_21)
 			{
 				goto IL_00a6;
@@ -31326,7 +31809,7 @@ IL_00d4:
 		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral2747709040, /*hidden argument*/NULL);
 		List_1_t1765447871 * L_25 = V_1;
 		NullCheck(L_25);
-		Enumerator_t4146198159  L_26 = List_1_GetEnumerator_m2194092946(L_25, /*hidden argument*/List_1_GetEnumerator_m2194092946_MethodInfo_var);
+		Enumerator_t4146198159  L_26 = List_1_GetEnumerator_m1042308686(L_25, /*hidden argument*/List_1_GetEnumerator_m1042308686_MethodInfo_var);
 		V_7 = L_26;
 	}
 
@@ -31339,7 +31822,7 @@ IL_00e6:
 
 IL_00eb:
 		{
-			String_t* L_27 = Enumerator_get_Current_m3788713170((&V_7), /*hidden argument*/Enumerator_get_Current_m3788713170_MethodInfo_var);
+			String_t* L_27 = Enumerator_get_Current_m896617622((&V_7), /*hidden argument*/Enumerator_get_Current_m896617622_MethodInfo_var);
 			V_6 = L_27;
 			String_t* L_28 = V_6;
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
@@ -31348,7 +31831,7 @@ IL_00eb:
 
 IL_00fb:
 		{
-			bool L_29 = Enumerator_MoveNext_m2014284926((&V_7), /*hidden argument*/Enumerator_MoveNext_m2014284926_MethodInfo_var);
+			bool L_29 = Enumerator_MoveNext_m1126099258((&V_7), /*hidden argument*/Enumerator_MoveNext_m1126099258_MethodInfo_var);
 			if (L_29)
 			{
 				goto IL_00eb;
@@ -32103,7 +32586,7 @@ extern "C"  float Utility_GetRandomNumber_m363916787 (Il2CppObject * __this /* s
 		IL2CPP_RUNTIME_CLASS_INIT(Utility_t1549674828_il2cpp_TypeInfo_var);
 		Random_t922188920 * L_0 = ((Utility_t1549674828_StaticFields*)Utility_t1549674828_il2cpp_TypeInfo_var->static_fields)->get_random_2();
 		NullCheck(L_0);
-		double L_1 = VirtFuncInvoker0< double >::Invoke(7 /* System.Double System.Random::NextDouble() */, L_0);
+		double L_1 = VirtFuncInvoker0< double >::Invoke(8 /* System.Double System.Random::NextDouble() */, L_0);
 		double L_2 = ___maximum;
 		double L_3 = ___minimum;
 		double L_4 = ___minimum;

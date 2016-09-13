@@ -20,7 +20,7 @@
 #endif
 
 // System.MonoTODOAttribute
-struct  MonoTODOAttribute_t1287393898  : public Attribute_t498693649
+struct  MonoTODOAttribute_t1287393897  : public Attribute_t498693649
 {
 public:
 

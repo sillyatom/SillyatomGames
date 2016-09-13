@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.EventSystems.BaseInputModule>::VerifyState()
 #define Enumerator_VerifyState_m711668361(__this, method) ((  void (*) (Enumerator_t2683120233 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.EventSystems.BaseInputModule>::MoveNext()
-#define Enumerator_MoveNext_m231339767(__this, method) ((  bool (*) (Enumerator_t2683120233 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m231339767(__this, method) ((  bool (*) (Enumerator_t2683120233 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<UnityEngine.EventSystems.BaseInputModule>::get_Current()
-#define Enumerator_get_Current_m612127522(__this, method) ((  BaseInputModule_t3800378272 * (*) (Enumerator_t2683120233 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m612127522(__this, method) ((  BaseInputModule_t3800378272 * (*) (Enumerator_t2683120233 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

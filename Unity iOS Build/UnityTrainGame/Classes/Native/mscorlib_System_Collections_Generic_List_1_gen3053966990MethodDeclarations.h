@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m2937381180_gshared (List_1_t3053966990 * __this, 
 // System.Boolean System.Collections.Generic.List`1<Newtonsoft.Json.Schema.JsonSchemaType>::Contains(T)
 extern "C"  bool List_1_Contains_m2868790890_gshared (List_1_t3053966990 * __this, int32_t ___item, const MethodInfo* method);
 #define List_1_Contains_m2868790890(__this, ___item, method) ((  bool (*) (List_1_t3053966990 *, int32_t, const MethodInfo*))List_1_Contains_m2868790890_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<Newtonsoft.Json.Schema.JsonSchemaType>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m2855914425_gshared (List_1_t3053966990 * __this, JsonSchemaTypeU5BU5D_t1159012472* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m2855914425(__this, ___array, method) ((  void (*) (List_1_t3053966990 *, JsonSchemaTypeU5BU5D_t1159012472*, const MethodInfo*))List_1_CopyTo_m2855914425_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<Newtonsoft.Json.Schema.JsonSchemaType>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m2175919550_gshared (List_1_t3053966990 * __this, JsonSchemaTypeU5BU5D_t1159012472* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m2175919550(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t3053966990 *, JsonSchemaTypeU5BU5D_t1159012472*, int32_t, const MethodInfo*))List_1_CopyTo_m2175919550_gshared)(__this, ___array, ___arrayIndex, method)

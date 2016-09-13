@@ -13,12 +13,18 @@
 #include <limits>
 #include <assert.h>
 
+// System.Type
+struct Type_t;
+// System.NullReferenceException
+struct NullReferenceException_t3216235232;
+// System.String
+struct String_t;
+// System.Runtime.Serialization.SerializationInfo
+struct SerializationInfo_t2995724695;
 // System.NumberFormatter
 struct NumberFormatter_t719190774;
 // System.Threading.Thread
 struct Thread_t1674723085;
-// System.String
-struct String_t;
 // System.Globalization.NumberFormatInfo
 struct NumberFormatInfo_t3411951076;
 // System.IFormatProvider
@@ -33,12 +39,8 @@ struct Int32U5BU5D_t1809983122;
 struct CustomInfo_t411443167;
 // System.Object
 struct Il2CppObject;
-// System.Type
-struct Type_t;
 // System.ObjectDisposedException
 struct ObjectDisposedException_t973246880;
-// System.Runtime.Serialization.SerializationInfo
-struct SerializationInfo_t2995724695;
 // System.ObsoleteAttribute
 struct ObsoleteAttribute_t699313272;
 // System.OperatingSystem
@@ -55,6 +57,8 @@ struct OverflowException_t3216083426;
 struct ParamArrayAttribute_t1656211877;
 // System.Random
 struct Random_t922188920;
+// System.Byte[]
+struct ByteU5BU5D_t58506160;
 // System.RankException
 struct RankException_t3665850616;
 // System.Reflection.AmbiguousMatchException
@@ -95,8 +99,6 @@ struct AssemblyInformationalVersionAttribute_t2624007939;
 struct AssemblyKeyFileAttribute_t4146683093;
 // System.Reflection.StrongNameKeyPair
 struct StrongNameKeyPair_t2760016869;
-// System.Byte[]
-struct ByteU5BU5D_t58506160;
 // System.Reflection.AssemblyProductAttribute
 struct AssemblyProductAttribute_t2154762977;
 // System.Reflection.AssemblyTitleAttribute
@@ -235,29 +237,41 @@ struct DllImportAttribute_t2977516789;
 struct MonoProperty_t;
 // System.Reflection.MonoProperty/GetterAdapter
 struct GetterAdapter_t943738788;
-// System.Reflection.Pointer
-struct Pointer_t3455104107;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
+#include "mscorlib_System_Nullable935284502.h"
+#include "mscorlib_System_Nullable935284502MethodDeclarations.h"
+#include "mscorlib_System_Type2779229935.h"
+#include "mscorlib_System_ArgumentNullException3214793280MethodDeclarations.h"
+#include "mscorlib_System_Type2779229935MethodDeclarations.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_ArgumentNullException3214793280.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_RuntimeTypeHandle1864875887.h"
+#include "mscorlib_ArrayTypes.h"
+#include "mscorlib_System_NullReferenceException3216235232.h"
+#include "mscorlib_System_NullReferenceException3216235232MethodDeclarations.h"
+#include "mscorlib_Locale2281372282MethodDeclarations.h"
+#include "mscorlib_System_SystemException3155420757MethodDeclarations.h"
+#include "mscorlib_System_Exception1967233988MethodDeclarations.h"
+#include "mscorlib_System_Int322847414787.h"
+#include "mscorlib_System_Runtime_Serialization_Serializatio2995724695.h"
+#include "mscorlib_System_Runtime_Serialization_StreamingCont986364934.h"
 #include "mscorlib_System_NumberFormatter719190774.h"
 #include "mscorlib_System_NumberFormatter719190774MethodDeclarations.h"
 #include "mscorlib_System_Threading_Thread1674723085.h"
-#include "mscorlib_System_Void2779279689.h"
 #include "mscorlib_System_Object837106420MethodDeclarations.h"
 #include "mscorlib_System_Threading_Thread1674723085MethodDeclarations.h"
-#include "mscorlib_ArrayTypes.h"
 #include "mscorlib_System_Char2778706699.h"
 #include "mscorlib_System_Globalization_CultureInfo3603717042.h"
 #include "mscorlib_System_UInt64985925421.h"
-#include "mscorlib_System_Int322847414787.h"
 #include "mscorlib_System_Int642847414882.h"
 #include "mscorlib_System_UInt32985925326.h"
 #include "mscorlib_System_Math2778998461MethodDeclarations.h"
-#include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_String968488902MethodDeclarations.h"
-#include "mscorlib_System_Boolean211005341.h"
 #include "mscorlib_System_Double534516614.h"
 #include "mscorlib_System_BitConverter3338308296MethodDeclarations.h"
 #include "mscorlib_System_Decimal1688557254.h"
@@ -283,16 +297,10 @@ struct Pointer_t3455104107;
 #include "mscorlib_System_ArgumentException124305799MethodDeclarations.h"
 #include "mscorlib_System_ArgumentException124305799.h"
 #include "mscorlib_System_Object837106420.h"
-#include "mscorlib_System_Type2779229935.h"
-#include "mscorlib_System_Type2779229935MethodDeclarations.h"
 #include "mscorlib_System_ObjectDisposedException973246880.h"
 #include "mscorlib_System_ObjectDisposedException973246880MethodDeclarations.h"
-#include "mscorlib_Locale2281372282MethodDeclarations.h"
 #include "mscorlib_System_InvalidOperationException2420574324MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Serialization_Serializatio2995724695.h"
-#include "mscorlib_System_Runtime_Serialization_StreamingCont986364934.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio2995724695MethodDeclarations.h"
-#include "mscorlib_System_Exception1967233988MethodDeclarations.h"
 #include "mscorlib_System_Exception1967233988.h"
 #include "mscorlib_System_ObsoleteAttribute699313272.h"
 #include "mscorlib_System_ObsoleteAttribute699313272MethodDeclarations.h"
@@ -302,14 +310,11 @@ struct Pointer_t3455104107;
 #include "mscorlib_System_PlatformID2455152771.h"
 #include "mscorlib_System_Version497901645.h"
 #include "mscorlib_System_Version497901645MethodDeclarations.h"
-#include "mscorlib_System_ArgumentNullException3214793280MethodDeclarations.h"
-#include "mscorlib_System_ArgumentNullException3214793280.h"
 #include "mscorlib_System_OrdinalComparer1058464051.h"
 #include "mscorlib_System_OrdinalComparer1058464051MethodDeclarations.h"
 #include "mscorlib_System_StringComparer4058118931MethodDeclarations.h"
 #include "mscorlib_System_OutOfMemoryException2442386302.h"
 #include "mscorlib_System_OutOfMemoryException2442386302MethodDeclarations.h"
-#include "mscorlib_System_SystemException3155420757MethodDeclarations.h"
 #include "mscorlib_System_OverflowException3216083426.h"
 #include "mscorlib_System_OverflowException3216083426MethodDeclarations.h"
 #include "mscorlib_System_ArithmeticException1328958010MethodDeclarations.h"
@@ -339,13 +344,10 @@ struct Pointer_t3455104107;
 #include "mscorlib_System_AppDomain1551247802.h"
 #include "mscorlib_System_Security_Policy_Evidence2439192402.h"
 #include "mscorlib_System_NotImplementedException1091014741MethodDeclarations.h"
-#include "mscorlib_System_NullReferenceException3216235232MethodDeclarations.h"
 #include "mscorlib_System_NotImplementedException1091014741.h"
-#include "mscorlib_System_NullReferenceException3216235232.h"
 #include "mscorlib_System_Reflection_Module206139610MethodDeclarations.h"
 #include "mscorlib_System_Collections_ArrayList2121638921MethodDeclarations.h"
 #include "mscorlib_System_Collections_ArrayList2121638921.h"
-#include "mscorlib_System_RuntimeTypeHandle1864875887.h"
 #include "mscorlib_System_Reflection_AssemblyCompanyAttribut4198449939.h"
 #include "mscorlib_System_Reflection_AssemblyCompanyAttribut4198449939MethodDeclarations.h"
 #include "mscorlib_System_Reflection_AssemblyConfigurationAt4057583162.h"
@@ -592,9 +594,6 @@ struct Pointer_t3455104107;
 #include "mscorlib_System_Runtime_InteropServices_OptionalAt4067831006.h"
 #include "mscorlib_System_Runtime_InteropServices_OutAttribu3987499248.h"
 #include "mscorlib_System_Reflection_ParameterModifier500203470MethodDeclarations.h"
-#include "mscorlib_System_Reflection_PInfo2267221868MethodDeclarations.h"
-#include "mscorlib_System_Reflection_Pointer3455104107.h"
-#include "mscorlib_System_Reflection_Pointer3455104107MethodDeclarations.h"
 
 // System.Int32 System.Array::IndexOf<System.Object>(!!0[],!!0)
 extern "C"  int32_t Array_IndexOf_TisIl2CppObject_m2661005505_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t11523773* p0, Il2CppObject * p1, const MethodInfo* method);
@@ -618,6 +617,107 @@ extern "C"  ReadOnlyCollection_1_t3481880477 * Array_AsReadOnly_TisCustomAttribu
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Type System.Nullable::GetUnderlyingType(System.Type)
+extern const Il2CppType* Nullable_1_t2791603879_0_0_0_var;
+extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
+extern TypeInfo* Type_t_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1361881659;
+extern const uint32_t Nullable_GetUnderlyingType_m3559493248_MetadataUsageId;
+extern "C"  Type_t * Nullable_GetUnderlyingType_m3559493248 (Il2CppObject * __this /* static, unused */, Type_t * ___nullableType, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Nullable_GetUnderlyingType_m3559493248_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Type_t * L_0 = ___nullableType;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral1361881659, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		Type_t * L_2 = ___nullableType;
+		NullCheck(L_2);
+		bool L_3 = VirtFuncInvoker0< bool >::Invoke(89 /* System.Boolean System.Type::get_IsGenericType() */, L_2);
+		if (!L_3)
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		Type_t * L_4 = ___nullableType;
+		NullCheck(L_4);
+		Type_t * L_5 = VirtFuncInvoker0< Type_t * >::Invoke(88 /* System.Type System.Type::GetGenericTypeDefinition() */, L_4);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_6 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(Nullable_1_t2791603879_0_0_0_var), /*hidden argument*/NULL);
+		if ((!(((Il2CppObject*)(Type_t *)L_5) == ((Il2CppObject*)(Type_t *)L_6))))
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		Type_t * L_7 = ___nullableType;
+		NullCheck(L_7);
+		TypeU5BU5D_t3431720054* L_8 = VirtFuncInvoker0< TypeU5BU5D_t3431720054* >::Invoke(85 /* System.Type[] System.Type::GetGenericArguments() */, L_7);
+		NullCheck(L_8);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_8, 0);
+		int32_t L_9 = 0;
+		return ((L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_9)));
+	}
+
+IL_003a:
+	{
+		return (Type_t *)NULL;
+	}
+}
+// System.Void System.NullReferenceException::.ctor()
+extern Il2CppCodeGenString* _stringLiteral513538418;
+extern const uint32_t NullReferenceException__ctor_m622546858_MetadataUsageId;
+extern "C"  void NullReferenceException__ctor_m622546858 (NullReferenceException_t3216235232 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (NullReferenceException__ctor_m622546858_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		String_t* L_0 = Locale_GetText_m2389348044(NULL /*static, unused*/, _stringLiteral513538418, /*hidden argument*/NULL);
+		SystemException__ctor_m3697314481(__this, L_0, /*hidden argument*/NULL);
+		Exception_set_HResult_m3566571225(__this, ((int32_t)-2147467261), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.NullReferenceException::.ctor(System.String)
+extern "C"  void NullReferenceException__ctor_m2208732056 (NullReferenceException_t3216235232 * __this, String_t* ___message, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___message;
+		SystemException__ctor_m3697314481(__this, L_0, /*hidden argument*/NULL);
+		Exception_set_HResult_m3566571225(__this, ((int32_t)-2147467261), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.NullReferenceException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+extern "C"  void NullReferenceException__ctor_m2985950699 (NullReferenceException_t3216235232 * __this, SerializationInfo_t2995724695 * ___info, StreamingContext_t986364934  ___context, const MethodInfo* method)
+{
+	{
+		SerializationInfo_t2995724695 * L_0 = ___info;
+		StreamingContext_t986364934  L_1 = ___context;
+		SystemException__ctor_m2083527090(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void System.NumberFormatter::.ctor(System.Threading.Thread)
 extern TypeInfo* CharU5BU5D_t3416858730_il2cpp_TypeInfo_var;
 extern const uint32_t NumberFormatter__ctor_m2111196867_MetadataUsageId;
@@ -11426,6 +11526,64 @@ IL_0024:
 		uint32_t L_9 = V_0;
 		int32_t L_10 = ___minValue;
 		return (((int32_t)((int32_t)((int64_t)((int64_t)(((int64_t)((uint64_t)(((uint32_t)((uint32_t)(((int32_t)((uint32_t)((double)((double)L_8*(double)(((double)((double)(((double)((double)L_9)))))))))))))))))+(int64_t)(((int64_t)((int64_t)L_10))))))));
+	}
+}
+// System.Void System.Random::NextBytes(System.Byte[])
+extern TypeInfo* ArgumentNullException_t3214793280_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2916848704;
+extern const uint32_t Random_NextBytes_m3527347937_MetadataUsageId;
+extern "C"  void Random_NextBytes_m3527347937 (Random_t922188920 * __this, ByteU5BU5D_t58506160* ___buffer, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Random_NextBytes_m3527347937_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		ByteU5BU5D_t58506160* L_0 = ___buffer;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3214793280 * L_1 = (ArgumentNullException_t3214793280 *)il2cpp_codegen_object_new(ArgumentNullException_t3214793280_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral2916848704, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		V_0 = 0;
+		goto IL_0030;
+	}
+
+IL_0018:
+	{
+		ByteU5BU5D_t58506160* L_2 = ___buffer;
+		int32_t L_3 = V_0;
+		double L_4 = VirtFuncInvoker0< double >::Invoke(4 /* System.Double System.Random::Sample() */, __this);
+		NullCheck(L_2);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (uint8_t)(((int32_t)((uint8_t)((double)((double)L_4*(double)(256.0)))))));
+		int32_t L_5 = V_0;
+		V_0 = ((int32_t)((int32_t)L_5+(int32_t)1));
+	}
+
+IL_0030:
+	{
+		int32_t L_6 = V_0;
+		ByteU5BU5D_t58506160* L_7 = ___buffer;
+		NullCheck(L_7);
+		if ((((int32_t)L_6) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_7)->max_length)))))))
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
 	}
 }
 // System.Double System.Random::NextDouble()
@@ -39707,32 +39865,6 @@ extern "C" void ParameterModifier_t500203470_marshal_com_cleanup(ParameterModifi
 	}
 	il2cpp_codegen_marshal_free(marshaled.____byref_0);
 	marshaled.____byref_0 = NULL;
-}
-// System.Void System.Reflection.Pointer::.ctor()
-extern "C"  void Pointer__ctor_m226191707 (Pointer_t3455104107 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void System.Reflection.Pointer::System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-extern TypeInfo* NotSupportedException_t1374155497_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral3882881452;
-extern const uint32_t Pointer_System_Runtime_Serialization_ISerializable_GetObjectData_m448849360_MetadataUsageId;
-extern "C"  void Pointer_System_Runtime_Serialization_ISerializable_GetObjectData_m448849360 (Pointer_t3455104107 * __this, SerializationInfo_t2995724695 * ___info, StreamingContext_t986364934  ___context, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (Pointer_System_Runtime_Serialization_ISerializable_GetObjectData_m448849360_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		NotSupportedException_t1374155497 * L_0 = (NotSupportedException_t1374155497 *)il2cpp_codegen_object_new(NotSupportedException_t1374155497_il2cpp_TypeInfo_var);
-		NotSupportedException__ctor_m133757637(L_0, _stringLiteral3882881452, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

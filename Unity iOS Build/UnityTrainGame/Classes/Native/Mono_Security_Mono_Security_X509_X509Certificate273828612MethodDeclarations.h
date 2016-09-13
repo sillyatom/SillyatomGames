@@ -41,7 +41,7 @@ struct SerializationInfo_t2995724695;
 #include "mscorlib_System_String968488902.h"
 
 // System.Void Mono.Security.X509.X509Certificate::.ctor(System.Byte[])
-extern "C"  void X509Certificate__ctor_m1688356825 (X509Certificate_t273828613 * __this, ByteU5BU5D_t58506160* ___data, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void X509Certificate__ctor_m3683615677 (X509Certificate_t273828613 * __this, ByteU5BU5D_t58506160* ___data, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Mono.Security.X509.X509Certificate::.cctor()
 extern "C"  void X509Certificate__cctor_m3957890465 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Mono.Security.X509.X509Certificate::Parse(System.Byte[])
@@ -49,11 +49,11 @@ extern "C"  void X509Certificate_Parse_m1221896268 (X509Certificate_t273828613 *
 // System.Byte[] Mono.Security.X509.X509Certificate::GetUnsignedBigInteger(System.Byte[])
 extern "C"  ByteU5BU5D_t58506160* X509Certificate_GetUnsignedBigInteger_m3057380224 (X509Certificate_t273828613 * __this, ByteU5BU5D_t58506160* ___integer, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Security.Cryptography.DSA Mono.Security.X509.X509Certificate::get_DSA()
-extern "C"  DSA_t1557551819 * X509Certificate_get_DSA_m1952040247 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  DSA_t1557551819 * X509Certificate_get_DSA_m937980955 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Mono.Security.X509.X509Certificate::set_DSA(System.Security.Cryptography.DSA)
-extern "C"  void X509Certificate_set_DSA_m1562150692 (X509Certificate_t273828613 * __this, DSA_t1557551819 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void X509Certificate_set_DSA_m225206720 (X509Certificate_t273828613 * __this, DSA_t1557551819 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Mono.Security.X509.X509ExtensionCollection Mono.Security.X509.X509Certificate::get_Extensions()
-extern "C"  X509ExtensionCollection_t3528692651 * X509Certificate_get_Extensions_m577630462 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  X509ExtensionCollection_t3528692651 * X509Certificate_get_Extensions_m1715365530 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Byte[] Mono.Security.X509.X509Certificate::get_Hash()
 extern "C"  ByteU5BU5D_t58506160* X509Certificate_get_Hash_m2925829113 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String Mono.Security.X509.X509Certificate::get_IssuerName()
@@ -85,7 +85,7 @@ extern "C"  DateTime_t339033936  X509Certificate_get_ValidFrom_m3810659470 (X509
 // System.DateTime Mono.Security.X509.X509Certificate::get_ValidUntil()
 extern "C"  DateTime_t339033936  X509Certificate_get_ValidUntil_m2484027100 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 Mono.Security.X509.X509Certificate::get_Version()
-extern "C"  int32_t X509Certificate_get_Version_m1452122189 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  int32_t X509Certificate_get_Version_m3883833137 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.X509.X509Certificate::get_IsCurrent()
 extern "C"  bool X509Certificate_get_IsCurrent_m3064883298 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.X509.X509Certificate::WasCurrent(System.DateTime)
@@ -95,13 +95,13 @@ extern "C"  bool X509Certificate_VerifySignature_m120457372 (X509Certificate_t27
 // System.Boolean Mono.Security.X509.X509Certificate::VerifySignature(System.Security.Cryptography.RSA)
 extern "C"  bool X509Certificate_VerifySignature_m120874446 (X509Certificate_t273828613 * __this, RSA_t1557565273 * ___rsa, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.X509.X509Certificate::VerifySignature(System.Security.Cryptography.AsymmetricAlgorithm)
-extern "C"  bool X509Certificate_VerifySignature_m1482842161 (X509Certificate_t273828613 * __this, AsymmetricAlgorithm_t4236534322 * ___aa, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  bool X509Certificate_VerifySignature_m2925184021 (X509Certificate_t273828613 * __this, AsymmetricAlgorithm_t4236534322 * ___aa, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean Mono.Security.X509.X509Certificate::get_IsSelfSigned()
 extern "C"  bool X509Certificate_get_IsSelfSigned_m3915010913 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Mono.Security.ASN1 Mono.Security.X509.X509Certificate::GetIssuerName()
-extern "C"  ASN1_t1254135647 * X509Certificate_GetIssuerName_m3574279585 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  ASN1_t1254135647 * X509Certificate_GetIssuerName_m1167655045 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Mono.Security.ASN1 Mono.Security.X509.X509Certificate::GetSubjectName()
-extern "C"  ASN1_t1254135647 * X509Certificate_GetSubjectName_m1835981788 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  ASN1_t1254135647 * X509Certificate_GetSubjectName_m245065080 (X509Certificate_t273828613 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Mono.Security.X509.X509Certificate::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C"  void X509Certificate_GetObjectData_m2959679786 (X509Certificate_t273828613 * __this, SerializationInfo_t2995724695 * ___info, StreamingContext_t986364934  ___context, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Byte[] Mono.Security.X509.X509Certificate::PEM(System.String,System.Byte[])

@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<DustinHorne.Json.Examples.JNSimpleObjectModel>::VerifyState()
 #define Enumerator_VerifyState_m2626938871(__this, method) ((  void (*) (Enumerator_t4294619873 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<DustinHorne.Json.Examples.JNSimpleObjectModel>::MoveNext()
-#define Enumerator_MoveNext_m567381125(__this, method) ((  bool (*) (Enumerator_t4294619873 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m567381125(__this, method) ((  bool (*) (Enumerator_t4294619873 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<DustinHorne.Json.Examples.JNSimpleObjectModel>::get_Current()
-#define Enumerator_get_Current_m4116628462(__this, method) ((  JNSimpleObjectModel_t1116910616 * (*) (Enumerator_t4294619873 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m4116628462(__this, method) ((  JNSimpleObjectModel_t1116910616 * (*) (Enumerator_t4294619873 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

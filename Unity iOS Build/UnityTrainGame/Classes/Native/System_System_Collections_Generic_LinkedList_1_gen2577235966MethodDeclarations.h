@@ -82,8 +82,8 @@ extern "C"  void LinkedList_1_CopyTo_m3470139544_gshared (LinkedList_1_t25772359
 extern "C"  LinkedListNode_1_t539097040 * LinkedList_1_Find_m2643247334_gshared (LinkedList_1_t2577235966 * __this, Il2CppObject * ___value, const MethodInfo* method);
 #define LinkedList_1_Find_m2643247334(__this, ___value, method) ((  LinkedListNode_1_t539097040 * (*) (LinkedList_1_t2577235966 *, Il2CppObject *, const MethodInfo*))LinkedList_1_Find_m2643247334_gshared)(__this, ___value, method)
 // System.Collections.Generic.LinkedList`1/Enumerator<T> System.Collections.Generic.LinkedList`1<System.Object>::GetEnumerator()
-extern "C"  Enumerator_t4014815678  LinkedList_1_GetEnumerator_m3713737734_gshared (LinkedList_1_t2577235966 * __this, const MethodInfo* method);
-#define LinkedList_1_GetEnumerator_m3713737734(__this, method) ((  Enumerator_t4014815678  (*) (LinkedList_1_t2577235966 *, const MethodInfo*))LinkedList_1_GetEnumerator_m3713737734_gshared)(__this, method)
+extern "C"  Enumerator_t4014815679  LinkedList_1_GetEnumerator_m3713737734_gshared (LinkedList_1_t2577235966 * __this, const MethodInfo* method);
+#define LinkedList_1_GetEnumerator_m3713737734(__this, method) ((  Enumerator_t4014815679  (*) (LinkedList_1_t2577235966 *, const MethodInfo*))LinkedList_1_GetEnumerator_m3713737734_gshared)(__this, method)
 // System.Void System.Collections.Generic.LinkedList`1<System.Object>::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C"  void LinkedList_1_GetObjectData_m3974480661_gshared (LinkedList_1_t2577235966 * __this, SerializationInfo_t2995724695 * ___info, StreamingContext_t986364934  ___context, const MethodInfo* method);
 #define LinkedList_1_GetObjectData_m3974480661(__this, ___info, ___context, method) ((  void (*) (LinkedList_1_t2577235966 *, SerializationInfo_t2995724695 *, StreamingContext_t986364934 , const MethodInfo*))LinkedList_1_GetObjectData_m3974480661_gshared)(__this, ___info, ___context, method)

@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<System.Collections.Hashtable>::VerifyState()
 #define Enumerator_VerifyState_m3358531897(__this, method) ((  void (*) (Enumerator_t2758005691 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.Collections.Hashtable>::MoveNext()
-#define Enumerator_MoveNext_m2496354148(__this, method) ((  bool (*) (Enumerator_t2758005691 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m2496354148(__this, method) ((  bool (*) (Enumerator_t2758005691 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<System.Collections.Hashtable>::get_Current()
-#define Enumerator_get_Current_m3759612152(__this, method) ((  Hashtable_t3875263730 * (*) (Enumerator_t2758005691 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m3759612152(__this, method) ((  Hashtable_t3875263730 * (*) (Enumerator_t2758005691 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

@@ -21,14 +21,14 @@
 #endif
 
 // Newtonsoft.Json.JsonWriter/State
-struct  State_t80204915 
+struct  State_t80204916 
 {
 public:
 	// System.Int32 Newtonsoft.Json.JsonWriter/State::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(State_t80204915, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(State_t80204916, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)

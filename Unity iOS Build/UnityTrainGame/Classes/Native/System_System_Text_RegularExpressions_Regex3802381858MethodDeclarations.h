@@ -42,7 +42,7 @@ struct Int32U5BU5D_t1809983122;
 // System.Void System.Text.RegularExpressions.Regex::.ctor()
 extern "C"  void Regex__ctor_m523653122 (Regex_t3802381858 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C"  void Regex__ctor_m2980635200 (Regex_t3802381858 * __this, String_t* ___pattern, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void Regex__ctor_m574010660 (Regex_t3802381858 * __this, String_t* ___pattern, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String,System.Text.RegularExpressions.RegexOptions)
 extern "C"  void Regex__ctor_m2068483208 (Regex_t3802381858 * __this, String_t* ___pattern, int32_t ___options, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
@@ -84,7 +84,7 @@ extern "C"  bool Regex_IsMatch_m3759940314 (Regex_t3802381858 * __this, String_t
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.Regex::Match(System.String,System.Int32)
 extern "C"  Match_t3797657504 * Regex_Match_m1021969427 (Regex_t3802381858 * __this, String_t* ___input, int32_t ___startat, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.RegularExpressions.MatchCollection System.Text.RegularExpressions.Regex::Matches(System.String)
-extern "C"  MatchCollection_t318449694 * Regex_Matches_m3092142232 (Regex_t3802381858 * __this, String_t* ___input, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  MatchCollection_t318449694 * Regex_Matches_m4260316212 (Regex_t3802381858 * __this, String_t* ___input, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.RegularExpressions.MatchCollection System.Text.RegularExpressions.Regex::Matches(System.String,System.Int32)
 extern "C"  MatchCollection_t318449694 * Regex_Matches_m4271078207 (Regex_t3802381858 * __this, String_t* ___input, int32_t ___startat, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.RegularExpressions.Regex::Replace(System.String,System.String)

@@ -35,7 +35,7 @@ struct AsyncCallback_t1363551830;
 #include "mscorlib_System_AsyncCallback1363551830.h"
 
 // System.Void Mono.Security.Protocol.Tls.PrivateKeySelectionCallback::.ctor(System.Object,System.IntPtr)
-extern "C"  void PrivateKeySelectionCallback__ctor_m3558509429 (PrivateKeySelectionCallback_t4199006061 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void PrivateKeySelectionCallback__ctor_m3708014169 (PrivateKeySelectionCallback_t4199006061 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Security.Cryptography.AsymmetricAlgorithm Mono.Security.Protocol.Tls.PrivateKeySelectionCallback::Invoke(System.Security.Cryptography.X509Certificates.X509Certificate,System.String)
 extern "C"  AsymmetricAlgorithm_t4236534322 * PrivateKeySelectionCallback_Invoke_m2835982706 (PrivateKeySelectionCallback_t4199006061 * __this, X509Certificate_t3432067208 * ___certificate, String_t* ___targetHost, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C" AsymmetricAlgorithm_t4236534322 * pinvoke_delegate_wrapper_PrivateKeySelectionCallback_t4199006061(Il2CppObject* delegate, X509Certificate_t3432067208 * ___certificate, String_t* ___targetHost);

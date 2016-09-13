@@ -13,6 +13,38 @@
 #include <limits>
 #include <assert.h>
 
+// IAPDemo
+struct IAPDemo_t2300162107;
+// UnityEngine.Purchasing.IStoreController
+struct IStoreController_t2959286891;
+// UnityEngine.Purchasing.IExtensionProvider
+struct IExtensionProvider_t2030462110;
+// UnityEngine.Purchasing.IAppleExtensions
+struct IAppleExtensions_t100643356;
+// System.Object
+struct Il2CppObject;
+// UnityEngine.Purchasing.ISamsungAppsExtensions
+struct ISamsungAppsExtensions_t3036255374;
+// UnityEngine.Purchasing.PurchaseEventArgs
+struct PurchaseEventArgs_t3858045197;
+// UnityEngine.Purchasing.Product
+struct Product_t16267110;
+// UnityEngine.Purchasing.IMicrosoftConfiguration
+struct IMicrosoftConfiguration_t2974750952;
+// UnityEngine.Purchasing.IAmazonConfiguration
+struct IAmazonConfiguration_t1574650080;
+// UnityEngine.Purchasing.ISamsungAppsConfiguration
+struct ISamsungAppsConfiguration_t170853066;
+// UnityEngine.Purchasing.ITizenStoreConfiguration
+struct ITizenStoreConfiguration_t2923730513;
+// System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.Product>
+struct IEnumerable_1_t2888421466;
+// UnityEngine.UI.Dropdown
+struct Dropdown_t2916437562;
+// UnityEngine.UI.Button
+struct Button_t990034267;
+// UnityEngine.UI.Text
+struct Text_t3286458198;
 // iTween
 struct iTween_t3087282050;
 // System.Collections.Hashtable
@@ -21,8 +53,6 @@ struct Hashtable_t3875263730;
 struct GameObject_t4012695102;
 // UnityEngine.GUITexture
 struct GUITexture_t63494093;
-// System.Object
-struct Il2CppObject;
 // UnityEngine.GUIText
 struct GUIText_t2614635829;
 // UnityEngine.Renderer
@@ -79,24 +109,86 @@ struct SampleInfo_t2136294808;
 #include "mscorlib_System_Array2840145358.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_U3CModuleU3E86524790.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_U3CModuleU3E86524790MethodDeclarations.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_IAPDemo2300162107.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_IAPDemo2300162107MethodDeclarations.h"
+#include "mscorlib_System_Void2779279689.h"
+#include "UnityEngine_UnityEngine_MonoBehaviour3012272455MethodDeclarations.h"
+#include "mscorlib_System_Int322847414787.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Produ188697444MethodDeclarations.h"
+#include "mscorlib_System_Action_1_gen164719815MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Debug1588791936MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Produc16267110MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Prod1655822261MethodDeclarations.h"
+#include "mscorlib_System_Decimal1688557254MethodDeclarations.h"
+#include "mscorlib_System_String968488902MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Dropdown2916437562MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Dropdown_OptionData3366553055MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Produc16267110.h"
+#include "UnityEngine.Purchasing_ArrayTypes.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Decimal1688557254.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Produ188697444.h"
+#include "mscorlib_System_Action_1_gen164719815.h"
+#include "mscorlib_System_Object837106420.h"
+#include "mscorlib_System_IntPtr676692020.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_ArrayTypes.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Prod1655822261.h"
+#include "UnityEngine_UI_UnityEngine_UI_Dropdown2916437562.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen4163512024.h"
+#include "UnityEngine_UI_UnityEngine_UI_Dropdown_OptionData3366553055.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen4163512024MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Purc3942721256.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Purc3858045197.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Purc3858045197MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Produ915591705MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Produ915591705.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Purc2274432868.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Init1104172581.h"
+#include "Stores_UnityEngine_Purchasing_StandardPurchasingMo3337363742MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Confi622246012MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_IDs2956127567MethodDeclarations.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Unit3426456906MethodDeclarations.h"
+#include "Stores_UnityEngine_Purchasing_StandardPurchasingMo3337363742.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Confi622246012.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_IDs2956127567.h"
+#include "Stores_UnityEngine_Purchasing_FakeStoreUIMode2289974874.h"
+#include "UnityEngine_Purchasing_UnityEngine_Purchasing_Prod3132308288.h"
+#include "System_Core_System_Collections_Generic_HashSet_1_g3614280376.h"
+#include "Stores_UnityEngine_Purchasing_SamsungAppsMode1611727814.h"
+#include "Stores_UnityEngine_Purchasing_AndroidStore2117641833.h"
+#include "UnityEngine_UnityEngine_Application450040189MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Component2126946602MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_GameObject4012695102MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Events_UnityAction_1_gen2827876692MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Events_UnityEvent_1_gen1789869598MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Button990034267MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Events_UnityAction909267611MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Events_UnityEvent2938797301MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Object3878351788MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Selectable3621744255.h"
+#include "UnityEngine_UnityEngine_RuntimePlatform1574985880.h"
+#include "UnityEngine_UI_UnityEngine_UI_Button990034267.h"
+#include "UnityEngine_UnityEngine_GameObject4012695102.h"
+#include "UnityEngine_UI_UnityEngine_UI_Dropdown_DropdownEve2203078889.h"
+#include "UnityEngine_UnityEngine_Events_UnityAction_1_gen2827876692.h"
+#include "UnityEngine_UI_UnityEngine_UI_Button_ButtonClickedE962981669.h"
+#include "UnityEngine_UnityEngine_Events_UnityAction909267611.h"
+#include "UnityEngine_UnityEngine_Object3878351788.h"
+#include "mscorlib_System_Boolean211005341MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Text3286458198.h"
+#include "UnityEngine_UI_UnityEngine_UI_Text3286458198MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Selectable3621744255MethodDeclarations.h"
+#include "mscorlib_System_Action_1_gen359458046MethodDeclarations.h"
+#include "mscorlib_System_Action_1_gen359458046.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween3087282050.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween3087282050MethodDeclarations.h"
 #include "mscorlib_System_Collections_Hashtable3875263730.h"
-#include "mscorlib_System_Void2779279689.h"
-#include "UnityEngine_UnityEngine_MonoBehaviour3012272455MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen377255403MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen377255403.h"
-#include "UnityEngine_UnityEngine_GameObject4012695102.h"
 #include "UnityEngine_UnityEngine_Vector33525329789MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Vector33525329789.h"
 #include "mscorlib_System_Single958209021.h"
-#include "UnityEngine_UnityEngine_Object3878351788MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Debug1588791936MethodDeclarations.h"
-#include "mscorlib_System_Boolean211005341.h"
-#include "UnityEngine_UnityEngine_Object3878351788.h"
-#include "mscorlib_ArrayTypes.h"
-#include "mscorlib_System_Object837106420.h"
-#include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_Object837106420MethodDeclarations.h"
 #include "mscorlib_System_Type2779229935MethodDeclarations.h"
 #include "mscorlib_System_Collections_Hashtable3875263730MethodDeclarations.h"
@@ -104,8 +196,6 @@ struct SampleInfo_t2136294808;
 #include "mscorlib_System_RuntimeTypeHandle1864875887.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_EaseType3571590248.h"
 #include "UnityEngine_UnityEngine_Color1588175760.h"
-#include "UnityEngine_UnityEngine_GameObject4012695102MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Component2126946602MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUITexture63494093MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUIText2614635829MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Material1886596500MethodDeclarations.h"
@@ -126,14 +216,12 @@ struct SampleInfo_t2136294808;
 #include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen2116400401.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_ge190145395.h"
-#include "mscorlib_System_Int322847414787.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_Defaults708925042.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_Defaults708925042MethodDeclarations.h"
 #include "mscorlib_System_Array2840145358MethodDeclarations.h"
 #include "UnityEngine_ArrayTypes.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_ApplyTween2072814525MethodDeclarations.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_ApplyTween2072814525.h"
-#include "mscorlib_System_IntPtr676692020.h"
 #include "UnityEngine_UnityEngine_Rect1525428817.h"
 #include "mscorlib_System_Math2778998461MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Component2126946602.h"
@@ -156,7 +244,6 @@ struct SampleInfo_t2136294808;
 #include "UnityEngine_UnityEngine_Random3963434288MethodDeclarations.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_U3CTweenDelay1384169929MethodDeclarations.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_U3CTweenDelay1384169929.h"
-#include "mscorlib_System_String968488902MethodDeclarations.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_U3CTweenResta1621025022MethodDeclarations.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_U3CTweenResta1621025022.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_iTween_LoopType2322152478.h"
@@ -199,12 +286,35 @@ struct SampleInfo_t2136294808;
 #include "AssemblyU2DCSharpU2Dfirstpass_SampleInfo2136294808.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_SampleInfo2136294808MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayout2490032242MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Application450040189MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayoutOption3151226183.h"
 
+// !!0 UnityEngine.Purchasing.IExtensionProvider::GetExtension<System.Object>()
+extern "C"  Il2CppObject * IExtensionProvider_GetExtension_TisIl2CppObject_m1826336811_gshared (Il2CppObject * __this, const MethodInfo* method);
+#define IExtensionProvider_GetExtension_TisIl2CppObject_m1826336811(__this, method) ((  Il2CppObject * (*) (Il2CppObject *, const MethodInfo*))IExtensionProvider_GetExtension_TisIl2CppObject_m1826336811_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.IExtensionProvider::GetExtension<UnityEngine.Purchasing.IAppleExtensions>()
+#define IExtensionProvider_GetExtension_TisIAppleExtensions_t100643356_m3195289899(__this, method) ((  Il2CppObject * (*) (Il2CppObject *, const MethodInfo*))IExtensionProvider_GetExtension_TisIl2CppObject_m1826336811_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.IExtensionProvider::GetExtension<UnityEngine.Purchasing.ISamsungAppsExtensions>()
+#define IExtensionProvider_GetExtension_TisISamsungAppsExtensions_t3036255374_m1477124281(__this, method) ((  Il2CppObject * (*) (Il2CppObject *, const MethodInfo*))IExtensionProvider_GetExtension_TisIl2CppObject_m1826336811_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.ConfigurationBuilder::Configure<System.Object>()
+extern "C"  Il2CppObject * ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510_gshared (ConfigurationBuilder_t622246012 * __this, const MethodInfo* method);
+#define ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510(__this, method) ((  Il2CppObject * (*) (ConfigurationBuilder_t622246012 *, const MethodInfo*))ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.ConfigurationBuilder::Configure<UnityEngine.Purchasing.IMicrosoftConfiguration>()
+#define ConfigurationBuilder_Configure_TisIMicrosoftConfiguration_t2974750952_m1557267050(__this, method) ((  Il2CppObject * (*) (ConfigurationBuilder_t622246012 *, const MethodInfo*))ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.ConfigurationBuilder::Configure<UnityEngine.Purchasing.IAmazonConfiguration>()
+#define ConfigurationBuilder_Configure_TisIAmazonConfiguration_t1574650080_m2615987130(__this, method) ((  Il2CppObject * (*) (ConfigurationBuilder_t622246012 *, const MethodInfo*))ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.ConfigurationBuilder::Configure<UnityEngine.Purchasing.ISamsungAppsConfiguration>()
+#define ConfigurationBuilder_Configure_TisISamsungAppsConfiguration_t170853066_m1697939016(__this, method) ((  Il2CppObject * (*) (ConfigurationBuilder_t622246012 *, const MethodInfo*))ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510_gshared)(__this, method)
+// !!0 UnityEngine.Purchasing.ConfigurationBuilder::Configure<UnityEngine.Purchasing.ITizenStoreConfiguration>()
+#define ConfigurationBuilder_Configure_TisITizenStoreConfiguration_t2923730513_m4252607145(__this, method) ((  Il2CppObject * (*) (ConfigurationBuilder_t622246012 *, const MethodInfo*))ConfigurationBuilder_Configure_TisIl2CppObject_m3478168510_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
 extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t4012695102 * __this, const MethodInfo* method);
 #define GameObject_GetComponent_TisIl2CppObject_m2447772384(__this, method) ((  Il2CppObject * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.Dropdown>()
+#define GameObject_GetComponent_TisDropdown_t2916437562_m899537489(__this, method) ((  Dropdown_t2916437562 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.Button>()
+#define GameObject_GetComponent_TisButton_t990034267_m901368912(__this, method) ((  Button_t990034267 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.Text>()
+#define GameObject_GetComponent_TisText_t3286458198_m3253439797(__this, method) ((  Text_t3286458198 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.GUITexture>()
 #define GameObject_GetComponent_TisGUITexture_t63494093_m2461017842(__this, method) ((  GUITexture_t63494093 * (*) (GameObject_t4012695102 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.GUIText>()
@@ -256,6 +366,1223 @@ extern "C"  ObjectU5BU5D_t11523773* Component_GetComponents_TisIl2CppObject_m378
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void IAPDemo::.ctor()
+extern "C"  void IAPDemo__ctor_m2472349788 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_m_SelectedItemIndex_5((-1));
+		MonoBehaviour__ctor_m2022291967(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void IAPDemo::OnInitialized(UnityEngine.Purchasing.IStoreController,UnityEngine.Purchasing.IExtensionProvider)
+extern TypeInfo* IStoreController_t2959286891_il2cpp_TypeInfo_var;
+extern TypeInfo* Action_1_t164719815_il2cpp_TypeInfo_var;
+extern TypeInfo* IAppleExtensions_t100643356_il2cpp_TypeInfo_var;
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern TypeInfo* StringU5BU5D_t2956870243_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* OptionData_t3366553055_il2cpp_TypeInfo_var;
+extern const MethodInfo* IExtensionProvider_GetExtension_TisIAppleExtensions_t100643356_m3195289899_MethodInfo_var;
+extern const MethodInfo* IExtensionProvider_GetExtension_TisISamsungAppsExtensions_t3036255374_m1477124281_MethodInfo_var;
+extern const MethodInfo* IAPDemo_OnDeferred_m1837455280_MethodInfo_var;
+extern const MethodInfo* Action_1__ctor_m4165554525_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral652619217;
+extern Il2CppCodeGenString* _stringLiteral32179;
+extern Il2CppCodeGenString* _stringLiteral3299492764;
+extern const uint32_t IAPDemo_OnInitialized_m4145729570_MetadataUsageId;
+extern "C"  void IAPDemo_OnInitialized_m4145729570 (IAPDemo_t2300162107 * __this, Il2CppObject * ___controller, Il2CppObject * ___extensions, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_OnInitialized_m4145729570_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Product_t16267110 * V_0 = NULL;
+	ProductU5BU5D_t687992899* V_1 = NULL;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	Product_t16267110 * V_4 = NULL;
+	String_t* V_5 = NULL;
+	Decimal_t1688557254  V_6;
+	memset(&V_6, 0, sizeof(V_6));
+	{
+		Il2CppObject * L_0 = ___controller;
+		__this->set_m_Controller_2(L_0);
+		Il2CppObject * L_1 = ___extensions;
+		NullCheck(L_1);
+		Il2CppObject * L_2 = GenericInterfaceFuncInvoker0< Il2CppObject * >::Invoke(IExtensionProvider_GetExtension_TisIAppleExtensions_t100643356_m3195289899_MethodInfo_var, L_1);
+		__this->set_m_AppleExtensions_3(L_2);
+		Il2CppObject * L_3 = ___extensions;
+		NullCheck(L_3);
+		Il2CppObject * L_4 = GenericInterfaceFuncInvoker0< Il2CppObject * >::Invoke(IExtensionProvider_GetExtension_TisISamsungAppsExtensions_t3036255374_m1477124281_MethodInfo_var, L_3);
+		__this->set_m_SamsungExtensions_4(L_4);
+		Il2CppObject * L_5 = ___controller;
+		NullCheck(L_5);
+		ProductCollection_t188697444 * L_6 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_5);
+		NullCheck(L_6);
+		ProductU5BU5D_t687992899* L_7 = ProductCollection_get_all_m2017284433(L_6, /*hidden argument*/NULL);
+		IAPDemo_InitUI_m1256308941(__this, (Il2CppObject*)(Il2CppObject*)L_7, /*hidden argument*/NULL);
+		Il2CppObject * L_8 = __this->get_m_AppleExtensions_3();
+		IntPtr_t L_9;
+		L_9.set_m_value_0((void*)IAPDemo_OnDeferred_m1837455280_MethodInfo_var);
+		Action_1_t164719815 * L_10 = (Action_1_t164719815 *)il2cpp_codegen_object_new(Action_1_t164719815_il2cpp_TypeInfo_var);
+		Action_1__ctor_m4165554525(L_10, __this, L_9, /*hidden argument*/Action_1__ctor_m4165554525_MethodInfo_var);
+		NullCheck(L_8);
+		InterfaceActionInvoker1< Action_1_t164719815 * >::Invoke(1 /* System.Void UnityEngine.Purchasing.IAppleExtensions::RegisterPurchaseDeferredListener(System.Action`1<UnityEngine.Purchasing.Product>) */, IAppleExtensions_t100643356_il2cpp_TypeInfo_var, L_8, L_10);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral652619217, /*hidden argument*/NULL);
+		Il2CppObject * L_11 = ___controller;
+		NullCheck(L_11);
+		ProductCollection_t188697444 * L_12 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_11);
+		NullCheck(L_12);
+		ProductU5BU5D_t687992899* L_13 = ProductCollection_get_all_m2017284433(L_12, /*hidden argument*/NULL);
+		V_1 = L_13;
+		V_2 = 0;
+		goto IL_00ed;
+	}
+
+IL_0064:
+	{
+		ProductU5BU5D_t687992899* L_14 = V_1;
+		int32_t L_15 = V_2;
+		NullCheck(L_14);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_14, L_15);
+		int32_t L_16 = L_15;
+		V_0 = ((L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_16)));
+		Product_t16267110 * L_17 = V_0;
+		NullCheck(L_17);
+		bool L_18 = Product_get_availableToPurchase_m3065859940(L_17, /*hidden argument*/NULL);
+		if (!L_18)
+		{
+			goto IL_00e9;
+		}
+	}
+	{
+		StringU5BU5D_t2956870243* L_19 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)7));
+		Product_t16267110 * L_20 = V_0;
+		NullCheck(L_20);
+		ProductMetadata_t1655822261 * L_21 = Product_get_metadata_m1996137622(L_20, /*hidden argument*/NULL);
+		NullCheck(L_21);
+		String_t* L_22 = ProductMetadata_get_localizedTitle_m3607244944(L_21, /*hidden argument*/NULL);
+		NullCheck(L_19);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_19, 0);
+		ArrayElementTypeCheck (L_19, L_22);
+		(L_19)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_22);
+		StringU5BU5D_t2956870243* L_23 = L_19;
+		Product_t16267110 * L_24 = V_0;
+		NullCheck(L_24);
+		ProductMetadata_t1655822261 * L_25 = Product_get_metadata_m1996137622(L_24, /*hidden argument*/NULL);
+		NullCheck(L_25);
+		String_t* L_26 = ProductMetadata_get_localizedDescription_m656225268(L_25, /*hidden argument*/NULL);
+		NullCheck(L_23);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_23, 1);
+		ArrayElementTypeCheck (L_23, L_26);
+		(L_23)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_26);
+		StringU5BU5D_t2956870243* L_27 = L_23;
+		Product_t16267110 * L_28 = V_0;
+		NullCheck(L_28);
+		ProductMetadata_t1655822261 * L_29 = Product_get_metadata_m1996137622(L_28, /*hidden argument*/NULL);
+		NullCheck(L_29);
+		String_t* L_30 = ProductMetadata_get_isoCurrencyCode_m945584658(L_29, /*hidden argument*/NULL);
+		NullCheck(L_27);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_27, 2);
+		ArrayElementTypeCheck (L_27, L_30);
+		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_30);
+		StringU5BU5D_t2956870243* L_31 = L_27;
+		Product_t16267110 * L_32 = V_0;
+		NullCheck(L_32);
+		ProductMetadata_t1655822261 * L_33 = Product_get_metadata_m1996137622(L_32, /*hidden argument*/NULL);
+		NullCheck(L_33);
+		Decimal_t1688557254  L_34 = ProductMetadata_get_localizedPrice_m1236125815(L_33, /*hidden argument*/NULL);
+		V_6 = L_34;
+		String_t* L_35 = Decimal_ToString_m143310003((&V_6), /*hidden argument*/NULL);
+		NullCheck(L_31);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_31, 3);
+		ArrayElementTypeCheck (L_31, L_35);
+		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_35);
+		StringU5BU5D_t2956870243* L_36 = L_31;
+		Product_t16267110 * L_37 = V_0;
+		NullCheck(L_37);
+		ProductMetadata_t1655822261 * L_38 = Product_get_metadata_m1996137622(L_37, /*hidden argument*/NULL);
+		NullCheck(L_38);
+		String_t* L_39 = ProductMetadata_get_localizedPriceString_m1135811378(L_38, /*hidden argument*/NULL);
+		NullCheck(L_36);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_36, 4);
+		ArrayElementTypeCheck (L_36, L_39);
+		(L_36)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_39);
+		StringU5BU5D_t2956870243* L_40 = L_36;
+		Product_t16267110 * L_41 = V_0;
+		NullCheck(L_41);
+		String_t* L_42 = Product_get_transactionID_m3111644087(L_41, /*hidden argument*/NULL);
+		NullCheck(L_40);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_40, 5);
+		ArrayElementTypeCheck (L_40, L_42);
+		(L_40)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)L_42);
+		StringU5BU5D_t2956870243* L_43 = L_40;
+		Product_t16267110 * L_44 = V_0;
+		NullCheck(L_44);
+		String_t* L_45 = Product_get_receipt_m1032630134(L_44, /*hidden argument*/NULL);
+		NullCheck(L_43);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_43, 6);
+		ArrayElementTypeCheck (L_43, L_45);
+		(L_43)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)L_45);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_46 = String_Join_m2789530325(NULL /*static, unused*/, _stringLiteral32179, L_43, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_46, /*hidden argument*/NULL);
+	}
+
+IL_00e9:
+	{
+		int32_t L_47 = V_2;
+		V_2 = ((int32_t)((int32_t)L_47+(int32_t)1));
+	}
+
+IL_00ed:
+	{
+		int32_t L_48 = V_2;
+		ProductU5BU5D_t687992899* L_49 = V_1;
+		NullCheck(L_49);
+		if ((((int32_t)L_48) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_49)->max_length)))))))
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		Il2CppObject * L_50 = __this->get_m_Controller_2();
+		NullCheck(L_50);
+		ProductCollection_t188697444 * L_51 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_50);
+		NullCheck(L_51);
+		ProductU5BU5D_t687992899* L_52 = ProductCollection_get_all_m2017284433(L_51, /*hidden argument*/NULL);
+		NullCheck(L_52);
+		if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_52)->max_length))))) <= ((int32_t)0)))
+		{
+			goto IL_0115;
+		}
+	}
+	{
+		__this->set_m_SelectedItemIndex_5(0);
+	}
+
+IL_0115:
+	{
+		V_3 = 0;
+		goto IL_0170;
+	}
+
+IL_011c:
+	{
+		Il2CppObject * L_53 = __this->get_m_Controller_2();
+		NullCheck(L_53);
+		ProductCollection_t188697444 * L_54 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_53);
+		NullCheck(L_54);
+		ProductU5BU5D_t687992899* L_55 = ProductCollection_get_all_m2017284433(L_54, /*hidden argument*/NULL);
+		int32_t L_56 = V_3;
+		NullCheck(L_55);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_55, L_56);
+		int32_t L_57 = L_56;
+		V_4 = ((L_55)->GetAt(static_cast<il2cpp_array_size_t>(L_57)));
+		Product_t16267110 * L_58 = V_4;
+		NullCheck(L_58);
+		ProductMetadata_t1655822261 * L_59 = Product_get_metadata_m1996137622(L_58, /*hidden argument*/NULL);
+		NullCheck(L_59);
+		String_t* L_60 = ProductMetadata_get_localizedTitle_m3607244944(L_59, /*hidden argument*/NULL);
+		Product_t16267110 * L_61 = V_4;
+		NullCheck(L_61);
+		ProductMetadata_t1655822261 * L_62 = Product_get_metadata_m1996137622(L_61, /*hidden argument*/NULL);
+		NullCheck(L_62);
+		String_t* L_63 = ProductMetadata_get_localizedPriceString_m1135811378(L_62, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_64 = String_Format_m2398979370(NULL /*static, unused*/, _stringLiteral3299492764, L_60, L_63, /*hidden argument*/NULL);
+		V_5 = L_64;
+		Dropdown_t2916437562 * L_65 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+		NullCheck(L_65);
+		List_1_t4163512024 * L_66 = Dropdown_get_options_m399918042(L_65, /*hidden argument*/NULL);
+		int32_t L_67 = V_3;
+		String_t* L_68 = V_5;
+		OptionData_t3366553055 * L_69 = (OptionData_t3366553055 *)il2cpp_codegen_object_new(OptionData_t3366553055_il2cpp_TypeInfo_var);
+		OptionData__ctor_m3621517956(L_69, L_68, /*hidden argument*/NULL);
+		NullCheck(L_66);
+		VirtActionInvoker2< int32_t, OptionData_t3366553055 * >::Invoke(32 /* System.Void System.Collections.Generic.List`1<UnityEngine.UI.Dropdown/OptionData>::set_Item(System.Int32,!0) */, L_66, L_67, L_69);
+		int32_t L_70 = V_3;
+		V_3 = ((int32_t)((int32_t)L_70+(int32_t)1));
+	}
+
+IL_0170:
+	{
+		int32_t L_71 = V_3;
+		Il2CppObject * L_72 = __this->get_m_Controller_2();
+		NullCheck(L_72);
+		ProductCollection_t188697444 * L_73 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_72);
+		NullCheck(L_73);
+		ProductU5BU5D_t687992899* L_74 = ProductCollection_get_all_m2017284433(L_73, /*hidden argument*/NULL);
+		NullCheck(L_74);
+		if ((((int32_t)L_71) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_74)->max_length)))))))
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		Dropdown_t2916437562 * L_75 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+		NullCheck(L_75);
+		Dropdown_RefreshShownValue_m9458643(L_75, /*hidden argument*/NULL);
+		IAPDemo_UpdateHistoryUI_m2835966425(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.Purchasing.PurchaseProcessingResult IAPDemo::ProcessPurchase(UnityEngine.Purchasing.PurchaseEventArgs)
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3710786977;
+extern Il2CppCodeGenString* _stringLiteral2703289150;
+extern const uint32_t IAPDemo_ProcessPurchase_m1313773462_MetadataUsageId;
+extern "C"  int32_t IAPDemo_ProcessPurchase_m1313773462 (IAPDemo_t2300162107 * __this, PurchaseEventArgs_t3858045197 * ___e, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_ProcessPurchase_m1313773462_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		PurchaseEventArgs_t3858045197 * L_0 = ___e;
+		NullCheck(L_0);
+		Product_t16267110 * L_1 = PurchaseEventArgs_get_purchasedProduct_m2077277865(L_0, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		ProductDefinition_t915591705 * L_2 = Product_get_definition_m2740826390(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3 = ProductDefinition_get_id_m3802178610(L_2, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_4 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral3710786977, L_3, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+		PurchaseEventArgs_t3858045197 * L_5 = ___e;
+		NullCheck(L_5);
+		Product_t16267110 * L_6 = PurchaseEventArgs_get_purchasedProduct_m2077277865(L_5, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		String_t* L_7 = Product_get_receipt_m1032630134(L_6, /*hidden argument*/NULL);
+		String_t* L_8 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral2703289150, L_7, /*hidden argument*/NULL);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		__this->set_m_PurchaseInProgress_6((bool)0);
+		IAPDemo_UpdateHistoryUI_m2835966425(__this, /*hidden argument*/NULL);
+		return (int32_t)(0);
+	}
+}
+// System.Void IAPDemo::OnPurchaseFailed(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.PurchaseFailureReason)
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern TypeInfo* PurchaseFailureReason_t2274432868_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1833610306;
+extern const uint32_t IAPDemo_OnPurchaseFailed_m2134414947_MetadataUsageId;
+extern "C"  void IAPDemo_OnPurchaseFailed_m2134414947 (IAPDemo_t2300162107 * __this, Product_t16267110 * ___item, int32_t ___r, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_OnPurchaseFailed_m2134414947_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Product_t16267110 * L_0 = ___item;
+		NullCheck(L_0);
+		ProductDefinition_t915591705 * L_1 = Product_get_definition_m2740826390(L_0, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		String_t* L_2 = ProductDefinition_get_id_m3802178610(L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_3 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral1833610306, L_2, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		int32_t L_4 = ___r;
+		int32_t L_5 = L_4;
+		Il2CppObject * L_6 = Box(PurchaseFailureReason_t2274432868_il2cpp_TypeInfo_var, &L_5);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
+		__this->set_m_PurchaseInProgress_6((bool)0);
+		return;
+	}
+}
+// System.Void IAPDemo::OnInitializeFailed(UnityEngine.Purchasing.InitializationFailureReason)
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3448609450;
+extern Il2CppCodeGenString* _stringLiteral2249769472;
+extern Il2CppCodeGenString* _stringLiteral178716064;
+extern Il2CppCodeGenString* _stringLiteral2149648181;
+extern const uint32_t IAPDemo_OnInitializeFailed_m790429919_MetadataUsageId;
+extern "C"  void IAPDemo_OnInitializeFailed_m790429919 (IAPDemo_t2300162107 * __this, int32_t ___error, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_OnInitializeFailed_m790429919_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral3448609450, /*hidden argument*/NULL);
+		int32_t L_0 = ___error;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (L_1 == 0)
+		{
+			goto IL_0032;
+		}
+		if (L_1 == 1)
+		{
+			goto IL_0041;
+		}
+		if (L_1 == 2)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		goto IL_0050;
+	}
+
+IL_0023:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_LogError_m4127342994(NULL /*static, unused*/, _stringLiteral2249769472, /*hidden argument*/NULL);
+		goto IL_0050;
+	}
+
+IL_0032:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral178716064, /*hidden argument*/NULL);
+		goto IL_0050;
+	}
+
+IL_0041:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral2149648181, /*hidden argument*/NULL);
+		goto IL_0050;
+	}
+
+IL_0050:
+	{
+		return;
+	}
+}
+// System.Void IAPDemo::Awake()
+extern TypeInfo* StandardPurchasingModule_t3337363742_il2cpp_TypeInfo_var;
+extern TypeInfo* IPurchasingModuleU5BU5D_t2271052632_il2cpp_TypeInfo_var;
+extern TypeInfo* IMicrosoftConfiguration_t2974750952_il2cpp_TypeInfo_var;
+extern TypeInfo* IDs_t2956127567_il2cpp_TypeInfo_var;
+extern TypeInfo* StringU5BU5D_t2956870243_il2cpp_TypeInfo_var;
+extern TypeInfo* IAmazonConfiguration_t1574650080_il2cpp_TypeInfo_var;
+extern TypeInfo* ISamsungAppsConfiguration_t170853066_il2cpp_TypeInfo_var;
+extern TypeInfo* ITizenStoreConfiguration_t2923730513_il2cpp_TypeInfo_var;
+extern const MethodInfo* ConfigurationBuilder_Configure_TisIMicrosoftConfiguration_t2974750952_m1557267050_MethodInfo_var;
+extern const MethodInfo* ConfigurationBuilder_Configure_TisIAmazonConfiguration_t1574650080_m2615987130_MethodInfo_var;
+extern const MethodInfo* ConfigurationBuilder_Configure_TisISamsungAppsConfiguration_t170853066_m1697939016_MethodInfo_var;
+extern const MethodInfo* ConfigurationBuilder_Configure_TisITizenStoreConfiguration_t2923730513_m4252607145_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2327361809;
+extern Il2CppCodeGenString* _stringLiteral2663012082;
+extern Il2CppCodeGenString* _stringLiteral4158762383;
+extern Il2CppCodeGenString* _stringLiteral3118170273;
+extern Il2CppCodeGenString* _stringLiteral416056723;
+extern Il2CppCodeGenString* _stringLiteral305127309;
+extern Il2CppCodeGenString* _stringLiteral2969689966;
+extern Il2CppCodeGenString* _stringLiteral3118170268;
+extern Il2CppCodeGenString* _stringLiteral109860349;
+extern Il2CppCodeGenString* _stringLiteral2623380958;
+extern Il2CppCodeGenString* _stringLiteral3118170270;
+extern Il2CppCodeGenString* _stringLiteral341203229;
+extern Il2CppCodeGenString* _stringLiteral3778089214;
+extern Il2CppCodeGenString* _stringLiteral3103154669;
+extern const uint32_t IAPDemo_Awake_m2709955007_MetadataUsageId;
+extern "C"  void IAPDemo_Awake_m2709955007 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_Awake_m2709955007_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	StandardPurchasingModule_t3337363742 * V_0 = NULL;
+	ConfigurationBuilder_t622246012 * V_1 = NULL;
+	IDs_t2956127567 * V_2 = NULL;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(StandardPurchasingModule_t3337363742_il2cpp_TypeInfo_var);
+		StandardPurchasingModule_t3337363742 * L_0 = StandardPurchasingModule_Instance_m33401695(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_0;
+		StandardPurchasingModule_t3337363742 * L_1 = V_0;
+		NullCheck(L_1);
+		StandardPurchasingModule_set_useFakeStoreUIMode_m2074317900(L_1, 1, /*hidden argument*/NULL);
+		StandardPurchasingModule_t3337363742 * L_2 = V_0;
+		ConfigurationBuilder_t622246012 * L_3 = ConfigurationBuilder_Instance_m2276604038(NULL /*static, unused*/, L_2, ((IPurchasingModuleU5BU5D_t2271052632*)SZArrayNew(IPurchasingModuleU5BU5D_t2271052632_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+		V_1 = L_3;
+		ConfigurationBuilder_t622246012 * L_4 = V_1;
+		NullCheck(L_4);
+		Il2CppObject * L_5 = ConfigurationBuilder_Configure_TisIMicrosoftConfiguration_t2974750952_m1557267050(L_4, /*hidden argument*/ConfigurationBuilder_Configure_TisIMicrosoftConfiguration_t2974750952_m1557267050_MethodInfo_var);
+		NullCheck(L_5);
+		InterfaceActionInvoker1< bool >::Invoke(0 /* System.Void UnityEngine.Purchasing.IMicrosoftConfiguration::set_useMockBillingSystem(System.Boolean) */, IMicrosoftConfiguration_t2974750952_il2cpp_TypeInfo_var, L_5, (bool)1);
+		ConfigurationBuilder_t622246012 * L_6 = V_1;
+		IDs_t2956127567 * L_7 = (IDs_t2956127567 *)il2cpp_codegen_object_new(IDs_t2956127567_il2cpp_TypeInfo_var);
+		IDs__ctor_m1206690211(L_7, /*hidden argument*/NULL);
+		V_2 = L_7;
+		IDs_t2956127567 * L_8 = V_2;
+		StringU5BU5D_t2956870243* L_9 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_9);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_9, 0);
+		ArrayElementTypeCheck (L_9, _stringLiteral4158762383);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral4158762383);
+		NullCheck(L_8);
+		IDs_Add_m1562610554(L_8, _stringLiteral2663012082, L_9, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_10 = V_2;
+		StringU5BU5D_t2956870243* L_11 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_11);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_11, 0);
+		ArrayElementTypeCheck (L_11, _stringLiteral416056723);
+		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral416056723);
+		NullCheck(L_10);
+		IDs_Add_m1562610554(L_10, _stringLiteral3118170273, L_11, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_12 = V_2;
+		NullCheck(L_6);
+		ConfigurationBuilder_AddProduct_m1483534012(L_6, _stringLiteral2327361809, 0, L_12, /*hidden argument*/NULL);
+		ConfigurationBuilder_t622246012 * L_13 = V_1;
+		IDs_t2956127567 * L_14 = (IDs_t2956127567 *)il2cpp_codegen_object_new(IDs_t2956127567_il2cpp_TypeInfo_var);
+		IDs__ctor_m1206690211(L_14, /*hidden argument*/NULL);
+		V_2 = L_14;
+		IDs_t2956127567 * L_15 = V_2;
+		StringU5BU5D_t2956870243* L_16 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_16);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_16, 0);
+		ArrayElementTypeCheck (L_16, _stringLiteral4158762383);
+		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral4158762383);
+		NullCheck(L_15);
+		IDs_Add_m1562610554(L_15, _stringLiteral2969689966, L_16, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_17 = V_2;
+		StringU5BU5D_t2956870243* L_18 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_18);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_18, 0);
+		ArrayElementTypeCheck (L_18, _stringLiteral416056723);
+		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral416056723);
+		NullCheck(L_17);
+		IDs_Add_m1562610554(L_17, _stringLiteral3118170268, L_18, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_19 = V_2;
+		NullCheck(L_13);
+		ConfigurationBuilder_AddProduct_m1483534012(L_13, _stringLiteral305127309, 0, L_19, /*hidden argument*/NULL);
+		ConfigurationBuilder_t622246012 * L_20 = V_1;
+		IDs_t2956127567 * L_21 = (IDs_t2956127567 *)il2cpp_codegen_object_new(IDs_t2956127567_il2cpp_TypeInfo_var);
+		IDs__ctor_m1206690211(L_21, /*hidden argument*/NULL);
+		V_2 = L_21;
+		IDs_t2956127567 * L_22 = V_2;
+		StringU5BU5D_t2956870243* L_23 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_23);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_23, 0);
+		ArrayElementTypeCheck (L_23, _stringLiteral4158762383);
+		(L_23)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral4158762383);
+		NullCheck(L_22);
+		IDs_Add_m1562610554(L_22, _stringLiteral2623380958, L_23, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_24 = V_2;
+		StringU5BU5D_t2956870243* L_25 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_25);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_25, 0);
+		ArrayElementTypeCheck (L_25, _stringLiteral416056723);
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral416056723);
+		NullCheck(L_24);
+		IDs_Add_m1562610554(L_24, _stringLiteral3118170270, L_25, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_26 = V_2;
+		NullCheck(L_20);
+		ConfigurationBuilder_AddProduct_m1483534012(L_20, _stringLiteral109860349, 1, L_26, /*hidden argument*/NULL);
+		ConfigurationBuilder_t622246012 * L_27 = V_1;
+		IDs_t2956127567 * L_28 = (IDs_t2956127567 *)il2cpp_codegen_object_new(IDs_t2956127567_il2cpp_TypeInfo_var);
+		IDs__ctor_m1206690211(L_28, /*hidden argument*/NULL);
+		V_2 = L_28;
+		IDs_t2956127567 * L_29 = V_2;
+		StringU5BU5D_t2956870243* L_30 = ((StringU5BU5D_t2956870243*)SZArrayNew(StringU5BU5D_t2956870243_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_30);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_30, 0);
+		ArrayElementTypeCheck (L_30, _stringLiteral4158762383);
+		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral4158762383);
+		NullCheck(L_29);
+		IDs_Add_m1562610554(L_29, _stringLiteral3778089214, L_30, /*hidden argument*/NULL);
+		IDs_t2956127567 * L_31 = V_2;
+		NullCheck(L_27);
+		ConfigurationBuilder_AddProduct_m1483534012(L_27, _stringLiteral341203229, 2, L_31, /*hidden argument*/NULL);
+		ConfigurationBuilder_t622246012 * L_32 = V_1;
+		NullCheck(L_32);
+		Il2CppObject * L_33 = ConfigurationBuilder_Configure_TisIAmazonConfiguration_t1574650080_m2615987130(L_32, /*hidden argument*/ConfigurationBuilder_Configure_TisIAmazonConfiguration_t1574650080_m2615987130_MethodInfo_var);
+		ConfigurationBuilder_t622246012 * L_34 = V_1;
+		NullCheck(L_34);
+		HashSet_1_t3614280376 * L_35 = ConfigurationBuilder_get_products_m3467362703(L_34, /*hidden argument*/NULL);
+		NullCheck(L_33);
+		InterfaceActionInvoker1< HashSet_1_t3614280376 * >::Invoke(0 /* System.Void UnityEngine.Purchasing.IAmazonConfiguration::WriteSandboxJSON(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>) */, IAmazonConfiguration_t1574650080_il2cpp_TypeInfo_var, L_33, L_35);
+		ConfigurationBuilder_t622246012 * L_36 = V_1;
+		NullCheck(L_36);
+		Il2CppObject * L_37 = ConfigurationBuilder_Configure_TisISamsungAppsConfiguration_t170853066_m1697939016(L_36, /*hidden argument*/ConfigurationBuilder_Configure_TisISamsungAppsConfiguration_t170853066_m1697939016_MethodInfo_var);
+		NullCheck(L_37);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void UnityEngine.Purchasing.ISamsungAppsConfiguration::SetMode(UnityEngine.Purchasing.SamsungAppsMode) */, ISamsungAppsConfiguration_t170853066_il2cpp_TypeInfo_var, L_37, 1);
+		StandardPurchasingModule_t3337363742 * L_38 = V_0;
+		NullCheck(L_38);
+		int32_t L_39 = VirtFuncInvoker0< int32_t >::Invoke(6 /* UnityEngine.Purchasing.AndroidStore UnityEngine.Purchasing.StandardPurchasingModule::get_androidStore() */, L_38);
+		__this->set_m_IsSamsungAppsStoreSelected_8((bool)((((int32_t)L_39) == ((int32_t)2))? 1 : 0));
+		ConfigurationBuilder_t622246012 * L_40 = V_1;
+		NullCheck(L_40);
+		Il2CppObject * L_41 = ConfigurationBuilder_Configure_TisITizenStoreConfiguration_t2923730513_m4252607145(L_40, /*hidden argument*/ConfigurationBuilder_Configure_TisITizenStoreConfiguration_t2923730513_m4252607145_MethodInfo_var);
+		NullCheck(L_41);
+		InterfaceActionInvoker1< String_t* >::Invoke(0 /* System.Void UnityEngine.Purchasing.ITizenStoreConfiguration::SetGroupId(System.String) */, ITizenStoreConfiguration_t2923730513_il2cpp_TypeInfo_var, L_41, _stringLiteral3103154669);
+		ConfigurationBuilder_t622246012 * L_42 = V_1;
+		UnityPurchasing_Initialize_m1759774959(NULL /*static, unused*/, __this, L_42, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void IAPDemo::OnTransactionsRestored(System.Boolean)
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral256435821;
+extern const uint32_t IAPDemo_OnTransactionsRestored_m2391586217_MetadataUsageId;
+extern "C"  void IAPDemo_OnTransactionsRestored_m2391586217 (IAPDemo_t2300162107 * __this, bool ___success, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_OnTransactionsRestored_m2391586217_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral256435821, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void IAPDemo::OnDeferred(UnityEngine.Purchasing.Product)
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral451490724;
+extern const uint32_t IAPDemo_OnDeferred_m1837455280_MetadataUsageId;
+extern "C"  void IAPDemo_OnDeferred_m1837455280 (IAPDemo_t2300162107 * __this, Product_t16267110 * ___item, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_OnDeferred_m1837455280_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Product_t16267110 * L_0 = ___item;
+		NullCheck(L_0);
+		ProductDefinition_t915591705 * L_1 = Product_get_definition_m2740826390(L_0, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		String_t* L_2 = ProductDefinition_get_id_m3802178610(L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_3 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral451490724, L_2, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void IAPDemo::InitUI(System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.Product>)
+extern TypeInfo* IEnumerable_1_t2888421466_il2cpp_TypeInfo_var;
+extern TypeInfo* IEnumerator_1_t1499373558_il2cpp_TypeInfo_var;
+extern TypeInfo* ProductType_t3132308288_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* OptionData_t3366553055_il2cpp_TypeInfo_var;
+extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
+extern TypeInfo* IDisposable_t1628921374_il2cpp_TypeInfo_var;
+extern TypeInfo* UnityAction_1_t2827876692_il2cpp_TypeInfo_var;
+extern TypeInfo* UnityAction_t909267611_il2cpp_TypeInfo_var;
+extern const MethodInfo* IAPDemo_U3CInitUIU3Em__0_m2615411930_MethodInfo_var;
+extern const MethodInfo* UnityAction_1__ctor_m1291646548_MethodInfo_var;
+extern const MethodInfo* UnityEvent_1_AddListener_m2066362018_MethodInfo_var;
+extern const MethodInfo* IAPDemo_U3CInitUIU3Em__1_m3136461002_MethodInfo_var;
+extern const MethodInfo* IAPDemo_U3CInitUIU3Em__2_m3136461963_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3299492764;
+extern const uint32_t IAPDemo_InitUI_m1256308941_MetadataUsageId;
+extern "C"  void IAPDemo_InitUI_m1256308941 (IAPDemo_t2300162107 * __this, Il2CppObject* ___items, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_InitUI_m1256308941_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Product_t16267110 * V_0 = NULL;
+	Il2CppObject* V_1 = NULL;
+	String_t* V_2 = NULL;
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		Dropdown_t2916437562 * L_0 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+		__this->set_m_InteractableSelectable_7(L_0);
+		int32_t L_1 = Application_get_platform_m2918632856(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_1) == ((int32_t)8)))
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		int32_t L_2 = Application_get_platform_m2918632856(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		bool L_3 = __this->get_m_IsSamsungAppsStoreSelected_8();
+		if (L_3)
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		Button_t990034267 * L_4 = IAPDemo_GetRestoreButton_m2508131476(__this, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		GameObject_t4012695102 * L_5 = Component_get_gameObject_m1170635899(L_4, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		GameObject_SetActive_m3538205401(L_5, (bool)0, /*hidden argument*/NULL);
+	}
+
+IL_003e:
+	{
+		Il2CppObject* L_6 = ___items;
+		NullCheck(L_6);
+		Il2CppObject* L_7 = InterfaceFuncInvoker0< Il2CppObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.Product>::GetEnumerator() */, IEnumerable_1_t2888421466_il2cpp_TypeInfo_var, L_6);
+		V_1 = L_7;
+	}
+
+IL_0045:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_008d;
+		}
+
+IL_004a:
+		{
+			Il2CppObject* L_8 = V_1;
+			NullCheck(L_8);
+			Product_t16267110 * L_9 = InterfaceFuncInvoker0< Product_t16267110 * >::Invoke(0 /* !0 System.Collections.Generic.IEnumerator`1<UnityEngine.Purchasing.Product>::get_Current() */, IEnumerator_1_t1499373558_il2cpp_TypeInfo_var, L_8);
+			V_0 = L_9;
+			Product_t16267110 * L_10 = V_0;
+			NullCheck(L_10);
+			ProductDefinition_t915591705 * L_11 = Product_get_definition_m2740826390(L_10, /*hidden argument*/NULL);
+			NullCheck(L_11);
+			String_t* L_12 = ProductDefinition_get_id_m3802178610(L_11, /*hidden argument*/NULL);
+			Product_t16267110 * L_13 = V_0;
+			NullCheck(L_13);
+			ProductDefinition_t915591705 * L_14 = Product_get_definition_m2740826390(L_13, /*hidden argument*/NULL);
+			NullCheck(L_14);
+			int32_t L_15 = ProductDefinition_get_type_m3688495465(L_14, /*hidden argument*/NULL);
+			int32_t L_16 = L_15;
+			Il2CppObject * L_17 = Box(ProductType_t3132308288_il2cpp_TypeInfo_var, &L_16);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_18 = String_Format_m2398979370(NULL /*static, unused*/, _stringLiteral3299492764, L_12, L_17, /*hidden argument*/NULL);
+			V_2 = L_18;
+			Dropdown_t2916437562 * L_19 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+			NullCheck(L_19);
+			List_1_t4163512024 * L_20 = Dropdown_get_options_m399918042(L_19, /*hidden argument*/NULL);
+			String_t* L_21 = V_2;
+			OptionData_t3366553055 * L_22 = (OptionData_t3366553055 *)il2cpp_codegen_object_new(OptionData_t3366553055_il2cpp_TypeInfo_var);
+			OptionData__ctor_m3621517956(L_22, L_21, /*hidden argument*/NULL);
+			NullCheck(L_20);
+			VirtActionInvoker1< OptionData_t3366553055 * >::Invoke(22 /* System.Void System.Collections.Generic.List`1<UnityEngine.UI.Dropdown/OptionData>::Add(!0) */, L_20, L_22);
+		}
+
+IL_008d:
+		{
+			Il2CppObject* L_23 = V_1;
+			NullCheck(L_23);
+			bool L_24 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_23);
+			if (L_24)
+			{
+				goto IL_004a;
+			}
+		}
+
+IL_0098:
+		{
+			IL2CPP_LEAVE(0xA8, FINALLY_009d);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_009d;
+	}
+
+FINALLY_009d:
+	{ // begin finally (depth: 1)
+		{
+			Il2CppObject* L_25 = V_1;
+			if (L_25)
+			{
+				goto IL_00a1;
+			}
+		}
+
+IL_00a0:
+		{
+			IL2CPP_END_FINALLY(157)
+		}
+
+IL_00a1:
+		{
+			Il2CppObject* L_26 = V_1;
+			NullCheck(L_26);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1628921374_il2cpp_TypeInfo_var, L_26);
+			IL2CPP_END_FINALLY(157)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(157)
+	{
+		IL2CPP_JUMP_TBL(0xA8, IL_00a8)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_00a8:
+	{
+		Dropdown_t2916437562 * L_27 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+		NullCheck(L_27);
+		Dropdown_RefreshShownValue_m9458643(L_27, /*hidden argument*/NULL);
+		Dropdown_t2916437562 * L_28 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+		NullCheck(L_28);
+		DropdownEvent_t2203078889 * L_29 = Dropdown_get_onValueChanged_m2646663760(L_28, /*hidden argument*/NULL);
+		IntPtr_t L_30;
+		L_30.set_m_value_0((void*)IAPDemo_U3CInitUIU3Em__0_m2615411930_MethodInfo_var);
+		UnityAction_1_t2827876692 * L_31 = (UnityAction_1_t2827876692 *)il2cpp_codegen_object_new(UnityAction_1_t2827876692_il2cpp_TypeInfo_var);
+		UnityAction_1__ctor_m1291646548(L_31, __this, L_30, /*hidden argument*/UnityAction_1__ctor_m1291646548_MethodInfo_var);
+		NullCheck(L_29);
+		UnityEvent_1_AddListener_m2066362018(L_29, L_31, /*hidden argument*/UnityEvent_1_AddListener_m2066362018_MethodInfo_var);
+		Button_t990034267 * L_32 = IAPDemo_GetBuyButton_m2634699276(__this, /*hidden argument*/NULL);
+		NullCheck(L_32);
+		ButtonClickedEvent_t962981669 * L_33 = Button_get_onClick_m1145127631(L_32, /*hidden argument*/NULL);
+		IntPtr_t L_34;
+		L_34.set_m_value_0((void*)IAPDemo_U3CInitUIU3Em__1_m3136461002_MethodInfo_var);
+		UnityAction_t909267611 * L_35 = (UnityAction_t909267611 *)il2cpp_codegen_object_new(UnityAction_t909267611_il2cpp_TypeInfo_var);
+		UnityAction__ctor_m4130179243(L_35, __this, L_34, /*hidden argument*/NULL);
+		NullCheck(L_33);
+		UnityEvent_AddListener_m4099140869(L_33, L_35, /*hidden argument*/NULL);
+		Button_t990034267 * L_36 = IAPDemo_GetRestoreButton_m2508131476(__this, /*hidden argument*/NULL);
+		bool L_37 = Object_op_Inequality_m1296218211(NULL /*static, unused*/, L_36, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
+		if (!L_37)
+		{
+			goto IL_0118;
+		}
+	}
+	{
+		Button_t990034267 * L_38 = IAPDemo_GetRestoreButton_m2508131476(__this, /*hidden argument*/NULL);
+		NullCheck(L_38);
+		ButtonClickedEvent_t962981669 * L_39 = Button_get_onClick_m1145127631(L_38, /*hidden argument*/NULL);
+		IntPtr_t L_40;
+		L_40.set_m_value_0((void*)IAPDemo_U3CInitUIU3Em__2_m3136461963_MethodInfo_var);
+		UnityAction_t909267611 * L_41 = (UnityAction_t909267611 *)il2cpp_codegen_object_new(UnityAction_t909267611_il2cpp_TypeInfo_var);
+		UnityAction__ctor_m4130179243(L_41, __this, L_40, /*hidden argument*/NULL);
+		NullCheck(L_39);
+		UnityEvent_AddListener_m4099140869(L_39, L_41, /*hidden argument*/NULL);
+	}
+
+IL_0118:
+	{
+		return;
+	}
+}
+// System.Void IAPDemo::UpdateHistoryUI()
+extern TypeInfo* IStoreController_t2959286891_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2200170419;
+extern Il2CppCodeGenString* _stringLiteral2301128675;
+extern Il2CppCodeGenString* _stringLiteral320;
+extern const uint32_t IAPDemo_UpdateHistoryUI_m2835966425_MetadataUsageId;
+extern "C"  void IAPDemo_UpdateHistoryUI_m2835966425 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_UpdateHistoryUI_m2835966425_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	String_t* V_0 = NULL;
+	String_t* V_1 = NULL;
+	int32_t V_2 = 0;
+	Product_t16267110 * V_3 = NULL;
+	bool V_4 = false;
+	{
+		Il2CppObject * L_0 = __this->get_m_Controller_2();
+		if (L_0)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		return;
+	}
+
+IL_000c:
+	{
+		V_0 = _stringLiteral2200170419;
+		V_1 = _stringLiteral2301128675;
+		V_2 = 0;
+		goto IL_0068;
+	}
+
+IL_001f:
+	{
+		Il2CppObject * L_1 = __this->get_m_Controller_2();
+		NullCheck(L_1);
+		ProductCollection_t188697444 * L_2 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_1);
+		NullCheck(L_2);
+		ProductU5BU5D_t687992899* L_3 = ProductCollection_get_all_m2017284433(L_2, /*hidden argument*/NULL);
+		int32_t L_4 = V_2;
+		NullCheck(L_3);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_3, L_4);
+		int32_t L_5 = L_4;
+		V_3 = ((L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5)));
+		String_t* L_6 = V_0;
+		Product_t16267110 * L_7 = V_3;
+		NullCheck(L_7);
+		ProductDefinition_t915591705 * L_8 = Product_get_definition_m2740826390(L_7, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		String_t* L_9 = ProductDefinition_get_id_m3802178610(L_8, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_10 = String_Concat_m1825781833(NULL /*static, unused*/, L_6, _stringLiteral320, L_9, /*hidden argument*/NULL);
+		V_0 = L_10;
+		String_t* L_11 = V_1;
+		Product_t16267110 * L_12 = V_3;
+		NullCheck(L_12);
+		bool L_13 = Product_get_hasReceipt_m4115433121(L_12, /*hidden argument*/NULL);
+		V_4 = L_13;
+		String_t* L_14 = Boolean_ToString_m2512358154((&V_4), /*hidden argument*/NULL);
+		String_t* L_15 = String_Concat_m1825781833(NULL /*static, unused*/, L_11, _stringLiteral320, L_14, /*hidden argument*/NULL);
+		V_1 = L_15;
+		int32_t L_16 = V_2;
+		V_2 = ((int32_t)((int32_t)L_16+(int32_t)1));
+	}
+
+IL_0068:
+	{
+		int32_t L_17 = V_2;
+		Il2CppObject * L_18 = __this->get_m_Controller_2();
+		NullCheck(L_18);
+		ProductCollection_t188697444 * L_19 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_18);
+		NullCheck(L_19);
+		ProductU5BU5D_t687992899* L_20 = ProductCollection_get_all_m2017284433(L_19, /*hidden argument*/NULL);
+		NullCheck(L_20);
+		if ((((int32_t)L_17) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_20)->max_length)))))))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		Text_t3286458198 * L_21 = IAPDemo_GetText_m1929841143(__this, (bool)0, /*hidden argument*/NULL);
+		String_t* L_22 = V_0;
+		NullCheck(L_21);
+		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_21, L_22);
+		Text_t3286458198 * L_23 = IAPDemo_GetText_m1929841143(__this, (bool)1, /*hidden argument*/NULL);
+		String_t* L_24 = V_1;
+		NullCheck(L_23);
+		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_24);
+		return;
+	}
+}
+// System.Void IAPDemo::UpdateInteractable()
+extern "C"  void IAPDemo_UpdateInteractable_m2185924321 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		Selectable_t3621744255 * L_0 = __this->get_m_InteractableSelectable_7();
+		bool L_1 = Object_op_Equality_m3964590952(NULL /*static, unused*/, L_0, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0012:
+	{
+		Il2CppObject * L_2 = __this->get_m_Controller_2();
+		V_0 = (bool)((((int32_t)((((Il2CppObject*)(Il2CppObject *)L_2) == ((Il2CppObject*)(Il2CppObject *)NULL))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_0;
+		Selectable_t3621744255 * L_4 = __this->get_m_InteractableSelectable_7();
+		NullCheck(L_4);
+		bool L_5 = Selectable_get_interactable_m1204033370(L_4, /*hidden argument*/NULL);
+		if ((((int32_t)L_3) == ((int32_t)L_5)))
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		Button_t990034267 * L_6 = IAPDemo_GetRestoreButton_m2508131476(__this, /*hidden argument*/NULL);
+		bool L_7 = Object_op_Inequality_m1296218211(NULL /*static, unused*/, L_6, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
+		if (!L_7)
+		{
+			goto IL_004d;
+		}
+	}
+	{
+		Button_t990034267 * L_8 = IAPDemo_GetRestoreButton_m2508131476(__this, /*hidden argument*/NULL);
+		bool L_9 = V_0;
+		NullCheck(L_8);
+		Selectable_set_interactable_m2686686419(L_8, L_9, /*hidden argument*/NULL);
+	}
+
+IL_004d:
+	{
+		Button_t990034267 * L_10 = IAPDemo_GetBuyButton_m2634699276(__this, /*hidden argument*/NULL);
+		bool L_11 = V_0;
+		NullCheck(L_10);
+		Selectable_set_interactable_m2686686419(L_10, L_11, /*hidden argument*/NULL);
+		Dropdown_t2916437562 * L_12 = IAPDemo_GetDropdown_m664285184(__this, /*hidden argument*/NULL);
+		bool L_13 = V_0;
+		NullCheck(L_12);
+		Selectable_set_interactable_m2686686419(L_12, L_13, /*hidden argument*/NULL);
+	}
+
+IL_0065:
+	{
+		return;
+	}
+}
+// System.Void IAPDemo::Update()
+extern "C"  void IAPDemo_Update_m1060294193 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	{
+		IAPDemo_UpdateInteractable_m2185924321(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.UI.Dropdown IAPDemo::GetDropdown()
+extern const MethodInfo* GameObject_GetComponent_TisDropdown_t2916437562_m899537489_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3927550001;
+extern const uint32_t IAPDemo_GetDropdown_m664285184_MetadataUsageId;
+extern "C"  Dropdown_t2916437562 * IAPDemo_GetDropdown_m664285184 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_GetDropdown_m664285184_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GameObject_t4012695102 * L_0 = GameObject_Find_m332785498(NULL /*static, unused*/, _stringLiteral3927550001, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		Dropdown_t2916437562 * L_1 = GameObject_GetComponent_TisDropdown_t2916437562_m899537489(L_0, /*hidden argument*/GameObject_GetComponent_TisDropdown_t2916437562_m899537489_MethodInfo_var);
+		return L_1;
+	}
+}
+// UnityEngine.UI.Button IAPDemo::GetBuyButton()
+extern const MethodInfo* GameObject_GetComponent_TisButton_t990034267_m901368912_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral67174;
+extern const uint32_t IAPDemo_GetBuyButton_m2634699276_MetadataUsageId;
+extern "C"  Button_t990034267 * IAPDemo_GetBuyButton_m2634699276 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_GetBuyButton_m2634699276_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GameObject_t4012695102 * L_0 = GameObject_Find_m332785498(NULL /*static, unused*/, _stringLiteral67174, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		Button_t990034267 * L_1 = GameObject_GetComponent_TisButton_t990034267_m901368912(L_0, /*hidden argument*/GameObject_GetComponent_TisButton_t990034267_m901368912_MethodInfo_var);
+		return L_1;
+	}
+}
+// UnityEngine.UI.Button IAPDemo::GetRestoreButton()
+extern const MethodInfo* GameObject_GetComponent_TisButton_t990034267_m901368912_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2762173038;
+extern const uint32_t IAPDemo_GetRestoreButton_m2508131476_MetadataUsageId;
+extern "C"  Button_t990034267 * IAPDemo_GetRestoreButton_m2508131476 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_GetRestoreButton_m2508131476_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	GameObject_t4012695102 * V_0 = NULL;
+	{
+		GameObject_t4012695102 * L_0 = GameObject_Find_m332785498(NULL /*static, unused*/, _stringLiteral2762173038, /*hidden argument*/NULL);
+		V_0 = L_0;
+		GameObject_t4012695102 * L_1 = V_0;
+		bool L_2 = Object_op_Inequality_m1296218211(NULL /*static, unused*/, L_1, (Object_t3878351788 *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		GameObject_t4012695102 * L_3 = V_0;
+		NullCheck(L_3);
+		Button_t990034267 * L_4 = GameObject_GetComponent_TisButton_t990034267_m901368912(L_3, /*hidden argument*/GameObject_GetComponent_TisButton_t990034267_m901368912_MethodInfo_var);
+		return L_4;
+	}
+
+IL_001e:
+	{
+		return (Button_t990034267 *)NULL;
+	}
+}
+// UnityEngine.UI.Text IAPDemo::GetText(System.Boolean)
+extern const MethodInfo* GameObject_GetComponent_TisText_t3286458198_m3253439797_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral80703653;
+extern Il2CppCodeGenString* _stringLiteral80703647;
+extern const uint32_t IAPDemo_GetText_m1929841143_MetadataUsageId;
+extern "C"  Text_t3286458198 * IAPDemo_GetText_m1929841143 (IAPDemo_t2300162107 * __this, bool ___right, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_GetText_m1929841143_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	String_t* V_0 = NULL;
+	String_t* G_B3_0 = NULL;
+	{
+		bool L_0 = ___right;
+		if (!L_0)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		G_B3_0 = _stringLiteral80703653;
+		goto IL_0015;
+	}
+
+IL_0010:
+	{
+		G_B3_0 = _stringLiteral80703647;
+	}
+
+IL_0015:
+	{
+		V_0 = G_B3_0;
+		String_t* L_1 = V_0;
+		GameObject_t4012695102 * L_2 = GameObject_Find_m332785498(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		Text_t3286458198 * L_3 = GameObject_GetComponent_TisText_t3286458198_m3253439797(L_2, /*hidden argument*/GameObject_GetComponent_TisText_t3286458198_m3253439797_MethodInfo_var);
+		return L_3;
+	}
+}
+// System.Void IAPDemo::<InitUI>m__0(System.Int32)
+extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* Debug_t1588791936_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2995853767;
+extern const uint32_t IAPDemo_U3CInitUIU3Em__0_m2615411930_MetadataUsageId;
+extern "C"  void IAPDemo_U3CInitUIU3Em__0_m2615411930 (IAPDemo_t2300162107 * __this, int32_t ___selectedItem, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_U3CInitUIU3Em__0_m2615411930_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = ___selectedItem;
+		int32_t L_1 = L_0;
+		Il2CppObject * L_2 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_1);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_3 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral2995853767, L_2, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1588791936_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		int32_t L_4 = ___selectedItem;
+		__this->set_m_SelectedItemIndex_5(L_4);
+		return;
+	}
+}
+// System.Void IAPDemo::<InitUI>m__1()
+extern TypeInfo* IStoreController_t2959286891_il2cpp_TypeInfo_var;
+extern const uint32_t IAPDemo_U3CInitUIU3Em__1_m3136461002_MetadataUsageId;
+extern "C"  void IAPDemo_U3CInitUIU3Em__1_m3136461002 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_U3CInitUIU3Em__1_m3136461002_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		bool L_0 = __this->get_m_PurchaseInProgress_6();
+		if (!L_0)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		return;
+	}
+
+IL_000c:
+	{
+		Il2CppObject * L_1 = __this->get_m_Controller_2();
+		Il2CppObject * L_2 = __this->get_m_Controller_2();
+		NullCheck(L_2);
+		ProductCollection_t188697444 * L_3 = InterfaceFuncInvoker0< ProductCollection_t188697444 * >::Invoke(0 /* UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.IStoreController::get_products() */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_2);
+		NullCheck(L_3);
+		ProductU5BU5D_t687992899* L_4 = ProductCollection_get_all_m2017284433(L_3, /*hidden argument*/NULL);
+		int32_t L_5 = __this->get_m_SelectedItemIndex_5();
+		NullCheck(L_4);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_4, L_5);
+		int32_t L_6 = L_5;
+		NullCheck(L_1);
+		InterfaceActionInvoker1< Product_t16267110 * >::Invoke(1 /* System.Void UnityEngine.Purchasing.IStoreController::InitiatePurchase(UnityEngine.Purchasing.Product) */, IStoreController_t2959286891_il2cpp_TypeInfo_var, L_1, ((L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6))));
+		__this->set_m_PurchaseInProgress_6((bool)1);
+		return;
+	}
+}
+// System.Void IAPDemo::<InitUI>m__2()
+extern TypeInfo* Action_1_t359458046_il2cpp_TypeInfo_var;
+extern TypeInfo* ISamsungAppsExtensions_t3036255374_il2cpp_TypeInfo_var;
+extern TypeInfo* IAppleExtensions_t100643356_il2cpp_TypeInfo_var;
+extern const MethodInfo* IAPDemo_OnTransactionsRestored_m2391586217_MethodInfo_var;
+extern const MethodInfo* Action_1__ctor_m4212955322_MethodInfo_var;
+extern const uint32_t IAPDemo_U3CInitUIU3Em__2_m3136461963_MetadataUsageId;
+extern "C"  void IAPDemo_U3CInitUIU3Em__2_m3136461963 (IAPDemo_t2300162107 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (IAPDemo_U3CInitUIU3Em__2_m3136461963_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		bool L_0 = __this->get_m_IsSamsungAppsStoreSelected_8();
+		if (!L_0)
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		Il2CppObject * L_1 = __this->get_m_SamsungExtensions_4();
+		IntPtr_t L_2;
+		L_2.set_m_value_0((void*)IAPDemo_OnTransactionsRestored_m2391586217_MethodInfo_var);
+		Action_1_t359458046 * L_3 = (Action_1_t359458046 *)il2cpp_codegen_object_new(Action_1_t359458046_il2cpp_TypeInfo_var);
+		Action_1__ctor_m4212955322(L_3, __this, L_2, /*hidden argument*/Action_1__ctor_m4212955322_MethodInfo_var);
+		NullCheck(L_1);
+		InterfaceActionInvoker1< Action_1_t359458046 * >::Invoke(0 /* System.Void UnityEngine.Purchasing.ISamsungAppsExtensions::RestoreTransactions(System.Action`1<System.Boolean>) */, ISamsungAppsExtensions_t3036255374_il2cpp_TypeInfo_var, L_1, L_3);
+		goto IL_003e;
+	}
+
+IL_0027:
+	{
+		Il2CppObject * L_4 = __this->get_m_AppleExtensions_3();
+		IntPtr_t L_5;
+		L_5.set_m_value_0((void*)IAPDemo_OnTransactionsRestored_m2391586217_MethodInfo_var);
+		Action_1_t359458046 * L_6 = (Action_1_t359458046 *)il2cpp_codegen_object_new(Action_1_t359458046_il2cpp_TypeInfo_var);
+		Action_1__ctor_m4212955322(L_6, __this, L_5, /*hidden argument*/Action_1__ctor_m4212955322_MethodInfo_var);
+		NullCheck(L_4);
+		InterfaceActionInvoker1< Action_1_t359458046 * >::Invoke(0 /* System.Void UnityEngine.Purchasing.IAppleExtensions::RestoreTransactions(System.Action`1<System.Boolean>) */, IAppleExtensions_t100643356_il2cpp_TypeInfo_var, L_4, L_6);
+	}
+
+IL_003e:
+	{
+		return;
+	}
+}
 // System.Void iTween::.ctor(System.Collections.Hashtable)
 extern "C"  void iTween__ctor_m2506695237 (iTween_t3087282050 * __this, Hashtable_t3875263730 * ___h, const MethodInfo* method)
 {

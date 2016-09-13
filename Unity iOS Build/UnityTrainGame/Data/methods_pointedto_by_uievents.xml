@@ -16,5 +16,9 @@
 			<method name="Previous"/>
 			<method name="Play"/>
 		</type>
+		<type fullname="PopupManager">
+			<method name="ShowRewardAds"/>
+			<method name="ShowPurchasePopup"/>
+		</type>
 	</assembly>
 </linker>

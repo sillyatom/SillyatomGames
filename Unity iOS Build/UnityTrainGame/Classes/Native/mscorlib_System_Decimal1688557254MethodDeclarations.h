@@ -115,6 +115,8 @@ extern "C"  int32_t Decimal_CompareTo_m2551434482 (Decimal_t1688557254 * __this,
 extern "C"  int32_t Decimal_CompareTo_m2260095952 (Decimal_t1688557254 * __this, Decimal_t1688557254  ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Decimal::Equals(System.Decimal)
 extern "C"  bool Decimal_Equals_m3235245971 (Decimal_t1688557254 * __this, Decimal_t1688557254  ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Decimal System.Decimal::Parse(System.String)
+extern "C"  Decimal_t1688557254  Decimal_Parse_m4269067114 (Il2CppObject * __this /* static, unused */, String_t* ___s, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Decimal System.Decimal::Parse(System.String,System.IFormatProvider)
 extern "C"  Decimal_t1688557254  Decimal_Parse_m3786250826 (Il2CppObject * __this /* static, unused */, String_t* ___s, Il2CppObject * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Decimal::ThrowAtPos(System.Int32)

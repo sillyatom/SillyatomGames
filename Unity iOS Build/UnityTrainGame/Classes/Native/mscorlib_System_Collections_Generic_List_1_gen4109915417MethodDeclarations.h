@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m1492409980_gshared (List_1_t4109915418 * __this, 
 // System.Boolean System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::Contains(T)
 extern "C"  bool List_1_Contains_m417879790_gshared (List_1_t4109915418 * __this, KeyValuePair_2_t3312956448  ___item, const MethodInfo* method);
 #define List_1_Contains_m417879790(__this, ___item, method) ((  bool (*) (List_1_t4109915418 *, KeyValuePair_2_t3312956448 , const MethodInfo*))List_1_Contains_m417879790_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m832088313_gshared (List_1_t4109915418 * __this, KeyValuePair_2U5BU5D_t346249057* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m832088313(__this, ___array, method) ((  void (*) (List_1_t4109915418 *, KeyValuePair_2U5BU5D_t346249057*, const MethodInfo*))List_1_CopyTo_m832088313_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m1368690814_gshared (List_1_t4109915418 * __this, KeyValuePair_2U5BU5D_t346249057* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m1368690814(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t4109915418 *, KeyValuePair_2U5BU5D_t346249057*, int32_t, const MethodInfo*))List_1_CopyTo_m1368690814_gshared)(__this, ___array, ___arrayIndex, method)

@@ -47,7 +47,7 @@ struct X509Certificate_t273828613;
 #include "mscorlib_System_Text_StringBuilder3822575854.h"
 
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2::.ctor(System.Byte[])
-extern "C"  void X509Certificate2__ctor_m2334802535 (X509Certificate2_t2583282360 * __this, ByteU5BU5D_t58506160* ___rawData, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void X509Certificate2__ctor_m3244851275 (X509Certificate2_t2583282360 * __this, ByteU5BU5D_t58506160* ___rawData, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2::.ctor(System.Security.Cryptography.X509Certificates.X509Certificate)
 extern "C"  void X509Certificate2__ctor_m743447448 (X509Certificate2_t2583282360 * __this, X509Certificate_t3432067208 * ___certificate, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2::.cctor()
@@ -61,7 +61,7 @@ extern "C"  DateTime_t339033936  X509Certificate2_get_NotAfter_m3441061389 (X509
 // System.DateTime System.Security.Cryptography.X509Certificates.X509Certificate2::get_NotBefore()
 extern "C"  DateTime_t339033936  X509Certificate2_get_NotBefore_m4057480336 (X509Certificate2_t2583282360 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Security.Cryptography.AsymmetricAlgorithm System.Security.Cryptography.X509Certificates.X509Certificate2::get_PrivateKey()
-extern "C"  AsymmetricAlgorithm_t4236534322 * X509Certificate2_get_PrivateKey_m2043008864 (X509Certificate2_t2583282360 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  AsymmetricAlgorithm_t4236534322 * X509Certificate2_get_PrivateKey_m2236474876 (X509Certificate2_t2583282360 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Security.Cryptography.X509Certificates.PublicKey System.Security.Cryptography.X509Certificates.X509Certificate2::get_PublicKey()
 extern "C"  PublicKey_t2902591373 * X509Certificate2_get_PublicKey_m1236823063 (X509Certificate2_t2583282360 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Security.Cryptography.X509Certificates.X509Certificate2::get_SerialNumber()

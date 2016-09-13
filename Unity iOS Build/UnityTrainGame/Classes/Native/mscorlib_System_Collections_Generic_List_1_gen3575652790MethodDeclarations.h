@@ -123,6 +123,9 @@ extern "C"  void List_1_Clear_m3912133064_gshared (List_1_t3575652790 * __this, 
 // System.Boolean System.Collections.Generic.List`1<System.Byte>::Contains(T)
 extern "C"  bool List_1_Contains_m2169305718_gshared (List_1_t3575652790 * __this, uint8_t ___item, const MethodInfo* method);
 #define List_1_Contains_m2169305718(__this, ___item, method) ((  bool (*) (List_1_t3575652790 *, uint8_t, const MethodInfo*))List_1_Contains_m2169305718_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<System.Byte>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m3020172869_gshared (List_1_t3575652790 * __this, ByteU5BU5D_t58506160* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m3020172869(__this, ___array, method) ((  void (*) (List_1_t3575652790 *, ByteU5BU5D_t58506160*, const MethodInfo*))List_1_CopyTo_m3020172869_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<System.Byte>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m2627798706_gshared (List_1_t3575652790 * __this, ByteU5BU5D_t58506160* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m2627798706(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t3575652790 *, ByteU5BU5D_t58506160*, int32_t, const MethodInfo*))List_1_CopyTo_m2627798706_gshared)(__this, ___array, ___arrayIndex, method)

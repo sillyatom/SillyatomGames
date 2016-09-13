@@ -45,3 +45,5 @@ extern "C"  void Debug_LogException_m2264672311 (Il2CppObject * __this /* static
 extern "C"  void Debug_LogWarning_m3123317694 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___message, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Debug::LogWarning(System.Object,UnityEngine.Object)
 extern "C"  void Debug_LogWarning_m4097176146 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___message, Object_t3878351788 * ___context, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Debug::get_isDebugBuild()
+extern "C"  bool Debug_get_isDebugBuild_m351497798 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;

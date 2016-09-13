@@ -124,6 +124,9 @@ extern "C"  void List_1_Clear_m2727880895_gshared (List_1_t1357374531 * __this, 
 // System.Boolean System.Collections.Generic.List`1<System.Reflection.CustomAttributeTypedArgument>::Contains(T)
 extern "C"  bool List_1_Contains_m4075630001_gshared (List_1_t1357374531 * __this, CustomAttributeTypedArgument_t560415562  ___item, const MethodInfo* method);
 #define List_1_Contains_m4075630001(__this, ___item, method) ((  bool (*) (List_1_t1357374531 *, CustomAttributeTypedArgument_t560415562 , const MethodInfo*))List_1_Contains_m4075630001_gshared)(__this, ___item, method)
+// System.Void System.Collections.Generic.List`1<System.Reflection.CustomAttributeTypedArgument>::CopyTo(T[])
+extern "C"  void List_1_CopyTo_m334993852_gshared (List_1_t1357374531 * __this, CustomAttributeTypedArgumentU5BU5D_t3123668047* ___array, const MethodInfo* method);
+#define List_1_CopyTo_m334993852(__this, ___array, method) ((  void (*) (List_1_t1357374531 *, CustomAttributeTypedArgumentU5BU5D_t3123668047*, const MethodInfo*))List_1_CopyTo_m334993852_gshared)(__this, ___array, method)
 // System.Void System.Collections.Generic.List`1<System.Reflection.CustomAttributeTypedArgument>::CopyTo(T[],System.Int32)
 extern "C"  void List_1_CopyTo_m2968269979_gshared (List_1_t1357374531 * __this, CustomAttributeTypedArgumentU5BU5D_t3123668047* ___array, int32_t ___arrayIndex, const MethodInfo* method);
 #define List_1_CopyTo_m2968269979(__this, ___array, ___arrayIndex, method) ((  void (*) (List_1_t1357374531 *, CustomAttributeTypedArgumentU5BU5D_t3123668047*, int32_t, const MethodInfo*))List_1_CopyTo_m2968269979_gshared)(__this, ___array, ___arrayIndex, method)

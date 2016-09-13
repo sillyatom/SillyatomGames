@@ -11,7 +11,7 @@
 #include <stdint.h>
 
 // UnityEngine.EventSystems.EventTrigger/Entry
-struct Entry_t67115090;
+struct Entry_t67115091;
 // System.IAsyncResult
 struct IAsyncResult_t537683269;
 // System.AsyncCallback

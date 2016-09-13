@@ -13,10 +13,16 @@
 #include <limits>
 #include <assert.h>
 
-// System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate
-struct RenewalDelegate_t4057835773;
+// System.Runtime.Remoting.Metadata.SoapAttribute
+struct SoapAttribute_t2002155864;
 // System.Object
 struct Il2CppObject;
+// System.Runtime.Remoting.Lifetime.Lease
+struct Lease_t3927356447;
+// System.Runtime.Remoting.Lifetime.ISponsor
+struct ISponsor_t1895959670;
+// System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate
+struct RenewalDelegate_t4057835773;
 // System.Runtime.Remoting.Lifetime.ILease
 struct ILease_t1722317174;
 // System.IAsyncResult
@@ -131,8 +137,6 @@ struct ServerObjectTerminatorSink_t401038198;
 struct StackBuilderSink_t3196825856;
 // System.MarshalByRefObject
 struct MarshalByRefObject_t2055500882;
-// System.Runtime.Remoting.Metadata.SoapAttribute
-struct SoapAttribute_t2002155864;
 // System.Runtime.Remoting.Metadata.SoapFieldAttribute
 struct SoapFieldAttribute_t3689362804;
 // System.Runtime.Remoting.Metadata.SoapMethodAttribute
@@ -177,8 +181,6 @@ struct ArrayList_t2121638921;
 struct RemotingException_t2970919604;
 // System.Runtime.Remoting.ClientActivatedIdentity
 struct ClientActivatedIdentity_t834755532;
-// System.Runtime.Remoting.Lifetime.Lease
-struct Lease_t3927356447;
 // System.Runtime.Remoting.SingleCallIdentity
 struct SingleCallIdentity_t2846672012;
 // System.Runtime.Remoting.SingletonIdentity
@@ -259,38 +261,71 @@ struct SerializationException_t731558744;
 struct IFormatterConverter_t919629080;
 // System.Runtime.Serialization.SerializationInfoEnumerator
 struct SerializationInfoEnumerator_t1298671611;
-// System.Runtime.Serialization.SerializationObjectManager
-struct SerializationObjectManager_t3948087927;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array2840145358.h"
-#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease_Re4057835773.h"
-#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease_Re4057835773MethodDeclarations.h"
-#include "mscorlib_System_Object837106420.h"
-#include "mscorlib_System_IntPtr676692020.h"
+#include "mscorlib_System_Runtime_Remoting_InternalRemotingS3701456070.h"
+#include "mscorlib_System_Runtime_Remoting_InternalRemotingS3701456070MethodDeclarations.h"
 #include "mscorlib_System_Void2779279689.h"
+#include "mscorlib_System_Collections_Hashtable3875263730MethodDeclarations.h"
+#include "mscorlib_System_Collections_Hashtable3875263730.h"
+#include "mscorlib_System_Object837106420.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapAttr2002155864.h"
+#include "mscorlib_System_Threading_Monitor2071304733MethodDeclarations.h"
+#include "mscorlib_System_Type2779229935MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapType3213244606MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapFiel3689362804MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapMeth4271616439MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapParam439384613MethodDeclarations.h"
+#include "mscorlib_ArrayTypes.h"
+#include "mscorlib_System_Type2779229935.h"
+#include "mscorlib_System_RuntimeTypeHandle1864875887.h"
+#include "mscorlib_System_Boolean211005341.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapType3213244606.h"
+#include "mscorlib_System_Reflection_FieldInfo1164929782.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapFiel3689362804.h"
+#include "mscorlib_System_Reflection_MethodBase3461000640.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapMeth4271616439.h"
+#include "mscorlib_System_Reflection_ParameterInfo2610273829.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapParam439384613.h"
+#include "mscorlib_System_Runtime_Remoting_Metadata_SoapAttr2002155864MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease3927356447.h"
+#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease3927356447MethodDeclarations.h"
+#include "mscorlib_System_MarshalByRefObject2055500882MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Lifetime_LifetimeS917854540MethodDeclarations.h"
+#include "mscorlib_System_DateTime339033936MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseSta3143999580.h"
 #include "mscorlib_System_TimeSpan763862892.h"
+#include "mscorlib_System_DateTime339033936.h"
+#include "mscorlib_System_String968488902MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_RemotingException2970919604MethodDeclarations.h"
 #include "mscorlib_System_TimeSpan763862892MethodDeclarations.h"
+#include "mscorlib_System_String968488902.h"
+#include "mscorlib_System_Runtime_Remoting_RemotingException2970919604.h"
+#include "mscorlib_System_Object837106420MethodDeclarations.h"
+#include "mscorlib_System_Int322847414787.h"
+#include "mscorlib_System_Collections_ArrayList2121638921.h"
+#include "mscorlib_System_Collections_ArrayList2121638921MethodDeclarations.h"
+#include "mscorlib_System_Collections_Queue1621224067MethodDeclarations.h"
+#include "mscorlib_System_Collections_Queue1621224067.h"
+#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease_Re4057835773MethodDeclarations.h"
+#include "mscorlib_System_Threading_WaitOrTimerCallback4215077909MethodDeclarations.h"
+#include "mscorlib_System_Threading_ThreadPool4273677897MethodDeclarations.h"
+#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease_Re4057835773.h"
+#include "mscorlib_System_IntPtr676692020.h"
 #include "mscorlib_System_AsyncCallback1363551830.h"
+#include "mscorlib_System_Threading_WaitHandle361062656.h"
+#include "mscorlib_System_Threading_WaitOrTimerCallback4215077909.h"
+#include "mscorlib_System_Threading_RegisteredWaitHandle690682146.h"
 #include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseMan2820278776.h"
 #include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseMan2820278776MethodDeclarations.h"
-#include "mscorlib_System_Collections_ArrayList2121638921MethodDeclarations.h"
-#include "mscorlib_System_Object837106420MethodDeclarations.h"
-#include "mscorlib_System_Collections_ArrayList2121638921.h"
-#include "mscorlib_System_Threading_Monitor2071304733MethodDeclarations.h"
 #include "mscorlib_System_Threading_Timer3546110984MethodDeclarations.h"
 #include "mscorlib_System_Threading_Timer3546110984.h"
-#include "mscorlib_System_Boolean211005341.h"
 #include "mscorlib_System_Runtime_Remoting_ServerIdentity571418633.h"
 #include "mscorlib_System_Runtime_Remoting_ServerIdentity571418633MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease3927356447MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_Lifetime_Lease3927356447.h"
-#include "mscorlib_System_Int322847414787.h"
 #include "mscorlib_System_Threading_TimerCallback4291881837MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_Lifetime_LifetimeS917854540MethodDeclarations.h"
 #include "mscorlib_System_Threading_TimerCallback4291881837.h"
-#include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseSta3143999580.h"
 #include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseSin3138410962.h"
 #include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseSin3138410962MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Lifetime_LeaseSta3143999580MethodDeclarations.h"
@@ -298,18 +333,12 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Double534516614.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ArgInfo173916094.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ArgInfo173916094MethodDeclarations.h"
-#include "mscorlib_System_Reflection_MethodBase3461000640.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ArgInfoT542515480.h"
 #include "mscorlib_System_Reflection_ParameterInfo2610273829MethodDeclarations.h"
-#include "mscorlib_ArrayTypes.h"
-#include "mscorlib_System_Reflection_ParameterInfo2610273829.h"
 #include "mscorlib_System_Reflection_MethodBase3461000640MethodDeclarations.h"
-#include "mscorlib_System_Type2779229935.h"
-#include "mscorlib_System_Type2779229935MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ArgInfoT542515480MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_AsyncRes477528403.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_AsyncRes477528403MethodDeclarations.h"
-#include "mscorlib_System_Threading_WaitHandle361062656.h"
 #include "mscorlib_System_Threading_ManualResetEvent2399218676MethodDeclarations.h"
 #include "mscorlib_System_Threading_ManualResetEvent2399218676.h"
 #include "mscorlib_System_NotSupportedException1374155497MethodDeclarations.h"
@@ -320,7 +349,6 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Remoting_Messaging_MonoMet1712743773.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_CallCon2632322424.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_CallCon2632322424MethodDeclarations.h"
-#include "mscorlib_System_String968488902.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_CallTyp3441586834.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_CallTyp3441586834MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ClientC2451196600.h"
@@ -351,11 +379,8 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Remoting_Messaging_Logical1074763138MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio1298671611MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio1258779515MethodDeclarations.h"
-#include "mscorlib_System_String968488902MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio1258779515.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio1298671611.h"
-#include "mscorlib_System_Collections_Hashtable3875263730.h"
-#include "mscorlib_System_Collections_Hashtable3875263730MethodDeclarations.h"
 #include "mscorlib_System_Collections_DictionaryEntry130027246MethodDeclarations.h"
 #include "mscorlib_System_Collections_DictionaryEntry130027246.h"
 #include "mscorlib_System_Reflection_MemberInfo2843033814MethodDeclarations.h"
@@ -363,8 +388,6 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Remoting_Messaging_MethodC2149518511MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_MethodC2149518511.h"
 #include "mscorlib_System_Runtime_Remoting_RemotingServices699722729MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_RemotingException2970919604MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_RemotingException2970919604.h"
 #include "mscorlib_System_Reflection_MethodInfo3461221277.h"
 #include "mscorlib_System_Reflection_MethodInfo3461221277MethodDeclarations.h"
 #include "mscorlib_System_Char2778706699.h"
@@ -393,7 +416,6 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Remoting_Proxies_RealProxy1442800354MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_Remotin4020846894.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_Remotin4020846894MethodDeclarations.h"
-#include "mscorlib_System_RuntimeTypeHandle1864875887.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ReturnM2771403857.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ReturnM2771403857MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_ServerC3544017472.h"
@@ -403,19 +425,8 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Remoting_Messaging_StackBu3196825856.h"
 #include "mscorlib_System_Runtime_Remoting_Messaging_StackBu3196825856MethodDeclarations.h"
 #include "mscorlib_System_MarshalByRefObject2055500882.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapAttr2002155864.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapAttr2002155864MethodDeclarations.h"
 #include "mscorlib_System_Attribute498693649MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapFiel3689362804.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapFiel3689362804MethodDeclarations.h"
-#include "mscorlib_System_Reflection_FieldInfo1164929782.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapMeth4271616439.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapMeth4271616439MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_SoapServices760171505MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapParam439384613.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapParam439384613MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapType3213244606.h"
-#include "mscorlib_System_Runtime_Remoting_Metadata_SoapType3213244606MethodDeclarations.h"
 #include "mscorlib_System_Reflection_AssemblyName3481926655MethodDeclarations.h"
 #include "mscorlib_System_Reflection_Assembly1882292308.h"
 #include "mscorlib_System_Reflection_Assembly1882292308MethodDeclarations.h"
@@ -476,7 +487,6 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Serialization_Formatters_F3852587989.h"
 #include "mscorlib_System_Runtime_Remoting_Services_TrackingS118961073MethodDeclarations.h"
 #include "mscorlib_System_Attribute498693649.h"
-#include "mscorlib_System_MarshalByRefObject2055500882MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_ClientActivatedIde834755532MethodDeclarations.h"
 #include "mscorlib_System_Threading_Interlocked3007803305MethodDeclarations.h"
 #include "mscorlib_System_Int322847414787MethodDeclarations.h"
@@ -499,7 +509,6 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Remoting_EnvoyInfo457289613.h"
 #include "mscorlib_System_Runtime_Remoting_Services_TrackingS118961073.h"
 #include "mscorlib_System_Runtime_Remoting_SoapServices760171505.h"
-#include "mscorlib_System_Runtime_Remoting_InternalRemotingS3701456070MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_SoapServices_Type3682967336MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Remoting_SoapServices_Type3682967336.h"
 #include "mscorlib_System_Runtime_Remoting_TypeEntry4038027264MethodDeclarations.h"
@@ -592,8 +601,6 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Serialization_Formatters_B3111094512MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_B3111094512.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_Bi780921001.h"
-#include "mscorlib_System_DateTime339033936MethodDeclarations.h"
-#include "mscorlib_System_DateTime339033936.h"
 #include "mscorlib_System_Decimal1688557254.h"
 #include "mscorlib_System_SByte2855346064.h"
 #include "mscorlib_System_Single958209021.h"
@@ -608,10 +615,8 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Decimal1688557254MethodDeclarations.h"
 #include "mscorlib_System_Globalization_CultureInfo3603717042.h"
 #include "mscorlib_System_Runtime_Serialization_ObjectIDGene1038861362MethodDeclarations.h"
-#include "mscorlib_System_Collections_Queue1621224067MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio3948087927MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_ObjectIDGene1038861362.h"
-#include "mscorlib_System_Collections_Queue1621224067.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio3948087927.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_B3948562620MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Formatters_B3948562620.h"
@@ -652,14 +657,850 @@ struct SerializationObjectManager_t3948087927;
 #include "mscorlib_System_Runtime_Serialization_Serializatio3576143653MethodDeclarations.h"
 #include "mscorlib_System_Runtime_Serialization_Serializatio3576143653.h"
 #include "mscorlib_System_Delegate3660574010.h"
-#include "mscorlib_System_Runtime_Serialization_Serializatio3276063852MethodDeclarations.h"
-#include "mscorlib_System_Runtime_Serialization_Serializatio3276063852.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Runtime.Remoting.InternalRemotingServices::.cctor()
+extern TypeInfo* Hashtable_t3875263730_il2cpp_TypeInfo_var;
+extern TypeInfo* InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var;
+extern const uint32_t InternalRemotingServices__cctor_m2124821007_MetadataUsageId;
+extern "C"  void InternalRemotingServices__cctor_m2124821007 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (InternalRemotingServices__cctor_m2124821007_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Hashtable_t3875263730 * L_0 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
+		Hashtable__ctor_m1514037738(L_0, /*hidden argument*/NULL);
+		((InternalRemotingServices_t3701456070_StaticFields*)InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var->static_fields)->set__soapAttributes_0(L_0);
+		return;
+	}
+}
+// System.Runtime.Remoting.Metadata.SoapAttribute System.Runtime.Remoting.InternalRemotingServices::GetCachedSoapAttribute(System.Object)
+extern const Il2CppType* SoapAttribute_t2002155864_0_0_0_var;
+extern TypeInfo* InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var;
+extern TypeInfo* SoapAttribute_t2002155864_il2cpp_TypeInfo_var;
+extern TypeInfo* ICustomAttributeProvider_t2334200065_il2cpp_TypeInfo_var;
+extern TypeInfo* Type_t_il2cpp_TypeInfo_var;
+extern TypeInfo* SoapTypeAttribute_t3213244606_il2cpp_TypeInfo_var;
+extern TypeInfo* FieldInfo_t_il2cpp_TypeInfo_var;
+extern TypeInfo* SoapFieldAttribute_t3689362804_il2cpp_TypeInfo_var;
+extern TypeInfo* MethodBase_t3461000640_il2cpp_TypeInfo_var;
+extern TypeInfo* SoapMethodAttribute_t4271616439_il2cpp_TypeInfo_var;
+extern TypeInfo* ParameterInfo_t2610273829_il2cpp_TypeInfo_var;
+extern TypeInfo* SoapParameterAttribute_t439384613_il2cpp_TypeInfo_var;
+extern const uint32_t InternalRemotingServices_GetCachedSoapAttribute_m1251902514_MetadataUsageId;
+extern "C"  SoapAttribute_t2002155864 * InternalRemotingServices_GetCachedSoapAttribute_m1251902514 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___reflectionObject, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (InternalRemotingServices_GetCachedSoapAttribute_m1251902514_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Il2CppObject * V_0 = NULL;
+	SoapAttribute_t2002155864 * V_1 = NULL;
+	Il2CppObject * V_2 = NULL;
+	ObjectU5BU5D_t11523773* V_3 = NULL;
+	SoapAttribute_t2002155864 * V_4 = NULL;
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var);
+		Hashtable_t3875263730 * L_0 = ((InternalRemotingServices_t3701456070_StaticFields*)InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var->static_fields)->get__soapAttributes_0();
+		NullCheck(L_0);
+		Il2CppObject * L_1 = VirtFuncInvoker0< Il2CppObject * >::Invoke(25 /* System.Object System.Collections.Hashtable::get_SyncRoot() */, L_0);
+		V_0 = L_1;
+		Il2CppObject * L_2 = V_0;
+		Monitor_Enter_m476686225(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+	}
+
+IL_0011:
+	try
+	{ // begin try (depth: 1)
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var);
+			Hashtable_t3875263730 * L_3 = ((InternalRemotingServices_t3701456070_StaticFields*)InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var->static_fields)->get__soapAttributes_0();
+			Il2CppObject * L_4 = ___reflectionObject;
+			NullCheck(L_3);
+			Il2CppObject * L_5 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(30 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_3, L_4);
+			V_1 = ((SoapAttribute_t2002155864 *)IsInstClass(L_5, SoapAttribute_t2002155864_il2cpp_TypeInfo_var));
+			SoapAttribute_t2002155864 * L_6 = V_1;
+			if (!L_6)
+			{
+				goto IL_0030;
+			}
+		}
+
+IL_0028:
+		{
+			SoapAttribute_t2002155864 * L_7 = V_1;
+			V_4 = L_7;
+			IL2CPP_LEAVE(0xDA, FINALLY_00d3);
+		}
+
+IL_0030:
+		{
+			Il2CppObject * L_8 = ___reflectionObject;
+			V_2 = ((Il2CppObject *)Castclass(L_8, ICustomAttributeProvider_t2334200065_il2cpp_TypeInfo_var));
+			Il2CppObject * L_9 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+			Type_t * L_10 = Type_GetTypeFromHandle_m3806905434(NULL /*static, unused*/, LoadTypeToken(SoapAttribute_t2002155864_0_0_0_var), /*hidden argument*/NULL);
+			NullCheck(L_9);
+			ObjectU5BU5D_t11523773* L_11 = InterfaceFuncInvoker2< ObjectU5BU5D_t11523773*, Type_t *, bool >::Invoke(0 /* System.Object[] System.Reflection.ICustomAttributeProvider::GetCustomAttributes(System.Type,System.Boolean) */, ICustomAttributeProvider_t2334200065_il2cpp_TypeInfo_var, L_9, L_10, (bool)1);
+			V_3 = L_11;
+			ObjectU5BU5D_t11523773* L_12 = V_3;
+			NullCheck(L_12);
+			if ((((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_12)->max_length))))) <= ((int32_t)0)))
+			{
+				goto IL_0060;
+			}
+		}
+
+IL_0052:
+		{
+			ObjectU5BU5D_t11523773* L_13 = V_3;
+			NullCheck(L_13);
+			IL2CPP_ARRAY_BOUNDS_CHECK(L_13, 0);
+			int32_t L_14 = 0;
+			V_1 = ((SoapAttribute_t2002155864 *)CastclassClass(((L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_14))), SoapAttribute_t2002155864_il2cpp_TypeInfo_var));
+			goto IL_00b3;
+		}
+
+IL_0060:
+		{
+			Il2CppObject * L_15 = ___reflectionObject;
+			if (!((Type_t *)IsInstClass(L_15, Type_t_il2cpp_TypeInfo_var)))
+			{
+				goto IL_0076;
+			}
+		}
+
+IL_006b:
+		{
+			SoapTypeAttribute_t3213244606 * L_16 = (SoapTypeAttribute_t3213244606 *)il2cpp_codegen_object_new(SoapTypeAttribute_t3213244606_il2cpp_TypeInfo_var);
+			SoapTypeAttribute__ctor_m763881636(L_16, /*hidden argument*/NULL);
+			V_1 = L_16;
+			goto IL_00b3;
+		}
+
+IL_0076:
+		{
+			Il2CppObject * L_17 = ___reflectionObject;
+			if (!((FieldInfo_t *)IsInstClass(L_17, FieldInfo_t_il2cpp_TypeInfo_var)))
+			{
+				goto IL_008c;
+			}
+		}
+
+IL_0081:
+		{
+			SoapFieldAttribute_t3689362804 * L_18 = (SoapFieldAttribute_t3689362804 *)il2cpp_codegen_object_new(SoapFieldAttribute_t3689362804_il2cpp_TypeInfo_var);
+			SoapFieldAttribute__ctor_m3376415230(L_18, /*hidden argument*/NULL);
+			V_1 = L_18;
+			goto IL_00b3;
+		}
+
+IL_008c:
+		{
+			Il2CppObject * L_19 = ___reflectionObject;
+			if (!((MethodBase_t3461000640 *)IsInstClass(L_19, MethodBase_t3461000640_il2cpp_TypeInfo_var)))
+			{
+				goto IL_00a2;
+			}
+		}
+
+IL_0097:
+		{
+			SoapMethodAttribute_t4271616439 * L_20 = (SoapMethodAttribute_t4271616439 *)il2cpp_codegen_object_new(SoapMethodAttribute_t4271616439_il2cpp_TypeInfo_var);
+			SoapMethodAttribute__ctor_m2943197643(L_20, /*hidden argument*/NULL);
+			V_1 = L_20;
+			goto IL_00b3;
+		}
+
+IL_00a2:
+		{
+			Il2CppObject * L_21 = ___reflectionObject;
+			if (!((ParameterInfo_t2610273829 *)IsInstClass(L_21, ParameterInfo_t2610273829_il2cpp_TypeInfo_var)))
+			{
+				goto IL_00b3;
+			}
+		}
+
+IL_00ad:
+		{
+			SoapParameterAttribute_t439384613 * L_22 = (SoapParameterAttribute_t439384613 *)il2cpp_codegen_object_new(SoapParameterAttribute_t439384613_il2cpp_TypeInfo_var);
+			SoapParameterAttribute__ctor_m498933869(L_22, /*hidden argument*/NULL);
+			V_1 = L_22;
+		}
+
+IL_00b3:
+		{
+			SoapAttribute_t2002155864 * L_23 = V_1;
+			Il2CppObject * L_24 = ___reflectionObject;
+			NullCheck(L_23);
+			VirtActionInvoker1< Il2CppObject * >::Invoke(8 /* System.Void System.Runtime.Remoting.Metadata.SoapAttribute::SetReflectionObject(System.Object) */, L_23, L_24);
+			IL2CPP_RUNTIME_CLASS_INIT(InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var);
+			Hashtable_t3875263730 * L_25 = ((InternalRemotingServices_t3701456070_StaticFields*)InternalRemotingServices_t3701456070_il2cpp_TypeInfo_var->static_fields)->get__soapAttributes_0();
+			Il2CppObject * L_26 = ___reflectionObject;
+			SoapAttribute_t2002155864 * L_27 = V_1;
+			NullCheck(L_25);
+			VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(31 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_25, L_26, L_27);
+			SoapAttribute_t2002155864 * L_28 = V_1;
+			V_4 = L_28;
+			IL2CPP_LEAVE(0xDA, FINALLY_00d3);
+		}
+
+IL_00ce:
+		{
+			; // IL_00ce: leave IL_00da
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_00d3;
+	}
+
+FINALLY_00d3:
+	{ // begin finally (depth: 1)
+		Il2CppObject * L_29 = V_0;
+		Monitor_Exit_m2088237919(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(211)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(211)
+	{
+		IL2CPP_JUMP_TBL(0xDA, IL_00da)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_00da:
+	{
+		SoapAttribute_t2002155864 * L_30 = V_4;
+		return L_30;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::.ctor()
+extern TypeInfo* LifetimeServices_t917854540_il2cpp_TypeInfo_var;
+extern TypeInfo* DateTime_t339033936_il2cpp_TypeInfo_var;
+extern const uint32_t Lease__ctor_m3651721351_MetadataUsageId;
+extern "C"  void Lease__ctor_m3651721351 (Lease_t3927356447 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease__ctor_m3651721351_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		MarshalByRefObject__ctor_m2306543480(__this, /*hidden argument*/NULL);
+		__this->set__currentState_2(1);
+		IL2CPP_RUNTIME_CLASS_INIT(LifetimeServices_t917854540_il2cpp_TypeInfo_var);
+		TimeSpan_t763862892  L_0 = LifetimeServices_get_LeaseTime_m2300863223(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set__initialLeaseTime_3(L_0);
+		TimeSpan_t763862892  L_1 = LifetimeServices_get_RenewOnCallTime_m2356100903(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set__renewOnCallTime_4(L_1);
+		TimeSpan_t763862892  L_2 = LifetimeServices_get_SponsorshipTimeout_m536018909(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set__sponsorshipTimeout_5(L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t339033936_il2cpp_TypeInfo_var);
+		DateTime_t339033936  L_3 = DateTime_get_Now_m1812131422(NULL /*static, unused*/, /*hidden argument*/NULL);
+		TimeSpan_t763862892  L_4 = __this->get__initialLeaseTime_3();
+		DateTime_t339033936  L_5 = DateTime_op_Addition_m4061583523(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
+		__this->set__leaseExpireTime_1(L_5);
+		return;
+	}
+}
+// System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::get_CurrentLeaseTime()
+extern TypeInfo* DateTime_t339033936_il2cpp_TypeInfo_var;
+extern const uint32_t Lease_get_CurrentLeaseTime_m2209505713_MetadataUsageId;
+extern "C"  TimeSpan_t763862892  Lease_get_CurrentLeaseTime_m2209505713 (Lease_t3927356447 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_get_CurrentLeaseTime_m2209505713_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		DateTime_t339033936  L_0 = __this->get__leaseExpireTime_1();
+		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t339033936_il2cpp_TypeInfo_var);
+		DateTime_t339033936  L_1 = DateTime_get_Now_m1812131422(NULL /*static, unused*/, /*hidden argument*/NULL);
+		TimeSpan_t763862892  L_2 = DateTime_op_Subtraction_m3612355463(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
+// System.Runtime.Remoting.Lifetime.LeaseState System.Runtime.Remoting.Lifetime.Lease::get_CurrentState()
+extern "C"  int32_t Lease_get_CurrentState_m2238924555 (Lease_t3927356447 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get__currentState_2();
+		return L_0;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::Activate()
+extern "C"  void Lease_Activate_m904773136 (Lease_t3927356447 * __this, const MethodInfo* method)
+{
+	{
+		__this->set__currentState_2(2);
+		return;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::set_InitialLeaseTime(System.TimeSpan)
+extern TypeInfo* LeaseState_t3143999580_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* RemotingException_t2970919604_il2cpp_TypeInfo_var;
+extern TypeInfo* DateTime_t339033936_il2cpp_TypeInfo_var;
+extern TypeInfo* TimeSpan_t763862892_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral12430408;
+extern Il2CppCodeGenString* _stringLiteral46;
+extern const uint32_t Lease_set_InitialLeaseTime_m3110663295_MetadataUsageId;
+extern "C"  void Lease_set_InitialLeaseTime_m3110663295 (Lease_t3927356447 * __this, TimeSpan_t763862892  ___value, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_set_InitialLeaseTime_m3110663295_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = __this->get__currentState_2();
+		if ((((int32_t)L_0) == ((int32_t)1)))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		int32_t L_1 = __this->get__currentState_2();
+		int32_t L_2 = L_1;
+		Il2CppObject * L_3 = Box(LeaseState_t3143999580_il2cpp_TypeInfo_var, &L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_4 = String_Concat_m2809334143(NULL /*static, unused*/, _stringLiteral12430408, L_3, _stringLiteral46, /*hidden argument*/NULL);
+		RemotingException_t2970919604 * L_5 = (RemotingException_t2970919604 *)il2cpp_codegen_object_new(RemotingException_t2970919604_il2cpp_TypeInfo_var);
+		RemotingException__ctor_m3169549476(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_002c:
+	{
+		TimeSpan_t763862892  L_6 = ___value;
+		__this->set__initialLeaseTime_3(L_6);
+		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t339033936_il2cpp_TypeInfo_var);
+		DateTime_t339033936  L_7 = DateTime_get_Now_m1812131422(NULL /*static, unused*/, /*hidden argument*/NULL);
+		TimeSpan_t763862892  L_8 = __this->get__initialLeaseTime_3();
+		DateTime_t339033936  L_9 = DateTime_op_Addition_m4061583523(NULL /*static, unused*/, L_7, L_8, /*hidden argument*/NULL);
+		__this->set__leaseExpireTime_1(L_9);
+		TimeSpan_t763862892  L_10 = ___value;
+		IL2CPP_RUNTIME_CLASS_INIT(TimeSpan_t763862892_il2cpp_TypeInfo_var);
+		TimeSpan_t763862892  L_11 = ((TimeSpan_t763862892_StaticFields*)TimeSpan_t763862892_il2cpp_TypeInfo_var->static_fields)->get_Zero_7();
+		bool L_12 = TimeSpan_op_Equality_m2213378780(NULL /*static, unused*/, L_10, L_11, /*hidden argument*/NULL);
+		if (!L_12)
+		{
+			goto IL_0060;
+		}
+	}
+	{
+		__this->set__currentState_2(0);
+	}
+
+IL_0060:
+	{
+		return;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::set_RenewOnCallTime(System.TimeSpan)
+extern TypeInfo* LeaseState_t3143999580_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* RemotingException_t2970919604_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2522597300;
+extern Il2CppCodeGenString* _stringLiteral46;
+extern const uint32_t Lease_set_RenewOnCallTime_m2263653821_MetadataUsageId;
+extern "C"  void Lease_set_RenewOnCallTime_m2263653821 (Lease_t3927356447 * __this, TimeSpan_t763862892  ___value, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_set_RenewOnCallTime_m2263653821_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = __this->get__currentState_2();
+		if ((((int32_t)L_0) == ((int32_t)1)))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		int32_t L_1 = __this->get__currentState_2();
+		int32_t L_2 = L_1;
+		Il2CppObject * L_3 = Box(LeaseState_t3143999580_il2cpp_TypeInfo_var, &L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_4 = String_Concat_m2809334143(NULL /*static, unused*/, _stringLiteral2522597300, L_3, _stringLiteral46, /*hidden argument*/NULL);
+		RemotingException_t2970919604 * L_5 = (RemotingException_t2970919604 *)il2cpp_codegen_object_new(RemotingException_t2970919604_il2cpp_TypeInfo_var);
+		RemotingException__ctor_m3169549476(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_002c:
+	{
+		TimeSpan_t763862892  L_6 = ___value;
+		__this->set__renewOnCallTime_4(L_6);
+		return;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::set_SponsorshipTimeout(System.TimeSpan)
+extern TypeInfo* LeaseState_t3143999580_il2cpp_TypeInfo_var;
+extern TypeInfo* String_t_il2cpp_TypeInfo_var;
+extern TypeInfo* RemotingException_t2970919604_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2386126976;
+extern Il2CppCodeGenString* _stringLiteral46;
+extern const uint32_t Lease_set_SponsorshipTimeout_m2163989751_MetadataUsageId;
+extern "C"  void Lease_set_SponsorshipTimeout_m2163989751 (Lease_t3927356447 * __this, TimeSpan_t763862892  ___value, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_set_SponsorshipTimeout_m2163989751_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = __this->get__currentState_2();
+		if ((((int32_t)L_0) == ((int32_t)1)))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		int32_t L_1 = __this->get__currentState_2();
+		int32_t L_2 = L_1;
+		Il2CppObject * L_3 = Box(LeaseState_t3143999580_il2cpp_TypeInfo_var, &L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_4 = String_Concat_m2809334143(NULL /*static, unused*/, _stringLiteral2386126976, L_3, _stringLiteral46, /*hidden argument*/NULL);
+		RemotingException_t2970919604 * L_5 = (RemotingException_t2970919604 *)il2cpp_codegen_object_new(RemotingException_t2970919604_il2cpp_TypeInfo_var);
+		RemotingException__ctor_m3169549476(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5);
+	}
+
+IL_002c:
+	{
+		TimeSpan_t763862892  L_6 = ___value;
+		__this->set__sponsorshipTimeout_5(L_6);
+		return;
+	}
+}
+// System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::Renew(System.TimeSpan)
+extern TypeInfo* DateTime_t339033936_il2cpp_TypeInfo_var;
+extern const uint32_t Lease_Renew_m235269479_MetadataUsageId;
+extern "C"  TimeSpan_t763862892  Lease_Renew_m235269479 (Lease_t3927356447 * __this, TimeSpan_t763862892  ___renewalTime, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_Renew_m235269479_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	DateTime_t339033936  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t339033936_il2cpp_TypeInfo_var);
+		DateTime_t339033936  L_0 = DateTime_get_Now_m1812131422(NULL /*static, unused*/, /*hidden argument*/NULL);
+		TimeSpan_t763862892  L_1 = ___renewalTime;
+		DateTime_t339033936  L_2 = DateTime_op_Addition_m4061583523(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		DateTime_t339033936  L_3 = V_0;
+		DateTime_t339033936  L_4 = __this->get__leaseExpireTime_1();
+		bool L_5 = DateTime_op_GreaterThan_m3846016869(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
+		if (!L_5)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		DateTime_t339033936  L_6 = V_0;
+		__this->set__leaseExpireTime_1(L_6);
+	}
+
+IL_0024:
+	{
+		TimeSpan_t763862892  L_7 = VirtFuncInvoker0< TimeSpan_t763862892  >::Invoke(10 /* System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::get_CurrentLeaseTime() */, __this);
+		return L_7;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::Unregister(System.Runtime.Remoting.Lifetime.ISponsor)
+extern "C"  void Lease_Unregister_m2597910745 (Lease_t3927356447 * __this, Il2CppObject * ___obj, const MethodInfo* method)
+{
+	Lease_t3927356447 * V_0 = NULL;
+	int32_t V_1 = 0;
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		V_0 = __this;
+		Lease_t3927356447 * L_0 = V_0;
+		Monitor_Enter_m476686225(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+	}
+
+IL_0008:
+	try
+	{ // begin try (depth: 1)
+		{
+			ArrayList_t2121638921 * L_1 = __this->get__sponsors_6();
+			if (L_1)
+			{
+				goto IL_0018;
+			}
+		}
+
+IL_0013:
+		{
+			IL2CPP_LEAVE(0x68, FINALLY_0061);
+		}
+
+IL_0018:
+		{
+			V_1 = 0;
+			goto IL_004b;
+		}
+
+IL_001f:
+		{
+			ArrayList_t2121638921 * L_2 = __this->get__sponsors_6();
+			int32_t L_3 = V_1;
+			NullCheck(L_2);
+			Il2CppObject * L_4 = VirtFuncInvoker1< Il2CppObject *, int32_t >::Invoke(21 /* System.Object System.Collections.ArrayList::get_Item(System.Int32) */, L_2, L_3);
+			Il2CppObject * L_5 = ___obj;
+			bool L_6 = Object_ReferenceEquals_m3695130242(NULL /*static, unused*/, L_4, L_5, /*hidden argument*/NULL);
+			if (!L_6)
+			{
+				goto IL_0047;
+			}
+		}
+
+IL_0036:
+		{
+			ArrayList_t2121638921 * L_7 = __this->get__sponsors_6();
+			int32_t L_8 = V_1;
+			NullCheck(L_7);
+			VirtActionInvoker1< int32_t >::Invoke(39 /* System.Void System.Collections.ArrayList::RemoveAt(System.Int32) */, L_7, L_8);
+			goto IL_005c;
+		}
+
+IL_0047:
+		{
+			int32_t L_9 = V_1;
+			V_1 = ((int32_t)((int32_t)L_9+(int32_t)1));
+		}
+
+IL_004b:
+		{
+			int32_t L_10 = V_1;
+			ArrayList_t2121638921 * L_11 = __this->get__sponsors_6();
+			NullCheck(L_11);
+			int32_t L_12 = VirtFuncInvoker0< int32_t >::Invoke(23 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_11);
+			if ((((int32_t)L_10) < ((int32_t)L_12)))
+			{
+				goto IL_001f;
+			}
+		}
+
+IL_005c:
+		{
+			IL2CPP_LEAVE(0x68, FINALLY_0061);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_0061;
+	}
+
+FINALLY_0061:
+	{ // begin finally (depth: 1)
+		Lease_t3927356447 * L_13 = V_0;
+		Monitor_Exit_m2088237919(NULL /*static, unused*/, L_13, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(97)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(97)
+	{
+		IL2CPP_JUMP_TBL(0x68, IL_0068)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_0068:
+	{
+		return;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::UpdateState()
+extern TypeInfo* TimeSpan_t763862892_il2cpp_TypeInfo_var;
+extern TypeInfo* Queue_t1621224067_il2cpp_TypeInfo_var;
+extern const uint32_t Lease_UpdateState_m2503061997_MetadataUsageId;
+extern "C"  void Lease_UpdateState_m2503061997 (Lease_t3927356447 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_UpdateState_m2503061997_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Lease_t3927356447 * V_0 = NULL;
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		int32_t L_0 = __this->get__currentState_2();
+		if ((((int32_t)L_0) == ((int32_t)2)))
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		return;
+	}
+
+IL_000d:
+	{
+		TimeSpan_t763862892  L_1 = VirtFuncInvoker0< TimeSpan_t763862892  >::Invoke(10 /* System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::get_CurrentLeaseTime() */, __this);
+		IL2CPP_RUNTIME_CLASS_INIT(TimeSpan_t763862892_il2cpp_TypeInfo_var);
+		TimeSpan_t763862892  L_2 = ((TimeSpan_t763862892_StaticFields*)TimeSpan_t763862892_il2cpp_TypeInfo_var->static_fields)->get_Zero_7();
+		bool L_3 = TimeSpan_op_GreaterThan_m3920451985(NULL /*static, unused*/, L_1, L_2, /*hidden argument*/NULL);
+		if (!L_3)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0023:
+	{
+		ArrayList_t2121638921 * L_4 = __this->get__sponsors_6();
+		if (!L_4)
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		__this->set__currentState_2(3);
+		V_0 = __this;
+		Lease_t3927356447 * L_5 = V_0;
+		Monitor_Enter_m476686225(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
+	}
+
+IL_003d:
+	try
+	{ // begin try (depth: 1)
+		ArrayList_t2121638921 * L_6 = __this->get__sponsors_6();
+		Queue_t1621224067 * L_7 = (Queue_t1621224067 *)il2cpp_codegen_object_new(Queue_t1621224067_il2cpp_TypeInfo_var);
+		Queue__ctor_m3810010794(L_7, L_6, /*hidden argument*/NULL);
+		__this->set__renewingSponsors_7(L_7);
+		IL2CPP_LEAVE(0x5A, FINALLY_0053);
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1967233988 *)e.ex;
+		goto FINALLY_0053;
+	}
+
+FINALLY_0053:
+	{ // begin finally (depth: 1)
+		Lease_t3927356447 * L_8 = V_0;
+		Monitor_Exit_m2088237919(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(83)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(83)
+	{
+		IL2CPP_JUMP_TBL(0x5A, IL_005a)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1967233988 *)
+	}
+
+IL_005a:
+	{
+		Lease_CheckNextSponsor_m4694172(__this, /*hidden argument*/NULL);
+		goto IL_006c;
+	}
+
+IL_0065:
+	{
+		__this->set__currentState_2(4);
+	}
+
+IL_006c:
+	{
+		return;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::CheckNextSponsor()
+extern TypeInfo* ISponsor_t1895959670_il2cpp_TypeInfo_var;
+extern TypeInfo* RenewalDelegate_t4057835773_il2cpp_TypeInfo_var;
+extern TypeInfo* IAsyncResult_t537683269_il2cpp_TypeInfo_var;
+extern TypeInfo* WaitOrTimerCallback_t4215077909_il2cpp_TypeInfo_var;
+extern const MethodInfo* Lease_ProcessSponsorResponse_m1073931474_MethodInfo_var;
+extern const uint32_t Lease_CheckNextSponsor_m4694172_MetadataUsageId;
+extern "C"  void Lease_CheckNextSponsor_m4694172 (Lease_t3927356447 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_CheckNextSponsor_m4694172_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Il2CppObject * V_0 = NULL;
+	Il2CppObject * V_1 = NULL;
+	{
+		Queue_t1621224067 * L_0 = __this->get__renewingSponsors_7();
+		NullCheck(L_0);
+		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.Collections.Queue::get_Count() */, L_0);
+		if (L_1)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		__this->set__currentState_2(4);
+		__this->set__renewingSponsors_7((Queue_t1621224067 *)NULL);
+		return;
+	}
+
+IL_001f:
+	{
+		Queue_t1621224067 * L_2 = __this->get__renewingSponsors_7();
+		NullCheck(L_2);
+		Il2CppObject * L_3 = VirtFuncInvoker0< Il2CppObject * >::Invoke(19 /* System.Object System.Collections.Queue::Peek() */, L_2);
+		V_0 = ((Il2CppObject *)Castclass(L_3, ISponsor_t1895959670_il2cpp_TypeInfo_var));
+		Il2CppObject * L_4 = V_0;
+		Il2CppObject * L_5 = L_4;
+		IntPtr_t L_6;
+		L_6.set_m_value_0((void*)GetInterfaceMethodInfo(L_5, 0, ISponsor_t1895959670_il2cpp_TypeInfo_var));
+		RenewalDelegate_t4057835773 * L_7 = (RenewalDelegate_t4057835773 *)il2cpp_codegen_object_new(RenewalDelegate_t4057835773_il2cpp_TypeInfo_var);
+		RenewalDelegate__ctor_m3640898857(L_7, L_5, L_6, /*hidden argument*/NULL);
+		__this->set__renewalDelegate_8(L_7);
+		RenewalDelegate_t4057835773 * L_8 = __this->get__renewalDelegate_8();
+		NullCheck(L_8);
+		Il2CppObject * L_9 = RenewalDelegate_BeginInvoke_m3159291988(L_8, __this, (AsyncCallback_t1363551830 *)NULL, NULL, /*hidden argument*/NULL);
+		V_1 = L_9;
+		Il2CppObject * L_10 = V_1;
+		NullCheck(L_10);
+		WaitHandle_t361062656 * L_11 = InterfaceFuncInvoker0< WaitHandle_t361062656 * >::Invoke(1 /* System.Threading.WaitHandle System.IAsyncResult::get_AsyncWaitHandle() */, IAsyncResult_t537683269_il2cpp_TypeInfo_var, L_10);
+		IntPtr_t L_12;
+		L_12.set_m_value_0((void*)Lease_ProcessSponsorResponse_m1073931474_MethodInfo_var);
+		WaitOrTimerCallback_t4215077909 * L_13 = (WaitOrTimerCallback_t4215077909 *)il2cpp_codegen_object_new(WaitOrTimerCallback_t4215077909_il2cpp_TypeInfo_var);
+		WaitOrTimerCallback__ctor_m1555455757(L_13, __this, L_12, /*hidden argument*/NULL);
+		Il2CppObject * L_14 = V_1;
+		TimeSpan_t763862892  L_15 = __this->get__sponsorshipTimeout_5();
+		ThreadPool_RegisterWaitForSingleObject_m3955614434(NULL /*static, unused*/, L_11, L_13, L_14, L_15, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.Runtime.Remoting.Lifetime.Lease::ProcessSponsorResponse(System.Object,System.Boolean)
+extern TypeInfo* IAsyncResult_t537683269_il2cpp_TypeInfo_var;
+extern TypeInfo* TimeSpan_t763862892_il2cpp_TypeInfo_var;
+extern TypeInfo* Il2CppObject_il2cpp_TypeInfo_var;
+extern TypeInfo* ISponsor_t1895959670_il2cpp_TypeInfo_var;
+extern const uint32_t Lease_ProcessSponsorResponse_m1073931474_MetadataUsageId;
+extern "C"  void Lease_ProcessSponsorResponse_m1073931474 (Lease_t3927356447 * __this, Il2CppObject * ___state, bool ___timedOut, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Lease_ProcessSponsorResponse_m1073931474_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Il2CppObject * V_0 = NULL;
+	TimeSpan_t763862892  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	Exception_t1967233988 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1967233988 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		bool L_0 = ___timedOut;
+		if (L_0)
+		{
+			goto IL_0050;
+		}
+	}
+
+IL_0006:
+	try
+	{ // begin try (depth: 1)
+		{
+			Il2CppObject * L_1 = ___state;
+			V_0 = ((Il2CppObject *)Castclass(L_1, IAsyncResult_t537683269_il2cpp_TypeInfo_var));
+			RenewalDelegate_t4057835773 * L_2 = __this->get__renewalDelegate_8();
+			Il2CppObject * L_3 = V_0;
+			NullCheck(L_2);
+			TimeSpan_t763862892  L_4 = RenewalDelegate_EndInvoke_m331344822(L_2, L_3, /*hidden argument*/NULL);
+			V_1 = L_4;
+			TimeSpan_t763862892  L_5 = V_1;
+			IL2CPP_RUNTIME_CLASS_INIT(TimeSpan_t763862892_il2cpp_TypeInfo_var);
+			TimeSpan_t763862892  L_6 = ((TimeSpan_t763862892_StaticFields*)TimeSpan_t763862892_il2cpp_TypeInfo_var->static_fields)->get_Zero_7();
+			bool L_7 = TimeSpan_op_Inequality_m2184437271(NULL /*static, unused*/, L_5, L_6, /*hidden argument*/NULL);
+			if (!L_7)
+			{
+				goto IL_0045;
+			}
+		}
+
+IL_002a:
+		{
+			TimeSpan_t763862892  L_8 = V_1;
+			VirtFuncInvoker1< TimeSpan_t763862892 , TimeSpan_t763862892  >::Invoke(11 /* System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::Renew(System.TimeSpan) */, __this, L_8);
+			__this->set__currentState_2(2);
+			__this->set__renewingSponsors_7((Queue_t1621224067 *)NULL);
+			goto IL_006c;
+		}
+
+IL_0045:
+		{
+			goto IL_0050;
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1967233988 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Il2CppObject_il2cpp_TypeInfo_var, e.ex->object.klass))
+			goto CATCH_004a;
+		throw e;
+	}
+
+CATCH_004a:
+	{ // begin catch(System.Object)
+		goto IL_0050;
+	} // end catch (depth: 1)
+
+IL_0050:
+	{
+		Queue_t1621224067 * L_9 = __this->get__renewingSponsors_7();
+		NullCheck(L_9);
+		Il2CppObject * L_10 = VirtFuncInvoker0< Il2CppObject * >::Invoke(17 /* System.Object System.Collections.Queue::Dequeue() */, L_9);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(12 /* System.Void System.Runtime.Remoting.Lifetime.Lease::Unregister(System.Runtime.Remoting.Lifetime.ISponsor) */, __this, ((Il2CppObject *)Castclass(L_10, ISponsor_t1895959670_il2cpp_TypeInfo_var)));
+		Lease_CheckNextSponsor_m4694172(__this, /*hidden argument*/NULL);
+	}
+
+IL_006c:
+	{
+		return;
+	}
+}
 // System.Void System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate::.ctor(System.Object,System.IntPtr)
 extern "C"  void RenewalDelegate__ctor_m3640898857 (RenewalDelegate_t4057835773 * __this, Il2CppObject * ___object, IntPtr_t ___method, const MethodInfo* method)
 {
@@ -33448,264 +34289,6 @@ extern "C"  uint32_t SerializationInfo_GetUInt32_m1908270281 (SerializationInfo_
 		NullCheck(L_3);
 		uint32_t L_5 = InterfaceFuncInvoker1< uint32_t, Il2CppObject * >::Invoke(6 /* System.UInt32 System.Runtime.Serialization.IFormatterConverter::ToUInt32(System.Object) */, IFormatterConverter_t919629080_il2cpp_TypeInfo_var, L_3, L_4);
 		return L_5;
-	}
-}
-// System.Void System.Runtime.Serialization.SerializationInfoEnumerator::.ctor(System.Collections.ArrayList)
-extern "C"  void SerializationInfoEnumerator__ctor_m1782497732 (SerializationInfoEnumerator_t1298671611 * __this, ArrayList_t2121638921 * ___list, const MethodInfo* method)
-{
-	{
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		ArrayList_t2121638921 * L_0 = ___list;
-		NullCheck(L_0);
-		Il2CppObject * L_1 = VirtFuncInvoker0< Il2CppObject * >::Invoke(43 /* System.Collections.IEnumerator System.Collections.ArrayList::GetEnumerator() */, L_0);
-		__this->set_enumerator_0(L_1);
-		return;
-	}
-}
-// System.Object System.Runtime.Serialization.SerializationInfoEnumerator::System.Collections.IEnumerator.get_Current()
-extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
-extern const uint32_t SerializationInfoEnumerator_System_Collections_IEnumerator_get_Current_m1751158349_MetadataUsageId;
-extern "C"  Il2CppObject * SerializationInfoEnumerator_System_Collections_IEnumerator_get_Current_m1751158349 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (SerializationInfoEnumerator_System_Collections_IEnumerator_get_Current_m1751158349_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Il2CppObject * L_0 = __this->get_enumerator_0();
-		NullCheck(L_0);
-		Il2CppObject * L_1 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_0);
-		return L_1;
-	}
-}
-// System.Runtime.Serialization.SerializationEntry System.Runtime.Serialization.SerializationInfoEnumerator::get_Current()
-extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
-extern TypeInfo* SerializationEntry_t1258779515_il2cpp_TypeInfo_var;
-extern const uint32_t SerializationInfoEnumerator_get_Current_m1674825235_MetadataUsageId;
-extern "C"  SerializationEntry_t1258779515  SerializationInfoEnumerator_get_Current_m1674825235 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (SerializationInfoEnumerator_get_Current_m1674825235_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Il2CppObject * L_0 = __this->get_enumerator_0();
-		NullCheck(L_0);
-		Il2CppObject * L_1 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_0);
-		return ((*(SerializationEntry_t1258779515 *)((SerializationEntry_t1258779515 *)UnBox (L_1, SerializationEntry_t1258779515_il2cpp_TypeInfo_var))));
-	}
-}
-// System.String System.Runtime.Serialization.SerializationInfoEnumerator::get_Name()
-extern "C"  String_t* SerializationInfoEnumerator_get_Name_m4156977240 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	SerializationEntry_t1258779515  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		SerializationEntry_t1258779515  L_0 = SerializationInfoEnumerator_get_Current_m1674825235(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		String_t* L_1 = SerializationEntry_get_Name_m929676406((&V_0), /*hidden argument*/NULL);
-		return L_1;
-	}
-}
-// System.Type System.Runtime.Serialization.SerializationInfoEnumerator::get_ObjectType()
-extern "C"  Type_t * SerializationInfoEnumerator_get_ObjectType_m1119292125 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	SerializationEntry_t1258779515  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		SerializationEntry_t1258779515  L_0 = SerializationInfoEnumerator_get_Current_m1674825235(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		Type_t * L_1 = SerializationEntry_get_ObjectType_m3299705261((&V_0), /*hidden argument*/NULL);
-		return L_1;
-	}
-}
-// System.Object System.Runtime.Serialization.SerializationInfoEnumerator::get_Value()
-extern "C"  Il2CppObject * SerializationInfoEnumerator_get_Value_m4259496148 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	SerializationEntry_t1258779515  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		SerializationEntry_t1258779515  L_0 = SerializationInfoEnumerator_get_Current_m1674825235(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		Il2CppObject * L_1 = SerializationEntry_get_Value_m522021722((&V_0), /*hidden argument*/NULL);
-		return L_1;
-	}
-}
-// System.Boolean System.Runtime.Serialization.SerializationInfoEnumerator::MoveNext()
-extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
-extern const uint32_t SerializationInfoEnumerator_MoveNext_m4116766855_MetadataUsageId;
-extern "C"  bool SerializationInfoEnumerator_MoveNext_m4116766855 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (SerializationInfoEnumerator_MoveNext_m4116766855_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Il2CppObject * L_0 = __this->get_enumerator_0();
-		NullCheck(L_0);
-		bool L_1 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_0);
-		return L_1;
-	}
-}
-// System.Void System.Runtime.Serialization.SerializationInfoEnumerator::Reset()
-extern TypeInfo* IEnumerator_t287207039_il2cpp_TypeInfo_var;
-extern const uint32_t SerializationInfoEnumerator_Reset_m1660715632_MetadataUsageId;
-extern "C"  void SerializationInfoEnumerator_Reset_m1660715632 (SerializationInfoEnumerator_t1298671611 * __this, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (SerializationInfoEnumerator_Reset_m1660715632_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Il2CppObject * L_0 = __this->get_enumerator_0();
-		NullCheck(L_0);
-		InterfaceActionInvoker0::Invoke(2 /* System.Void System.Collections.IEnumerator::Reset() */, IEnumerator_t287207039_il2cpp_TypeInfo_var, L_0);
-		return;
-	}
-}
-// System.Void System.Runtime.Serialization.SerializationObjectManager::.ctor(System.Runtime.Serialization.StreamingContext)
-extern TypeInfo* Hashtable_t3875263730_il2cpp_TypeInfo_var;
-extern const uint32_t SerializationObjectManager__ctor_m1459970863_MetadataUsageId;
-extern "C"  void SerializationObjectManager__ctor_m1459970863 (SerializationObjectManager_t3948087927 * __this, StreamingContext_t986364934  ___context, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (SerializationObjectManager__ctor_m1459970863_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	{
-		Hashtable_t3875263730 * L_0 = (Hashtable_t3875263730 *)il2cpp_codegen_object_new(Hashtable_t3875263730_il2cpp_TypeInfo_var);
-		Hashtable__ctor_m1514037738(L_0, /*hidden argument*/NULL);
-		__this->set_seen_1(L_0);
-		Object__ctor_m1772956182(__this, /*hidden argument*/NULL);
-		StreamingContext_t986364934  L_1 = ___context;
-		__this->set_context_0(L_1);
-		return;
-	}
-}
-// System.Void System.Runtime.Serialization.SerializationObjectManager::RegisterObject(System.Object)
-extern TypeInfo* U3CRegisterObjectU3Ec__AnonStorey3_t3276063852_il2cpp_TypeInfo_var;
-extern TypeInfo* SerializationCallbacks_t2501037015_il2cpp_TypeInfo_var;
-extern TypeInfo* Int32_t2847414787_il2cpp_TypeInfo_var;
-extern TypeInfo* CallbackHandler_t3576143653_il2cpp_TypeInfo_var;
-extern const MethodInfo* U3CRegisterObjectU3Ec__AnonStorey3_U3CU3Em__2_m1750539087_MethodInfo_var;
-extern const uint32_t SerializationObjectManager_RegisterObject_m337810129_MetadataUsageId;
-extern "C"  void SerializationObjectManager_RegisterObject_m337810129 (SerializationObjectManager_t3948087927 * __this, Il2CppObject * ___obj, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (SerializationObjectManager_RegisterObject_m337810129_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * V_0 = NULL;
-	{
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_0 = (U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 *)il2cpp_codegen_object_new(U3CRegisterObjectU3Ec__AnonStorey3_t3276063852_il2cpp_TypeInfo_var);
-		U3CRegisterObjectU3Ec__AnonStorey3__ctor_m959661704(L_0, /*hidden argument*/NULL);
-		V_0 = L_0;
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_1 = V_0;
-		Il2CppObject * L_2 = ___obj;
-		NullCheck(L_1);
-		L_1->set_obj_1(L_2);
-		Hashtable_t3875263730 * L_3 = __this->get_seen_1();
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_4 = V_0;
-		NullCheck(L_4);
-		Il2CppObject * L_5 = L_4->get_obj_1();
-		NullCheck(L_3);
-		bool L_6 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(35 /* System.Boolean System.Collections.Hashtable::Contains(System.Object) */, L_3, L_5);
-		if (!L_6)
-		{
-			goto IL_0024;
-		}
-	}
-	{
-		return;
-	}
-
-IL_0024:
-	{
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_7 = V_0;
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_8 = V_0;
-		NullCheck(L_8);
-		Il2CppObject * L_9 = L_8->get_obj_1();
-		NullCheck(L_9);
-		Type_t * L_10 = Object_GetType_m2022236990(L_9, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(SerializationCallbacks_t2501037015_il2cpp_TypeInfo_var);
-		SerializationCallbacks_t2501037015 * L_11 = SerializationCallbacks_GetSerializationCallbacks_m1535695330(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		L_7->set_sc_0(L_11);
-		Hashtable_t3875263730 * L_12 = __this->get_seen_1();
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_13 = V_0;
-		NullCheck(L_13);
-		Il2CppObject * L_14 = L_13->get_obj_1();
-		int32_t L_15 = 1;
-		Il2CppObject * L_16 = Box(Int32_t2847414787_il2cpp_TypeInfo_var, &L_15);
-		NullCheck(L_12);
-		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(31 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_12, L_14, L_16);
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_17 = V_0;
-		NullCheck(L_17);
-		SerializationCallbacks_t2501037015 * L_18 = L_17->get_sc_0();
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_19 = V_0;
-		NullCheck(L_19);
-		Il2CppObject * L_20 = L_19->get_obj_1();
-		StreamingContext_t986364934  L_21 = __this->get_context_0();
-		NullCheck(L_18);
-		SerializationCallbacks_RaiseOnSerializing_m4133985485(L_18, L_20, L_21, /*hidden argument*/NULL);
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_22 = V_0;
-		NullCheck(L_22);
-		SerializationCallbacks_t2501037015 * L_23 = L_22->get_sc_0();
-		NullCheck(L_23);
-		bool L_24 = SerializationCallbacks_get_HasSerializedCallbacks_m1064335224(L_23, /*hidden argument*/NULL);
-		if (!L_24)
-		{
-			goto IL_009a;
-		}
-	}
-	{
-		CallbackHandler_t3576143653 * L_25 = __this->get_callbacks_2();
-		U3CRegisterObjectU3Ec__AnonStorey3_t3276063852 * L_26 = V_0;
-		IntPtr_t L_27;
-		L_27.set_m_value_0((void*)U3CRegisterObjectU3Ec__AnonStorey3_U3CU3Em__2_m1750539087_MethodInfo_var);
-		CallbackHandler_t3576143653 * L_28 = (CallbackHandler_t3576143653 *)il2cpp_codegen_object_new(CallbackHandler_t3576143653_il2cpp_TypeInfo_var);
-		CallbackHandler__ctor_m33772597(L_28, L_26, L_27, /*hidden argument*/NULL);
-		Delegate_t3660574010 * L_29 = Delegate_Combine_m1842362874(NULL /*static, unused*/, L_25, L_28, /*hidden argument*/NULL);
-		__this->set_callbacks_2(((CallbackHandler_t3576143653 *)CastclassSealed(L_29, CallbackHandler_t3576143653_il2cpp_TypeInfo_var)));
-	}
-
-IL_009a:
-	{
-		return;
-	}
-}
-// System.Void System.Runtime.Serialization.SerializationObjectManager::RaiseOnSerializedEvent()
-extern "C"  void SerializationObjectManager_RaiseOnSerializedEvent_m3729458860 (SerializationObjectManager_t3948087927 * __this, const MethodInfo* method)
-{
-	{
-		CallbackHandler_t3576143653 * L_0 = __this->get_callbacks_2();
-		if (!L_0)
-		{
-			goto IL_001c;
-		}
-	}
-	{
-		CallbackHandler_t3576143653 * L_1 = __this->get_callbacks_2();
-		StreamingContext_t986364934  L_2 = __this->get_context_0();
-		NullCheck(L_1);
-		CallbackHandler_Invoke_m2801241699(L_1, L_2, /*hidden argument*/NULL);
-	}
-
-IL_001c:
-	{
-		return;
 	}
 }
 #ifdef __clang__

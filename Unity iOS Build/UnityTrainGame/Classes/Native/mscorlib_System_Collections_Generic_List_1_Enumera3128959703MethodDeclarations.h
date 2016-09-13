@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<SceneMonoBehaviour>::VerifyState()
 #define Enumerator_VerifyState_m1549913343(__this, method) ((  void (*) (Enumerator_t3128959703 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<SceneMonoBehaviour>::MoveNext()
-#define Enumerator_MoveNext_m1992885354(__this, method) ((  bool (*) (Enumerator_t3128959703 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m1992885354(__this, method) ((  bool (*) (Enumerator_t3128959703 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<SceneMonoBehaviour>::get_Current()
-#define Enumerator_get_Current_m3857619890(__this, method) ((  SceneMonoBehaviour_t4246217742 * (*) (Enumerator_t3128959703 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m3857619890(__this, method) ((  SceneMonoBehaviour_t4246217742 * (*) (Enumerator_t3128959703 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

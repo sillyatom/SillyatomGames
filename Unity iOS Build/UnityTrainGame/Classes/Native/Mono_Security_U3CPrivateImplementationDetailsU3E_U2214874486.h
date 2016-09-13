@@ -21,7 +21,7 @@
 
 // <PrivateImplementationDetails>/$ArrayType$12
 #pragma pack(push, tp, 1)
-struct  U24ArrayTypeU2412_t214874488 
+struct  U24ArrayTypeU2412_t214874487 
 {
 public:
 	union
@@ -32,7 +32,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2412_t214874488__padding[12];
+		uint8_t U24ArrayTypeU2412_t214874487__padding[12];
 	};
 
 public:
@@ -44,7 +44,7 @@ public:
 #endif
 // Native definition for marshalling of: <PrivateImplementationDetails>/$ArrayType$12
 #pragma pack(push, tp, 1)
-struct U24ArrayTypeU2412_t214874488_marshaled_pinvoke
+struct U24ArrayTypeU2412_t214874487_marshaled_pinvoke
 {
 	union
 	{
@@ -54,13 +54,13 @@ struct U24ArrayTypeU2412_t214874488_marshaled_pinvoke
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2412_t214874488__padding[12];
+		uint8_t U24ArrayTypeU2412_t214874487__padding[12];
 	};
 };
 #pragma pack(pop, tp)
 // Native definition for marshalling of: <PrivateImplementationDetails>/$ArrayType$12
 #pragma pack(push, tp, 1)
-struct U24ArrayTypeU2412_t214874488_marshaled_com
+struct U24ArrayTypeU2412_t214874487_marshaled_com
 {
 	union
 	{
@@ -70,7 +70,7 @@ struct U24ArrayTypeU2412_t214874488_marshaled_com
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2412_t214874488__padding[12];
+		uint8_t U24ArrayTypeU2412_t214874487__padding[12];
 	};
 };
 #pragma pack(pop, tp)

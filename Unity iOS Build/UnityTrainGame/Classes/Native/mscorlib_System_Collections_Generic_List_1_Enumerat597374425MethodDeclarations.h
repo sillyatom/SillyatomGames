@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<Newtonsoft.Json.Bson.BsonToken>::VerifyState()
 #define Enumerator_VerifyState_m1043551249(__this, method) ((  void (*) (Enumerator_t597374425 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<Newtonsoft.Json.Bson.BsonToken>::MoveNext()
-#define Enumerator_MoveNext_m497966319(__this, method) ((  bool (*) (Enumerator_t597374425 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m497966319(__this, method) ((  bool (*) (Enumerator_t597374425 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<Newtonsoft.Json.Bson.BsonToken>::get_Current()
-#define Enumerator_get_Current_m1312659946(__this, method) ((  BsonToken_t1714632464 * (*) (Enumerator_t597374425 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1312659946(__this, method) ((  BsonToken_t1714632464 * (*) (Enumerator_t597374425 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

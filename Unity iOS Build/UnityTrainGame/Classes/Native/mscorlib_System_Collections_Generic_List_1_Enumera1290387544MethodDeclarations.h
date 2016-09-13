@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<Assets.DustinHorne.JsonDotNetUnity.TestCases.TestModels.SampleBase>::VerifyState()
 #define Enumerator_VerifyState_m597593118(__this, method) ((  void (*) (Enumerator_t1290387544 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<Assets.DustinHorne.JsonDotNetUnity.TestCases.TestModels.SampleBase>::MoveNext()
-#define Enumerator_MoveNext_m3022720770(__this, method) ((  bool (*) (Enumerator_t1290387544 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m3022720770(__this, method) ((  bool (*) (Enumerator_t1290387544 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<Assets.DustinHorne.JsonDotNetUnity.TestCases.TestModels.SampleBase>::get_Current()
-#define Enumerator_get_Current_m966473079(__this, method) ((  SampleBase_t2407645583 * (*) (Enumerator_t1290387544 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m966473079(__this, method) ((  SampleBase_t2407645583 * (*) (Enumerator_t1290387544 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

@@ -32,6 +32,8 @@ struct PostURL_t1273431183;
 struct Transform_t284553113;
 // Utility
 struct Utility_t1549674828;
+// AdManager
+struct AdManager_t3461832170;
 
 #include "UnityEngine_UnityEngine_MonoBehaviour3012272455.h"
 
@@ -71,6 +73,8 @@ public:
 	Transform_t284553113 * ___overlay_13;
 	// Utility GameObjectRef::utility
 	Utility_t1549674828 * ___utility_14;
+	// AdManager GameObjectRef::adsManager
+	AdManager_t3461832170 * ___adsManager_15;
 
 public:
 	inline static int32_t get_offset_of_roundHandler_2() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___roundHandler_2)); }
@@ -188,6 +192,15 @@ public:
 	{
 		___utility_14 = value;
 		Il2CppCodeGenWriteBarrier(&___utility_14, value);
+	}
+
+	inline static int32_t get_offset_of_adsManager_15() { return static_cast<int32_t>(offsetof(GameObjectRef_t4121474274, ___adsManager_15)); }
+	inline AdManager_t3461832170 * get_adsManager_15() const { return ___adsManager_15; }
+	inline AdManager_t3461832170 ** get_address_of_adsManager_15() { return &___adsManager_15; }
+	inline void set_adsManager_15(AdManager_t3461832170 * value)
+	{
+		___adsManager_15 = value;
+		Il2CppCodeGenWriteBarrier(&___adsManager_15, value);
 	}
 };
 

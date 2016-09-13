@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.UI.Dropdown/DropdownItem>::VerifyState()
 #define Enumerator_VerifyState_m4119050672(__this, method) ((  void (*) (Enumerator_t893588909 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.UI.Dropdown/DropdownItem>::MoveNext()
-#define Enumerator_MoveNext_m1254074928(__this, method) ((  bool (*) (Enumerator_t893588909 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m1254074928(__this, method) ((  bool (*) (Enumerator_t893588909 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<UnityEngine.UI.Dropdown/DropdownItem>::get_Current()
-#define Enumerator_get_Current_m1791513289(__this, method) ((  DropdownItem_t2010846948 * (*) (Enumerator_t893588909 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m1791513289(__this, method) ((  DropdownItem_t2010846948 * (*) (Enumerator_t893588909 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)

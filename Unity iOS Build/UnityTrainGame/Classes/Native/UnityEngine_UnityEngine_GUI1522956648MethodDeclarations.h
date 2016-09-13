@@ -18,8 +18,14 @@ struct GUISkin_t2614611333;
 struct GUIContent_t2432841515;
 // UnityEngine.GUIStyle
 struct GUIStyle_t1006925219;
+// UnityEngine.Texture
+struct Texture_t1769722184;
+// System.String
+struct String_t;
 // UnityEngine.GUI/WindowFunction
 struct WindowFunction_t999919624;
+// UnityEngine.Material
+struct Material_t1886596500;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_DateTime339033936.h"
@@ -27,7 +33,11 @@ struct WindowFunction_t999919624;
 #include "UnityEngine_UnityEngine_Rect1525428817.h"
 #include "UnityEngine_UnityEngine_GUIContent2432841515.h"
 #include "UnityEngine_UnityEngine_GUIStyle1006925219.h"
+#include "UnityEngine_UnityEngine_Texture1769722184.h"
+#include "UnityEngine_UnityEngine_ScaleMode1648723514.h"
+#include "mscorlib_System_String968488902.h"
 #include "UnityEngine_UnityEngine_GUI_WindowFunction999919624.h"
+#include "UnityEngine_UnityEngine_Color1588175760.h"
 #include "mscorlib_System_IntPtr676692020.h"
 
 // System.Void UnityEngine.GUI::.cctor()
@@ -42,19 +52,41 @@ extern "C"  GUISkin_t2614611333 * GUI_get_skin_m4001454842 (Il2CppObject * __thi
 extern "C"  void GUI_DoSetSkin_m800823745 (Il2CppObject * __this /* static, unused */, GUISkin_t2614611333 * ___newSkin, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::Label(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)
 extern "C"  void GUI_Label_m2293702269 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, GUIContent_t2432841515 * ___content, GUIStyle_t1006925219 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode)
+extern "C"  void GUI_DrawTexture_m2033906102 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, Texture_t1769722184 * ___image, int32_t ___scaleMode, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean)
+extern "C"  void GUI_DrawTexture_m1717108487 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, Texture_t1769722184 * ___image, int32_t ___scaleMode, bool ___alphaBlend, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean,System.Single)
+extern "C"  void GUI_DrawTexture_m1839804844 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, Texture_t1769722184 * ___image, int32_t ___scaleMode, bool ___alphaBlend, float ___imageAspect, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::Box(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)
 extern "C"  void GUI_Box_m3007052244 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, GUIContent_t2432841515 * ___content, GUIStyle_t1006925219 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.GUI::Button(UnityEngine.Rect,System.String)
+extern "C"  bool GUI_Button_m885093907 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, String_t* ___text, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.GUI::Button(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)
 extern "C"  bool GUI_Button_m3806860863 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, GUIContent_t2432841515 * ___content, GUIStyle_t1006925219 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Rect UnityEngine.GUI::ModalWindow(System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,System.String)
+extern "C"  Rect_t1525428817  GUI_ModalWindow_m1806902466 (Il2CppObject * __this /* static, unused */, int32_t ___id, Rect_t1525428817  ___clientRect, WindowFunction_t999919624 * ___func, String_t* ___text, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::CallWindowDelegate(UnityEngine.GUI/WindowFunction,System.Int32,UnityEngine.GUISkin,System.Int32,System.Single,System.Single,UnityEngine.GUIStyle)
 extern "C"  void GUI_CallWindowDelegate_m2260338804 (Il2CppObject * __this /* static, unused */, WindowFunction_t999919624 * ___func, int32_t ___id, GUISkin_t2614611333 * ____skin, int32_t ___forceRect, float ___width, float ___height, GUIStyle_t1006925219 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Color UnityEngine.GUI::get_color()
+extern "C"  Color_t1588175760  GUI_get_color_m1489208189 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GUI::INTERNAL_get_color(UnityEngine.Color&)
+extern "C"  void GUI_INTERNAL_get_color_m1047250244 (Il2CppObject * __this /* static, unused */, Color_t1588175760 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::set_changed(System.Boolean)
 extern "C"  void GUI_set_changed_m727947722 (Il2CppObject * __this /* static, unused */, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::DoLabel(UnityEngine.Rect,UnityEngine.GUIContent,System.IntPtr)
 extern "C"  void GUI_DoLabel_m2990009013 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, GUIContent_t2432841515 * ___content, IntPtr_t ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::INTERNAL_CALL_DoLabel(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
 extern "C"  void GUI_INTERNAL_CALL_DoLabel_m2707679966 (Il2CppObject * __this /* static, unused */, Rect_t1525428817 * ___position, GUIContent_t2432841515 * ___content, IntPtr_t ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Material UnityEngine.GUI::get_blendMaterial()
+extern "C"  Material_t1886596500 * GUI_get_blendMaterial_m3392847228 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Material UnityEngine.GUI::get_blitMaterial()
+extern "C"  Material_t1886596500 * GUI_get_blitMaterial_m1516673786 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.GUI::DoButton(UnityEngine.Rect,UnityEngine.GUIContent,System.IntPtr)
 extern "C"  bool GUI_DoButton_m2194494269 (Il2CppObject * __this /* static, unused */, Rect_t1525428817  ___position, GUIContent_t2432841515 * ___content, IntPtr_t ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
 extern "C"  bool GUI_INTERNAL_CALL_DoButton_m1954108340 (Il2CppObject * __this /* static, unused */, Rect_t1525428817 * ___position, GUIContent_t2432841515 * ___content, IntPtr_t ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Rect UnityEngine.GUI::DoModalWindow(System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,UnityEngine.GUISkin)
+extern "C"  Rect_t1525428817  GUI_DoModalWindow_m1270479406 (Il2CppObject * __this /* static, unused */, int32_t ___id, Rect_t1525428817  ___clientRect, WindowFunction_t999919624 * ___func, GUIContent_t2432841515 * ___content, GUIStyle_t1006925219 * ___style, GUISkin_t2614611333 * ___skin, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GUI::INTERNAL_CALL_DoModalWindow(System.Int32,UnityEngine.Rect&,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,UnityEngine.GUISkin,UnityEngine.Rect&)
+extern "C"  void GUI_INTERNAL_CALL_DoModalWindow_m1785328038 (Il2CppObject * __this /* static, unused */, int32_t ___id, Rect_t1525428817 * ___clientRect, WindowFunction_t999919624 * ___func, GUIContent_t2432841515 * ___content, GUIStyle_t1006925219 * ___style, GUISkin_t2614611333 * ___skin, Rect_t1525428817 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

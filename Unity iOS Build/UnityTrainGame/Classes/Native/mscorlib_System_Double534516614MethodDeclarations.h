@@ -93,6 +93,8 @@ extern "C"  bool Double_Parse_m1451965917 (Il2CppObject * __this /* static, unus
 extern "C"  bool Double_TryParseStringConstant_m2653461779 (Il2CppObject * __this /* static, unused */, String_t* ___format, String_t* ___s, int32_t ___start, int32_t ___end, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Double::ParseImpl(System.Byte*,System.Double&)
 extern "C"  bool Double_ParseImpl_m1244982012 (Il2CppObject * __this /* static, unused */, uint8_t* ___byte_ptr, double* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.Double::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Double&)
+extern "C"  bool Double_TryParse_m707798013 (Il2CppObject * __this /* static, unused */, String_t* ___s, int32_t ___style, Il2CppObject * ___provider, double* ___result, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Double::ToString()
 extern "C"  String_t* Double_ToString_m3380246633 (double* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Double::ToString(System.IFormatProvider)

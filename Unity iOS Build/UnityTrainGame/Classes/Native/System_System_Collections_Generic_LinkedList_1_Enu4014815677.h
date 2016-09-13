@@ -24,7 +24,7 @@ struct LinkedListNode_1_t539097040;
 #endif
 
 // System.Collections.Generic.LinkedList`1/Enumerator<System.Object>
-struct  Enumerator_t4014815678 
+struct  Enumerator_t4014815679 
 {
 public:
 	// System.Collections.Generic.LinkedList`1<T> System.Collections.Generic.LinkedList`1/Enumerator::list
@@ -37,7 +37,7 @@ public:
 	uint32_t ___version_3;
 
 public:
-	inline static int32_t get_offset_of_list_0() { return static_cast<int32_t>(offsetof(Enumerator_t4014815678, ___list_0)); }
+	inline static int32_t get_offset_of_list_0() { return static_cast<int32_t>(offsetof(Enumerator_t4014815679, ___list_0)); }
 	inline LinkedList_1_t2577235966 * get_list_0() const { return ___list_0; }
 	inline LinkedList_1_t2577235966 ** get_address_of_list_0() { return &___list_0; }
 	inline void set_list_0(LinkedList_1_t2577235966 * value)
@@ -46,7 +46,7 @@ public:
 		Il2CppCodeGenWriteBarrier(&___list_0, value);
 	}
 
-	inline static int32_t get_offset_of_current_1() { return static_cast<int32_t>(offsetof(Enumerator_t4014815678, ___current_1)); }
+	inline static int32_t get_offset_of_current_1() { return static_cast<int32_t>(offsetof(Enumerator_t4014815679, ___current_1)); }
 	inline LinkedListNode_1_t539097040 * get_current_1() const { return ___current_1; }
 	inline LinkedListNode_1_t539097040 ** get_address_of_current_1() { return &___current_1; }
 	inline void set_current_1(LinkedListNode_1_t539097040 * value)
@@ -55,7 +55,7 @@ public:
 		Il2CppCodeGenWriteBarrier(&___current_1, value);
 	}
 
-	inline static int32_t get_offset_of_index_2() { return static_cast<int32_t>(offsetof(Enumerator_t4014815678, ___index_2)); }
+	inline static int32_t get_offset_of_index_2() { return static_cast<int32_t>(offsetof(Enumerator_t4014815679, ___index_2)); }
 	inline int32_t get_index_2() const { return ___index_2; }
 	inline int32_t* get_address_of_index_2() { return &___index_2; }
 	inline void set_index_2(int32_t value)
@@ -63,7 +63,7 @@ public:
 		___index_2 = value;
 	}
 
-	inline static int32_t get_offset_of_version_3() { return static_cast<int32_t>(offsetof(Enumerator_t4014815678, ___version_3)); }
+	inline static int32_t get_offset_of_version_3() { return static_cast<int32_t>(offsetof(Enumerator_t4014815679, ___version_3)); }
 	inline uint32_t get_version_3() const { return ___version_3; }
 	inline uint32_t* get_address_of_version_3() { return &___version_3; }
 	inline void set_version_3(uint32_t value)

@@ -27,6 +27,6 @@
 // System.Void System.Collections.Generic.List`1/Enumerator<Assets.DustinHorne.JsonDotNetUnity.TestCases.TestModels.SimpleClassObject>::VerifyState()
 #define Enumerator_VerifyState_m2908538552(__this, method) ((  void (*) (Enumerator_t1678649922 *, const MethodInfo*))Enumerator_VerifyState_m1522854819_gshared)(__this, method)
 // System.Boolean System.Collections.Generic.List`1/Enumerator<Assets.DustinHorne.JsonDotNetUnity.TestCases.TestModels.SimpleClassObject>::MoveNext()
-#define Enumerator_MoveNext_m3301614692(__this, method) ((  bool (*) (Enumerator_t1678649922 *, const MethodInfo*))Enumerator_MoveNext_m4284703760_gshared)(__this, method)
+#define Enumerator_MoveNext_m3301614692(__this, method) ((  bool (*) (Enumerator_t1678649922 *, const MethodInfo*))Enumerator_MoveNext_m3396518092_gshared)(__this, method)
 // T System.Collections.Generic.List`1/Enumerator<Assets.DustinHorne.JsonDotNetUnity.TestCases.TestModels.SimpleClassObject>::get_Current()
-#define Enumerator_get_Current_m3905273391(__this, method) ((  SimpleClassObject_t2795907961 * (*) (Enumerator_t1678649922 *, const MethodInfo*))Enumerator_get_Current_m396252160_gshared)(__this, method)
+#define Enumerator_get_Current_m3905273391(__this, method) ((  SimpleClassObject_t2795907961 * (*) (Enumerator_t1678649922 *, const MethodInfo*))Enumerator_get_Current_m1799123908_gshared)(__this, method)
